@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'visitors#index'
+  resources(:projects, only: :new)
+
+  root(to: 'visitors#index')
 end
