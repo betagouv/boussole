@@ -27,7 +27,7 @@ img {
   }
 .submit {
   @extend .btn;
-  @extend .btn-primary;
+  @extend .btn-default;
   @extend .btn-lg;
   }
 // apply styles to HTML elements
@@ -43,3 +43,6 @@ section {
   @extend .row;
   margin-top: 20px;
   }
+section .thumbnail .caption {
+  height: 75px;
+}
