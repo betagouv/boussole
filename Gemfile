@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'haml-rails'
 gem 'pg'
 gem 'simple_form'
+gem 'wicked'
 
 group :production, :staging do
   gem 'heroku_rails_deflate'

@@ -1,0 +1,17 @@
+.col-md-6.col-md-offset-3
+  %legend Mon profil
+
+  = simple_form_for(@project, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
+    = f.error_notification
+
+    .form-inputs
+      = f.input :age, label: 'Mon âge'
+      = f.input :status, label: 'Ma situation',
+                         collection: Project::STATUS,
+                         label_method: :to_s,
+                         value_method: :to_s,
+                         as: :select
+
+
+    .form-actions
+      = f.button :submit, 'Continuer'

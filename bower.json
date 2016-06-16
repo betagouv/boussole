@@ -2,6 +2,7 @@
   "name": "oshub",
   "dependencies": {
     "bootstrap-sass-official": "~3.1.1",
-    "bootsketch": "1.0.1"
+    "bootsketch": "1.0.1",
+    "bootstrap3-typeahead": "4.0.1"
   }
 }

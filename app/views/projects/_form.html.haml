@@ -1,0 +1,24 @@
+= simple_form_for(@project) do |f|
+  = f.error_notification
+
+  .form-inputs
+    / = f.input :knowledge
+    / = f.input :profession
+    / = f.input :age
+    / = f.input :status
+    / = f.input :last_class
+    / = f.input :city
+    / = f.input :handicap
+    / = f.input :experience
+    / = f.input :pe
+    / = f.input :ml
+    / = f.input :cap
+    / = f.input :apec
+    = f.input_field :area,
+                    collection: Project::AREA,
+                    label_method: :to_s,
+                    value_method: :to_s,
+                    as: :radio_buttons
+
+  .form-actions
+    = f.button :submit, 'Continuer'

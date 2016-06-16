@@ -1,0 +1,45 @@
+%p#notice= notice
+
+%p
+  %b Knowledge:
+  = @project.knowledge
+%p
+  %b Profession:
+  = @project.profession
+%p
+  %b Age:
+  = @project.age
+%p
+  %b Status:
+  = @project.status
+%p
+  %b Last class:
+  = @project.last_class
+%p
+  %b City:
+  = @project.city
+%p
+  %b Handicap:
+  = @project.handicap
+%p
+  %b Experience:
+  = @project.experience
+%p
+  %b Pe:
+  = @project.pe
+%p
+  %b Ml:
+  = @project.ml
+%p
+  %b Cap:
+  = @project.cap
+%p
+  %b Apec:
+  = @project.apec
+%p
+  %b Area:
+  = @project.area
+
+= link_to 'Edit', edit_project_path(@project)
+\|
+= link_to 'Back', projects_path
