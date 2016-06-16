@@ -4,10 +4,60 @@ class Projects::StepsController < ApplicationController
   steps *Project::STEPS
 
   def show
-    @project = Project.find(params[:project_id])
+    load_project
     render_wizard
   end
 
   def update
+    load_project
+    @project.update(project_params(step))
+    render_wizard(@project)
   end
+
+  private
+
+  def load_project
+    @project ||= Project.find(params[:project_id])
+  end
+
+  def project_params(step)
+    permitted_attributes = case step
+      when :profile
+        %i(age status)
+      when :profession
+        %i(profession experience)
+      end
+
+    if params[:project]
+      params
+        .require(:project)
+        .permit(permitted_attributes)
+        .merge(current_step: step)
+    else
+      {}
+    end
+  end
+
+  # # Only allow a trusted parameter "white list" through.
+  # def project_params
+  #   if params[:project]
+  #     params
+  #       .require(:project)
+  #       .permit(
+  #         :knowledge,
+  #         :profession,
+  #         :last_class,
+  #         :city,
+  #         :handicap,
+  #         :experience,
+  #         :pe,
+  #         :ml,
+  #         :cap,
+  #         :apec
+  #       )
+  #   else
+  #     {}
+  #   end
+  # end
+
 end

@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.3.1'
 
 gem 'rails', '~> 4.2'
+gem 'rails-i18n'
 gem 'puma'
 gem 'sass-rails'
 gem 'uglifier'

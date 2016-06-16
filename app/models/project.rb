@@ -7,6 +7,15 @@ class Project < ActiveRecord::Base
   #   'Me soigner'
   # ]
 
+  STATUS = [
+    'Sans activité',
+    'Étudiant·e',
+    'Étudiant·e (décrochage)',
+    'Lycéen·ne – collégien·ne',
+    'Lycéen·ne – collégien·ne (décrochage)',
+    'Salarié·e'
+  ]
+
   PROFESSIONS = [
     "Conduite d'engins d'exploitation agricole et forestière",
     "Bûcheronnage et élagage",
@@ -542,13 +551,18 @@ class Project < ActiveRecord::Base
   ].freeze
 
   STEPS = %i(
-    profil
-    metier
+    profile
+    profession
   ).freeze
 
-  private
-
   attr_accessor :current_step
+
+  with_options if: -> { required_for_step?(:profile) } do |step|
+    step.validates :age, presence: true
+    step.validates :status, presence: true
+  end
+
+  private
 
   def required_for_step?(step)
     return true if step.nil?

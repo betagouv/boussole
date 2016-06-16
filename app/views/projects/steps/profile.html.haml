@@ -7,6 +7,7 @@
     .form-inputs
       = f.input :age, label: 'Mon âge'
       = f.input :status, label: 'Ma situation',
+                         include_blank: false,
                          collection: Project::STATUS,
                          label_method: :to_s,
                          value_method: :to_s,
