@@ -1,0 +1,81 @@
+require: rubocop-rspec
+
+AllCops:
+  Exclude:
+    - bin/**/*
+    - db/migrate/**/*
+    - db/schema.rb
+    - script/**/*
+    - vendor/**/*
+    - tmp/**/*
+    - Guardfile
+
+  TargetRubyVersion: 2.3
+
+Lint/AmbiguousOperator:
+  Enabled: false
+
+Lint/AssignmentInCondition:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 125
+
+Metrics/MethodLength:
+  Enabled: false
+
+Rails:
+  Enabled: true
+
+RSpec/DescribeClass:
+  Exclude:
+    - spec/requests/**/*
+    - spec/features/**/*
+    - spec/views/**/*
+
+RSpec/ExampleLength:
+  Enabled: false
+
+Style/Alias:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Exclude:
+    - spec/**/*_spec.rb
+
+Style/CaseEquality:
+  Enabled: false
+
+# Style/Documentation:
+#   Exclude:
+#     - app/controllers/**/*
+#     - app/helpers/application_helper.rb
+#     - config/application.rb
+#     - db/**/*
+#     - spec/**/*_spec.rb
+
+Style/Documentation:
+  Enabled: false
+
+Style/DotPosition:
+  Enabled: true
+
+Style/Encoding:
+  EnforcedStyle: always
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+
+Style/IfUnlessModifier:
+  Exclude:
+    - 'config/initializers/*'
+
+Style/MethodCalledOnDoEndBlock:
+  Enabled: true
+
+Style/SymbolArray:
+  Enabled: true

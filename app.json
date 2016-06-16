@@ -1,0 +1,13 @@
+{
+  "name": "Boussole",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate; bundle exec rake db:seed"
+  },
+  "env": {
+    "RACK_ENV": "production",
+    "RAILS_ENV": "production"
+  },
+  "buildpacks": [{
+    "url": "git://github.com/qnyp/heroku-buildpack-ruby-bower.git#run-bower"
+  }]
+}
