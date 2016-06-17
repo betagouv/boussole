@@ -550,6 +550,49 @@ class Project < ActiveRecord::Base
     "Manutention portuaire"
   ].freeze
 
+  CITIES = [
+    "Ay",
+    "Bar-sur-Aube",
+    "Bogny-sur-Meuse",
+    "Bétheny",
+    "Charleville-Mézières",
+    "Chaumont",
+    "Châlons-en-Champagne",
+    "Cormontreuil",
+    "Épernay",
+    "Fagnières",
+    "Fismes",
+    "Fumay",
+    "Givet",
+    "Joinville",
+    "La Chapelle-Saint-Luc",
+    "Langres",
+    "Montmirail",
+    "Mourmelon-le-Grand",
+    "Nogent",
+    "Nogent-sur-Seine",
+    "Nouzonville",
+    "Pont-Sainte-Marie",
+    "Reims",
+    "Rethel",
+    "Revin",
+    "Romilly-sur-Seine",
+    "Saint-André-les-Vergers",
+    "Saint-Dizier",
+    "Saint-Julien-les-Villas",
+    "Saint-Memmie",
+    "Sainte-Menehould",
+    "Sainte-Savine",
+    "Sedan",
+    "Sézanne",
+    "Tinqueux",
+    "Troyes",
+    "Vitry-le-François",
+    "Vouziers",
+    "Vrigne-aux-Bois",
+    "Witry-lès-Reims"
+  ].freeze
+
   STEPS = %i(
     profile
     profession
@@ -560,6 +603,7 @@ class Project < ActiveRecord::Base
   with_options if: -> { required_for_step?(:profile) } do |step|
     step.validates :age, presence: true
     step.validates :status, presence: true
+    step.validates :city, presence: true
   end
 
   private

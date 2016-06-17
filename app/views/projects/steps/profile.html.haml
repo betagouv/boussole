@@ -5,14 +5,24 @@
     = f.error_notification
 
     .form-inputs
-      = f.input :age, label: 'Mon âge'
-      = f.input :status, label: 'Ma situation',
+      = f.input :age, label: 'Âge'
+      = f.input :status, label: 'Situation',
                          include_blank: false,
+                         prompt: 'Sélectionne une option',
                          collection: Project::STATUS,
                          label_method: :to_s,
                          value_method: :to_s,
                          as: :select
 
+      = f.input :city, label: 'Ville',
+                         include_blank: false,
+                         prompt: 'Sélectionne une option',
+                         collection: Project::CITIES,
+                         label_method: :to_s,
+                         value_method: :to_s,
+                         as: :select
+
+      = f.input :handicap, label: 'Suis-je en situation de handicap ?'
 
     .form-actions
       = f.button :submit, 'Continuer'

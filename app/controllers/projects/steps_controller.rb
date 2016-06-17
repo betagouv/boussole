@@ -23,7 +23,7 @@ class Projects::StepsController < ApplicationController
   def project_params(step)
     permitted_attributes = case step
       when :profile
-        %i(age status)
+        %i(age status city handicap)
       when :profession
         %i(profession experience)
       end
@@ -44,12 +44,7 @@ class Projects::StepsController < ApplicationController
   #     params
   #       .require(:project)
   #       .permit(
-  #         :knowledge,
-  #         :profession,
   #         :last_class,
-  #         :city,
-  #         :handicap,
-  #         :experience,
   #         :pe,
   #         :ml,
   #         :cap,
