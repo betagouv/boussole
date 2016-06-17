@@ -1,14 +1,19 @@
 .col-md-6.col-md-offset-3
-  %legend Formation
+  %legend Domaine et formation
 
   = simple_form_for(@project, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
     = f.error_notification
 
     .form-inputs
-      = f.input :profession, label: 'Dans quel métier veux-je me former ?',
-                             collection: Project::PROFESSIONS,
-                             include_blank: false,
-                             input_html: { rel: 'autocomplete' }
+      = f.input :domain, label: 'Domaine',
+                         collection: Project::DOMAINES,
+                         include_blank: false,
+                         input_html: { rel: 'autocomplete' }
+
+      = f.input :formation, label: 'Formation',
+                            collection: Project::FORMATIONS,
+                            include_blank: false,
+                            input_html: { rel: 'autocomplete' }
 
       = f.input :experience, label: 'Ai-je déjà une expérience dans ce metier ?'
 

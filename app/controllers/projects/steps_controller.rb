@@ -45,7 +45,7 @@ class Projects::StepsController < ApplicationController
       when :knowledge
         %i(knowledge)
       when :formation
-        %i(profession experience)
+        %i(domain formation experience)
       when :profile
         %i(age status city handicap)
       when :inscriptions

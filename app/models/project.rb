@@ -611,6 +611,11 @@ class Project < ActiveRecord::Base
     step.validates :knowledge, presence: true
   end
 
+  with_options if: -> { required_for_step?(:formation) } do |step|
+    step.validates :domain, presence: true
+    step.validates :formation, presence: true
+  end
+
   with_options if: -> { required_for_step?(:profile) } do |step|
     step.validates :age, presence: true
     step.validates :status, presence: true
