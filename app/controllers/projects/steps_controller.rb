@@ -11,7 +11,27 @@ class Projects::StepsController < ApplicationController
   def update
     load_project
     @project.update(project_params(step))
-    render_wizard(@project)
+
+    if @project.errors.empty?
+      case step
+      when :knowledge
+        if @project.knowledge == Project::KNOWLEDGE_QUESTIONS[1]
+          redirect_to(project_step_path(@project, :profile))
+        else
+          render_wizard(@project)
+        end
+      when :profile
+        if @project.status.in?(['Sans activité', 'Étudiant·e (décrochage)', 'Lycéen·ne – collégien·ne (décrochage)'])
+          render_wizard(@project)
+        else
+          redirect_to(finish_wizard_path)
+        end
+      else
+        render_wizard(@project)
+      end
+    else
+      render_wizard(@project)
+    end
   end
 
   private
@@ -22,37 +42,26 @@ class Projects::StepsController < ApplicationController
 
   def project_params(step)
     permitted_attributes = case step
+      when :knowledge
+        %i(knowledge)
+      when :formation
+        %i(profession experience)
       when :profile
         %i(age status city handicap)
-      when :profession
-        %i(profession experience)
+      when :inscriptions
+        %i(pe ml cap apec)
       end
 
     if params[:project]
       params
         .require(:project)
         .permit(permitted_attributes)
-        .merge(current_step: step)
     else
       {}
-    end
+    end.merge(current_step: step)
   end
 
-  # # Only allow a trusted parameter "white list" through.
-  # def project_params
-  #   if params[:project]
-  #     params
-  #       .require(:project)
-  #       .permit(
-  #         :last_class,
-  #         :pe,
-  #         :ml,
-  #         :cap,
-  #         :apec
-  #       )
-  #   else
-  #     {}
-  #   end
-  # end
-
+  def finish_wizard_path
+    project_path(@project)
+  end
 end

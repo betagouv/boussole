@@ -7,16 +7,12 @@ class Project < ActiveRecord::Base
   #   'Me soigner'
   # ]
 
-  STATUS = [
-    'Sans activité',
-    'Étudiant·e',
-    'Étudiant·e (décrochage)',
-    'Lycéen·ne – collégien·ne',
-    'Lycéen·ne – collégien·ne (décrochage)',
-    'Salarié·e'
-  ]
+  KNOWLEDGE_QUESTIONS = [
+    'Je sais quelle formation je veux suivre',
+    'Je veux découvrir des domaines de formation possibles'
+  ].freeze
 
-  PROFESSIONS = [
+  DOMAINES = PROFESSIONS = FORMATIONS = [
     "Conduite d'engins d'exploitation agricole et forestière",
     "Bûcheronnage et élagage",
     "Entretien des espaces naturels",
@@ -550,6 +546,15 @@ class Project < ActiveRecord::Base
     "Manutention portuaire"
   ].freeze
 
+  STATUS = [
+    'Sans activité',
+    'Étudiant·e',
+    'Étudiant·e (décrochage)',
+    'Lycéen·ne – collégien·ne',
+    'Lycéen·ne – collégien·ne (décrochage)',
+    'Salarié·e'
+  ].freeze
+
   CITIES = [
     "Ay",
     "Bar-sur-Aube",
@@ -594,11 +599,17 @@ class Project < ActiveRecord::Base
   ].freeze
 
   STEPS = %i(
+    knowledge
+    formation
     profile
-    profession
+    inscriptions
   ).freeze
 
   attr_accessor :current_step
+
+  with_options if: -> { required_for_step?(:knowledge) } do |step|
+    step.validates :knowledge, presence: true
+  end
 
   with_options if: -> { required_for_step?(:profile) } do |step|
     step.validates :age, presence: true

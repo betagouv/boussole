@@ -1,0 +1,16 @@
+.col-md-6.col-md-offset-3
+  %legend Je suis inscrit·e à la/au…
+
+  = simple_form_for(@project, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
+    = f.error_notification
+
+    .form-inputs
+      = f.input :pe, label: 'Pôle emploi'
+      = f.input :ml, label: 'Mission locale'
+      - if @project.handicap?
+        = f.input :cap, label: 'Cap emploi'
+      = f.input :apec, label: "Association pour l'emploi des cadres"
+
+
+    .form-actions
+      = f.button :submit, 'Continuer'
