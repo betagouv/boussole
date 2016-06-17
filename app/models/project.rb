@@ -626,6 +626,7 @@ class Project < ActiveRecord::Base
 
   def required_for_step?(step)
     return true if step.nil?
+    return false if step == :formation && knowledge == KNOWLEDGE_QUESTIONS[1]
     return true if STEPS.index(step.to_sym) <= STEPS.index(current_step)
   end
 end
