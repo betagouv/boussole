@@ -61,6 +61,49 @@ class Project < ApplicationRecord
     step.validates :city, presence: true
   end
 
+  DISCRIMINANTS = {
+    knowledge: KNOWLEDGE_QUESTIONS,
+    experience: EXPERIENCE,
+    age: AGE,
+    status: STATUS,
+    degree: DEGREE,
+    last_class: LAST_CLASS,
+    intention: INTENTION
+  }.freeze
+
+  DISCRIMINANTS_NOT_WORKING = {
+    knowledge: KNOWLEDGE_QUESTIONS,
+    experience: EXPERIENCE,
+    status: [STATUS[0]],
+    degree: DEGREE,
+    last_class: LAST_CLASS,
+    intention: INTENTION
+  }.freeze
+
+  DISCRIMINANTS_WORKING = {
+    knowledge: KNOWLEDGE_QUESTIONS,
+    experience: EXPERIENCE,
+    status: [STATUS[3]],
+    degree: DEGREE,
+    last_class: LAST_CLASS,
+    intention: INTENTION
+  }.freeze
+
+  def self.product(hash = DISCRIMINANTS)
+    attrs   = hash.values
+    keys    = hash.keys
+    product = attrs[0].product(*attrs[1..-1])
+    product.map { |p| Hash[keys.zip p] }
+  end
+
+  def self.product_not_working
+    product(DISCRIMINANTS_NOT_WORKING)
+  end
+
+  def self.product_working
+    product(DISCRIMINANTS_WORKING)
+  end
+
   private
 
   def required_for_step?(step)
