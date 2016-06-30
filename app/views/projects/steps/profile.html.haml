@@ -6,13 +6,6 @@
 
     .form-inputs
       = f.input :age, label: 'Âge'
-      = f.input :status, label: 'Situation',
-                         include_blank: false,
-                         prompt: 'Sélectionne une option',
-                         collection: Project::STATUS,
-                         label_method: :to_s,
-                         value_method: :to_s,
-                         as: :select
 
       = f.input :city, label: 'Ville',
                          include_blank: false,
@@ -22,7 +15,32 @@
                          value_method: :to_s,
                          as: :select
 
-      = f.input :handicap, label: 'Suis-je en situation de handicap ?'
+      = f.input :status, label: 'Situation',
+                         include_blank: false,
+                         prompt: 'Sélectionne une option',
+                         collection: Project::STATUS,
+                         label_method: :to_s,
+                         value_method: :to_s,
+                         as: :select
+
+      = f.input :degree, label: 'Ai-je un diplôme ?',
+                         include_blank: false,
+                         prompt: 'Sélectionne une option',
+                         collection: Project::DEGREE,
+                         label_method: :to_s,
+                         value_method: :to_s,
+                         as: :select
+
+      = f.input :last_class, label: 'Dernières études suivies',
+                             include_blank: false,
+                             prompt: 'Sélectionne une option',
+                             collection: Project::LAST_CLASS,
+                             label_method: :to_s,
+                             value_method: :to_s,
+                             as: :select
+
+      = f.input :intention, label: 'Je veux continuer mes études'
+      = f.input :handicap, label: 'Je suis en situation de handicap'
 
     .form-actions
       = f.button :submit, 'Continuer'

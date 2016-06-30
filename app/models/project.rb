@@ -12,7 +12,88 @@ class Project < ActiveRecord::Base
     'Je veux découvrir des domaines de formation possibles'
   ].freeze
 
-  DOMAINES = PROFESSIONS = FORMATIONS = [
+  DOMAINES = [
+    'Formation générale, lettres et langues',
+    'Développement personnel et professionnel',
+    'Langues',
+    'Sciences humaines',
+    'Sciences humaines, économie, droit',
+    'Droit',
+    'Droit fiscal',
+    'Économie',
+    'Psychologie',
+    'Science politique',
+    'Sciences',
+    'Chimie',
+    'Mathématiques',
+    'Mécanique théorique',
+    'Physique',
+    'Sciences de la terre',
+    'Sciences naturelles',
+    'Arts',
+    'Art',
+    'Artisanat art',
+    'Audiovisuel multimédia',
+    'Fonction production',
+    'Génie industriel',
+    'Manutention',
+    'Qualité',
+    'Agriculture',
+    'Agriculture production végétale',
+    'Pêche aquaculture',
+    'Transformation',
+    'Agroalimentaire',
+    'Cuir peau',
+    'Énergie',
+    'Génie climatique',
+    'Habillement',
+    'Matériau produit chimique',
+    'Textile',
+    'Génie civil, construction, bois',
+    'Bâtiment gros oeuvre',
+    'Bâtiment second oeuvre',
+    'BTP conception organisation',
+    'Travaux publics',
+    'Production mécanique',
+    'Automatisme informatique industrielle',
+    'Mécanique construction réparation',
+    'Travail matériau',
+    'Électricité - électronique',
+    'Électronique',
+    'Électrotechnique',
+    'Télécommunication',
+    'Échange et gestion',
+    'Banque assurance',
+    'Commerce',
+    'Commerce international',
+    'Direction entreprise',
+    'Gestion commerciale',
+    'Gestion financière',
+    'Immobilier',
+    'Ressources humaines',
+    'Transport',
+    'Information, communication',
+    'Communication information',
+    'Industrie graphique imprimerie',
+    'Informatique',
+    'Langage informatique',
+    'Secrétariat assistanat',
+    'Logiciels',
+    'Services aux personnes',
+    'Action sociale',
+    'Activité physique et sportive',
+    'Hôtellerie restauration',
+    'Ingénierie formation pédagogie',
+    'Médecine',
+    'Santé secteur sanitaire',
+    'Tourisme',
+    'Services à la collectivité',
+    'Défense prévention sécurité',
+    'Environnement aménagement',
+    'Services divers'
+  ].freeze
+
+  PROFESSIONS = FORMATIONS = [
     "Conduite d'engins d'exploitation agricole et forestière",
     "Bûcheronnage et élagage",
     "Entretien des espaces naturels",
@@ -549,10 +630,19 @@ class Project < ActiveRecord::Base
   STATUS = [
     'Sans activité',
     'Étudiant·e',
-    'Étudiant·e (décrochage)',
     'Lycéen·ne – collégien·ne',
-    'Lycéen·ne – collégien·ne (décrochage)',
-    'Salarié·e'
+    'Salarié·e',
+    'En formation',
+    'Apprenti·e',
+    'Autre'
+  ].freeze
+
+  LAST_CLASS = [
+    'Collège',
+    'Lycée',
+    'Études supérieures',
+    'Aprentissage',
+    'Autre'
   ].freeze
 
   CITIES = [
@@ -598,6 +688,16 @@ class Project < ActiveRecord::Base
     "Witry-lès-Reims"
   ].freeze
 
+  DEGREE = [
+    'BEP',
+    'BEPC',
+    'CAP',
+    'BAC',
+    'License',
+    'Autre',
+    'Non'
+  ].freeze
+
   STEPS = %i(
     knowledge
     formation
@@ -613,12 +713,14 @@ class Project < ActiveRecord::Base
 
   with_options if: -> { required_for_step?(:formation) } do |step|
     step.validates :domain, presence: true
-    step.validates :formation, presence: true
+    # step.validates :formation, presence: true
   end
 
   with_options if: -> { required_for_step?(:profile) } do |step|
     step.validates :age, presence: true
     step.validates :status, presence: true
+    step.validates :last_class, presence: true
+    step.validates :degree, presence: true
     step.validates :city, presence: true
   end
 

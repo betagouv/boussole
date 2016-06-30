@@ -47,7 +47,7 @@ class Projects::StepsController < ApplicationController
       when :formation
         %i(domain formation experience)
       when :profile
-        %i(age status city handicap)
+        %i(age status city handicap degree last_class intention)
       when :inscriptions
         %i(pe ml cap apec)
       end
