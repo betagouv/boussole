@@ -114,6 +114,7 @@ GEM
       sys-uname
       terminal-table
     debug_inspector (0.0.2)
+    decisiontree (0.5.0)
     declarative (0.0.8)
       uber (>= 0.0.15)
     descendants_tracker (0.0.4)
@@ -544,6 +545,7 @@ DEPENDENCIES
   coffee-rails
   database_cleaner
   dawnscanner
+  decisiontree
   dotenv-rails
   factory_girl_rails
   ffaker
