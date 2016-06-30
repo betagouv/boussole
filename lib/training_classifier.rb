@@ -5,7 +5,7 @@ require 'rubygems'
 require 'bundler'
 Bundler.setup(:default)
 
-require 'decisiontree'
+require 'ai4r'
 
 module TrainingClassifier
   extend self
@@ -38,3 +38,5 @@ module TrainingClassifier
     puts "Predicted: #{decision} ... True decision: #{test.last}"
   end
 end
+
+TrainingClassifier.run

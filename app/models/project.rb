@@ -63,12 +63,17 @@ class Project < ApplicationRecord
 
   DISCRIMINANTS = {
     knowledge: KNOWLEDGE_QUESTIONS,
-    experience: EXPERIENCE,
     age: AGE,
     status: STATUS,
+    handicap: [true, false],
     degree: DEGREE,
     last_class: LAST_CLASS,
-    intention: INTENTION
+    intention: INTENTION,
+    experience: [true, false],
+    pe: [true, false],
+    ml: [true, false],
+    apec: [true, false],
+    cap: [true, false]
   }.freeze
 
   DISCRIMINANTS_NOT_WORKING = {
@@ -89,19 +94,44 @@ class Project < ApplicationRecord
     intention: INTENTION
   }.freeze
 
-  def self.product(hash = DISCRIMINANTS)
-    attrs   = hash.values
-    keys    = hash.keys
-    product = attrs[0].product(*attrs[1..-1])
-    product.map { |p| Hash[keys.zip p] }
+  def self.product_array_sample_csv(hash = DISCRIMINANTS, n: 1000)
+    CSV.open('train.csv', 'wb') do |csv|
+      product_array(hash)
+        .sample(n)
+        .prepend(DISCRIMINANTS.keys.map(&:to_s))
+        .map { |row| csv << row }
+    end
   end
 
-  def self.product_not_working
-    product(DISCRIMINANTS_NOT_WORKING)
+  def self.product_array_sample(hash = DISCRIMINANTS, n: 1000)
+    product_array(hash).sample(n)
   end
 
-  def self.product_working
-    product(DISCRIMINANTS_WORKING)
+  def self.product_array(hash = DISCRIMINANTS)
+    attrs = hash.values
+    filter(attrs[0].product(*attrs[1..-1]))
+  end
+
+  def self.product_hash(hash = DISCRIMINANTS)
+    product_array(hash).map { |p| Hash[hash.keys.zip p] }
+  end
+
+  def self.filter(product_array)
+    # Age
+    product_array.delete_if { |array| array[1] == '>30' }
+
+    # Status
+    product_array.delete_if { |array| array[2] == 'Lycéen·ne – collégien·ne' }
+    product_array.delete_if { |array| array[2] == 'Autre' }
+
+    # Degree
+    # product_array.delete_if { |array| array[5] == 'BEPC' }
+    # product_array.delete_if { |array| array[5] == 'CAP' }
+    # product_array.delete_if { |array| array[5] == 'BEP' }
+    product_array.delete_if { |array| array[5] == 'Non' }
+
+    # Handicap / Cap emploi
+    product_array.delete_if { |array| !array[3] && array[10] }
   end
 
   private
