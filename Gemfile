@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 ruby '2.3.1'
 
 gem 'rails', '~> 4.2'
+gem 'pg'
+
 gem 'rails-i18n'
 gem 'puma'
 gem 'sass-rails'
@@ -10,7 +12,6 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'haml-rails'
-gem 'pg'
 gem 'simple_form'
 gem 'wicked'
 
@@ -54,5 +55,8 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'codeclimate-test-reporter'
   gem 'database_cleaner'
+  gem 'poltergeist'
+  gem 'rspec_junit_formatter'
 end
