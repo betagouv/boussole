@@ -11,31 +11,15 @@ module TrainingClassifier
   extend self
 
   def run
-    attributes = %w(knowledge age status handicap continuation degree experience)
+    train_file = Rails.root.join('lib', 'train.csv')
+    train_set  = Ai4r::Data::DataSet.new.load_csv_with_labels(train_file)
 
-    training = [
-      [0, '16-25', 'employee', 0, 1, '<4', 0, 'espace metier'],
-      [0, '16-25', 'employee', 0, 0, '<4', 0, 'espace metier']
-    ]
+    test_file  = Rails.root.join('lib', 'test.csv')
+    test_set   = Ai4r::Data::DataSet.new.load_csv(test_file)
 
-    dec_tree = DecisionTree::ID3Tree.new(
-      attributes,
-      training,
-      'espace metier',
-      knowledge: :discrete,
-      age: :continuous,
-      status: :discrete,
-      handicap: :discrete,
-      continuation: :discrete,
-      degree: :continuous,
-      experience: :discrete
-    )
+    id3 = Ai4r::Classifiers::ID3.new.build(train_set)
 
-    dec_tree.train
-
-    # test = [0, '16-25', 'employee', 0, 0, '<4', 0, 'espace metier']
-    decision = dec_tree.predict(test)
-    puts "Predicted: #{decision} ... True decision: #{test.last}"
+    test_set.data_items.map { |item| id3.eval(item) rescue nil }
   end
 end
 

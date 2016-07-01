@@ -7,6 +7,7 @@ ruby '2.3.1'
 gem 'rails', '~> 4.2'
 gem 'pg'
 
+gem 'ai4r'
 gem 'coffee-rails'
 gem 'decisiontree'
 gem 'flip'
