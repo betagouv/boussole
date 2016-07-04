@@ -25,4 +25,11 @@ class Housing < ActiveRecord::Base
   def cle?
     status == 'Étudiant·e'
   end
+
+  # TODO: Change true/false for truthy/falsy matchers
+  def locapass?
+    return true if status == 'Salarié·e'
+    return true if status.in?(['En alternance', 'Sans activité']) && age <= 30
+    false
+  end
 end

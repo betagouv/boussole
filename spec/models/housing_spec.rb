@@ -193,4 +193,62 @@ RSpec.describe Housing, type: :model do
       it { expect(housing.cle?).to eq(true) }
     end
   end
+
+  describe '#locapass?' do
+    context 'for oldies' do
+      let(:housing) do
+        create(
+          :housing,
+          duration: '<= 1 an',
+          status: 'Alternance',
+          resources: 1234,
+          age: 30
+        )
+      end
+
+      it { expect(housing.locapass?).to eq(false) }
+    end
+
+    context 'for employees' do
+      let(:housing) do
+        create(
+          :housing,
+          duration: '<= 1 an',
+          status: 'Salarié·e',
+          resources: 1234,
+          age: 30
+        )
+      end
+
+      it { expect(housing.locapass?).to eq(true) }
+    end
+
+    context "for young people undertaking an 'alternance'" do
+      let(:housing) do
+        create(
+          :housing,
+          duration: '<= 1 an',
+          status: 'En alternance',
+          resources: 1234,
+          age: 29
+        )
+      end
+
+      it { expect(housing.locapass?).to eq(true) }
+    end
+
+    context 'for young job seekers' do
+      let(:housing) do
+        create(
+          :housing,
+          duration: '<= 1 an',
+          status: 'Sans activité',
+          resources: 1234,
+          age: 29
+        )
+      end
+
+      it { expect(housing.locapass?).to eq(true) }
+    end
+  end
 end
