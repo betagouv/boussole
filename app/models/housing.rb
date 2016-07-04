@@ -32,4 +32,8 @@ class Housing < ActiveRecord::Base
     return true if status.in?(['En alternance', 'Sans activité']) && age <= 30
     false
   end
+
+  def visale?
+    duration == '> 1 an' && status == 'Salarié·e'
+  end
 end

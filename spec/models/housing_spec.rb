@@ -251,4 +251,42 @@ RSpec.describe Housing, type: :model do
       it { expect(housing.locapass?).to eq(true) }
     end
   end
+
+  describe '#visale?' do
+    context 'for less or equal than 1 year' do
+      let(:housing) do
+        create(
+          :housing,
+          duration: '<= 1 an',
+          status: 'Salarié·e'
+        )
+      end
+
+      it { expect(housing.visale?).to eq(false) }
+    end
+
+    context 'for non employees' do
+      let(:housing) do
+        create(
+          :housing,
+          duration: '> 1 an',
+          status: 'Sans activité'
+        )
+      end
+
+      it { expect(housing.visale?).to eq(false) }
+    end
+
+    context 'for more than a year and for employees' do
+      let(:housing) do
+        create(
+          :housing,
+          duration: '> 1 an',
+          status: 'Salarié·e'
+        )
+      end
+
+      it { expect(housing.visale?).to eq(true) }
+    end
+  end
 end
