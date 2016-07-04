@@ -137,4 +137,32 @@ RSpec.describe Housing, type: :model do
       it { expect(housing.pain_d_avoine?).to eq(true) }
     end
   end
+
+  describe '#apl?' do
+    context 'for urgences' do
+      let(:housing) do
+        create(
+          :housing,
+          duration: 'Ce soir',
+          status: 'Étudiant·e',
+          resources: 1234
+        )
+      end
+
+      it { expect(housing.apl?).to eq(false) }
+    end
+
+    context 'for non urgences' do
+      let(:housing) do
+        create(
+          :housing,
+          duration: '<= 1 an',
+          status: 'Étudiant·e',
+          resources: 1234
+        )
+      end
+
+      it { expect(housing.apl?).to eq(true) }
+    end
+  end
 end

@@ -17,4 +17,8 @@ class Housing < ActiveRecord::Base
       status != 'Étudiant·e' &&
       resources >= 300
   end
+
+  def apl?
+    duration != 'Ce soir'
+  end
 end
