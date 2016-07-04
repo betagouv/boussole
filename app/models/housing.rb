@@ -21,4 +21,8 @@ class Housing < ActiveRecord::Base
   def apl?
     duration != 'Ce soir'
   end
+
+  def cle?
+    status == 'Étudiant·e'
+  end
 end

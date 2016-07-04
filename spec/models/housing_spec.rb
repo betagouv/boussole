@@ -165,4 +165,32 @@ RSpec.describe Housing, type: :model do
       it { expect(housing.apl?).to eq(true) }
     end
   end
+
+  describe '#cle?' do
+    context 'for non students' do
+      let(:housing) do
+        create(
+          :housing,
+          duration: 'Ce soir',
+          status: 'Sans activité',
+          resources: 1234
+        )
+      end
+
+      it { expect(housing.cle?).to eq(false) }
+    end
+
+    context 'for non urgences' do
+      let(:housing) do
+        create(
+          :housing,
+          duration: '<= 1 an',
+          status: 'Étudiant·e',
+          resources: 1234
+        )
+      end
+
+      it { expect(housing.cle?).to eq(true) }
+    end
+  end
 end
