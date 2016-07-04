@@ -21,9 +21,10 @@
 
   .col-md-2
     .thumbnail
-      = image_tag('housing.png')
-      .caption
-        %h5 Me loger
+      = link_to(housings_path, method: :post) do
+        = image_tag('housing.png')
+        .caption
+          %h5 Me loger
 
   .col-md-2
     .thumbnail

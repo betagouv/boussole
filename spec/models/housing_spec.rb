@@ -7,7 +7,7 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: '> 1 an',
+          duration: "> d'1 an",
           status: 'Étudiant·e',
           resources: 299
         )
@@ -33,7 +33,7 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: 'Ce soir',
+          duration: 'Cette nuit',
           status: 'Salarié·e',
           resources: 299
         )
@@ -48,7 +48,7 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: '> 1 an',
+          duration: "> d'1 an",
           status: 'Étudiant·e',
           resources: 1234
         )
@@ -61,7 +61,7 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: '<= 1 an',
+          duration: '1 an',
           status: 'Sans activité',
           resources: 1234
         )
@@ -74,7 +74,20 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: '<= 1 an',
+          duration: 'Quelques mois',
+          status: 'Étudiant·e',
+          resources: 1234
+        )
+      end
+
+      it { expect(housing.crous?).to eq(true) }
+    end
+
+    context 'for students and a year' do
+      let(:housing) do
+        create(
+          :housing,
+          duration: '1 an',
           status: 'Étudiant·e',
           resources: 1234
         )
@@ -89,7 +102,7 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: 'Ce soir',
+          duration: 'Cette nuit',
           status: 'Sans activité',
           resources: 300
         )
@@ -102,7 +115,7 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: '<= 1 an',
+          duration: '1 an',
           status: 'Étudiant·e',
           resources: 300
         )
@@ -115,7 +128,7 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: '<= 1 an',
+          duration: '1 an',
           status: 'Sans activité',
           resources: 299
         )
@@ -128,7 +141,7 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: '<= 1 an',
+          duration: '1 an',
           status: 'Sans activité',
           resources: 300
         )
@@ -143,7 +156,7 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: 'Ce soir',
+          duration: 'Cette nuit',
           status: 'Étudiant·e',
           resources: 1234
         )
@@ -156,7 +169,7 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: '<= 1 an',
+          duration: '1 an',
           status: 'Étudiant·e',
           resources: 1234
         )
@@ -171,7 +184,7 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: 'Ce soir',
+          duration: 'Cette nuit',
           status: 'Sans activité',
           resources: 1234
         )
@@ -184,7 +197,7 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: '<= 1 an',
+          duration: '1 an',
           status: 'Étudiant·e',
           resources: 1234
         )
@@ -199,7 +212,7 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: '<= 1 an',
+          duration: '1 an',
           status: 'Alternance',
           resources: 1234,
           age: 30
@@ -213,7 +226,7 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: '<= 1 an',
+          duration: '1 an',
           status: 'Salarié·e',
           resources: 1234,
           age: 30
@@ -227,7 +240,7 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: '<= 1 an',
+          duration: '1 an',
           status: 'En alternance',
           resources: 1234,
           age: 29
@@ -241,7 +254,7 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: '<= 1 an',
+          duration: '1 an',
           status: 'Sans activité',
           resources: 1234,
           age: 29
@@ -253,11 +266,11 @@ RSpec.describe Housing, type: :model do
   end
 
   describe '#visale?' do
-    context 'for less or equal than 1 year' do
+    context 'for less than a year' do
       let(:housing) do
         create(
           :housing,
-          duration: '<= 1 an',
+          duration: 'Quelques mois',
           status: 'Salarié·e'
         )
       end
@@ -269,7 +282,7 @@ RSpec.describe Housing, type: :model do
       let(:housing) do
         create(
           :housing,
-          duration: '> 1 an',
+          duration: '1 an',
           status: 'Sans activité'
         )
       end
@@ -277,11 +290,23 @@ RSpec.describe Housing, type: :model do
       it { expect(housing.visale?).to eq(false) }
     end
 
+    context 'for a year and for employees' do
+      let(:housing) do
+        create(
+          :housing,
+          duration: "> d'1 an",
+          status: 'Salarié·e'
+        )
+      end
+
+      it { expect(housing.visale?).to eq(true) }
+    end
+
     context 'for more than a year and for employees' do
       let(:housing) do
         create(
           :housing,
-          duration: '> 1 an',
+          duration: "> d'1 an",
           status: 'Salarié·e'
         )
       end
