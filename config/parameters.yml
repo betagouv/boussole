@@ -1,0 +1,83 @@
+public_services: # acteurs
+  siao:
+    title: asdfasdf # titre, nom de l'acteur
+    description: asdfasdfasdf # description général de l'acteur
+    address:
+      postal_address: 1, av foch 12341 Reims # adresse postale
+      email: asdfsadf@email.com
+      phone: 0123456789 # téléphone
+      url: https://blabla.fr
+    offer: # offre de service, ajouter « - » pour énumerer
+      - Solution logement pour la nuit.
+      - Etc.
+      - Etc.
+
+  crous:
+    title: asdfasdf # titre, nom de l'acteur
+    description: asdfasdfasdf # description général de l'acteur
+    address:
+      postal_address: 1, av foch 12341 Reims # adresse postale
+      email: asdfsadf@email.com
+      phone: 0123456789 # téléphone
+      url: https://blabla.fr
+    offer: # offre de service, ajouter « - » pour énumerer
+      - Solution logement pour la nuit.
+      - Etc.
+      - Etc.
+
+  pain_d_avoine:
+    title: asdfasdf # titre, nom de l'acteur
+    description: asdfasdfasdf # description général de l'acteur
+    address:
+      postal_address: 1, av foch 12341 Reims # adresse postale
+      email: asdfsadf@email.com
+      phone: 0123456789 # téléphone
+      url: https://blabla.fr
+    offer: # offre de service, ajouter « - » pour énumerer
+      - Solution logement pour la nuit.
+      - Etc.
+      - Etc.
+
+  action_logement:
+    title: asdfasdf # titre, nom de l'acteur
+    description: asdfasdfasdf # description général de l'acteur
+    address:
+      postal_address: 1, av foch 12341 Reims # adresse postale
+      email: asdfsadf@email.com
+      phone: 0123456789 # téléphone
+      url: https://blabla.fr
+    offer: # offre de service, ajouter « - » pour énumerer
+      - Solution logement pour la nuit.
+      - Etc.
+      - Etc.
+
+mesures: # dispositifs, aides
+  cent_quinze:
+    title: asdfsadf
+    description: asdfasdf
+    url: asdfasdf
+    public_service: siao # facultatif, acteur du dispositif / de l'aide
+
+  apl:
+    title: asdfsadf
+    description: asdfasdf
+    url: asdfasdf
+    public_service: pain_d_avoine # facultatif, acteur du dispositif / de l'aide
+
+  cle:
+    title: asdfsadf
+    description: asdfasdf
+    url: asdfasdf
+    public_service: crous # facultatif, acteur du dispositif / de l'aide
+
+  locapass:
+    title: asdfsadf
+    description: asdfasdf
+    url: asdfasdf
+    public_service: action_logement # facultatif, acteur du dispositif / de l'aide
+
+  visale:
+    title: asdfsadf
+    description: asdfasdf
+    url: asdfasdf
+    public_service: action_logement # facultatif, acteur du dispositif / de l'aide
