@@ -1,7 +1,40 @@
-%h5 Acteur
-- @results[:a].each do |a|
-  %p= a
+- @results[:public_services].each do |public_service|
+  %section.text-center
+    %address
+      %h3= public_service['title']
+      %p= public_service['description']
+      = public_service['address']['postal_address']
+      %br
+      %abbr{ title: 'Email' }
+        E :
+        = public_service['address']['email']
+      %br
+      %abbr{ title: 'Téléphone' }
+        T :
+        = public_service['address']['phone']
+      %br
+      %abbr{ title: 'Site' }
+        W :
+        = public_service['address']['url']
 
-%h5 Dispositif
-- @results[:b].each do |b|
-  %p= b
+    %h5 Un·e professionnel·le est disponible pour t'aider à :
+
+    - public_service['offer'].each do |service|
+      .col-md-4
+        %br
+        %br
+        %p.small
+          = service
+
+- @results[:mesures].each do |mesure|
+  %section.text-center
+    %address
+      %h3= mesure['title']
+      %p= mesure['description']
+      %br
+      %abbr{ title: 'Site' }
+        W :
+        = mesure['url']
+
+%section.text-center
+  = link_to('Prendre un RDV', '#', class: 'submit btn-default')
