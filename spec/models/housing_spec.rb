@@ -2,6 +2,24 @@
 # frozen_string_literal: true
 
 RSpec.describe Housing, type: :model do
+  context 'validations' do
+    context 'housing' do
+      subject { build(:housing, :housing) }
+
+      it { is_expected.to validate_presence_of(:duration) }
+      it { is_expected.to validate_presence_of(:housing_city) }
+      it { is_expected.to validate_presence_of(:resources) }
+    end
+
+    context 'profile' do
+      subject { build(:housing, :profile) }
+
+      it { is_expected.to validate_presence_of(:status) }
+      it { is_expected.to validate_presence_of(:residence_city) }
+      it { is_expected.to validate_presence_of(:age) }
+    end
+  end
+
   describe '#siao?' do
     context 'for non urgences' do
       let(:housing) do

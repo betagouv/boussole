@@ -52,11 +52,18 @@ class Housing < ActiveRecord::Base
 
   attr_accessor :current_step
 
-  # TODO: Fix validations
   with_options if: -> { required_for_step?(:housing) } do |step|
-    step.validates :duration, presence: true
-    step.validates :housing_city, presence: true
-    step.validates :resources, presence: true
+    step.validates :duration,
+                   :housing_city,
+                   :resources,
+                   presence: true
+  end
+
+  with_options if: -> { required_for_step?(:profile) } do |step|
+    step.validates :status,
+                   :residence_city,
+                   :age,
+                   presence: true
   end
 
   private
