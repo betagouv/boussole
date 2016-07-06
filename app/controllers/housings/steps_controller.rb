@@ -1,7 +1,12 @@
+# encoding: utf-8
+# frozen_string_literal: true
+
 class Housings::StepsController < ApplicationController
   include Wicked::Wizard
 
   steps *Housing::STEPS
+
+  require_feature :housing
 
   def show
     load_housing

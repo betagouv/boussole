@@ -1,4 +1,9 @@
+# encoding: utf-8
+# frozen_string_literal: true
+
 class HousingsController < ApplicationController
+  require_feature :housing
+
   # GET /projects/1
   def show
     @housing = Housing.find(params[:id])

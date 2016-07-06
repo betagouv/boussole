@@ -1,7 +1,12 @@
+# encoding: utf-8
+# frozen_string_literal: true
+
 class Projects::StepsController < ApplicationController
   include Wicked::Wizard
 
   steps *Project::STEPS
+
+  require_feature :training
 
   def show
     load_project
