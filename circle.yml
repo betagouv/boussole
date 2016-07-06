@@ -1,0 +1,12 @@
+test:
+  pre:
+    - bower install
+    - bower prune
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - '[[ ! -s "$(git rev-parse --git-dir)/shallow" ]] || git fetch --unshallow'
+      - git push git@heroku.com:boussole-de-droits.git $CIRCLE_SHA1:master
+      - heroku run rake db:migrate data:migrate -a boussole-de-droits
