@@ -5,7 +5,7 @@ RSpec.describe Housing, type: :model do
   describe '#siao?' do
     context 'for non urgences' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: "> d'1 an",
           status: 'Étudiant·e',
@@ -18,7 +18,7 @@ RSpec.describe Housing, type: :model do
 
     context 'for people with enough resources' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: nil,
           status: 'Sans activité',
@@ -31,7 +31,7 @@ RSpec.describe Housing, type: :model do
 
     context 'for urgences and without enough resources' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: 'Cette nuit',
           status: 'Salarié·e',
@@ -46,7 +46,7 @@ RSpec.describe Housing, type: :model do
   describe '#crous?' do
     context 'for more than a year' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: "> d'1 an",
           status: 'Étudiant·e',
@@ -59,7 +59,7 @@ RSpec.describe Housing, type: :model do
 
     context 'for a non student' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: '1 an',
           status: 'Sans activité',
@@ -72,7 +72,7 @@ RSpec.describe Housing, type: :model do
 
     context 'for students and no more than a year' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: 'Quelques mois',
           status: 'Étudiant·e',
@@ -85,7 +85,7 @@ RSpec.describe Housing, type: :model do
 
     context 'for students and a year' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: '1 an',
           status: 'Étudiant·e',
@@ -100,7 +100,7 @@ RSpec.describe Housing, type: :model do
   describe '#pain_d_avoine?' do
     context 'for urgences' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: 'Cette nuit',
           status: 'Sans activité',
@@ -113,7 +113,7 @@ RSpec.describe Housing, type: :model do
 
     context 'for students' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: '1 an',
           status: 'Étudiant·e',
@@ -126,7 +126,7 @@ RSpec.describe Housing, type: :model do
 
     context 'for people without enough resources' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: '1 an',
           status: 'Sans activité',
@@ -139,7 +139,7 @@ RSpec.describe Housing, type: :model do
 
     context 'for non urgences, non students and with enough resources' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: '1 an',
           status: 'Sans activité',
@@ -154,7 +154,7 @@ RSpec.describe Housing, type: :model do
   describe '#apl?' do
     context 'for urgences' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: 'Cette nuit',
           status: 'Étudiant·e',
@@ -167,7 +167,7 @@ RSpec.describe Housing, type: :model do
 
     context 'for non urgences' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: '1 an',
           status: 'Étudiant·e',
@@ -182,7 +182,7 @@ RSpec.describe Housing, type: :model do
   describe '#cle?' do
     context 'for non students' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: 'Cette nuit',
           status: 'Sans activité',
@@ -195,7 +195,7 @@ RSpec.describe Housing, type: :model do
 
     context 'for non urgences' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: '1 an',
           status: 'Étudiant·e',
@@ -210,7 +210,7 @@ RSpec.describe Housing, type: :model do
   describe '#locapass?' do
     context 'for oldies' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: '1 an',
           status: 'Alternance',
@@ -224,7 +224,7 @@ RSpec.describe Housing, type: :model do
 
     context 'for employees' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: '1 an',
           status: 'Salarié·e',
@@ -238,7 +238,7 @@ RSpec.describe Housing, type: :model do
 
     context "for young people undertaking an 'alternance'" do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: '1 an',
           status: 'En alternance',
@@ -252,7 +252,7 @@ RSpec.describe Housing, type: :model do
 
     context 'for young job seekers' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: '1 an',
           status: 'Sans activité',
@@ -268,7 +268,7 @@ RSpec.describe Housing, type: :model do
   describe '#visale?' do
     context 'for less than a year' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: 'Quelques mois',
           status: 'Salarié·e'
@@ -280,7 +280,7 @@ RSpec.describe Housing, type: :model do
 
     context 'for non employees' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: '1 an',
           status: 'Sans activité'
@@ -292,7 +292,7 @@ RSpec.describe Housing, type: :model do
 
     context 'for a year and for employees' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: "> d'1 an",
           status: 'Salarié·e'
@@ -304,7 +304,7 @@ RSpec.describe Housing, type: :model do
 
     context 'for more than a year and for employees' do
       let(:housing) do
-        create(
+        build(
           :housing,
           duration: "> d'1 an",
           status: 'Salarié·e'
