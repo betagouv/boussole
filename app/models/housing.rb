@@ -30,6 +30,12 @@ class Housing < ActiveRecord::Base
       resources >= 300
   end
 
+  def cent_quinze?
+    duration == 'Cette nuit' &&
+      resources <= 1_000 &&
+      age.in?(16..30)
+  end
+
   def apl?
     duration != 'Cette nuit'
   end

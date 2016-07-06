@@ -22,40 +22,17 @@ RSpec.describe Housing, type: :model do
 
   describe '#siao?' do
     context 'for non urgences' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: "> d'1 an",
-          status: 'Étudiant·e',
-          resources: 299
-        )
-      end
-
-      it { expect(housing.siao?).to eq(false) }
+      it { expect(build(:housing).siao?).to eq(false) }
     end
 
     context 'for people with enough resources' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: nil,
-          status: 'Sans activité',
-          resources: 300
-        )
-      end
+      let(:housing) { build(:housing, resources: 300) }
 
       it { expect(housing.siao?).to eq(false) }
     end
 
     context 'for urgences and without enough resources' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: 'Cette nuit',
-          status: 'Salarié·e',
-          resources: 299
-        )
-      end
+      let(:housing) { build(:housing, duration: 'Cette nuit', resources: 299) }
 
       it { expect(housing.siao?).to eq(true) }
     end
@@ -63,53 +40,23 @@ RSpec.describe Housing, type: :model do
 
   describe '#crous?' do
     context 'for more than a year' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: "> d'1 an",
-          status: 'Étudiant·e',
-          resources: 1234
-        )
-      end
+      let(:housing) { build(:housing, duration: "> d'1 an") }
 
       it { expect(housing.crous?).to eq(false) }
     end
 
     context 'for a non student' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: '1 an',
-          status: 'Sans activité',
-          resources: 1234
-        )
-      end
-
-      it { expect(housing.crous?).to eq(false) }
+      it { expect(build(:housing).crous?).to eq(false) }
     end
 
     context 'for students and no more than a year' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: 'Quelques mois',
-          status: 'Étudiant·e',
-          resources: 1234
-        )
-      end
+      let(:housing) { build(:housing, duration: 'Quelques mois', status: 'Étudiant·e') }
 
       it { expect(housing.crous?).to eq(true) }
     end
 
     context 'for students and a year' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: '1 an',
-          status: 'Étudiant·e',
-          resources: 1234
-        )
-      end
+      let(:housing) { build(:housing, duration: '1 an', status: 'Étudiant·e') }
 
       it { expect(housing.crous?).to eq(true) }
     end
@@ -117,109 +64,88 @@ RSpec.describe Housing, type: :model do
 
   describe '#pain_d_avoine?' do
     context 'for urgences' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: 'Cette nuit',
-          status: 'Sans activité',
-          resources: 300
-        )
-      end
+      let(:housing) { build(:housing, duration: 'Cette nuit') }
 
       it { expect(housing.pain_d_avoine?).to eq(false) }
     end
 
     context 'for students' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: '1 an',
-          status: 'Étudiant·e',
-          resources: 300
-        )
-      end
+      let(:housing) { build(:housing, status: 'Étudiant·e') }
 
       it { expect(housing.pain_d_avoine?).to eq(false) }
     end
 
     context 'for people without enough resources' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: '1 an',
-          status: 'Sans activité',
-          resources: 299
-        )
-      end
+      let(:housing) { build(:housing, resources: 299) }
 
       it { expect(housing.pain_d_avoine?).to eq(false) }
     end
 
     context 'for non urgences, non students and with enough resources' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: '1 an',
-          status: 'Sans activité',
-          resources: 300
-        )
-      end
+      let(:housing) { build(:housing, resources: 300) }
 
       it { expect(housing.pain_d_avoine?).to eq(true) }
     end
   end
 
-  describe '#apl?' do
-    context 'for urgences' do
+  describe '#cent_quinze?' do
+    context 'for non urgences' do
+      it { expect(build(:housing).cent_quinze?).to eq(false) }
+    end
+
+    context 'for people with enough resources' do
+      let(:housing) { build(:housing, resources: 1_001) }
+
+      it { expect(housing.cent_quinze?).to eq(false) }
+    end
+
+    context 'for kids' do
+      let(:housing) { build(:housing, age: 15) }
+
+      it { expect(housing.cent_quinze?).to eq(false) }
+    end
+
+    context 'for oldies' do
+      let(:housing) { build(:housing, age: 31) }
+
+      it { expect(housing.cent_quinze?).to eq(false) }
+    end
+
+    context 'for urgences, for young people without enough resources' do
       let(:housing) do
         build(
           :housing,
           duration: 'Cette nuit',
-          status: 'Étudiant·e',
-          resources: 1234
+          resources: 1_000,
+          age: 30
         )
       end
+
+      it { expect(housing.cent_quinze?).to eq(true) }
+    end
+  end
+
+  describe '#apl?' do
+    context 'for urgences' do
+      let(:housing) { build(:housing, duration: 'Cette nuit') }
 
       it { expect(housing.apl?).to eq(false) }
     end
 
     context 'for non urgences' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: '1 an',
-          status: 'Étudiant·e',
-          resources: 1234
-        )
-      end
-
-      it { expect(housing.apl?).to eq(true) }
+      it { expect(build(:housing).apl?).to eq(true) }
     end
   end
 
   describe '#cle?' do
     context 'for non students' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: 'Cette nuit',
-          status: 'Sans activité',
-          resources: 1234
-        )
-      end
+      let(:housing) { build(:housing, duration: 'Cette nuit') }
 
-      it { expect(housing.cle?).to eq(false) }
+      it { expect(build(:housing).cle?).to eq(false) }
     end
 
     context 'for non urgences' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: '1 an',
-          status: 'Étudiant·e',
-          resources: 1234
-        )
-      end
+      let(:housing) { build(:housing, status: 'Étudiant·e') }
 
       it { expect(housing.cle?).to eq(true) }
     end
@@ -227,57 +153,25 @@ RSpec.describe Housing, type: :model do
 
   describe '#locapass?' do
     context 'for oldies' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: '1 an',
-          status: 'Alternance',
-          resources: 1234,
-          age: 30
-        )
-      end
+      let(:housing) { build(:housing, age: 30) }
 
       it { expect(housing.locapass?).to eq(false) }
     end
 
     context 'for employees' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: '1 an',
-          status: 'Salarié·e',
-          resources: 1234,
-          age: 30
-        )
-      end
+      let(:housing) { build(:housing, status: 'Salarié·e') }
 
       it { expect(housing.locapass?).to eq(true) }
     end
 
     context "for young people undertaking an 'alternance'" do
-      let(:housing) do
-        build(
-          :housing,
-          duration: '1 an',
-          status: 'En alternance',
-          resources: 1234,
-          age: 29
-        )
-      end
+      let(:housing) { build(:housing, status: 'En alternance', age: 29) }
 
       it { expect(housing.locapass?).to eq(true) }
     end
 
     context 'for young job seekers' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: '1 an',
-          status: 'Sans activité',
-          resources: 1234,
-          age: 29
-        )
-      end
+      let(:housing) { build(:housing, status: 'Sans activité', age: 29) }
 
       it { expect(housing.locapass?).to eq(true) }
     end
@@ -285,49 +179,23 @@ RSpec.describe Housing, type: :model do
 
   describe '#visale?' do
     context 'for less than a year' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: 'Quelques mois',
-          status: 'Salarié·e'
-        )
-      end
+      let(:housing) { build(:housing, duration: 'Quelques mois') }
 
       it { expect(housing.visale?).to eq(false) }
     end
 
     context 'for non employees' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: '1 an',
-          status: 'Sans activité'
-        )
-      end
-
-      it { expect(housing.visale?).to eq(false) }
+      it { expect(build(:housing).visale?).to eq(false) }
     end
 
     context 'for a year and for employees' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: "> d'1 an",
-          status: 'Salarié·e'
-        )
-      end
+      let(:housing) { build(:housing, duration: '1 an', status: 'Salarié·e') }
 
       it { expect(housing.visale?).to eq(true) }
     end
 
     context 'for more than a year and for employees' do
-      let(:housing) do
-        build(
-          :housing,
-          duration: "> d'1 an",
-          status: 'Salarié·e'
-        )
-      end
+      let(:housing) { build(:housing, duration: "> d'1 an", status: 'Salarié·e') }
 
       it { expect(housing.visale?).to eq(true) }
     end

@@ -13,6 +13,7 @@ class HousingsController < ApplicationController
     @results[:a] << 'SIAO'          if @housing.siao?
     @results[:a] << 'Crous'         if @housing.crous?
     @results[:a] << "Pain d'avoine" if @housing.pain_d_avoine?
+    @results[:b] << '115'           if @housing.cent_quinze?
     @results[:b] << 'APL'           if @housing.apl?
     @results[:b] << 'CLE'           if @housing.cle?
     @results[:b] << 'Locapass'      if @housing.locapass?

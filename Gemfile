@@ -61,6 +61,7 @@ group :test do
   gem 'capybara'
   gem 'codeclimate-test-reporter'
   gem 'database_cleaner'
+  gem 'ffaker'
   gem 'poltergeist'
   gem 'rspec_junit_formatter'
   gem 'shoulda-matchers', '~> 3.1'
