@@ -1,18 +1,22 @@
+# encoding: utf-8
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 ruby '2.3.1'
 
 gem 'rails', '~> 4.2'
 gem 'pg'
 
-gem 'rails-i18n'
-gem 'puma'
-gem 'sass-rails'
-gem 'uglifier'
 gem 'coffee-rails'
-gem 'jquery-rails'
-gem 'turbolinks'
+gem 'flip'
 gem 'haml-rails'
+gem 'jquery-rails'
+gem 'puma'
+gem 'rails-i18n'
+gem 'sass-rails'
 gem 'simple_form'
+gem 'turbolinks'
+gem 'uglifier'
 gem 'wicked'
 
 group :production, :staging do
