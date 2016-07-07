@@ -7,19 +7,19 @@
     - if feature?(:working) || feature?(:training) || feature?(:healthcaring)
       près de chez toi,
 
-    pour t'aider dans tes projets
+    pour t'aider
 
     - if feature?(:training)
-      de formation
+      dans tes projets de formation
 
     - if feature?(:housing)
-      de logement
+      à trouver une solution pour te loger
 
     - if feature?(:working)
-      d'activité
+      dans tes projets d'activité
 
     - if feature?(:healthcaring)
-      et de santé
+      à trouver une solution pour te soigner
 
 %section.text-center
   - if feature?(:working)
