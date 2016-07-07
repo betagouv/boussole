@@ -21,7 +21,8 @@ class Housing < ActiveRecord::Base
 
   def crous?
     duration.in?(['Quelques mois', '1 an']) &&
-      status == 'Étudiant·e'
+      status == 'Étudiant·e' &&
+      resources < 1_200
   end
 
   def pain_d_avoine?

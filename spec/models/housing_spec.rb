@@ -49,14 +49,20 @@ RSpec.describe Housing, type: :model do
       it { expect(build(:housing).crous?).to eq(false) }
     end
 
-    context 'for students and no more than a year' do
-      let(:housing) { build(:housing, duration: 'Quelques mois', status: 'Étudiant·e') }
+    context 'for people with enough resources' do
+      let(:housing) { build(:housing, duration: 'Quelques mois', status: 'Étudiant·e', resources: 1_200) }
+
+      it { expect(housing.crous?).to eq(false) }
+    end
+
+    context 'for students without resources and for no more than a year' do
+      let(:housing) { build(:housing, duration: 'Quelques mois', status: 'Étudiant·e', resources: 1_199) }
 
       it { expect(housing.crous?).to eq(true) }
     end
 
-    context 'for students and a year' do
-      let(:housing) { build(:housing, duration: '1 an', status: 'Étudiant·e') }
+    context 'for students without resources and for a year' do
+      let(:housing) { build(:housing, duration: '1 an', status: 'Étudiant·e', resources: 1_199) }
 
       it { expect(housing.crous?).to eq(true) }
     end
@@ -99,13 +105,13 @@ RSpec.describe Housing, type: :model do
       it { expect(housing.cent_quinze?).to eq(false) }
     end
 
-    context 'for kids' do
+    context 'for really young people' do
       let(:housing) { build(:housing, age: 15) }
 
       it { expect(housing.cent_quinze?).to eq(false) }
     end
 
-    context 'for oldies' do
+    context 'for not-so-young adults' do
       let(:housing) { build(:housing, age: 31) }
 
       it { expect(housing.cent_quinze?).to eq(false) }
@@ -152,7 +158,7 @@ RSpec.describe Housing, type: :model do
   end
 
   describe '#locapass?' do
-    context 'for oldies' do
+    context 'for not-so-young adults' do
       let(:housing) { build(:housing, age: 30) }
 
       it { expect(housing.locapass?).to eq(false) }
