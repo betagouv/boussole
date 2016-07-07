@@ -14,7 +14,7 @@
                          as: :select
 
       = f.input :residence_city, label: 'Lieu de résidence actuel',
-                                 collection: Project::CITIES,
+                                 collection: Project::CITIES.dup.push('Sans domicile fixe'),
                                  include_blank: false,
                                  input_html: { rel: 'autocomplete' }
 
