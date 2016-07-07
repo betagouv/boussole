@@ -16,13 +16,13 @@ class Housing < ActiveRecord::Base
 
   def siao?
     duration == 'Cette nuit' &&
-      resources < 300
+      resources <= 300
   end
 
   def crous?
     duration.in?(['Quelques mois', '1 an']) &&
       status == 'Étudiant·e' &&
-      resources < 1_200
+      resources <= 1_200
   end
 
   def pain_d_avoine?
@@ -42,13 +42,19 @@ class Housing < ActiveRecord::Base
   end
 
   def cle?
-    status == 'Étudiant·e'
+    duration != 'Cette nuit' &&
+      status == 'Étudiant·e'
   end
 
   # TODO: Change true/false for truthy/falsy matchers
   def locapass?
-    return true if status == 'Salarié·e'
-    return true if status.in?(['En alternance', 'Sans activité']) && age <= 30
+    return true if duration != 'Cette nuit' &&
+                   status == 'Salarié·e'
+
+    return true if duration != 'Cette nuit' &&
+                   status.in?(['En alternance', 'Sans activité']) &&
+                   age <= 30
+
     false
   end
 
