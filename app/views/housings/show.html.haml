@@ -1,4 +1,4 @@
-- @results[:public_services].each do |public_service|
+- @results.each do |public_service|
   %section.text-center
     %address
       %h3= public_service['title']
@@ -26,15 +26,15 @@
         %p.small
           = service
 
-- @results[:mesures].each do |mesure|
-  %section.text-center
-    %address
-      %h3= mesure['title']
-      %p= mesure['description']
-      %br
-      %abbr{ title: 'Site' }
-        W :
-        = mesure['url']
+  - public_service[:mesures].each do |mesure|
+    %section.text-center
+      %address
+        %h4= mesure['title']
+        %p= mesure['description']
+        %br
+        %abbr{ title: 'Site' }
+          W :
+          = mesure['url']
 
 %section.text-center
   = link_to('Prendre un RDV', '#', class: 'submit btn-default')
