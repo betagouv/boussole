@@ -1,83 +1,94 @@
 public_services: # acteurs
   siao:
-    title: asdfasdf # titre, nom de l'acteur
-    description: asdfasdfasdf # description général de l'acteur
+    title: Services Intégrés de l’Accueil et de l’Orientation  # titre, nom de l'acteur
+    description: "Le Service intégré de l’accueil et de l’orientation (SIAO) centralise sur chaque territoire la demande et l’offre d’hébergement  pour apporter à chaque demande (urgente ou moins urgente) la réponse la plus adaptée d’hébergement, de logement accompagné ou de logement ordinaire. En cas d’urgence (pour une nuit), un seul numéro à composer : le 115"
     address:
-      postal_address: 1, av foch 12341 Reims # adresse postale
-      email: asdfsadf@email.com
-      phone: 0123456789 # téléphone
-      url: https://blabla.fr
-    offer: # offre de service, ajouter « - » pour énumerer
-      - Solution logement pour la nuit.
-      - Etc.
-      - Etc.
+      postal_address:  47 rue Docteur Schweitzer, 51100 Reims # adresse postale
+      email: siao51@orange.fr
+      phone: 03 26 02 30 97 # téléphone
+      url:
+    offer: # offre de service, ajouter « - » pour énumerer
+      - Propose un logement d'urgence (pour une nuit, chaque jour il faut renouveler sa demande suivant sa situation).
+      - Propose un accompagnement social pour trouver une solution d'hébergement ou de logement plus stable
 
   crous:
-    title: asdfasdf # titre, nom de l'acteur
-    description: asdfasdfasdf # description général de l'acteur
+    title: Centre régional des œuvres universitaires et scolaires de la Marne (51) # titre, nom de l'acteur
+    description: Le Crous, opérateur du service public de la vie étudiante, a pour missions principales, le logement étudiant, la restauration universitaire des étudiants et l’action sociale à travers les bourses et le Fond d’Aide d’Urgence (FNAU). # description général de l'acteur
     address:
-      postal_address: 1, av foch 12341 Reims # adresse postale
-      email: asdfsadf@email.com
-      phone: 0123456789 # téléphone
-      url: https://blabla.fr
-    offer: # offre de service, ajouter « - » pour énumerer
-      - Solution logement pour la nuit.
-      - Etc.
-      - Etc.
+      postal_address: 31 rue du général Sarrail, 51100 Reims
+      email: reims-campus@crous-reims.fr
+      phone:  03 26 50 04 59 # téléphone
+      url: http://www.crous-reims.fr/
+    offer: # offre de service, ajouter « - » pour énumerer
+      - ouvert du lundi au vendredi (8h30 – 12h et 13h – 17h)
+      - http://www.crous-reims.fr/contact/
+      - Répond au questions sur les bourses,
+      - Informe sur le logement en résidence universitaire
+      - Fait le suivi de votre Dossier Social Étudiant,
+      - "Propose des rendez-vous à l’Espace Reims Campus : http://www.crous-reims.fr/service/reims-campus ."
 
   pain_d_avoine:
-    title: asdfasdf # titre, nom de l'acteur
-    description: asdfasdfasdf # description général de l'acteur
+    title: Foyer de Jeunes Travailleurs (FJT) Léon Paindavoine  # titre, nom de l'acteur
+    description: Les foyers de jeunes travailleurs (FJT) ont pour mission d'accueillir des jeunes en formation ou exerçant une activité professionnelle. Ils proposent un hébergement temporaire comportant à la fois des locaux privatifs (meublés ou non) et des locaux communs affectés à la vie collective. Ils  s'adressent essentiellement aux jeunes travailleurs vivant seuls, âgés de 16 à 25 ans et exerçant une activité professionnelle ou suivant une formation professionnelle (par ex. stage ou apprentissage). Certains établissements accueillent également des étudiants ou des demandeurs d'emploiLa durée de l'hébergement est généralement de 2 ans maximum. # description général de l'acteur
     address:
-      postal_address: 1, av foch 12341 Reims # adresse postale
-      email: asdfsadf@email.com
-      phone: 0123456789 # téléphone
-      url: https://blabla.fr
-    offer: # offre de service, ajouter « - » pour énumerer
-      - Solution logement pour la nuit.
-      - Etc.
-      - Etc.
+      postal_address: 1 rue du Lieut Herduin, 51100 Reims # adresse postale
+      email: residence.paindavoine@noelpaindavoine.fr
+      phone:  03 26 61 48 00 # téléphone
+      url:
+    offer: # offre de service, ajouter « - » pour énumerer
+      - Propose différents types de logements et de services (chambres, studios, petits appartements)
+      - Propose restauration, information, animation, internet (selon les foyers)
+      - Favorise la rencontre et le partage entre les jeunes.
 
   action_logement:
-    title: asdfasdf # titre, nom de l'acteur
-    description: asdfasdfasdf # description général de l'acteur
+    title: Action Logement # titre, nom de l'acteur
+    description: Action Logement (ex 1% Logement) gère la Participation des Employeurs à l’Effort de Construction (PEEC). # description général de l'acteur
     address:
-      postal_address: 1, av foch 12341 Reims # adresse postale
-      email: asdfsadf@email.com
-      phone: 0123456789 # téléphone
-      url: https://blabla.fr
-    offer: # offre de service, ajouter « - » pour énumerer
-      - Solution logement pour la nuit.
-      - Etc.
-      - Etc.
+      postal_address: Agence Aliance Territoires 38 rue Cérès, 51100 Reims # adresse postale
+      email: agence.reims@alianceterritoires.fR
+      phone: 03 26 04 29 38  # téléphone
+      url: http://www.alianceterritoires.fr/
+    offer: # offre de service, ajouter « - » pour énumerer
+      - Propose une offre de logements à louer
+      - Propose une offre de logement pour tous les budgets, la majorité de logements ouvrant droit à l'APL
+      - Propose la saisie d'une demande en ligne sur http://www.alianceterritoires.fr/fr/saisir-mon-dossier,15208407/
 
 mesures: # dispositifs, aides
   cent_quinze:
-    title: asdfsadf
-    description: asdfasdf
-    url: asdfasdf
+    title: 115
+    description: Le 115 est un numéro d'urgence à n'utiliser que si vous êtes sans possibilité d'hébergement au moment de l'appel. N'appelez pas le 115 tant que vous disposez encore d'un logement ou êtes logé chez un tiers. Le 115 octroie des places au jour le jour.
+    url: http://www.gouvernement.fr/sites/default/files/contenu/piece-jointe/2014/10/dihal_-_annuaire_siao_ecran.pdf
     public_service: siao # facultatif, acteur du dispositif / de l'aide
 
   apl:
-    title: asdfsadf
-    description: asdfasdf
-    url: asdfasdf
-    public_service: pain_d_avoine # facultatif, acteur du dispositif / de l'aide
+    title: L’aide personnalisée au logement (APL)
+    description: L’APL est une aide au paiement des loyers qui est délivrée par la CAF (peut être remplacée par l'Allocation logement à caractère social (ALS) si le logement n'est pas conventionné par l'Etat.
+    url: http://www.caf.fr/aides-et-services/les-services-en-ligne/estimer-vos-droits
+    public_service: caf # facultatif, acteur du dispositif / de l'aide
 
   cle:
-    title: asdfsadf
-    description: asdfasdf
-    url: asdfasdf
+    title: La Clé (caution locative étudiante)
+    description: La Clé est une garantie de l'Etat qui permet aux étudiants dépourvus de garants personnels de faciliter leur accès à un logement. La Clé est gérée par les Crous.
+    url: http://www.lokaviz.fr/n/a-qui-s-adresse-la-cle/n:473
     public_service: crous # facultatif, acteur du dispositif / de l'aide
 
   locapass:
-    title: asdfsadf
-    description: asdfasdf
-    url: asdfasdf
+    title: Garantie Loca-Pass
+    description: Caution accordée au locataire pour prendre en charge le paiement du loyer et des charges de sa résidence principale en cas de défaillance pour les jeunes de moins de 30 ans.
+    url: http://www.actionlogement.fr/media/upload/Fiches_Produits_2015/PP/20150409GarantieLOCA-PASS.pdf
     public_service: action_logement # facultatif, acteur du dispositif / de l'aide
+    ext:
+      - Facilite l’entrée du locataire dans son logement.
+      - Couvre, pendant 3 ans, le locataire en cas de difficultés de paiement de son loyer
+      - Rassure le bailleur.
+      - Engagement gratuit.
 
   visale:
-    title: asdfsadf
-    description: asdfasdf
-    url: asdfasdf
+    title: Garantie VISALE locataire et bailleur
+    description: La garantie Visale est un engagement gratuit pour le locataire et le bailleur. Le dispositif vise à couvrir les impayés de loyers (charges comprises) du locataire, quelle qu'en soit la cause au cours des trois premières années du bail et dans la limite du départ du locataire
+    url: https://www.visale.fr/#/
     public_service: action_logement # facultatif, acteur du dispositif / de l'aide
+    ext:
+      - Propose une garantie fiable pour le propriétaire, ce qui me dispense de toute autre caution physique ou morale
+      - Propose unsuivi personnalisé et réactif via un espace personnel en ligne sur https://www.visale.fr/#/
+
