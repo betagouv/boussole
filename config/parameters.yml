@@ -8,8 +8,8 @@ public_services: # acteurs
       phone: 03 26 02 30 97 # téléphone
       url:
     offer: # offre de service, ajouter « - » pour énumerer
-      - Propose un logement d'urgence (pour une nuit, chaque jour il faut renouveler sa demande suivant sa situation).
-      - Propose un accompagnement social pour trouver une solution d'hébergement ou de logement plus stable
+      - Te proposer un logement d'urgence (pour une nuit, chaque jour il faut renouveler sa demande suivant sa situation).
+      - Te proposer un accompagnement social pour trouver une solution d'hébergement ou de logement plus stable.
 
   crous:
     title: Centre régional des œuvres universitaires et scolaires de la Marne (51) # titre, nom de l'acteur
@@ -20,12 +20,12 @@ public_services: # acteurs
       phone:  03 26 50 04 59 # téléphone
       url: http://www.crous-reims.fr/
     offer: # offre de service, ajouter « - » pour énumerer
-      - ouvert du lundi au vendredi (8h30 – 12h et 13h – 17h)
-      - http://www.crous-reims.fr/contact/
-      - Répond au questions sur les bourses,
-      - Informe sur le logement en résidence universitaire
-      - Fait le suivi de votre Dossier Social Étudiant,
-      - "Propose des rendez-vous à l’Espace Reims Campus : http://www.crous-reims.fr/service/reims-campus ."
+      # - ouvert du lundi au vendredi (8h30 – 12h et 13h – 17h)
+      # - http://www.crous-reims.fr/contact/
+      - Répondre à tes questions sur les bourses.
+      - T'informer sur le logement en résidence universitaire.
+      - Faire le suivi de ton Dossier Social Étudiant.
+      # - "Propose des rendez-vous à l’Espace Reims Campus : http://www.crous-reims.fr/service/reims-campus ."
 
   pain_d_avoine:
     title: Foyer de Jeunes Travailleurs (FJT) Léon Paindavoine  # titre, nom de l'acteur
@@ -36,9 +36,9 @@ public_services: # acteurs
       phone:  03 26 61 48 00 # téléphone
       url:
     offer: # offre de service, ajouter « - » pour énumerer
-      - Propose différents types de logements et de services (chambres, studios, petits appartements)
-      - Propose restauration, information, animation, internet (selon les foyers)
-      - Favorise la rencontre et le partage entre les jeunes.
+      - Te proposer différents types de logements et de services (chambres, studios, petits appartements).
+      - Te proposer restauration, information, animation, internet (selon les foyers).
+      - Favoriser la rencontre et le partage avec d'autres jeunes.
 
   action_logement:
     title: Action Logement # titre, nom de l'acteur
@@ -49,21 +49,21 @@ public_services: # acteurs
       phone: 03 26 04 29 38  # téléphone
       url: http://www.alianceterritoires.fr/
     offer: # offre de service, ajouter « - » pour énumerer
-      - Propose une offre de logements à louer
-      - Propose une offre de logement pour tous les budgets, la majorité de logements ouvrant droit à l'APL
-      - Propose la saisie d'une demande en ligne sur http://www.alianceterritoires.fr/fr/saisir-mon-dossier,15208407/
+      - Te proposer une offre de logements à louer.
+      - Te proposer une offre de logement pour tous les budgets, la majorité de logements ouvrant droit à l'APL.
+      - Te proposer la saisie d'une demande en ligne sur http://www.alianceterritoires.fr/fr/saisir-mon-dossier,15208407/.
 
-    caf:
-      title: Caisse d'Allocations Familiales (CAF)
-      description: La CAF les aides au logement (APL)   . # description général de l'acteur
-      address: 
-        postal_address: 202 Rue des Capucins, 51087 Reims
-        email:
-        phone: 0 810 25 51 10
-        url: https://www.caf.fr/ma-caf/caf-de-la-marne/points-d-accueil/reims
-      offer: # offre de service, ajouter « - » pour énumerer
-        - Simuler le montant de son APL (ou de l'ALS si le logement n'est pas conventionné)
-        - Aider à remplir la demande d'APL (ou d'ALS)
+  caf:
+    title: Caisse d'Allocations Familiales (CAF)
+    description: La CAF les aides au logement (APL)   . # description général de l'acteur
+    address:
+      postal_address: 202 Rue des Capucins, 51087 Reims
+      email:
+      phone: 0 810 25 51 10
+      url: https://www.caf.fr/ma-caf/caf-de-la-marne/points-d-accueil/reims
+    offer: # offre de service, ajouter « - » pour énumerer
+      - Simuler le montant de son APL (ou de l'ALS si le logement n'est pas conventionné).
+      - T'aider à remplir la demande d'APL (ou d'ALS).
 
 mesures: # dispositifs, aides
   cent_quinze:
