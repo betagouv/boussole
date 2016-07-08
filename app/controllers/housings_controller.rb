@@ -42,7 +42,8 @@ class HousingsController < ApplicationController
 
     # CAF
     if @housing.apl?
-      public_services['caf'][:mesures] = [mesures['apl']]
+      public_services['caf'][:mesures] = []
+      public_services['caf'][:mesures] << mesures['apl']
       @results << public_services['caf']
     end
   end
