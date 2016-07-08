@@ -53,6 +53,19 @@ public_services: # acteurs
       - Propose une offre de logement pour tous les budgets, la majorité de logements ouvrant droit à l'APL
       - Propose la saisie d'une demande en ligne sur http://www.alianceterritoires.fr/fr/saisir-mon-dossier,15208407/
 
+    caf:
+      title: Caisse d'Allocations Familiales
+      description: Action Logement (ex 1% Logement) gère la Participation des Employeurs à l’Effort de Construction (PEEC). # description général de l'acteur
+      address:
+        postal_address:
+        email:
+        phone:
+        url:
+      offer: # offre de service, ajouter « - » pour énumerer
+        -
+        -
+        -
+
 mesures: # dispositifs, aides
   cent_quinze:
     title: 115

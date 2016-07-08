@@ -41,10 +41,10 @@ class HousingsController < ApplicationController
     end
 
     # CAF
-    # if @housing.apl?
-    #   public_services['caf'][:mesures] = [mesures['apl']]
-    #   @results << public_services['caf']
-    # end
+    if @housing.apl?
+      public_services['caf'][:mesures] = [mesures['apl']]
+      @results << public_services['caf']
+    end
   end
 
   # POST /projects
