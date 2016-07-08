@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     resources :steps, only: %i(show update), module: :housings
   end
 
+  resources :contacts, only: %i(show create)
+
   mount Flip::Engine => '/flip'
 
   root to: 'visitors#index'

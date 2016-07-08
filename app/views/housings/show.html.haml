@@ -1,40 +1,60 @@
-- @results.each do |public_service|
-  %section.text-center
-    %address
-      %h3= public_service['title']
-      %p= public_service['description']
-      = public_service['address']['postal_address']
-      %br
-      %abbr{ title: 'Email' }
-        E :
-        = public_service['address']['email']
-      %br
-      %abbr{ title: 'Téléphone' }
-        T :
-        = public_service['address']['phone']
-      %br
-      %abbr{ title: 'Site' }
-        W :
-        = public_service['address']['url']
-
-    %h5 Un·e professionnel·le est disponible pour t'aider à :
-
-    - public_service['offer'].each do |service|
-      .col-md-4
-        %br
-        %br
-        %p.small
-          = service
-
-  - public_service[:mesures].each do |mesure|
-    %section.text-center
+.col-md-7
+  - @results.each do |public_service|
+    %section.text-center.jumbotron
       %address
-        %h4= mesure['title']
-        %p= mesure['description']
+        %h3= public_service['title']
+        = public_service['description']
+        = public_service['address']['postal_address']
+        %br
+        %abbr{ title: 'Email' }
+          E :
+          = public_service['address']['email']
+        %br
+        %abbr{ title: 'Téléphone' }
+          T :
+          = public_service['address']['phone']
         %br
         %abbr{ title: 'Site' }
           W :
-          = mesure['url']
+          = public_service['address']['url']
 
-%section.text-center
-  = link_to('Prendre un RDV', '#', class: 'submit btn-default')
+      %h5 Un·e professionnel·le est disponible pour t'aider à :
+
+      - public_service['offer'].each do |service|
+        .col-md-4
+          %br
+          %br
+          .small
+            = service
+
+      - if public_service[:mesures].presence
+
+        %h5 
+        %h5 Nous avons également détecté pour toi :
+
+        - public_service[:mesures].each do |mesure|
+          %br
+          %section.text-center
+            %address
+              %h4= mesure['title']
+              = mesure['description']
+              %br
+              %abbr{ title: 'Site' }
+                W :
+                = mesure['url']
+
+.col-md-4.col-md-offset-1
+  %section.jumbotron
+    %legend Être contacté·e
+
+    Souhaites-tu que cette ou ce professionnel·le te contacte suite à ta recherche ?
+    %br
+    %br
+
+    = simple_form_for(Contact.new, url: contact_path, method: :post, wrapper: :vertical_form) do |f|
+      .form-inputs
+        = f.input_field :email_or_phone, placeholder: 'Email ou téléphone'
+
+      %br
+      .form-actions
+        = link_to('Envoyer !', '#', class: 'submit btn-default')
