@@ -54,17 +54,16 @@ public_services: # acteurs
       - Propose la saisie d'une demande en ligne sur http://www.alianceterritoires.fr/fr/saisir-mon-dossier,15208407/
 
     caf:
-      title: Caisse d'Allocations Familiales
-      description: Action Logement (ex 1% Logement) gère la Participation des Employeurs à l’Effort de Construction (PEEC). # description général de l'acteur
-      address:
-        postal_address:
+      title: Caisse d'Allocations Familiales (CAF)
+      description: La CAF les aides au logement (APL)   . # description général de l'acteur
+      address: 
+        postal_address: 202 Rue des Capucins, 51087 Reims
         email:
-        phone:
-        url:
+        phone: 0 810 25 51 10
+        url: https://www.caf.fr/ma-caf/caf-de-la-marne/points-d-accueil/reims
       offer: # offre de service, ajouter « - » pour énumerer
-        -
-        -
-        -
+        - Simuler le montant de son APL (ou de l'ALS si le logement n'est pas conventionné)
+        - Aider à remplir la demande d'APL (ou d'ALS)
 
 mesures: # dispositifs, aides
   cent_quinze:
