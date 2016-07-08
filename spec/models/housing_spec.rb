@@ -8,7 +8,6 @@ RSpec.describe Housing, type: :model do
 
       it { is_expected.to validate_presence_of(:duration) }
       it { is_expected.to validate_presence_of(:housing_city) }
-      it { is_expected.to validate_presence_of(:resources) }
     end
 
     context 'profile' do
@@ -40,7 +39,7 @@ RSpec.describe Housing, type: :model do
 
   describe '#crous?' do
     context 'for more than a year' do
-      let(:housing) { build(:housing, duration: "> d'1 an") }
+      let(:housing) { build(:housing, duration: "+ d'1 an") }
 
       it { expect(housing.crous?).to eq(false) }
     end
@@ -211,7 +210,7 @@ RSpec.describe Housing, type: :model do
     end
 
     context 'for more than a year and for employees' do
-      let(:housing) { build(:housing, duration: "> d'1 an", status: 'Salarié·e') }
+      let(:housing) { build(:housing, duration: "+ d'1 an", status: 'Salarié·e') }
 
       it { expect(housing.visale?).to eq(true) }
     end

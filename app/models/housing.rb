@@ -6,7 +6,7 @@ class Housing < ActiveRecord::Base
     'Cette nuit',
     'Quelques mois',
     '1 an',
-    "> d'1 an"
+    "+ d'1 an"
   ].freeze
 
   STEPS = %i(
@@ -59,7 +59,7 @@ class Housing < ActiveRecord::Base
   end
 
   def visale?
-    duration.in?(['1 an', "> d'1 an"]) &&
+    duration.in?(['1 an', "+ d'1 an"]) &&
       status == 'Salarié·e'
   end
 
@@ -68,7 +68,6 @@ class Housing < ActiveRecord::Base
   with_options if: -> { required_for_step?(:housing) } do |step|
     step.validates :duration,
                    :housing_city,
-                   :resources,
                    presence: true
   end
 
