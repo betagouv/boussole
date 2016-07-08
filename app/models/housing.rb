@@ -16,24 +16,24 @@ class Housing < ActiveRecord::Base
 
   def siao?
     duration == 'Cette nuit' &&
-      resources <= 300
+      resources.to_i <= 300
   end
 
   def crous?
     duration.in?(['Quelques mois', '1 an']) &&
       status == 'Étudiant·e' &&
-      resources <= 1_200
+      resources.to_i <= 1_200
   end
 
   def pain_d_avoine?
     duration != 'Cette nuit' &&
       status != 'Étudiant·e' &&
-      resources >= 300
+      resources.to_i >= 300
   end
 
   def cent_quinze?
     duration == 'Cette nuit' &&
-      resources <= 1_000 &&
+      resources.to_i <= 1_000 &&
       age.in?(16..30)
   end
 
