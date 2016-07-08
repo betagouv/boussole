@@ -1,5 +1,8 @@
+# encoding: utf-8
+# frozen_string_literal: true
+
 class ProjectsController < ApplicationController
-  # before_action :set_project, only: [:show, :edit, :update]
+  require_feature :training
 
   # GET /projects/1
   def show

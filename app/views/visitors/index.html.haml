@@ -1,38 +1,65 @@
 %section.text-center
   %h1 Boussole des droits
 
-  %h3 Accède au conseil garanti d'un·e professionnel·le, près de chez toi, pour t'aider dans tes projets de formation, de logement, d'activité et de santé
+  %h3
+    Accède au conseil garanti d'un·e professionnel·le,
+
+    - if feature?(:working) || feature?(:training) || feature?(:healthcaring)
+      près de chez toi,
+
+    pour t'aider
+
+    - if feature?(:training)
+      dans tes projets de formation
+
+    - if feature?(:housing)
+      à trouver une solution pour te loger
+
+    - if feature?(:working)
+      dans tes projets d'activité
+
+    - if feature?(:healthcaring)
+      à trouver une solution pour te soigner
 
 %section.text-center
-  / = link_to('Commencer !', new_project_path, class: 'submit btn-default')
-
-  .col-md-2.col-md-offset-1
-    .thumbnail
-      = image_tag('work.png')
-      .caption
-        %h5 Travailler
-
-  .col-md-2
-    = link_to(projects_path, method: :post) do
+  - if feature?(:working)
+    .col-md-2.col-md-offset-1
       .thumbnail
-        = image_tag('education.png')
+        = image_tag('work.png')
         .caption
-          %h5 Me former
+          %h5 Travailler
 
-  .col-md-2
-    .thumbnail
-      = image_tag('housing.png')
-      .caption
-        %h5 Me loger
+  - if feature?(:training)
+    .col-md-2
+      = link_to(projects_path, method: :post) do
+        .thumbnail
+          = image_tag('education.png')
+          .caption
+            %h5 Me former
 
-  .col-md-2
-    .thumbnail
-      = image_tag('travel.png')
-      .caption
-        %h5 Partir à l'étranger
+  - if feature?(:housing)
+    - if feature?(:working) || feature?(:training) || feature?(:traveling) || feature?(:healthcaring)
+      .col-md-2
+        .thumbnail
+          = link_to(housings_path, method: :post) do
+            = image_tag('housing.png')
+            .caption
+              %h5 Me loger
 
-  .col-md-2
-    .thumbnail
-      = image_tag('health.png')
-      .caption
-        %h5 Me soigner
+    - else
+      = link_to('Commencer !', housings_path, method: :post, class: 'submit btn-default')
+
+
+  - if feature?(:traveling)
+    .col-md-2
+      .thumbnail
+        = image_tag('travel.png')
+        .caption
+          %h5 Partir à l'étranger
+
+  - if feature?(:healthcaring)
+    .col-md-2
+      .thumbnail
+        = image_tag('health.png')
+        .caption
+          %h5 Me soigner
