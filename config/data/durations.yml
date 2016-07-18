@@ -1,0 +1,5 @@
+durations:
+  - 'Cette nuit'
+  - 'Quelques mois'
+  - '1 an'
+  - "+ d'1 an"

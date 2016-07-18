@@ -3,6 +3,12 @@ test:
     - bower install
     - bower prune
 
+  post:
+    - bundle exec rubocop
+    - bundle exec bundle-audit check --update
+    - bundle exec brakeman -z -A -w1
+    - bundle exec dawn --html -F $CIRCLE_ARTIFACTS/dawn.html .
+
 deployment:
   production:
     branch: master

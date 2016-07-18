@@ -6,14 +6,9 @@
 
     .form-inputs
       = f.input :domain, label: 'Domaine',
-                         collection: Project::DOMAINES,
+                         collection: DOMAINS,
                          include_blank: false,
                          input_html: { rel: 'autocomplete' }
-
-      / = f.input :formation, label: 'Formation',
-      /                       collection: Project::FORMATIONS,
-      /                       include_blank: false,
-      /                       input_html: { rel: 'autocomplete' }
 
       = f.input :experience, label: "J'ai déjà une expérience dans ce domaine"
 

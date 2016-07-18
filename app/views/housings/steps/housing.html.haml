@@ -8,13 +8,13 @@
       = f.input :duration, label: 'Pour',
                            include_blank: false,
                            prompt: 'Sélectionne une option',
-                           collection: Housing::DURATION,
+                           collection: DURATIONS,
                            label_method: :to_s,
                            value_method: :to_s,
                            as: :select
 
       = f.input :housing_city, label: 'Dans quelle commune souhaites-tu te loger ?',
-                               collection: Project::CITIES,
+                               collection: CITIES,
                                include_blank: false,
                                input_html: { rel: 'autocomplete' }
 
