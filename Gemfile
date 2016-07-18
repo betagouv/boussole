@@ -41,6 +41,9 @@ end
 
 group :development do
   gem 'better_errors'
+  gem 'brakeman', require: false
+  gem 'bundler-audit', require: false, git: 'https://github.com/rubysec/bundler-audit.git'
+  gem 'dawnscanner', require: false
   gem 'foreman'
   gem 'letter_opener_web'
   gem 'guard-bundler', require: false
@@ -61,7 +64,6 @@ group :test do
   gem 'capybara'
   gem 'codeclimate-test-reporter'
   gem 'database_cleaner'
-  gem 'ffaker'
   gem 'poltergeist'
   gem 'rspec_junit_formatter'
   gem 'shoulda-matchers', '~> 3.1'

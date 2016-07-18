@@ -8,13 +8,13 @@
       = f.input :status, label: 'Situation',
                          include_blank: false,
                          prompt: 'Sélectionne une option',
-                         collection: Project::STATUS,
+                         collection: STATUSES,
                          label_method: :to_s,
                          value_method: :to_s,
                          as: :select
 
       = f.input :residence_city, label: 'Lieu de résidence actuel',
-                                 collection: Project::CITIES.dup.push('Sans domicile fixe'),
+                                 collection: CITIES.dup.push('Sans domicile fixe'),
                                  include_blank: false,
                                  input_html: { rel: 'autocomplete' }
 

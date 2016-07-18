@@ -2,13 +2,6 @@
 # frozen_string_literal: true
 
 class Housing < ActiveRecord::Base
-  DURATION = [
-    'Cette nuit',
-    'Quelques mois',
-    '1 an',
-    "+ d'1 an"
-  ].freeze
-
   STEPS = %i(
     housing
     profile
@@ -25,7 +18,7 @@ class Housing < ActiveRecord::Base
       resources.to_i <= 1_200
   end
 
-  def pain_d_avoine?
+  def paindavoine?
     duration != 'Cette nuit' &&
       status != 'Étudiant·e' &&
       resources.to_i >= 300

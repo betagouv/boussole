@@ -5,7 +5,7 @@
     = f.error_notification
 
     .form-inputs
-      = f.input_field :knowledge, collection: Project::KNOWLEDGE_QUESTIONS,
+      = f.input_field :knowledge, collection: KNOWLEDGE_QUESTIONS,
                                   label_method: :to_s,
                                   value_method: :to_s,
                                   as: :radio_buttons

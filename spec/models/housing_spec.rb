@@ -67,29 +67,29 @@ RSpec.describe Housing, type: :model do
     end
   end
 
-  describe '#pain_d_avoine?' do
+  describe '#paindavoine?' do
     context 'for urgences' do
       let(:housing) { build(:housing, duration: 'Cette nuit') }
 
-      it { expect(housing.pain_d_avoine?).to eq(false) }
+      it { expect(housing.paindavoine?).to eq(false) }
     end
 
     context 'for students' do
       let(:housing) { build(:housing, status: 'Étudiant·e') }
 
-      it { expect(housing.pain_d_avoine?).to eq(false) }
+      it { expect(housing.paindavoine?).to eq(false) }
     end
 
     context 'for people without enough resources' do
       let(:housing) { build(:housing, resources: 299) }
 
-      it { expect(housing.pain_d_avoine?).to eq(false) }
+      it { expect(housing.paindavoine?).to eq(false) }
     end
 
     context 'for non urgences, non students and with enough resources' do
       let(:housing) { build(:housing, resources: 300) }
 
-      it { expect(housing.pain_d_avoine?).to eq(true) }
+      it { expect(housing.paindavoine?).to eq(true) }
     end
   end
 
