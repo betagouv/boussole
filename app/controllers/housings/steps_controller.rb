@@ -42,7 +42,7 @@ module Housings
         when :housing
           %i(duration housing_city resources)
         when :profile
-          %i(status residence_city age)
+          %i(current_status next_status residence_city age)
         end
 
       if params[:housing]

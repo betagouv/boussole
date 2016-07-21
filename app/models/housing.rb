@@ -11,11 +11,12 @@
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #  duration       :string
-#  status         :string
+#  current_status :string
 #  resources      :integer
 #  age            :integer
 #  housing_city   :string
 #  residence_city :string
+#  next_status    :boolean
 #
 class Housing < ApplicationRecord
   STEPS = %i(
@@ -30,13 +31,13 @@ class Housing < ApplicationRecord
 
   def crous?
     duration.in?(['Quelques mois', '1 an']) &&
-      status == 'Étudiant·e' &&
+      current_status == 'Étudiant·e' &&
       resources.to_i <= 1_200
   end
 
   def paindavoine?
     duration != 'Cette nuit' &&
-      status != 'Étudiant·e' &&
+      current_status != 'Étudiant·e' &&
       resources.to_i >= 300
   end
 
@@ -52,16 +53,16 @@ class Housing < ApplicationRecord
 
   def cle?
     duration != 'Cette nuit' &&
-      status == 'Étudiant·e'
+      current_status == 'Étudiant·e'
   end
 
   # TODO: Change true/false for truthy/falsy matchers
   def locapass?
     return true if duration != 'Cette nuit' &&
-                   status == 'Salarié·e'
+                   current_status == 'Salarié·e'
 
     return true if duration != 'Cette nuit' &&
-                   status.in?(['En alternance', 'Sans activité']) &&
+                   current_status.in?(['En alternance', 'Sans activité']) &&
                    age <= 30
 
     false
@@ -69,22 +70,25 @@ class Housing < ApplicationRecord
 
   def visale?
     duration.in?(['1 an', "+ d'1 an"]) &&
-      status == 'Salarié·e'
+      current_status == 'Salarié·e'
   end
 
   attr_accessor :current_step
 
   with_options if: -> { required_for_step?(:housing) } do |step|
     step.validates :duration,
-                   :housing_city,
-                   presence: true
+                   presence: true,
+                   inclusion: { in: DURATIONS }
+
+    step.validates :housing_city, presence: true
   end
 
   with_options if: -> { required_for_step?(:profile) } do |step|
-    step.validates :status,
-                   :residence_city,
-                   :age,
-                   presence: true
+    step.validates :current_status,
+                   presence: true,
+                   inclusion: { in: STATUSES }
+
+    step.validates :age, presence: true
   end
 
   private
