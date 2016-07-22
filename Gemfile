@@ -39,6 +39,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'annotate'
   gem 'better_errors'
   gem 'brakeman', require: false
   gem 'bundler-audit', require: false, git: 'https://github.com/rubysec/bundler-audit.git'

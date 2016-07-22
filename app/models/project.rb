@@ -1,6 +1,29 @@
 # encoding: utf-8
 # frozen_string_literal: true
-
+# == Schema Information
+#
+# Table name: projects
+#
+#  id         :integer          not null, primary key
+#  knowledge  :string
+#  age        :integer
+#  status     :string
+#  last_class :string
+#  city       :string
+#  handicap   :boolean
+#  experience :boolean
+#  pe         :boolean
+#  ml         :boolean
+#  cap        :boolean
+#  apec       :boolean
+#  area       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  domain     :string
+#  formation  :string
+#  degree     :string
+#  intention  :boolean
+#
 class Project < ActiveRecord::Base
   STEPS = %i(
     knowledge
