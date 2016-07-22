@@ -1,0 +1,6 @@
+fr:
+  activerecord:
+    models:
+      housing:
+        one: Logement
+        other: Logements
