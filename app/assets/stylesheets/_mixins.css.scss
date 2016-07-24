@@ -1,0 +1,21 @@
+@mixin uniform-anchor {
+  & {
+    @content;
+  }
+
+  &:hover {
+    @content;
+  }
+
+  &:link {
+    @content;
+  }
+
+  &:active {
+    @content;
+  }
+
+  &:visited {
+    @content;
+  }
+}
