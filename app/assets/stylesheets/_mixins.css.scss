@@ -1,0 +1,17 @@
+@mixin uniform-anchor {
+  &:hover {
+    @content;
+  }
+
+  &:link {
+    @content;
+  }
+
+  &:active {
+    @content;
+  }
+
+  &:visited {
+    @content;
+  }
+}
