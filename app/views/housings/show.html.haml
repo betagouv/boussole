@@ -4,25 +4,25 @@
       %address
         %h3= public_service['title']
         = public_service['description']
-        = public_service['address']['postal_address']
+        = public_service['postal_address']
 
-        - if public_service['address']['phone']
+        - if public_service['phone']
           %br
           %abbr{ title: 'Téléphone' }
             T :
-            = public_service['address']['phone']
+            = public_service['phone']
 
-        - if public_service['address']['email']
+        - if public_service['email']
           %br
           %abbr{ title: 'Email' }
             E :
-            = mail_to(public_service['address']['email'])
+            = mail_to(public_service['email'])
 
-        - if public_service['address']['url']
+        - if public_service['url']
           %br
           %abbr{ title: 'Site' }
             W :
-            = link_to(public_service['address']['url'], public_service['address']['url'])
+            = link_to(public_service['url'], public_service['url'])
 
       %h5 Un·e professionnel·le est disponible pour t'aider à :
 
