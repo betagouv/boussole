@@ -34,12 +34,12 @@
             .small
               = service
 
-      - if public_service[:mesures].presence
+      - if public_service[:measures].presence
 
         %h5 
         %h5 Nous avons également détecté pour toi :
 
-        - public_service[:mesures].each do |mesure|
+        - public_service[:measures].each do |mesure|
           %br
           %section.text-center
             %address
