@@ -1,8 +1,4 @@
 @mixin uniform-anchor {
-  & {
-    @content;
-  }
-
   &:hover {
     @content;
   }
