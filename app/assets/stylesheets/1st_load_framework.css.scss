@@ -8,8 +8,27 @@ img {
 }
 
 // override for the 'Home' navigation link
-.navbar-brand {
+.main-navbar {
+  @extend .navbar;
+  @extend .navbar-default;
+  @extend .navbar-fixed-top;
   font-size: inherit;
+
+  .logo-beta {
+    background-color: $gray-darker;
+    color: $gray-lighter;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
+    position: absolute;
+    right: -53px;
+    text-align: center;
+    text-transform: uppercase;
+    top: 26px;
+    transform: rotate(45deg);
+    width: 200px;
+    z-index: 10;
+  }
 }
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
