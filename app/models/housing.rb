@@ -1,5 +1,19 @@
 # encoding: utf-8
 # frozen_string_literal: true
+# == Schema Information
+#
+# Table name: housings
+#
+#  id             :integer          not null, primary key
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  duration       :string
+#  status         :string
+#  resources      :integer
+#  age            :integer
+#  housing_city   :string
+#  residence_city :string
+#
 
 class Housing < ActiveRecord::Base
   STEPS = %i(

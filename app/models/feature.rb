@@ -1,5 +1,17 @@
 # encoding: utf-8
 # frozen_string_literal: true
+# == Schema Information
+#
+# Table name: features
+#
+#  id         :integer          not null, primary key
+#  key        :string           not null
+#  enabled    :boolean          default(FALSE), not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# frozen_string_literal: true
 
 class Feature < ActiveRecord::Base
   extend Flip::Declarable

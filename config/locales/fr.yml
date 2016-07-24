@@ -4,3 +4,12 @@ fr:
       housing:
         one: Logement
         other: Logements
+      public_service:
+        one: Acteur
+        other: Acteurs
+      service_offering:
+        one: Offre de service
+        other: Offres de service
+      measure:
+        one: Aide
+        other: Aides
