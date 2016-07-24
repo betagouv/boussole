@@ -4,7 +4,8 @@ test:
     - bower prune
 
   post:
-    - bundle exec rubocop
+    - bundle exec rake rubocop
+    - bundle exec rake scss_lint
     - bundle exec bundle-audit check --update
     - bundle exec brakeman -z -A -w1
     - bundle exec dawn --html -F $CIRCLE_ARTIFACTS/dawn.html .

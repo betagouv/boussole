@@ -35,8 +35,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-stack_explorer'
   gem 'rspec-rails'
-  gem 'rubocop'
-  gem 'rubocop-rspec'
   gem 'spring'
 end
 
@@ -56,6 +54,9 @@ group :development do
   gem 'rb-fchange', require: false
   gem 'rb-fsevent', require: false
   gem 'rb-inotify', require: false
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
+  gem 'scss_lint', require: false
   gem 'spring-commands-rspec'
   gem 'web-console'
   gem 'xray-rails'

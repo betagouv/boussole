@@ -1,9 +1,13 @@
--# navigation styled for Bootstrap 3.0
-%nav.navbar.navbar-default.navbar-fixed-top
+%nav.main-navbar{ role: 'navigation' }
+  .alert-info
+    .flash_info.text-center
+      %strong Service expérimental.
+      Ici l'État innove avec la société civile pour offrir aux usagers le service public de demain.
+
   .container
     .navbar-header
-      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
+      %button.navbar-toggle{ type: 'button', data: { target: '.navbar-collapse', toggle: 'collapse' } }
+        %span.sr-only Basculer la barre de navigation
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
@@ -11,3 +15,5 @@
     .collapse.navbar-collapse
       %ul.nav.navbar-nav
         = render 'layouts/navigation_links'
+
+  .logo-beta Bêta
