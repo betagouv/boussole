@@ -218,4 +218,10 @@ RSpec.describe Housing, type: :model do
       it { expect(housing.visale?).to eq(true) }
     end
   end
+
+  describe '#student?' do
+    it { expect(build(:housing, current_status: 'Étudiant·e', next_status: false).student?).to eq(true) }
+    it { expect(build(:housing, current_status: 'Lycéen·ne', next_status: true).student?).to eq(true) }
+    it { expect(build(:housing, next_status: true).student?).to eq(false) }
+  end
 end

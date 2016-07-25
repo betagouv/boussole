@@ -31,13 +31,13 @@ class Housing < ApplicationRecord
 
   def crous?
     duration.in?(['Quelques mois', '1 an']) &&
-      current_status == 'Étudiant·e' &&
+      student? &&
       resources.to_i <= 1_200
   end
 
   def paindavoine?
     duration != 'Cette nuit' &&
-      current_status != 'Étudiant·e' &&
+      !student? &&
       resources.to_i >= 300
   end
 
@@ -53,7 +53,7 @@ class Housing < ApplicationRecord
 
   def cle?
     duration != 'Cette nuit' &&
-      current_status == 'Étudiant·e'
+      student?
   end
 
   # TODO: Change true/false for truthy/falsy matchers
@@ -71,6 +71,12 @@ class Housing < ApplicationRecord
   def visale?
     duration.in?(['1 an', "+ d'1 an"]) &&
       current_status == 'Salarié·e'
+  end
+
+  def student?
+    current_status == 'Étudiant·e' ||
+      current_status == 'Lycéen·ne' &&
+        next_status
   end
 
   attr_accessor :current_step
