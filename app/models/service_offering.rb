@@ -9,7 +9,7 @@
 #
 #  id                :integer          not null, primary key
 #  title             :string
-#  description       :string
+#  description       :text
 #  public_service_id :integer          not null
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
