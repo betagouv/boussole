@@ -50,16 +50,14 @@ Style/BlockDelimiters:
 Style/CaseEquality:
   Enabled: false
 
-# Style/Documentation:
-#   Exclude:
-#     - app/controllers/**/*
-#     - app/helpers/application_helper.rb
-#     - config/application.rb
-#     - db/**/*
-#     - spec/**/*_spec.rb
-
 Style/Documentation:
-  Enabled: false
+  Exclude:
+    - app/controllers/**/*
+    - app/helpers/application_helper.rb
+    - app/mailers/application_mailer.rb
+    - config/application.rb
+    - db/**/*
+    - spec/**/*_spec.rb
 
 Style/DotPosition:
   Enabled: true
