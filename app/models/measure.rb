@@ -9,7 +9,7 @@
 #
 #  id                :integer          not null, primary key
 #  title             :string
-#  description       :string
+#  description       :text
 #  url               :string
 #  public_service_id :integer
 #  created_at        :datetime         not null
@@ -24,10 +24,11 @@
 #  fk_rails_22911d55d8  (public_service_id => public_services.id)
 #
 class Measure < ApplicationRecord
+  include Admin
+
   belongs_to :public_service
 
   validates :title,
-            :description,
             :url,
             presence: true
 end

@@ -41,5 +41,9 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  config.included_models = %w(PublicService ServiceOffering Measure)
+  config.included_models = %w(
+    PublicService
+    ServiceOffering
+    Measure
+  )
 end

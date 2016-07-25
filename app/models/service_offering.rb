@@ -9,7 +9,7 @@
 #
 #  id                :integer          not null, primary key
 #  title             :string
-#  description       :string
+#  description       :text
 #  public_service_id :integer          not null
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
@@ -28,9 +28,9 @@
 #  fk_rails_0e3762aded  (public_service_id => public_services.id)
 #
 class ServiceOffering < ApplicationRecord
+  include Admin
+
   belongs_to :public_service
 
-  validates :title,
-            :description,
-            presence: true
+  validates :title, presence: true
 end
