@@ -1,5 +1,8 @@
 # encoding: utf-8
 # frozen_string_literal: true
+#
+# TODO: Add documentation.
+#
 # == Schema Information
 #
 # Table name: features
@@ -10,10 +13,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-
-# frozen_string_literal: true
-
-class Feature < ActiveRecord::Base
+class Feature < ApplicationRecord
   extend Flip::Declarable
 
   strategy Flip::DatabaseStrategy

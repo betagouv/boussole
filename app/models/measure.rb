@@ -1,5 +1,8 @@
 # encoding: utf-8
 # frozen_string_literal: true
+#
+# TODO: Add documentation.
+#
 # == Schema Information
 #
 # Table name: measures
@@ -20,8 +23,7 @@
 #
 #  fk_rails_22911d55d8  (public_service_id => public_services.id)
 #
-
-class Measure < ActiveRecord::Base
+class Measure < ApplicationRecord
   belongs_to :public_service
 
   validates :title,

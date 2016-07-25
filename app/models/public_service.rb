@@ -1,5 +1,8 @@
 # encoding: utf-8
 # frozen_string_literal: true
+#
+# TODO: Add documentation.
+#
 # == Schema Information
 #
 # Table name: public_services
@@ -14,7 +17,7 @@
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #
-class PublicService < ActiveRecord::Base
+class PublicService < ApplicationRecord
   has_many :service_offerings
   has_many :measures
 
