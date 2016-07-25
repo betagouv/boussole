@@ -27,7 +27,6 @@ class Measure < ApplicationRecord
   belongs_to :public_service
 
   validates :title,
-            :description,
             :url,
             presence: true
 end

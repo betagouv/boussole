@@ -30,7 +30,5 @@
 class ServiceOffering < ApplicationRecord
   belongs_to :public_service
 
-  validates :title,
-            :description,
-            presence: true
+  validates :title, presence: true
 end

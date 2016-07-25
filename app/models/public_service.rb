@@ -22,7 +22,6 @@ class PublicService < ApplicationRecord
   has_many :measures
 
   validates :title,
-            :description,
             :postal_address,
             presence: true
 end
