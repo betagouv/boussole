@@ -1,5 +1,8 @@
 # encoding: utf-8
 # frozen_string_literal: true
+#
+# TODO: Add documentation.
+#
 # == Schema Information
 #
 # Table name: projects
@@ -24,7 +27,7 @@
 #  degree     :string
 #  intention  :boolean
 #
-class Project < ActiveRecord::Base
+class Project < ApplicationRecord
   STEPS = %i(
     knowledge
     formation

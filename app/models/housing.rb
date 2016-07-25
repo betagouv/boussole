@@ -1,5 +1,8 @@
 # encoding: utf-8
 # frozen_string_literal: true
+#
+# TODO: Add documentation.
+#
 # == Schema Information
 #
 # Table name: housings
@@ -14,8 +17,7 @@
 #  housing_city   :string
 #  residence_city :string
 #
-
-class Housing < ActiveRecord::Base
+class Housing < ApplicationRecord
   STEPS = %i(
     housing
     profile

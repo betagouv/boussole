@@ -1,5 +1,8 @@
 # encoding: utf-8
 # frozen_string_literal: true
+#
+# TODO: Add documentation.
+#
 # == Schema Information
 #
 # Table name: service_offerings
@@ -24,8 +27,7 @@
 #
 #  fk_rails_0e3762aded  (public_service_id => public_services.id)
 #
-
-class ServiceOffering < ActiveRecord::Base
+class ServiceOffering < ApplicationRecord
   belongs_to :public_service
 
   validates :title,

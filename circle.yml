@@ -6,6 +6,7 @@ test:
   post:
     - bundle exec rake rubocop
     - bundle exec rake scss_lint
+    - bundle exec rake doc:suggest
     - bundle exec bundle-audit check --update
     - bundle exec brakeman -z -A -w1
     - bundle exec dawn --html -F $CIRCLE_ARTIFACTS/dawn.html .
