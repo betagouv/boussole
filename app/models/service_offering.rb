@@ -28,6 +28,8 @@
 #  fk_rails_0e3762aded  (public_service_id => public_services.id)
 #
 class ServiceOffering < ApplicationRecord
+  include Admin
+
   belongs_to :public_service
 
   validates :title, presence: true

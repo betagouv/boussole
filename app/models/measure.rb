@@ -24,6 +24,8 @@
 #  fk_rails_22911d55d8  (public_service_id => public_services.id)
 #
 class Measure < ApplicationRecord
+  include Admin
+
   belongs_to :public_service
 
   validates :title,

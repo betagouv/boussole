@@ -18,6 +18,8 @@
 #  updated_at     :datetime         not null
 #
 class PublicService < ApplicationRecord
+  include Admin
+
   has_many :service_offerings
   has_many :measures
 
