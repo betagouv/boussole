@@ -10,7 +10,11 @@ module Admin
   included do
     rails_admin do
       list do
-        exclude_fields :created_at
+        exclude_fields(:created_at)
+
+        configure(:updated_at) do
+          strftime_format('%d-%m-%Y')
+        end
       end
     end
   end
