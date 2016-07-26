@@ -4,6 +4,9 @@ fr:
       housing:
         one: Logement
         other: Logements
+      social_right:
+        one: Thématique
+        other: Thématiques
       public_service:
         one: Acteur
         other: Acteurs

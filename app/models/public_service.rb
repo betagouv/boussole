@@ -20,7 +20,9 @@
 class PublicService < ApplicationRecord
   include Admin
 
-  has_many :service_offerings
+  has_many :exercise_scopes, as: :exercisable, dependent: :destroy
+  has_many :social_rights, through: :exercise_scopes
+  has_many :service_offerings, dependent: :destroy
   has_many :measures
 
   validates :title, presence: true
