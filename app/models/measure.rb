@@ -27,8 +27,8 @@ class Measure < ApplicationRecord
   include Admin
 
   belongs_to :public_service
+  has_many :exercise_scopes, as: :exercisable, dependent: :destroy
+  has_many :social_rights, through: :exercise_scopes
 
-  validates :title,
-            :url,
-            presence: true
+  validates :title, :url, presence: true
 end

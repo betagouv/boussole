@@ -42,6 +42,7 @@ RailsAdmin.config do |config|
   end
 
   config.included_models = %w(
+    SocialRight
     PublicService
     ServiceOffering
     Measure

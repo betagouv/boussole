@@ -30,7 +30,10 @@
 class ServiceOffering < ApplicationRecord
   include Admin
 
-  belongs_to :public_service
+  belongs_to :public_service, inverse_of: :service_offerings, dependent: :destroy
 
-  validates :title, presence: true
+  has_many :exercise_scopes, as: :exercisable, dependent: :destroy
+  has_many :social_rights, through: :exercise_scopes
+
+  validates :title, :public_service, presence: true
 end

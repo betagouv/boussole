@@ -4,6 +4,9 @@ fr:
       housing:
         one: Logement
         other: Logements
+      social_right:
+        one: Thématique
+        other: Thématiques
       public_service:
         one: Acteur
         other: Acteurs
@@ -13,3 +16,43 @@ fr:
       measure:
         one: Dispositif
         other: Dispositifs
+
+    attributes:
+      social_right:
+        name: nom
+        public_services: acteurs
+        service_offerings: offres de service
+        measures: dispositifs
+        updated_at: dernière actualisation
+      public_service:
+        title: nom
+        description: description
+        postal_address: adresse
+        email: email
+        phone: téléphone
+        url: site web
+        social_rights: thématiques
+        service_offerings: offres de service
+        measures: dispositifs
+        updated_at: dernière actualisation
+      service_offering:
+        title: nom
+        description: description
+        public_service: acteur
+        postal_address: adresse
+        email: email
+        phone: téléphone
+        url: site web
+        external: site web externe ?
+        social_rights: thématiques
+        updated_at: dernière actualisation
+      measure:
+        title: nom
+        description: description
+        url: site web
+        public_service: acteur
+        social_rights: thématiques
+        updated_at: dernière actualisation
+
+
+

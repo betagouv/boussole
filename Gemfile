@@ -9,6 +9,7 @@ gem 'pg'
 
 gem 'coffee-rails'
 gem 'flip'
+gem 'friendly_id'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'puma'
