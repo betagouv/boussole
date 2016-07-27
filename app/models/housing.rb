@@ -91,6 +91,7 @@ class Housing < ApplicationRecord
 
   def required_for_step?(step)
     return true if step.nil?
+    return true if current_step.nil?
     return true if STEPS.index(step.to_sym) <= STEPS.index(current_step)
   end
 end
