@@ -54,6 +54,7 @@ group :development do
   gem 'guard-livereload', require: false
   gem 'guard-rspec', require: false
   gem 'quiet_assets'
+  gem 'rails-erd'
   gem 'rb-fchange', require: false
   gem 'rb-fsevent', require: false
   gem 'rb-inotify', require: false
