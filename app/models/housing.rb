@@ -19,6 +19,8 @@
 #  next_status    :boolean
 #
 class Housing < ApplicationRecord
+  include Admin
+
   STEPS = %i(
     housing
     profile
