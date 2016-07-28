@@ -7,8 +7,8 @@ public_services: # acteurs
     phone: 03 26 02 30 97 # téléphone
     url:
     offer: # offre de service, ajouter « - » pour énumerer
-      - Te proposer un logement d'urgence (pour une nuit, chaque jour il faut renouveler sa demande suivant sa situation).
-      - Te proposer un accompagnement social pour trouver une solution d'hébergement ou de logement plus stable.
+      - Trouver un logement pour une nuit
+      - Etre accompagné.e pour trouver une solution d'hébergement plus stable
 
   crous:
     title: Centre régional des œuvres universitaires et scolaires de la Marne (51) # titre, nom de l'acteur
@@ -20,9 +20,8 @@ public_services: # acteurs
     offer: # offre de service, ajouter « - » pour énumerer
       # - ouvert du lundi au vendredi (8h30 – 12h et 13h – 17h)
       # - http://www.crous-reims.fr/contact/
-      - Répondre à tes questions sur les bourses.
-      - T'informer sur le logement en résidence universitaire.
-      - Faire le suivi de ton Dossier Social Étudiant.
+      - T'informer sur le logement en résidence universitaire
+      - Faire le suivi de ton Dossier Social Étudiant
       # - "Propose des rendez-vous à l’Espace Reims Campus : http://www.crous-reims.fr/service/reims-campus ."
 
   paindavoine:
@@ -33,9 +32,9 @@ public_services: # acteurs
     phone:  03 26 61 48 00 # téléphone
     url:
     offer: # offre de service, ajouter « - » pour énumerer
-      - Te proposer différents types de logements et de services (chambres, studios, petits appartements).
-      - Te proposer restauration, information, animation, internet (selon les foyers).
-      - Favoriser la rencontre et le partage avec d'autres jeunes.
+      - Trouver différents types de logements en foyer
+      - T'aider à trouver une solution logement sur ton territoire
+
 
   action_logement:
     title: Action Logement # titre, nom de l'acteur
@@ -45,9 +44,9 @@ public_services: # acteurs
     phone: 03 26 04 29 38  # téléphone
     url: http://www.alianceterritoires.fr/
     offer: # offre de service, ajouter « - » pour énumerer
-      - Te proposer une offre de logements à louer.
-      - Te proposer une offre de logement pour tous les budgets, la majorité de logements ouvrant droit à l'APL.
-      - Te proposer la saisie d'une demande en ligne sur http://www.alianceterritoires.fr/fr/saisir-mon-dossier,15208407/.
+      - Te proposer une offre de logements à louer
+      - Te proposer une offre de logement pour tous les budgets, la majorité de logements ouvrant droit à l'APL
+
 
   caf:
     title: Caisse d'Allocations Familiales (CAF)
@@ -57,8 +56,8 @@ public_services: # acteurs
     phone: 0 810 25 51 10
     url: https://www.caf.fr/ma-caf/caf-de-la-marne/points-d-accueil/reims
     offer: # offre de service, ajouter « - » pour énumerer
-      - Simuler le montant de son APL (ou de l'ALS si le logement n'est pas conventionné).
-      - T'aider à remplir la demande d'APL (ou d'ALS).
+      - Simuler le montant de son APL
+      - T'aider à remplir la demande d'APL
 
 measures: # dispositifs, aides
   cent_quinze:
@@ -87,8 +86,8 @@ measures: # dispositifs, aides
     ext:
       - Facilite l’entrée du locataire dans son logement.
       - Couvre, pendant 3 ans, le locataire en cas de difficultés de paiement de son loyer
-      - Rassure le bailleur.
-      - Engagement gratuit.
+      - Rassure le bailleur
+      - Engagement gratuit
 
   visale:
     title: Garantie VISALE locataire et bailleur

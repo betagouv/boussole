@@ -89,8 +89,8 @@ RSpec.describe Housing, type: :model do
       it { expect(housing.paindavoine?).to eq(false) }
     end
 
-    context 'for non urgences, non students and with enough resources' do
-      let(:housing) { build(:housing, resources: 300) }
+    context 'for non urgences, students and with enough resources' do
+      let(:housing) { build(:housing, current_status: 'Étudiant·e', resources: 300) }
 
       it { expect(housing.paindavoine?).to eq(true) }
     end

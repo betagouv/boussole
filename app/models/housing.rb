@@ -36,8 +36,7 @@ class Housing < ApplicationRecord
   end
 
   def paindavoine?
-    duration != 'Cette nuit' &&
-      !student? &&
+    current_status.in?(['En alternance', 'Sans activité', 'Étudiant·e', 'En formation']) &&
       resources.to_i >= 300
   end
 
