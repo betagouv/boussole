@@ -45,11 +45,12 @@ ActiveRecord::Schema.define(version: 20160725203230) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.string   "duration"
-    t.string   "status"
+    t.string   "current_status"
     t.integer  "resources"
     t.integer  "age"
     t.string   "housing_city"
     t.string   "residence_city"
+    t.boolean  "next_status"
   end
 
   create_table "measures", force: :cascade do |t|

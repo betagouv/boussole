@@ -5,13 +5,15 @@
     = f.error_notification
 
     .form-inputs
-      = f.input :status, label: 'Situation',
-                         include_blank: false,
-                         prompt: 'Sélectionne une option',
-                         collection: STATUSES,
-                         label_method: :to_s,
-                         value_method: :to_s,
-                         as: :select
+      = f.input :current_status, label: "Quelle est ta situation aujourd'hui ?",
+                                 include_blank: false,
+                                 prompt: 'Sélectionne une option',
+                                 collection: STATUSES,
+                                 label_method: :to_s,
+                                 value_method: :to_s,
+                                 as: :select
+
+      = f.input :next_status, label: 'Seras-tu étudiant·e à la rentrée ?'
 
       = f.input :residence_city, label: 'Lieu de résidence actuel',
                                  collection: CITIES.dup.push('Sans domicile fixe'),
