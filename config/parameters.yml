@@ -74,7 +74,7 @@ measures: # dispositifs, aides
     public_service: caf # facultatif, acteur du dispositif / de l'aide
 
   cle:
-    title: La Clé (caution locative étudiante)
+    title: La CLÉ (caution locative étudiante)
     description: La Clé est une garantie de l'Etat qui permet aux étudiants dépourvus de garants personnels de faciliter leur accès à un logement. La Clé est gérée par les Crous.
     url: http://www.lokaviz.fr/n/a-qui-s-adresse-la-cle/n:473
     public_service: crous # facultatif, acteur du dispositif / de l'aide
