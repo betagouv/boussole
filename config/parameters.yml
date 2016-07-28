@@ -11,7 +11,7 @@ public_services: # acteurs
       - Etre accompagné.e pour trouver une solution d'hébergement plus stable
 
   crous:
-    title: Centre régional des œuvres universitaires et scolaires de la Marne (51) # titre, nom de l'acteur
+    title: CROUS de la Marne (51) # titre, nom de l'acteur
     description: Le Crous, opérateur du service public de la vie étudiante, a pour missions principales, le logement étudiant, la restauration universitaire des étudiants et l’action sociale à travers les bourses et le Fond d’Aide d’Urgence (FNAU). # description général de l'acteur
     postal_address: 31 rue du général Sarrail, 51100 Reims
     email: reims-campus@crous-reims.fr
