@@ -1,6 +1,6 @@
 public_services: # acteurs
   siao:
-    title: Services Intégrés de l’Accueil et de l’Orientation  # titre, nom de l'acteur
+    title: SIAO (Services Intégrés de l’Accueil et de l’Orientation)  # titre, nom de l'acteur
     description: "Le Service intégré de l’accueil et de l’orientation (SIAO) centralise sur chaque territoire la demande et l’offre d’hébergement  pour apporter à chaque demande (urgente ou moins urgente) la réponse la plus adaptée d’hébergement, de logement accompagné ou de logement ordinaire. En cas d’urgence (pour une nuit), un seul numéro à composer : le 115"
     postal_address:  47 rue Docteur Schweitzer, 51100 Reims # adresse postale
     email: siao51@orange.fr
@@ -25,7 +25,7 @@ public_services: # acteurs
       # - "Propose des rendez-vous à l’Espace Reims Campus : http://www.crous-reims.fr/service/reims-campus ."
 
   paindavoine:
-    title: Foyer de Jeunes Travailleurs (FJT) Léon Paindavoine  # titre, nom de l'acteur
+    title: FJT (Foyer de Jeunes Travailleurs) Léon Paindavoine  # titre, nom de l'acteur
     description: Les foyers de jeunes travailleurs (FJT) ont pour mission d'accueillir des jeunes en formation ou exerçant une activité professionnelle. Ils proposent un hébergement temporaire comportant à la fois des locaux privatifs (meublés ou non) et des locaux communs affectés à la vie collective. Ils  s'adressent essentiellement aux jeunes travailleurs vivant seuls, âgés de 16 à 25 ans et exerçant une activité professionnelle ou suivant une formation professionnelle (par ex. stage ou apprentissage). Certains établissements accueillent également des étudiants ou des demandeurs d'emploiLa durée de l'hébergement est généralement de 2 ans maximum. # description général de l'acteur
     postal_address: 1 rue du Lieut Herduin, 51100 Reims # adresse postale
     email: residence.paindavoine@noelpaindavoine.fr
@@ -49,7 +49,7 @@ public_services: # acteurs
 
 
   caf:
-    title: Caisse d'Allocations Familiales (CAF)
+    title: CAF (Caisse d'Allocations Familiales)
     description: La CAF les aides au logement (APL)   . # description général de l'acteur
     postal_address: 202 Rue des Capucins, 51087 Reims
     email:
@@ -68,7 +68,7 @@ measures: # dispositifs, aides
     public_service: siao # facultatif, acteur du dispositif / de l'aide
 
   apl:
-    title: L’aide personnalisée au logement (APL)
+    title: L’APL (Aide personnalisée au logement)
     description: L’APL est une aide au paiement des loyers qui est délivrée par la CAF (peut être remplacée par l'Allocation logement à caractère social (ALS) si le logement n'est pas conventionné par l'Etat.
     url: http://www.caf.fr/aides-et-services/les-services-en-ligne/estimer-vos-droits
     public_service: caf # facultatif, acteur du dispositif / de l'aide
