@@ -63,6 +63,7 @@ measures: # dispositifs, aides
   cent_quinze:
     title: 115
     description: Le 115 est un numéro d'urgence à n'utiliser que si vous êtes sans possibilité d'hébergement au moment de l'appel. N'appelez pas le 115 tant que vous disposez encore d'un logement ou êtes logé chez un tiers. Le 115 octroie des places au jour le jour.
+    phone: 115
     url: http://www.gouvernement.fr/sites/default/files/contenu/piece-jointe/2014/10/dihal_-_annuaire_siao_ecran.pdf
     public_service: siao # facultatif, acteur du dispositif / de l'aide
 
