@@ -3,7 +3,7 @@
     %section.text-center.jumbotron
       %address
         %h3= public_service['title']
-        = public_service['description']
+        / = public_service['description']
         = public_service['postal_address']
 
         - if public_service['phone']
@@ -44,7 +44,7 @@
           %section.text-center
             %address
               %h4= mesure['title']
-              = mesure['description']
+              / = mesure['description']
               - if mesure['url']
                 %br
                 %abbr{ title: 'Site' }
