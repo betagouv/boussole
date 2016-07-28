@@ -38,8 +38,10 @@ class Housing < ApplicationRecord
   end
 
   def paindavoine?
-    current_status.in?(['En alternance', 'Sans activité', 'Étudiant·e', 'En formation']) &&
-      resources.to_i >= 300
+    return false if resources.to_i < 300
+    return true if  current_status.in?(['En alternance', 'Sans activité', 'En formation', 'Salarié·e'])
+    return true if  student?
+    false
   end
 
   def cent_quinze?
