@@ -2,8 +2,8 @@ fr:
   activerecord:
     models:
       housing:
-        one: Logement
-        other: Logements
+        one: Parcours Logement
+        other: Parcours Logement
       social_right:
         one: Thématique
         other: Thématiques
