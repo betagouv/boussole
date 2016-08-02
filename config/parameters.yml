@@ -59,6 +59,17 @@ public_services: # acteurs
       - Simuler le montant de son APL
       - T'aider à remplir la demande d'APL
 
+
+  crij:
+    title: CRIJ (Centre Régional d'Information Jeunesse)
+    description: Le CRIJ de Reims accueille, informe et conseille les jeunes et tous les publics dans tous les domaines qui les intéressent. # description général de l'acteur
+    postal_address: 41 rue de Talleyrand 51100 Reims 
+    email: ijca@crij-ca.fr
+    phone: 03 26 79 84 79 
+    url: jeunes-ca.fr
+    offer: # offre de service, ajouter « - » pour énumerer
+      - Découvrir les solutions logement sur mon 
+  
 measures: # dispositifs, aides
   cent_quinze:
     title: 115
