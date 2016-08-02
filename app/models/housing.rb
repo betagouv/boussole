@@ -43,6 +43,11 @@ class Housing < ApplicationRecord
     return true if  student?
     false
   end
+  
+   def crij?
+    duration.in?(['Quelques mois', '1 an', '+ d'un an']) &&
+    resources.to_i > 1000 &
+  end
 
   def cent_quinze?
     duration == 'Cette nuit' &&
