@@ -37,6 +37,12 @@ class Housing < ApplicationRecord
       resources.to_i <= 1_200
   end
 
+  def mgel?
+    duration.in?(['Quelques mois', '1 an']) &&
+      student? &&
+      resources.to_i <= 1_200
+  end
+  
   def paindavoine?
     return false if resources.to_i < 300
     return true if  current_status.in?(['En alternance', 'Sans activité', 'En formation', 'Salarié·e'])
