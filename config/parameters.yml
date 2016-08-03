@@ -68,7 +68,17 @@ public_services: # acteurs
     phone: 03 26 79 84 79 
     url: jeunes-ca.fr
     offer: # offre de service, ajouter « - » pour énumerer
-      - Découvrir les solutions logement sur mon 
+      - Découvrir les solutions logement sur mon territoire
+  
+
+  mgel:
+    title: MGEL (Mutuelle générale des étudiants de l'Est)
+    description: La MGEL gère le régime étudiant de la Sécurité sociale. Elle propose aussi des places en résidences dans la région Grand Est. # description général de l'acteur
+    postal_address: 1-3, boulevard du docteur Henri Henrot 51100 ReimS  
+    url: http://www.mgellogement.fr/ 
+    offer: # offre de service, ajouter « - » pour énumerer
+      - Trouver une chambre dans une résidence étudiante privée 
+
   
 measures: # dispositifs, aides
   cent_quinze:
