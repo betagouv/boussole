@@ -24,6 +24,13 @@ public_services: # acteurs
       - Faire le suivi de ton Dossier Social Étudiant
       # - "Propose des rendez-vous à l’Espace Reims Campus : http://www.crous-reims.fr/service/reims-campus ."
 
+  lokaviz:
+    title: Lokaviz # titre, nom de l'acteur
+    description: La centrale du logement étudiant # description générale de l'acteur
+    url: http://www.lokaviz.fr/
+    offer: # offre de service, ajouter « - » pour énumerer
+      - Trouver un logement étudiant chez un particulier
+
   paindavoine:
     title: FJT (Foyer de Jeunes Travailleurs) Léon Paindavoine  # titre, nom de l'acteur
     description: Les foyers de jeunes travailleurs (FJT) ont pour mission d'accueillir des jeunes en formation ou exerçant une activité professionnelle. Ils proposent un hébergement temporaire comportant à la fois des locaux privatifs (meublés ou non) et des locaux communs affectés à la vie collective. Ils  s'adressent essentiellement aux jeunes travailleurs vivant seuls, âgés de 16 à 25 ans et exerçant une activité professionnelle ou suivant une formation professionnelle (par ex. stage ou apprentissage). Certains établissements accueillent également des étudiants ou des demandeurs d'emploiLa durée de l'hébergement est généralement de 2 ans maximum. # description général de l'acteur
