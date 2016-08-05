@@ -61,6 +61,12 @@ class Housing < ApplicationRecord
       resources.to_i > 800
   end
 
+   def lokaviz?
+    duration.in?(['Quelques mois', '1 an', '+ d'un an']) &&
+    student? &&
+    resources.to_i > 800 &
+  end
+
   def cent_quinze?
     duration == 'Cette nuit' &&
       resources.to_i <= 1_000 &&
