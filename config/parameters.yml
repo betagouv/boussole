@@ -42,7 +42,6 @@ public_services: # acteurs
       - Trouver différents types de logements en foyer
       - T'aider à trouver une solution logement sur ton territoire
 
-
   action_logement:
     title: Action Logement # titre, nom de l'acteur
     description: Action Logement (ex 1% Logement) gère la Participation des Employeurs à l’Effort de Construction (PEEC). # description général de l'acteur
@@ -53,7 +52,6 @@ public_services: # acteurs
     offer: # offre de service, ajouter « - » pour énumerer
       - Te proposer une offre de logements à louer
       - Te proposer une offre de logement pour tous les budgets
-
 
   caf:
     title: CAF (Caisse d'Allocations Familiales)
@@ -70,28 +68,26 @@ public_services: # acteurs
   crij:
     title: CRIJ (Centre Régional d'Information Jeunesse)
     description: Le CRIJ de Reims accueille, informe et conseille les jeunes et tous les publics dans tous les domaines qui les intéressent. # description général de l'acteur
-    postal_address: 41 rue de Talleyrand 51100 Reims 
+    postal_address: 41 rue de Talleyrand 51100 Reims
     email: ijca@crij-ca.fr
-    phone: 03 26 79 84 79 
+    phone: 03 26 79 84 79
     url: jeunes-ca.fr
     offer: # offre de service, ajouter « - » pour énumerer
       - Découvrir les solutions logement sur mon territoire
-  
+
 
   mgel:
     title: MGEL (Mutuelle générale des étudiants de l'Est)
     description: La MGEL gère le régime étudiant de la Sécurité sociale. Elle propose aussi des places en résidences dans la région Grand Est. # description général de l'acteur
-    postal_address: 1-3, boulevard du docteur Henri Henrot 51100 ReimS  
-    url: http://www.mgellogement.fr/ 
+    postal_address: 1-3, boulevard du docteur Henri Henrot 51100 ReimS
+    url: http://www.mgellogement.fr/
     offer: # offre de service, ajouter « - » pour énumerer
-      - Trouver une chambre dans une résidence étudiante privée 
+      - Trouver une chambre dans une résidence étudiante privée
 
-  
 measures: # dispositifs, aides
   cent_quinze:
     title: 115
     description: Le 115 est un numéro d'urgence à n'utiliser que si vous êtes sans possibilité d'hébergement au moment de l'appel. N'appelez pas le 115 tant que vous disposez encore d'un logement ou êtes logé chez un tiers. Le 115 octroie des places au jour le jour.
-    phone: 115
     url: http://www.gouvernement.fr/sites/default/files/contenu/piece-jointe/2014/10/dihal_-_annuaire_siao_ecran.pdf
     public_service: siao # facultatif, acteur du dispositif / de l'aide
 
