@@ -1,1 +1,2 @@
-git://github.com/qnyp/heroku-buildpack-ruby-bower.git#run-bower
+https://github.com/tempoautomation/heroku-buildpack-sourceversion.git
+https://github.com/qnyp/heroku-buildpack-ruby-bower.git#run-bower
