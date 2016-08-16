@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160722120551) do
+ActiveRecord::Schema.define(version: 20160725203230) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,17 @@ ActiveRecord::Schema.define(version: 20160722120551) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "exercise_scopes", force: :cascade do |t|
+    t.integer  "social_right_id",  null: false
+    t.integer  "exercisable_id",   null: false
+    t.string   "exercisable_type", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "exercise_scopes", ["exercisable_type", "exercisable_id"], name: "index_exercise_scopes_on_exercisable_type_and_exercisable_id", using: :btree
+  add_index "exercise_scopes", ["social_right_id"], name: "index_exercise_scopes_on_social_right_id", using: :btree
 
   create_table "features", force: :cascade do |t|
     t.string   "key",                        null: false
@@ -34,16 +45,17 @@ ActiveRecord::Schema.define(version: 20160722120551) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.string   "duration"
-    t.string   "status"
+    t.string   "current_status"
     t.integer  "resources"
     t.integer  "age"
     t.string   "housing_city"
     t.string   "residence_city"
+    t.boolean  "next_status"
   end
 
   create_table "measures", force: :cascade do |t|
     t.string   "title"
-    t.string   "description"
+    t.text     "description"
     t.string   "url"
     t.integer  "public_service_id"
     t.datetime "created_at",        null: false
@@ -86,7 +98,7 @@ ActiveRecord::Schema.define(version: 20160722120551) do
 
   create_table "service_offerings", force: :cascade do |t|
     t.string   "title"
-    t.string   "description"
+    t.text     "description"
     t.integer  "public_service_id", null: false
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
@@ -99,6 +111,16 @@ ActiveRecord::Schema.define(version: 20160722120551) do
 
   add_index "service_offerings", ["public_service_id"], name: "index_service_offerings_on_public_service_id", using: :btree
 
+  create_table "social_rights", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "slug",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "social_rights", ["slug"], name: "index_social_rights_on_slug", unique: true, using: :btree
+
+  add_foreign_key "exercise_scopes", "social_rights"
   add_foreign_key "measures", "public_services"
   add_foreign_key "service_offerings", "public_services"
 end

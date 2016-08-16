@@ -2,8 +2,11 @@ fr:
   activerecord:
     models:
       housing:
-        one: Logement
-        other: Logements
+        one: Parcours Logement
+        other: Parcours Logement
+      social_right:
+        one: Thématique
+        other: Thématiques
       public_service:
         one: Acteur
         other: Acteurs
@@ -11,5 +14,54 @@ fr:
         one: Offre de service
         other: Offres de service
       measure:
-        one: Aide
-        other: Aides
+        one: Dispositif
+        other: Dispositifs
+
+    attributes:
+      housing:
+        duration: Pour
+        residence_city: Lieu de résidence actuel
+        housing_city: Lieu de résidence souhaité
+        resources: Budget
+        age: Âge
+        current_status: Situation
+        next_status: Étudiant·e à la rentrée ?
+        updated_at: Dernière actualisation
+      social_right:
+        name: Nom
+        public_services: Acteurs
+        service_offerings: Offres de service
+        measures: Dispositifs
+        updated_at: Dernière actualisation
+      public_service:
+        title: Nom
+        description: Description
+        postal_address: Adresse
+        email: Email
+        phone: Téléphone
+        url: Site web
+        social_rights: Thématiques
+        service_offerings: Offres de service
+        measures: Dispositifs
+        updated_at: Dernière actualisation
+      service_offering:
+        title: Nom
+        description: Description
+        public_service: Acteur
+        postal_address: Adresse
+        email: Email
+        phone: Téléphone
+        url: Site web
+        external: Site web externe ?
+        social_rights: Thématiques
+        updated_at: Dernière actualisation
+      measure:
+        title: Nom
+        description: Description
+        url: Site web
+        public_service: Acteur
+        social_rights: Thématiques
+        updated_at: Dernière actualisation
+
+
+

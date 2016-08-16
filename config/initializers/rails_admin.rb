@@ -34,12 +34,18 @@ RailsAdmin.config do |config|
     delete
     # export
     # bulk_delete
-    # show_in_app
+    show_in_app
 
     ## With an audit adapter, you can add:
     # history_index
     # history_show
   end
 
-  config.included_models = %w(PublicService ServiceOffering Measure)
+  config.included_models = %w(
+    SocialRight
+    PublicService
+    ServiceOffering
+    Measure
+    Housing
+  )
 end

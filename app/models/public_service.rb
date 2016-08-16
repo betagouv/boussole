@@ -18,11 +18,12 @@
 #  updated_at     :datetime         not null
 #
 class PublicService < ApplicationRecord
-  has_many :service_offerings
+  include Admin
+
+  has_many :exercise_scopes, as: :exercisable, dependent: :destroy
+  has_many :social_rights, through: :exercise_scopes
+  has_many :service_offerings, dependent: :destroy
   has_many :measures
 
-  validates :title,
-            :description,
-            :postal_address,
-            presence: true
+  validates :title, presence: true
 end

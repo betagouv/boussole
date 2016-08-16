@@ -9,7 +9,7 @@
 #
 #  id                :integer          not null, primary key
 #  title             :string
-#  description       :string
+#  description       :text
 #  public_service_id :integer          not null
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
@@ -28,9 +28,12 @@
 #  fk_rails_0e3762aded  (public_service_id => public_services.id)
 #
 class ServiceOffering < ApplicationRecord
-  belongs_to :public_service
+  include Admin
 
-  validates :title,
-            :description,
-            presence: true
+  belongs_to :public_service, inverse_of: :service_offerings, dependent: :destroy
+
+  has_many :exercise_scopes, as: :exercisable, dependent: :destroy
+  has_many :social_rights, through: :exercise_scopes
+
+  validates :title, :public_service, presence: true
 end
