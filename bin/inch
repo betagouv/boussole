@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+require 'inch'
+require 'open3'
+
+# Only match on high priority, undocumented methods.
+pattern = /┃  U  ↗  /
+stdout  = Open3.capture3('inch', 'suggest', '--all', '--pedantic', '--no-color').first
+
+# Create a list of to-be-documented methods
+list = stdout.lines.each_with_object([]) do |line, list|
+  if line[pattern]
+    list << line
+      .gsub(pattern, '')
+      .gsub("\n", '')
+  end
+end
+
+# Exit if no to-be-documented methods, otherwise print the list and fail.
+if list.empty?
+  puts 'All good, keep the good work! :)'
+  exit
+else
+  puts "We've got some homework for you, document these:"
+  puts list.map { |line| "\t#{line}" }.join("\n")
+  exit 1
+end
