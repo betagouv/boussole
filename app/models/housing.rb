@@ -42,23 +42,23 @@ class Housing < ApplicationRecord
       student? &&
       resources.to_i <= 1_200
   end
-  
+
   def paindavoine?
     return false if resources.to_i < 300
     return true if  current_status.in?(['En alternance', 'Sans activité', 'En formation', 'Salarié·e'])
     return true if  student?
     false
   end
-  
-   def crij?
-    duration.in?(['Quelques mois', '1 an', '+ d'un an']) &&
-    resources.to_i > 1000 &
+
+  def crij?
+    duration.in?(['Quelques mois', '1 an', "+ d'un an"]) &&
+      resources.to_i > 1000
   end
 
-   def lokaviz?
-    duration.in?(['Quelques mois', '1 an', '+ d'un an']) &&
-    student? &&
-    resources.to_i > 800 &
+  def lokaviz?
+    duration.in?(['Quelques mois', '1 an', "+ d'un an"]) &&
+      student? &&
+      resources.to_i > 800
   end
 
   def cent_quinze?
