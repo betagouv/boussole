@@ -14,5 +14,8 @@
 #  updated_at :datetime         not null
 #
 class Contact < ApplicationRecord
+  #
+  # @!attribute [rw] email_or_phone
+  #   @return [String] Email or phone the user wants to be contacted with.
   attr_accessor :email_or_phone
 end

@@ -99,6 +99,9 @@ class Housing < ApplicationRecord
         next_status
   end
 
+  #
+  # @!attribute [rw] current_step
+  #   @return [Symbol] Current state in the housing project construction.
   attr_accessor :current_step
 
   with_options if: -> { required_for_step?(:housing) } do |step|
