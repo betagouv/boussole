@@ -5,6 +5,7 @@ test:
 
   post:
     - bundle exec rake rubocop
+    - bundle exec rake haml_lint
     - bundle exec rake scss_lint
     - bundle exec rake inch
     - bundle exec bundle-audit check --update
