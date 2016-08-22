@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   resources :contacts, only: %i(show create)
 
   mount Flip::Engine => '/flip'
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   root to: 'visitors#index'
 end

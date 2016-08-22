@@ -28,8 +28,6 @@
 #  fk_rails_0e3762aded  (public_service_id => public_services.id)
 #
 class ServiceOffering < ApplicationRecord
-  include Admin
-
   belongs_to :public_service, inverse_of: :service_offerings, dependent: :destroy
 
   has_many :exercise_scopes, as: :exercisable, dependent: :destroy
