@@ -13,6 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap-sass-official
+//= require bootstrap-sass/assets/javascripts/bootstrap-sprockets
 //= require bootstrap3-typeahead
 //= require_tree .

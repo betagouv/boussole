@@ -1,5 +1,8 @@
 // import the CSS framework
-@import 'bootsketch/assets/sass/bootsketch';
+$icon-font-path: 'bootstrap-sass/assets/fonts/bootstrap/';
+
+@import 'bootstrap-sass/assets/stylesheets/bootstrap-sprockets';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap';
 @import 'mixins';
 
 // make all images responsive by default
