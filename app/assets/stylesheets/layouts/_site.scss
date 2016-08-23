@@ -1,0 +1,21 @@
+/* Site layout styles go here */
+
+main {
+  @extend .container;
+  // background-color: #eee;
+  margin-top: 100px; // accommodate the navbar
+  padding-bottom: 80px;
+  width: 75%;
+}
+
+section {
+  @extend .row;
+  margin-top: 20px;
+
+  .thumbnail {
+    .caption {
+      height: 75px;
+    }
+  }
+}
+

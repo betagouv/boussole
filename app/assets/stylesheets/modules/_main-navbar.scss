@@ -1,0 +1,6 @@
+.main-navbar {
+  @extend .navbar;
+  @extend .navbar-default;
+  @extend .navbar-fixed-top;
+  font-size: inherit;
+}
