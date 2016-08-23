@@ -1,7 +1,9 @@
-@import 'layouts/site';
-@import 'layouts/landing';
-@import 'layouts/wizard';
-@import 'layouts/results';
-@import 'layouts/login';
-@import 'layouts/usager';
-@import 'layouts/professional';
+@charset "UTF-8";
+
+@import "layouts/site",
+        "layouts/landing",
+        "layouts/wizard",
+        "layouts/results",
+        "layouts/login",
+        "layouts/usager",
+        "layouts/professional";

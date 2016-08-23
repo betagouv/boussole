@@ -1,6 +1,8 @@
-@import 'base/site';
-@import 'base/animations';
-@import 'base/typography';
-@import 'base/links';
-@import 'base/media';
-@import 'base/forms';
+@charset "UTF-8";
+
+@import "base/site",
+        "base/animations",
+        "base/typography",
+        "base/links",
+        "base/media",
+        "base/forms";
