@@ -1,2 +1,14 @@
 /* Base typography styles go here */
 @charset "UTF-8";
+
+/* Open Sans */
+@import 'open-sans/scss/light';
+@import 'open-sans/scss/light-italic';
+@import 'open-sans/scss/regular';
+@import 'open-sans/scss/italic';
+@import 'open-sans/scss/semibold';
+@import 'open-sans/scss/semibold-italic';
+@import 'open-sans/scss/bold';
+@import 'open-sans/scss/bold-italic';
+@import 'open-sans/scss/extrabold';
+@import 'open-sans/scss/extrabold-italic';

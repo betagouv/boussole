@@ -1,7 +1,8 @@
 {
   "name": "oshub",
   "dependencies": {
-    "bootstrap-sass": "~3",
-    "bootstrap3-typeahead": "~4"
+    "bootstrap-sass": "~3.3",
+    "bootstrap3-typeahead": "~4.0",
+    "open-sans": "~1.1"
   }
 }
