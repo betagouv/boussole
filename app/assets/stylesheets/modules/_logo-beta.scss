@@ -19,8 +19,8 @@
 }
 
 .logo-beta {
-  background-color: $gray-darker;
-  font-size: 25px;
+  background-color: $brand-primary;
+  font-size: 2rem;
   font-weight: bold;
   padding: 5px;
   position: absolute;
@@ -34,7 +34,7 @@
 
   a {
     @include uniform-anchor {
-      color: $gray-lighter;
+      color: $btn-default-color;
       text-decoration: none;
     }
   }
