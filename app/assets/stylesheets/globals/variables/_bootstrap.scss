@@ -1,0 +1,149 @@
+/* Theme variables go here. Hey, hi Bootstrap! */
+@charset "UTF-8";
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-darker:                           $raisin-black;
+$gray-dark:                             $jet;
+$gray:                                  $davy-s-gray;
+$gray-light:                            $stormcloud;
+$gray-lighter:                          $isabelline;
+
+$brand-primary:                         $chocolate-web;
+$brand-success:                         $bud-green;
+$brand-info:                            $blue-jeans;
+$brand-warning:                         $maximum-yellow-red;
+$brand-danger:                          $jelly-bean;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:                "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:                     Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:                 Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:                      $font-family-sans-serif !default;
+
+$font-size-base:                        18px !default;
+$font-size-large:                       ceil(($font-size-base * 1.25)) !default; // ~23px
+$font-size-small:                       ceil(($font-size-base * .85)) !default; // ~16px
+
+$font-size-h1:                          2.6em;
+$font-size-h2:                          2.15em;
+$font-size-h3:                          1.7em;
+$font-size-h4:                          1.25em;
+$font-size-h5:                          1em;
+$font-size-h6:                          .85em;
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:                  inherit !default;
+$headings-font-weight:                  300 !default;
+$headings-line-height:                  1.1 !default;
+$headings-color:                        inherit !default;
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$padding-base-vertical:                 8px !default;
+$padding-base-horizontal:               16px !default;
+
+$padding-large-vertical:                12px !default;
+$padding-large-horizontal:              24px !default;
+
+$padding-small-vertical:                5px !default;
+$padding-small-horizontal:              10px !default;
+
+$padding-xs-vertical:                   1px !default;
+$padding-xs-horizontal:                 5px !default;
+
+$border-radius-base:                    0 !default;
+$border-radius-large:                   0 !default;
+$border-radius-small:                   0 !default;
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-font-weight:                       normal !default;
+
+$btn-default-color:                     $white !default;
+$btn-default-bg:                        $stormcloud !default;
+$btn-default-border:                    $white-alpha-0 !default;
+
+$btn-primary-color:                     $btn-default-color !default;
+$btn-primary-bg:                        $brand-primary !default;
+$btn-primary-border:                    $btn-default-border !default;
+
+$btn-success-color:                     $btn-default-color !default;
+$btn-success-bg:                        $brand-success !default;
+$btn-success-border:                    $btn-default-border !default;
+
+$btn-info-color:                        $btn-default-color !default;
+$btn-info-bg:                           $brand-info !default;
+$btn-info-border:                       $btn-default-border !default;
+
+$btn-warning-color:                     $btn-default-color !default;
+$btn-warning-bg:                        $brand-warning !default;
+$btn-warning-border:                    $btn-default-border !default;
+
+$btn-danger-color:                      $btn-default-color !default;
+$btn-danger-bg:                         $brand-danger !default;
+$btn-danger-border:                     $btn-default-border !default;
+
+$btn-link-disabled-color:               $gray-light !default;
+
+//== Navbar
+//
+//##
+
+// Basics of a navbar
+$navbar-default-color:                  $isabelline !default;
+$navbar-default-bg:                     $stormcloud !default;
+$navbar-default-border:                 $white-alpha-0 !default;
+
+// Navbar links
+$navbar-default-link-color:             $navbar-default-color !default;
+$navbar-default-link-hover-color:       $navbar-default-link-color !default;
+$navbar-default-link-hover-bg:          darken($navbar-default-bg, 3%) !default;
+$navbar-default-link-active-color:      $navbar-default-link-color !default;
+$navbar-default-link-active-bg:         darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-disabled-color:    $pastel-gray !default;
+$navbar-default-link-disabled-bg:       $navbar-default-border !default;
+
+// Navbar brand label
+$navbar-default-brand-color:            $navbar-default-link-color !default;
+$navbar-default-brand-hover-color:      $navbar-default-link-color !default;
+$navbar-default-brand-hover-bg:         $navbar-default-border !default;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:        $navbar-default-link-hover-bg !default;
+$navbar-default-toggle-icon-bar-bg:     $navbar-default-color !default;
+$navbar-default-toggle-border-color:    $navbar-default-border !default;
+
+//=== Inverted navbar
+// Reset inverted navbar basics
+$navbar-inverse-color:                  $navbar-default-color !default;
+$navbar-inverse-bg:                     $brand-primary !default;
+$navbar-inverse-border:                 $navbar-default-border !default;
+
+// Inverted navbar links
+$navbar-inverse-link-color:             $navbar-default-color !default;
+$navbar-inverse-link-hover-color:       $navbar-inverse-link-color !default;
+$navbar-inverse-link-hover-bg:          darken($navbar-inverse-bg, 5%) !default;
+$navbar-inverse-link-active-color:      $navbar-inverse-link-color !default;
+$navbar-inverse-link-active-bg:         darken($navbar-inverse-bg, 5%) !default;
+$navbar-inverse-link-disabled-color:    $arsenic !default;
+$navbar-inverse-link-disabled-bg:       $navbar-default-border !default;
+
+// Inverted navbar brand label
+$navbar-inverse-brand-color:            $navbar-inverse-link-color !default;
+$navbar-inverse-brand-hover-color:      $navbar-inverse-link-color !default;
+$navbar-inverse-brand-hover-bg:         $navbar-default-border !default;
+
+// Inverted navbar toggle
+$navbar-default-toggle-hover-bg:        $navbar-inverse-link-hover-bg !default;
+$navbar-default-toggle-icon-bar-bg:     $navbar-default-color !default;
+$navbar-default-toggle-border-color:    $navbar-default-border !default;

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+@mixin uniform-anchor {
+  &:hover {
+    @content;
+  }
+
+  &:link {
+    @content;
+  }
+
+  &:active {
+    @content;
+  }
+
+  &:visited {
+    @content;
+  }
+}
+
+.logo-beta {
+  background-color: $brand-primary;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 5px;
+  position: absolute;
+  right: -53px;
+  text-align: center;
+  text-transform: uppercase;
+  top: 26px;
+  transform: rotate(45deg);
+  width: 200px;
+  z-index: 10;
+
+  a {
+    @include uniform-anchor {
+      color: $btn-default-color;
+      text-decoration: none;
+    }
+  }
+}

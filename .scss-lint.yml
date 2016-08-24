@@ -3,5 +3,9 @@ scss_files: 'app/assets/stylesheets/**/*.scss'
 linters:
   Comment:
     enabled: false
+
   PlaceholderInExtend:
     enabled: false
+
+  StringQuotes:
+    style: double_quotes

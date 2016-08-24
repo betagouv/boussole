@@ -1,0 +1,8 @@
+/* Base media styles go here */
+@charset "UTF-8";
+
+/* make all images responsive by default */
+img {
+  @extend .img-responsive;
+  margin: 0 auto;
+}

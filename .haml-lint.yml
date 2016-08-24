@@ -1,0 +1,7 @@
+linters:
+  ImplicitDiv:
+    enabled: false
+    severity: error
+
+  LineLength:
+    max: 125

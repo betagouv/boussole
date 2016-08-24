@@ -8,6 +8,8 @@
     "RAILS_ENV": "production"
   },
   "buildpacks": [{
-    "url": "git://github.com/qnyp/heroku-buildpack-ruby-bower.git#run-bower"
+    "url": "https://github.com/tempoautomation/heroku-buildpack-sourceversion.git"
+  }, {
+    "url": "https://github.com/qnyp/heroku-buildpack-ruby-bower.git#run-bower"
   }]
 }
