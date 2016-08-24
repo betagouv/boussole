@@ -2,13 +2,13 @@
 @charset "UTF-8";
 
 /* Open Sans */
-@import 'open-sans/scss/light';
-@import 'open-sans/scss/light-italic';
-@import 'open-sans/scss/regular';
-@import 'open-sans/scss/italic';
-@import 'open-sans/scss/semibold';
-@import 'open-sans/scss/semibold-italic';
-@import 'open-sans/scss/bold';
-@import 'open-sans/scss/bold-italic';
-@import 'open-sans/scss/extrabold';
-@import 'open-sans/scss/extrabold-italic';
+@import "open-sans/scss/light",
+        "open-sans/scss/light-italic",
+        "open-sans/scss/regular",
+        "open-sans/scss/italic",
+        "open-sans/scss/semibold",
+        "open-sans/scss/semibold-italic",
+        "open-sans/scss/bold",
+        "open-sans/scss/bold-italic",
+        "open-sans/scss/extrabold",
+        "open-sans/scss/extrabold-italic";
