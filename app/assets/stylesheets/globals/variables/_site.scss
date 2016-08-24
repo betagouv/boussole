@@ -2,7 +2,23 @@
 @charset "UTF-8";
 
 /* Font Awesome icon font path */
-$fa-font-path: "font-awesome/fonts" !default;
+$fa-font-path:        "font-awesome/fonts" !default;
 
 /* Open Sans font path */
 $open-sans-font-path: "open-sans/fonts" !default;
+
+/* Colours */
+$raisin-black:       hsl(0, 0%, 13.5%) !default;      // #222
+$jet:                hsl(0, 0%, 20%) !default;        // #333
+$arsenic:            hsl(0, 0%, 27%) !default;        // #444
+$davy-s-gray:        hsl(0, 0%, 33.5%) !default;      // #555
+$stormcloud:         hsl(210, 16%, 36%) !default;     // #4d5c6a
+$pastel-gray:        hsl(0, 0%, 80%) !default;        // #ccc
+$isabelline:         hsl(0, 0%, 92%) !default;        // #ebebeb
+$chocolate-web:      hsl(24, 79%, 49%) !default;      // #df691a
+$bud-green:          hsl(120, 39%, 54%) !default;     // #5cb85c
+$blue-jeans:         hsl(194, 66%, 61%) !default;     // #5bc0de
+$maximum-yellow-red: hsl(35, 84%, 62%) !default;      // #f0ad4e
+$jelly-bean:         hsl(2, 64%, 58%) !default;       // #d9534f
+$white:              hsl(0, 0%, 100%) !default;       // #fff
+$white-alpha-0:      hsla(0, 100%, 100%, 0) !default; // #ffffff00
