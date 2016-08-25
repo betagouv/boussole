@@ -2,6 +2,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  namespace :agents do
+    root to: 'dashboard#index'
+  end
+
   resources :projects, only: %i(show create) do
     resources :steps, only: %i(show update), module: :projects
   end
