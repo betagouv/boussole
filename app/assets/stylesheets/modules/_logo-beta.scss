@@ -18,7 +18,7 @@
   }
 }
 
-.logo-beta {
+%logo-beta {
   background-color: $brand-primary;
   font-size: 2rem;
   font-weight: bold;
@@ -38,4 +38,13 @@
       text-decoration: none;
     }
   }
+}
+
+.logo-beta {
+  @extend %logo-beta;
+}
+
+.logo-beta-inverse {
+  @extend %logo-beta;
+  background-color: darken($navbar-default-bg, 13.5%);
 }

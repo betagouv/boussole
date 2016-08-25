@@ -3,6 +3,8 @@
 
 module Agents
   class DashboardController < ApplicationController
+    layout 'dashboard'
+
     # GET /agents
     def index; end
   end

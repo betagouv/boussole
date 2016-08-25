@@ -1,8 +1,15 @@
 @charset "UTF-8";
 
-.main-navbar {
+%main-navbar {
   @extend .navbar;
   @extend .navbar-default;
-  @extend .navbar-fixed-top;
-  font-size: inherit;
+}
+
+.main-navbar {
+  @extend %main-navbar;
+}
+
+.main-navbar-inverse {
+  @extend %main-navbar;
+  @extend .navbar-inverse;
 }
