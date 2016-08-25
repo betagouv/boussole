@@ -18,7 +18,9 @@
   }
 }
 
-%beta-logo {
+.beta-logo {
+  @extend .hidden-xs;
+  @extend .hidden-sm;
   background-color: $brand-primary;
   font-size: 2rem;
   font-weight: bold;
@@ -38,13 +40,4 @@
       text-decoration: none;
     }
   }
-}
-
-.beta-logo {
-  @extend %beta-logo;
-}
-
-.beta-logo-inverse {
-  @extend %beta-logo;
-  background-color: darken($navbar-default-bg, 13.5%);
 }

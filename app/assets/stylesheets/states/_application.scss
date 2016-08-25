@@ -1,2 +1,6 @@
 /* Site state styles go here */
 @charset "UTF-8";
+
+.is-active {
+  @extend .active;
+}

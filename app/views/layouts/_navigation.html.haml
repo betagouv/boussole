@@ -1,13 +1,16 @@
 -# coding: utf-8
 
-.container
-  .navbar-header
-    -# %button.navbar-toggle{ type: 'button', data: { target: '.navbar-collapse', toggle: 'collapse' } }
-    -#   %span.sr-only Basculer la barre de navigation
-    -#   %span.icon-bar
-    -#   %span.icon-bar
-    -#   %span.icon-bar
-    = link_to 'Accueil', root_path, class: 'navbar-brand'
-  .collapse.navbar-collapse
-    %ul.nav.navbar-nav
-      = render 'layouts/navigation_links'
+%nav.navigation{ role: 'navigation' }
+  .container
+    .navigation-header
+      - if request.env['PATH_INFO'] =~ %r{/agents}
+        %button{ type: 'button', data: { target: '.navigation-body', toggle: 'collapse' } }
+          %span.sr-only Basculer la barre de navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+      = link_to 'boussole.gouv.fr', root_path, class: 'navbar-brand'
+
+    - if request.env['PATH_INFO'] =~ %r{/agents}
+      .navigation-body
+        = render 'layouts/navigation_links'

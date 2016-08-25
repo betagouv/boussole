@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+.navigation {
+  @extend .navbar;
+  @extend .navbar-default;
+}
+
+.navigation-header {
+  @extend .navbar-header;
+
+  button {
+    @extend .navbar-toggle;
+  }
+}
+
+.navigation-body {
+  @extend .collapse;
+  @extend .navbar-collapse;
+}
+
+.navigation-links {
+  @extend .nav;
+  @extend .navbar-nav;
+}
