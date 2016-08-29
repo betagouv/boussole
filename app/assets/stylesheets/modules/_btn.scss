@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.btn-new {
+  @extend .btn-primary;
+}
+
+.btn-show {
+  @extend .btn-info;
+}
+
+.btn-edit {
+  @extend .btn-warning;
+}
+
+.btn-destroy {
+  @extend .btn-danger;
+}
