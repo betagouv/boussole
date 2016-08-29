@@ -27,3 +27,12 @@ Capybara.register_driver(:poltergeist) do |app|
     ]
   )
 end
+
+# Working with job stories.
+RSpec.configure do |config|
+  %w(situation solution).each do |example, options = { capybara_feature: true, type: :feature }|
+    config.alias_example_group_to(example, **options)
+    config.alias_example_group_to("f#{example}", focus: true, **options)
+    config.alias_example_group_to("x#{example}", skip: "Temporarily disabled with x#{example}", **options)
+  end
+end
