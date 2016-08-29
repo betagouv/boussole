@@ -1,6 +1,30 @@
 /* Base site styles go here */
 @charset "UTF-8";
 
+/* hide all x-avis overflows */
 body {
   overflow-x: hidden;
+}
+
+/* make all anchors have the same size */
+a {
+  font-size: $font-size-h5;
+}
+
+/* make all images responsive by default */
+img {
+  @extend .img-responsive;
+  margin: 0 auto;
+}
+
+/* font awesome @font-face */
+@font-face {
+  font-family: font-"FontAwesome";
+  src: font-url('#{$fa-font-path}/fontawesome-webfont.eot?v=#{$fa-version}');
+  src: font-url('#{$fa-font-path}/fontawesome-webfont.eot?#iefix&v=#{$fa-version}') format("embedded-opentype"),
+    font-url('#{$fa-font-path}/fontawesome-webfont.woff2?v=#{$fa-version}') format("woff2"),
+    font-url('#{$fa-font-path}/fontawesome-webfont.ttf?v=#{$fa-version}') format("truetype"),
+    font-url('#{$fa-font-path}/fontawesome-webfont.svg?v=#{$fa-version}#fontawesomeregular') format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
