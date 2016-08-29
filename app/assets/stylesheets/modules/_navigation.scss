@@ -11,6 +11,11 @@
   button {
     @extend .navbar-toggle;
   }
+
+  a {
+    @extend .navbar-brand;
+    @extend a;
+  }
 }
 
 .navigation-body {
