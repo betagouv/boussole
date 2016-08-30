@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
-@import "modules/beta-logo",
+@import "modules/agent-list",
+        "modules/agent-form",
+        "modules/beta-logo",
         "modules/beta-info",
         "modules/btn",
-        "modules/collection",
         "modules/navigation";

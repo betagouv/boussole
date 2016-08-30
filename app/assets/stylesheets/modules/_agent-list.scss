@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.agent-list {
+  table {
+    @extend .table;
+    @extend .table-hover;
+    @extend .table-striped;
+
+    * {
+      border: 0;
+      font-size: 1.25rem;
+    }
+  }
+}
