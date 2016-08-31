@@ -7,7 +7,9 @@
         .navigation-toggle
           %button{ type: 'button', data: { target: '.navigation-body', toggle: 'collapse' } }
             %span.sr-only Basculer la barre de navigation
-            %span.fa.fa-navicon
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
       = link_to 'boussole.gouv.fr', root_path
 
     - if request.fullpath =~ %r{/agents}
