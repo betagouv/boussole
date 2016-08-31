@@ -22,7 +22,10 @@
             %td= public_service.postal_address
             %td= link_to(t('.show'), agents_public_service_path(public_service), class: 'btn btn-show')
             %td= link_to(t('.edit'), edit_agents_public_service_path(public_service), class: 'btn btn-edit')
-            %td= link_to(t('.destroy'), agents_public_service_path(public_service), class: 'btn btn-destroy', method: :delete, data: { confirm: 'Are you sure?' })
+            %td
+              = link_to t('.destroy'), agents_public_service_path(public_service), class: 'btn btn-destroy',
+                                                                                   method: :delete,
+                                                                                   data: { confirm: 'Are you sure?' }
 
     %br
 
