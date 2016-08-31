@@ -2,11 +2,13 @@
 @charset "UTF-8";
 
 header {
-  font-size: 1.5rem;
+  @extend .row;
+  font-size: 1rem;
 }
 
 main {
-  font-size: 2rem;
+  @extend .row;
+  font-size: 1rem;
 }
 
 .l-content-wide {
@@ -14,7 +16,15 @@ main {
   @extend .col-xs-offset-1;
 }
 
-footer {
-  font-size: 1rem;
+.l-content-narrow {
+  @extend .col-lg-4;
+  @extend .col-lg-offset-4;
+  @extend .col-md-6;
+  @extend .col-md-offset-3;
 }
 
+footer {
+  @extend .row;
+  font-size: .75rem;
+  min-height: 2rem;
+}

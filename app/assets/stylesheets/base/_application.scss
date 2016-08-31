@@ -1,20 +1,48 @@
 /* Base site styles go here */
 @charset "UTF-8";
 
-/* hide all x-avis overflows */
-body {
+html {
+  font-size: $font-size-base-xs;
   overflow-x: hidden;
+
+  @media (max-width: $screen-sm-min) {
+    overflow-x: scroll;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    font-size: $font-size-base-sm;
+  }
+
+  @media (min-width: $screen-md-min) {
+    font-size: $font-size-base-md;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    font-size: $font-size-base-lg;
+  }
 }
 
-/* make all anchors have the same size */
-a {
-  font-size: $font-size-h5;
+body {
+  @extend .container-fluid;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-/* make all images responsive by default */
 img {
   @extend .img-responsive;
   margin: 0 auto;
+}
+
+table {
+  @extend .table;
+  @extend .table-hover;
+  @extend .table-striped;
+  @extend .table-responsive;
+
+  * {
+    border: 0;
+  }
+
 }
 
 /* font awesome @font-face */

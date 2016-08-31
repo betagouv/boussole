@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
 .navigation-toggle {
-  font-size: $font-size-h3;
-
   button {
     @extend .navbar-brand;
     @extend .navbar-toggle;
