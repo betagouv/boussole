@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.callout {
+  @extend .text-center;
+  margin-top: 50px;
+
+  * {
+    font-size: $font-size-h1;
+
+    @media (max-width: $screen-md-min) {
+      font-size: $font-size-h2;
+    }
+
+    @media (max-width: $screen-sm-min) {
+      font-size: $font-size-h3;
+    }
+  }
+}
