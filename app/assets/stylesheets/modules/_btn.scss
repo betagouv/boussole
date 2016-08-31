@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+.btn {
+  @extend .btn;
+  font-size: 1em;
+}
+
 .btn-new {
   @extend .btn-primary;
 }
