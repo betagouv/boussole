@@ -6,24 +6,15 @@ header {
 }
 
 main {
-  @extend .container;
   font-size: 2rem;
-  margin-top: 100px; // accommodate the navbar
-  padding-bottom: 80px;
-  width: 75%;
 }
 
-section {
-  @extend .row;
-  margin-top: 20px;
-
-  .thumbnail {
-    .caption {
-      height: 75px;
-    }
-  }
+.l-content-wide {
+  @extend .col-xs-10;
+  @extend .col-xs-offset-1;
 }
 
 footer {
   font-size: 1rem;
 }
+
