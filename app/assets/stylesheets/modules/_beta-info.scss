@@ -3,12 +3,5 @@
 .beta-info {
   @extend .alert-info;
   @extend .text-center;
-}
-
-.beta-info-header {
-  @extend strong;
-}
-
-.beta-info-body {
   @extend .hidden-xs;
 }
