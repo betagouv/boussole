@@ -4,6 +4,8 @@
 Rails.application.routes.draw do
   namespace :agents do
     root to: 'dashboard#index'
+
+    resources :public_services
   end
 
   resources :projects, only: %i(show create) do

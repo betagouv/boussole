@@ -1,0 +1,29 @@
+-# coding: utf-8
+
+.l-content-wide
+  %section.list
+    %h1= t('.heading')
+
+    %hr
+
+    %table
+      %thead
+        %tr
+          %th= t(:title, scope: 'activerecord.attributes.public_service')
+          %th= t(:postal_address, scope: 'activerecord.attributes.public_service')
+          %th
+          %th
+          %th
+
+      %tbody
+        - @public_services.each do |public_service|
+          %tr
+            %td= public_service.title
+            %td= public_service.postal_address
+            %td= link_to(t('.show'), agents_public_service_path(public_service), class: 'btn btn-show')
+            %td= link_to(t('.edit'), edit_agents_public_service_path(public_service), class: 'btn btn-edit')
+            %td= link_to(t('.destroy'), agents_public_service_path(public_service), class: 'btn btn-destroy', method: :delete, data: { confirm: 'Are you sure?' })
+
+    %br
+
+    = link_to(t('.new'), new_agents_public_service_path, class: 'btn btn-new btn-lg')

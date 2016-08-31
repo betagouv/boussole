@@ -1,12 +1,12 @@
 -# coding: utf-8
 
 .l-content-narrow
-  %legend Domaine et formation
+  %section.form
+    %legend Domaine et formation
 
-  = simple_form_for(@project, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
-    = f.error_notification
+    = simple_form_for(@project, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
+      = f.error_notification
 
-    .form-inputs
       = f.input :domain, label: 'Domaine',
                          collection: DOMAINS,
                          include_blank: false,
@@ -14,5 +14,4 @@
 
       = f.input :experience, label: "J'ai déjà une expérience dans ce domaine"
 
-    .form-actions
       = f.button :submit, 'Continuer', class: 'btn btn-new'

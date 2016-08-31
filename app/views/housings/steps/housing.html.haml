@@ -1,12 +1,12 @@
 -# coding: utf-8
 
 .l-content-narrow
-  %legend Ta recherche
+  %section.form
+    %legend Ta recherche
 
-  = simple_form_for(@housing, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
-    = f.error_notification
+    = simple_form_for(@housing, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
+      = f.error_notification
 
-    .form-inputs
       = f.input :duration, label: 'Pour combien de temps ?',
                            include_blank: false,
                            prompt: 'Sélectionne une option',
@@ -25,5 +25,4 @@
           = f.input_field :resources, class: 'form-control'
           %span.input-group-addon €
 
-    .form-actions
       = f.button :submit, 'Continuer', class: 'btn btn-new'

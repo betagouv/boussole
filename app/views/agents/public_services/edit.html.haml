@@ -1,0 +1,22 @@
+-# coding: utf-8
+
+.l-content-narrow
+  %section.form
+    %h1= t('.heading')
+
+    %hr
+
+    = simple_form_for([:agents, @public_service], wrapper: :vertical_form) do |f|
+      = f.error_notification
+
+      = f.input(:title)
+      = f.input(:description)
+      = f.input(:postal_address)
+      = f.input(:email)
+      = f.input(:phone)
+      = f.input(:url)
+
+      = f.button(:submit, t('.update'), class: 'btn btn-edit')
+      = link_to(t('.show'), agents_public_service_path(@public_service), class: 'btn btn-show')
+      = link_to(t('.back'), agents_public_services_path, class: 'btn btn-cancel')
+

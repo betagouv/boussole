@@ -1,13 +1,17 @@
 -# coding: utf-8
 
-%ul.navigation-links
-  %li.is-active
-    %a{ href: "#" }
-      Acteurs
-      %span.sr-only (active)
+%section.navigation-links
+  %ul
+    %li{ class: current_page?(agents_public_services_path) ? 'is-active' : '' }
+      = link_to(agents_public_services_path) do
+        = t('.public_services')
+        - if current_page?(agents_public_services_path)
+          %span.sr-only (active)
 
-  %li
-    %a{ href: "#" } Offres de Service
+    %li
+      %a{ href: '#' }
+        = t('.service_offerings')
 
-  %li
-    %a{ href: "#" } Dispositifs
+    %li
+      %a{ href: '#' }
+        = t('.measures')

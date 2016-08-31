@@ -4,6 +4,8 @@
 module Agents
   class DashboardController < ApplicationController
     # GET /agents
-    def index; end
+    def index
+      redirect_to(agents_public_services_url)
+    end
   end
 end
