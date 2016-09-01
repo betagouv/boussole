@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+.beta-info {
+  @extend .alert-info;
+  @extend .text-center;
+  @extend .hidden-xs;
+  font-size: .95em;
+}

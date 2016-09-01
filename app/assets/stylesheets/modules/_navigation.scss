@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.navigation {
+  @extend .navbar;
+  @extend .navbar-default;
+}
+
+.navigation-header {
+  @extend .navbar-header;
+
+  a {
+    @extend .navbar-brand;
+    font-size: 1em;
+  }
+}
+
+.navigation-body {
+  @extend .collapse;
+  @extend .navbar-collapse;
+}

@@ -2,6 +2,12 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  namespace :agents do
+    root to: 'dashboard#index'
+
+    resources :public_services
+  end
+
   resources :projects, only: %i(show create) do
     resources :steps, only: %i(show update), module: :projects
   end
@@ -13,7 +19,6 @@ Rails.application.routes.draw do
   resources :contacts, only: %i(show create)
 
   mount Flip::Engine => '/flip'
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   root to: 'visitors#index'
 end

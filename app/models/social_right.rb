@@ -18,8 +18,7 @@
 #  index_social_rights_on_slug  (slug) UNIQUE
 #
 class SocialRight < ApplicationRecord
-  include Admin
-  extend  FriendlyId
+  extend FriendlyId
 
   friendly_id :name, use: :slugged
 

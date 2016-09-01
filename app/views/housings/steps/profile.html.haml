@@ -1,12 +1,12 @@
 -# coding: utf-8
 
-.col-md-6.col-md-offset-3
-  %legend Ton profil
+.l-content-narrow
+  %section.form
+    %legend Ton profil
 
-  = simple_form_for(@housing, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
-    = f.error_notification
+    = simple_form_for(@housing, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
+      = f.error_notification
 
-    .form-inputs
       = f.input :current_status, label: "Quelle est ta situation aujourd'hui ?",
                                  include_blank: false,
                                  prompt: 'Sélectionne une option',
@@ -24,5 +24,4 @@
 
       = f.input :age, label: 'Tu as quel âge ?'
 
-    .form-actions
-      = f.button :submit, 'Continuer', class: 'btn btn-primary'
+      = f.button :submit, 'Continuer', class: 'btn btn-new'

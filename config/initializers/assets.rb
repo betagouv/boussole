@@ -15,7 +15,7 @@ end
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
-Rails.application.config.assets.precompile << %r{font-awesome/fonts/[\w-]+\.(?:eot|svg|ttf|woff2?)$}
+Rails.application.config.assets.precompile << %r{font-awesome/fonts/[\w-]+\.(?:eot|svg|ttf|woff2|woff?)$}
 Rails.application.config.assets.precompile << %r{open-sans/fonts/[\w-]+/[\w-]+\.(?:eot|svg|ttf|woff?)$}
 
 # Minimum Sass number precision required by bootstrap-sass

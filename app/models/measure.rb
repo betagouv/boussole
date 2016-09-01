@@ -24,8 +24,6 @@
 #  fk_rails_22911d55d8  (public_service_id => public_services.id)
 #
 class Measure < ApplicationRecord
-  include Admin
-
   belongs_to :public_service
   has_many :exercise_scopes, as: :exercisable, dependent: :destroy
   has_many :social_rights, through: :exercise_scopes

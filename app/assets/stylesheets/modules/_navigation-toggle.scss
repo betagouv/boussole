@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.navigation-toggle {
+  button {
+    @extend .navbar-brand;
+    @extend .navbar-toggle;
+    margin: 0;
+  }
+}

@@ -1,19 +1,22 @@
 -# coding: utf-8
 
 !!! 5
-%html
+%html{ lang: locale }
   %head
-    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
-    %title= content_for?(:title) ? yield(:title) : 'Boussole'
-    %meta{ name: 'description', content: content_for?(:description) ? yield(:description) : 'Boussole' }
+    %meta{ charset: 'utf-8' }
+    %meta{ 'http-equiv' => 'X-UA-Compatible', content: 'IE=edge' }
+    %title= t('.title')
+    %meta{ name: 'description', content: t('.description') }
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' }
+    %base{ href: root_path }
     = stylesheet_link_tag 'application', media: 'all', data: { 'turbolinks-track' => true }
-    = javascript_include_tag 'application', data: { 'turbolinks-track' => true }
     = csrf_meta_tags
   %body
     %header{ role: 'banner' }
-      = render 'layouts/navigation'
+      = render 'layouts/header'
     %main{ role: 'main' }
       = render 'layouts/messages'
       = yield
     %footer{ role: 'contentinfo' }
       = render 'layouts/footer'
+    = javascript_include_tag 'application', data: { 'turbolinks-track' => true }

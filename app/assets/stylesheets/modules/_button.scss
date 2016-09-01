@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.btn {
+  @extend .btn;
+  font-size: 1em;
+}
+
+.btn-new {
+  @extend .btn-primary;
+}
+
+.btn-show {
+  @extend .btn-info;
+}
+
+.btn-edit {
+  @extend .btn-warning;
+}
+
+.btn-destroy {
+  @extend .btn-danger;
+}
+
+.btn-cancel {
+  @extend .btn-default;
+}

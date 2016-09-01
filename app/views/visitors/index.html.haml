@@ -1,67 +1,68 @@
 -# coding: utf-8
 
-%section.text-center
-  %h1 Boussole des droits
+.l-content-wide
+  %section.text-center
+    %h1 Boussole des droits
 
-  %h3
-    Accède au conseil garanti d'un·e professionnel·le,
+    %h3
+      Accède au conseil garanti d'un·e professionnel·le,
 
-    - if feature?(:working) || feature?(:training) || feature?(:healthcaring)
-      près de chez toi,
+      - if feature?(:working) || feature?(:training) || feature?(:healthcaring)
+        près de chez toi,
 
-    pour t'aider
+      pour t'aider
+
+      - if feature?(:training)
+        dans tes projets de formation
+
+      - if feature?(:housing)
+        à trouver une solution pour te loger
+
+      - if feature?(:working)
+        dans tes projets d'activité
+
+      - if feature?(:healthcaring)
+        à trouver une solution pour te soigner
+
+  %section.callout
+    - if feature?(:working)
+      .col-md-2.col-md-offset-1
+        .thumbnail
+          = image_tag('work.png')
+          .caption
+            %h5 Travailler
 
     - if feature?(:training)
-      dans tes projets de formation
+      .col-md-2
+        = link_to(projects_path, method: :post) do
+          .thumbnail
+            = image_tag('education.png')
+            .caption
+              %h5 Me former
 
     - if feature?(:housing)
-      à trouver une solution pour te loger
+      - if feature?(:working) || feature?(:training) || feature?(:traveling) || feature?(:healthcaring)
+        .col-md-2
+          .thumbnail
+            = link_to(housings_path, method: :post) do
+              = image_tag('housing.png')
+              .caption
+                %h5 Me loger
 
-    - if feature?(:working)
-      dans tes projets d'activité
+      - else
+        = link_to('Commencer !', housings_path, method: :post, class: 'btn btn-new btn-lg')
 
-    - if feature?(:healthcaring)
-      à trouver une solution pour te soigner
 
-%section.text-center
-  - if feature?(:working)
-    .col-md-2.col-md-offset-1
-      .thumbnail
-        = image_tag('work.png')
-        .caption
-          %h5 Travailler
-
-  - if feature?(:training)
-    .col-md-2
-      = link_to(projects_path, method: :post) do
-        .thumbnail
-          = image_tag('education.png')
-          .caption
-            %h5 Me former
-
-  - if feature?(:housing)
-    - if feature?(:working) || feature?(:training) || feature?(:traveling) || feature?(:healthcaring)
+    - if feature?(:traveling)
       .col-md-2
         .thumbnail
-          = link_to(housings_path, method: :post) do
-            = image_tag('housing.png')
-            .caption
-              %h5 Me loger
+          = image_tag('travel.png')
+          .caption
+            %h5 Partir à l'étranger
 
-    - else
-      = link_to('Commencer !', housings_path, method: :post, class: 'btn btn-primary btn-lg')
-
-
-  - if feature?(:traveling)
-    .col-md-2
-      .thumbnail
-        = image_tag('travel.png')
-        .caption
-          %h5 Partir à l'étranger
-
-  - if feature?(:healthcaring)
-    .col-md-2
-      .thumbnail
-        = image_tag('health.png')
-        .caption
-          %h5 Me soigner
+    - if feature?(:healthcaring)
+      .col-md-2
+        .thumbnail
+          = image_tag('health.png')
+          .caption
+            %h5 Me soigner

@@ -63,5 +63,39 @@ fr:
         social_rights: Thématiques
         updated_at: Dernière actualisation
 
+  layouts:
+    application:
+      title: 'Boussole de droits'
+      description: Accède au conseil garanti d'un·e professionnel·le, à proximité, pour t'aider dans tes projets de formation, de logement, d'activité et de santé
+    navigation_links:
+      public_services: Acteurs
+      service_offerings: Offres de service
+      measures: Dispositifs
 
-
+  agents:
+    public_services:
+      index:
+        heading: Liste d'acteurs à Reims
+        new: Ajouter un nouvel acteur
+        show: Afficher
+        edit: Modifier
+        destroy: Supprimer
+        confirm: En êtes-vous sûr ?
+      show:
+        edit: Modifier
+        back: Revenir
+      new:
+        heading: Nouvel acteur
+        create: Créer
+        back: Annuler
+      create:
+        notice: L'acteur a été crée avec succès
+      edit:
+        heading: Mettre à jour l'acteur
+        update: Modifier
+        show: Afficher
+        back: Annuler
+      update:
+        notice: L'acteur a été modifié avec succès
+      destroy:
+        notice: L'acteur a été supprimé avec succès

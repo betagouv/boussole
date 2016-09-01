@@ -28,3 +28,7 @@ parameters['measures'].each_pair do |_, hash|
       hash.reject { |key, _| key =~ /ext|public_service/ }
     )
 end
+
+parameters['social_rights'].each do |name|
+  SocialRight.find_or_create_by!(name: name)
+end

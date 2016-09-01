@@ -14,7 +14,6 @@
         // Reset and dependencies
         "bootstrap-sass/assets/stylesheets/bootstrap/normalize",
         "bootstrap-sass/assets/stylesheets/bootstrap/print",
-        "bootstrap-sass/assets/stylesheets/bootstrap/glyphicons",
 
         // Core CSS
         "bootstrap-sass/assets/stylesheets/bootstrap/scaffolding",
@@ -33,7 +32,11 @@
         "bootstrap-sass/assets/stylesheets/bootstrap/navs",
         "bootstrap-sass/assets/stylesheets/bootstrap/navbar",
         "bootstrap-sass/assets/stylesheets/bootstrap/jumbotron",
-        "bootstrap-sass/assets/stylesheets/bootstrap/alerts";
+        "bootstrap-sass/assets/stylesheets/bootstrap/alerts",
+        "bootstrap-sass/assets/stylesheets/bootstrap/close",
+
+        // Utility classes
+        "bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
 
 /* Font Awesome */
 @import "font-awesome/scss/variables",

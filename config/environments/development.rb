@@ -39,6 +39,9 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
+  # Raises error for missing translations
+  config.action_view.raise_on_missing_translations = true
+
   # Raises error for unpermitted params
   config.action_controller.action_on_unpermitted_parameters = :raise
 
@@ -46,7 +49,4 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: Rails.application.secrets.domain_name }
   config.action_mailer.asset_host          = "http://#{Rails.application.secrets.domain_name}"
   config.action_mailer.preview_path        = "#{Rails.root}/spec/mailers/previews"
-
-  # Raises error for missing translations
-  config.action_view.raise_on_missing_translations = true
 end

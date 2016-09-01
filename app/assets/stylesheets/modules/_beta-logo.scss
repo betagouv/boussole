@@ -18,9 +18,10 @@
   }
 }
 
-.logo-beta {
+.beta-logo {
+  @extend .hidden-xs;
+  @extend .hidden-sm;
   background-color: $brand-primary;
-  font-size: 2rem;
   font-weight: bold;
   padding: 5px;
   position: absolute;

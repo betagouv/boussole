@@ -13,10 +13,10 @@ gem 'friendly_id'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'puma'
-gem 'rails_admin', '~> 1.0.0.rc'
 gem 'rails-i18n'
 gem 'sass-rails'
 gem 'simple_form'
+gem 'stronger_parameters'
 gem 'turbolinks'
 gem 'uglifier'
 gem 'wicked'
@@ -48,6 +48,7 @@ group :development do
   gem 'foreman'
   gem 'haml-lint', require: false
   gem 'inch', require: false
+  gem 'i18n-tasks', require: false
   gem 'letter_opener_web'
   gem 'guard-bundler', require: false
   gem 'guard-bower', require: false

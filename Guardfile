@@ -14,7 +14,7 @@ guard :foreman do
   watch(%r{^(config|lib)/.+\.rb$})
 end
 
-guard :rspec, cmd: 'bundle exec spring rspec --tag ~skip' do
+guard :rspec, cmd: 'bundle exec spring rspec' do
   watch(%r{^spec/.+_spec\.rb$})
   watch('spec/spec_helper.rb')                        { 'spec' }
   watch('spec/rails_helper.rb')                       { 'spec' }

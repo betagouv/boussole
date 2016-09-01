@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.callout {
+  @extend .text-center;
+  margin-top: 3em;
+
+  a {
+    font-size: 2.6em;
+  }
+}
