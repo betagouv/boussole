@@ -53,7 +53,7 @@ module Agents
 
     # Use callbacks to share common setup or constraints between actions.
     def set_public_service
-      @public_service = PublicService.find(params[:id])
+      @public_service = public_service_scope.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
@@ -70,6 +70,10 @@ module Agents
           url: Parameters.string,
           social_right_ids: Parameters.array(Parameters.string)
         )
+    end
+
+    def public_service_scope
+      PublicService
     end
   end
 end

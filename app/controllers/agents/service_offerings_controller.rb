@@ -53,7 +53,7 @@ module Agents
 
     # Use callbacks to share common setup or constraints between actions.
     def set_service_offering
-      @service_offering = ServiceOffering.find(params[:id])
+      @service_offering = service_offering_scope.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
@@ -72,6 +72,10 @@ module Agents
           external: Parameters.boolean,
           social_right_ids: Parameters.array(Parameters.string)
         )
+    end
+
+    def service_offering_scope
+      ServiceOffering
     end
   end
 end
