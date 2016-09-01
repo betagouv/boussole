@@ -9,7 +9,6 @@ situation %(
   Pour cibler et toucher de nouveaux publics,
   Et pour co-construire une offre de service territoriale.
 ) do
-
   # There's one social right
   given!(:social_right) { create(:social_right, name: 'Logement') }
 
