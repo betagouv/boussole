@@ -45,6 +45,7 @@ situation %(
 
   solution('List all public services') do
     scenario { expect(page).to have_content('Pôle emploi') }
+    scenario { expect(page).to have_content('Emploi') }
   end
 
   solution('Sort public services by social right') do

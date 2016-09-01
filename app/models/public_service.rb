@@ -1,7 +1,14 @@
 # encoding: utf-8
 # frozen_string_literal: true
+
 #
-# TODO: Add documentation.
+# Class PublicService provides a representation of an institution that provides one or more
+#   services to young people. Scope includes cooperatives, associations, territorial collectivities,
+#   unions, etc.
+#
+# @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
+#
+
 #
 # == Schema Information
 #
@@ -24,4 +31,21 @@ class PublicService < ApplicationRecord
   has_many :measures
 
   validates :title, presence: true
+
+  #
+  # Maps {SocialRight} names and joins them.
+  #
+  # @example
+  #
+  #   social_right_names
+  #   #=> 'Emploi, Logement'
+  #
+  # @return [String] A comma separated, sorted, string with the names.
+  #
+  def social_right_names
+    social_rights
+      .pluck(:name)
+      .sort
+      .join(', ')
+  end
 end

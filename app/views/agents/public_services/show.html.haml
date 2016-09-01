@@ -31,7 +31,7 @@
 
         .profile-definition
           %dt= t(:social_rights, scope: 'activerecord.attributes.public_service')
-          %dd= @public_service.social_rights.pluck(:name).join(', ')
+          %dd= @public_service.social_right_names
 
         .profile-definition
           %dt= t(:updated_at, scope: 'activerecord.attributes.public_service')
