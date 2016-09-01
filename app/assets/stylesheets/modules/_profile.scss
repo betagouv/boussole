@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+.profile-definition {
+  &:not(:last-child) {
+    margin-bottom: 1em;
+  }
+}

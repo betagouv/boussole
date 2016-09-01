@@ -80,6 +80,7 @@ fr:
         show: Afficher
         edit: Modifier
         destroy: Supprimer
+        confirm: En êtes-vous sûr ?
       show:
         edit: Modifier
         back: Revenir
@@ -87,8 +88,14 @@ fr:
         heading: Nouvel acteur
         create: Créer
         back: Annuler
+      create:
+        notice: L'acteur a été crée avec succès
       edit:
         heading: Mettre à jour l'acteur
         update: Modifier
         show: Afficher
         back: Annuler
+      update:
+        notice: L'acteur a été modifié avec succès
+      destroy:
+        notice: L'acteur a été supprimé avec succès

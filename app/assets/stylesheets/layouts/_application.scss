@@ -2,13 +2,17 @@
 @charset "UTF-8";
 
 header {
-  @extend .row;
   font-size: 1rem;
 }
 
 main {
   @extend .row;
   font-size: 1rem;
+}
+
+.l-messages {
+  @extend .col-xs-10;
+  @extend .col-xs-offset-1;
 }
 
 .l-content-wide {
@@ -30,7 +34,6 @@ main {
 }
 
 footer {
-  @extend .row;
   font-size: .75rem;
   min-height: 2rem;
 }

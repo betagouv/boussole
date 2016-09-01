@@ -46,7 +46,7 @@ module Agents
     # DELETE /agents/public_services/1
     def destroy
       @public_service.destroy
-      redirect_to(public_services_url, notice: t('.notice'))
+      redirect_to(agents_public_services_url, notice: t('.notice'))
     end
 
     private
@@ -67,7 +67,8 @@ module Agents
           postal_address: Parameters.string,
           email: Parameters.string,
           phone: Parameters.string,
-          url: Parameters.string
+          url: Parameters.string,
+          social_right_ids: Parameters.array(Parameters.string)
         )
     end
   end

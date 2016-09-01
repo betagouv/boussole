@@ -1,8 +1,7 @@
 -# coding: utf-8
 
 .l-content-narrow
-  %section.form
-
+  %section.profile-form
     %h1= t('.heading')
 
     %hr
@@ -16,6 +15,7 @@
       = f.input(:email)
       = f.input(:phone)
       = f.input(:url)
+      = f.association(:social_rights)
 
       = f.button(:submit, t('.create'), class: 'btn btn-new')
       = link_to(t('.back'), agents_public_services_path, class: 'btn btn-cancel')
