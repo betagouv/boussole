@@ -11,16 +11,16 @@ situation %(
   Pour pouvoir connaître la communauté d'acteurs locale,
   Et pour connaître d'autres acteurs pouvant les aider dans des cas complexes.
 ) do
+  # There's one social right
+  given!(:social_right) { create(:social_right, name: 'Emploi') }
+
+  # There's one public service
+  given!(:public_service) { create(:public_service, title: 'Pôle emploi', social_rights: [social_right]) }
+
   background do
-    # There's one social right
-    create(:social_right, name: 'Emploi')
-
-    # There's one public service
-    create(:public_service, title: 'Pôle emploi')
-
     # The agent navigates towards the public services space
     visit('/agents')
-    click_link('Acteur')
+    click_link('Acteurs')
   end
 
   solution('Create a public service') do
@@ -39,12 +39,13 @@ situation %(
         click_button('Créer')
       end
 
-      expect(page).to have_content("L'acteur a été crée avec succès")
+      expect(page).to have_content("L'acteur a été créé avec succès")
     end
   end
 
   solution('List all public services') do
     scenario { expect(page).to have_content('Pôle emploi') }
+    scenario { expect(page).to have_content('Emploi') }
   end
 
   solution('Sort public services by social right') do

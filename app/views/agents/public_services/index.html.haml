@@ -15,7 +15,7 @@
         %thead
           %tr
             %th= t(:title, scope: 'activerecord.attributes.public_service')
-            %th= t(:postal_address, scope: 'activerecord.attributes.public_service')
+            %th= t(:social_rights, scope: 'activerecord.attributes.public_service')
             %th
             %th
             %th
@@ -24,7 +24,7 @@
           - @public_services.each do |public_service|
             %tr
               %td= public_service.title
-              %td= public_service.postal_address
+              %td= public_service.social_right_names
               %td= link_to(t('.show'), agents_public_service_path(public_service), class: 'btn btn-show')
               %td= link_to(t('.edit'), edit_agents_public_service_path(public_service), class: 'btn btn-edit')
               %td
