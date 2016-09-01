@@ -1,0 +1,24 @@
+-# coding: utf-8
+
+.l-content-narrow
+  %section.profile-form
+    %h1= t('.heading')
+
+    %hr
+
+    = simple_form_for([:agents, @service_offering], wrapper: :vertical_form) do |f|
+      = f.error_notification
+
+      = f.association(:public_service)
+      = f.input(:title)
+      = f.input(:description)
+      = f.input(:postal_address)
+      = f.input(:email)
+      = f.input(:phone)
+      = f.input(:url)
+      = f.input(:external)
+      = f.association(:social_rights)
+
+      = f.button(:submit, t('.create'), class: 'btn btn-edit')
+      = link_to(t('.back'), agents_service_offerings_path, class: 'btn btn-cancel')
+

@@ -89,7 +89,7 @@ fr:
         create: Créer
         back: Annuler
       create:
-        notice: L'acteur a été crée avec succès
+        notice: L'acteur a été créé avec succès
       edit:
         heading: Mettre à jour l'acteur
         update: Modifier
@@ -99,3 +99,30 @@ fr:
         notice: L'acteur a été modifié avec succès
       destroy:
         notice: L'acteur a été supprimé avec succès
+
+    service_offerings:
+      index:
+        heading: Liste des offres de service à Reims
+        new: Ajouter une nouvelle offre de service
+        show: Afficher
+        edit: Modifier
+        destroy: Supprimer
+        confirm: En êtes-vous sûr ?
+      show:
+        edit: Modifier
+        back: Revenir
+      new:
+        heading: Nouvelle offre de service
+        create: Créer
+        back: Annuler
+      create:
+        notice: L'offre de service a été créée avec succès
+      edit:
+        heading: Mettre à jour l'offre de service
+        update: Modifier
+        show: Afficher
+        back: Annuler
+      update:
+        notice: L'offre de service a été modifiée avec succès
+      destroy:
+        notice: L'offre de service a été supprimée avec succès

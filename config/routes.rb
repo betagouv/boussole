@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     root to: 'dashboard#index'
 
     resources :public_services
+    resources :service_offerings
   end
 
   resources :projects, only: %i(show create) do

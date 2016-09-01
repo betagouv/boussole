@@ -8,9 +8,11 @@
         - if current_page?(agents_public_services_path)
           %span.sr-only (active)
 
-    %li
-      %a{ href: '#' }
+    %li{ class: current_page?(agents_service_offerings_path) ? 'is-active' : '' }
+      = link_to(agents_service_offerings_path) do
         = t('.service_offerings')
+        - if current_page?(agents_service_offerings_path)
+          %span.sr-only (active)
 
     %li
       %a{ href: '#' }

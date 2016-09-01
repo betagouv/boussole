@@ -42,6 +42,7 @@ class PublicService < ApplicationRecord
   #
   # @return [String] A comma separated, sorted, string with the names.
   #
+  # TODO: Extract to concern.
   def social_right_names
     social_rights
       .pluck(:name)

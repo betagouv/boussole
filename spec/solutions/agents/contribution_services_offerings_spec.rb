@@ -27,7 +27,7 @@ situation %(
     click_link('Offres de service')
   end
 
-  solution('Create a public service') do
+  solution('Create a service offering') do
     scenario do
       click_link('Ajouter une nouvelle offre de service')
 
@@ -45,7 +45,7 @@ situation %(
         click_button('Créer')
       end
 
-      expect(page).to have_content("L'offre de service a été crée avec succès")
+      expect(page).to have_content("L'offre de service a été créée avec succès")
     end
   end
 
@@ -79,7 +79,7 @@ situation %(
         click_button('Modifier')
       end
 
-      expect(page).to have_content("L'offre de service a été modifié avec succès")
+      expect(page).to have_content("L'offre de service a été modifiée avec succès")
     end
   end
 
@@ -89,7 +89,7 @@ situation %(
         click_link('Supprimer')
       end
 
-      expect(page).to have_content("L'offre de service a été supprimé avec succès")
+      expect(page).to have_content("L'offre de service a été supprimée avec succès")
     end
   end
 end

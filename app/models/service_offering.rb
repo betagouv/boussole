@@ -34,4 +34,22 @@ class ServiceOffering < ApplicationRecord
   has_many :social_rights, through: :exercise_scopes
 
   validates :title, :public_service, presence: true
+
+  #
+  # Maps {SocialRight} names and joins them.
+  #
+  # @example
+  #
+  #   social_right_names
+  #   #=> 'Emploi, Logement'
+  #
+  # @return [String] A comma separated, sorted, string with the names.
+  #
+  # TODO: Extract to concern.
+  def social_right_names
+    social_rights
+      .pluck(:name)
+      .sort
+      .join(', ')
+  end
 end
