@@ -12,16 +12,22 @@ situation %(
   Et pour connaître d'autres acteurs pouvant les aider dans des cas complexes.
 ) do
   background do
+    # There's one social right
     create(:social_right, name: 'Emploi')
+
+    # There's one public service
+    create(:public_service, title: 'Pôle emploi')
+
+    # The agent navigates towards the public services space
     visit('/agents')
     click_link('Acteur')
   end
 
-  solution 'Create a public service' do
-    scenario 'with valid information' do
+  solution('Create a public service') do
+    scenario do
       click_link('Ajouter un nouvel acteur')
 
-      within('form') do
+      within('.profile-form') do
         fill_in('Nom', with: 'Plate-forme de décrochage')
         fill_in('Description', with: "Les plates-formes de suivi et d'appui aux décrocheurs blah blah")
         fill_in('Adresse', with: '50 rue de la Dalle, 71234 Paname')
@@ -37,9 +43,43 @@ situation %(
     end
   end
 
-  xsolution 'List all public services'
-  xsolution 'Sort public services by social right'
-  xsolution 'Take a look at a public service details'
-  xsolution 'Edit a public service'
-  xsolution 'Delete a public service'
+  solution('List all public services') do
+    scenario { expect(page).to have_content('Pôle emploi') }
+  end
+
+  solution('Sort public services by social right') do
+    pending("Don't be lazy and get this solution done ASAP, users need it!")
+  end
+
+  solution('Take a look at a public service details') do
+    scenario do
+      click_link('Afficher')
+
+      expect(page).to have_content('Pôle emploi')
+    end
+  end
+
+  solution('Edit a public service') do
+    scenario do
+      click_link('Modifier')
+
+      within('.profile-form') do
+        fill_in('Nom', with: 'Cap emploi')
+
+        click_button('Modifier')
+      end
+
+      expect(page).to have_content("L'acteur a été modifié avec succès")
+    end
+  end
+
+  solution('Delete a public service', js: true) do
+    scenario do
+      page.accept_confirm do
+        click_link('Supprimer')
+      end
+
+      expect(page).to have_content("L'acteur a été supprimé avec succès")
+    end
+  end
 end
