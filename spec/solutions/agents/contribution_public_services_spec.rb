@@ -15,7 +15,7 @@ situation %(
   given!(:social_right) { create(:social_right, name: 'Emploi') }
 
   # There's one public service
-  given!(:public_service) { create(:public_service, title: 'Pôle emploi') }
+  given!(:public_service) { create(:public_service, title: 'Pôle emploi', social_rights: [social_right]) }
 
   background do
     # The agent navigates towards the public services space
@@ -39,7 +39,7 @@ situation %(
         click_button('Créer')
       end
 
-      expect(page).to have_content("L'acteur a été crée avec succès")
+      expect(page).to have_content("L'acteur a été créé avec succès")
     end
   end
 
