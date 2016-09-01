@@ -52,7 +52,7 @@ fr:
         email: Email
         phone: Téléphone
         url: Site web
-        external: Site web externe ?
+        external: Service numérique ?
         social_rights: Thématiques
         updated_at: Dernière actualisation
       measure:
