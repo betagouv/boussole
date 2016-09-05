@@ -65,7 +65,6 @@ group :development do
   gem 'scss_lint', require: false
   gem 'spring-commands-rspec'
   gem 'web-console'
-  gem 'xray-rails'
 end
 
 group :test do

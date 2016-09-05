@@ -28,7 +28,10 @@ module Agents
       @service_offering = ServiceOffering.new(service_offering_params)
 
       if @service_offering.save
-        redirect_to(agents_service_offering_url(@service_offering), notice: t('.notice'))
+        redirect_to(
+          agents_service_offering_url(@service_offering),
+          notice: t(:notice, scope: 'agents.service_offerings.create')
+        )
       else
         render(:new)
       end
@@ -37,7 +40,10 @@ module Agents
     # PATCH/PUT /agents/service_offerings/1
     def update
       if @service_offering.update(service_offering_params)
-        redirect_to(agents_service_offering_url(@service_offering), notice: t('.notice'))
+        redirect_to(
+          agents_service_offering_url(@service_offering),
+          notice: t(:notice, scope: 'agents.service_offerings.update')
+        )
       else
         render(:edit)
       end
@@ -46,7 +52,10 @@ module Agents
     # DELETE /agents/service_offerings/1
     def destroy
       @service_offering.destroy
-      redirect_to(agents_service_offerings_url, notice: t('.notice'))
+      redirect_to(
+        agents_service_offerings_url,
+        notice: t(:notice, scope: 'agents.service_offerings.destroy')
+      )
     end
 
     private

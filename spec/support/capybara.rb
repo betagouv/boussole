@@ -12,7 +12,7 @@ Capybara.server_host            = 'localhost'
 Capybara.server_port            = 12_345
 Capybara.run_server             = true
 Capybara.ignore_hidden_elements = true
-Capybara.default_max_wait_time  = 30
+Capybara.default_max_wait_time  = 5
 
 Capybara.register_driver(:poltergeist) do |app|
   Capybara::Poltergeist::Driver.new(

@@ -17,7 +17,12 @@ situation %(
 
   # There's one service offering
   given!(:service_offering) do
-    create(:service_offering, title: "Trouver une solution de logement d'urgence", public_service: public_service)
+    create(
+      :service_offering,
+      title: "Trouver une solution de logement d'urgence",
+      public_service: public_service,
+      social_rights: [social_right]
+    )
   end
 
   background do
@@ -49,7 +54,11 @@ situation %(
   end
 
   solution('List all service offerings') do
-    scenario { expect(page).to have_content("Trouver une solution de logement d'urgence") }
+    scenario do
+      expect(page).to have_content("Trouver une solution de logement d'urgence")
+      expect(page).to have_content('Services Intégrés de l’Accueil et de l’Orientation')
+      expect(page).to have_content('Logement')
+    end
   end
 
   solution('Sort service offerings by public service') do

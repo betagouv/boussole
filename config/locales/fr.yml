@@ -126,3 +126,29 @@ fr:
         notice: L'offre de service a été modifiée avec succès
       destroy:
         notice: L'offre de service a été supprimée avec succès
+    measures:
+      index:
+        heading: Liste des dispositifs à Reims
+        new: Ajouter un nouveau dispositif
+        show: Afficher
+        edit: Modifier
+        destroy: Supprimer
+        confirm: En êtes-vous sûr ?
+      show:
+        edit: Modifier
+        back: Revenir
+      new:
+        heading: Nouveau dispositif
+        create: Créer
+        back: Annuler
+      create:
+        notice: Le dispositif a été créé avec succès
+      edit:
+        heading: Mettre à jour le dispositif
+        update: Modifier
+        show: Afficher
+        back: Annuler
+      update:
+        notice: Le dispositif a été modifié avec succès
+      destroy:
+        notice: Le dispositif a été supprimé avec succès

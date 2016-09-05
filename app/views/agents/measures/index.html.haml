@@ -1,0 +1,35 @@
+-# coding: utf-8
+
+.l-content-wide
+  %section.profile-list
+    %header.profile-list-header
+      %h1= t('.heading')
+
+    %hr
+
+    .profile-list-new
+      = link_to(t('.new'), new_agents_measure_path, class: 'btn btn-new btn-lg')
+
+    .profile-list-content
+      %table
+        %thead
+          %tr
+            %th= t(:title, scope: 'activerecord.attributes.measure')
+            %th= t(:public_service, scope: 'activerecord.attributes.measure')
+            %th= t(:social_rights, scope: 'activerecord.attributes.measure')
+            %th
+            %th
+            %th
+
+        %tbody
+          - @measures.each do |measure|
+            %tr
+              %td= measure.title
+              %td= measure.public_service.try(:title)
+              %td= measure.social_right_names
+              %td= link_to(t('.show'), agents_measure_path(measure), class: 'btn btn-show')
+              %td= link_to(t('.edit'), edit_agents_measure_path(measure), class: 'btn btn-edit')
+              %td
+                = link_to t('.destroy'), agents_measure_path(measure), class: 'btn btn-destroy',
+                                                                                         method: :delete,
+                                                                                         data: { confirm: t('.confirm') }
