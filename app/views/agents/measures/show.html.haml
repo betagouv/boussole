@@ -1,0 +1,34 @@
+-# coding: utf-8
+
+.l-content-narrow
+  %article.profile
+    %header.profile-title
+      %h1= @measure.title
+
+    %hr
+
+    .profile-details
+      %dl
+        .profile-definition
+          %dt= t(:public_service, scope: 'activerecord.attributes.measure')
+          %dd= @measure.public_service.try(:name)
+
+        .profile-definition
+          %dt= t(:description, scope: 'activerecord.attributes.measure')
+          %dd= @measure.description
+
+        .profile-definition
+          %dt= t(:url, scope: 'activerecord.attributes.measure')
+          %dd= @measure.url
+
+        .profile-definition
+          %dt= t(:social_rights, scope: 'activerecord.attributes.measure')
+          %dd= @measure.social_right_names
+
+        .profile-definition
+          %dt= t(:updated_at, scope: 'activerecord.attributes.measure')
+          %dd= @measure.updated_at
+
+    .profile-actions
+      = link_to(t('.edit'), edit_agents_measure_path(@measure), class: 'btn btn-edit')
+      = link_to(t('.back'), agents_measures_path, class: 'btn btn-cancel')

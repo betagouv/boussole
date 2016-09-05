@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
     resources :public_services
     resources :service_offerings
+    resources :measures
   end
 
   resources :projects, only: %i(show create) do

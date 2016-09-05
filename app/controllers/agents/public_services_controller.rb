@@ -28,7 +28,10 @@ module Agents
       @public_service = PublicService.new(public_service_params)
 
       if @public_service.save
-        redirect_to(agents_public_service_url(@public_service), notice: t('.notice'))
+        redirect_to(
+          agents_public_service_url(@public_service),
+          notice: t(:notice, scope: 'agents.public_services.create')
+        )
       else
         render(:new)
       end
@@ -37,7 +40,10 @@ module Agents
     # PATCH/PUT /agents/public_services/1
     def update
       if @public_service.update(public_service_params)
-        redirect_to(agents_public_service_url(@public_service), notice: t('.notice'))
+        redirect_to(
+          agents_public_service_url(@public_service),
+          notice: t(:notice, scope: 'agents.public_services.update')
+        )
       else
         render(:edit)
       end
@@ -46,7 +52,10 @@ module Agents
     # DELETE /agents/public_services/1
     def destroy
       @public_service.destroy
-      redirect_to(agents_public_services_url, notice: t('.notice'))
+      redirect_to(
+        agents_public_services_url,
+        notice: t(:notice, scope: 'agents.public_services.destroy')
+      )
     end
 
     private
