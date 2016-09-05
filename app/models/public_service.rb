@@ -28,7 +28,7 @@ class PublicService < ApplicationRecord
   has_many :exercise_scopes, as: :exercisable, dependent: :destroy
   has_many :social_rights, through: :exercise_scopes
   has_many :service_offerings, dependent: :destroy
-  has_many :measures
+  has_many :measures, dependent: :destroy
 
   validates :title, presence: true
 
