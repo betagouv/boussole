@@ -50,6 +50,8 @@ group :development do
   gem 'inch', require: false
   gem 'i18n-tasks', require: false
   gem 'letter_opener_web'
+  gem 'git-version-bump', require: false
+  gem 'github_changelog_generator', require: false
   gem 'guard-bundler', require: false
   gem 'guard-bower', require: false
   gem 'guard-foreman', require: false
