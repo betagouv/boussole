@@ -37,9 +37,12 @@ main {
   @extend .col-md-12;
 
   &.l-with-sidebar {
-    @extend .col-md-7;
-    @extend .col-md-offset-1;
-    @extend .col-md-pull-5;
+    @extend .col-md-8;
+    @extend .col-md-pull-4;
+
+    @media (min-width: $screen-md-min) {
+      border-right: $isabelline solid .25rem;
+    }
   }
 }
 
