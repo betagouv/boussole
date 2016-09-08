@@ -1,18 +1,19 @@
 -# coding: utf-8
 
-.l-content-narrow
-  %section.form
-    %legend Je suis inscrit·e à la/au…
+.l-container-narrow
+  .l-content
+    %section.form
+      %legend Je suis inscrit·e à la/au…
 
-    = simple_form_for(@project, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
-      = f.error_notification
+      = simple_form_for(@project, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
+        = f.error_notification
 
-      = f.input :pe, label: 'Pôle emploi'
-      = f.input :ml, label: 'Mission locale'
-      - if @project.handicap?
-        = f.input :cap, label: 'Cap emploi'
-      = f.input :apec, label: "Association pour l'emploi des cadres"
+        = f.input :pe, label: 'Pôle emploi'
+        = f.input :ml, label: 'Mission locale'
+        - if @project.handicap?
+          = f.input :cap, label: 'Cap emploi'
+        = f.input :apec, label: "Association pour l'emploi des cadres"
 
 
 
-      = f.button :submit, 'Continuer', class: 'btn btn-new'
+        = f.button :submit, 'Continuer', class: 'btn btn-new'

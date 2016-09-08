@@ -1,34 +1,35 @@
 -# coding: utf-8
 
-.l-content-narrow
-  %article.profile
-    %header.profile-title
-      %h1= @measure.title
+.l-container-narrow
+  .l-content
+    %article.profile
+      %header.profile-title
+        %h1= @measure.title
 
-    %hr
+      %hr
 
-    .profile-details
-      %dl
-        .profile-definition
-          %dt= Measure.human_attribute_name(:public_service)
-          %dd= @measure.public_service_title
+      .profile-details
+        %dl
+          .profile-definition
+            %dt= Measure.human_attribute_name(:public_service)
+            %dd= @measure.public_service_title
 
-        .profile-definition
-          %dt= Measure.human_attribute_name(:description)
-          %dd= @measure.description
+          .profile-definition
+            %dt= Measure.human_attribute_name(:description)
+            %dd= @measure.description
 
-        .profile-definition
-          %dt= Measure.human_attribute_name(:url)
-          %dd= @measure.url
+          .profile-definition
+            %dt= Measure.human_attribute_name(:url)
+            %dd= @measure.url
 
-        .profile-definition
-          %dt= Measure.human_attribute_name(:social_rights)
-          %dd= @measure.social_right_names
+          .profile-definition
+            %dt= Measure.human_attribute_name(:social_rights)
+            %dd= @measure.social_right_names
 
-        .profile-definition
-          %dt= Measure.human_attribute_name(:updated_at)
-          %dd= @measure.updated_at
+          .profile-definition
+            %dt= Measure.human_attribute_name(:updated_at)
+            %dd= @measure.updated_at
 
-    .profile-actions
-      = link_to(t('.edit'), edit_agents_measure_path(@measure), class: 'btn btn-edit')
-      = link_to(t('.back'), agents_measures_path, class: 'btn btn-cancel')
+      .profile-actions
+        = link_to(t('.edit'), edit_agents_measure_path(@measure), class: 'btn btn-edit')
+        = link_to(t('.back'), agents_measures_path, class: 'btn btn-cancel')

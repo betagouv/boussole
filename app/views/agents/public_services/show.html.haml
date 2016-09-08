@@ -1,46 +1,47 @@
 -# coding: utf-8
 
-.l-content-narrow
-  %article.profile
-    %header.profile-title
-      %h1= @public_service.title
+.l-container-narrow
+  .l-content
+    %article.profile
+      %header.profile-title
+        %h1= @public_service.title
 
-    %hr
+      %hr
 
-    .profile-details
-      %dl
-        .profile-definition
-          %dt= PublicService.human_attribute_name(:slug)
-          %dd= @public_service.slug
+      .profile-details
+        %dl
+          .profile-definition
+            %dt= PublicService.human_attribute_name(:slug)
+            %dd= @public_service.slug
 
-        .profile-definition
-          %dt= PublicService.human_attribute_name(:description)
-          %dd= @public_service.description
+          .profile-definition
+            %dt= PublicService.human_attribute_name(:description)
+            %dd= @public_service.description
 
-        .profile-definition
-          %dt= PublicService.human_attribute_name(:postal_address)
-          %dd= @public_service.postal_address
+          .profile-definition
+            %dt= PublicService.human_attribute_name(:postal_address)
+            %dd= @public_service.postal_address
 
-        .profile-definition
-          %dt= PublicService.human_attribute_name(:email)
-          %dd= @public_service.email
+          .profile-definition
+            %dt= PublicService.human_attribute_name(:email)
+            %dd= @public_service.email
 
-        .profile-definition
-          %dt= PublicService.human_attribute_name(:phone)
-          %dd= @public_service.phone
+          .profile-definition
+            %dt= PublicService.human_attribute_name(:phone)
+            %dd= @public_service.phone
 
-        .profile-definition
-          %dt= PublicService.human_attribute_name(:url)
-          %dd= @public_service.url
+          .profile-definition
+            %dt= PublicService.human_attribute_name(:url)
+            %dd= @public_service.url
 
-        .profile-definition
-          %dt= PublicService.human_attribute_name(:social_rights)
-          %dd= @public_service.social_right_names
+          .profile-definition
+            %dt= PublicService.human_attribute_name(:social_rights)
+            %dd= @public_service.social_right_names
 
-        .profile-definition
-          %dt= PublicService.human_attribute_name(:updated_at)
-          %dd= @public_service.updated_at
+          .profile-definition
+            %dt= PublicService.human_attribute_name(:updated_at)
+            %dd= @public_service.updated_at
 
-    .profile-actions
-      = link_to(t('.edit'), edit_agents_public_service_path(@public_service), class: 'btn btn-edit')
-      = link_to(t('.back'), agents_public_services_path, class: 'btn btn-cancel')
+      .profile-actions
+        = link_to(t('.edit'), edit_agents_public_service_path(@public_service), class: 'btn btn-edit')
+        = link_to(t('.back'), agents_public_services_path, class: 'btn btn-cancel')
