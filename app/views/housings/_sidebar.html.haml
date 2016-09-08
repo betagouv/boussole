@@ -1,17 +1,54 @@
 -# coding: utf-8
 
 %aside.l-sidebar
-  %section.jumbotron
-    %legend Être contacté·e
+  / %section.jumbotron
+  /   %legend Être contacté·e
 
-    Souhaites-tu que cette ou ce professionnel·le te contacte suite à ta recherche ?
+  /   Souhaites-tu que cette ou ce professionnel·le te contacte suite à ta recherche ?
+  /   %br
+  /   %br
+
+  /   = simple_form_for(Contact.new, url: contact_path, method: :post, wrapper: :vertical_form) do |f|
+  /     .form-inputs
+  /       = f.input_field :email_or_phone, placeholder: 'Email ou téléphone'
+
+  /     %br
+  /     .form-actions
+  /       = link_to('Envoyer !', '#', class: 'btn btn-new')
+
+  %article.summary
+    %header.summary-header
+      %h1= t('.heading')
+
+    %hr
     %br
-    %br
 
-    = simple_form_for(Contact.new, url: contact_path, method: :post, wrapper: :vertical_form) do |f|
-      .form-inputs
-        = f.input_field :email_or_phone, placeholder: 'Email ou téléphone'
+    .summary-details
+      %dl
+        .summary-definition
+          %dt= t(:duration, scope: 'activerecord.attributes.housing')
+          %dd= @housing.duration
 
-      %br
-      .form-actions
-        = link_to('Envoyer !', '#', class: 'btn btn-new')
+        .summary-definition
+          %dt= t(:housing_city, scope: 'activerecord.attributes.housing')
+          %dd= @housing.housing_city
+
+        .summary-definition
+          %dt= t(:resources, scope: 'activerecord.attributes.housing')
+          %dd= number_to_currency(@housing.resources, unit: '€', precision: 0)
+
+        .summary-definition
+          %dt= t(:current_status, scope: 'activerecord.attributes.housing')
+          %dd= @housing.current_status
+
+        .summary-definition
+          %dt= t(:next_status, scope: 'activerecord.attributes.housing')
+          %dd= @housing.next_status ? 'Oui' : 'Non'
+
+        .summary-definition
+          %dt= t(:residence_city, scope: 'activerecord.attributes.housing')
+          %dd= @housing.residence_city
+
+        .summary-definition
+          %dt= t(:age, scope: 'activerecord.attributes.housing')
+          %dd= @housing.age

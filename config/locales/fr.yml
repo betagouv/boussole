@@ -80,6 +80,12 @@ fr:
       service_offerings: Offres de service
       measures: Dispositifs
 
+  housings:
+    results:
+      heading: Resultats
+    sidebar:
+      heading: Récapitulatif
+
   agents:
     public_services:
       index:
