@@ -1,54 +1,60 @@
 -# coding: utf-8
 
 .l-content.l-with-sidebar
-  - @results.each do |public_service|
-    %section.text-center.jumbotron
-      %address
-        %h3= public_service['title']
-        / = public_service['description']
-        = public_service['postal_address']
+  %section.results
+    %header.results-header
+      %h1= t('.heading')
 
-        - if public_service['phone']
-          %br
-          %abbr{ title: 'Téléphone' }
-            T :
-            = public_service['phone']
+    %hr
 
-        - if public_service['email']
-          %br
-          %abbr{ title: 'Email' }
-            E :
-            = mail_to(public_service['email'])
+    - @results.each do |public_service|
+      %article.text-center.jumbotron
+        %address
+          %h3= public_service['title']
+          / = public_service['description']
+          = public_service['postal_address']
 
-        - if public_service['url']
-          %br
-          %abbr{ title: 'Site' }
-            W :
-            = link_to(public_service['url'], public_service['url'])
-
-      %h5 Un·e professionnel·le est disponible pour t'aider à :
-
-      .row
-        - public_service['offer'].each do |service|
-          .col-md-4
+          - if public_service['phone']
             %br
+            %abbr{ title: 'Téléphone' }
+              T :
+              = public_service['phone']
+
+          - if public_service['email']
             %br
-            .small
-              = service
+            %abbr{ title: 'Email' }
+              E :
+              = mail_to(public_service['email'])
 
-      - if public_service[:measures].presence
+          - if public_service['url']
+            %br
+            %abbr{ title: 'Site' }
+              W :
+              = link_to(public_service['url'], public_service['url'])
 
-        %h5 
-        %h5 Nous avons également détecté pour toi :
+        %h5 Un·e professionnel·le est disponible pour t'aider à :
 
-        - public_service[:measures].each do |mesure|
-          %br
-          %section.text-center
-            %address
-              %h4= mesure['title']
-              / = mesure['description']
-              - if mesure['url']
-                %br
-                %abbr{ title: 'Site' }
-                  W :
-                  = link_to(mesure['url'], mesure['url'])
+        .row
+          - public_service['offer'].each do |service|
+            .col-md-4
+              %br
+              %br
+              .small
+                = service
+
+        - if public_service[:measures].presence
+
+          %h5 
+          %h5 Nous avons également détecté pour toi :
+
+          - public_service[:measures].each do |mesure|
+            %br
+            %section.text-center
+              %address
+                %h4= mesure['title']
+                / = mesure['description']
+                - if mesure['url']
+                  %br
+                  %abbr{ title: 'Site' }
+                    W :
+                    = link_to(mesure['url'], mesure['url'])
