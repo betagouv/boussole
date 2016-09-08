@@ -69,6 +69,7 @@ situation %(
     scenario do
       click_link('Afficher')
 
+      expect(page).to have_content('Plate-forme de décrochage')
       expect(page).to have_content('Retour à la formation initiale')
     end
   end

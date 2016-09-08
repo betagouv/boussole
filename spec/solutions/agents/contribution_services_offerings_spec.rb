@@ -73,6 +73,7 @@ situation %(
     scenario do
       click_link('Afficher')
 
+      expect(page).to have_content('Services Intégrés de l’Accueil et de l’Orientation')
       expect(page).to have_content("Trouver une solution de logement d'urgence")
     end
   end
