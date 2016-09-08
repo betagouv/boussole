@@ -1,27 +1,28 @@
 -# coding: utf-8
 
-.l-content-narrow
-  %section.form
-    %legend Ton profil
+.l-container-narrow
+  .l-content
+    %section.form
+      %legend Ton profil
 
-    = simple_form_for(@housing, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
-      = f.error_notification
+      = simple_form_for(@housing, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
+        = f.error_notification
 
-      = f.input :current_status, label: "Quelle est ta situation aujourd'hui ?",
-                                 include_blank: false,
-                                 prompt: 'Sélectionne une option',
-                                 collection: STATUSES,
-                                 label_method: :to_s,
-                                 value_method: :to_s,
-                                 as: :select
+        = f.input :current_status, label: "Quelle est ta situation aujourd'hui ?",
+                                   include_blank: false,
+                                   prompt: 'Sélectionne une option',
+                                   collection: STATUSES,
+                                   label_method: :to_s,
+                                   value_method: :to_s,
+                                   as: :select
 
-      = f.input :next_status, label: 'Seras-tu étudiant·e à la rentrée ?'
+        = f.input :next_status, label: 'Seras-tu étudiant·e à la rentrée ?'
 
-      = f.input :residence_city, label: 'Lieu de résidence actuel',
-                                 collection: CITIES.dup.push('Sans domicile fixe'),
-                                 include_blank: false,
-                                 input_html: { rel: 'autocomplete' }
+        = f.input :residence_city, label: 'Lieu de résidence actuel',
+                                   collection: CITIES.dup.push('Sans domicile fixe'),
+                                   include_blank: false,
+                                   input_html: { rel: 'autocomplete' }
 
-      = f.input :age, label: 'Tu as quel âge ?'
+        = f.input :age, label: 'Tu as quel âge ?'
 
-      = f.button :submit, 'Continuer', class: 'btn btn-new'
+        = f.button :submit, 'Continuer', class: 'btn btn-new'

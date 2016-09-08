@@ -1,20 +1,21 @@
 -# coding: utf-8
 
-.l-content-narrow
-  %section.profile-form
-    %h1= t('.heading')
+.l-container-narrow
+  .l-content
+    %section.profile-form
+      %h1= t('.heading')
 
-    %hr
+      %hr
 
-    = simple_form_for([:agents, @measure], wrapper: :vertical_form) do |f|
-      = f.error_notification
+      = simple_form_for([:agents, @measure], wrapper: :vertical_form) do |f|
+        = f.error_notification
 
-      = f.association(:public_service)
-      = f.input(:title)
-      = f.input(:description)
-      = f.input(:url)
-      = f.association(:social_rights)
+        = f.association(:public_service)
+        = f.input(:title)
+        = f.input(:description)
+        = f.input(:url)
+        = f.association(:social_rights)
 
-      = f.button(:submit, t('.create'), class: 'btn btn-edit')
-      = link_to(t('.back'), agents_measures_path, class: 'btn btn-cancel')
+        = f.button(:submit, t('.create'), class: 'btn btn-edit')
+        = link_to(t('.back'), agents_measures_path, class: 'btn btn-cancel')
 

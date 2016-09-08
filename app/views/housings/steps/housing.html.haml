@@ -1,28 +1,29 @@
 -# coding: utf-8
 
-.l-content-narrow
-  %section.form
-    %legend Ta recherche
+.l-container-narrow
+  .l-content
+    %section.form
+      %legend Ta recherche
 
-    = simple_form_for(@housing, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
-      = f.error_notification
+      = simple_form_for(@housing, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
+        = f.error_notification
 
-      = f.input :duration, label: 'Pour combien de temps ?',
-                           include_blank: false,
-                           prompt: 'Sélectionne une option',
-                           collection: DURATIONS,
-                           label_method: :to_s,
-                           value_method: :to_s,
-                           as: :select
+        = f.input :duration, label: 'Pour combien de temps ?',
+                             include_blank: false,
+                             prompt: 'Sélectionne une option',
+                             collection: DURATIONS,
+                             label_method: :to_s,
+                             value_method: :to_s,
+                             as: :select
 
-      = f.input :housing_city, label: 'Où souhaites-tu te loger ?',
-                               collection: CITIES,
-                               include_blank: false,
-                               input_html: { rel: 'autocomplete' }
+        = f.input :housing_city, label: 'Où souhaites-tu te loger ?',
+                                 collection: CITIES,
+                                 include_blank: false,
+                                 input_html: { rel: 'autocomplete' }
 
-      = f.input :resources, label: 'Quel est ton budget mensuel pour te loger (€) ?' do
-        .input-group
-          = f.input_field :resources, class: 'form-control'
-          %span.input-group-addon €
+        = f.input :resources, label: 'Quel est ton budget mensuel pour te loger (€) ?' do
+          .input-group
+            = f.input_field :resources, class: 'form-control'
+            %span.input-group-addon €
 
-      = f.button :submit, 'Continuer', class: 'btn btn-new'
+        = f.button :submit, 'Continuer', class: 'btn btn-new'
