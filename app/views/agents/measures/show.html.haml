@@ -11,7 +11,7 @@
       %dl
         .profile-definition
           %dt= t(:public_service, scope: 'activerecord.attributes.measure')
-          %dd= @measure.public_service.try(:name)
+          %dd= @measure.public_service.try(:title)
 
         .profile-definition
           %dt= t(:description, scope: 'activerecord.attributes.measure')
