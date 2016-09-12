@@ -25,10 +25,6 @@
 .result-header {
   font-size: .65em;
 
-  h2 {
-    height: 3.25em;
-  }
-
   p {
     text-transform: uppercase;
   }
@@ -37,6 +33,7 @@
 .result-content {
   font-size: .8em;
   font-style: italic;
+  height: 10em;
   padding-left: .5em;
   padding-right: .5em;
 }
@@ -46,7 +43,7 @@
 
   a {
     color: $btn-default-color;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     width: 100%;
   }
 }

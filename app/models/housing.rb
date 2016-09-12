@@ -37,7 +37,7 @@ class Housing < ApplicationRecord
   attr_accessor :current_step
 
   with_options if: -> { required_for_step?(:housing) } do |step|
-    step.validates 'duration',
+    step.validates :duration,
                    presence: true,
                    inclusion: { in: DURATIONS }
 
@@ -45,11 +45,11 @@ class Housing < ApplicationRecord
   end
 
   with_options if: -> { required_for_step?(:profile) } do |step|
-    step.validates 'current_status',
+    step.validates :current_status,
                    presence: true,
                    inclusion: { in: STATUSES }
 
-    step.validates 'age', presence: true
+    step.validates :age, presence: true
   end
 
   private
