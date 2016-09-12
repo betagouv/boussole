@@ -81,10 +81,11 @@ fr:
       measures: Dispositifs
 
   housings:
+    show:
     results:
-      heading: Resultats
+      heading: Tes resultats
     sidebar:
-      heading: Récapitulatif
+      heading: 'Récapitulatif'
 
   agents:
     public_services:
