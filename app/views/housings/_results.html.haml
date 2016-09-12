@@ -10,7 +10,7 @@
         %h2= t('.service_offerings')
 
       .result
-        = link_to(housing_action_path(@housing)) do
+        = link_to(action_housing_path(@housing)) do
           %article.result-card
             %header.result-header
               %h3 Trouver une chambre dans une résidence étudiante privée
@@ -25,7 +25,7 @@
               %address.result-address
 
             %footer.result-footer
-              = link_to('Découvrir', housing_action_path(@housing), class: 'btn btn-new')
+              = link_to('Découvrir', action_housing_path(@housing), class: 'btn btn-new')
 
       .result
         %a{ href: '#' }
