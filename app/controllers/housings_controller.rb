@@ -17,6 +17,10 @@ class HousingsController < ApplicationController
     load_results_for_caf
   end
 
+  def action
+    @housing = Housing.find(params[:id])
+  end
+
   # POST /projects
   def create
     @housing = Housing.new

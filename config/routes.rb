@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   resources :housings, only: %i(show create) do
     resources :steps, only: %i(show update), module: :housings
+
+    member { get :action }
   end
 
   resources :contacts, only: %i(show create)
