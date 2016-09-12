@@ -1,25 +1,11 @@
 -# coding: utf-8
 
 %aside.l-sidebar
-  / %section.jumbotron
-  /   %legend Être contacté·e
-
-  /   Souhaites-tu que cette ou ce professionnel·le te contacte suite à ta recherche ?
-  /   %br
-  /   %br
-
-  /   = simple_form_for(Contact.new, url: contact_path, method: :post, wrapper: :vertical_form) do |f|
-  /     .form-inputs
-  /       = f.input_field :email_or_phone, placeholder: 'Email ou téléphone'
-
-  /     %br
-  /     .form-actions
-  /       = link_to('Envoyer !', '#', class: 'btn btn-new')
-
   %article.summary
     %header.summary-header
       %h1= t('.heading')
 
+    -# TODO: Get rid of.
     %hr
     %br
 

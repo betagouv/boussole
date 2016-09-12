@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+.result {
+  @extend .col-md-4;
+  margin-top: 1.5em;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+
+.result-card {
+  background-color: transparentize($isabelline, .75);
+  border: transparentize($brand-primary, .75) solid .1em;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  &:hover {
+    border: transparentize($brand-primary, 1) solid .1em;
+    box-shadow: 0 0 .2em .1em $brand-primary;
+  }
+}
+
+.result-header {
+  font-size: .65em;
+
+  h2 {
+    height: 3.25em;
+  }
+
+  p {
+    text-transform: uppercase;
+  }
+}
+
+.result-content {
+  font-size: .8em;
+  font-style: italic;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.result-footer {
+  font-size: .8em;
+
+  a {
+    color: $btn-default-color;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+}
