@@ -1,33 +1,44 @@
 @charset "UTF-8";
 
 .result-list-header {
+  @extend .text-center;
+
   h2 {
-    display: table;
-    white-space: nowrap;
+    font-size: $font-size-h5;
     font-weight: $headings-font-weight * 2;
     text-transform: uppercase;
-    font-size: $font-size-h5;
+
+    @media (min-width: $screen-sm-min) {
+      display: table;
+      white-space: nowrap;
+    }
+
+
 
     &:before {
-      content: '';
-      display: table-cell;
-      position: relative;
-      top: 50%;
-      width: 50%;
-      background-position: right 1em top 50%;
-      background-repeat: no-repeat;
-      background-image: image-url("divider.png");
+      @media (min-width: $screen-sm-min) {
+        content: '';
+        display: table-cell;
+        position: relative;
+        top: 50%;
+        width: 50%;
+        background-position: right 1em top 50%;
+        background-repeat: no-repeat;
+        background-image: image-url("divider.png");
+      }
     }
 
     &:after {
-      content: '';
-      display: table-cell;
-      position: relative;
-      top: 50%;
-      width: 50%;
-      background-position: left 1em top 50%;
-      background-repeat: no-repeat;
-      background-image: image-url("divider.png");
+      @media (min-width: $screen-sm-min) {
+        content: '';
+        display: table-cell;
+        position: relative;
+        top: 50%;
+        width: 50%;
+        background-position: left 1em top 50%;
+        background-repeat: no-repeat;
+        background-image: image-url("divider.png");
+      }
     }
   }
 }
