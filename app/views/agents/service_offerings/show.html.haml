@@ -15,7 +15,7 @@
 
         .profile-definition
           %dt= ServiceOffering.human_attribute_name(:public_service)
-          %dd= @service_offering.public_service_title
+          %dd= link_to(@service_offering.public_service_title, agents_public_service_path(@service_offering.public_service))
 
         .profile-definition
           %dt= ServiceOffering.human_attribute_name(:description)
