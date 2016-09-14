@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160725203230) do
+ActiveRecord::Schema.define(version: 20160914104037) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,15 +42,15 @@ ActiveRecord::Schema.define(version: 20160725203230) do
   end
 
   create_table "housings", force: :cascade do |t|
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "duration"
     t.string   "current_status"
-    t.integer  "resources"
+    t.integer  "resources",      default: 0
     t.integer  "age"
     t.string   "housing_city"
     t.string   "residence_city"
-    t.boolean  "next_status"
+    t.boolean  "next_status",    default: false
   end
 
   create_table "measures", force: :cascade do |t|
@@ -107,8 +107,10 @@ ActiveRecord::Schema.define(version: 20160725203230) do
     t.string   "phone"
     t.string   "url"
     t.boolean  "external"
+    t.string   "code"
   end
 
+  add_index "service_offerings", ["code"], name: "index_service_offerings_on_code", using: :btree
   add_index "service_offerings", ["public_service_id"], name: "index_service_offerings_on_public_service_id", using: :btree
 
   create_table "social_rights", force: :cascade do |t|

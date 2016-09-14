@@ -72,6 +72,7 @@ module Agents
         .permit(
           id: Parameters.id,
           public_service_id: Parameters.id,
+          code: Parameters.string,
           title: Parameters.string,
           description: Parameters.string,
           postal_address: Parameters.string,

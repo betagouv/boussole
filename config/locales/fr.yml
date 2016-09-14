@@ -45,6 +45,7 @@ fr:
         measures: Dispositifs
         updated_at: Dernière actualisation
       service_offering:
+        code: Code
         title: Nom
         description: Description
         public_service: Acteur
