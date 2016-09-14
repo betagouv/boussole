@@ -1,0 +1,231 @@
+# *current_status*:: <tt>string</tt>
+  #  - 'Sans activité'
+  #  - 'Étudiant·e'
+  #  - 'Lycéen·ne'
+  #  - 'Salarié·e'
+  #  - 'En formation'
+  #  - 'Apprenti·e'
+  #  - 'Autre'
+# *resources*::      <tt>integer, default(0)</tt>
+# *age*::            <tt>integer</tt>
+# *housing_city*::   <tt>string</tt>
+# *residence_city*:: <tt>string</tt>
+# *next_status*::    <tt>boolean, default(FALSE)</tt>
+crij-centre-regional-d-information-jeunesse: # code  acteur A
+  decouvrir-les-solutions-logement-sur-ton-territoire: # code offre de service A
+    # scenarios
+    -
+      # conditions for each scenario
+      -
+        attribute: "duration" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "resources" # discriminant @see app/models/service_offering.rb
+        operator: ">=" # options are ==, >=, >, <, <=, in?
+        value: 150
+      -
+        attribute: "current_status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+
+bureau-d-accueil-au-logement-social-comal-soliha:
+  faire-une-demande-d-aide-au-financement-de-ton-logement-avec-le-conseil-departemental: # Les aides au financement du logement seraient plus pertinentes pour un utilisateur qui rechercheun emploi, une formation... qu'un logement
+    -
+      -
+        attribute: "duration"
+        operator: "==" # when we use de in? operator, value must be formated as below
+        value: "+ d'1 an"
+      -
+        attribute: "resources" # discriminant @see app/models/service_offering.rb
+        operator: ">=" # options are ==, >=, >, <, <=, in?
+        value: 500
+      -
+        attribute: "current_status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+
+  faire-une-demande-de-logement-social:
+    -
+      -
+        attribute: "duration"
+        operator: "==" # when we use de in? operator, value must be formated as below
+        value: "+ d'1 an"
+      -
+        attribute: "resources" # discriminant @see app/models/service_offering.rb
+        operator: ">=" # options are ==, >=, >, <, <=, in?
+        value: 500
+      -
+        attribute: "current_status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+
+foyer-de-jeunes-travailleurs-fjt-leon-paindavoine:
+  favoriser-la-rencontre-et-le-partage-avec-d-autres-jeunes:
+    -
+      -
+        attribute: "duration"
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "resources" # discriminant @see app/models/service_offering.rb
+        operator: ">=" # options are ==, >=, >, <, <=, in?
+        value: 300
+      -
+        attribute: "current_status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Étudiant·e"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+
+caisse-d-allocations-familiales-caf:
+  simuler-le-montant-de-ton-aide-au-logement-2271b89b-1231-4a94-8ec4-e94813ed4694:
+    -
+      -
+        attribute: "duration"
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+
+espace-metiers:
+  t-accompagner-pour-trouver-une-solution-d-hebergement-ou-de-logement:
+    -
+      -
+        attribute: "duration"
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "resources" # discriminant @see app/models/service_offering.rb
+        operator: ">=" # options are ==, >=, >, <, <=, in?
+        value: 300
+      -
+        attribute: "current_status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Étudiant·e"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+
+crous-reims-centre-regional-des-oeuvres-universitaires-et-scolaires-acal:
+  t-aider-a-obtenir-une-aide-financiere-ponctuelle-en-cas-de-difficulte-a-payer-ton-loyer: # Les aides au financement du logement seraient plus pertinentes pour un utilisateur qui rechercheun emploi, une formation... qu'un logement
+    -
+      -
+        attribute: "duration"
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "resources" # discriminant @see app/models/service_offering.rb
+        operator: "<=" # options are ==, >=, >, <, <=, in?
+        value: 1000
+      -
+        attribute: "current_status" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Étudiant·e"
+
+  t-informer-sur-le-logement-en-residence-universitaire-9bcb5319-b3de-46c0-be0b-56330a900381:
+    -
+      -
+        attribute: "duration"
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "resources" # discriminant @see app/models/service_offering.rb
+        operator: "<=" # options are ==, >=, >, <, <=, in?
+        value: 800
+      -
+        attribute: "current_status" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Étudiant·e"
+
+ensemble2generations:
+  trouver-une-chambre-chez-l-habitant:
+    -
+      -
+        attribute: "duration"
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "resources" # discriminant @see app/models/service_offering.rb
+        operator: ">=" # options are ==, >=, >, <, <=, in?
+        value: 300
+      -
+        attribute: "current_status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Étudiant·e"
+          - "Sans activité"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+
+mutuelle-generale-des-etudiants-de-l-est-mgel:
+  trouver-une-chambre-dans-une-residence-etudiante-privee:
+    -
+      -
+        attribute: "duration"
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "resources" # discriminant @see app/models/service_offering.rb
+        operator: "<=" # options are ==, >=, >, <, <=, in?
+        value: 700
+      -
+        attribute: "current_status" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Étudiant·e"
+
+services-integres-de-l-accueil-et-de-l-orientation:
+  trouver-une-solution-de-logement-d-urgence:
+    -
+      -
+        attribute: "duration"
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Cette nuit"
+
+centre-international-de-sejour-cis:
+  trouver-un-logement-de-courte-duree:
+    -
+      -
+        attribute: "duration"
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Cette nuit"
+          - "Quelques mois"

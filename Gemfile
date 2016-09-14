@@ -67,6 +67,7 @@ group :development do
   gem 'scss_lint', require: false
   gem 'spring-commands-rspec'
   gem 'web-console'
+  gem 'yaml-lint', require: false
 end
 
 group :test do
