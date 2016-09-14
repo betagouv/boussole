@@ -34,6 +34,7 @@ fr:
         measures: Dispositifs
         updated_at: Dernière actualisation
       public_service:
+        slug: Code
         title: Nom
         description: Description
         postal_address: Adresse
