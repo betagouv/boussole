@@ -18,24 +18,29 @@
 #  phone             :string
 #  url               :string
 #  external          :boolean
-#  code              :string
+#  slug              :string
 #
 # Indexes
 #
-#  index_service_offerings_on_code               (code)
 #  index_service_offerings_on_public_service_id  (public_service_id)
+#  index_service_offerings_on_slug               (slug) UNIQUE
 #
 # Foreign Keys
 #
 #  fk_rails_0e3762aded  (public_service_id => public_services.id)
 #
 class ServiceOffering < ApplicationRecord
+  extend FriendlyId
+
+  friendly_id :title, use: :slugged
+
   belongs_to :public_service, inverse_of: :service_offerings
 
   has_many :exercise_scopes, as: :exercisable, dependent: :destroy
   has_many :social_rights, through: :exercise_scopes
 
   validates :title, :public_service, presence: true
+  validates :slug, uniqueness: true
 
   #
   # Maps {SocialRight} names and joins them.
