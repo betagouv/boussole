@@ -30,7 +30,7 @@ module Agents
       if @public_service.save
         redirect_to(
           agents_public_service_url(@public_service),
-          notice: t(:notice, scope: 'agents.public_services.create')
+          notice: t(:create, scope: 'actioncontroller.notice', model: PublicService.model_name.human)
         )
       else
         render(:new)
@@ -42,7 +42,7 @@ module Agents
       if @public_service.update(public_service_params)
         redirect_to(
           agents_public_service_url(@public_service),
-          notice: t(:notice, scope: 'agents.public_services.update')
+          notice: t(:update, scope: 'actioncontroller.notice', model: PublicService.model_name.human)
         )
       else
         render(:edit)
@@ -54,7 +54,7 @@ module Agents
       @public_service.destroy
       redirect_to(
         agents_public_services_url,
-        notice: t(:notice, scope: 'agents.public_services.destroy')
+        notice: t(:destroy, scope: 'actioncontroller.notice', model: PublicService.model_name.human)
       )
     end
 

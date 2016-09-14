@@ -30,7 +30,7 @@ module Agents
       if @measure.save
         redirect_to(
           agents_measure_url(@measure),
-          notice: t(:notice, scope: 'agents.measures.create')
+          notice: t(:create, scope: 'actioncontroller.notice', model: Measure.model_name.human)
         )
       else
         render(:new)
@@ -42,7 +42,7 @@ module Agents
       if @measure.update(measure_params)
         redirect_to(
           agents_measure_url(@measure),
-          notice: t(:notice, scope: 'agents.measures.update')
+          notice: t(:update, scope: 'actioncontroller.notice', model: Measure.model_name.human)
         )
       else
         render(:edit)
@@ -54,7 +54,7 @@ module Agents
       @measure.destroy
       redirect_to(
         agents_measures_url,
-        notice: t(:notice, scope: 'agents.measures.destroy')
+        notice: t(:destroy, scope: 'actioncontroller.notice', model: Measure.model_name.human)
       )
     end
 

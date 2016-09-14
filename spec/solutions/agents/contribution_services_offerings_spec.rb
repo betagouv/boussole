@@ -26,9 +26,8 @@ situation %(
   end
 
   background do
-    # The agent navigates towards the service offerings space
-    visit('/agents')
-    click_link('Offres de service')
+    # The agent is at the service offering's space
+    visit('/agents/service_offerings')
   end
 
   solution('Create a service offering') do
@@ -37,7 +36,6 @@ situation %(
 
       within('.profile-form') do
         select('Services Intégrés de l’Accueil et de l’Orientation', from: 'Acteur')
-        fill_in('Code', with: 'reims-siao-dslt')
         fill_in('Nom', with: 'Découvrir les solutions logement sur ton territoire')
         fill_in('Description', with: 'Découvrir les solutions logement sur ton territoire')
         fill_in('Adresse', with: '50 rue de la Dalle, 71234 Paname')
@@ -50,7 +48,7 @@ situation %(
         click_button('Créer')
       end
 
-      expect(page).to have_content("L'offre de service a été créée avec succès")
+      expect(page).to have_content('Offre de service créé·e avec succès')
     end
   end
 
@@ -74,8 +72,9 @@ situation %(
     scenario do
       click_link('Afficher')
 
-      expect(page).to have_content('Services Intégrés de l’Accueil et de l’Orientation')
       expect(page).to have_content("Trouver une solution de logement d'urgence")
+      expect(page).to have_content('trouver-une-solution-de-logement-d-urgence')
+      expect(page).to have_content('Services Intégrés de l’Accueil et de l’Orientation')
     end
   end
 
@@ -89,7 +88,8 @@ situation %(
         click_button('Modifier')
       end
 
-      expect(page).to have_content("L'offre de service a été modifiée avec succès")
+      expect(page).to have_content('Offre de service modifié·e avec succès')
+      expect(page).to have_content('trouver-une-solution-de-logement-d-urgence')
     end
   end
 
@@ -99,7 +99,7 @@ situation %(
         click_link('Supprimer')
       end
 
-      expect(page).to have_content("L'offre de service a été supprimée avec succès")
+      expect(page).to have_content('Offre de service supprimé·e avec succès')
     end
   end
 end

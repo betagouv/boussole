@@ -30,7 +30,7 @@ module Agents
       if @service_offering.save
         redirect_to(
           agents_service_offering_url(@service_offering),
-          notice: t(:notice, scope: 'agents.service_offerings.create')
+          notice: t(:create, scope: 'actioncontroller.notice', model: ServiceOffering.model_name.human)
         )
       else
         render(:new)
@@ -42,7 +42,7 @@ module Agents
       if @service_offering.update(service_offering_params)
         redirect_to(
           agents_service_offering_url(@service_offering),
-          notice: t(:notice, scope: 'agents.service_offerings.update')
+          notice: t(:update, scope: 'actioncontroller.notice', model: ServiceOffering.model_name.human)
         )
       else
         render(:edit)
@@ -54,7 +54,7 @@ module Agents
       @service_offering.destroy
       redirect_to(
         agents_service_offerings_url,
-        notice: t(:notice, scope: 'agents.service_offerings.destroy')
+        notice: t(:destroy, scope: 'actioncontroller.notice', model: ServiceOffering.model_name.human)
       )
     end
 
@@ -71,9 +71,8 @@ module Agents
         .require(:service_offering)
         .permit(
           id: Parameters.id,
-          public_service_id: Parameters.id,
-          code: Parameters.string,
           title: Parameters.string,
+          public_service_id: Parameters.id,
           description: Parameters.string,
           postal_address: Parameters.string,
           email: Parameters.string,
@@ -85,7 +84,7 @@ module Agents
     end
 
     def service_offering_scope
-      ServiceOffering
+      ServiceOffering.friendly
     end
   end
 end

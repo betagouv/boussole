@@ -18,9 +18,8 @@ situation %(
   given!(:public_service) { create(:public_service, title: 'Pôle emploi', social_rights: [social_right]) }
 
   background do
-    # The agent navigates towards the public services space
-    visit('/agents')
-    click_link('Acteurs')
+    # The agent is at the public service's space
+    visit('/agents/public_services')
   end
 
   solution('Create a public service') do
@@ -39,7 +38,7 @@ situation %(
         click_button('Créer')
       end
 
-      expect(page).to have_content("L'acteur a été créé avec succès")
+      expect(page).to have_content('Acteur créé·e avec succès')
     end
   end
 
@@ -70,7 +69,7 @@ situation %(
         click_button('Modifier')
       end
 
-      expect(page).to have_content("L'acteur a été modifié avec succès")
+      expect(page).to have_content('Acteur modifié·e avec succès')
     end
   end
 
@@ -80,7 +79,7 @@ situation %(
         click_link('Supprimer')
       end
 
-      expect(page).to have_content("L'acteur a été supprimé avec succès")
+      expect(page).to have_content('Acteur supprimé·e avec succès')
     end
   end
 end
