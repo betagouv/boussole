@@ -28,9 +28,8 @@ situation %(
   end
 
   background do
-    # The agent navigates towards the measures space
-    visit('/agents')
-    click_link('Dispositifs')
+    # The agent is at the measure's space
+    visit('/agents/measures')
   end
 
   solution('Create a measure') do
@@ -47,7 +46,7 @@ situation %(
         click_button('Créer')
       end
 
-      expect(page).to have_content('Le dispositif a été créé avec succès')
+      expect(page).to have_content('Dispositif créé·e avec succès')
     end
   end
 
@@ -84,7 +83,7 @@ situation %(
         click_button('Modifier')
       end
 
-      expect(page).to have_content('Le dispositif a été modifié avec succès')
+      expect(page).to have_content('Dispositif modifié·e avec succès')
     end
   end
 
@@ -94,7 +93,7 @@ situation %(
         click_link('Supprimer')
       end
 
-      expect(page).to have_content('Le dispositif a été supprimé avec succès')
+      expect(page).to have_content('Dispositif supprimé·e avec succès')
     end
   end
 end

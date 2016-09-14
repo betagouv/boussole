@@ -14,9 +14,9 @@
       %table
         %thead
           %tr
-            %th= t(:title, scope: 'activerecord.attributes.service_offering')
-            %th= t(:public_service, scope: 'activerecord.attributes.service_offering')
-            %th= t(:social_rights, scope: 'activerecord.attributes.service_offering')
+            %th= ServiceOffering.human_attribute_name(:title)
+            %th= ServiceOffering.human_attribute_name(:public_service)
+            %th= ServiceOffering.human_attribute_name(:social_rights)
             %th
             %th
             %th

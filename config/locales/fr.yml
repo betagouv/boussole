@@ -45,7 +45,7 @@ fr:
         measures: Dispositifs
         updated_at: Dernière actualisation
       service_offering:
-        code: Code
+        slug: Code
         title: Nom
         description: Description
         public_service: Acteur
@@ -63,6 +63,12 @@ fr:
         public_service: Acteur
         social_rights: Thématiques
         updated_at: Dernière actualisation
+
+  actioncontroller:
+    notice:
+      create: '%{model} créé·e avec succès'
+      update: '%{model} modifié·e avec succès'
+      destroy: '%{model} supprimé·e avec succès'
 
   layouts:
     application:
@@ -89,17 +95,11 @@ fr:
         heading: Nouvel acteur
         create: Créer
         back: Annuler
-      create:
-        notice: L'acteur a été créé avec succès
       edit:
         heading: Mettre à jour l'acteur
         update: Modifier
         show: Afficher
         back: Annuler
-      update:
-        notice: L'acteur a été modifié avec succès
-      destroy:
-        notice: L'acteur a été supprimé avec succès
 
     service_offerings:
       index:
@@ -116,17 +116,12 @@ fr:
         heading: Nouvelle offre de service
         create: Créer
         back: Annuler
-      create:
-        notice: L'offre de service a été créée avec succès
       edit:
         heading: Mettre à jour l'offre de service
         update: Modifier
         show: Afficher
         back: Annuler
-      update:
-        notice: L'offre de service a été modifiée avec succès
-      destroy:
-        notice: L'offre de service a été supprimée avec succès
+
     measures:
       index:
         heading: Liste des dispositifs à Reims
@@ -142,14 +137,8 @@ fr:
         heading: Nouveau dispositif
         create: Créer
         back: Annuler
-      create:
-        notice: Le dispositif a été créé avec succès
       edit:
         heading: Mettre à jour le dispositif
         update: Modifier
         show: Afficher
         back: Annuler
-      update:
-        notice: Le dispositif a été modifié avec succès
-      destroy:
-        notice: Le dispositif a été supprimé avec succès

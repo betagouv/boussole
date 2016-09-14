@@ -10,43 +10,44 @@
     .profile-details
       %dl
         .profile-definition
-          %dt= t(:public_service, scope: 'activerecord.attributes.service_offering')
+          %dt= ServiceOffering.human_attribute_name(:slug)
+          %dd= @service_offering.slug
+
+        .profile-definition
+          %dt= ServiceOffering.human_attribute_name(:public_service)
           %dd= @service_offering.public_service.try(:title)
 
         .profile-definition
-          %dt= t(:code, scope: 'activerecord.attributes.service_offering')
-          %dd= @service_offering.code
-
-        .profile-definition
-          %dt= t(:description, scope: 'activerecord.attributes.service_offering')
+          %dt= ServiceOffering.human_attribute_name(:description)
           %dd= @service_offering.description
 
         .profile-definition
-          %dt= t(:postal_address, scope: 'activerecord.attributes.service_offering')
+          %dt= ServiceOffering.human_attribute_name(:postal_address)
           %dd= @service_offering.postal_address
 
         .profile-definition
-          %dt= t(:email, scope: 'activerecord.attributes.service_offering')
+          %dt= ServiceOffering.human_attribute_name(:email)
           %dd= @service_offering.email
 
         .profile-definition
-          %dt= t(:phone, scope: 'activerecord.attributes.service_offering')
+          %dt= ServiceOffering.human_attribute_name(:phone)
           %dd= @service_offering.phone
 
         .profile-definition
-          %dt= t(:url, scope: 'activerecord.attributes.service_offering')
+          %dt= ServiceOffering.human_attribute_name(:url)
           %dd= @service_offering.url
 
+        -# TODO: Localise oui/non
         .profile-definition
-          %dt= t(:external, scope: 'activerecord.attributes.service_offering')
+          %dt= ServiceOffering.human_attribute_name(:external)
           %dd= @service_offering.external ? 'Oui' : 'Non'
 
         .profile-definition
-          %dt= t(:social_rights, scope: 'activerecord.attributes.service_offering')
+          %dt= ServiceOffering.human_attribute_name(:social_rights)
           %dd= @service_offering.social_right_names
 
         .profile-definition
-          %dt= t(:updated_at, scope: 'activerecord.attributes.service_offering')
+          %dt= ServiceOffering.human_attribute_name(:updated_at)
           %dd= @service_offering.updated_at
 
     .profile-actions
