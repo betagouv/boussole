@@ -21,7 +21,7 @@ if Rails.env.development?
       'simple_indexes'          => 'false',
       'model_dir'               => 'app/models',
       'root_dir'                => '',
-      'include_version'         => 'false',
+      'include_version'         => 'true',
       'require'                 => '',
       'exclude_tests'           => 'false',
       'exclude_fixtures'        => 'false',
@@ -36,14 +36,14 @@ if Rails.env.development?
       'ignore_unknown_models'   => 'false',
       'hide_limit_column_types' => 'integer,boolean',
       'skip_on_db_migrate'      => 'false',
-      'format_bare'             => 'true',
-      'format_rdoc'             => 'false',
+      'format_bare'             => 'false',
+      'format_rdoc'             => 'true',
       'format_markdown'         => 'false',
       'sort'                    => 'false',
       'force'                   => 'false',
       'trace'                   => 'false',
-      'wrapper_open'            => nil,
-      'wrapper_close'           => nil
+      'wrapper_open'            => '#',
+      'wrapper_close'           => '#'
     )
   end
 

@@ -10,31 +10,35 @@
     .profile-details
       %dl
         .profile-definition
-          %dt= t(:description, scope: 'activerecord.attributes.public_service')
+          %dt= PublicService.human_attribute_name(:slug)
+          %dd= @public_service.slug
+
+        .profile-definition
+          %dt= PublicService.human_attribute_name(:description)
           %dd= @public_service.description
 
         .profile-definition
-          %dt= t(:postal_address, scope: 'activerecord.attributes.public_service')
+          %dt= PublicService.human_attribute_name(:postal_address)
           %dd= @public_service.postal_address
 
         .profile-definition
-          %dt= t(:email, scope: 'activerecord.attributes.public_service')
+          %dt= PublicService.human_attribute_name(:email)
           %dd= @public_service.email
 
         .profile-definition
-          %dt= t(:phone, scope: 'activerecord.attributes.public_service')
+          %dt= PublicService.human_attribute_name(:phone)
           %dd= @public_service.phone
 
         .profile-definition
-          %dt= t(:url, scope: 'activerecord.attributes.public_service')
+          %dt= PublicService.human_attribute_name(:url)
           %dd= @public_service.url
 
         .profile-definition
-          %dt= t(:social_rights, scope: 'activerecord.attributes.public_service')
+          %dt= PublicService.human_attribute_name(:social_rights)
           %dd= @public_service.social_right_names
 
         .profile-definition
-          %dt= t(:updated_at, scope: 'activerecord.attributes.public_service')
+          %dt= PublicService.human_attribute_name(:updated_at)
           %dd= @public_service.updated_at
 
     .profile-actions

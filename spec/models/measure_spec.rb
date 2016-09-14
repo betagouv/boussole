@@ -15,4 +15,8 @@ RSpec.describe Measure, type: :model do
       measure.social_rights << social_right
     }.to change { measure.social_rights.count }.by(1)
   end
+
+  it 'delegates :title to :public_service' do
+    expect(measure.public_service_title).to be_nil
+  end
 end

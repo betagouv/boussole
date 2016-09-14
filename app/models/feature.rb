@@ -1,17 +1,24 @@
 # encoding: utf-8
 # frozen_string_literal: true
+
 #
 # TODO: Add documentation.
 #
+
+#
 # == Schema Information
+# Schema version: 20160914121308
 #
 # Table name: features
 #
-#  id         :integer          not null, primary key
-#  key        :string           not null
-#  enabled    :boolean          default(FALSE), not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+# *id*::         <tt>integer, not null, primary key</tt>
+# *key*::        <tt>string, not null</tt>
+# *enabled*::    <tt>boolean, default(FALSE), not null</tt>
+# *created_at*:: <tt>datetime, not null</tt>
+# *updated_at*:: <tt>datetime, not null</tt>
+#--
+# == Schema Information End
+#++
 #
 class Feature < ApplicationRecord
   extend Flip::Declarable

@@ -10,23 +10,23 @@
     .profile-details
       %dl
         .profile-definition
-          %dt= t(:public_service, scope: 'activerecord.attributes.measure')
-          %dd= @measure.public_service.try(:title)
+          %dt= Measure.human_attribute_name(:public_service)
+          %dd= @measure.public_service_title
 
         .profile-definition
-          %dt= t(:description, scope: 'activerecord.attributes.measure')
+          %dt= Measure.human_attribute_name(:description)
           %dd= @measure.description
 
         .profile-definition
-          %dt= t(:url, scope: 'activerecord.attributes.measure')
+          %dt= Measure.human_attribute_name(:url)
           %dd= @measure.url
 
         .profile-definition
-          %dt= t(:social_rights, scope: 'activerecord.attributes.measure')
+          %dt= Measure.human_attribute_name(:social_rights)
           %dd= @measure.social_right_names
 
         .profile-definition
-          %dt= t(:updated_at, scope: 'activerecord.attributes.measure')
+          %dt= Measure.human_attribute_name(:updated_at)
           %dd= @measure.updated_at
 
     .profile-actions

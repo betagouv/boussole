@@ -1,31 +1,38 @@
 # encoding: utf-8
 # frozen_string_literal: true
+
 #
 # TODO: Add documentation.
 #
+
+#
 # == Schema Information
+# Schema version: 20160914121308
 #
 # Table name: projects
 #
-#  id         :integer          not null, primary key
-#  knowledge  :string
-#  age        :integer
-#  status     :string
-#  last_class :string
-#  city       :string
-#  handicap   :boolean
-#  experience :boolean
-#  pe         :boolean
-#  ml         :boolean
-#  cap        :boolean
-#  apec       :boolean
-#  area       :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  domain     :string
-#  formation  :string
-#  degree     :string
-#  intention  :boolean
+# *id*::         <tt>integer, not null, primary key</tt>
+# *knowledge*::  <tt>string</tt>
+# *age*::        <tt>integer</tt>
+# *status*::     <tt>string</tt>
+# *last_class*:: <tt>string</tt>
+# *city*::       <tt>string</tt>
+# *handicap*::   <tt>boolean</tt>
+# *experience*:: <tt>boolean</tt>
+# *pe*::         <tt>boolean</tt>
+# *ml*::         <tt>boolean</tt>
+# *cap*::        <tt>boolean</tt>
+# *apec*::       <tt>boolean</tt>
+# *area*::       <tt>string</tt>
+# *created_at*:: <tt>datetime, not null</tt>
+# *updated_at*:: <tt>datetime, not null</tt>
+# *domain*::     <tt>string</tt>
+# *formation*::  <tt>string</tt>
+# *degree*::     <tt>string</tt>
+# *intention*::  <tt>boolean</tt>
+#--
+# == Schema Information End
+#++
 #
 class Project < ApplicationRecord
   STEPS = %i(

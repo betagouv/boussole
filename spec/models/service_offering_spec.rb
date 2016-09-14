@@ -9,12 +9,16 @@ RSpec.describe ServiceOffering, type: :model do
   it { is_expected.to belong_to(:public_service) }
 
   it { is_expected.to validate_presence_of(:title) }
-  it { is_expected.to validate_uniqueness_of(:slug) }
+  it { is_expected.to validate_uniqueness_of(:slug).scoped_to(:public_service_id) }
   it { is_expected.to validate_presence_of(:public_service) }
 
   it 'has_many :social_rights' do
     expect {
       service_offering.social_rights << social_right
     }.to change { service_offering.social_rights.count }.by(1)
+  end
+
+  it 'delegates :title to :public_service' do
+    expect(service_offering.public_service_title).to eq(public_service.title)
   end
 end
