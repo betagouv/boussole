@@ -1,0 +1,188 @@
+asdfsdf:
+  -
+    -
+      attribute: "duration"
+      operator: "=="
+      value: "Cette nuit"
+    -
+      attribute: "resources"
+      operator: "<="
+      value: 300
+
+asdfasdf:
+  -
+    -
+      attribute: "duration"
+      operator: "in?"
+      value:
+        - "Quelques mois"
+        - "1 an"
+    -
+      attribute: "current_status"
+      operator: "=="
+      value: "Étudiant·e"
+    -
+      attribute: "resources"
+      operator: "<="
+      value: 1_200
+
+  -
+    -
+      attribute: "duration"
+      operator: "in?"
+      value:
+        - "Quelques mois"
+        - "1 an"
+    -
+      attribute: "current_status"
+      operator: "=="
+      value: "Lycéen·ne"
+    -
+      attribute: "next_status"
+      operator: "=="
+      value: true
+    -
+      attribute: "resources"
+      operator: "<="
+      value: 1_200
+
+asdfasfd:
+  -
+    -
+      attribute: "duration"
+      operator: "in?"
+      value:
+        - "Quelques mois"
+        - "1 an"
+        - "+ d'un an"
+    -
+      attribute: "current_status"
+      operator: "=="
+      value: "Étudiant·e"
+    -
+      attribute: "resources"
+      operator: ">"
+      value: 800
+
+  -
+    -
+      attribute: "duration"
+      operator: "in?"
+      value:
+        - "Quelques mois"
+        - "1 an"
+        - "+ d'un an"
+    -
+      attribute: "current_status"
+      operator: "=="
+      value: "Lycéen·ne"
+    -
+      attribute: "next_status"
+      operator: "=="
+      value: true
+    -
+      attribute: "resources"
+      operator: ">"
+      value: 800
+
+asdfasdf:
+  -
+    -
+      attribute: "current_status"
+      operator: "in?"
+      value:
+        - "Étudiant·e"
+        - "En alternance"
+        - "Sans activité"
+        - "En formation"
+        - "Salarié·e"
+    -
+      attribute: "resources"
+      operator: ">="
+      value: 300
+
+  -
+    -
+      attribute: "current_status"
+      operator: "=="
+      value: "Lycéen·ne"
+    -
+      attribute: "next_status"
+      operator: "=="
+      value: true
+    -
+      attribute: "resources"
+      operator: ">="
+      value: 300
+
+asdfasdf:
+  -
+    -
+      attribute: "duration"
+      operator: "in?"
+      value:
+        - "Quelques mois"
+        - "1 an"
+        - "+ d'un an"
+    -
+      attribute: "resources"
+      operator: ">"
+      value: 1000
+
+asdfasdf:
+  -
+    -
+      attribute: "duration"
+      operator: "in?"
+      value:
+        - "Quelques mois"
+        - "1 an"
+    -
+      attribute: "current_status"
+      operator: "=="
+      value: "Étudiant·e"
+    -
+      attribute: "resources"
+      operator: "<="
+      value: 1_200
+
+  -
+    -
+      attribute: "duration"
+      operator: "in?"
+      value:
+        - "Quelques mois"
+        - "1 an"
+    -
+      attribute: "current_status"
+      operator: "=="
+      value: "Lycéen·ne"
+    -
+      attribute: "next_status"
+      operator: "=="
+      value: true
+    -
+      attribute: "resources"
+      operator: "<="
+      value: 1_200
+
+asdfasdf:
+  -
+    -
+      attribute: "duration"
+      operator: "=="
+      value: "Cette nuit"
+    -
+      attribute: "resources"
+      operator: "<="
+      value: 1_000
+
+  -
+    -
+      attribute: "age"
+      operator: ">="
+      value: 16
+    -
+      attribute: "age"
+      operator: "<="
+      value: 30
