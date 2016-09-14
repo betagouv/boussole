@@ -2,13 +2,14 @@
 # frozen_string_literal: true
 
 RSpec.describe ServiceOffering, type: :model do
-  let(:service_offering) { create(:service_offering, public_service: public_service) }
-  let(:public_service)   { create(:public_service) }
-  let(:social_right)     { create(:social_right) }
+  subject(:service_offering) { create(:service_offering, public_service: public_service) }
+  let(:public_service)       { create(:public_service) }
+  let(:social_right)         { create(:social_right) }
 
   it { is_expected.to belong_to(:public_service) }
 
   it { is_expected.to validate_presence_of(:title) }
+  it { is_expected.to validate_uniqueness_of(:slug) }
   it { is_expected.to validate_presence_of(:public_service) }
 
   it 'has_many :social_rights' do
