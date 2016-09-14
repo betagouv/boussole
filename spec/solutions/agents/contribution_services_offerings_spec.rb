@@ -37,6 +37,7 @@ situation %(
 
       within('.profile-form') do
         select('Services Intégrés de l’Accueil et de l’Orientation', from: 'Acteur')
+        fill_in('Code', with: 'reims-siao-dslt')
         fill_in('Nom', with: 'Découvrir les solutions logement sur ton territoire')
         fill_in('Description', with: 'Découvrir les solutions logement sur ton territoire')
         fill_in('Adresse', with: '50 rue de la Dalle, 71234 Paname')

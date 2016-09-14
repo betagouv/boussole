@@ -14,6 +14,10 @@
           %dd= @service_offering.public_service.try(:title)
 
         .profile-definition
+          %dt= t(:code, scope: 'activerecord.attributes.service_offering')
+          %dd= @service_offering.code
+
+        .profile-definition
           %dt= t(:description, scope: 'activerecord.attributes.service_offering')
           %dd= @service_offering.description
 

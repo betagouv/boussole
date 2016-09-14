@@ -12,11 +12,11 @@
 #  updated_at     :datetime         not null
 #  duration       :string
 #  current_status :string
-#  resources      :integer
+#  resources      :integer          default(0)
 #  age            :integer
 #  housing_city   :string
 #  residence_city :string
-#  next_status    :boolean
+#  next_status    :boolean          default(FALSE)
 #
 class Housing < ApplicationRecord
   STEPS = %i(

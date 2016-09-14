@@ -18,9 +18,11 @@
 #  phone             :string
 #  url               :string
 #  external          :boolean
+#  code              :string
 #
 # Indexes
 #
+#  index_service_offerings_on_code               (code)
 #  index_service_offerings_on_public_service_id  (public_service_id)
 #
 # Foreign Keys
