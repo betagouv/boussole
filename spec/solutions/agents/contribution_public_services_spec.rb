@@ -56,6 +56,7 @@ situation %(
       click_link('Afficher')
 
       expect(page).to have_content('Pôle emploi')
+      expect(page).to have_content('pole-emploi')
     end
   end
 
@@ -70,6 +71,7 @@ situation %(
       end
 
       expect(page).to have_content('Acteur modifié·e avec succès')
+      expect(page).to have_content('pole-emploi')
     end
   end
 

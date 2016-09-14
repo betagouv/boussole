@@ -1,33 +1,40 @@
 # encoding: utf-8
 # frozen_string_literal: true
+
 #
 # TODO: Add documentation.
 #
+
+#
 # == Schema Information
+# Schema version: 20160914135912
 #
 # Table name: service_offerings
 #
-#  id                :integer          not null, primary key
-#  title             :string
-#  description       :text
-#  public_service_id :integer          not null
-#  created_at        :datetime         not null
-#  updated_at        :datetime         not null
-#  postal_address    :string
-#  email             :string
-#  phone             :string
-#  url               :string
-#  external          :boolean
-#  slug              :string
+# *id*::                <tt>integer, not null, primary key</tt>
+# *title*::             <tt>string</tt>
+# *description*::       <tt>text</tt>
+# *public_service_id*:: <tt>integer, not null</tt>
+# *created_at*::        <tt>datetime, not null</tt>
+# *updated_at*::        <tt>datetime, not null</tt>
+# *postal_address*::    <tt>string</tt>
+# *email*::             <tt>string</tt>
+# *phone*::             <tt>string</tt>
+# *url*::               <tt>string</tt>
+# *external*::          <tt>boolean</tt>
+# *slug*::              <tt>string</tt>
 #
 # Indexes
 #
-#  index_service_offerings_on_public_service_id  (public_service_id)
-#  index_service_offerings_on_slug               (slug) UNIQUE
+#  index_service_offerings_on_public_service_id           (public_service_id)
+#  index_service_offerings_on_public_service_id_and_slug  (public_service_id,slug)
 #
 # Foreign Keys
 #
 #  fk_rails_0e3762aded  (public_service_id => public_services.id)
+#--
+# == Schema Information End
+#++
 #
 class ServiceOffering < ApplicationRecord
   extend FriendlyId
@@ -40,7 +47,9 @@ class ServiceOffering < ApplicationRecord
   has_many :social_rights, through: :exercise_scopes
 
   validates :title, :public_service, presence: true
-  validates :slug, uniqueness: true
+  validates :slug, uniqueness: { scope: :public_service_id }
+
+  delegate :title, to: :public_service, prefix: true
 
   #
   # Maps {SocialRight} names and joins them.

@@ -1,21 +1,28 @@
 # encoding: utf-8
 # frozen_string_literal: true
+
 #
 # TODO: Add documentation.
 #
+
+#
 # == Schema Information
+# Schema version: 20160914121308
 #
 # Table name: social_rights
 #
-#  id         :integer          not null, primary key
-#  name       :string           not null
-#  slug       :string           not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+# *id*::         <tt>integer, not null, primary key</tt>
+# *name*::       <tt>string, not null</tt>
+# *slug*::       <tt>string, not null</tt>
+# *created_at*:: <tt>datetime, not null</tt>
+# *updated_at*:: <tt>datetime, not null</tt>
 #
 # Indexes
 #
 #  index_social_rights_on_slug  (slug) UNIQUE
+#--
+# == Schema Information End
+#++
 #
 class SocialRight < ApplicationRecord
   extend FriendlyId

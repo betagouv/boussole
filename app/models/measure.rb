@@ -1,19 +1,23 @@
 # encoding: utf-8
 # frozen_string_literal: true
+
 #
 # TODO: Add documentation.
 #
+
+#
 # == Schema Information
+# Schema version: 20160914121308
 #
 # Table name: measures
 #
-#  id                :integer          not null, primary key
-#  title             :string
-#  description       :text
-#  url               :string
-#  public_service_id :integer
-#  created_at        :datetime         not null
-#  updated_at        :datetime         not null
+# *id*::                <tt>integer, not null, primary key</tt>
+# *title*::             <tt>string</tt>
+# *description*::       <tt>text</tt>
+# *url*::               <tt>string</tt>
+# *public_service_id*:: <tt>integer</tt>
+# *created_at*::        <tt>datetime, not null</tt>
+# *updated_at*::        <tt>datetime, not null</tt>
 #
 # Indexes
 #
@@ -22,13 +26,21 @@
 # Foreign Keys
 #
 #  fk_rails_22911d55d8  (public_service_id => public_services.id)
+#--
+# == Schema Information End
+#++
 #
 class Measure < ApplicationRecord
   belongs_to :public_service
+
+  delegate :hello, to: :greeter
+
   has_many :exercise_scopes, as: :exercisable, dependent: :destroy
   has_many :social_rights, through: :exercise_scopes
 
   validates :title, :url, presence: true
+
+  delegate :title, to: :public_service, prefix: true, allow_nil: true
 
   #
   # Maps {SocialRight} names and joins them.

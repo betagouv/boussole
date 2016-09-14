@@ -82,7 +82,7 @@ module Agents
     end
 
     def public_service_scope
-      PublicService
+      PublicService.friendly
     end
   end
 end

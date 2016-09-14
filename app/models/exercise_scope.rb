@@ -1,18 +1,22 @@
 # encoding: utf-8
 # frozen_string_literal: true
+
 #
 # TODO: Add documentation.
 #
+
+#
 # == Schema Information
+# Schema version: 20160914121308
 #
 # Table name: exercise_scopes
 #
-#  id               :integer          not null, primary key
-#  social_right_id  :integer          not null
-#  exercisable_id   :integer          not null
-#  exercisable_type :string           not null
-#  created_at       :datetime         not null
-#  updated_at       :datetime         not null
+# *id*::               <tt>integer, not null, primary key</tt>
+# *social_right_id*::  <tt>integer, not null</tt>
+# *exercisable_id*::   <tt>integer, not null</tt>
+# *exercisable_type*:: <tt>string, not null</tt>
+# *created_at*::       <tt>datetime, not null</tt>
+# *updated_at*::       <tt>datetime, not null</tt>
 #
 # Indexes
 #
@@ -22,6 +26,9 @@
 # Foreign Keys
 #
 #  fk_rails_7ab7a484c8  (social_right_id => social_rights.id)
+#--
+# == Schema Information End
+#++
 #
 class ExerciseScope < ApplicationRecord
   belongs_to :social_right

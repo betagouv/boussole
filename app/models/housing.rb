@@ -1,22 +1,29 @@
 # encoding: utf-8
 # frozen_string_literal: true
+
 #
 # TODO: Add documentation.
 #
+
+#
 # == Schema Information
+# Schema version: 20160914121308
 #
 # Table name: housings
 #
-#  id             :integer          not null, primary key
-#  created_at     :datetime         not null
-#  updated_at     :datetime         not null
-#  duration       :string
-#  current_status :string
-#  resources      :integer          default(0)
-#  age            :integer
-#  housing_city   :string
-#  residence_city :string
-#  next_status    :boolean          default(FALSE)
+# *id*::             <tt>integer, not null, primary key</tt>
+# *created_at*::     <tt>datetime, not null</tt>
+# *updated_at*::     <tt>datetime, not null</tt>
+# *duration*::       <tt>string</tt>
+# *current_status*:: <tt>string</tt>
+# *resources*::      <tt>integer, default(0)</tt>
+# *age*::            <tt>integer</tt>
+# *housing_city*::   <tt>string</tt>
+# *residence_city*:: <tt>string</tt>
+# *next_status*::    <tt>boolean, default(FALSE)</tt>
+#--
+# == Schema Information End
+#++
 #
 class Housing < ApplicationRecord
   STEPS = %i(

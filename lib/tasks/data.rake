@@ -4,6 +4,7 @@
 namespace :data do
   desc 'Data Migration'
   task migrate: :environment do
-    # no-op
+    # Generate slugs
+    [PublicService, ServiceOffering, SocialRight].each { |klass| klass.find_each(&:save) }
   end
 end

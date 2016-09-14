@@ -11,26 +11,40 @@
 
 #
 # == Schema Information
+# Schema version: 20160914135912
 #
 # Table name: public_services
 #
-#  id             :integer          not null, primary key
-#  title          :string
-#  description    :text
-#  postal_address :string
-#  email          :string
-#  phone          :string
-#  url            :string
-#  created_at     :datetime         not null
-#  updated_at     :datetime         not null
+# *id*::             <tt>integer, not null, primary key</tt>
+# *title*::          <tt>string</tt>
+# *description*::    <tt>text</tt>
+# *postal_address*:: <tt>string</tt>
+# *email*::          <tt>string</tt>
+# *phone*::          <tt>string</tt>
+# *url*::            <tt>string</tt>
+# *created_at*::     <tt>datetime, not null</tt>
+# *updated_at*::     <tt>datetime, not null</tt>
+# *slug*::           <tt>string</tt>
+#
+# Indexes
+#
+#  index_public_services_on_slug  (slug) UNIQUE
+#--
+# == Schema Information End
+#++
 #
 class PublicService < ApplicationRecord
+  extend FriendlyId
+
+  friendly_id :title, use: :slugged
+
   has_many :exercise_scopes, as: :exercisable, dependent: :destroy
   has_many :social_rights, through: :exercise_scopes
   has_many :service_offerings, dependent: :destroy
   has_many :measures, dependent: :destroy
 
   validates :title, presence: true
+  validates :slug, uniqueness: true
 
   #
   # Maps {SocialRight} names and joins them.
