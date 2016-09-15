@@ -9,147 +9,24 @@
       %header.result-list-header
         %h2= t('.service_offerings')
 
-      .result
-        = link_to(action_housing_path(@housing)) do
-          %article.result-card
-            %header.result-header
-              %h3 Trouver une chambre dans une résidence étudiante privée
+      - @service_offerings.each do |service_offering|
+        .result
+          = link_to(housing_service_offering_path(@housing, service_offering)) do
+            %article.result-card
+              %header.result-header
+                %h3= service_offering.title
 
-              %p
-                Dernière actualisation :
-                %time{ datetime: '2016-09-08 14:04:55 UTC' } 08-09-2016
+                %p
+                  Dernière actualisation :
+                  -# TODO: Use rails view helper for date formatting
+                  %time{ datetime: '2016-09-08 14:04:55 UTC' }
+                    = service_offering.updated_at.strftime('%d-%m-%Y')
 
-            %section.result-content
-              %p= truncate("La MGEl propose aux étudiants (actuels et futurs) une offre de location de studios ou d'appartement au sein de plusieurs résidences privées sur Reims. La MGEl peut t'aider à trouver une solution logement adaptée à ta situation.", length: 200)
+              %section.result-content
+                %p= truncate(service_offering.description, length: 200)
 
-              %address.result-address
+                %address.result-address
+                  -# TODO: Add something here !!!
 
-            %footer.result-footer
-              = link_to('Découvrir', action_housing_path(@housing), class: 'btn btn-new')
-
-      .result
-        %a{ href: '#' }
-          %article.result-card
-            %header.result-header
-              %h3 T'informer sur le logement en résidence universitaire
-
-              %p
-                Dernière actualisation :
-                %time{ datetime: '2016-09-08 14:04:55 UTC' } 08-09-2016
-
-            %section.result-content
-              %p= truncate("Le CROUS propose différentes solutions de logement pour les étudiants de la chambre ou le studio en résidence aux appartements en col-location. Il t'aidera à trouver la solution la plus adaptée à ta situation.", length: 200)
-
-              %address.result-address
-
-            %footer.result-footer
-              %a.btn.btn-new{ href: '#' } Découvrir
-
-      .result
-        %a{ href: '#' }
-          %article.result-card
-            %header.result-header
-              %h3 Découvrir les solutions logement sur ton territoire
-
-              %p
-                Dernière actualisation :
-                %time{ datetime: '2016-09-08 14:04:55 UTC' } 08-09-2016
-
-            %section.result-content
-              %p= truncate("Il existe des solutions de logement très différentes en fonction de ce que tu recherche et de ton budget. Des professionnels peuvent t'aider à étudier les différentes pistes possibles.", length: 200)
-
-              %address.result-address
-
-            %footer.result-footer
-              %a.btn.btn-new{ href: '#' } Découvrir
-
-      .result
-        %a{ href: '#' }
-          %article.result-card
-            %header.result-header
-              %h3 Faire une demande d'aide au financement de ton logement
-
-              %p
-                Dernière actualisation :
-                %time{ datetime: '2016-09-08 14:04:55 UTC' } 08-09-2016
-
-            %section.result-content
-              %p= truncate("Le Conseil départemental tient une permanence les après-midi, du lundi au vendredi, dans les locaux du BALS. Les aides au logement du Conseil Général peuvent prendre la forme de subvention, de prêt sans intérêt ou de mesure d'accompagnement social. Elles servent notamment pour le dépôt de garantie, l’ouverture des compteurs d’eau, de gaz et d’électricité, l’assurance habitation, pour des impayés (loyer, électricité, gaz, eau, téléphone), pour compenser des frais de déménagement et l’achat de mobilier de première nécessité.", length: 200)
-
-              %address.result-address
-
-            %footer.result-footer
-              %a.btn.btn-new{ href: '#' } Découvrir
-
-      .result
-        %a{ href: '#' }
-          %article.result-card
-            %header.result-header
-              %h3 Faire une demande de logement social
-
-              %p
-                Dernière actualisation :
-                %time{ datetime: '2016-09-08 14:04:55 UTC' } 08-09-2016
-
-            %section.result-content
-              %p= truncate("Le BALS t'aide à constituer et à déposer ton dossier de demande de logement social auprès des acteurs chargés de les examiner.", length: 200)
-
-              %address.result-address
-
-            %footer.result-footer
-              %a.btn.btn-new{ href: '#' } Découvrir
-
-
-
-
-      / - @results.each do |public_service|
-      /   %article.text-center.jumbotron
-      /     %address
-      /       %h3= public_service['title']
-      /       / = public_service['description']
-      /       = public_service['postal_address']
-
-      /       - if public_service['phone']
-      /         %br
-      /         %abbr{ title: 'Téléphone' }
-      /           T :
-      /           = public_service['phone']
-
-      /       - if public_service['email']
-      /         %br
-      /         %abbr{ title: 'Email' }
-      /           E :
-      /           = mail_to(public_service['email'])
-
-      /       - if public_service['url']
-      /         %br
-      /         %abbr{ title: 'Site' }
-      /           W :
-      /           = link_to(public_service['url'], public_service['url'])
-
-      /     %h5 Un·e professionnel·le est disponible pour t'aider à :
-
-      /     .row
-      /       - public_service['offer'].each do |service|
-      /         .col-md-4
-      /           %br
-      /           %br
-      /           .small
-      /             = service
-
-      /     - if public_service[:measures].presence
-
-      /       %h5 
-      /       %h5 Nous avons également détecté pour toi :
-
-      /       - public_service[:measures].each do |mesure|
-      /         %br
-      /         %section.text-center
-      /           %address
-      /             %h4= mesure['title']
-      /             / = mesure['description']
-      /             - if mesure['url']
-      /               %br
-      /               %abbr{ title: 'Site' }
-      /                 W :
-      /                 = link_to(mesure['url'], mesure['url'])
+              %footer.result-footer
+                = link_to('Découvrir', housing_service_offering_path(@housing, service_offering), class: 'btn btn-new')
