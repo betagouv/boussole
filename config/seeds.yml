@@ -73,7 +73,7 @@ public_services: # acteurs
     phone: 03 26 79 84 79
     url: jeunes-ca.fr
     offer: # offre de service, ajouter « - » pour énumerer
-      - Découvrir les solutions logement sur mon territoire
+      - Découvrir les solutions logement sur ton territoire
 
 
   mgel:

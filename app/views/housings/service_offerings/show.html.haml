@@ -1,0 +1,55 @@
+.l-container-wide
+  %aside.l-sidebar
+    -# TODO: Kill me please
+    %section.jumbotron
+      %legend Être contacté·e
+
+      Souhaites-tu que cette ou ce professionnel·le te contacte suite à ta recherche ?
+      %br
+      %br
+
+      = simple_form_for(Contact.new, url: contact_path, method: :post, wrapper: :vertical_form) do |f|
+        .form-inputs
+          = f.input_field :email_or_phone, placeholder: 'Email ou téléphone', style: 'width: 100%;'
+
+        %br
+        .form-actions
+          = link_to('Envoyer !', housing_service_offering_path(@housing, @service_offering), class: 'btn btn-new', style: 'width: 100%;')
+
+  .l-content.l-with-sidebar
+    %article.profile
+      %header.profile-title.text-center
+        %h2= @service_offering.title
+
+      %hr
+
+      %section.profile-details
+        %p
+          = @service_offering.description
+
+          .profile-definition
+            %dt= ServiceOffering.human_attribute_name(:updated_at)
+            -# TODO: Use rails view helper for date formatting
+            %dd= @service_offering.updated_at.strftime('%d-%m-%Y')
+
+      %section.profile-details
+        -# TODO: Extract divider as a module, please !!!
+        %header.result-list-header
+          %h2 Coordonnées de l'acteur
+
+        %dl
+          .profile-definition
+            %dt= PublicService.human_attribute_name(:title)
+            %dd= @public_service.title
+
+          .profile-definition
+            %dt= PublicService.human_attribute_name(:description)
+            %dd= @public_service.description
+
+          .profile-definition
+            %dt= PublicService.human_attribute_name(:url)
+            %dd= @public_service.url
+
+          .profile-definition
+            %dt= PublicService.human_attribute_name(:social_rights)
+            %dd= @public_service.social_right_names
