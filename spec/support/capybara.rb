@@ -18,7 +18,8 @@ Capybara.register_driver(:poltergeist) do |app|
   Capybara::Poltergeist::Driver.new(
     app,
     debug: false,
-    js_errors: true,
+    # TODO: Mock Raven/Sentry call and re-enable JavaScript errors.
+    js_errors: false,
     phantomjs_options: [
       '--load-images=no',
       '--ignore-ssl-errors=yes',

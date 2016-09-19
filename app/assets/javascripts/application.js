@@ -12,7 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap-sass/assets/javascripts/bootstrap-sprockets
 //= require bootstrap3-typeahead
+//= require ravenjs/dist/raven
+//= require analytics/hotjar
+//= require analytics/piwik
+//= require analytics/sentry
 //= require_tree .

@@ -478,8 +478,6 @@ GEM
     thread_safe (0.3.5)
     tilt (2.0.5)
     tins (1.11.0)
-    turbolinks (2.5.3)
-      coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (3.0.0)
@@ -561,7 +559,6 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   stronger_parameters
-  turbolinks
   uglifier
   web-console
   wicked
