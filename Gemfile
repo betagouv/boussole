@@ -15,13 +15,14 @@ gem 'jquery-rails'
 gem 'puma'
 gem 'rails-i18n'
 gem 'sass-rails'
+gem 'sentry-raven'
 gem 'simple_form'
 gem 'stronger_parameters'
 gem 'turbolinks'
 gem 'uglifier'
 gem 'wicked'
 
-group :production, :staging do
+group :production do
   gem 'heroku_rails_deflate'
   gem 'rails_12factor'
 end
