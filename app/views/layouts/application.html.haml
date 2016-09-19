@@ -10,7 +10,7 @@
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' }
     %meta{ name: 'sentry-dsn', content: ENV['SENTRY_DSN'] }
     %base{ href: root_path }
-    = stylesheet_link_tag 'application', media: 'all'
+    = stylesheet_link_tag :application, media: :all, integrity: true
     = csrf_meta_tags
   %body
     %header{ role: 'banner' }
@@ -20,4 +20,4 @@
       = yield
     %footer{ role: 'contentinfo' }
       = render 'layouts/footer'
-    = javascript_include_tag 'application'
+    = javascript_include_tag :application, integrity: true
