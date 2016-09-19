@@ -229,3 +229,7 @@ centre-international-de-sejour-cis:
         value:
           - "Cette nuit"
           - "Quelques mois"
+      -
+        attribute: "resources" # discriminant @see app/models/service_offering.rb
+        operator: "<=" # options are ==, >=, >, <, <=, in?
+        value: 400
