@@ -8,7 +8,7 @@
     %title= t('.title')
     %meta{ name: 'description', content: t('.description') }
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' }
-    %meta{ name: 'sentry-dsn', content: ENV['SENTRY_DSN'] }
+    %meta{ name: 'sentry-dsn', content: ENV['SENTRY_PUBLIC_DSN'] }
     %base{ href: root_path }
     = stylesheet_link_tag :application, media: :all, integrity: true
     = csrf_meta_tags
