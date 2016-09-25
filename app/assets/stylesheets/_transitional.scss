@@ -1,9 +1,33 @@
 /* Stuff you're not sure where to put and to be get rid of soon */
 
+// TODO: This one's from the landing page. Rework when enabling multiple scenarios.
 section {
   .thumbnail {
     .caption {
       height: 75px;
     }
+  }
+}
+
+// TODO: This one's from the results page. Rework ASAP.
+.contact {
+  @extend .jumbotron;
+
+  h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  input {
+    margin-bottom: 1em;
+    width: 100%;
+  }
+
+  a {
+    width: 100%;
   }
 }

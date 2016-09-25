@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+.profile-title {
+  @extend .text-center;
+}
+
+.profile-details-header {
+  @extend .text-center;
+}
+
 .profile-definition {
   &:not(:last-child) {
     margin-bottom: 1em;

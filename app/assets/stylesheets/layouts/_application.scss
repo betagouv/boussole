@@ -39,10 +39,6 @@ main {
   &.l-with-sidebar {
     @extend .col-md-8;
     @extend .col-md-pull-4;
-
-    // @media (min-width: $screen-md-min) {
-    //   border-right: $isabelline solid .25rem;
-    // }
   }
 }
 

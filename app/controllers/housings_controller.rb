@@ -5,14 +5,9 @@ class HousingsController < ApplicationController
   require_feature :housing
 
   # GET /projects/1
-  # TODO: Refacto (or get rid of).
   def show
-    @housing = Housing.find(params[:id])
-    @service_offerings = @housing.matches
-  end
-
-  def action
-    @housing = Housing.find(params[:id])
+    @housing           = Housing::Show.call(params).model
+    @service_offerings = Housing::ServiceOfferings.present(params).scope
   end
 
   # POST /projects

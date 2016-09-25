@@ -32,8 +32,8 @@ class Housing < ApplicationRecord
     #
     # @see {Trailblazer::Operation::Resolver::BuildOperation.build_operation}
     #
-    def initialize(housing_id, _)
-      @housing   = Housing.find(housing_id)
+    def initialize(params, _)
+      @housing   = Housing.find(params[:id])
       @criterias = YAML.load(File.read(Rails.root.join(CRITERIAS_PATH)))
       super
     end

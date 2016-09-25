@@ -1,25 +1,24 @@
+-# coding: utf-8
+
 .l-container-wide
   %aside.l-sidebar
-    -# TODO: Kill me please
-    %section.jumbotron
-      %legend Être contacté·e
+    %section.contact
+      %header.contact-header
+        %h2= t('.contact-me')
 
-      Souhaites-tu que cette ou ce professionnel·le te contacte suite à ta recherche ?
-      %br
-      %br
+      %p= t('.want-to-be-contacted')
 
       = simple_form_for(Contact.new, url: contact_path, method: :post, wrapper: :vertical_form) do |f|
         .form-inputs
-          = f.input_field :email_or_phone, placeholder: 'Email ou téléphone', style: 'width: 100%;'
+          = f.input_field :email_or_phone, placeholder: 'Email ou téléphone'
 
-        %br
         .form-actions
-          = link_to('Envoyer !', housing_service_offering_path(@housing, @service_offering), class: 'btn btn-new', style: 'width: 100%;')
+          = link_to(t('.send'), housing_service_offering_path(@housing, @service_offering), class: 'btn btn-new')
 
   .l-content.l-with-sidebar
     %article.profile
-      %header.profile-title.text-center
-        %h2= @service_offering.title
+      %header.profile-title
+        %h1= @service_offering.title
 
       %hr
 
@@ -29,13 +28,13 @@
 
           .profile-definition
             %dt= ServiceOffering.human_attribute_name(:updated_at)
-            -# TODO: Use rails view helper for date formatting
-            %dd= @service_offering.updated_at.strftime('%d-%m-%Y')
+            %dd
+              %time{ datetime: l(@service_offering.updated_at.to_date, format: :html5) }
+                = l(@service_offering.updated_at.to_date)
 
       %section.profile-details
-        -# TODO: Extract divider as a module, please !!!
-        %header.result-list-header
-          %h2 Coordonnées de l'acteur
+        %header.profile-details-header
+          %h2.divider= t('.public-service-infos')
 
         %dl
           .profile-definition

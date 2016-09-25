@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Housing::ServiceOfferings, type: :operation do
-  subject(:operation)    { described_class.present(housing.id) }
+  subject(:operation)    { described_class.present(id: housing.to_param) }
   let(:public_service)   { create(:public_service, title: 'SIAO') }
 
   let(:service_offering) do
