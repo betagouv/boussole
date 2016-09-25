@@ -10,6 +10,10 @@ class Housing < ApplicationRecord
   #
   class ServiceOfferings < Trailblazer::Operation
     include Collection
+
+    #
+    # @see {Trailblazer::Operation::Model::DSL.model}
+    #
     alias_method :scope, :model
 
     #
@@ -19,13 +23,15 @@ class Housing < ApplicationRecord
 
     #
     # @!attribute [r] housing
-    #   @return [Housing] The {Housing} project we're matching against.
+    #
+    # @return [Housing] The {Housing} project we're matching against.
     #
     attr_reader :housing
 
     #
     # @!attribute [r] criterias
-    #   @return [Hash] The hash of {ServiceOffering} criterias we're matching with.
+    #
+    # @return [Hash] The hash of {ServiceOffering} criterias we're matching with.
     #
     attr_reader :criterias
 
@@ -82,7 +88,6 @@ class Housing < ApplicationRecord
     # @yieldparam [Array] service_offerings {ServiceOffering}'s {Array} of slugs.
     # @yieldparam [Array] public_services {PublicService}'s {Array} of slugs.
     def with_matches(&_)
-      # TODO: Document
       service_offerings, public_services =
         criterias.each_with_object([[], []]) do |(public_service, service_offerings), matches|
           service_offerings.each do |service_offering, scenarios|
