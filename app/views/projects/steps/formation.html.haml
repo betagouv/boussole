@@ -1,17 +1,18 @@
 -# coding: utf-8
 
-.l-content-narrow
-  %section.form
-    %legend Domaine et formation
+.l-container-narrow
+  .l-content
+    %section.form
+      %legend Domaine et formation
 
-    = simple_form_for(@project, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
-      = f.error_notification
+      = simple_form_for(@project, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
+        = f.error_notification
 
-      = f.input :domain, label: 'Domaine',
-                         collection: DOMAINS,
-                         include_blank: false,
-                         input_html: { rel: 'autocomplete' }
+        = f.input :domain, label: 'Domaine',
+                           collection: DOMAINS,
+                           include_blank: false,
+                           input_html: { rel: 'autocomplete' }
 
-      = f.input :experience, label: "J'ai déjà une expérience dans ce domaine"
+        = f.input :experience, label: "J'ai déjà une expérience dans ce domaine"
 
-      = f.button :submit, 'Continuer', class: 'btn btn-new'
+        = f.button :submit, 'Continuer', class: 'btn btn-new'

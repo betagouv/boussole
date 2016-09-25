@@ -30,6 +30,7 @@ Rails:
 
 RSpec/DescribeClass:
   Exclude:
+    - spec/criterias/**/*
     - spec/requests/**/*
     - spec/features/**/*
     - spec/views/**/*

@@ -1,55 +1,58 @@
 -# coding: utf-8
 
-.l-content-narrow
-  %article.profile
-    %header.profile-title
-      %h1= @service_offering.title
+.l-container-narrow
+  .l-content
+    %article.profile
+      %header.profile-title
+        %h1= @service_offering.title
 
-    %hr
+      %hr
 
-    .profile-details
-      %dl
-        .profile-definition
-          %dt= ServiceOffering.human_attribute_name(:slug)
-          %dd= @service_offering.slug
+      .profile-details
+        %dl
+          .profile-definition
+            %dt= ServiceOffering.human_attribute_name(:slug)
+            %dd= @service_offering.slug
 
-        .profile-definition
-          %dt= ServiceOffering.human_attribute_name(:public_service)
-          %dd= link_to(@service_offering.public_service_title, agents_public_service_path(@service_offering.public_service))
+          .profile-definition
+            %dt= ServiceOffering.human_attribute_name(:public_service)
+            %dd
+              = link_to(agents_public_service_path(@service_offering.public_service)) do
+                = @service_offering.public_service_title
 
-        .profile-definition
-          %dt= ServiceOffering.human_attribute_name(:description)
-          %dd= @service_offering.description
+          .profile-definition
+            %dt= ServiceOffering.human_attribute_name(:description)
+            %dd= @service_offering.description
 
-        .profile-definition
-          %dt= ServiceOffering.human_attribute_name(:postal_address)
-          %dd= @service_offering.postal_address
+          .profile-definition
+            %dt= ServiceOffering.human_attribute_name(:postal_address)
+            %dd= @service_offering.postal_address
 
-        .profile-definition
-          %dt= ServiceOffering.human_attribute_name(:email)
-          %dd= @service_offering.email
+          .profile-definition
+            %dt= ServiceOffering.human_attribute_name(:email)
+            %dd= @service_offering.email
 
-        .profile-definition
-          %dt= ServiceOffering.human_attribute_name(:phone)
-          %dd= @service_offering.phone
+          .profile-definition
+            %dt= ServiceOffering.human_attribute_name(:phone)
+            %dd= @service_offering.phone
 
-        .profile-definition
-          %dt= ServiceOffering.human_attribute_name(:url)
-          %dd= @service_offering.url
+          .profile-definition
+            %dt= ServiceOffering.human_attribute_name(:url)
+            %dd= @service_offering.url
 
-        -# TODO: Localise oui/non
-        .profile-definition
-          %dt= ServiceOffering.human_attribute_name(:external)
-          %dd= @service_offering.external ? 'Oui' : 'Non'
+          -# TODO: Localise oui/non
+          .profile-definition
+            %dt= ServiceOffering.human_attribute_name(:external)
+            %dd= @service_offering.external ? 'Oui' : 'Non'
 
-        .profile-definition
-          %dt= ServiceOffering.human_attribute_name(:social_rights)
-          %dd= @service_offering.social_right_names
+          .profile-definition
+            %dt= ServiceOffering.human_attribute_name(:social_rights)
+            %dd= @service_offering.social_right_names
 
-        .profile-definition
-          %dt= ServiceOffering.human_attribute_name(:updated_at)
-          %dd= @service_offering.updated_at
+          .profile-definition
+            %dt= ServiceOffering.human_attribute_name(:updated_at)
+            %dd= @service_offering.updated_at
 
-    .profile-actions
-      = link_to(t('.edit'), edit_agents_service_offering_path(@service_offering), class: 'btn btn-edit')
-      = link_to(t('.back'), agents_service_offerings_path, class: 'btn btn-cancel')
+      .profile-actions
+        = link_to(t('.edit'), edit_agents_service_offering_path(@service_offering), class: 'btn btn-edit')
+        = link_to(t('.back'), agents_service_offerings_path, class: 'btn btn-cancel')

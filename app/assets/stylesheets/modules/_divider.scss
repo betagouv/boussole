@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+%divider {
+  @media (min-width: $screen-sm-min) {
+    background-image: image-url("divider.png");
+    background-position: right 1em top 50%;
+    background-repeat: no-repeat;
+    content: "";
+    display: table-cell;
+    position: relative;
+    top: 50%;
+    width: 50%;
+  }
+}
+
+.divider {
+  font-size: $font-size-h5;
+  font-weight: $headings-font-weight * 2;
+  text-transform: uppercase;
+
+  @media (min-width: $screen-sm-min) {
+    display: table;
+    white-space: nowrap;
+  }
+
+  &::before {
+    @extend %divider;
+  }
+
+  &::after {
+    @extend %divider;
+  }
+}

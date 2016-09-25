@@ -1,33 +1,34 @@
 -# coding: utf-8
 
-.l-content-wide
-  %section.profile-list
-    %header.profile-list-header
-      %h1= t('.heading')
+.l-container-wide
+  .l-content
+    %section.profile-list
+      %header.profile-list-header
+        %h1= t('.heading')
 
-    %hr
+      %hr
 
-    .profile-list-new
-      = link_to(t('.new'), new_agents_public_service_path, class: 'btn btn-new btn-lg')
+      .profile-list-new
+        = link_to(t('.new'), new_agents_public_service_path, class: 'btn btn-new btn-lg')
 
-    .profile-list-content
-      %table
-        %thead
-          %tr
-            %th= PublicService.human_attribute_name(:title)
-            %th= PublicService.human_attribute_name(:social_rights)
-            %th
-            %th
-            %th
-
-        %tbody
-          - @public_services.each do |public_service|
+      .profile-list-content
+        %table
+          %thead
             %tr
-              %td= public_service.title
-              %td= public_service.social_right_names
-              %td= link_to(t('.show'), agents_public_service_path(public_service), class: 'btn btn-show')
-              %td= link_to(t('.edit'), edit_agents_public_service_path(public_service), class: 'btn btn-edit')
-              %td
-                = link_to t('.destroy'), agents_public_service_path(public_service), class: 'btn btn-destroy',
-                                                                                     method: :delete,
-                                                                                     data: { confirm: t('.confirm') }
+              %th= PublicService.human_attribute_name(:title)
+              %th= PublicService.human_attribute_name(:social_rights)
+              %th
+              %th
+              %th
+
+          %tbody
+            - @public_services.each do |public_service|
+              %tr
+                %td= public_service.title
+                %td= public_service.social_right_names
+                %td= link_to(t('.show'), agents_public_service_path(public_service), class: 'btn btn-show')
+                %td= link_to(t('.edit'), edit_agents_public_service_path(public_service), class: 'btn btn-edit')
+                %td
+                  = link_to t('.destroy'), agents_public_service_path(public_service), class: 'btn btn-destroy',
+                                                                                       method: :delete,
+                                                                                       data: { confirm: t('.confirm') }

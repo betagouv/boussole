@@ -7,7 +7,7 @@
 
 #
 # == Schema Information
-# Schema version: 20160914135912
+# Schema version: 20160925184409
 #
 # Table name: service_offerings
 #
@@ -27,7 +27,7 @@
 # Indexes
 #
 #  index_service_offerings_on_public_service_id           (public_service_id)
-#  index_service_offerings_on_public_service_id_and_slug  (public_service_id,slug)
+#  index_service_offerings_on_public_service_id_and_slug  (public_service_id,slug) UNIQUE
 #
 # Foreign Keys
 #

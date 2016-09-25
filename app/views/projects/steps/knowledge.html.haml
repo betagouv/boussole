@@ -1,15 +1,16 @@
 -# coding: utf-8
 
-.l-content-narrow
-  %section.form
-    %legend Quelle phrase décrit le mieux mon projet ?
+.l-container-narrow
+  .l-content
+    %section.form
+      %legend Quelle phrase décrit le mieux mon projet ?
 
-    = simple_form_for(@project, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
-      = f.error_notification
+      = simple_form_for(@project, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
+        = f.error_notification
 
-      = f.input_field :knowledge, collection: KNOWLEDGE_QUESTIONS,
-                                  label_method: :to_s,
-                                  value_method: :to_s,
-                                  as: :radio_buttons
+        = f.input_field :knowledge, collection: KNOWLEDGE_QUESTIONS,
+                                    label_method: :to_s,
+                                    value_method: :to_s,
+                                    as: :radio_buttons
 
-      = f.button :submit, 'Continuer', class: 'btn btn-new'
+        = f.button :submit, 'Continuer', class: 'btn btn-new'

@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.summary {
+  hr {
+    @extend .hidden-lg;
+    @extend .hidden-md;
+  }
+
+  br {
+    @extend .hidden-sm;
+    @extend .hidden-xs;
+  }
+}
+
+.summary-header {
+  h1 {
+    @media (min-width: $screen-md-min) {
+      font-size: $font-size-h3;
+    }
+  }
+}
+
+.summary-definition {
+  &:not(:last-child) {
+    margin-bottom: 1em;
+  }
+}
