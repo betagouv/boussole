@@ -32,20 +32,6 @@ class Housing < ApplicationRecord
   ).freeze
 
   #
-  # Search for <tt>ServiceOffering</tt>s matching the current housing project with a set of
-  # predefined rules.
-  #
-  # @note It does not scope results to corresponding <tt>PublicService</tt>
-  #
-  # @return [ActiveRecord::Relation<ServiceOffering>] The matched records.
-  #
-  # TODO: Add an example
-  # TODO: Move to service
-  def matches
-    ServiceOffering.where(slug: service_offering_matches(rules))
-  end
-
-  #
   # @!attribute [rw] current_step
   #   @return [Symbol] Current state in the housing project construction.
   attr_accessor :current_step
@@ -67,34 +53,6 @@ class Housing < ApplicationRecord
   end
 
   private
-
-  def rules
-    # TODO: Move to service
-    @rules ||= YAML.load(File.read(Rails.root.join('config', 'rules', 'reims', 'service_offerings.yml')))
-  end
-
-  def service_offering_matches(public_services)
-    # TODO: Build query with Arel so to match public services as well
-    # TODO: Document
-    # TODO: Move to service
-    public_services.each_with_object([]) do |(_, service_offerings), slugs|
-      service_offerings.each do |service_offering, scenarios|
-        scenarios.each do |scenario|
-          slugs << service_offering if match_scenario?(scenario)
-        end
-      end
-    end
-  end
-
-  def match_scenario?(scenario)
-    # TODO: Document
-    # TODO: Move to service
-    scenario.inject(true) do |result, condition|
-      result &&
-        send(condition['attribute'])
-          .send(condition['operator'], condition['value'])
-    end
-  end
 
   def required_for_step?(step)
     return true if step.nil?

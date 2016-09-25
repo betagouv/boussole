@@ -111,9 +111,15 @@ GEM
       sys-uname
       terminal-table
     debug_inspector (0.0.2)
+    declarative (0.0.8)
+      uber (>= 0.0.15)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.2.5)
+    disposable (0.3.2)
+      declarative (>= 0.0.8, < 1.0.0)
+      representable (>= 2.4.0, <= 3.1.0)
+      uber
     dm-aggregates (1.2.0)
       dm-core (~> 1.2.0)
     dm-constraints (1.2.0)
@@ -388,6 +394,16 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    reform (2.2.1)
+      disposable (>= 0.3.0, < 0.4.0)
+      representable (>= 2.4.0, < 3.1.0)
+      uber (~> 0.0.11)
+    reform-rails (0.1.6)
+      activemodel (>= 3.2)
+      reform (>= 2.2.0)
+    representable (3.0.0)
+      declarative (~> 0.0.5)
+      uber (~> 0.0.15)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -478,8 +494,18 @@ GEM
     thread_safe (0.3.5)
     tilt (2.0.5)
     tins (1.11.0)
+    trailblazer (1.1.1)
+      declarative
+      reform (>= 2.0.0, < 3.0.0)
+      uber (>= 0.0.15)
+    trailblazer-loader (0.1.0)
+    trailblazer-rails (0.3.2)
+      reform-rails (>= 0.1.4)
+      trailblazer (>= 1.0.4)
+      trailblazer-loader (>= 0.0.7)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    uber (0.0.15)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.0.5)
@@ -559,6 +585,7 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   stronger_parameters
+  trailblazer-rails
   uglifier
   web-console
   wicked

@@ -1,0 +1,24 @@
+siao:
+  solution-logement-urgence:
+    -
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "resources"
+        operator: ">="
+        value: 150
+
+      -
+        attribute: "current_status"
+        operator: "in?"
+        value:
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"

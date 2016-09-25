@@ -18,6 +18,7 @@ gem 'sass-rails'
 gem 'sentry-raven'
 gem 'simple_form'
 gem 'stronger_parameters'
+gem 'trailblazer-rails'
 gem 'uglifier'
 gem 'wicked'
 
