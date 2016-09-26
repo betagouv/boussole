@@ -45,10 +45,7 @@
             %dt= PublicService.human_attribute_name(:description)
             %dd= @public_service.description
 
-          .profile-definition
-            %dt= PublicService.human_attribute_name(:url)
-            %dd= @public_service.url
-
-          .profile-definition
-            %dt= PublicService.human_attribute_name(:social_rights)
-            %dd= @public_service.social_right_names
+          - if @public_service.url
+            .profile-definition
+              %dt= PublicService.human_attribute_name(:url)
+              %dd= link_to(@public_service.url, @public_service.url, target: '_blank')
