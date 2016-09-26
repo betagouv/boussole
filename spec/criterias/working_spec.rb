@@ -1,8 +1,8 @@
 # encoding: utf-8
 # frozen_string_literal: true
 
-RSpec.describe 'Housing matching criterias', type: :criteria do
-  criterias = YAML.load(File.read(Rails.root.join('config/criterias/reims/housing.service_offerings.yml')))
+RSpec.describe 'Working matching criterias', type: :criteria do
+  criterias = YAML.load(File.read(Rails.root.join('config/criterias/reims/working.service_offerings.yml')))
 
   # TODO: Refacto to rules object
   # TODO: Use RSpec hash/custom matchers
@@ -18,13 +18,13 @@ RSpec.describe 'Housing matching criterias', type: :criteria do
           it { expect(condition.keys).to eq(%w(attribute operator value)) }
 
           # Whether the attribute is a valid attribute
-          it { expect(condition['attribute']).to be_included_in(Housing.column_names) }
+          it { expect(condition['attribute']).to be_included_in(Working.column_names) }
 
           # Permitted operators
           it { expect(condition['operator']).to be_included_in(%w(in? == != < <= >= >)) }
 
           # Permitted values for inclusion delimiters
-          it { expect(condition['value']).to be_included_in_delimiter_for(Housing, condition['attribute']) }
+          it { expect(condition['value']).to be_included_in_delimiter_for(Working, condition['attribute']) }
 
           # Value should either be an array, a string, an integer or a boolean
           it { expect(condition['value']).to be_any_kind_of(Array, String, Integer, TrueClass, FalseClass) }
@@ -34,7 +34,7 @@ RSpec.describe 'Housing matching criterias', type: :criteria do
           it { expect(condition['operator']).to be_included_in(%w(==)) if condition['value'].is_a?(TrueClass) }
           it { expect(condition['operator']).to be_included_in(%w(==)) if condition['value'].is_a?(FalseClass) }
 
-          case Housing.columns_hash[condition['attribute']].type
+          case Working.columns_hash[condition['attribute']].type
           when :integer
             it { expect(condition['value']).to be_a_kind_of(Integer) }
           when :string
