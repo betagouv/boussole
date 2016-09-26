@@ -29,16 +29,9 @@
 #++
 #
 class Housing < ApplicationRecord
-  STEPS = %i(
-    housing
-    profile
-  ).freeze
+  include Wizardable
 
-  #
-  # @!attribute [rw] current_step
-  # @return [Symbol] Current state in the housing project construction.
-  #
-  attr_accessor :current_step
+  STEPS = %i(housing profile).freeze
 
   with_options if: -> { required_for_step?(:housing) } do |step|
     step.validates :duration,
@@ -54,13 +47,5 @@ class Housing < ApplicationRecord
                    inclusion: { in: STATUSES }
 
     step.validates :age, presence: true
-  end
-
-  private
-
-  def required_for_step?(step)
-    return true if step.nil?
-    return true if current_step.nil?
-    return true if STEPS.index(step.to_sym) <= STEPS.index(current_step)
   end
 end

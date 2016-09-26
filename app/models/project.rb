@@ -40,17 +40,9 @@
 #++
 #
 class Project < ApplicationRecord
-  STEPS = %i(
-    awareness
-    formation
-    profile
-    inscriptions
-  ).freeze
+  include Wizardable
 
-  #
-  # @!attribute [rw] current_step
-  #   @return [Symbol] Current state in the housing project construction.
-  attr_accessor :current_step
+  STEPS = %i(awareness formation profile inscriptions).freeze
 
   with_options if: -> { required_for_step?(:knowledge) } do |step|
     step.validates :awareness, presence: true
@@ -72,8 +64,8 @@ class Project < ApplicationRecord
   private
 
   def required_for_step?(step)
-    return true if step.nil?
-    return false if step == :formation && knowledge == KNOWLEDGE_QUESTIONS[1]
-    return true if STEPS.index(step.to_sym) <= STEPS.index(current_step)
+    return true  if step.nil?
+    return false if step == :formation && awareness == AWARENESSES[1]
+    return true  if STEPS.index(step.to_sym) <= STEPS.index(current_step)
   end
 end
