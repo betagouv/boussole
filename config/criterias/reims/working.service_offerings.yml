@@ -329,7 +329,7 @@ crij-centre-regional-d-information-jeunesse:
         operator: "==" # options are ==, >=, >, <, <=, in?
         value: false
 
-  trouver-une-mission-de-service-civique
+  trouver-une-mission-de-service-civique:
     -
       -
         attribute: "awareness" # discriminant @see app/models/service_offering.rb
