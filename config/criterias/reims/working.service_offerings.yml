@@ -211,4 +211,20 @@ apec-association-pour-l-emploi-des-cadres-3e48ecd0-4638-47a5-84e6-482bcd43de6a: 
         operator: "==" # options are ==, >=, >, <, <=, in?
         value: false 
 
-      
+potentiel-ca-champagne-ardenne
+  candidater-au-statut-etudiant-entrepreneur
+    -
+      -
+        attribute: "awareness" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+      -
+        attribute: "last_class" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Études supérieures"
