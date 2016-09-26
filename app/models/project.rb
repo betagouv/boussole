@@ -2,7 +2,12 @@
 # frozen_string_literal: true
 
 #
-# TODO: Add documentation.
+# Class Training provides the representation of a training project/need and its corresponding discriminant criterias.
+# Discriminant criterias are those determining the applicability of services to target audiences.
+#
+# @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
+#
+# TODO: Rename to {Training}
 #
 
 #
@@ -35,20 +40,12 @@
 #++
 #
 class Project < ApplicationRecord
-  STEPS = %i(
-    knowledge
-    formation
-    profile
-    inscriptions
-  ).freeze
+  include Wizardable
 
-  #
-  # @!attribute [rw] current_step
-  #   @return [Symbol] Current state in the housing project construction.
-  attr_accessor :current_step
+  STEPS = %i(awareness formation profile inscriptions).freeze
 
   with_options if: -> { required_for_step?(:knowledge) } do |step|
-    step.validates :knowledge, presence: true
+    step.validates :awareness, presence: true
   end
 
   with_options if: -> { required_for_step?(:formation) } do |step|
@@ -67,8 +64,8 @@ class Project < ApplicationRecord
   private
 
   def required_for_step?(step)
-    return true if step.nil?
-    return false if step == :formation && knowledge == KNOWLEDGE_QUESTIONS[1]
-    return true if STEPS.index(step.to_sym) <= STEPS.index(current_step)
+    return true  if step.nil?
+    return false if step == :formation && awareness == AWARENESSES[1]
+    return true  if STEPS.index(step.to_sym) <= STEPS.index(current_step)
   end
 end

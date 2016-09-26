@@ -33,7 +33,7 @@ RSpec.describe 'Housing matching criterias', type: :criteria do
           when 'duration'
             # Whether the duration value/s are valid or not
             # TODO: Define a custom matcher!
-            it { expect(Array.wrap(condition['value']).to_set.subset?(DURATIONS.to_set)).to be(true) }
+            it { expect(Array.wrap(condition['value']).to_set.subset?(HOUSING_DURATIONS.to_set)).to be(true) }
             it { expect(%w(in? == !=)).to include(condition['operator']) }
             it { expect(condition['value']).to be_a_kind_of(Array) } if condition['operator'] == 'in?'
             it { expect(condition['value']).to be_a_kind_of(String) } if condition['operator'].in?(%w(== !=))

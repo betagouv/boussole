@@ -3,8 +3,8 @@
 
 #
 # Class PublicService provides a representation of an institution that provides one or more
-#   services to young people. Scope includes cooperatives, associations, territorial collectivities,
-#   unions, etc.
+# services to young people. Scope includes cooperatives, associations, territorial collectivities,
+# unions, etc.
 #
 # @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
 #

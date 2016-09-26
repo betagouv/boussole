@@ -2,7 +2,12 @@
 # frozen_string_literal: true
 
 #
-# TODO: Add documentation.
+# Class ProximityService provides the representation of a brick n' mortar, meat space transaction between an
+# <tt>usager</tt> and a {PublicService}'s professional, offered to the <tt>usager</tt> by the {PublicService}.
+#
+# @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
+#
+# TODO: Rename to {ProximityService}
 #
 
 #

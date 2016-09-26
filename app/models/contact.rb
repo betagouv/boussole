@@ -2,7 +2,9 @@
 # frozen_string_literal: true
 
 #
-# TODO: Add documentation.
+# @deprecated Worthless.
+#
+# TODO: Get rid of (use a {Struct} for sending contact emails).
 #
 
 #
@@ -23,6 +25,7 @@
 class Contact < ApplicationRecord
   #
   # @!attribute [rw] email_or_phone
-  #   @return [String] Email or phone the user wants to be contacted with.
+  # @return [String] Email or phone the user wants to be contacted with.
+  #
   attr_accessor :email_or_phone
 end

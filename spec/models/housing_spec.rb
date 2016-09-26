@@ -7,7 +7,7 @@ RSpec.describe Housing, type: :model do
       subject { build(:housing, :housing) }
 
       it { is_expected.to validate_presence_of(:duration) }
-      it { is_expected.to validate_inclusion_of(:duration).in_array(DURATIONS) }
+      it { is_expected.to validate_inclusion_of(:duration).in_array(HOUSING_DURATIONS) }
 
       it { is_expected.to validate_presence_of(:housing_city) }
     end

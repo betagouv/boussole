@@ -2,7 +2,10 @@
 # frozen_string_literal: true
 
 #
-# TODO: Add documentation.
+# Class ExerciseScope provides a polymorphic proxy to relate {SocialRight}s to
+# excercisable models like {PublicService}s, {ServiceOffering}s and {Measure}s.
+#
+# @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
 #
 
 #

@@ -2,7 +2,11 @@
 # frozen_string_literal: true
 
 #
-# TODO: Add documentation.
+# Class Feature provides feature flips/toggles.
+#
+# @see http://martinfowler.com/articles/feature-toggles.html
+#
+# @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
 #
 
 #
