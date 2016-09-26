@@ -2,39 +2,6 @@
 # - 'Je sais ce que je veux faire'
 # - 'Je ne sais pas ce que je veux faire'
 
-# *sector*::         <tt>string</tt>
-# - 'Agriculture'
-# - 'Agroalimentaire - Alimentation'
-# - 'Animaux'
-# - 'Architecture - Aménagement intérieur'
-# - "Artisanat - Métiers d'art"
-# - 'Banque - Finance - Assurance'
-# - 'Bâtiment - Travaux publics'
-# - 'Biologie - Chimie'
-# - 'Commerce - Immobilier'
-# - 'Communication - Information'
-# - 'Culture - Spectacle'
-# - 'Défense - Sécurité - Secours'
-# - 'Droit'
-# - 'Edition - Imprimerie - Livre'
-# - 'Electronique - Informatique'
-# - 'Enseignement - Formation'
-# - 'Environnement - Nature - Nettoyage'
-# - 'Gestion - Audit - Ressources humaines'
-# - 'Hôtellerie - Restauration - Tourisme'
-# - 'Humanitaire'
-# - 'Industrie - Matériaux'
-# - 'Lettres - Sciences humaines'
-# - 'Mécanique - Maintenance'
-# - 'Numérique - Multimédia - Audiovisuel'
-# - 'Santé'
-# - 'Sciences - Maths - Physique'
-# - 'Secrétariat - Accueil'
-# - 'Social - Services à la personne'
-# - 'Soins - Esthétique - Coiffure'
-# - 'Sport - Animation'
-# - 'Transport - Logistique'
-
 # *experience*::     <tt>boolean</tt>
 # - true
 # - false
@@ -87,4 +54,310 @@
 # *apec*::           <tt>boolean</tt>
 # - true
 # - false
+apec-association-pour-l-emploi-des-cadres-3e48ecd0-4638-47a5-84e6-482bcd43de6a: # code  acteur A
+  ameliorer-mon-cv: # code offre de service A
+    # scenarios
+    -
+      # conditions for each scenario
+      -
+        attribute: "status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+      -
+        attribute: "age" # discriminant @see app/models/service_offering.rb
+        operator: ">=" # options are ==, >=, >, <, <=, in?
+        value: 22
+      -
+        attribute: "last_class" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Études supérieures"
+      -
+        attribute: "pole_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "cap_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "handicap" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
 
+  ameliorer-mon-projet-professionnel-en-atelier:
+    -
+      -
+        attribute: "awareness" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "experience" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: true
+      -
+        attribute: "status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+      -
+        attribute: "last_class" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Études supérieures"
+      -
+        attribute: "pole_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "cap_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "handicap" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+
+    
+  simuler-un-entretien-de-recrutement-en-ligne:
+   -
+      -
+        attribute: "awareness" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "experience" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: true
+      -
+        attribute: "status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+      -
+        attribute: "last_class" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Études supérieures"
+      -
+        attribute: "pole_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "cap_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "handicap" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+        
+  t-organiser-dans-ta-recherche-d-emploi:
+    -
+      -
+        attribute: "awareness" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+      -
+        attribute: "last_class" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Études supérieures"
+      -
+        attribute: "pole_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "cap_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "handicap" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false 
+
+  travailler-mon-projet-profesionnel-avec-un-conseiller:
+    -
+      - 
+        attribute: "awareness" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+      -
+        attribute: "last_class" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Études supérieures"
+      -
+        attribute: "pole_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "cap_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "handicap" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false 
+
+potentiel-ca-champagne-ardenne:
+  candidater-au-statut-etudiant-entrepreneur:
+    -
+      -
+        attribute: "awareness" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+      -
+        attribute: "last_class" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Études supérieures"
+        
+crij-centre-regional-d-information-jeunesse:
+  decouvrir-les-metiers-de-l-animation:
+    -
+      -
+        attribute: "awareness" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Autre"
+      -
+        attribute: "age" # discriminant @see app/models/service_offering.rb
+        operator: "<=" # options are ==, >=, >, <, <=, in?
+        value: 20
+      -
+        attribute: "pole_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "cap_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "mission locale" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+        
+  definir-ton-projet-professionel:
+    -
+      -
+        attribute: "awareness" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Autre"
+      -
+        attribute: "age" # discriminant @see app/models/service_offering.rb
+        operator: "<=" # options are ==, >=, >, <, <=, in?
+        value: 30
+      -
+        attribute: "pole_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "cap_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "mission locale" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+        
+  travailler-mon-cv-et-ma-lettre-de-motivation:
+    -
+      -
+        attribute: "awareness" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "experience" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Lycéen·ne"
+          - "Autre"
+      -
+        attribute: "age" # discriminant @see app/models/service_offering.rb
+        operator: "<=" # options are ==, >=, >, <, <=, in?
+        value: 30
+      -
+        attribute: "pole_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "cap_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "mission locale" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+
+  trouver-une-mission-de-service-civique:
+    -
+      -
+        attribute: "awareness" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Sans activité"
+          - "En formation"
+          - "Apprenti·e"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Autre"
+      -
+        attribute: "age" # discriminant @see app/models/service_offering.rb
+        operator: "<=" # options are ==, >=, >, <, <=, in?
+        value: 26
+      -
+        attribute: "pole_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "cap_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "mission locale" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
