@@ -3,12 +3,12 @@
 .l-container-narrow
   .l-content
     %section.form
-      %legend Quelle phrase décrit le mieux mon projet ?
+      %legend Quelle phrase décrit le mieux mon besoin ?
 
       = simple_form_for(@project, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
         = f.error_notification
 
-        = f.input_field :knowledge, collection: KNOWLEDGE_QUESTIONS,
+        = f.input_field :awareness, collection: AWARENESSES,
                                     label_method: :to_s,
                                     value_method: :to_s,
                                     as: :radio_buttons

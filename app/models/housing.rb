@@ -2,7 +2,10 @@
 # frozen_string_literal: true
 
 #
-# TODO: Add documentation.
+# Class Housing provides the representation of a housing project/need and its corresponding discriminant criterias.
+# Discriminant criterias are those determining the applicability of services to target audiences.
+#
+# @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
 #
 
 #
@@ -33,13 +36,14 @@ class Housing < ApplicationRecord
 
   #
   # @!attribute [rw] current_step
-  #   @return [Symbol] Current state in the housing project construction.
+  # @return [Symbol] Current state in the housing project construction.
+  #
   attr_accessor :current_step
 
   with_options if: -> { required_for_step?(:housing) } do |step|
     step.validates :duration,
                    presence: true,
-                   inclusion: { in: DURATIONS }
+                   inclusion: { in: HOUSING_DURATIONS }
 
     step.validates :housing_city, presence: true
   end

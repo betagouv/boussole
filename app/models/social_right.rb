@@ -2,7 +2,10 @@
 # frozen_string_literal: true
 
 #
-# TODO: Add documentation.
+# Class SocialRight provides the representation of a social right actionable through {ServiceOfferings}s and {Measure}s,
+# wheathey they're provided by {PublicService}s or standalone.
+#
+# @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
 #
 
 #

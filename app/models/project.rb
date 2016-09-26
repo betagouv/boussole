@@ -2,7 +2,12 @@
 # frozen_string_literal: true
 
 #
-# TODO: Add documentation.
+# Class Training provides the representation of a training project/need and its corresponding discriminant criterias.
+# Discriminant criterias are those determining the applicability of services to target audiences.
+#
+# @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
+#
+# TODO: Rename to {Training}
 #
 
 #
@@ -36,7 +41,7 @@
 #
 class Project < ApplicationRecord
   STEPS = %i(
-    knowledge
+    awareness
     formation
     profile
     inscriptions
@@ -48,7 +53,7 @@ class Project < ApplicationRecord
   attr_accessor :current_step
 
   with_options if: -> { required_for_step?(:knowledge) } do |step|
-    step.validates :knowledge, presence: true
+    step.validates :awareness, presence: true
   end
 
   with_options if: -> { required_for_step?(:formation) } do |step|

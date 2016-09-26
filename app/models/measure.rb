@@ -2,7 +2,13 @@
 # frozen_string_literal: true
 
 #
-# TODO: Add documentation.
+# Class DigitalService provides the representation of an online, dematerialised transaction between an
+# <tt>usager</tt> and a {PublicService}'s professional, offered to the <tt>usager</tt> by the {PublicService},
+# or between the <tt>usager</tt> and the {DigitalService} itself, mediationless.
+#
+# @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
+#
+# TODO: Rename to {DigitalService}
 #
 
 #
