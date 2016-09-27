@@ -3,15 +3,10 @@
 .l-container-wide
   .l-content
     %section.text-center
-      %h1 Boussole des droits
+      %h1 Boussole
 
       %h3
-        Accède au conseil qualifié d'un·e professionnel·le,
-
-        - if feature?(:working) || feature?(:training) || feature?(:healthcaring)
-          près de chez toi,
-
-        pour t'aider
+        Accède au conseil garanti d'un·e professionnel·le pour t'aider
 
         - if feature?(:training)
           dans tes projets de formation
@@ -20,18 +15,14 @@
           à trouver une solution pour te loger
 
         - if feature?(:working)
-          dans tes projets d'activité
+          à trouver un emploi
 
         - if feature?(:healthcaring)
           à trouver une solution pour te soigner
 
     %section.callout
       - if feature?(:working)
-        .col-md-2.col-md-offset-1
-          .thumbnail
-            = image_tag('work.png')
-            .caption
-              %h5 Travailler
+        = link_to('Commencer !', workings_path, method: :post, class: 'btn btn-new btn-lg')
 
       - if feature?(:training)
         .col-md-2

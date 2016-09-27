@@ -1,13 +1,13 @@
 # encoding: utf-8
 # frozen_string_literal: true
 
-module Housings
+module Workings
   class ServiceOfferingsController < ApplicationController
-    require_feature :housing
+    require_feature :working
 
-    # GET /housings/1/service_offerings/1
+    # GET /workings/1/service_offerings/1
     def show
-      @housing          = Housing.find(params[:housing_id])
+      @working          = Working.find(params[:working_id])
       @service_offering = ServiceOffering.friendly.find(params[:id])
       @public_service   = @service_offering.public_service
     end

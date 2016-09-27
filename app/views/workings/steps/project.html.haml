@@ -1,0 +1,38 @@
+-# coding: utf-8
+
+.l-container-narrow
+  .l-content
+    %section.form
+      %legend Ton projet
+
+      = simple_form_for(@working, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
+        = f.error_notification
+
+        = f.input :sector, label: "Secteur d'activité",
+                           include_blank: false,
+                           prompt: 'Sélectionne une option',
+                           collection: SECTORS,
+                           label_method: :to_s,
+                           value_method: :to_s,
+                           as: :select
+
+        = f.input :experience, label: "J'ai déjà une expérience dans ce secteur",
+                               as: :radio_buttons
+
+        = f.input :duration, label: 'Pour combien de temps veux-je travailler ?',
+                             include_blank: false,
+                             prompt: 'Sélectionne une option',
+                             collection: WORKING_DURATIONS,
+                             label_method: :to_s,
+                             value_method: :to_s,
+                             as: :select
+
+        = f.input :engagement, label: 'Combien de temps puis-je y consacrer ?',
+                               include_blank: false,
+                               prompt: 'Sélectionne une option',
+                               collection: ENGAGEMENTS,
+                               label_method: :to_s,
+                               value_method: :to_s,
+                               as: :select
+
+        = f.button :submit, 'Continuer', class: 'btn btn-new'

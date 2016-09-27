@@ -73,6 +73,7 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'capybara-screenshot'
   gem 'codeclimate-test-reporter'
   gem 'database_cleaner'
   gem 'poltergeist'

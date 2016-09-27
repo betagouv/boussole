@@ -1,0 +1,43 @@
+-# coding: utf-8
+
+.l-container-narrow
+  .l-content
+    %section.form
+      %legend Ta situation
+
+      = simple_form_for(@working, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
+        = f.error_notification
+
+        = f.input :status, label: "Quelle est ma situation aujourd'hui ?",
+                           include_blank: false,
+                           prompt: 'Sélectionne une option',
+                           collection: STATUSES,
+                           label_method: :to_s,
+                           value_method: :to_s,
+                           as: :select
+
+        = f.input :age, label: 'Quel est mon âge ?',
+                        include_blank: false,
+                        prompt: 'Sélectionne une option',
+                        collection: 16..30,
+                        label_method: :to_i,
+                        value_method: :to_i,
+                        as: :select
+
+        = f.input :handicap, label: 'Suis-je en situation de handicap ?',
+                             as: :radio_buttons
+
+        = f.input :last_class, label: 'Dernières études suivies',
+                               include_blank: false,
+                               prompt: 'Sélectionne une option',
+                               collection: LAST_CLASSES,
+                               label_method: :to_s,
+                               value_method: :to_s,
+                               as: :select
+
+        = f.input :city, label: 'Ville de résidence',
+                         collection: CITIES,
+                         include_blank: false,
+                         input_html: { rel: 'autocomplete' }
+
+        = f.button :submit, 'Continuer', class: 'btn btn-new'

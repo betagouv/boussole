@@ -40,7 +40,7 @@ class Feature < ApplicationRecord
           description: 'Training scenarios.'
 
   feature :housing,
-          default: true,
+          default: false,
           description: 'Housing scenarios.'
 
   feature :traveling,
