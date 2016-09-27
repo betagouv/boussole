@@ -504,7 +504,7 @@ pole-emploi:
         operator: "==" # options are ==, >=, >, <, <=, in?
         value: "Sans activité"
       -
-        attribute: "mission locale" # discriminant @see app/models/service_offering.rb
+        attribute: "mission_locale" # discriminant @see app/models/service_offering.rb
         operator: "==" # options are ==, >=, >, <, <=, in?
         value: false
 
@@ -519,7 +519,7 @@ pole-emploi:
         operator: "==" # options are ==, >=, >, <, <=, in?
         value: "Sans activité"
       -
-        attribute: "mission locale" # discriminant @see app/models/service_offering.rb
+        attribute: "mission_locale" # discriminant @see app/models/service_offering.rb
         operator: "==" # options are ==, >=, >, <, <=, in?
         value: false
 
@@ -538,7 +538,7 @@ pole-emploi:
         operator: "==" # options are ==, >=, >, <, <=, in?
         value: "Sans activité"
       -
-        attribute: "mission locale" # discriminant @see app/models/service_offering.rb
+        attribute: "mission_locale" # discriminant @see app/models/service_offering.rb
         operator: "==" # options are ==, >=, >, <, <=, in?
         value: false
       -
