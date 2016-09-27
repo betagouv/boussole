@@ -37,7 +37,7 @@ situation %(
       choose('Non')
 
       # Duration
-      select('1 an', from: 'Pour combien de temps veux-je travailler ?')
+      select('1 an', from: 'Je cherche un emploi pour…')
 
       # Engagement
       select('Mi-temps', from: 'Combien de temps puis-je y consacrer ?')

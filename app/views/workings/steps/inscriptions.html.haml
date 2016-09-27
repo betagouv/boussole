@@ -3,7 +3,7 @@
 .l-container-narrow
   .l-content
     %section.form
-      %legend T'as-tu déjà inscrit à la/au…
+      %legend Es-tu déjà inscrit à la/au…
 
       = simple_form_for(@working, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
         = f.error_notification
