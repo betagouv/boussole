@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160926092813) do
+ActiveRecord::Schema.define(version: 20160927061437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -128,20 +128,20 @@ ActiveRecord::Schema.define(version: 20160926092813) do
   create_table "workings", force: :cascade do |t|
     t.string   "awareness"
     t.string   "sector"
-    t.boolean  "experience"
+    t.boolean  "experience",     default: false
     t.string   "duration"
     t.string   "engagement"
     t.string   "status"
     t.integer  "age"
-    t.boolean  "handicap"
+    t.boolean  "handicap",       default: false
     t.string   "last_class"
     t.string   "city"
-    t.boolean  "pole_emploi"
-    t.boolean  "mission_locale"
-    t.boolean  "cap_emploi"
-    t.boolean  "apec"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.boolean  "pole_emploi",    default: false
+    t.boolean  "mission_locale", default: false
+    t.boolean  "cap_emploi",     default: false
+    t.boolean  "apec",           default: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
   add_foreign_key "exercise_scopes", "social_rights"
