@@ -404,6 +404,44 @@ mission-locale-de-reims:
           - "Collège"
           - "Lycée"
 
+  confirmer-ton-projet-professionnel:
+    -
+      -
+        attribute: "awareness" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "experience" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "false"
+      -
+        attribute: "status" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: 
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "age" # discriminant @see app/models/service_offering.rb
+        operator: "<=" # options are ==, >=, >, <, <=, in?
+        value: 25
+      -
+        attribute: "age" # discriminant @see app/models/service_offering.rb
+        operator: ">=" # options are ==, >=, >, <, <=, in?
+        value: 18
+      -
+        attribute: "last_class" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Autre"
+
   acceder-a-des-offres-d-emploi-adaptees-a-ton-projet:
     -
       -
