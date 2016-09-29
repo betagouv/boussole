@@ -676,3 +676,32 @@ afpa
           - "Autre"
           - "Études supérieures"
           
+centre-d-information-et-de-recrutement-des-armees-cirfa-de-reims
+  t-engager-dans-l-armee-et-te-professionnaliser
+    -
+      -
+        attribute: "awareness" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value: 
+          - "Sans activité
+      -
+        attribute: "duration" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "+ d'1 an"
+      -
+        attribute: "last_class" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Collège"
+          - "Lycée"
+      -
+        attribute: "age" # discriminant @see app/models/service_offering.rb
+        operator: "<=" # options are ==, >=, >, <, <=, in?
+        value: 30
+      -
+          
