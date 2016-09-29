@@ -416,7 +416,7 @@ mission-locale-de-reims:
         value: "false"
       -
         attribute: "status" # discriminant @see app/models/service_offering.rb
-        operator: "==" # options are ==, >=, >, <, <=, in?
+        operator: "in?" # options are ==, >=, >, <, <=, in?
         value: 
           - "Sans activité"
           - "Étudiant·e"
@@ -646,3 +646,33 @@ pole-emploi:
         value:
           - "+ d'1 an"
           - "1 an"
+
+afpa
+  comprendre-comment-marche-la-formation-professionnelle
+    -
+      -
+        attribute: "awareness" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value: 
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Autre"
+      -
+        attribute: "duration" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "+ d'1 an"
+      -
+        attribute: "last_class" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Autre"
+          - "Études supérieures"
+          
