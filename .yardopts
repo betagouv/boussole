@@ -1,0 +1,6 @@
+'app/models/**/*.rb'
+'app/operations/**/*.rb'
+--private
+--readme README.md
+--output-dir doc/app/
+--markup markdown

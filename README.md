@@ -5,8 +5,18 @@
 
 ### Génération du modèle entité-association (ERD)
 
-  	bundle exec erd
+```
+bundle exec erd
+```
 
 ### Génération d'une nouvelle version
 
-    bundle exec rake version:bump:minor
+```
+bundle exec rake version:bump:minor
+```
+
+### Génération de la documentation
+
+```
+bundle exec yardoc
+```

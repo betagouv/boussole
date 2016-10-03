@@ -80,3 +80,8 @@ group :test do
   gem 'rspec_junit_formatter'
   gem 'shoulda-matchers', '~> 3.1'
 end
+
+group :doc do
+  gem 'yard'
+  gem 'yard-activerecord'
+end
