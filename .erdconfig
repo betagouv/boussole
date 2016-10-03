@@ -1,7 +1,7 @@
 attributes:
   - content
   - foreign_key
-disconnected: false
+disconnected: true
 filename: doc/models
 filetype: pdf
 indirect: true
