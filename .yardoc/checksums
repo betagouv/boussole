@@ -14,4 +14,3 @@ app/operations/housing/show.rb 9fab5de05c8397d2b8af09fd907e88318c0dcb52
 app/operations/working/show.rb 86d422d290fceca6b24429d0db01e89257684002
 app/operations/housing/service_offerings.rb 099b456ceb63511246612e51ed804ab6cd287994
 app/operations/working/service_offerings.rb 014d72be634719c3e62c875033095f270401a9cf
-CHANGELOG.md 0e7b8fc797ad549c61f876f6539c4611ca17d993
