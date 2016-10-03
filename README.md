@@ -12,7 +12,8 @@ bundle exec erd
 ### Génération d'une nouvelle version
 
 ```
-bundle exec rake version:bump:minor
+git tag -a vx.y.z
+git push origin --tags
 ```
 
 ### Génération de la documentation

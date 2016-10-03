@@ -192,7 +192,6 @@ GEM
     formatador (0.2.5)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
-    git-version-bump (0.15.1)
     github_api (0.14.5)
       addressable (~> 2.4.0)
       descendants_tracker (~> 0.0.4)
@@ -551,7 +550,6 @@ DEPENDENCIES
   flip
   foreman
   friendly_id
-  git-version-bump
   github_changelog_generator
   guard-bower
   guard-bundler
