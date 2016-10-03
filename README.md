@@ -21,3 +21,9 @@ git push origin --tags
 ```
 bundle exec yardoc
 ```
+
+### Génération du changelog
+
+```
+bundle exec rake changelog
+```

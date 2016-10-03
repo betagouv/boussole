@@ -1,5 +1,21 @@
 # Change Log
 
+## [v1.1.0](https://github.com/sgmap/boussole/tree/v1.1.0) (2016-10-03)
+[Full Changelog](https://github.com/sgmap/boussole/compare/v1.0.0...v1.1.0)
+
+**Merged pull requests:**
+
+- Permettre aux jeunes d'avoir des résultats emploi « actionables » 1/2 [\#38](https://github.com/sgmap/boussole/pull/38) ([maukoquiroga](https://github.com/maukoquiroga))
+- Nous permettre à nous-mêmes de contribuer à la définition des règles de matching d'offres de service \(\[accès à l'\]emploi\) [\#37](https://github.com/sgmap/boussole/pull/37) ([maukoquiroga](https://github.com/maukoquiroga))
+- Permettre aux jeunes de visiter la Boussole en utilisant l'URL des flyers [\#36](https://github.com/sgmap/boussole/pull/36) ([maukoquiroga](https://github.com/maukoquiroga))
+- Nous permettre à nous-mêmes de contribuer à la définition des règles de matching d'offres de service 3/3 [\#35](https://github.com/sgmap/boussole/pull/35) ([maukoquiroga](https://github.com/maukoquiroga))
+- Configuration du service d'analytiques Piwik [\#34](https://github.com/sgmap/boussole/pull/34) ([maukoquiroga](https://github.com/maukoquiroga))
+- Configuration du service d'analytiques Hotjar [\#33](https://github.com/sgmap/boussole/pull/33) ([maukoquiroga](https://github.com/maukoquiroga))
+- Implémentation d'une outil de traçage des anomalies [\#32](https://github.com/sgmap/boussole/pull/32) ([maukoquiroga](https://github.com/maukoquiroga))
+- Nous permettre à nous-mêmes de contribuer à la définition des règles de matching d'offres de service 1/3 [\#31](https://github.com/sgmap/boussole/pull/31) ([maukoquiroga](https://github.com/maukoquiroga))
+- Nous permettre à nous-mêmes de contribuer à la définition des règles de matching d'offres de service 2/3 [\#30](https://github.com/sgmap/boussole/pull/30) ([maukoquiroga](https://github.com/maukoquiroga))
+- Le nom des acteurs ne s'affiche pas sur la page profil des offres de service. [\#29](https://github.com/sgmap/boussole/pull/29) ([maukoquiroga](https://github.com/maukoquiroga))
+
 ## [v1.0.0](https://github.com/sgmap/boussole/tree/v1.0.0) (2016-09-06)
 **Closed issues:**
 
