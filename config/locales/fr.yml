@@ -92,6 +92,18 @@ fr:
         send: Envoyer !
         public-service-infos: Coordonnées de l'acteur
 
+  workings:
+    show:
+      heading: Les resultats de ta recherche
+      service_offerings: Des professionnel·le·s peuvent t'aider à
+      discover: Découvrir
+    service_offerings:
+      show:
+        contact-me: Être contacté·e
+        want-to-be-contacted: Souhaites-tu que cette ou ce professionnel·le te contacte suite à ta recherche ?
+        send: Envoyer !
+        public-service-infos: Coordonnées de l'acteur
+
   agents:
     public_services:
       index:

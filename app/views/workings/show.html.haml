@@ -1,0 +1,29 @@
+-# coding: utf-8
+
+.l-container-wide
+  .l-content
+    %section.results
+      %header.results-header
+        %h1= t('.heading')
+
+      %section.result-list
+        %header.result-list-header
+          %h2.divider= t('.service_offerings')
+
+        - @service_offerings.each do |service_offering|
+          .result
+            = link_to(working_service_offering_path(@working, service_offering)) do
+              %article.result-card
+                %header.result-header
+                  %h3= service_offering.title
+
+                  %p
+                    #{ServiceOffering.human_attribute_name(:updated_at)} :
+                    %time{ datetime: l(service_offering.updated_at.to_date, format: :html5) }
+                      = l(service_offering.updated_at.to_date)
+
+                %section.result-content
+                  %p= truncate(service_offering.description, length: 200)
+
+                %footer.result-footer
+                  = link_to(t('.discover'), working_service_offering_path(@working, service_offering), class: 'btn btn-new')

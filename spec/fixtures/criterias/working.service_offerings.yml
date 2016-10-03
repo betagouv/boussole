@@ -1,0 +1,29 @@
+apec:
+  ameliorer-mon-cv:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 22
+      -
+        attribute: "last_class"
+        operator: "=="
+        value: "Études supérieures"
+      -
+        attribute: "pole_emploi"
+        operator: "=="
+        value: false
+      -
+        attribute: "cap_emploi"
+        operator: "=="
+        value: false
+      -
+        attribute: "handicap"
+        operator: "=="
+        value: false

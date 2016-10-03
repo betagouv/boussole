@@ -413,11 +413,11 @@ mission-locale-de-reims:
       -
         attribute: "experience" # discriminant @see app/models/service_offering.rb
         operator: "==" # options are ==, >=, >, <, <=, in?
-        value: "false"
+        value: false
       -
         attribute: "status" # discriminant @see app/models/service_offering.rb
         operator: "in?" # options are ==, >=, >, <, <=, in?
-        value: 
+        value:
           - "Sans activité"
           - "Étudiant·e"
           - "Lycéen·ne"
@@ -647,8 +647,8 @@ pole-emploi:
           - "+ d'1 an"
           - "1 an"
 
-afpa
-  comprendre-comment-marche-la-formation-professionnelle
+afpa:
+  comprendre-comment-marche-la-formation-professionnelle:
     -
       -
         attribute: "awareness" # discriminant @see app/models/service_offering.rb
@@ -657,16 +657,15 @@ afpa
       -
         attribute: "status" # discriminant @see app/models/service_offering.rb
         operator: "in?" # options are ==, >=, >, <, <=, in?
-        value: 
+        value:
           - "Sans activité"
           - "Étudiant·e"
           - "Lycéen·ne"
           - "Autre"
       -
         attribute: "duration" # discriminant @see app/models/service_offering.rb
-        operator: "in?" # options are ==, >=, >, <, <=, in?
-        value:
-          - "+ d'1 an"
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "+ d'1 an"
       -
         attribute: "last_class" # discriminant @see app/models/service_offering.rb
         operator: "in?" # options are ==, >=, >, <, <=, in?
@@ -675,9 +674,9 @@ afpa
           - "Lycée"
           - "Autre"
           - "Études supérieures"
-          
-centre-d-information-et-de-recrutement-des-armees-cirfa-de-reims
-  t-engager-dans-l-armee-et-te-professionnaliser
+
+centre-d-information-et-de-recrutement-des-armees-cirfa-de-reims:
+  t-engager-dans-l-armee-et-te-professionnaliser:
     -
       -
         attribute: "awareness" # discriminant @see app/models/service_offering.rb
@@ -685,14 +684,12 @@ centre-d-information-et-de-recrutement-des-armees-cirfa-de-reims
         value: "Je ne sais pas ce que je veux faire"
       -
         attribute: "status" # discriminant @see app/models/service_offering.rb
-        operator: "in?" # options are ==, >=, >, <, <=, in?
-        value: 
-          - "Sans activité
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Sans activité"
       -
         attribute: "duration" # discriminant @see app/models/service_offering.rb
-        operator: "in?" # options are ==, >=, >, <, <=, in?
-        value:
-          - "+ d'1 an"
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "+ d'1 an"
       -
         attribute: "last_class" # discriminant @see app/models/service_offering.rb
         operator: "in?" # options are ==, >=, >, <, <=, in?
@@ -703,5 +700,3 @@ centre-d-information-et-de-recrutement-des-armees-cirfa-de-reims
         attribute: "age" # discriminant @see app/models/service_offering.rb
         operator: "<=" # options are ==, >=, >, <, <=, in?
         value: 30
-      -
-          

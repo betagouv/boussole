@@ -1,0 +1,16 @@
+-# coding: utf-8
+
+.l-container-narrow
+  .l-content
+    %section.form
+      %legend Quelle phrase décrit le mieux ton besoin ?
+
+      = simple_form_for(@working, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
+        = f.error_notification
+
+        = f.input_field :awareness, collection: AWARENESSES,
+                                    label_method: :to_s,
+                                    value_method: :to_s,
+                                    as: :radio_buttons
+
+        = f.button :submit, 'Continuer', class: 'btn btn-new'

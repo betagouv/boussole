@@ -3,67 +3,35 @@
 .l-container-wide
   .l-content
     %section.text-center
-      %h1 Boussole des droits
+      %h1 Boussole
 
       %h3
-        Accède au conseil qualifié d'un·e professionnel·le,
-
-        - if feature?(:working) || feature?(:training) || feature?(:healthcaring)
-          près de chez toi,
-
-        pour t'aider
+        Des professionnel·le·s pour t'aider à
 
         - if feature?(:training)
-          dans tes projets de formation
+          trouver une formation
 
         - if feature?(:housing)
-          à trouver une solution pour te loger
+          trouver un logement
 
         - if feature?(:working)
-          dans tes projets d'activité
+          trouver un emploi
 
         - if feature?(:healthcaring)
-          à trouver une solution pour te soigner
+          prendre soin de ta santé
 
     %section.callout
       - if feature?(:working)
-        .col-md-2.col-md-offset-1
-          .thumbnail
-            = image_tag('work.png')
-            .caption
-              %h5 Travailler
+        = link_to('Commencer !', workings_path, method: :post, class: 'btn btn-new')
 
       - if feature?(:training)
-        .col-md-2
-          = link_to(projects_path, method: :post) do
-            .thumbnail
-              = image_tag('education.png')
-              .caption
-                %h5 Me former
+        = link_to('Commencer !', trainings_path, method: :post, class: 'btn btn-new')
 
       - if feature?(:housing)
-        - if feature?(:working) || feature?(:training) || feature?(:traveling) || feature?(:healthcaring)
-          .col-md-2
-            .thumbnail
-              = link_to(housings_path, method: :post) do
-                = image_tag('housing.png')
-                .caption
-                  %h5 Me loger
-
-        - else
-          = link_to('Commencer !', housings_path, method: :post, class: 'btn btn-new btn-lg')
-
+        = link_to('Commencer !', housings_path, method: :post, class: 'btn btn-new')
 
       - if feature?(:traveling)
-        .col-md-2
-          .thumbnail
-            = image_tag('travel.png')
-            .caption
-              %h5 Partir à l'étranger
+        = link_to('Commencer !', travelings_path, method: :post, class: 'btn btn-new')
 
       - if feature?(:healthcaring)
-        .col-md-2
-          .thumbnail
-            = image_tag('health.png')
-            .caption
-              %h5 Me soigner
+        = link_to('Commencer !', healthcarings_path, method: :post, class: 'btn btn-new')

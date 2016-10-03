@@ -1,0 +1,51 @@
+-# coding: utf-8
+
+.l-container-wide
+  %aside.l-sidebar
+    %section.contact
+      %header.contact-header
+        %h2= t('.contact-me')
+
+      %p= t('.want-to-be-contacted')
+
+      = simple_form_for(Contact.new, url: contact_path, method: :post, wrapper: :vertical_form) do |f|
+        .form-inputs
+          = f.input_field :email_or_phone, placeholder: 'Email ou téléphone'
+
+        .form-actions
+          = link_to(t('.send'), working_service_offering_path(@working, @service_offering), class: 'btn btn-new')
+
+  .l-content.l-with-sidebar
+    %article.profile
+      %header.profile-title
+        %h1= @service_offering.title
+
+      %hr
+
+      %section.profile-details
+        %p
+          = @service_offering.description
+
+          .profile-definition
+            %dt= ServiceOffering.human_attribute_name(:updated_at)
+            %dd
+              %time{ datetime: l(@service_offering.updated_at.to_date, format: :html5) }
+                = l(@service_offering.updated_at.to_date)
+
+      %section.profile-details
+        %header.profile-details-header
+          %h2.divider= t('.public-service-infos')
+
+        %dl
+          .profile-definition
+            %dt= PublicService.human_attribute_name(:title)
+            %dd= @public_service.title
+
+          .profile-definition
+            %dt= PublicService.human_attribute_name(:description)
+            %dd= @public_service.description
+
+          - if @public_service.url
+            .profile-definition
+              %dt= PublicService.human_attribute_name(:url)
+              %dd= link_to(@public_service.url, @public_service.url, target: '_blank')
