@@ -63,9 +63,6 @@ GEM
     capybara-email (2.5.0)
       capybara (~> 2.4)
       mail
-    capybara-screenshot (1.0.13)
-      capybara (>= 1.0, < 3)
-      launchy
     choice (0.2.0)
     cliver (0.3.2)
     codeclimate-test-reporter (0.6.0)
@@ -472,7 +469,6 @@ DEPENDENCIES
   byebug
   capybara
   capybara-email
-  capybara-screenshot
   codeclimate-test-reporter
   coffee-rails
   database_cleaner

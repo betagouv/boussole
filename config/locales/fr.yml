@@ -110,7 +110,6 @@ fr:
 
   views:
     results:
-      header: Resultats de ta recherche
       result_list:
         header: Des professionnel·le·s peuvent t'aider à
         result_card:

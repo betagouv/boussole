@@ -4,12 +4,15 @@
   .l-content
     %section.results
       %header.results-header
-        %h1= t('views.results.header')
+        %h1
+          Je suis #{project.status.downcase} et je cherche un
+          = t("activerecord.models.#{project.class.name.downcase}", count: 1).downcase
+
 
       - if @service_offerings.any?
         %section.result-list
           %header.result-list-header
-            %h2.divider
+            %h1.divider
               = t('views.results.result_list.header')
 
           - @service_offerings.each do |service_offering|
@@ -17,15 +20,8 @@
               = link_to(send("#{project.class.name.underscore}_service_offering_path", project, service_offering)) do
                 %article.result-card
                   %header.result-header
-                    %h3= service_offering.title
-
-                    %p
-                      = t("activerecord.attributes.#{project.class.name.underscore}.updated_at") + ' :'
-                      %time{ datetime: l(service_offering.updated_at.to_date, format: :html5) }
-                        = l(service_offering.updated_at.to_date)
-
-                  %section.result-content
-                    %p= truncate(service_offering.description, length: 200)
+                    %h1.text-center{ style: 'font-weight: 500;' }
+                      = service_offering.title
 
                   %footer.result-footer
                     = link_to t('views.results.result_list.result_card.footer'),

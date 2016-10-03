@@ -55,4 +55,12 @@ class Feature < ApplicationRecord
   feature :talk_to_a_human,
           default: proc { rand(2).zero? },
           description: 'People will rather want to talk to a human.'
+
+  feature :service,
+          default: false,
+          description: 'End-to-end service experiment.'
+
+  feature :callme,
+          default: false,
+          description: 'End-to-end call-me experiment.'
 end

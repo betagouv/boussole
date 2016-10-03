@@ -4,7 +4,6 @@
 require 'capybara/rails'
 require 'capybara/email/rspec'
 require 'capybara/poltergeist'
-# require 'capybara-screenshot/rspec'
 
 Capybara.javascript_driver      = :poltergeist
 Capybara.asset_host             = "http://localhost:#{ENV['PORT'] || 5000}"

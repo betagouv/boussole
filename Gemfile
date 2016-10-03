@@ -81,7 +81,6 @@ end
 group :test do
   gem 'capybara'
   gem 'capybara-email'
-  gem 'capybara-screenshot'
   gem 'codeclimate-test-reporter'
   gem 'database_cleaner'
   gem 'poltergeist'

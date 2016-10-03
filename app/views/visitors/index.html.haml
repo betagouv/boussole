@@ -24,7 +24,15 @@
 
     %section.callout
       - if feature?(:working)
-        = link_to('Commencer !', workings_path, method: :post, class: 'btn btn-new')
+        = link_to(workings_path, method: :post, class: 'btn btn-new') do
+          - if feature?(:service)
+            Trouve qui va t’aider
+
+          - elsif feature?(:callme)
+            Trouve le bon contact
+
+          - else
+            Commencer !
 
       - if feature?(:training)
         = link_to('Commencer !', trainings_path, method: :post, class: 'btn btn-new')
