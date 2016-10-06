@@ -9,8 +9,6 @@ RSpec.describe ServiceOffering, type: :model do
   it { is_expected.to belong_to(:public_service) }
 
   it { is_expected.to validate_presence_of(:title) }
-  it { is_expected.to validate_presence_of(:email) }
-  it { is_expected.to validate_presence_of(:response_time_upper_bound) }
   it { is_expected.to validate_uniqueness_of(:slug).scoped_to(:public_service_id) }
   it { is_expected.to validate_presence_of(:public_service) }
 

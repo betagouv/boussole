@@ -26,7 +26,6 @@
 # *email*::                     <tt>string</tt>
 # *phone*::                     <tt>string</tt>
 # *url*::                       <tt>string</tt>
-# *external*::                  <tt>boolean</tt>
 # *slug*::                      <tt>string</tt>
 # *response_time_upper_bound*:: <tt>integer</tt>
 #
@@ -60,7 +59,6 @@ class ServiceOffering < ApplicationRecord
            through: :exercise_scopes
 
   validates :title,
-            :email,
             :public_service,
             presence: true
 
@@ -78,4 +76,6 @@ class ServiceOffering < ApplicationRecord
   delegate :title,
            to: :public_service,
            prefix: true
+
+  scope :actionable, -> { where.not(email: nil, response_time_upper_bound: nil) }
 end

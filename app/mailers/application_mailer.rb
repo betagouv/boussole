@@ -5,7 +5,7 @@ class ApplicationMailer < ActionMailer::Base
   layout('mailer')
 
   default(
-    from: 'from@example.com',
+    from: ENV['CONTACT_EMAIL'],
     template_path: proc { "mailers/#{self.class.name.underscore}" }
   )
 end

@@ -1,0 +1,22 @@
+Récapitulatif de votre mise en relation :
+
+- Contact : <%= @contact.email_or_phone %>
+- Service : <%= @service.title %>
+- <%= @service.class.human_attribute_name(:response_time_upper_bound) %> : <%= distance_of_time_in_words(@service.response_time_upper_bound.days) %>
+
+Récapitulatif du parcours :
+
+- <%= @dossier.class.human_attribute_name(:awareness) %> : <%= @dossier.awareness %>
+- <%= @dossier.class.human_attribute_name(:sector) %> : <%= @dossier.sector %>
+- <%= @dossier.class.human_attribute_name(:experience) %> : <%= t(@dossier.experience.to_s) %>
+- <%= @dossier.class.human_attribute_name(:duration) %> : <%= @dossier.duration %>
+- <%= @dossier.class.human_attribute_name(:engagement) %> : <%= @dossier.engagement %>
+- <%= @dossier.class.human_attribute_name(:status) %> : <%= @dossier.status %>
+- <%= @dossier.class.human_attribute_name(:age) %> : <%= @dossier.age %>
+- <%= @dossier.class.human_attribute_name(:handicap) %> : <%= t(@dossier.handicap.to_s) %>
+- <%= @dossier.class.human_attribute_name(:last_class) %> : <%= @dossier.last_class %>
+- <%= @dossier.class.human_attribute_name(:city) %> : <%= @dossier.city %>
+- <%= @dossier.class.human_attribute_name(:pole_emploi) %> : <%= t(@dossier.pole_emploi.to_s) %>
+- <%= @dossier.class.human_attribute_name(:mission_locale) %> : <%= t(@dossier.mission_locale.to_s) %>
+- <%= @dossier.class.human_attribute_name(:cap_emploi) %> : <%= t(@dossier.cap_emploi.to_s) %>
+- <%= @dossier.class.human_attribute_name(:apec) %> : <%= t(@dossier.apec.to_s) %>

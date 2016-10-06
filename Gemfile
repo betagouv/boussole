@@ -13,6 +13,7 @@ gem 'flip'
 gem 'friendly_id'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'maildown'
 gem 'puma'
 gem 'rails-i18n'
 gem 'sass-rails'
@@ -72,6 +73,7 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'capybara-email'
   gem 'capybara-screenshot'
   gem 'codeclimate-test-reporter'
   gem 'database_cleaner'

@@ -9,8 +9,10 @@
       %p= t('.want-to-be-contacted')
 
       = simple_form_for([@working, @service_offering, @contact], wrapper: :vertical_form) do |f|
+        = f.error_notification
+
         .form-inputs
-          = f.input_field :email_or_phone, placeholder: 'Email ou téléphone'
+          = f.input :email_or_phone
 
         .form-actions
           = f.submit(t('.send'), class: 'btn btn-new')
@@ -25,6 +27,10 @@
       %section.profile-details
         %p
           = @service_offering.description
+
+          .profile-definition
+            %dt= ServiceOffering.human_attribute_name(:response_time_upper_bound)
+            %dd= distance_of_time_in_words(@service_offering.response_time_upper_bound.days)
 
           .profile-definition
             %dt= ServiceOffering.human_attribute_name(:updated_at)

@@ -73,7 +73,6 @@ fr:
         email: Email
         phone: Téléphone
         url: Site web
-        external: Service numérique ?
         response_time_upper_bound: Délai garanti de réponse
         social_rights: Thématiques
         updated_at: Dernière actualisation
@@ -84,12 +83,15 @@ fr:
         public_service: Acteur
         social_rights: Thématiques
         updated_at: Dernière actualisation
+      contact:
+        email_or_phone: Email ou téléphone
 
   actioncontroller:
     notice:
       create: '%{model} créé·e avec succès'
       update: '%{model} modifié·e avec succès'
       destroy: '%{model} supprimé·e avec succès'
+      contact: 'Un·e professionnel·le va te contacter dans un délai de %{response_time} jours'
 
   layouts:
     application:

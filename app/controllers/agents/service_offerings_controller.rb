@@ -78,7 +78,6 @@ module Agents
           email: Parameters.string,
           phone: Parameters.string,
           url: Parameters.string,
-          external: Parameters.boolean,
           response_time_upper_bound: Parameters.integer,
           social_right_ids: Parameters.array(Parameters.string)
         )
