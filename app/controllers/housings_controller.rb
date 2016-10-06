@@ -6,7 +6,7 @@ class HousingsController < ApplicationController
 
   # GET /projects/1
   def show
-    @housing           = Housing::Show.call(params).model
+    @housing           = Housing.find(params[:id])
     @service_offerings = Housing::ServiceOfferings.present(params).scope
   end
 
