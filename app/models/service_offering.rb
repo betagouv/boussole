@@ -60,6 +60,7 @@ class ServiceOffering < ApplicationRecord
            through: :exercise_scopes
 
   validates :title,
+            :email,
             :public_service,
             presence: true
 

@@ -8,6 +8,9 @@ FactoryGirl.define do
     duration             WORKING_DURATIONS.first
     engagement           ENGAGEMENTS.first
     city                 CITIES.first
+    last_class           LAST_CLASSES.first
+    status               STATUSES.first
+    age                  { rand(0..123) }
 
     trait(:awareness)    { current_step(:awareness) }
     trait(:project)      { current_step(:project) }

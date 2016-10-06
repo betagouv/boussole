@@ -7,6 +7,7 @@ ruby '2.3.1'
 gem 'rails', '~> 4.2'
 gem 'pg'
 
+gem 'active_type'
 gem 'coffee-rails'
 gem 'flip'
 gem 'friendly_id'

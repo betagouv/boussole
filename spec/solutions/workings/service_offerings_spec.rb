@@ -81,11 +81,35 @@ situation %(
       # There're services offered to Chlotilde
       expect(page).to have_content('Améliorer mon CV')
 
-      # Chlotilde wants to be recontacted by a professional
+      # Chlotilde wants to discover what's the service about
       click_link('Découvrir')
-      fill_in('contact[email_or_phone]', with: 'chlotilde@contactez.moi')
 
-      # TODO: Implement contact.
+      # She wants to be recontacted
+      fill_in('contact[email_or_phone]', with: 'chlotilde@contactez.moi')
+      click_button('Envoyer !')
+
+      # She's notified she'll be contacted
+      expect(page)
+        .to(
+          have_content(
+            "Un·e professionnel·le va te contacter dans un délai de #{service_offering.response_time_upper_bound} jours"
+          )
+        )
+
+      # The professional receives an email...
+      open_email(service_offering.email)
+
+      # with all the infos required to change the young's life !
+      expect(current_email.from).to eq(ENV['CONTACT_EMAIL'])
+      expect(current_email.subject).to eq('Boussole : Un·e jeune veut être recontacté·e !')
+      expect(current_email.body).to have_content(service.awareness)
+      expect(current_email.body).to have_content(service.sector)
+      expect(current_email.body).to have_content(service.duration)
+      expect(current_email.body).to have_content(service.engagement)
+      expect(current_email.body).to have_content(service.city)
+      expect(current_email.body).to have_content(service.last_class)
+      expect(current_email.body).to have_content(service.status)
+      expect(current_email.body).to have_content(service.age)
     end
   end
 end

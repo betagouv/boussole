@@ -10,6 +10,7 @@ module Workings
       @working          = Working.find(params[:working_id])
       @service_offering = ServiceOffering.friendly.find(params[:id])
       @public_service   = @service_offering.public_service
+      @contact          = Contact.new
     end
   end
 end

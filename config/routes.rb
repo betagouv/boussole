@@ -10,24 +10,25 @@ Rails.application.routes.draw do
     resources(:measures)
   end
 
+  concern(:actionable) do |options|
+    resources(:steps, options.merge(only: %i(show update)))
+    resources(:service_offerings, options.merge(only: :show)) do
+      resources(:contacts, options.merge(only: %i(create), module: :service_offerings))
+    end
+  end
+
   # TODO: Rename to trainings
   resources(:projects, only: %i(show create)) do
-    resources(:steps, only: %i(show update), module: :projects)
+    concerns(:actionable, module: :projects)
   end
 
-  # TODO: Create a concern to DRY
   resources(:housings, only: %i(show create)) do
-    resources(:steps, only: %i(show update), module: :housings)
-    resources(:service_offerings, only: :show, module: :housings)
+    concerns(:actionable, module: :housings)
   end
 
-  # TODO: Create a concern to DRY
   resources(:workings, only: %i(show create)) do
-    resources(:steps, only: %i(show update), module: :workings)
-    resources(:service_offerings, only: :show, module: :workings)
+    concerns(:actionable, module: :workings)
   end
-
-  resources(:contacts, only: %i(show create))
 
   mount(Flip::Engine => '/flip')
 
