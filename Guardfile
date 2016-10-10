@@ -11,6 +11,7 @@ end
 
 guard :foreman do
   watch('Gemfile.lock')
+  watch('app/models/feature.rb')
   watch(%r{^(config|lib)/.+\.rb$})
 end
 
