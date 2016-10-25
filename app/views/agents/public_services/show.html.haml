@@ -35,6 +35,10 @@
             %dd= @public_service.url
 
           .profile-definition
+            %dt= PublicService.human_attribute_name(:response_time_upper_bound)
+            %dd= @public_service.response_time_upper_bound
+
+          .profile-definition
             %dt= PublicService.human_attribute_name(:social_rights)
             %dd= @public_service.social_right_names
 

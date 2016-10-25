@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927061437) do
+ActiveRecord::Schema.define(version: 20161006093650) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -92,29 +92,33 @@ ActiveRecord::Schema.define(version: 20160927061437) do
     t.string   "email"
     t.string   "phone"
     t.string   "url"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.string   "slug"
+    t.integer  "response_time_upper_bound"
   end
 
+  add_index "public_services", ["response_time_upper_bound"], name: "index_public_services_on_response_time_upper_bound", using: :btree
   add_index "public_services", ["slug"], name: "index_public_services_on_slug", unique: true, using: :btree
 
   create_table "service_offerings", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.integer  "public_service_id", null: false
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.integer  "public_service_id",         null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.string   "postal_address"
     t.string   "email"
     t.string   "phone"
     t.string   "url"
     t.boolean  "external"
     t.string   "slug"
+    t.integer  "response_time_upper_bound"
   end
 
   add_index "service_offerings", ["public_service_id", "slug"], name: "index_service_offerings_on_public_service_id_and_slug", unique: true, using: :btree
   add_index "service_offerings", ["public_service_id"], name: "index_service_offerings_on_public_service_id", using: :btree
+  add_index "service_offerings", ["response_time_upper_bound"], name: "index_service_offerings_on_response_time_upper_bound", using: :btree
 
   create_table "social_rights", force: :cascade do |t|
     t.string   "name",       null: false

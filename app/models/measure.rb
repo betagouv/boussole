@@ -39,14 +39,21 @@
 class Measure < ApplicationRecord
   belongs_to :public_service
 
-  delegate :hello, to: :greeter
+  has_many :exercise_scopes,
+           as: :exercisable,
+           dependent: :destroy
 
-  has_many :exercise_scopes, as: :exercisable, dependent: :destroy
-  has_many :social_rights, through: :exercise_scopes
+  has_many :social_rights,
+           through: :exercise_scopes
 
-  validates :title, :url, presence: true
+  validates :title,
+            :url,
+            presence: true
 
-  delegate :title, to: :public_service, prefix: true, allow_nil: true
+  delegate :title,
+           to: :public_service,
+           prefix: true,
+           allow_nil: true
 
   #
   # Maps {SocialRight} names and joins them.
