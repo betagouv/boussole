@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161006093649) do
+ActiveRecord::Schema.define(version: 20161006093650) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -92,11 +92,13 @@ ActiveRecord::Schema.define(version: 20161006093649) do
     t.string   "email"
     t.string   "phone"
     t.string   "url"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.string   "slug"
+    t.integer  "response_time_upper_bound"
   end
 
+  add_index "public_services", ["response_time_upper_bound"], name: "index_public_services_on_response_time_upper_bound", using: :btree
   add_index "public_services", ["slug"], name: "index_public_services_on_slug", unique: true, using: :btree
 
   create_table "service_offerings", force: :cascade do |t|

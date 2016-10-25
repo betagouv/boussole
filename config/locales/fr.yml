@@ -41,6 +41,7 @@ fr:
         email: Email
         phone: Téléphone
         url: Site web
+        response_time_upper_bound: Délai garanti de réponse
         social_rights: Thématiques
         service_offerings: Offres de service
         measures: Dispositifs

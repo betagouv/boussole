@@ -33,6 +33,7 @@ situation %(
         fill_in('Email', with: 'decrochage@acteur.fr')
         fill_in('Téléphone', with: '01 23 45 67 89')
         fill_in('Site web', with: 'https://decrochage.jeunes.gouv.fr')
+        fill_in('Délai garanti de réponse', with: 22)
         select('Emploi', from: 'Thématiques')
 
         click_button('Créer')

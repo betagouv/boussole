@@ -48,15 +48,35 @@ class ServiceOffering < ApplicationRecord
 
   friendly_id :title, use: :slugged
 
-  belongs_to :public_service, inverse_of: :service_offerings
+  belongs_to :public_service,
+             inverse_of: :service_offerings
 
-  has_many :exercise_scopes, as: :exercisable, dependent: :destroy
-  has_many :social_rights, through: :exercise_scopes
+  has_many :exercise_scopes,
+           as: :exercisable,
+           dependent: :destroy
 
-  validates :title, :response_time_upper_bound, :public_service, presence: true
-  validates :slug, uniqueness: { scope: :public_service_id }
+  has_many :social_rights,
+           through: :exercise_scopes
 
-  delegate :title, to: :public_service, prefix: true
+  validates :title,
+            :public_service,
+            presence: true
+
+  validates :response_time_upper_bound,
+            presence: true,
+            unless: ->(service) { service.public_service_response_time_upper_bound }
+
+  validates :slug,
+            uniqueness: { scope: :public_service_id }
+
+  delegate :title,
+           to: :public_service,
+           prefix: true
+
+  delegate :response_time_upper_bound,
+           to: :public_service,
+           prefix: true,
+           allow_nil: true
 
   #
   # Maps {SocialRight} names and joins them.
