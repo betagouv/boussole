@@ -55,6 +55,7 @@ fr:
         phone: Téléphone
         url: Site web
         external: Service numérique ?
+        response_time_upper_bound: Délai garanti de réponse
         social_rights: Thématiques
         updated_at: Dernière actualisation
       measure:

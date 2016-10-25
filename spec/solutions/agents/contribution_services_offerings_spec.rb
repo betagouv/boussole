@@ -43,6 +43,7 @@ situation %(
         fill_in('Téléphone', with: '01 23 45 67 89')
         fill_in('Site web', with: 'https://logement.jeunes.gouv.fr')
         check('Service numérique ?')
+        fill_in('Délai garanti de réponse', with: 22)
         select('Logement', from: 'Thématiques')
 
         click_button('Créer')
