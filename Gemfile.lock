@@ -45,6 +45,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
+    ai4r (1.13)
     annotate (2.7.1)
       activerecord (>= 3.2, < 6.0)
       rake (>= 10.4, < 12.0)
@@ -114,6 +115,7 @@ GEM
       sys-uname
       terminal-table
     debug_inspector (0.0.2)
+    decisiontree (0.5.0)
     declarative (0.0.8)
       uber (>= 0.0.15)
     descendants_tracker (0.0.4)
@@ -532,6 +534,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ai4r
   annotate
   awesome_print
   better_errors
@@ -544,6 +547,7 @@ DEPENDENCIES
   coffee-rails
   database_cleaner
   dawnscanner
+  decisiontree
   dotenv-rails
   factory_girl_rails
   ffaker
