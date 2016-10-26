@@ -37,6 +37,7 @@
 #
 class PublicService < ApplicationRecord
   extend FriendlyId
+  include Nameable
 
   friendly_id :title, use: :slugged
 
@@ -58,22 +59,4 @@ class PublicService < ApplicationRecord
 
   validates :slug,
             uniqueness: true
-
-  #
-  # Maps {SocialRight} names and joins them.
-  #
-  # @example
-  #
-  #   social_right_names
-  #   #=> 'Emploi, Logement'
-  #
-  # @return [String] A comma separated, sorted, string with the names.
-  #
-  # TODO: Extract to concern.
-  def social_right_names
-    social_rights
-      .pluck(:name)
-      .sort
-      .join(', ')
-  end
 end
