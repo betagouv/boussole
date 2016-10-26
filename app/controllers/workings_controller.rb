@@ -6,7 +6,7 @@ class WorkingsController < ApplicationController
 
   # GET /workings/1
   def show
-    @working           = Working::Show.call(params).model
+    @working           = Working.find(params[:id])
     @service_offerings = Working::ServiceOfferings.present(params).scope
   end
 
