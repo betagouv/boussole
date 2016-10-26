@@ -37,6 +37,8 @@
 #++
 #
 class Measure < ApplicationRecord
+  include Nameable
+
   belongs_to :public_service
 
   has_many :exercise_scopes,
@@ -54,22 +56,4 @@ class Measure < ApplicationRecord
            to: :public_service,
            prefix: true,
            allow_nil: true
-
-  #
-  # Maps {SocialRight} names and joins them.
-  #
-  # @example
-  #
-  #   social_right_names
-  #   #=> 'Emploi, Logement'
-  #
-  # @return [String] A comma separated, sorted, string with the names.
-  #
-  # TODO: Extract to concern.
-  def social_right_names
-    social_rights
-      .pluck(:name)
-      .sort
-      .join(', ')
-  end
 end
