@@ -98,11 +98,15 @@
     
   
     
+      <dt class="r1">Includes:</dt>
+      <dd class="r1"><span class='object_link'><a href="Nameable.html" title="Nameable (module)">Nameable</a></span></dd>
+      
+    
   
   
   
-    <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">app/models/service_offering.rb</dd>
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/models/service_offering.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -110,7 +114,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>== Schema Information Schema version: 20160925184409</p>
+<p>== Schema Information Schema version: 20161006093649</p>
 
 <p>Table name: service_offerings</p>
 
@@ -121,13 +125,16 @@
 <code>datetime, not null</code> <em>postal_address</em>::
 <code>string</code> <em>email</em>:: <code>string</code> <em>phone</em>::
 <code>string</code> <em>url</em>:: <code>string</code> <em>external</em>::
-<code>boolean</code> <em>slug</em>:: <code>string</code></p>
+<code>boolean</code> <em>slug</em>:: <code>string</code>
+<em>response_time_upper_bound</em>:: <code>integer</code></p>
 
 <p>Indexes</p>
 
 <p>index_service_offerings_on_public_service_id (public_service_id) 
 index_service_offerings_on_public_service_id_and_slug
-(public_service_id,slug) UNIQUE</p>
+(public_service_id,slug) UNIQUE 
+index_service_offerings_on_response_time_upper_bound
+(response_time_upper_bound)</p>
 
 <p>Foreign Keys</p>
 
@@ -146,6 +153,33 @@ Schema Information End ++</p>
 
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#response_time_upper_bound-instance_method" title="#response_time_upper_bound (instance method)">- (Object) <strong>response_time_upper_bound</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
     
       <li class="public ">
   <span class="summary_signature">
@@ -301,7 +335,31 @@ Schema Information End ++</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#public_service_title-instance_method" title="#public_service_title (instance method)">- (Object) <strong>public_service_title</strong> </a>
+      <a href="#prefix%3A+true_response_time_upper_bound-instance_method" title="#prefix: true_response_time_upper_bound (instance method)">- (Object) <strong>prefix: true_response_time_upper_bound</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Alias for Public_service#response_time_upper_bound.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prefix%3A+true_title-instance_method" title="#prefix: true_title (instance method)">- (Object) <strong>prefix: true_title</strong> </a>
     
 
     
@@ -324,40 +382,19 @@ Schema Information End ++</p>
       
     </ul>
   
-    <h2>
-      Instance Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
-    </h2>
 
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#social_right_names-instance_method" title="#social_right_names (instance method)">- (String) <strong>social_right_names</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Maps <span class='object_link'><a href="SocialRight.html" title="SocialRight (class)">SocialRight</a></span> names and joins them.</p>
-</div></span>
   
-</li>
-
-      
-    </ul>
   
-
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Nameable.html" title="Nameable (module)">Nameable</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Nameable.html#social_right_names-instance_method" title="Nameable#social_right_names (method)">#social_right_names</a></span></p>
 
   
   
@@ -373,7 +410,39 @@ Schema Information End ++</p>
       
       <span id=""></span>
       <div class="method_details first">
-  <h3 class="signature first" id="slug-instance_method">
+  <h3 class="signature first" id="response_time_upper_bound-instance_method">
+  
+    - (<tt>Object</tt>) <strong>response_time_upper_bound</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/service_offering.rb', line 66</span>
+
+<span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:response_time_upper_bound</span><span class='comma'>,</span>
+<span class='label'>presence:</span> <span class='kw'>true</span><span class='comma'>,</span>
+<span class='label'>unless:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_service'>service</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_service'>service</span><span class='period'>.</span><span class='id identifier rubyid_public_service_response_time_upper_bound'>public_service_response_time_upper_bound</span> <span class='rbrace'>}</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="slug-instance_method">
   
     - (<tt>Object</tt>) <strong>slug</strong>  <span class="extras">(readonly)</span>
   
@@ -387,12 +456,14 @@ Schema Information End ++</p>
       <pre class="lines">
 
 
-55</pre>
+70
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/service_offering.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'app/models/service_offering.rb', line 70</span>
 
-<span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:slug</span><span class='comma'>,</span> <span class='label'>uniqueness:</span> <span class='lbrace'>{</span> <span class='label'>scope:</span> <span class='symbol'>:public_service_id</span> <span class='rbrace'>}</span></pre>
+<span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:slug</span><span class='comma'>,</span>
+<span class='label'>uniqueness:</span> <span class='lbrace'>{</span> <span class='label'>scope:</span> <span class='symbol'>:public_service_id</span> <span class='rbrace'>}</span></pre>
     </td>
   </tr>
 </table>
@@ -415,12 +486,16 @@ Schema Information End ++</p>
       <pre class="lines">
 
 
-54</pre>
+62
+63
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/service_offering.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'app/models/service_offering.rb', line 62</span>
 
-<span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:title</span><span class='comma'>,</span> <span class='symbol'>:public_service</span><span class='comma'>,</span> <span class='label'>presence:</span> <span class='kw'>true</span></pre>
+<span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:title</span><span class='comma'>,</span>
+<span class='symbol'>:public_service</span><span class='comma'>,</span>
+<span class='label'>presence:</span> <span class='kw'>true</span></pre>
     </td>
   </tr>
 </table>
@@ -477,12 +552,150 @@ Schema Information End ++</p>
       <pre class="lines">
 
 
-51</pre>
+55
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/service_offering.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'app/models/service_offering.rb', line 55</span>
 
-<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:exercise_scopes</span><span class='comma'>,</span> <span class='label'>as:</span> <span class='symbol'>:exercisable</span><span class='comma'>,</span> <span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:exercise_scopes</span><span class='comma'>,</span>
+<span class='label'>as:</span> <span class='symbol'>:exercisable</span><span class='comma'>,</span>
+<span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="prefix: true_response_time_upper_bound-instance_method">
+  
+    - (<tt>Object</tt>) <strong>prefix: true_response_time_upper_bound</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Alias for Public_service#response_time_upper_bound</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Public_service#prefix: true_response_time_upper_bound</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/Module.html#method-i-delegate" target="_parent" title="Module#delegate">Module#delegate</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+77
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/service_offering.rb', line 77</span>
+
+<span class='id identifier rubyid_delegate'>delegate</span> <span class='symbol'>:response_time_upper_bound</span><span class='comma'>,</span>
+<span class='label'>to:</span> <span class='symbol'>:public_service</span><span class='comma'>,</span>
+<span class='label'>prefix:</span> <span class='kw'>true</span><span class='comma'>,</span>
+<span class='label'>allow_nil:</span> <span class='kw'>true</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="prefix: true_title-instance_method">
+  
+    - (<tt>Object</tt>) <strong>prefix: true_title</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Alias for Public_service#title</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Public_service#prefix: true_title</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/Module.html#method-i-delegate" target="_parent" title="Module#delegate">Module#delegate</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/service_offering.rb', line 73</span>
+
+<span class='id identifier rubyid_delegate'>delegate</span> <span class='symbol'>:title</span><span class='comma'>,</span>
+<span class='label'>to:</span> <span class='symbol'>:public_service</span><span class='comma'>,</span>
+<span class='label'>prefix:</span> <span class='kw'>true</span></pre>
     </td>
   </tr>
 </table>
@@ -545,151 +758,14 @@ Schema Information End ++</p>
       <pre class="lines">
 
 
-49</pre>
+52
+53</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/service_offering.rb', line 49</span>
+      <pre class="code"><span class="info file"># File 'app/models/service_offering.rb', line 52</span>
 
-<span class='id identifier rubyid_belongs_to'>belongs_to</span> <span class='symbol'>:public_service</span><span class='comma'>,</span> <span class='label'>inverse_of:</span> <span class='symbol'>:service_offerings</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="public_service_title-instance_method">
-  
-    - (<tt>Object</tt>) <strong>public_service_title</strong> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Alias for Public_service#title</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Object</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Public_service#public_service_title</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-  <p class="tag_title">See Also:</p>
-  <ul class="see">
-    
-      <li><a href="http://api.rubyonrails.org/classes/Module.html#method-i-delegate" target="_parent" title="Module#delegate">Module#delegate</a></li>
-    
-  </ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-57</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'app/models/service_offering.rb', line 57</span>
-
-<span class='id identifier rubyid_delegate'>delegate</span> <span class='symbol'>:title</span><span class='comma'>,</span> <span class='label'>to:</span> <span class='symbol'>:public_service</span><span class='comma'>,</span> <span class='label'>prefix:</span> <span class='kw'>true</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="social_right_names-instance_method">
-  
-    - (<tt>String</tt>) <strong>social_right_names</strong> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Maps <span class='object_link'><a href="SocialRight.html" title="SocialRight (class)">SocialRight</a></span> names and joins them.</p>
-
-<p>TODO: Extract to concern.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-      <pre class="example code"><code>
-<span class='id identifier rubyid_social_right_names'>social_right_names</span>
-<span class='comment'>#=&gt; &#39;Emploi, Logement&#39;</span></code></pre>
-    
-  </div>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A comma separated, sorted, string with the names.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-70
-71
-72
-73
-74
-75</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'app/models/service_offering.rb', line 70</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_social_right_names'>social_right_names</span>
-  <span class='id identifier rubyid_social_rights'>social_rights</span>
-    <span class='period'>.</span><span class='id identifier rubyid_pluck'>pluck</span><span class='lparen'>(</span><span class='symbol'>:name</span><span class='rparen'>)</span>
-    <span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span>
-    <span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>, </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span class='id identifier rubyid_belongs_to'>belongs_to</span> <span class='symbol'>:public_service</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:service_offerings</span></pre>
     </td>
   </tr>
 </table>
@@ -739,12 +815,14 @@ Schema Information End ++</p>
       <pre class="lines">
 
 
-52</pre>
+59
+60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/service_offering.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'app/models/service_offering.rb', line 59</span>
 
-<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:social_rights</span><span class='comma'>,</span> <span class='label'>through:</span> <span class='symbol'>:exercise_scopes</span></pre>
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:social_rights</span><span class='comma'>,</span>
+<span class='label'>through:</span> <span class='symbol'>:exercise_scopes</span></pre>
     </td>
   </tr>
 </table>
@@ -755,7 +833,7 @@ Schema Information End ++</p>
 </div>
 
     <div id="footer">
-  Generated on Mon Oct  3 14:13:51 2016 by
+  Generated on Thu Oct 27 16:05:37 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.3.1).
 </div>

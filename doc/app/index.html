@@ -74,15 +74,15 @@ src="http://inch-ci.org/github/sgmap/boussole.svg?branch=master"></a></p>
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_erd'>erd</span>
 </code></pre>
 
-<h3 id="label-G-C3-A9n-C3-A9ration+d-27une+nouvelle+version">Génération d&#39;une nouvelle version</h3>
-
-<pre class="code ruby"><code class="ruby">git tag -a vx.y.z
-git push origin --tags</code></pre>
-
 <h3 id="label-G-C3-A9n-C3-A9ration+de+la+documentation">Génération de la documentation</h3>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_yardoc'>yardoc</span>
 </code></pre>
+
+<h3 id="label-G-C3-A9n-C3-A9ration+d-27une+nouvelle+version">Génération d&#39;une nouvelle version</h3>
+
+<pre class="code ruby"><code class="ruby">git tag -s vx.y.z -m &#39;yadda-yadda&#39;
+git push origin --tags</code></pre>
 
 <h3 id="label-G-C3-A9n-C3-A9ration+du+changelog">Génération du changelog</h3>
 
@@ -91,7 +91,7 @@ git push origin --tags</code></pre>
 </div></div>
 
     <div id="footer">
-  Generated on Mon Oct  3 14:13:51 2016 by
+  Generated on Thu Oct 27 16:05:36 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.3.1).
 </div>

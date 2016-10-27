@@ -93,7 +93,7 @@
   
     
       <dt class="r2">Includes:</dt>
-      <dd class="r2">Collection</dd>
+      <dd class="r2">Collection, <span class='object_link'><a href="../Matchable.html" title="Matchable (module)">Matchable</a></span></dd>
       
     
   
@@ -179,70 +179,12 @@ href="mailto:mauko.quiroga@data.gouv.fr">mauko.quiroga@data.gouv.fr</a></p>
 
 
 
-  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
-  <ul class="summary">
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#criterias-instance_method" title="#criterias (instance method)">- (Hash) <strong>criterias</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-      <span class="note title readonly">readonly</span>
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>The hash of <span class='object_link'><a href="../ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> criterias we&#39;re matching with.</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#working-instance_method" title="#working (instance method)">- (Working) <strong>working</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-      <span class="note title readonly">readonly</span>
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>The <span class='object_link'><a href="../Working.html" title="Working (class)">Working</a></span> project we&#39;re matching against.</p>
-</div></span>
-  
-</li>
-
-    
-  </ul>
 
 
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="../Matchable.html" title="Matchable (module)">Matchable</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Matchable.html#criterias-instance_method" title="Matchable#criterias (method)">#criterias</a></span>, <span class='object_link'><a href="../Matchable.html#project-instance_method" title="Matchable#project (method)">#project</a></span></p>
 
 
   
@@ -279,35 +221,10 @@ href="mailto:mauko.quiroga@data.gouv.fr">mauko.quiroga@data.gouv.fr</a></p>
 </li>
 
       
-        <li class="private ">
-  <span class="summary_signature">
-    
-      <a href="#match_conditions%3F-instance_method" title="#match_conditions? (instance method)">- (Boolean) <strong>match_conditions?</strong>(conditions) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  <span class="note title private">private</span>
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Loops through a given Array of conditions, to check whether each of
-latter is satisfied.</p>
-</div></span>
-  
-</li>
-
-      
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#model%21-instance_method" title="#model! (instance method)">- (ActiveRecord::Relation&lt;ServiceOffering&gt;) <strong>model!</strong>(_) </a>
+      <a href="#model%21-instance_method" title="#model! (instance method)">- (Object) <strong>model!</strong>(_) </a>
     
 
     
@@ -321,134 +238,7 @@ latter is satisfied.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Search for <span class='object_link'><a href="../ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span>s matching the current working project with a
-set of predefined rules.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="private ">
-  <span class="summary_signature">
-    
-      <a href="#predicate_builder-instance_method" title="#predicate_builder (instance method)">- (Arel::Node::Equality) <strong>predicate_builder</strong>(service_offering, public_service) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  <span class="note title private">private</span>
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Creates an Arel::Node::Equality predicate instance to be passed on as an
-argument to a ActiveRecord::Base.where clause.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="private ">
-  <span class="summary_signature">
-    
-      <a href="#public_service_table-instance_method" title="#public_service_table (instance method)">- (Arel::Table) <strong>public_service_table</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  <span class="note title private">private</span>
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Creates a <span class='object_link'><a href="../PublicService.html" title="PublicService (class)">PublicService</a></span> Arel::Table instance.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="private ">
-  <span class="summary_signature">
-    
-      <a href="#service_offering_table-instance_method" title="#service_offering_table (instance method)">- (Arel::Table) <strong>service_offering_table</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  <span class="note title private">private</span>
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Creates a <span class='object_link'><a href="../ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> Arel::Table instance.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="private ">
-  <span class="summary_signature">
-    
-      <a href="#with_matches-instance_method" title="#with_matches (instance method)">- (Object) <strong>with_matches</strong> {|service_offerings, public_services| ... }</a>
-    
-
-    
-  </span>
-  
-  
-  
-  <span class="note title private">private</span>
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Given a Hash of criterias, the method will build an Array of the
-satisfying <span class='object_link'><a href="../ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> matches of the <span class='object_link'><a href="../Working.html" title="Working (class)">Working</a></span> project.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="private ">
-  <span class="summary_signature">
-    
-      <a href="#with_predicate-instance_method" title="#with_predicate (instance method)">- (Object) <strong>with_predicate</strong>(service_offerings, public_services) {|predicate| ... }</a>
-    
-
-    
-  </span>
-  
-  
-  
-  <span class="note title private">private</span>
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Given an Array of <span class='object_link'><a href="../ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> slugs and one of its corresponding
-<span class='object_link'><a href="../PublicService.html" title="PublicService (class)">PublicService</a></span> ones, the method will build an Arel predicate to be
-passed on to a ActiveRecord::Base.where clause.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -457,6 +247,18 @@ passed on to a ActiveRecord::Base.where clause.</p>
   
 
 
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Matchable.html" title="Matchable (module)">Matchable</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Matchable.html#call-instance_method" title="Matchable#call (method)">#call</a></span>, <span class='object_link'><a href="../Matchable.html#match_conditions%3F-instance_method" title="Matchable#match_conditions? (method)">#match_conditions?</a></span>, <span class='object_link'><a href="../Matchable.html#predicate_builder-instance_method" title="Matchable#predicate_builder (method)">#predicate_builder</a></span>, <span class='object_link'><a href="../Matchable.html#public_service_table-instance_method" title="Matchable#public_service_table (method)">#public_service_table</a></span>, <span class='object_link'><a href="../Matchable.html#service_offering_table-instance_method" title="Matchable#service_offering_table (method)">#service_offering_table</a></span>, <span class='object_link'><a href="../Matchable.html#with_matches-instance_method" title="Matchable#with_matches (method)">#with_matches</a></span>, <span class='object_link'><a href="../Matchable.html#with_predicate-instance_method" title="Matchable#with_predicate (method)">#with_predicate</a></span></p>
+
+  
   
   <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
@@ -494,17 +296,17 @@ passed on to a ActiveRecord::Base.where clause.</p>
       <pre class="lines">
 
 
-41
-42
-43
-44
-45</pre>
+28
+29
+30
+31
+32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/operations/working/service_offerings.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'app/operations/working/service_offerings.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='rparen'>)</span>
-  <span class='ivar'>@working</span>   <span class='op'>=</span> <span class='const'>Working</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@project</span>   <span class='op'>=</span> <span class='const'>Working</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='ivar'>@criterias</span> <span class='op'>=</span> <span class='const'>YAML</span><span class='period'>.</span><span class='id identifier rubyid_load'>load</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='const'>CRITERIAS_PATH</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
   <span class='kw'>super</span>
 <span class='kw'>end</span></pre>
@@ -515,264 +317,15 @@ passed on to a ActiveRecord::Base.where clause.</p>
   
 </div>
 
-  <div id="instance_attr_details" class="attr_details">
-    <h2>Instance Attribute Details</h2>
-    
-      
-      <span id=""></span>
-      <div class="method_details first">
-  <h3 class="signature first" id="criterias-instance_method">
-  
-    - (<tt>Hash</tt>) <strong>criterias</strong>  <span class="extras">(readonly)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns The hash of <span class='object_link'><a href="../ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> criterias we&#39;re matching with.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The hash of <span class='object_link'><a href="../ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> criterias we&#39;re matching with.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-36
-37
-38</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'app/operations/working/service_offerings.rb', line 36</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_criterias'>criterias</span>
-  <span class='ivar'>@criterias</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id=""></span>
-      <div class="method_details ">
-  <h3 class="signature " id="working-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../Working.html" title="Working (class)">Working</a></span></tt>) <strong>working</strong>  <span class="extras">(readonly)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns The <span class='object_link'><a href="../Working.html" title="Working (class)">Working</a></span> project we&#39;re matching against.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../Working.html" title="Working (class)">Working</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The <span class='object_link'><a href="../Working.html" title="Working (class)">Working</a></span> project we&#39;re matching against.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-29
-30
-31</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'app/operations/working/service_offerings.rb', line 29</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_working'>working</span>
-  <span class='ivar'>@working</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
-
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="match_conditions?-instance_method">
+  <h3 class="signature first" id="model!-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>match_conditions?</strong>(conditions)  <span class="extras">(private)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Loops through a given Array of conditions, to check whether each of
-latter is satisfied. As soon as one doesn&#39;t it breaks from the loop.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-      <pre class="example code"><code>
-<span class='id identifier rubyid_working'>working</span><span class='period'>.</span><span class='id identifier rubyid_experience'>experience</span>
-<span class='comment'>#=&gt; true
-</span>
-<span class='id identifier rubyid_conditions'>conditions</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>attribute</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>experience</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>operator</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>==</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>value</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='rbrace'>}</span><span class='rbracket'>]</span>
-<span class='id identifier rubyid_match_conditions?'>match_conditions?</span><span class='lparen'>(</span><span class='id identifier rubyid_conditions'>conditions</span><span class='rparen'>)</span>
-<span class='comment'>#=&gt; true</span></code></pre>
-    
-  </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>conditions</span>
-      
-      
-        <span class='type'>(<tt>Array</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The conditions to check against the <span class='object_link'><a href="../Working.html" title="Working (class)">Working</a></span>.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if all conditions are met.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>False unless all conditions are met.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'app/operations/working/service_offerings.rb', line 147</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_match_conditions?'>match_conditions?</span><span class='lparen'>(</span><span class='id identifier rubyid_conditions'>conditions</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_conditions'>conditions</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='kw'>true</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_condition'>condition</span><span class='op'>|</span>
-    <span class='kw'>break</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_result'>result</span>
-
-    <span class='id identifier rubyid_result'>result</span> <span class='op'>&amp;&amp;</span>
-      <span class='id identifier rubyid_working'>working</span>
-        <span class='period'>.</span><span class='id identifier rubyid_public_send'>public_send</span><span class='lparen'>(</span><span class='id identifier rubyid_condition'>condition</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>attribute</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
-        <span class='period'>.</span><span class='id identifier rubyid_public_send'>public_send</span><span class='lparen'>(</span><span class='id identifier rubyid_condition'>condition</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>operator</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_condition'>condition</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>value</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="model!-instance_method">
-  
-    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="../ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span>&gt;</tt>) <strong>model!</strong>(_) 
+    - (<tt>Object</tt>) <strong>model!</strong>(_) 
   
 
   
@@ -781,42 +334,11 @@ latter is satisfied. As soon as one doesn&#39;t it breaks from the loop.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Search for <span class='object_link'><a href="../ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span>s matching the current working project with a
-set of predefined rules.</p>
-
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-      <pre class="example code"><code>
-<span class='const'>Working</span><span class='op'>::</span><span class='const'>ServiceOfferings</span><span class='period'>.</span><span class='id identifier rubyid_present'>present</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
-<span class='comment'>#=&gt; #&lt;ActiveRecord::Relation [#&lt;ServiceOffering id: 1 ...&gt;]&gt;</span></code></pre>
-    
-  </div>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="../ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span>&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The matched records.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
   <p class="tag_title">See Also:</p>
   <ul class="see">
@@ -831,508 +353,15 @@ set of predefined rules.</p>
       <pre class="lines">
 
 
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70</pre>
+37
+38
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/operations/working/service_offerings.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'app/operations/working/service_offerings.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_model!'>model!</span><span class='lparen'>(</span><span class='id identifier rubyid__'>_</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_with_matches'>with_matches</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_service_offerings'>service_offerings</span><span class='comma'>,</span> <span class='id identifier rubyid_public_services'>public_services</span><span class='op'>|</span>
-    <span class='kw'>return</span> <span class='const'>ServiceOffering</span><span class='period'>.</span><span class='id identifier rubyid_none'>none</span> <span class='kw'>unless</span> <span class='id identifier rubyid_service_offerings'>service_offerings</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
-
-    <span class='id identifier rubyid_with_predicate'>with_predicate</span><span class='lparen'>(</span><span class='id identifier rubyid_service_offerings'>service_offerings</span><span class='comma'>,</span> <span class='id identifier rubyid_public_services'>public_services</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_predicate'>predicate</span><span class='op'>|</span>
-      <span class='const'>ServiceOffering</span>
-        <span class='period'>.</span><span class='id identifier rubyid_joins'>joins</span><span class='lparen'>(</span><span class='symbol'>:public_service</span><span class='rparen'>)</span>
-        <span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='id identifier rubyid_predicate'>predicate</span><span class='rparen'>)</span>
-    <span class='kw'>end</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="predicate_builder-instance_method">
-  
-    - (<tt>Arel::Node::Equality</tt>) <strong>predicate_builder</strong>(service_offering, public_service)  <span class="extras">(private)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Creates an Arel::Node::Equality predicate instance to be passed on as an
-argument to a ActiveRecord::Base.where clause.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>service_offering</span>
-      
-      
-        <span class='type'>(<tt>&lt;String&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><span class='object_link'><a href="../ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span>&#39;s slug.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>public_service</span>
-      
-      
-        <span class='type'>(<tt>&lt;String&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><span class='object_link'><a href="../PublicService.html" title="PublicService (class)">PublicService</a></span>&#39;s slug.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Arel::Node::Equality</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The predicate.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-167
-168
-169
-170
-171</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'app/operations/working/service_offerings.rb', line 167</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_predicate_builder'>predicate_builder</span><span class='lparen'>(</span><span class='id identifier rubyid_service_offering'>service_offering</span><span class='comma'>,</span> <span class='id identifier rubyid_public_service'>public_service</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_service_offering_table'>service_offering_table</span><span class='lbracket'>[</span><span class='symbol'>:slug</span><span class='rbracket'>]</span>
-    <span class='period'>.</span><span class='id identifier rubyid_eq'>eq</span><span class='lparen'>(</span><span class='id identifier rubyid_service_offering'>service_offering</span><span class='rparen'>)</span>
-    <span class='period'>.</span><span class='id identifier rubyid_and'>and</span><span class='lparen'>(</span><span class='id identifier rubyid_public_service_table'>public_service_table</span><span class='lbracket'>[</span><span class='symbol'>:slug</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_eq'>eq</span><span class='lparen'>(</span><span class='id identifier rubyid_public_service'>public_service</span><span class='rparen'>)</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="public_service_table-instance_method">
-  
-    - (<tt>Arel::Table</tt>) <strong>public_service_table</strong>  <span class="extras">(private)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Creates a <span class='object_link'><a href="../PublicService.html" title="PublicService (class)">PublicService</a></span> Arel::Table instance.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Arel::Table</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The Arel::Table instance.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-187
-188
-189</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'app/operations/working/service_offerings.rb', line 187</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_public_service_table'>public_service_table</span>
-  <span class='ivar'>@public_service_table</span> <span class='op'>||=</span> <span class='const'>PublicService</span><span class='period'>.</span><span class='id identifier rubyid_arel_table'>arel_table</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="service_offering_table-instance_method">
-  
-    - (<tt>Arel::Table</tt>) <strong>service_offering_table</strong>  <span class="extras">(private)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Creates a <span class='object_link'><a href="../ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> Arel::Table instance.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Arel::Table</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The Arel::Table instance.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-178
-179
-180</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'app/operations/working/service_offerings.rb', line 178</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_service_offering_table'>service_offering_table</span>
-  <span class='ivar'>@service_offering_table</span> <span class='op'>||=</span> <span class='const'>ServiceOffering</span><span class='period'>.</span><span class='id identifier rubyid_arel_table'>arel_table</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="with_matches-instance_method">
-  
-    - (<tt>Object</tt>) <strong>with_matches</strong> {|service_offerings, public_services| ... } <span class="extras">(private)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Given a Hash of criterias, the method will build an Array of the
-satisfying <span class='object_link'><a href="../ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> matches of the <span class='object_link'><a href="../Working.html" title="Working (class)">Working</a></span> project.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-      <pre class="example code"><code>
-<span class='id identifier rubyid_with_matches'>with_matches</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_service_offerings'>service_offerings</span><span class='comma'>,</span> <span class='id identifier rubyid_public_services'>public_services</span><span class='op'>|</span>
-  <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_service_offerings'>service_offerings</span>
-  <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_public_services'>public_services</span>
-<span class='kw'>end</span>
-
-<span class='comment'>#=&gt; [&#39;some-service-offering&#39;]
-</span><span class='comment'>#=&gt; [&#39;some-public-service&#39;]</span></code></pre>
-    
-  </div>
-
-<p class="tag_title">Yield Parameters:</p>
-<ul class="yieldparam">
-  
-    <li>
-      
-        <span class='name'>service_offerings</span>
-      
-      
-        <span class='type'>(<tt>Array</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><span class='object_link'><a href="../ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span>&#39;s Array of slugs.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>public_services</span>
-      
-      
-        <span class='type'>(<tt>Array</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><span class='object_link'><a href="../PublicService.html" title="PublicService (class)">PublicService</a></span>&#39;s Array of slugs.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'app/operations/working/service_offerings.rb', line 90</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_with_matches'>with_matches</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid__'>_</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_service_offerings'>service_offerings</span><span class='comma'>,</span> <span class='id identifier rubyid_public_services'>public_services</span> <span class='op'>=</span>
-    <span class='id identifier rubyid_criterias'>criterias</span><span class='period'>.</span><span class='id identifier rubyid_each_with_object'>each_with_object</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_public_service'>public_service</span><span class='comma'>,</span> <span class='id identifier rubyid_service_offerings'>service_offerings</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_matches'>matches</span><span class='op'>|</span>
-      <span class='id identifier rubyid_service_offerings'>service_offerings</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_service_offering'>service_offering</span><span class='comma'>,</span> <span class='id identifier rubyid_scenarios'>scenarios</span><span class='op'>|</span>
-        <span class='id identifier rubyid_scenarios'>scenarios</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_conditions'>conditions</span><span class='op'>|</span>
-          <span class='kw'>if</span> <span class='id identifier rubyid_match_conditions?'>match_conditions?</span><span class='lparen'>(</span><span class='id identifier rubyid_conditions'>conditions</span><span class='rparen'>)</span>
-            <span class='id identifier rubyid_matches'>matches</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_service_offering'>service_offering</span>
-            <span class='id identifier rubyid_matches'>matches</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_public_service'>public_service</span>
-          <span class='kw'>end</span>
-        <span class='kw'>end</span>
-      <span class='kw'>end</span>
-    <span class='kw'>end</span>
-
-  <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_service_offerings'>service_offerings</span><span class='comma'>,</span> <span class='id identifier rubyid_public_services'>public_services</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="with_predicate-instance_method">
-  
-    - (<tt>Object</tt>) <strong>with_predicate</strong>(service_offerings, public_services) {|predicate| ... } <span class="extras">(private)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Given an Array of <span class='object_link'><a href="../ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> slugs and one of its corresponding
-<span class='object_link'><a href="../PublicService.html" title="PublicService (class)">PublicService</a></span> ones, the method will build an Arel predicate to be
-passed on to a ActiveRecord::Base.where clause.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>service_offerings</span>
-      
-      
-        <span class='type'>(<tt>Array</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><span class='object_link'><a href="../ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span>&#39;s Array of slugs.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>public_services</span>
-      
-      
-        <span class='type'>(<tt>Array</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><span class='object_link'><a href="../PublicService.html" title="PublicService (class)">PublicService</a></span>&#39;s Array of slugs.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Yields:</p>
-<ul class="yield">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>predicate</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-<p class="tag_title">Yield Returns:</p>
-<ul class="yieldreturn">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Arel::Node::Equality</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>If there&#39;s only one slug to match.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Arel::Node::Grouping</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>If there&#39;re many slugs to match.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'app/operations/working/service_offerings.rb', line 116</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_with_predicate'>with_predicate</span><span class='lparen'>(</span><span class='id identifier rubyid_service_offerings'>service_offerings</span><span class='comma'>,</span> <span class='id identifier rubyid_public_services'>public_services</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid__'>_</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_predicate'>predicate</span> <span class='op'>=</span>
-    <span class='id identifier rubyid_service_offerings'>service_offerings</span>
-    <span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span>
-    <span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='id identifier rubyid_predicate_builder'>predicate_builder</span><span class='lparen'>(</span><span class='id identifier rubyid_service_offerings'>service_offerings</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_public_services'>public_services</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_node'>node</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='id identifier rubyid_service_offering'>service_offering</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span><span class='op'>|</span>
-      <span class='kw'>next</span><span class='lparen'>(</span><span class='id identifier rubyid_node'>node</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_index'>index</span><span class='period'>.</span><span class='id identifier rubyid_zero?'>zero?</span>
-
-      <span class='id identifier rubyid_node'>node</span><span class='period'>.</span><span class='id identifier rubyid_or'>or</span><span class='lparen'>(</span><span class='id identifier rubyid_predicate_builder'>predicate_builder</span><span class='lparen'>(</span><span class='id identifier rubyid_service_offering'>service_offering</span><span class='comma'>,</span> <span class='id identifier rubyid_public_services'>public_services</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    <span class='kw'>end</span>
-
-  <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_predicate'>predicate</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_call'>call</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1344,7 +373,7 @@ passed on to a ActiveRecord::Base.where clause.</p>
 </div>
 
     <div id="footer">
-  Generated on Mon Oct  3 14:13:53 2016 by
+  Generated on Thu Oct 27 16:05:37 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.3.1).
 </div>
