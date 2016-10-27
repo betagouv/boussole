@@ -9,17 +9,17 @@
 bundle exec erd
 ```
 
-### Génération d'une nouvelle version
-
-```
-git tag -a vx.y.z
-git push origin --tags
-```
-
 ### Génération de la documentation
 
 ```
 bundle exec yardoc
+```
+
+### Génération d'une nouvelle version
+
+```
+git tag -s vx.y.z -m 'yadda-yadda'
+git push origin --tags
 ```
 
 ### Génération du changelog
