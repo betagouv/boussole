@@ -74,6 +74,9 @@ Style/IfUnlessModifier:
   Exclude:
     - 'config/initializers/*'
 
+Style/LambdaCall:
+  Enabled: false
+
 Style/MethodCalledOnDoEndBlock:
   Enabled: true
 
