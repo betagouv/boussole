@@ -3,14 +3,14 @@
 .l-container-narrow
   .l-content
     %section.form
-      %legend Es-tu déjà inscrit à la/au…
+      %legend Es-tu déjà inscrit·e à la/au…
 
       = simple_form_for(@working, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
         = f.error_notification
 
-        = f.input :pole_emploi, label: 'Pôle emploi', as: :radio_buttons
-        = f.input :mission_locale, label: 'Mission locale', as: :radio_buttons
-        = f.input :cap_emploi, label: 'Cap emploi', as: :radio_buttons
-        = f.input :apec, label: "Association pour l'emploi des cadres (APEC)", as: :radio_buttons
+        = f.input :pole_emploi, as: :radio_buttons
+        = f.input :mission_locale, as: :radio_buttons
+        = f.input :cap_emploi, as: :radio_buttons
+        = f.input :apec, as: :radio_buttons
 
         = f.button :submit, 'Continuer', class: 'btn btn-new'

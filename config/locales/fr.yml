@@ -1,4 +1,7 @@
 fr:
+  !!str true: Oui
+  !!str false: Non
+
   activerecord:
     models:
       housing:
@@ -27,6 +30,21 @@ fr:
         current_status: Situation
         next_status: Étudiant·e à la rentrée ?
         updated_at: Dernière actualisation
+      working:
+        awareness: Sais-je ce que je veux faire ?
+        sector: Secteur d'activité
+        experience: J'ai déjà une expérience dans ce secteur
+        duration: Je cherche un emploi pour…
+        engagement: Combien de temps puis-je y consacrer ?
+        status: Quelle est ma situation aujourd'hui ?
+        age: Quel est mon âge ?
+        handicap: Suis-je en situation de handicap ?
+        last_class: Dernières études suivies
+        city: Ville de résidence
+        pole_emploi: Pôle emploi ?
+        mission_locale: Mission locale ?
+        cap_emploi: Cap emploi ?
+        apec: Association pour l'emploi des cadres (APEC) ?
       social_right:
         name: Nom
         public_services: Acteurs
@@ -90,7 +108,7 @@ fr:
     service_offerings:
       show:
         contact-me: Être contacté·e
-        want-to-be-contacted: Souhaites-tu que cette ou ce professionnel·le te contacte suite à ta recherche ?
+        want-to-be-contacted: Souhaites-tu que cette ou ce professionnel·le te contacte suite à ta recherche ?
         send: Envoyer !
         public-service-infos: Coordonnées de l'acteur
 
@@ -102,8 +120,8 @@ fr:
     service_offerings:
       show:
         contact-me: Être contacté·e
-        want-to-be-contacted: Souhaites-tu que cette ou ce professionnel·le te contacte suite à ta recherche ?
-        send: Envoyer !
+        want-to-be-contacted: Souhaites-tu que cette ou ce professionnel·le te contacte suite à ta recherche ?
+        send: Envoyer !
         public-service-infos: Coordonnées de l'acteur
 
   agents:
