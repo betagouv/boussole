@@ -29,11 +29,11 @@ Rails:
   Enabled: true
 
 RSpec/DescribeClass:
+  Enabled: true
   Exclude:
     - spec/criterias/**/*
     - spec/requests/**/*
-    - spec/features/**/*
-    - spec/views/**/*
+    - spec/solutions/**/*
 
 RSpec/ExampleLength:
   Enabled: false
@@ -45,6 +45,7 @@ Style/AsciiComments:
   Enabled: false
 
 Style/BlockDelimiters:
+  Enabled: true
   Exclude:
     - spec/**/*_spec.rb
 
@@ -52,6 +53,7 @@ Style/CaseEquality:
   Enabled: false
 
 Style/Documentation:
+  Enabled: true
   Exclude:
     - app/controllers/**/*
     - app/helpers/application_helper.rb
@@ -64,13 +66,15 @@ Style/DotPosition:
   Enabled: true
 
 Style/Encoding:
-  EnforcedStyle: always
   Enabled: true
+  EnforcedStyle: always
 
 Style/FrozenStringLiteralComment:
+  Enabled: true
   EnforcedStyle: always
 
 Style/IfUnlessModifier:
+  Enabled: true
   Exclude:
     - 'config/initializers/*'
 
@@ -81,4 +85,9 @@ Style/MethodCalledOnDoEndBlock:
   Enabled: true
 
 Style/SymbolArray:
+  EnforcedStyle: percent
+  Enabled: true
+
+Style/WordArray:
+  EnforcedStyle: percent
   Enabled: true
