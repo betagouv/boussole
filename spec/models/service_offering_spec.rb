@@ -12,6 +12,20 @@ RSpec.describe ServiceOffering, type: :model do
   it { is_expected.to validate_uniqueness_of(:slug).scoped_to(:public_service_id) }
   it { is_expected.to validate_presence_of(:public_service) }
 
+  describe '#email' do
+    context '#public_service with #email' do
+      before { public_service.update(email: 'jean@seri.en') }
+
+      it { is_expected.not_to validate_presence_of(:email) }
+    end
+
+    context '#public_service without #email' do
+      before { public_service.update(email: nil) }
+
+      it { is_expected.to validate_presence_of(:email) }
+    end
+  end
+
   describe '#response_time_upper_bound' do
     context '#public_service with #response_time_upper_bound' do
       before { public_service.update(response_time_upper_bound: 7) }
