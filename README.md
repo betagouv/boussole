@@ -2,6 +2,7 @@
 [![Code Climate](https://codeclimate.com/github/sgmap/boussole/badges/gpa.svg)](https://codeclimate.com/github/sgmap/boussole)
 [![Issue Count](https://codeclimate.com/github/sgmap/boussole/badges/issue_count.svg)](https://codeclimate.com/github/sgmap/boussole)
 [![Test Coverage](https://codeclimate.com/github/sgmap/boussole/badges/coverage.svg)](https://codeclimate.com/github/sgmap/boussole/coverage)
+[![Dependency Status](https://gemnasium.com/badges/github.com/sgmap/boussole.svg)](https://gemnasium.com/github.com/sgmap/boussole)
 [![Inline docs](http://inch-ci.org/github/sgmap/boussole.svg?branch=master)](http://inch-ci.org/github/sgmap/boussole)
 
 # Boussole
