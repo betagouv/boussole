@@ -77,9 +77,4 @@ class ServiceOffering < ApplicationRecord
   delegate :title,
            to: :public_service,
            prefix: true
-
-  delegate :response_time_upper_bound,
-           to: :public_service,
-           prefix: true,
-           allow_nil: true
 end
