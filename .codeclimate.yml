@@ -1,0 +1,39 @@
+---
+engines:
+  brakeman:
+    enabled: true
+  bundler-audit:
+    enabled: true
+  coffeelint:
+    enabled: true
+    config: coffeelint.json
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - ruby
+      - javascript
+  eslint:
+    enabled: true
+  rubocop:
+    enabled: true
+  scss-lint:
+    enabled: true
+ratings:
+  paths:
+    - Gemfile.lock
+    - "**.coffee"
+    - "**.haml"
+    - "**.js"
+    - "**.jsx"
+    - "**.rb"
+    - "**.scss"
+exclude_paths:
+  - bin/
+  - config/
+  - db/
+  - doc/
+  - public/
+  - spec/
+  - vendor/
+  - Guardfile

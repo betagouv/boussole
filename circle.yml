@@ -4,14 +4,9 @@ test:
     - bower prune
 
   post:
-    - bundle exec rake rubocop
     - bundle exec rake haml_lint
-    - bundle exec rake scss_lint
     - bundle exec yaml-lint config/data config/rules
     - bundle exec rake inch
-    - bundle exec bundle-audit check --update
-    - bundle exec brakeman -Azw1
-    - bundle exec dawn -Kz --disable-cve-bulletins --disable-owasp-ror-cheatsheet .
 
 deployment:
   production:

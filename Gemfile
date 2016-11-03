@@ -43,12 +43,7 @@ end
 group :development do
   gem 'annotate'
   gem 'better_errors'
-  gem 'brakeman', require: false
-  gem 'bundler-audit', require: false, git: 'https://github.com/rubysec/bundler-audit.git'
-  gem 'dawnscanner', require: false
   gem 'foreman'
-  gem 'haml-lint', require: false
-  gem 'inch', require: false
   gem 'i18n-tasks', require: false
   gem 'letter_opener_web'
   gem 'github_changelog_generator', require: false
@@ -62,11 +57,15 @@ group :development do
   gem 'rb-fchange', require: false
   gem 'rb-fsevent', require: false
   gem 'rb-inotify', require: false
+  gem 'spring-commands-rspec'
+  gem 'web-console'
+
+  # Lnters
+  gem 'haml-lint', require: false
+  gem 'inch', require: false
   gem 'rubocop', require: false
   gem 'rubocop-rspec', require: false
   gem 'scss_lint', require: false
-  gem 'spring-commands-rspec'
-  gem 'web-console'
   gem 'yaml-lint', require: false
 end
 
