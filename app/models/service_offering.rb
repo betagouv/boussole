@@ -63,9 +63,13 @@ class ServiceOffering < ApplicationRecord
             :public_service,
             presence: true
 
+  validates :email,
+            presence: true,
+            unless: ->(service) { service.public_service.try(:email) }
+
   validates :response_time_upper_bound,
             presence: true,
-            unless: ->(service) { service.public_service_response_time_upper_bound }
+            unless: ->(service) { service.public_service.try(:response_time_upper_bound) }
 
   validates :slug,
             uniqueness: { scope: :public_service_id }
