@@ -15,10 +15,6 @@ engines:
       - javascript
   eslint:
     enabled: true
-  fixme:
-    enabled: false
-  reek:
-    enabled: true
   rubocop:
     enabled: true
   scss-lint:
