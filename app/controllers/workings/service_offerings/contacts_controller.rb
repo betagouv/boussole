@@ -11,6 +11,7 @@ module Workings
         load_working
         load_service_offering
         load_public_service
+        decorate_service_offering
         build_contact
 
         if @contact.save
@@ -36,6 +37,10 @@ module Workings
 
       def load_public_service
         @public_service ||= @service_offering.public_service
+      end
+
+      def decorate_service_offering
+        @service_offering = ServiceOfferingDecorator.(@service_offering)
       end
 
       def build_contact

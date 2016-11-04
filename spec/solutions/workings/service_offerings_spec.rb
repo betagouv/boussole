@@ -20,7 +20,7 @@ situation %(
   end
 
   solution('Improve my résumé') do
-    scenario 'aware' do
+    scenario('She knows what she wants to do') do
       visit('/')
       click_link('Commencer !')
 

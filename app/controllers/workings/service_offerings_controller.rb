@@ -10,8 +10,8 @@ module Workings
       load_working
       load_service_offering
       load_public_service
-      build_contact
       decorate_service_offering
+      build_contact
     end
 
     private
@@ -28,14 +28,15 @@ module Workings
       @public_service ||= @service_offering.public_service
     end
 
+    def decorate_service_offering
+      @service_offering = ServiceOfferingDecorator.(@service_offering)
+    end
+
     def build_contact
       @contact ||= contact_scope.build
       @contact.attributes = contact_params
     end
 
-    def decorate_service_offering
-      @service_offering = ServiceOfferingDecorator.(@service_offering)
-    end
 
     def working_params
       params[:working_id]
