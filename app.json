@@ -7,8 +7,10 @@
     "RACK_ENV": "production",
     "RAILS_ENV": "production",
     "SENTRY_PRIVATE_DSN": "asdf1234",
-    "SENTRY_PUBLIC_DSN": "asdf1234"
+    "SENTRY_PUBLIC_DSN": "asdf1234",
+    "CONTACT_EMAIL": "asdf@1234.fr"
   },
+  "addons": ["sendgrid"],
   "buildpacks": [{
     "url": "https://github.com/tempoautomation/heroku-buildpack-sourceversion.git"
   }, {
