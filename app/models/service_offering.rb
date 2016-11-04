@@ -77,5 +77,18 @@ class ServiceOffering < ApplicationRecord
            to: :public_service,
            prefix: true
 
-  scope :actionable, -> { where.not(email: nil, response_time_upper_bound: nil) }
+  scope :actionable, -> { with(:email).merge(with(:response_time_upper_bound)) }
+
+  scope :with, lambda { |attribute|
+    joins(:public_service)
+      .where(
+        arel_table[attribute]
+          .not_eq(nil)
+          .or(
+            reflect_on_association(:public_service)
+              .klass.arel_table[attribute]
+              .not_eq(nil)
+          )
+      )
+  }
 end
