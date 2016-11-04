@@ -20,6 +20,8 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_type (0.6.0)
+      activerecord (>= 3.2)
     activejob (4.2.7.1)
       activesupport (= 4.2.7.1)
       globalid (>= 0.3.0)
@@ -58,6 +60,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-email (2.5.0)
+      capybara (~> 2.4)
+      mail
     capybara-screenshot (1.0.13)
       capybara (>= 1.0, < 3)
       launchy
@@ -207,6 +212,7 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.3)
     jwt (1.5.4)
+    kramdown (1.12.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.4.1)
@@ -224,6 +230,9 @@ GEM
     lumberjack (1.0.10)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    maildown (2.0.0)
+      kramdown
+      rails (>= 4.0.0)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -449,11 +458,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_type
   annotate
   awesome_print
   better_errors
   byebug
   capybara
+  capybara-email
   capybara-screenshot
   codeclimate-test-reporter
   coffee-rails
@@ -477,6 +488,7 @@ DEPENDENCIES
   inch
   jquery-rails
   letter_opener_web
+  maildown
   pg
   poltergeist
   pry-byebug

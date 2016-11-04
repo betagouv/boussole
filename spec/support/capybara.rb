@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 require 'capybara/rails'
-# require 'capybara/email/rspec'
+require 'capybara/email/rspec'
 require 'capybara/poltergeist'
 # require 'capybara-screenshot/rspec'
 

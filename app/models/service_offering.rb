@@ -26,7 +26,6 @@
 # *email*::                     <tt>string</tt>
 # *phone*::                     <tt>string</tt>
 # *url*::                       <tt>string</tt>
-# *external*::                  <tt>boolean</tt>
 # *slug*::                      <tt>string</tt>
 # *response_time_upper_bound*:: <tt>integer</tt>
 #
@@ -77,4 +76,19 @@ class ServiceOffering < ApplicationRecord
   delegate :title,
            to: :public_service,
            prefix: true
+
+  scope :actionable, -> { with(:email).merge(with(:response_time_upper_bound)) }
+
+  scope :with, lambda { |attribute|
+    joins(:public_service)
+      .where(
+        arel_table[attribute]
+          .not_eq(nil)
+          .or(
+            reflect_on_association(:public_service)
+              .klass.arel_table[attribute]
+              .not_eq(nil)
+          )
+      )
+  }
 end

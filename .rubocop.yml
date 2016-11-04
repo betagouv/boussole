@@ -60,6 +60,7 @@ Style/Documentation:
     - app/mailers/application_mailer.rb
     - config/application.rb
     - db/**/*
+    - spec/**/*_preview.rb
     - spec/**/*_spec.rb
 
 Style/DotPosition:

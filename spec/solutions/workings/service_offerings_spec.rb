@@ -10,8 +10,8 @@ situation %(
   Pour se sentir accompagnée,
   Et trouver un travail rapidement.
 ) do
-  given(:public_service)    { create(:public_service, title: 'APEC') }
-  given!(:service_offering) { create(:service_offering, title: 'Améliorer mon CV', public_service: public_service) }
+  given(:public_service) { create(:public_service, title: 'APEC') }
+  given!(:service)       { create(:service_offering, title: 'Améliorer mon CV', public_service: public_service) }
 
   background do
     Working::ServiceOfferings.send(:remove_const, 'CRITERIAS_PATH')
@@ -20,7 +20,7 @@ situation %(
   end
 
   solution('Improve my résumé') do
-    scenario 'aware' do
+    scenario('She knows what she wants to do') do
       visit('/')
       click_link('Commencer !')
 
@@ -81,11 +81,42 @@ situation %(
       # There're services offered to Chlotilde
       expect(page).to have_content('Améliorer mon CV')
 
-      # Chlotilde wants to be recontacted by a professional
+      # Chlotilde wants to discover what's the service about
       click_link('Découvrir')
-      fill_in('contact[email_or_phone]', with: 'chlotilde@contactez.moi')
 
-      # TODO: Implement contact.
+      # She wants to be recontacted
+      fill_in('contact[email_or_phone]', with: 'chlotilde@contactez.moi')
+      click_button('Envoyer !')
+
+      # She's notified she'll be contacted
+      expect(page)
+        .to(
+          have_content(
+            "Un·e professionnel·le va te contacter dans un délai de #{service.response_time_upper_bound} jours"
+          )
+        )
+
+      # The professional receives an email...
+      open_email(service.email)
+
+      # with all the infos required to change the young's life !
+      expect(current_email.from).to include(ENV['CONTACT_EMAIL'])
+      expect(current_email.subject).to eq('Boussole : Un·e jeune veut être recontacté·e !')
+      expect(current_email.body).to have_content('Contact : chlotilde@contactez.moi')
+      expect(current_email.body).to have_content('Service : Améliorer mon CV')
+      expect(current_email.body).to have_content("Délai garanti de réponse : #{service.response_time_upper_bound} jours")
+      expect(current_email.body).to have_content('Sais-je ce que je veux faire ? : Je sais ce que je veux faire')
+      expect(current_email.body).to have_content("Secteur d'activité : Agriculture")
+      expect(current_email.body).to have_content("J'ai déjà une expérience dans ce secteur : Non")
+      expect(current_email.body).to have_content('Je cherche un emploi pour… : 1 an')
+      expect(current_email.body).to have_content('Combien de temps puis-je y consacrer ? : Mi-temps')
+      expect(current_email.body).to have_content("Quelle est ma situation aujourd'hui ? : Sans activité")
+      expect(current_email.body).to have_content('Quel est mon âge ? : 22')
+      expect(current_email.body).to have_content('Dernières études suivies : Études supérieures')
+      expect(current_email.body).to have_content('Pôle emploi ? : Non')
+      expect(current_email.body).to have_content('Mission locale ? : Non')
+      expect(current_email.body).to have_content('Cap emploi ? : Non')
+      expect(current_email.body).to have_content("Association pour l'emploi des cadres (APEC) ? : Non")
     end
   end
 end

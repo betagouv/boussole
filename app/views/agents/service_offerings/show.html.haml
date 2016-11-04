@@ -40,10 +40,9 @@
             %dt= ServiceOffering.human_attribute_name(:url)
             %dd= @service_offering.url
 
-          -# TODO: Localise oui/non
           .profile-definition
-            %dt= ServiceOffering.human_attribute_name(:external)
-            %dd= @service_offering.external ? 'Oui' : 'Non'
+            %dt= ServiceOffering.human_attribute_name(:response_time_upper_bound)
+            %dd= @service_offering.response_time_upper_bound
 
           .profile-definition
             %dt= ServiceOffering.human_attribute_name(:response_time_upper_bound)

@@ -2,30 +2,11 @@
 # frozen_string_literal: true
 
 #
-# @deprecated Worthless.
+# Class Contact provides a persistanceless model to contact a professional.
 #
-# TODO: Get rid of (use a {Struct} for sending contact emails).
+# @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
 #
-
-#
-# == Schema Information
-# Schema version: 20160914121308
-#
-# Table name: contacts
-#
-# *id*::         <tt>integer, not null, primary key</tt>
-# *email*::      <tt>string</tt>
-# *phone*::      <tt>string</tt>
-# *created_at*:: <tt>datetime, not null</tt>
-# *updated_at*:: <tt>datetime, not null</tt>
-#--
-# == Schema Information End
-#++
-#
-class Contact < ApplicationRecord
-  #
-  # @!attribute [rw] email_or_phone
-  # @return [String] Email or phone the user wants to be contacted with.
-  #
-  attr_accessor :email_or_phone
+class Contact < ActiveType::Object
+  attribute :email_or_phone, :string
+  validates :email_or_phone, presence: true
 end

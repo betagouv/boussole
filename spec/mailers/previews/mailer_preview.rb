@@ -1,0 +1,14 @@
+# encoding: utf-8
+# frozen_string_literal: true
+
+class MailerPreview < ActionMailer::Preview
+  include FactoryGirl::Syntax::Methods
+
+  def contact_email
+    contact          = create(:contact)
+    service_offering = ServiceOfferingDecorator.(create(:service_offering, public_service: create(:public_service)))
+    working          = create(:working)
+
+    Mailer.contact_email(contact, service_offering, working)
+  end
+end

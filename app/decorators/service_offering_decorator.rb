@@ -8,29 +8,14 @@
 #
 class ServiceOfferingDecorator < ApplicationDecorator
   #
-  # @!attribute [r] service_offering
-  #
-  # @return [ServiceOffering] The decorated {ServiceOffering}
-  #
-  attr_reader :service_offering
-
-  #
-  # @!attribute [r] public_service
-  #
-  # @return [PublicService] The associated {PublicService}, if it exists.
-  #
-  attr_reader :public_service
-
-  #
   # Fallbacks to {PublicService#email} if {ServiceOffering#email} is not present.
-  #
   #
   # @return [String] If any of the emails is present
   # @return [NilClass] If none is present.
   #
   def email
-    service_offering.email ||
-      public_service.try(:email)
+    model.email ||
+      model.public_service.try(:email)
   end
 
   #
@@ -41,15 +26,7 @@ class ServiceOfferingDecorator < ApplicationDecorator
   # @return [NilClass] If none is present.
   #
   def response_time_upper_bound
-    service_offering.response_time_upper_bound ||
-      public_service.try(:response_time_upper_bound)
-  end
-
-  private
-
-  def initialize(_)
-    super
-    @service_offering = model
-    @public_service   = service_offering.public_service
+    model.response_time_upper_bound ||
+      model.public_service.try(:response_time_upper_bound)
   end
 end

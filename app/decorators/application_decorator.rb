@@ -9,6 +9,7 @@
 #
 class ApplicationDecorator < SimpleDelegator
   attr_reader :model
+  delegate :class, to: :model
 
   class << self
     def call(model)
@@ -21,7 +22,7 @@ class ApplicationDecorator < SimpleDelegator
   private
 
   def initialize(model)
-    @model = model
     super
+    @model = __getobj__
   end
 end

@@ -39,6 +39,7 @@ module Matchable
 
       with_predicate(service_offerings, public_services) do |predicate|
         ServiceOffering
+          .actionable
           .joins(:public_service)
           .where(predicate)
       end
