@@ -233,6 +233,9 @@ GEM
     maildown (2.0.0)
       kramdown
       rails (>= 4.0.0)
+    meta_events (1.2.1)
+      activesupport (>= 3.0, <= 4.99.99)
+      json (~> 1.0)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -490,6 +493,7 @@ DEPENDENCIES
   jquery-rails
   letter_opener_web
   maildown
+  meta_events
   nilify_blanks
   pg
   poltergeist
