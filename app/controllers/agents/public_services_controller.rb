@@ -70,15 +70,15 @@ module Agents
       params
         .require(:public_service)
         .permit(
-          id: Parameters.id,
-          title: Parameters.string,
-          description: Parameters.string,
-          postal_address: Parameters.string,
-          email: Parameters.string,
-          phone: Parameters.string,
-          url: Parameters.string,
-          response_time_upper_bound: Parameters.integer,
-          social_right_ids: Parameters.array(Parameters.string)
+          :id,
+          :title,
+          :description,
+          :postal_address,
+          :email,
+          :phone,
+          :url,
+          :response_time_upper_bound,
+          social_right_ids: []
         )
     end
 

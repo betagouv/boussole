@@ -23,7 +23,7 @@ situation %(
   end
 
   solution('Create a public service') do
-    scenario do
+    scenario 'with valid inofrmation' do
       click_link('Ajouter un nouvel acteur')
 
       within('.profile-form') do
@@ -40,6 +40,18 @@ situation %(
       end
 
       expect(page).to have_content('Acteur créé·e avec succès')
+    end
+
+    scenario 'without valid information' do
+      click_link('Ajouter un nouvel acteur')
+
+      within('.profile-form') do
+        fill_in('Délai garanti de réponse', with: 'sept jours')
+        click_button('Créer')
+      end
+
+      expect(page).to have_content('Flûte ! Manque-t-il quelque chose ?')
+      expect(page).to have_content("n'est pas un nombre")
     end
   end
 
@@ -67,7 +79,6 @@ situation %(
 
       within('.profile-form') do
         fill_in('Nom', with: 'Cap emploi')
-
         click_button('Modifier')
       end
 
@@ -78,10 +89,7 @@ situation %(
 
   solution('Delete a public service', js: true) do
     scenario do
-      page.accept_confirm do
-        click_link('Supprimer')
-      end
-
+      page.accept_confirm { click_link('Supprimer') }
       expect(page).to have_content('Acteur supprimé·e avec succès')
     end
   end

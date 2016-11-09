@@ -69,14 +69,7 @@ module Agents
     def measure_params
       params
         .require(:measure)
-        .permit(
-          id: Parameters.id,
-          public_service_id: Parameters.id,
-          title: Parameters.string,
-          description: Parameters.string,
-          url: Parameters.string,
-          social_right_ids: Parameters.array(Parameters.string)
-        )
+        .permit(:id, :public_service_id, :title, :description, :url, social_right_ids: [])
     end
 
     def measure_scope

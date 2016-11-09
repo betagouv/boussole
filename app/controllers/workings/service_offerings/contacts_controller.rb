@@ -30,7 +30,7 @@ module Workings
       private
 
       def contact_params
-        params[:contact] ? params.require(:contact).permit(email_or_phone: Parameters.string) : {}
+        params[:contact] ? params.require(:contact).permit(:email_or_phone) : {}
       end
     end
   end
