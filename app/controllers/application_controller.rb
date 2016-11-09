@@ -31,4 +31,16 @@ class ApplicationController < ActionController::Base
         request_fullpath: request.fullpath
       )
   end
+
+  # Lograge
+  # TODO: Move to concern.
+  def append_info_to_payload(payload)
+    super
+    payload[:user_agent] = request.env['HTTP_USER_AGENT']
+    payload[:session_id] = session[:session_id]
+    payload[:params]     =
+      request
+      .filtered_parameters
+      .except('controller', 'action', 'format', 'utf8')
+  end
 end

@@ -32,6 +32,7 @@ gem 'mixpanel-ruby'
 
 group :production do
   gem 'heroku_rails_deflate'
+  gem 'lograge'
   gem 'rails_12factor'
 end
 
