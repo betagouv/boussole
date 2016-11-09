@@ -34,7 +34,7 @@ module ControllerHelpers
   end
 
   def service_offering_scope
-    ServiceOffering.friendly
+    ServiceOffering.friendly.actionable
   end
 
   def contact_scope
