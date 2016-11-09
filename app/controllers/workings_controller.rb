@@ -5,10 +5,10 @@ class WorkingsController < ApplicationController
   require_feature :working
 
   # Tracking
-  after_action :track_starts_form, only: :create
+  after_action :track_starts_form, only: :create, unless: -> { request.env['HTTP_USER_AGENT'] =~ /uptimerobot/i }
 
   # Tracking
-  after_action :track_finishes_form, only: :show
+  after_action :track_finishes_form, only: :show, unless: -> { request.env['HTTP_USER_AGENT'] =~ /uptimerobot/i }
 
   # GET /workings/1
   def show
