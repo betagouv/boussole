@@ -8,11 +8,14 @@ module Workings
 
       require_feature :working
 
+      # Tracking
+      after_action :track_activates_service, only: :create
+
       # POST /workings/1/service_offerings/1/contacts
       def create
         load_working
         load_service_offering
-        decorate_service_offering!
+        load_public_service
         build_contact
 
         # TODO: Service + listener
@@ -29,8 +32,22 @@ module Workings
 
       private
 
+      def load_public_service
+        @public_service ||= PublicServiceDecorator.(@service_offering.public_service)
+      end
+
       def contact_params
         params[:contact] ? params.require(:contact).permit(:email_or_phone) : {}
+      end
+
+      def track_activates_service
+        tracker.(
+          :jeunes,
+          :activates_service,
+          working: @working,
+          servive_offering: @service_offering,
+          public_service: @public_service
+        )
       end
     end
   end

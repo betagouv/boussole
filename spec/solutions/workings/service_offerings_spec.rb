@@ -84,17 +84,17 @@ situation %(
       # Chlotilde wants to discover what's the service about
       click_link('Découvrir')
 
-      # She wants to be recontacted
+      # She wants to be recontacted, but forgets to type in her email or phone number
+      click_button('Envoyer !')
+
+      # She's notified she has to type in her email or phone in order to be contacted
+      expect(page).to have_content(/doit être rempli·e/)
+
       fill_in('contact[email_or_phone]', with: 'chlotilde@contactez.moi')
       click_button('Envoyer !')
 
       # She's notified she'll be contacted
-      expect(page)
-        .to(
-          have_content(
-            "Un·e professionnel·le va te contacter dans un délai de #{service.response_time_upper_bound} jours"
-          )
-        )
+      expect(page).to have_content(/dans un délai de #{service.response_time_upper_bound} jours/)
 
       # The professional receives an email...
       open_email(service.email)

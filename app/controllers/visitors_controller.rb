@@ -10,7 +10,7 @@ class VisitorsController < ApplicationController
   before_action :unset_cookie_flip, only: :index, unless: -> { request.fullpath =~ /reims1[A|B|C|D|E|F|G|H|J|K|L|N]/ }
 
   # Tracking
-  after_action :track_event, only: :index
+  after_action :track_visits_landing, only: :index
 
   private
 
@@ -27,7 +27,7 @@ class VisitorsController < ApplicationController
     @cookie_strategy ||= ::Flip::CookieStrategy.new
   end
 
-  def track_event
+  def track_visits_landing
     tracker.(:jeunes, :visits_landing)
   end
 end

@@ -10,12 +10,12 @@ class EventTracker
   #
   # Initialises an event tracker with information to be used across events.
   #
-  # @param [#to_s] distinct_id  A UUID to identify the actor of the events.
-  # @param [#each] features     A collection of toggle names (for feature flips).
-  # @param [Hash]  properties   Additional (implicit) properties to track (for any event).
+  # @param [#to_s]       distinct_id  A UUID to identify the actor of the events.
+  # @param [#each]       features     A collection of toggle names (for feature flips).
+  # @param [#each_pair]  properties   Additional (implicit) properties to track (for any event).
   #
   def initialize(distinct_id, features, **properties)
-    @tracker = TRACKER.(distinct_id.to_s, properties.merge(feature_properties(features)))
+    @tracker = TRACKER.(distinct_id, properties.merge(feature_properties(features)))
   end
 
   #
@@ -38,19 +38,19 @@ class EventTracker
   #
   # Passes an event to track to the adapter instance.
   #
-  # @param [#to_sym] segment    The customer segment we're tracking.
-  # @param [#to_sym] event      The customer segment's event we're tracking.
-  # @param [Hash]    properties Specific event properties we want to track.
+  # @param [#to_sym]    segment    The customer segment we're tracking.
+  # @param [#to_sym]    event      The customer segment's event we're tracking.
+  # @param [#each_pair] properties Specific event properties we want to track.
   #
   def call(segment, event, **properties)
-    tracker.event!(segment.to_sym, event.to_sym, **properties)
+    tracker.event!(segment, event, **properties)
   end
 
   private
 
   def feature_properties(features)
     features.each_with_object({}) do |property, properties|
-      properties.public_send(:[]=, :"feature_#{property}", FLIPPER.(property))
+      properties[:"feature_#{property}"] = FLIPPER.(property)
     end
   end
 end

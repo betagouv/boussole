@@ -108,17 +108,17 @@ fr:
   errors:
     format: "%{attribute} %{message}"
     messages:
-      accepted: doit être accepté(e)
-      blank: doit être rempli(e)
+      accepted: doit être accepté·e
+      blank: doit être rempli·e
       present: doit être vide
       confirmation: ne concorde pas avec %{attribute}
-      empty: doit être rempli(e)
+      empty: doit être rempli·e
       equal_to: doit être égal à %{count}
       even: doit être pair
       exclusion: n'est pas disponible
       greater_than: doit être supérieur à %{count}
       greater_than_or_equal_to: doit être supérieur ou égal à %{count}
-      inclusion: n'est pas inclus(e) dans la liste
+      inclusion: n'est pas inclus·e dans la liste
       invalid: n'est pas valide
       less_than: doit être inférieur à %{count}
       less_than_or_equal_to: doit être inférieur ou égal à %{count}
@@ -145,7 +145,7 @@ fr:
     select:
       prompt: Veuillez sélectionner
     submit:
-      create: Créer un(e) %{model}
+      create: Créer un·e %{model}
       submit: Enregistrer ce(tte) %{model}
       update: Modifier ce(tte) %{model}
   number:
