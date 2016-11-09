@@ -2,9 +2,6 @@
 # frozen_string_literal: true
 
 class VisitorsController < ApplicationController
-  # Reset session for each landing page visit
-  before_action :reset_session, only: :index
-
   # Flyers
   before_action :set_cookie_flip, only: :index, if: -> { request.fullpath =~ /reims1[A|B|C|D|E|F|G|H|J|K|L|N]/ }
   before_action :unset_cookie_flip, only: :index, unless: -> { request.fullpath =~ /reims1[A|B|C|D|E|F|G|H|J|K|L|N]/ }
