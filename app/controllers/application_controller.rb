@@ -28,7 +28,8 @@ class ApplicationController < ActionController::Base
         session[:session_id],
         features,
         request_referer: request.referer,
-        request_fullpath: request.fullpath
+        request_fullpath: request.fullpath,
+        request_user_agent: request.env['HTTP_USER_AGENT']
       )
   end
 
@@ -36,7 +37,6 @@ class ApplicationController < ActionController::Base
   # TODO: Move to concern.
   def append_info_to_payload(payload)
     super
-    payload[:user_agent] = request.env['HTTP_USER_AGENT']
     payload[:session_id] = session[:session_id]
     payload[:params]     =
       request

@@ -8,7 +8,6 @@ Rails.application.configure do
     config.lograge.custom_options = lambda do |event|
       {
         time: event.time.as_json,
-        user_agent: event.payload[:user_agent].presence || 'nil',
         session_id: event.payload[:session_id].presence || 'nil',
         params: event.payload[:params].presence || 'nil'
       }
