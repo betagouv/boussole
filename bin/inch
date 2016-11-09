@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# encoding: utf-8
+# frozen_string_literal: true
 
 require 'inch'
 require 'open3'
@@ -8,12 +10,12 @@ pattern = /┃  U  ↗  /
 stdout  = Open3.capture3('inch', 'suggest', '--all', '--pedantic', '--no-color').first
 
 # Create a list of to-be-documented methods
-list = stdout.lines.each_with_object([]) do |line, list|
-  if line[pattern]
-    list << line
-      .gsub(pattern, '')
-      .gsub("\n", '')
-  end
+list = stdout.lines.each_with_object([]) do |line, array|
+  next unless line[pattern]
+
+  array << line
+           .gsub(pattern, '')
+           .delete("\n")
 end
 
 # Exit if no to-be-documented methods, otherwise print the list and fail.

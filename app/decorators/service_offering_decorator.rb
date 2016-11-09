@@ -7,6 +7,8 @@
 # @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
 #
 class ServiceOfferingDecorator < ApplicationDecorator
+  include Trackable
+
   #
   # Fallbacks to {PublicService#email} if {ServiceOffering#email} is not present.
   #

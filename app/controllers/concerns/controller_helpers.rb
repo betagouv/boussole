@@ -13,15 +13,11 @@ module ControllerHelpers
   private
 
   def load_working
-    @working ||= working_scope.find(id(:working))
+    @working ||= WorkingDecorator.(working_scope.find(id(:working)))
   end
 
   def load_service_offering
-    @service_offering ||= service_offering_scope.find(id(:service_offering))
-  end
-
-  def decorate_service_offering!
-    @service_offering = ServiceOfferingDecorator.(@service_offering)
+    @service_offering ||= ServiceOfferingDecorator.(service_offering_scope.find(id(:service_offering)))
   end
 
   def build_contact

@@ -34,7 +34,13 @@ module Boussole
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    # Load operations' concerns.
+    # Load decorators & concerns.
+    config.autoload_paths += Dir[Rails.root.join('app', 'decorators', '{**/}')]
+
+    # Load operations & concerns.
     config.autoload_paths += Dir[Rails.root.join('app', 'operations', '{**/}')]
+
+    # Load services & concerns
+    config.autoload_paths += Dir[Rails.root.join('app', 'services', '{**/}')]
   end
 end
