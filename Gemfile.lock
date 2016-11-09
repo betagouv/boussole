@@ -242,6 +242,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.9.1)
+    mixpanel-ruby (2.2.0)
     multi_json (1.12.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
@@ -494,6 +495,7 @@ DEPENDENCIES
   letter_opener_web
   maildown
   meta_events
+  mixpanel-ruby
   nilify_blanks
   pg
   poltergeist

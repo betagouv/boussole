@@ -28,6 +28,7 @@ gem 'nilify_blanks'
 
 # Analytics
 gem 'meta_events'
+gem 'mixpanel-ruby'
 
 group :production do
   gem 'heroku_rails_deflate'
