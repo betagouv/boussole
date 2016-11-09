@@ -31,7 +31,7 @@ situation %(
   end
 
   solution('Create a service offering') do
-    scenario do
+    scenario 'with valid inofrmation' do
       click_link('Ajouter une nouvelle offre de service')
 
       within('.profile-form') do
@@ -49,6 +49,18 @@ situation %(
       end
 
       expect(page).to have_content('Offre de service créé·e avec succès')
+    end
+
+    scenario 'without valid information' do
+      click_link('Ajouter une nouvelle offre de service')
+
+      within('.profile-form') do
+        fill_in('Délai garanti de réponse', with: 'sept jours')
+        click_button('Créer')
+      end
+
+      expect(page).to have_content('Flûte ! Manque-t-il quelque chose ?')
+      expect(page).to have_content("n'est pas un nombre")
     end
   end
 
@@ -84,7 +96,6 @@ situation %(
 
       within('.profile-form') do
         fill_in('Nom', with: 'Cours de Zumba')
-
         click_button('Modifier')
       end
 
@@ -95,10 +106,7 @@ situation %(
 
   solution('Delete a service offering', js: true) do
     scenario do
-      page.accept_confirm do
-        click_link('Supprimer')
-      end
-
+      page.accept_confirm { click_link('Supprimer') }
       expect(page).to have_content('Offre de service supprimé·e avec succès')
     end
   end

@@ -69,6 +69,12 @@ class ServiceOffering < ApplicationRecord
             unless: ->(service) { service.public_service.try(:email) }
 
   validates :response_time_upper_bound,
+            numericality: {
+              only_integer: true,
+              allow_nil: true
+            }
+
+  validates :response_time_upper_bound,
             presence: true,
             unless: ->(service) { service.public_service.try(:response_time_upper_bound) }
 

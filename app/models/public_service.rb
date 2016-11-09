@@ -61,4 +61,10 @@ class PublicService < ApplicationRecord
 
   validates :slug,
             uniqueness: true
+
+  validates :response_time_upper_bound,
+            numericality: {
+              only_integer: true,
+              allow_nil: true
+            }
 end

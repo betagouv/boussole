@@ -33,7 +33,7 @@ situation %(
   end
 
   solution('Create a measure') do
-    scenario do
+    scenario 'with valid inofrmation' do
       click_link('Ajouter un nouveau dispositif')
 
       within('.profile-form') do
@@ -47,6 +47,12 @@ situation %(
       end
 
       expect(page).to have_content('Dispositif créé·e avec succès')
+    end
+
+    scenario 'without valid information' do
+      click_link('Ajouter un nouveau dispositif')
+      within('.profile-form') { click_button('Créer') }
+      expect(page).to have_content('Flûte ! Manque-t-il quelque chose ?')
     end
   end
 
@@ -79,7 +85,6 @@ situation %(
 
       within('.profile-form') do
         fill_in('Nom', with: 'Établissement public d’insertion pour l’emploi')
-
         click_button('Modifier')
       end
 
@@ -89,10 +94,7 @@ situation %(
 
   solution('Delete a measure', js: true) do
     scenario do
-      page.accept_confirm do
-        click_link('Supprimer')
-      end
-
+      page.accept_confirm { click_link('Supprimer') }
       expect(page).to have_content('Dispositif supprimé·e avec succès')
     end
   end
