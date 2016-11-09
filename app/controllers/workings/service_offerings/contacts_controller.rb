@@ -9,7 +9,7 @@ module Workings
       require_feature :working
 
       # Tracking
-      after_action :track_activates_service, only: :create, unless: -> { request.env['HTTP_USER_AGENT'] =~ /uptimerobot/i }
+      after_action :track_activates_service, only: :create
 
       # POST /workings/1/service_offerings/1/contacts
       def create

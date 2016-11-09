@@ -8,7 +8,7 @@ module Workings
     require_feature :working
 
     # Tracking
-    after_action :track_discovers_service, only: :show, unless: -> { request.env['HTTP_USER_AGENT'] =~ /uptimerobot/i }
+    after_action :track_discovers_service, only: :show
 
     # GET /workings/1/service_offerings/1
     def show
