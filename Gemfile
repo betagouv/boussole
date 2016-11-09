@@ -24,6 +24,9 @@ gem 'trailblazer-rails'
 gem 'uglifier'
 gem 'wicked'
 
+# Avoid blanks in the db
+gem 'nilify_blanks'
+
 group :production do
   gem 'heroku_rails_deflate'
   gem 'rails_12factor'

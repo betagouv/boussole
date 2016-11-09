@@ -48,6 +48,8 @@ class ServiceOffering < ApplicationRecord
 
   friendly_id :title, use: :slugged
 
+  nilify_blanks only: :email
+
   belongs_to :public_service,
              inverse_of: :service_offerings
 

@@ -41,6 +41,8 @@ class PublicService < ApplicationRecord
 
   friendly_id :title, use: :slugged
 
+  nilify_blanks only: :email
+
   has_many :exercise_scopes,
            as: :exercisable,
            dependent: :destroy
