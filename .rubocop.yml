@@ -3,7 +3,6 @@ inherit_from: .rubocop_todo.yml
 
 AllCops:
   Exclude:
-    - bin/**/*
     - db/migrate/**/*
     - db/schema.rb
     - script/**/*
@@ -19,6 +18,14 @@ Lint/AmbiguousOperator:
 Lint/AssignmentInCondition:
   Enabled: false
 
+Metrics/BlockLength:
+  Exclude:
+    - app/views/**/*
+    - config/initializers/**/*
+    - config/environments/**/*
+    - lib/tasks/**/*
+    - spec/**/*
+
 Metrics/LineLength:
   Max: 125
 
@@ -27,6 +34,10 @@ Metrics/MethodLength:
 
 Rails:
   Enabled: true
+
+
+Rails/HttpPositionalArguments:
+  Enabled: false
 
 RSpec/DescribeClass:
   Enabled: true

@@ -21,12 +21,12 @@ class EventTracker
   #
   # @return [#call] A block wrapping the external analytics adapter.
   #
-  TRACKER = -> (distinct_id, properties) { MetaEvents::Tracker.new(distinct_id, nil, implicit_properties: properties) }
+  TRACKER = ->(distinct_id, properties) { MetaEvents::Tracker.new(distinct_id, nil, implicit_properties: properties) }
 
   #
   # @return [#call] A block wrapping the A/B testing flipper.
   #
-  FLIPPER = -> (feature) { Flip.on?(feature) }
+  FLIPPER = ->(feature) { Flip.on?(feature) }
 
   #
   # @!attribute [r] tracker

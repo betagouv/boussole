@@ -44,8 +44,8 @@ class ProjectsController < ApplicationController
           url: 'http://www.espacesmetiers-champagneardenne.org/',
           services: [
             'Valider ton projet de formation',
-            "Etre accompagné pour choisir une formation",
-            "T'inscrire dans une formation "
+            'Etre accompagné pour choisir une formation',
+            "T'inscrire dans une formation"
           ]
         }
       end
