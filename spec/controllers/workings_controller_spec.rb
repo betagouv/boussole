@@ -7,7 +7,7 @@ RSpec.describe WorkingsController, type: :controller do
 
   before do
     allow(subject).to receive(:tracker) { event_tracker }
-    allow(ENV).to receive(:[]).with('RHIZOME').and_return('reims')
+    allow(ENV).to receive(:[]).with('RHIZOME') { 'reims' }
   end
 
   it 'GET #show' do

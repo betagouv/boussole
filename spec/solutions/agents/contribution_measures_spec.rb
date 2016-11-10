@@ -28,6 +28,9 @@ situation %(
   end
 
   background do
+    # TODO: Move rhizome to a settings object.
+    allow(ENV).to receive(:fetch).with('RHIZOME') { 'reims' }
+
     # The agent is at the measure's space
     visit('/agents/measures')
   end
@@ -57,9 +60,12 @@ situation %(
   end
 
   solution('List all measures') do
-    scenario { expect(page).to have_content('Retour à la formation initiale') }
-    scenario { expect(page).to have_content('Plate-forme de décrochage') }
-    scenario { expect(page).to have_content('Formation') }
+    scenario do
+      expect(page).to have_content("Liste des dispositifs à #{I18n.t('rhizomes.' + ENV.fetch('RHIZOME'))}")
+      expect(page).to have_content('Retour à la formation initiale')
+      expect(page).to have_content('Plate-forme de décrochage')
+      expect(page).to have_content('Formation')
+    end
   end
 
   solution('Sort measures by public service') do

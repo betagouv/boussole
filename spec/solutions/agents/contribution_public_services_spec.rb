@@ -18,6 +18,9 @@ situation %(
   given!(:public_service) { create(:public_service, title: 'Pôle emploi', social_rights: [social_right]) }
 
   background do
+    # TODO: Move rhizome to a settings object.
+    allow(ENV).to receive(:fetch).with('RHIZOME') { 'coeuressonne' }
+
     # The agent is at the public service's space
     visit('/agents/public_services')
   end
@@ -57,8 +60,11 @@ situation %(
   end
 
   solution('List all public services') do
-    scenario { expect(page).to have_content('Pôle emploi') }
-    scenario { expect(page).to have_content('Emploi') }
+    scenario do
+      expect(page).to have_content("Liste d'acteurs à #{I18n.t('rhizomes.' + ENV.fetch('RHIZOME'))}")
+      expect(page).to have_content('Pôle emploi')
+      expect(page).to have_content('Emploi')
+    end
   end
 
   solution('Sort public services by social right') do

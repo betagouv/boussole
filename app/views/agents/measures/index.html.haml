@@ -3,7 +3,7 @@
 .l-container-wide
   .l-content
     %section.profile-list
-      %h1.profile-list-header= t('.heading')
+      %h1.profile-list-header= t('.heading', rhizome: t("rhizomes.#{ENV.fetch('RHIZOME')}"))
       %hr
 
       .profile-list-new

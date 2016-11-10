@@ -31,6 +31,9 @@ situation %(
   end
 
   background do
+    # TODO: Move rhizome to a settings object.
+    allow(ENV).to receive(:fetch).with('RHIZOME') { 'coeuressonne' }
+
     # The agent is at the service offering's space
     visit('/agents/service_offerings')
   end
@@ -71,6 +74,7 @@ situation %(
 
   solution('List all service offerings') do
     scenario do
+      expect(page).to have_content("Liste des offres de service à #{I18n.t('rhizomes.' + ENV.fetch('RHIZOME'))}")
       expect(page).to have_content("Trouver une solution de logement d'urgence")
       expect(page).to have_content('Services Intégrés de l’Accueil et de l’Orientation')
       expect(page).to have_content('Logement')
