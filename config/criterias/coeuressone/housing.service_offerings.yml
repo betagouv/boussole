@@ -1,0 +1,39 @@
+# *current_status*:: <tt>string</tt>
+  #  - 'Sans activité'
+  #  - 'Étudiant·e'
+  #  - 'Lycéen·ne'
+  #  - 'Salarié·e'
+  #  - 'En formation'
+  #  - 'Apprenti·e'
+  #  - 'Autre'
+# *resources*::      <tt>integer, default(0)</tt>
+# *age*::            <tt>integer</tt>
+# *housing_city*::   <tt>string</tt>
+# *residence_city*:: <tt>string</tt>
+# *next_status*::    <tt>boolean, default(FALSE)</tt>
+
+acteur:
+  offre-de-service:
+    # scenarii
+    -
+      # critères discrimiinants
+      -
+        attribute: "duration" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "resources" # discriminant @see app/models/service_offering.rb
+        operator: ">=" # options are ==, >=, >, <, <=, in?
+        value: 150
+      -
+        attribute: "current_status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"

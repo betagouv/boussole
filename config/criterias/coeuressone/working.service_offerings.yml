@@ -1,0 +1,88 @@
+# *awareness*::      <tt>string</tt>
+# - 'Je sais ce que je veux faire'
+# - 'Je ne sais pas ce que je veux faire'
+
+# *experience*::     <tt>boolean</tt>
+# - true
+# - false
+
+# *duration*::       <tt>string</tt>
+# - 'Quelques mois'
+# - '1 an'
+# - "+ d'1 an"
+
+# *engagement*::     <tt>string</tt>
+# - 'Temps plein'
+# - 'Mi-temps'
+# - 'Flexible'
+
+# *status*::         <tt>string</tt>
+# - 'Sans activité'
+# - 'Étudiant·e'
+# - 'Lycéen·ne'
+# - 'Salarié·e'
+# - 'En formation'
+# - 'Apprenti·e'
+# - 'Autre'
+
+# *age*::            <tt>integer</tt>
+# 16, 26, 32, 45, etc...
+
+# *handicap*::       <tt>boolean</tt>
+# - true
+# - false
+
+# *last_class*::     <tt>string</tt>
+# - 'Collège'
+# - 'Lycée'
+# - 'Études supérieures'
+# - 'Aprentissage'
+# - 'Autre'
+
+# *pole_emploi*::    <tt>boolean</tt>
+# - true
+# - false
+
+# *mission_locale*:: <tt>boolean</tt>
+# - true
+# - false
+
+# *cap_emploi*::     <tt>boolean</tt>
+# - true
+# - false
+
+# *apec*::           <tt>boolean</tt>
+# - true
+# - false
+
+acteur:
+  offre-de-service:
+    # scenarii
+    -
+      # critères discriminants
+      -
+        attribute: "status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+      -
+        attribute: "age" # discriminant @see app/models/service_offering.rb
+        operator: ">=" # options are ==, >=, >, <, <=, in?
+        value: 22
+      -
+        attribute: "last_class" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Études supérieures"
+      -
+        attribute: "pole_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "cap_emploi" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false
+      -
+        attribute: "handicap" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: false

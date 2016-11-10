@@ -2,9 +2,12 @@
 # frozen_string_literal: true
 
 RSpec.describe 'Working matching criterias', type: :criteria do
-  it_should_behave_like(
-    'criterias',
-    Working,
-    YAML.load(File.read(Rails.root.join('config/criterias/reims/working.service_offerings.yml')))
-  )
+  # TODO: Move rhizome collection to config file
+  %w(reims coeuressone).each do |rhizome|
+    it_should_behave_like(
+      'criterias',
+      Working,
+      YAML.load(File.read(Rails.root.join("config/criterias/#{rhizome}/working.service_offerings.yml")))
+    )
+  end
 end
