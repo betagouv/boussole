@@ -23,7 +23,7 @@ RSpec.describe Housing::ServiceOfferings, type: :operation do
     )
   end
 
-  before { allow(Rails.root).to receive(:join) { 'spec/fixtures/criterias/housing.service_offerings.yml' } }
+  before { stub_const("#{described_class}::CRITERIAS_PATH", -> { 'spec/fixtures/criterias/housing.service_offerings.yml' }) }
 
   context 'with matches' do
     it { expect(operation.scope).to include(service_offering) }

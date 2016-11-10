@@ -20,14 +20,14 @@ class Housing < ApplicationRecord
     #
     # @return [String] The base path to a {Housing}'s {ServiceOffering} matching.
     #
-    CRITERIAS_PATH = 'config/criterias/reims/housing.service_offerings.yml'
+    CRITERIAS_PATH = -> { "config/criterias/#{ENV['RHIZOME']}/housing.service_offerings.yml" }
 
     #
     # @see {Trailblazer::Operation::Resolver::BuildOperation.build_operation}
     #
     def initialize(params, _)
       @project   = Housing.find(params[:id])
-      @criterias = YAML.load(File.read(Rails.root.join(CRITERIAS_PATH)))
+      @criterias = YAML.load(File.read(Rails.root.join(CRITERIAS_PATH.())))
       super
     end
 

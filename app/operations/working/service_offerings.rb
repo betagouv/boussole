@@ -20,14 +20,14 @@ class Working < ApplicationRecord
     #
     # @return [String] The base path to a {Working}'s {ServiceOffering} matching.
     #
-    CRITERIAS_PATH = 'config/criterias/reims/working.service_offerings.yml'
+    CRITERIAS_PATH = -> { "config/criterias/#{ENV['RHIZOME']}/working.service_offerings.yml" }
 
     #
     # @see {Trailblazer::Operation::Resolver::BuildOperation.build_operation}
     #
     def initialize(params, _)
       @project   = Working.find(params[:id])
-      @criterias = YAML.load(File.read(Rails.root.join(CRITERIAS_PATH)))
+      @criterias = YAML.load(File.read(Rails.root.join(CRITERIAS_PATH.())))
       super
     end
 

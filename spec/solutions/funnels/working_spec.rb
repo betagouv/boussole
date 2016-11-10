@@ -15,7 +15,8 @@ solution('Improve my CV') do
     given!(:service)       { create(:service_offering, title: 'Améliorer mon CV', public_service: public_service) }
 
     background do
-      allow(Rails.root).to receive(:join) { 'spec/fixtures/criterias/working.service_offerings.yml' }
+      Working::ServiceOfferings.send(:remove_const, 'CRITERIAS_PATH')
+      Working::ServiceOfferings.const_set('CRITERIAS_PATH', -> { 'spec/fixtures/criterias/working.service_offerings.yml' })
     end
 
     scenario('she knows what she wants to do') do
