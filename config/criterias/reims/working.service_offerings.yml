@@ -1,59 +1,3 @@
-# *awareness*::      <tt>string</tt>
-# - 'Je sais ce que je veux faire'
-# - 'Je ne sais pas ce que je veux faire'
-
-# *experience*::     <tt>boolean</tt>
-# - true
-# - false
-
-# *duration*::       <tt>string</tt>
-# - 'Quelques mois'
-# - '1 an'
-# - "+ d'1 an"
-
-# *engagement*::     <tt>string</tt>
-# - 'Temps plein'
-# - 'Mi-temps'
-# - 'Flexible'
-
-# *status*::         <tt>string</tt>
-# - 'Sans activité'
-# - 'Étudiant·e'
-# - 'Lycéen·ne'
-# - 'Salarié·e'
-# - 'En formation'
-# - 'Apprenti·e'
-# - 'Autre'
-
-# *age*::            <tt>integer</tt>
-# 16, 26, 32, 45, etc...
-
-# *handicap*::       <tt>boolean</tt>
-# - true
-# - false
-
-# *last_class*::     <tt>string</tt>
-# - 'Collège'
-# - 'Lycée'
-# - 'Études supérieures'
-# - 'Aprentissage'
-# - 'Autre'
-
-# *pole_emploi*::    <tt>boolean</tt>
-# - true
-# - false
-
-# *mission_locale*:: <tt>boolean</tt>
-# - true
-# - false
-
-# *cap_emploi*::     <tt>boolean</tt>
-# - true
-# - false
-
-# *apec*::           <tt>boolean</tt>
-# - true
-# - false
 apec-association-pour-l-emploi-des-cadres-3e48ecd0-4638-47a5-84e6-482bcd43de6a: # code  acteur A
   ameliorer-mon-cv: # code offre de service A
     # scenarios
@@ -785,7 +729,7 @@ espace-metiers:
       -
         attribute: "status"
         operator: "in?"
-        value: 
+        value:
           - "Salarié.e"
           - "Sans activité"
           - "Lycéen·ne"

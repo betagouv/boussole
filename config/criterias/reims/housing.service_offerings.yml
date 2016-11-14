@@ -1,16 +1,3 @@
-# *current_status*:: <tt>string</tt>
-  #  - 'Sans activité'
-  #  - 'Étudiant·e'
-  #  - 'Lycéen·ne'
-  #  - 'Salarié·e'
-  #  - 'En formation'
-  #  - 'Apprenti·e'
-  #  - 'Autre'
-# *resources*::      <tt>integer, default(0)</tt>
-# *age*::            <tt>integer</tt>
-# *housing_city*::   <tt>string</tt>
-# *residence_city*:: <tt>string</tt>
-# *next_status*::    <tt>boolean, default(FALSE)</tt>
 crij-centre-regional-d-information-jeunesse: # code  acteur A
   decouvrir-les-solutions-logement-sur-ton-territoire: # code offre de service A
     # scenarios
