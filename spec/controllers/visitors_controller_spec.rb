@@ -6,8 +6,26 @@ RSpec.describe VisitorsController, type: :controller do
 
   before { allow(subject).to receive(:tracker) { event_tracker } }
 
-  it 'GET #index' do
-    get(:index)
-    expect(event_tracker).to have_received(:call).with(:jeunes, :visits_landing)
+  describe 'GET #index' do
+    before do
+      request.env['HTTP_USER_AGENT'] = user_agent
+      get(:index)
+    end
+
+    context 'with uptime calls' do
+      let(:user_agent) { 'UptimeRobot' }
+
+      it { expect(response).to have_http_status(:ok) }
+      it { expect(response).not_to render_template(:index) }
+      it { expect(event_tracker).not_to have_received(:call) }
+    end
+
+    context 'without uptime calls' do
+      let(:user_agent) { 'DowntimeRobot' }
+
+      it { expect(response).to have_http_status(:ok) }
+      it { expect(response).to render_template(:index) }
+      it { expect(event_tracker).to have_received(:call).with(:jeunes, :visits_landing) }
+    end
   end
 end
