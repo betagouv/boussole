@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   end
 
   def return_ok
-    return head(:ok)
+    head(:ok)
   end
 
   def features
