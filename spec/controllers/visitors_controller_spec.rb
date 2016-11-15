@@ -4,9 +4,7 @@
 RSpec.describe VisitorsController, type: :controller do
   let(:event_tracker) { instance_spy(EventTracker) }
 
-  before do
-    allow(subject).to receive(:tracker) { event_tracker }
-  end
+  before { allow(subject).to receive(:tracker) { event_tracker } }
 
   describe 'GET #index' do
     before do
