@@ -49,10 +49,10 @@
             %dd= @public_service.title
 
           .profile-definition
-            %dt= ('activerecord.attributes.public_service.description')
+            %dt= t('activerecord.attributes.public_service.description')
             %dd= @public_service.description
 
           - if @public_service.url
             .profile-definition
-              %dt= ('activerecord.attributes.public_service.url')
+              %dt= t('activerecord.attributes.public_service.url')
               %dd= link_to(@public_service.url, @public_service.url, target: '_blank')

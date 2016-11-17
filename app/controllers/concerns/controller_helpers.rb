@@ -16,8 +16,16 @@ module ControllerHelpers
     @working ||= WorkingDecorator.(working_scope.find(id(:working)))
   end
 
+  def load_housing
+    @housing ||= HousingDecorator.(housing_scope.find(id(:housing)))
+  end
+
   def load_service_offering
     @service_offering ||= ServiceOfferingDecorator.(service_offering_scope.find(id(:service_offering)))
+  end
+
+  def load_public_service
+    @public_service ||= PublicServiceDecorator.(@service_offering.public_service)
   end
 
   def build_contact
@@ -25,8 +33,16 @@ module ControllerHelpers
     @contact.attributes = contact_params
   end
 
+  def contact_params
+    params[:contact] ? params.require(:contact).permit(:email_or_phone) : {}
+  end
+
   def working_scope
     Working.all
+  end
+
+  def housing_scope
+    Housing.all
   end
 
   def service_offering_scope

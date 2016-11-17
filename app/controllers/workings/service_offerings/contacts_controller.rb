@@ -23,7 +23,7 @@ module Workings
           Mailer.contact_email(@contact, @service_offering, @working).deliver_now
           redirect_to(
             working_service_offering_url(@working, @service_offering),
-            notice: t(:contact, scope: 'actioncontroller.notice', response_time: @service_offering.response_time_upper_bound)
+            notice: t('actioncontroller.notice.contact', response_time: @service_offering.response_time_upper_bound)
           )
         else
           render(template: 'workings/service_offerings/show')
@@ -31,14 +31,6 @@ module Workings
       end
 
       private
-
-      def load_public_service
-        @public_service ||= PublicServiceDecorator.(@service_offering.public_service)
-      end
-
-      def contact_params
-        params[:contact] ? params.require(:contact).permit(:email_or_phone) : {}
-      end
 
       def track_activates_service
         tracker.(

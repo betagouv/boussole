@@ -51,6 +51,15 @@ situation %(
 
       # There're services offered to Zoe
       expect(page).to have_content('Trouver un coloc')
+
+      # Zoe wants to discover what's the service about
+      click_link('Découvrir')
+
+      # She wants to be recontacted, but forgets to type in her email or phone number
+      click_button('Envoyer !')
+
+      # She's notified she has to type in her email or phone in order to be contacted
+      expect(page).to have_content(/doit être rempli·e/)
     end
   end
 end
