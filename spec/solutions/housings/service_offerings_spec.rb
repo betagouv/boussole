@@ -11,47 +11,46 @@ situation %(
   Pour pouvoir gagner du temps,
   Et trouver un logement rapidement.
 ) do
-  # Zoe is at the landing page
-  background { visit('/') }
+  given(:public_service) { create(:public_service, title: 'Lokaviz') }
+  given!(:service)       { create(:service_offering, title: 'Trouver un coloc', public_service: public_service) }
+
+  background do
+    allow(Flip).to receive(:on?)
+    allow(Flip).to receive(:on?).with(:housing) { true }
+    allow(Rails.root).to receive(:join) { 'spec/fixtures/criterias/housing.service_offerings.yml' }
+  end
 
   solution('Find a flatsharing solution') do
-    scenario do
+    scenario('She knows what she wants to do') do
+      visit('/')
       click_link('Commencer !')
 
-      # Duration:
+      # Duration
       select('1 an', from: 'Pour combien de temps ?')
 
-      # Desired location:
+      # Desired location
       select('Reims', from: 'Où souhaites-tu te loger ?')
 
-      # Budget:
+      # Budget
       fill_in('Quel est ton budget mensuel pour te loger (€) ?', with: 300)
 
-      # Submit
+      # Submit!
       click_button('Continuer')
 
-      # Current status:
+      # Current status
       select('Lycéen·ne', from: "Quelle est ta situation aujourd'hui ?")
 
-      # Next status:
+      # Next status
       check('Seras-tu étudiant·e à la rentrée ?', match: :first)
 
       # Age
       fill_in('Tu as quel âge ?', with: 18)
 
-      # Submit
+      # Submit!
       click_button('Continuer')
 
-      # TODO: Add flatsharing information.
-      expect(page).to(have_content(/coloc/i))
-      expect(page).to(have_content(/crous/i))
-      expect(page).to(have_content(/clé/i))
-      expect(page).to(have_content(/caf/i))
-      expect(page).to(have_content(/contact/i))
-
-      # TODO: Make sure we give an answer to all of Zoe's and her parents' motivations.
-      # TODO: Make sure she knows the service engagement delay to get in contact.
-      # TODO: Make sure she can get in contact.
+      # There're services offered to Zoe
+      expect(page).to have_content('Trouver un coloc')
     end
   end
 end
