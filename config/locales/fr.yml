@@ -45,6 +45,7 @@ fr:
         mission_locale: Mission locale ?
         cap_emploi: Cap emploi ?
         apec: Association pour l'emploi des cadres (APEC) ?
+        updated_at: Dernière actualisation
       social_right:
         name: Nom
         public_services: Acteurs
