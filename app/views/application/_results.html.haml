@@ -26,5 +26,6 @@
                   %p= truncate(service_offering.description, length: 200)
 
                 %footer.result-footer
-                  = link_to(send("#{project.class.name.underscore}_service_offering_path", project, service_offering), class: 'btn btn-new') do
-                    = t("#{project.class.name.underscore.pluralize}.show.discover")
+                  = link_to t("#{project.class.name.underscore.pluralize}.show.discover"),
+                            send("#{project.class.name.underscore}_service_offering_path", project, service_offering),
+                            class: 'btn btn-new'
