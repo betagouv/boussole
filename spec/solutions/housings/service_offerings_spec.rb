@@ -21,30 +21,33 @@ situation %(
   end
 
   solution('Find a flatsharing solution') do
-    scenario('She knows what she wants to do') do
+    scenario do
       visit('/')
       click_link('Commencer !')
 
       # Duration
-      select('1 an', from: 'Pour combien de temps ?')
+      select('1 an', from: 'Je cherche un logement pour…')
 
       # Desired location
-      select('Reims', from: 'Où souhaites-tu te loger ?')
+      select('Reims', from: 'Où souhaite-je me loger ?')
 
       # Budget
-      fill_in('Quel est ton budget mensuel pour te loger (€) ?', with: 300)
+      fill_in('Quel est mon budget mensuel pour me loger (€) ?', with: 300)
 
       # Submit!
       click_button('Continuer')
 
       # Current status
-      select('Lycéen·ne', from: "Quelle est ta situation aujourd'hui ?")
+      select('Lycéen·ne', from: "Quelle est ma situation aujourd'hui ?")
 
       # Next status
-      check('Seras-tu étudiant·e à la rentrée ?', match: :first)
+      check('Serai-je étudiant·e à la rentrée ?', match: :first)
+
+      # Current location
+      select('Ay', from: 'Lieu de résidence actuel ?')
 
       # Age
-      fill_in('Tu as quel âge ?', with: 18)
+      select('18', from: 'Quel est mon âge ?')
 
       # Submit!
       click_button('Continuer')
@@ -60,6 +63,29 @@ situation %(
 
       # She's notified she has to type in her email or phone in order to be contacted
       expect(page).to have_content(/doit être rempli·e/)
+
+      fill_in('contact[email_or_phone]', with: 'zoe@contactez.moi')
+      click_button('Envoyer !')
+
+      # She's notified she'll be contacted
+      expect(page).to have_content(/dans un délai de #{service.response_time_upper_bound} jours/)
+
+      # The professional receives an email...
+      open_email(service.email)
+
+      # with all the infos required to change the young's life !
+      expect(current_email.from).to include(ENV['CONTACT_EMAIL'])
+      expect(current_email.subject).to eq('Boussole : Un·e jeune veut être recontacté·e !')
+      expect(current_email.body).to have_content('Contact : zoe@contactez.moi')
+      expect(current_email.body).to have_content('Service : Trouver un coloc')
+      expect(current_email.body).to have_content("Délai garanti de réponse : #{service.response_time_upper_bound} jours")
+      expect(current_email.body).to have_content('Je cherche un logement pour… : 1 an')
+      expect(current_email.body).to have_content('Où souhaite-je me loger ? : Reims')
+      expect(current_email.body).to have_content('Quel est mon budget mensuel pour me loger (€) ? : 300')
+      expect(current_email.body).to have_content("Quelle est ma situation aujourd'hui ? : Lycéen·ne")
+      expect(current_email.body).to have_content('Serai-je étudiant·e à la rentrée ? : Oui')
+      expect(current_email.body).to have_content('Lieu de résidence actuel ? : Ay')
+      expect(current_email.body).to have_content('Quel est mon âge ? : 18')
     end
   end
 end
