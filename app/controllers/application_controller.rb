@@ -50,4 +50,16 @@ class ApplicationController < ActionController::Base
       .filtered_parameters
       .except('controller', 'action', 'format', 'utf8')
   end
+
+  def blacklisted_ips?
+    request.remote_ip =~ Regexp.new(blacklisted_ips.join('|')) if blacklisted_ips.present?
+  end
+
+  def blacklisted_ips
+    @blacklisted_ips ||=
+      ENV['BLACKLISTED_IPS']
+      .try(:split, ',')
+      .try(:select, &:present?)
+      .try(:map, &:strip)
+  end
 end
