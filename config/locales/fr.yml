@@ -22,13 +22,13 @@ fr:
 
     attributes:
       housing:
-        duration: Pour
-        residence_city: Lieu de résidence actuel
-        housing_city: Lieu de résidence souhaité
-        resources: Budget
-        age: Âge
-        current_status: Situation
-        next_status: Étudiant·e à la rentrée ?
+        duration: Je cherche un logement pour…
+        housing_city: Où souhaite-je me loger ?
+        resources: Quel est mon budget mensuel pour me loger (€) ?
+        current_status: "Quelle est ma situation aujourd'hui ?"
+        next_status: Serai-je étudiant·e à la rentrée ?
+        residence_city: 'Lieu de résidence actuel ?'
+        age: Quel est mon âge ?
         updated_at: Dernière actualisation
       working:
         awareness: Sais-je ce que je veux faire ?
