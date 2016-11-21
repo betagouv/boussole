@@ -96,8 +96,8 @@ fr:
 
   layouts:
     application:
-      title: 'Boussole de droits'
-      description: Accède au conseil garanti d'un·e professionnel·le, à proximité, pour t'aider dans tes projets de formation, de logement, d'activité et de santé
+      title: Boussole de droits
+      description: Trouve le bon contact pour t'aider dans tes projets de formation, de logement, d'emploi et de santé
     navigation_links:
       public_services: Acteurs
       service_offerings: Offres de service
