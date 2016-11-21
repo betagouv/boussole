@@ -5,11 +5,12 @@
   %head
     %meta{ charset: 'utf-8' }
     %meta{ 'http-equiv' => 'X-UA-Compatible', content: 'IE=edge' }
-    %title= t('.title')
-    %meta{ name: 'description', content: t('.description') }
+    %title= t('layouts.application.title')
+    %meta{ name: 'description', content: t('layouts.application.description') }
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' }
     %meta{ name: 'sentry-dsn', content: ENV['SENTRY_PUBLIC_DSN'] }
     %base{ href: root_path }
+    = yield(:twitter_card)
     = stylesheet_link_tag :application, media: :all, integrity: true
     = csrf_meta_tags
   %body
