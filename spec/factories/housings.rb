@@ -3,8 +3,9 @@
 
 FactoryGirl.define do
   factory(:housing) do
-    duration       FFaker::LoremFR.word
-    current_status FFaker::JobFR.title
+    duration       HOUSING_DURATIONS.first
+    housing_city   CITIES.first
+    current_status STATUSES.first
     age            { rand(0..123) }
 
     trait(:housing) { current_step(:housing) }

@@ -20,14 +20,6 @@ module Workings
 
     private
 
-    def load_public_service
-      @public_service ||= PublicServiceDecorator.(@service_offering.public_service)
-    end
-
-    def contact_params
-      params[:contact] ? params.require(:contact).permit(:email_or_phone) : {}
-    end
-
     def track_discovers_service
       tracker.(
         :jeunes,

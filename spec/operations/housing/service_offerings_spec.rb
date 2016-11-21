@@ -3,12 +3,12 @@
 
 RSpec.describe Housing::ServiceOfferings, type: :operation do
   subject(:operation)    { described_class.present(id: housing.to_param) }
-  let(:public_service)   { create(:public_service, title: 'SIAO') }
+  let(:public_service)   { create(:public_service, title: 'Lokaviz') }
 
   let(:service_offering) do
     create(
       :service_offering,
-      title: 'Solution logement urgence',
+      title: 'Trouver un coloc',
       public_service: public_service
     )
   end
@@ -23,7 +23,7 @@ RSpec.describe Housing::ServiceOfferings, type: :operation do
     )
   end
 
-  before { stub_const("#{described_class}::CRITERIAS_PATH", 'spec/fixtures/criterias/housing.service_offerings.yml') }
+  before { allow(Rails.root).to receive(:join) { 'spec/fixtures/criterias/housing.service_offerings.yml' } }
 
   context 'with matches' do
     it { expect(operation.scope).to include(service_offering) }

@@ -4,6 +4,12 @@
 class HousingsController < ApplicationController
   require_feature :housing
 
+  # Tracking
+  after_action :track_starts_form, only: :create
+
+  # Tracking
+  after_action :track_finishes_form, only: :show
+
   # GET /projects/1
   def show
     @housing           = Housing.find(params[:id])
@@ -15,5 +21,15 @@ class HousingsController < ApplicationController
     @housing = Housing.new
     @housing.save(validate: false)
     redirect_to(housing_step_path(@housing, Housing::STEPS.first))
+  end
+
+  private
+
+  def track_starts_form
+    tracker.(:jeunes, :starts_form, housing_id: @housing.to_param)
+  end
+
+  def track_finishes_form
+    tracker.(:jeunes, :finishes_form, housing: HousingDecorator.(@housing), servive_offering_count: @service_offerings.count)
   end
 end

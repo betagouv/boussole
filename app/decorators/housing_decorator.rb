@@ -2,11 +2,11 @@
 # frozen_string_literal: true
 
 #
-# Class WorkingDecorator provides a presenter for {Working}.
+# Class HousingDecorator provides a presenter for {Housing}.
 #
 # @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
 #
-class WorkingDecorator < ApplicationDecorator
+class HousingDecorator < ApplicationDecorator
   include Trackable
   include Emailable
 end
