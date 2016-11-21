@@ -7,5 +7,6 @@
 # @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
 #
 class HousingDecorator < ApplicationDecorator
+  include Trackable
   include Emailable
 end

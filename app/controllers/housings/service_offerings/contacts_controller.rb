@@ -8,6 +8,9 @@ module Housings
 
       require_feature :housing
 
+      # Tracking
+      after_action :track_activates_service, only: :create
+
       # POST /housings/1/service_offerings/1/contacts
       def create
         load_housing
@@ -25,6 +28,18 @@ module Housings
         else
           render(template: 'housings/service_offerings/show')
         end
+      end
+
+      private
+
+      def track_activates_service
+        tracker.(
+          :jeunes,
+          :activates_service,
+          housing: @housing,
+          servive_offering: @service_offering,
+          public_service: @public_service
+        )
       end
     end
   end
