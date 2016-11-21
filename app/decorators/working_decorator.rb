@@ -8,4 +8,5 @@
 #
 class WorkingDecorator < ApplicationDecorator
   include Trackable
+  include Emailable
 end
