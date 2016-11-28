@@ -24,24 +24,16 @@
 
     %section.callout
       - if feature?(:working)
-        = link_to(workings_path, method: :post, class: 'btn btn-new') do
-          - if feature?(:service)
-            Trouve qui va t’aider
-
-          - elsif feature?(:callme)
-            Trouve le bon contact
-
-          - else
-            Commencer !
+        = link_to('Trouve le bon contact', workings_path, method: :post, class: 'btn btn-new')
 
       - if feature?(:training)
-        = link_to('Commencer !', trainings_path, method: :post, class: 'btn btn-new')
+        = link_to('Trouve le bon contact', trainings_path, method: :post, class: 'btn btn-new')
 
       - if feature?(:housing)
-        = link_to('Commencer !', housings_path, method: :post, class: 'btn btn-new')
+        = link_to('Trouve le bon contact', housings_path, method: :post, class: 'btn btn-new')
 
       - if feature?(:traveling)
-        = link_to('Commencer !', travelings_path, method: :post, class: 'btn btn-new')
+        = link_to('Trouve le bon contact', travelings_path, method: :post, class: 'btn btn-new')
 
       - if feature?(:healthcaring)
-        = link_to('Commencer !', healthcarings_path, method: :post, class: 'btn btn-new')
+        = link_to('Trouve le bon contact', healthcarings_path, method: :post, class: 'btn btn-new')

@@ -23,7 +23,7 @@ solution('Find a flatsharing solution') do
 
     scenario do
       visit('/')
-      click_link('Commencer !')
+      click_link('Trouve le bon contact')
 
       # Duration
       select('1 an', from: 'Je cherche un logement pour…')

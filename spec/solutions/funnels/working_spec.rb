@@ -22,7 +22,7 @@ solution('Improve my CV') do
 
     scenario('she knows what she wants to do') do
       visit('/')
-      click_link('Commencer !')
+      click_link('Trouve le bon contact')
 
       # Knowledge
       choose('Je sais ce que je veux faire')
