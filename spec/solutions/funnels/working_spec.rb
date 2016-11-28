@@ -82,7 +82,7 @@ solution('Improve my CV') do
       expect(page).to have_content('Améliorer mon CV')
 
       # Chlotilde wants to discover what's the service about
-      click_link('Découvrir')
+      click_link('Être contacté·e')
 
       # She wants to be recontacted, but forgets to type in her email or phone number
       click_button('Envoyer !')

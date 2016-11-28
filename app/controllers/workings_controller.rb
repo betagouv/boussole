@@ -2,6 +2,8 @@
 # frozen_string_literal: true
 
 class WorkingsController < ApplicationController
+  include ControllerHelpers
+
   require_feature :working
 
   # Tracking
@@ -10,13 +12,13 @@ class WorkingsController < ApplicationController
 
   # GET /workings/1
   def show
-    @working           = Working.find(params[:id])
+    load_working
     @service_offerings = Working::ServiceOfferings.present(params).scope
   end
 
   # POST /workings
   def create
-    @working = Working.new
+    build_working
     @working.save(validate: false)
     redirect_to(working_step_path(@working, Working::STEPS.first))
   end

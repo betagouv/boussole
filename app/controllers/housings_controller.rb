@@ -2,6 +2,8 @@
 # frozen_string_literal: true
 
 class HousingsController < ApplicationController
+  include ControllerHelpers
+
   require_feature :housing
 
   # Tracking
@@ -10,13 +12,13 @@ class HousingsController < ApplicationController
 
   # GET /projects/1
   def show
-    @housing           = Housing.find(params[:id])
+    load_housing
     @service_offerings = Housing::ServiceOfferings.present(params).scope
   end
 
   # POST /projects
   def create
-    @housing = Housing.new
+    build_housing
     @housing.save(validate: false)
     redirect_to(housing_step_path(@housing, Housing::STEPS.first))
   end
