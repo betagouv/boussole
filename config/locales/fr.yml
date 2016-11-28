@@ -102,6 +102,7 @@ fr:
       public_services: Acteurs
       service_offerings: Offres de service
       measures: Dispositifs
+      contact: As-tu besoin d'aide ?
 
   housings:
     show:

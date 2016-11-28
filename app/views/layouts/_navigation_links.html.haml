@@ -1,21 +1,27 @@
 -# coding: utf-8
 
 %section.navigation-links
-  %ul
-    %li{ class: current_page?(agents_public_services_path) ? 'is-active' : '' }
-      = link_to(agents_public_services_path) do
-        = t('.public_services')
-        - if current_page?(agents_public_services_path)
-          %span.sr-only (active)
+  - if request.fullpath =~ %r{/agents}
+    %ul
+      %li{ class: current_page?(agents_public_services_path) ? 'is-active' : '' }
+        = link_to(agents_public_services_path) do
+          = t('.public_services')
+          - if current_page?(agents_public_services_path)
+            %span.sr-only (active)
 
-    %li{ class: current_page?(agents_service_offerings_path) ? 'is-active' : '' }
-      = link_to(agents_service_offerings_path) do
-        = t('.service_offerings')
-        - if current_page?(agents_service_offerings_path)
-          %span.sr-only (active)
+      %li{ class: current_page?(agents_service_offerings_path) ? 'is-active' : '' }
+        = link_to(agents_service_offerings_path) do
+          = t('.service_offerings')
+          - if current_page?(agents_service_offerings_path)
+            %span.sr-only (active)
 
-    %li{ class: current_page?(agents_measures_path) ? 'is-active' : '' }
-      = link_to(agents_measures_path) do
-        = t('.measures')
-        - if current_page?(agents_measures_path)
-          %span.sr-only (active)
+      %li{ class: current_page?(agents_measures_path) ? 'is-active' : '' }
+        = link_to(agents_measures_path) do
+          = t('.measures')
+          - if current_page?(agents_measures_path)
+            %span.sr-only (active)
+
+  - elsif request.fullpath != root_path
+    %ul
+      %li
+        = mail_to(ENV['CONTACT_EMAIL'], t('.contact'))

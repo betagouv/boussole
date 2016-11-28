@@ -12,6 +12,5 @@
             %span.icon-bar
       = link_to 'boussole.beta.gouv.fr', root_path
 
-    - if request.fullpath =~ %r{/agents}
-      .navigation-body
-        = render 'layouts/navigation_links'
+    .navigation-body
+      = render 'layouts/navigation_links'
