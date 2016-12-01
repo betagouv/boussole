@@ -1,5 +1,39 @@
 # Change Log
 
+## [v1.3.0](https://github.com/sgmap/boussole/tree/v1.3.0) (2016-12-01)
+[Full Changelog](https://github.com/sgmap/boussole/compare/v1.2.0...v1.3.0)
+
+**Implemented enhancements:**
+
+- Twitter card [\#63](https://github.com/sgmap/boussole/pull/63) ([maukoquiroga](https://github.com/maukoquiroga))
+- Ensure response time is either nil or fixnum [\#59](https://github.com/sgmap/boussole/pull/59) ([maukoquiroga](https://github.com/maukoquiroga))
+- Scope results to actionable ones [\#58](https://github.com/sgmap/boussole/pull/58) ([maukoquiroga](https://github.com/maukoquiroga))
+- Decorator pour offres de service [\#53](https://github.com/sgmap/boussole/pull/53) ([maukoquiroga](https://github.com/maukoquiroga))
+- Utilise « locales » pour la traduction du texte [\#50](https://github.com/sgmap/boussole/pull/50) ([maukoquiroga](https://github.com/maukoquiroga))
+
+**Fixed bugs:**
+
+- Ensure response time is either nil or fixnum [\#59](https://github.com/sgmap/boussole/pull/59) ([maukoquiroga](https://github.com/maukoquiroga))
+
+**Closed issues:**
+
+- Test ticket from Code Climate [\#55](https://github.com/sgmap/boussole/issues/55)
+- Gemnasium [\#23](https://github.com/sgmap/boussole/issues/23)
+- Code Climate [\#22](https://github.com/sgmap/boussole/issues/22)
+
+**Merged pull requests:**
+
+- Permettre aux jeunes de nous contacter [\#64](https://github.com/sgmap/boussole/pull/64) ([maukoquiroga](https://github.com/maukoquiroga))
+- Ne pas tracker les appelles Uptime Robot [\#62](https://github.com/sgmap/boussole/pull/62) ([maukoquiroga](https://github.com/maukoquiroga))
+- Configure Lograge; [\#60](https://github.com/sgmap/boussole/pull/60) ([maukoquiroga](https://github.com/maukoquiroga))
+- Définition et implémentation de récolte des métriques \(utilsateur\) et des funnels [\#57](https://github.com/sgmap/boussole/pull/57) ([maukoquiroga](https://github.com/maukoquiroga))
+- Update app.json to add Sendgrid & contact email [\#56](https://github.com/sgmap/boussole/pull/56) ([maukoquiroga](https://github.com/maukoquiroga))
+- Update static analysis tools [\#54](https://github.com/sgmap/boussole/pull/54) ([maukoquiroga](https://github.com/maukoquiroga))
+- Nous permettre à nous-mêmes d'ajouter l'email d'un service \(fallback acteur\) [\#52](https://github.com/sgmap/boussole/pull/52) ([maukoquiroga](https://github.com/maukoquiroga))
+- Corrige création des Review Apps [\#51](https://github.com/sgmap/boussole/pull/51) ([maukoquiroga](https://github.com/maukoquiroga))
+- Permettre aux jeunes d'avoir des résultats emploi « actionables » 2/2 [\#41](https://github.com/sgmap/boussole/pull/41) ([maukoquiroga](https://github.com/maukoquiroga))
+- Permettre aux jeunes d'avoir des résultats logement « actionables » [\#5](https://github.com/sgmap/boussole/pull/5) ([maukoquiroga](https://github.com/maukoquiroga))
+
 ## [v1.2.0](https://github.com/sgmap/boussole/tree/v1.2.0) (2016-10-27)
 [Full Changelog](https://github.com/sgmap/boussole/compare/v1.1.0...v1.2.0)
 
