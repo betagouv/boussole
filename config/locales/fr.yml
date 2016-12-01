@@ -5,8 +5,11 @@ fr:
   activerecord:
     models:
       housing:
-        one: Parcours Logement
-        other: Parcours Logement
+        one: Logement
+        other: Logements
+      working:
+        one: Emploi
+        other: Emplois
       social_right:
         one: Thématique
         other: Thématiques
