@@ -73,14 +73,12 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName"><span class='object_link'><a href="ApplicationRecord.html" title="ApplicationRecord (class)">ApplicationRecord</a></span></span>
+      <span class="inheritName">ActiveType::Object</span>
       
         <ul class="fullTree">
           <li>Object</li>
           
-            <li class="next">ActiveRecord::Base</li>
-          
-            <li class="next"><span class='object_link'><a href="ApplicationRecord.html" title="ApplicationRecord (class)">ApplicationRecord</a></span></li>
+            <li class="next">ActiveType::Object</li>
           
             <li class="next">Contact</li>
           
@@ -105,21 +103,28 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
-<p>== Schema Information Schema version: 20160914121308</p>
-
-<p>Table name: contacts</p>
-
-<p><em>id</em>:: <code>integer, not null, primary key</code> <em>email</em>::
-<code>string</code> <em>phone</em>:: <code>string</code>
-<em>created_at</em>:: <code>datetime, not null</code> <em>updated_at</em>::
-<code>datetime, not null</code> – == Schema Information End ++</p>
+    <p>Class Contact provides a persistanceless model to contact a professional.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>Mauko Quiroga <a href="mailto:mauko.quiroga@data.gouv.fr">mauko.quiroga@data.gouv.fr</a></p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
 
@@ -131,7 +136,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#email_or_phone-instance_method" title="#email_or_phone (instance method)">- (String) <strong>email_or_phone</strong> </a>
+      <a href="#email_or_phone-instance_method" title="#email_or_phone (instance method)">- (Object) <strong>email_or_phone</strong> </a>
     
 
     
@@ -139,6 +144,8 @@
   
   
   
+    
+      <span class="note title readonly">readonly</span>
     
     
   
@@ -149,7 +156,6 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Email or phone the user wants to be contacted with.</p>
 </div></span>
   
 </li>
@@ -162,71 +168,32 @@
 
 
   
-  
-  
-  
-  
-  
-  
   <div id="instance_attr_details" class="attr_details">
     <h2>Instance Attribute Details</h2>
     
       
-      <span id="email_or_phone=-instance_method"></span>
+      <span id=""></span>
       <div class="method_details first">
   <h3 class="signature first" id="email_or_phone-instance_method">
   
-    - (<tt>String</tt>) <strong>email_or_phone</strong> 
+    - (<tt>Object</tt>) <strong>email_or_phone</strong>  <span class="extras">(readonly)</span>
   
 
   
 
   
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns Email or phone the user wants to be contacted with.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Email or phone the user wants to be contacted with.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-30
-31
-32</pre>
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/contact.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'app/models/contact.rb', line 11</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_email_or_phone'>email_or_phone</span>
-  <span class='ivar'>@email_or_phone</span>
-<span class='kw'>end</span></pre>
+<span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:email_or_phone</span><span class='comma'>,</span> <span class='label'>presence:</span> <span class='kw'>true</span></pre>
     </td>
   </tr>
 </table>
@@ -238,7 +205,7 @@
 </div>
 
     <div id="footer">
-  Generated on Thu Oct 27 16:05:37 2016 by
+  Generated on Thu Dec  1 10:09:05 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.3.1).
 </div>

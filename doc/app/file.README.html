@@ -61,37 +61,43 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'>
-<p><a href="https://circleci.com/gh/sgmap/boussole"><img
-src="https://circleci.com/gh/sgmap/boussole.svg?style=svg"></a> <a
-href="http://inch-ci.org/github/sgmap/boussole"><img
-src="http://inch-ci.org/github/sgmap/boussole.svg?branch=master"></a></p>
+    <div id="content"><div id='filecontents'><p><a href="https://circleci.com/gh/sgmap/boussole"><img src="https://circleci.com/gh/sgmap/boussole.svg?style=svg" alt="CircleCI" /></a>
+<a href="https://codeclimate.com/github/sgmap/boussole"><img src="https://codeclimate.com/github/sgmap/boussole/badges/gpa.svg" alt="Code Climate" /></a>
+<a href="https://codeclimate.com/github/sgmap/boussole"><img src="https://codeclimate.com/github/sgmap/boussole/badges/issue_count.svg" alt="Issue Count" /></a>
+<a href="https://codeclimate.com/github/sgmap/boussole/coverage"><img src="https://codeclimate.com/github/sgmap/boussole/badges/coverage.svg" alt="Test Coverage" /></a>
+<a href="https://gemnasium.com/github.com/sgmap/boussole"><img src="https://gemnasium.com/badges/github.com/sgmap/boussole.svg" alt="Dependency Status" /></a>
+<a href="http://inch-ci.org/github/sgmap/boussole"><img src="http://inch-ci.org/github/sgmap/boussole.svg?branch=master" alt="Inline docs" /></a></p>
 
-<h1 id="label-Boussole">Boussole</h1>
+<h1 id="boussole">Boussole</h1>
 
-<h3 id="label-G-C3-A9n-C3-A9ration+du+mod-C3-A8le+entit-C3-A9-association+-28ERD-29">Génération du modèle entité-association (ERD)</h3>
+<h3 id="gnration-du-modle-entit-association-erd">Génération du modèle entité-association (ERD)</h3>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_erd'>erd</span>
-</code></pre>
+<p><code>
+bundle exec erd
+</code></p>
 
-<h3 id="label-G-C3-A9n-C3-A9ration+de+la+documentation">Génération de la documentation</h3>
+<h3 id="gnration-de-la-documentation">Génération de la documentation</h3>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_yardoc'>yardoc</span>
-</code></pre>
+<p><code>
+bundle exec yardoc
+</code></p>
 
-<h3 id="label-G-C3-A9n-C3-A9ration+d-27une+nouvelle+version">Génération d&#39;une nouvelle version</h3>
+<h3 id="gnration-dune-nouvelle-version">Génération d’une nouvelle version</h3>
 
-<pre class="code ruby"><code class="ruby">git tag -s vx.y.z -m &#39;yadda-yadda&#39;
-git push origin --tags</code></pre>
+<p><code>
+git tag -s vx.y.z -m 'yadda-yadda'
+git push origin --tags
+</code></p>
 
-<h3 id="label-G-C3-A9n-C3-A9ration+du+changelog">Génération du changelog</h3>
+<h3 id="gnration-du-changelog">Génération du changelog</h3>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_rake'>rake</span> <span class='id identifier rubyid_changelog'>changelog</span>
-</code></pre>
+<p><code>
+bundle exec rake changelog
+</code></p>
 </div></div>
 
     <div id="footer">
-  Generated on Thu Oct 27 16:05:36 2016 by
+  Generated on Thu Dec  1 10:09:04 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.3.1).
 </div>

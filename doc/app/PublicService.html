@@ -113,25 +113,30 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
-<p>== Schema Information Schema version: 20161006093650</p>
+    <p>== Schema Information
+Schema version: 20161006093650</p>
 
 <p>Table name: public_services</p>
 
-<p><em>id</em>:: <code>integer, not null, primary key</code> <em>title</em>::
-<code>string</code> <em>description</em>:: <code>text</code>
-<em>postal_address</em>:: <code>string</code> <em>email</em>::
-<code>string</code> <em>phone</em>:: <code>string</code> <em>url</em>::
-<code>string</code> <em>created_at</em>:: <code>datetime, not null</code>
-<em>updated_at</em>:: <code>datetime, not null</code> <em>slug</em>::
-<code>string</code> <em>response_time_upper_bound</em>::
-<code>integer</code></p>
+<p><em>id</em>::                        <tt>integer, not null, primary key</tt>
+<em>title</em>::                     <tt>string</tt>
+<em>description</em>::               <tt>text</tt>
+<em>postal_address</em>::            <tt>string</tt>
+<em>email</em>::                     <tt>string</tt>
+<em>phone</em>::                     <tt>string</tt>
+<em>url</em>::                       <tt>string</tt>
+<em>created_at</em>::                <tt>datetime, not null</tt>
+<em>updated_at</em>::                <tt>datetime, not null</tt>
+<em>slug</em>::                      <tt>string</tt>
+<em>response_time_upper_bound</em>:: <tt>integer</tt></p>
 
 <p>Indexes</p>
 
-<p>index_public_services_on_response_time_upper_bound
-(response_time_upper_bound)  index_public_services_on_slug (slug) UNIQUE –
-== Schema Information End ++</p>
+<p>index_public_services_on_response_time_upper_bound  (response_time_upper_bound)
+ index_public_services_on_slug                       (slug) UNIQUE
+–
+== Schema Information End
+++</p>
 
 
   </div>
@@ -145,6 +150,34 @@
 
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#response_time_upper_bound-instance_method" title="#response_time_upper_bound (instance method)">- (Object) <strong>response_time_upper_bound</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
     
       <li class="public ">
   <span class="summary_signature">
@@ -168,7 +201,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -195,7 +229,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -230,7 +265,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -252,7 +288,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -274,7 +311,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -296,7 +334,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -331,7 +370,43 @@
       
       <span id=""></span>
       <div class="method_details first">
-  <h3 class="signature first" id="slug-instance_method">
+  <h3 class="signature first" id="response_time_upper_bound-instance_method">
+  
+    - (<tt>Object</tt>) <strong>response_time_upper_bound</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 65</span>
+
+<span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:response_time_upper_bound</span><span class='comma'>,</span>
+<span class='label'>numericality:</span> <span class='lbrace'>{</span>
+  <span class='label'>only_integer:</span> <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>allow_nil:</span> <span class='kw'>true</span>
+<span class='rbrace'>}</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="slug-instance_method">
   
     - (<tt>Object</tt>) <strong>slug</strong>  <span class="extras">(readonly)</span>
   
@@ -345,11 +420,11 @@
       <pre class="lines">
 
 
-60
-61</pre>
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 62</span>
 
 <span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:slug</span><span class='comma'>,</span>
 <span class='label'>uniqueness:</span> <span class='kw'>true</span></pre>
@@ -375,11 +450,11 @@
       <pre class="lines">
 
 
-57
-58</pre>
+59
+60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 59</span>
 
 <span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:title</span><span class='comma'>,</span>
 <span class='label'>presence:</span> <span class='kw'>true</span></pre>
@@ -407,6 +482,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -439,12 +515,12 @@
       <pre class="lines">
 
 
-44
-45
-46</pre>
+46
+47
+48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 46</span>
 
 <span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:exercise_scopes</span><span class='comma'>,</span>
 <span class='label'>as:</span> <span class='symbol'>:exercisable</span><span class='comma'>,</span>
@@ -466,6 +542,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -498,11 +575,11 @@
       <pre class="lines">
 
 
-54
-55</pre>
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 56</span>
 
 <span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:measures</span><span class='comma'>,</span>
 <span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
@@ -523,6 +600,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -555,11 +633,11 @@
       <pre class="lines">
 
 
-51
-52</pre>
+53
+54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 53</span>
 
 <span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:service_offerings</span><span class='comma'>,</span>
 <span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
@@ -580,6 +658,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -612,11 +691,11 @@
       <pre class="lines">
 
 
-48
-49</pre>
+50
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 50</span>
 
 <span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:social_rights</span><span class='comma'>,</span>
 <span class='label'>through:</span> <span class='symbol'>:exercise_scopes</span></pre>
@@ -630,7 +709,7 @@
 </div>
 
     <div id="footer">
-  Generated on Thu Oct 27 16:05:37 2016 by
+  Generated on Thu Dec  1 10:09:05 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.3.1).
 </div>
