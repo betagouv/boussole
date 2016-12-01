@@ -21,6 +21,11 @@
           - if current_page?(agents_measures_path)
             %span.sr-only (active)
 
+  - elsif request.fullpath =~ /(workings|housings)\/\d{1,5}$/
+    %ul
+      %li
+        = mail_to(ENV['CONTACT_EMAIL'], 'Clique ici pour contacter un humain !')
+
   - elsif request.fullpath != root_path
     %ul
       %li
