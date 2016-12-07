@@ -193,8 +193,27 @@ ensemble2generations:
           - "En formation"
           - "Apprenti·e"
 
-mutuelle-generale-des-etudiants-de-l-est-mgel:
+residence-quai-207:
   trouver-une-chambre-dans-une-residence-etudiante-privee:
+    -
+      -
+        attribute: "duration"
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "resources" # discriminant @see app/models/service_offering.rb
+        operator: "<=" # options are ==, >=, >, <, <=, in?
+        value: 700
+      -
+        attribute: "current_status" # discriminant @see app/models/service_offering.rb
+        operator: "==" # options are ==, >=, >, <, <=, in?
+        value: "Étudiant·e"
+
+residence-laudine:
+  trouver-une-chambre-dans-une-residence-etudiante-privee-fd1fbddf-9a68-4f71-8cf5-56f3f099dbe1:
     -
       -
         attribute: "duration"
