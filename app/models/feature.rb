@@ -51,4 +51,8 @@ class Feature < ApplicationRecord
   feature :healthcaring,
           default: false,
           description: 'Healthcaring scenarios.'
+
+  feature :talk_to_a_human,
+          default: proc { rand(2).zero? },
+          description: 'People will rather want to talk to a human.'
 end

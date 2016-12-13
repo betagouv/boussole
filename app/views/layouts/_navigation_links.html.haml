@@ -24,4 +24,7 @@
   - elsif request.fullpath != root_path
     %ul
       %li
-        = mail_to(ENV['CONTACT_EMAIL'], t('.contact'))
+        - if feature?(:talk_to_a_human)
+          = mail_to(ENV['CONTACT_EMAIL'], t('.talk_to_a_human'))
+        - else
+          = mail_to(ENV['CONTACT_EMAIL'], t('.need_help'))
