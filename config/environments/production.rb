@@ -96,7 +96,7 @@ Rails.application.configure do
   }
 
   # Force SSL
-  config.force_ssl = false
+  config.force_ssl = true
 
   # Analytics
   MetaEvents::Tracker.default_event_receivers << Mixpanel::Tracker.new(ENV['MIXPANEL_TOKEN']) if ENV['MIXPANEL_TOKEN']

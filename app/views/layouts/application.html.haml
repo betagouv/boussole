@@ -11,7 +11,7 @@
     %meta{ name: 'sentry-dsn', content: ENV['SENTRY_PUBLIC_DSN'] }
     %base{ href: root_path }
     = yield(:twitter_card)
-    = stylesheet_link_tag :application, media: :all, integrity: true
+    = stylesheet_link_tag :application, media: :all
     = csrf_meta_tags
   %body
     %header{ role: 'banner' }
