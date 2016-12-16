@@ -108,29 +108,24 @@ fr:
       talk_to_a_human: Contacte nous :)
       need_help: As-tu besoin d'aide ?
 
-  housings:
-    show:
-      heading: Les resultats de ta recherche
-      service_offerings: Des professionnel·le·s peuvent t'aider à
-      discover: Découvrir
-    service_offerings:
-      show:
-        contact-me: Être contacté·e
-        want-to-be-contacted: Souhaites-tu que cette ou ce professionnel·le te contacte suite à ta recherche ?
-        send: Envoyer !
-        public-service-infos: Coordonnées de l'acteur
+  views:
+    results:
+      header: Resultats de ta recherche
+      result_list:
+        header: Des professionnel·le·s peuvent t'aider à
+        result_card:
+          footer: Découvrir
+      no_result:
+        description: La machine n'as pas pu trouver des résultats et nous travaillons dans ce moment pour l'améliorer.
+        contact: Mais nous sommes à ta disposition pour t'aider à trouver le bon contact !
 
-  workings:
-    show:
-      heading: Les resultats de ta recherche
-      service_offerings: Des professionnel·le·s peuvent t'aider à
-      discover: Découvrir
-    service_offerings:
-      show:
-        contact-me: Être contacté·e
-        want-to-be-contacted: Souhaites-tu que cette ou ce professionnel·le te contacte suite à ta recherche ?
+    result:
+      contact:
+        header: Être contacté·e
+        description: Souhaites-tu que cette ou ce professionnel·le te contacte suite à ta recherche ?
         send: Envoyer !
-        public-service-infos: Coordonnées de l'acteur
+      profile_details:
+        header: Coordonnées de l'acteur
 
   agents:
     public_services:

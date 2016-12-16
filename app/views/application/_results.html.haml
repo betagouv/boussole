@@ -4,13 +4,13 @@
   .l-content
     %section.results
       %header.results-header
-        %h1= t("#{project.class.name.underscore.pluralize}.show.heading")
+        %h1= t('views.results.header')
 
       - if @service_offerings.any?
         %section.result-list
           %header.result-list-header
             %h2.divider
-              = t("#{project.class.name.underscore.pluralize}.show.service_offerings")
+              = t('views.results.result_list.header')
 
           - @service_offerings.each do |service_offering|
             .result
@@ -28,16 +28,15 @@
                     %p= truncate(service_offering.description, length: 200)
 
                   %footer.result-footer
-                    = link_to t("#{project.class.name.underscore.pluralize}.show.discover"),
+                    = link_to t('views.results.result_list.result_card.footer'),
                               send("#{project.class.name.underscore}_service_offering_path", project, service_offering),
                               class: 'btn btn-new'
 
       - else
         %section.no-result
-          %article.no-result-card
-            %p
-              La machine n'as pas pu trouver des résultats et nous travaillons dans ce moment pour l'améliorer.
-            %p
-              = mail_to(ENV['CONTACT_EMAIL'], "Mais nous sommes à ta disposition pour t'aider à trouver le bon contact !")
+          %p.no-result-description
+            = t('views.results.no_result.description')
+          %p.no-result-contact
+            = mail_to(ENV['CONTACT_EMAIL'], t('views.results.no_result.contact'))
 
-            .no-result-image
+          .no-result-image
