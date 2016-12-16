@@ -1,25 +1,25 @@
 # encoding: utf-8
 # frozen_string_literal: true
 
-situation %(
-  Quand Chlotilde, 22 ans, sans activité après d’avoir quitté la fac en 1er,
-  Est à la recherche de son premier travail,
-  Elle veut savoir qui peut l’aider dans sa recherche,
-  Elle veut savoir qui peut l’aider à améliorer son CV,
-  Elle veut savoir qui peut l'aider avec ses entretiens,
-  Pour se sentir accompagnée,
-  Et trouver un travail rapidement.
-) do
-  given(:public_service) { create(:public_service, title: 'APEC') }
-  given!(:service)       { create(:service_offering, title: 'Améliorer mon CV', public_service: public_service) }
+solution('Improve my CV') do
+  situation %(
+    Quand Chlotilde, 22 ans, sans activité après d’avoir quitté la fac en 1er,
+    Est à la recherche de son premier travail,
+    Elle veut savoir qui peut l’aider dans sa recherche,
+    Elle veut savoir qui peut l’aider à améliorer son CV,
+    Elle veut savoir qui peut l'aider avec ses entretiens,
+    Pour se sentir accompagnée,
+    Et trouver un travail rapidement.
+  ) do
+    given(:public_service) { create(:public_service, title: 'APEC') }
+    given!(:service)       { create(:service_offering, title: 'Améliorer mon CV', public_service: public_service) }
 
-  background do
-    allow(Flip).to receive(:on?)
-    allow(Flip).to receive(:on?).with(:working) { true }
-    allow(Rails.root).to receive(:join) { 'spec/fixtures/criterias/working.service_offerings.yml' }
-  end
+    background do
+      allow(Flip).to receive(:on?)
+      allow(Flip).to receive(:on?).with(:working) { true }
+      allow(Rails.root).to receive(:join) { 'spec/fixtures/criterias/working.service_offerings.yml' }
+    end
 
-  solution('Improve my résumé') do
     scenario('She knows what she wants to do') do
       visit('/')
       click_link('Commencer !')

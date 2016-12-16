@@ -1,26 +1,26 @@
 # encoding: utf-8
 # frozen_string_literal: true
 
-situation %(
-  Quand Zoe, 18 ans, bachelière, qui va bientôt commencer ses études,
-  Veut trouver un logement en colocation pour la rentrée,
-  Elle veut savoir quels sites d'internet proposent d'offres de colocation,
-  Elle veut savoir qui peut l'orienter dans sa recherche,
-  Elle veut entrer en contact avec quelqu'un qui puisse l'aider dans sa recherche,
-  Ses parents veulent connaître les aides disponibles pour leur situation,
-  Pour pouvoir gagner du temps,
-  Et trouver un logement rapidement.
-) do
-  given(:public_service) { create(:public_service, title: 'Lokaviz') }
-  given!(:service)       { create(:service_offering, title: 'Trouver un coloc', public_service: public_service) }
+solution('Find a flatsharing solution') do
+  situation %(
+    Quand Zoe, 18 ans, bachelière, qui va bientôt commencer ses études,
+    Veut trouver un logement en colocation pour la rentrée,
+    Elle veut savoir quels sites d'internet proposent d'offres de colocation,
+    Elle veut savoir qui peut l'orienter dans sa recherche,
+    Elle veut entrer en contact avec quelqu'un qui puisse l'aider dans sa recherche,
+    Ses parents veulent connaître les aides disponibles pour leur situation,
+    Pour pouvoir gagner du temps,
+    Et trouver un logement rapidement.
+  ) do
+    given(:public_service) { create(:public_service, title: 'Lokaviz') }
+    given!(:service)       { create(:service_offering, title: 'Trouver un coloc', public_service: public_service) }
 
-  background do
-    allow(Flip).to receive(:on?)
-    allow(Flip).to receive(:on?).with(:housing) { true }
-    allow(Rails.root).to receive(:join) { 'spec/fixtures/criterias/housing.service_offerings.yml' }
-  end
+    background do
+      allow(Flip).to receive(:on?)
+      allow(Flip).to receive(:on?).with(:housing) { true }
+      allow(Rails.root).to receive(:join) { 'spec/fixtures/criterias/housing.service_offerings.yml' }
+    end
 
-  solution('Find a flatsharing solution') do
     scenario do
       visit('/')
       click_link('Commencer !')
