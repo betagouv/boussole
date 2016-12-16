@@ -4,9 +4,10 @@
   %aside.l-sidebar
     %section.contact
       %header.contact-header
-        %h2= t("#{project.class.name.underscore.pluralize}.service_offerings.show.contact-me")
+        %h2= t('views.result.contact.header')
 
-      %p= t("#{project.class.name.underscore.pluralize}.service_offerings.show.want-to-be-contacted")
+      %p.contact-description
+        = t('views.result.contact.description')
 
       = simple_form_for([project, @service_offering, @contact], wrapper: :vertical_form) do |f|
         = f.error_notification
@@ -15,7 +16,7 @@
           = f.input :email_or_phone
 
         .form-actions
-          = f.submit(t("#{project.class.name.underscore.pluralize}.service_offerings.show.send"), class: 'btn btn-new')
+          = f.submit(t('views.result.contact.send'), class: 'btn btn-new')
 
   .l-content.l-with-sidebar
     %article.profile
@@ -41,7 +42,7 @@
 
       %section.profile-details
         %header.profile-details-header
-          %h2.divider= t("#{project.class.name.underscore.pluralize}.service_offerings.show.public-service-infos")
+          %h2.divider= t('views.result.profile_details.header')
 
         %dl
           .profile-definition

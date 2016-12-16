@@ -3,7 +3,7 @@
 %divider {
   @media (min-width: $screen-sm-min) {
     background-image: image-url("divider.png");
-    background-position: right 1em top 50%;
+    background-position: right 0 top 50%;
     background-repeat: no-repeat;
     content: "";
     display: table-cell;
