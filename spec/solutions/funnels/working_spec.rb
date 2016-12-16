@@ -20,7 +20,7 @@ solution('Improve my CV') do
       allow(Rails.root).to receive(:join) { 'spec/fixtures/criterias/working.service_offerings.yml' }
     end
 
-    scenario('She knows what she wants to do') do
+    scenario('she knows what she wants to do') do
       visit('/')
       click_link('Commencer !')
 

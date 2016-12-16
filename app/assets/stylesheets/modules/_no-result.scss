@@ -26,8 +26,9 @@
   }
 
   @media (min-width: $screen-lg-min) {
-    background-image: image-url("broken-robot-256x256.png");
-    height: em(256px, $font-size-base-lg);
-    width: em(256px, $font-size-base-lg);
+    background-image: image-url("broken-robot-512x512.png");
+    background-size: 100%;
+    height: em(512px, $font-size-base-lg) * .75;
+    width: em(512px, $font-size-base-lg) * .75;
   }
 }
