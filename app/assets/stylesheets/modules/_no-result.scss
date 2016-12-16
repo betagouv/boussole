@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.no-result {
+  @extend .text-center;
+  margin-top: 2em;
+}
+
+.no-result-image {
+  background-image: image-url("broken-robot-128x128.png");
+  margin: 1em auto;
+
+  @media (max-width: $screen-sm-min) {
+    height: em(128px, $font-size-base-xs);
+    width: em(128px, $font-size-base-xs);
+  }
+
+  @media (min-width: $screen-sm-min) {
+    height: em(128px, $font-size-base-sm);
+    width: em(128px, $font-size-base-sm);
+  }
+
+  @media (min-width: $screen-md-min) {
+    background-image: image-url("broken-robot-256x256.png");
+    height: em(256px, $font-size-base-md);
+    width: em(256px, $font-size-base-md);
+  }
+
+  @media (min-width: $screen-lg-min) {
+    background-image: image-url("broken-robot-256x256.png");
+    height: em(256px, $font-size-base-lg);
+    width: em(256px, $font-size-base-lg);
+  }
+}

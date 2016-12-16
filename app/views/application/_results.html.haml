@@ -6,12 +6,12 @@
       %header.results-header
         %h1= t("#{project.class.name.underscore.pluralize}.show.heading")
 
-      %section.result-list
-        %header.result-list-header
-          %h2.divider= t("#{project.class.name.underscore.pluralize}.show.service_offerings")
+      - if @service_offerings.any?
+        %section.result-list
+          %header.result-list-header
+            %h2.divider
+              = t("#{project.class.name.underscore.pluralize}.show.service_offerings")
 
-
-        - if @service_offerings.any?
           - @service_offerings.each do |service_offering|
             .result
               = link_to(send("#{project.class.name.underscore}_service_offering_path", project, service_offering)) do
@@ -31,13 +31,13 @@
                     = link_to t("#{project.class.name.underscore.pluralize}.show.discover"),
                               send("#{project.class.name.underscore}_service_offering_path", project, service_offering),
                               class: 'btn btn-new'
-        - else
-          %h3.text-center
-            %br
-            La machine n'as pas pu trouver des résultats, mais nous travaillons dans ce moment pour l'améliorer.
-            %br
-            %br
-            = image_tag('machine.png')
-            %br
-            = mail_to(ENV['CONTACT_EMAIL'], "Clique ici,")
-            un humain est à ta disposition pour t'aider.
+
+      - else
+        %section.no-result
+          %article.no-result-card
+            %p
+              La machine n'as pas pu trouver des résultats et nous travaillons dans ce moment pour l'améliorer.
+            %p
+              = mail_to(ENV['CONTACT_EMAIL'], "Mais nous sommes à ta disposition pour t'aider à trouver le bon contact !")
+
+            .no-result-image
