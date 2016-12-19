@@ -7,8 +7,8 @@ class WorkingsController < ApplicationController
   require_feature :working
 
   # Tracking
-  after_action :track_starts_form, only: :create, unless: :blacklisted_ips?
-  after_action :track_finishes_form, only: :show, unless: :blacklisted_ips?
+  after_action :track_starts_form, only: :create, if: :trackable?
+  after_action :track_finishes_form, only: :show, if: :trackable?
 
   # GET /workings/1
   def show

@@ -137,8 +137,8 @@ module Matchable
   # Creates an {Arel::Node::Equality} predicate instance to be passed on as an argument
   # to a {ActiveRecord::Base.where} clause.
   #
-  # @param [<String>] service_offering {ServiceOffering}'s slug.
-  # @param [<String>] public_service {PublicService}'s slug.
+  # @param [String] service_offering {ServiceOffering}'s slug.
+  # @param [String] public_service {PublicService}'s slug.
   #
   # @return [Arel::Node::Equality] The predicate.
   #

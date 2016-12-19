@@ -9,7 +9,7 @@ module Housings
       require_feature :housing
 
       # Tracking
-      after_action :track_activates_service, only: :create, unless: :blacklisted_ips?
+      after_action :track_activates_service, only: :create, if: :trackable?
 
       # POST /housings/1/service_offerings/1/contacts
       def create

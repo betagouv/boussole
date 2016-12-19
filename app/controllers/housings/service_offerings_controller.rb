@@ -8,7 +8,7 @@ module Housings
     require_feature :housing
 
     # Tracking
-    after_action :track_discovers_service, only: :show, unless: :blacklisted_ips?
+    after_action :track_discovers_service, only: :show, if: :trackable?
 
     # GET /housings/1/service_offerings/1
     def show
