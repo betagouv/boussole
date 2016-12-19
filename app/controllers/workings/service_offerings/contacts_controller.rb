@@ -9,7 +9,7 @@ module Workings
       require_feature :working
 
       # Tracking
-      after_action :track_activates_service, only: :create, unless: :blacklisted_ips?
+      after_action :track_activates_service, only: :create, unless: :blacklisted?
 
       # POST /workings/1/service_offerings/1/contacts
       def create

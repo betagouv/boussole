@@ -7,7 +7,7 @@ class VisitorsController < ApplicationController
   before_action :unset_cookie_flip, only: :index, unless: -> { request.fullpath =~ /reims1[A|B|C|D|E|F|G|H|J|K|L|N]/ }
 
   # Tracking
-  after_action :track_visits_landing, only: :index, unless: :blacklisted_ips?
+  after_action :track_visits_landing, only: :index, unless: :blacklisted?
 
   private
 
