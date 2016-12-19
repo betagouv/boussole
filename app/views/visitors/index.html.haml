@@ -5,35 +5,31 @@
 .l-container-wide
   .l-content
     %section.text-center
-      %h1 Boussole
+      %h1= t('layouts.application.title')
 
-      %h3
-        Des professionnel·le·s pour t'aider à
-
+      %h2
         - if feature?(:training)
+          = t('views.landing.description', scenario: 'trouver une formation')
           trouver une formation
 
         - if feature?(:housing)
-          trouver un logement
+          = t('views.landing.description', scenario: 'trouver un logement')
 
         - if feature?(:working)
-          trouver un emploi
+          = t('views.landing.description', scenario: 'trouver un emploi')
 
         - if feature?(:healthcaring)
-          prendre soin de ta santé
+          = t('views.landing.description', scenario: 'prendre soin de ta santé')
 
     %section.callout
       - if feature?(:working)
-        = link_to('Trouve le bon contact', workings_path, method: :post, class: 'btn btn-new')
+        = link_to(t('views.landing.callout'), workings_path, method: :post, class: 'btn btn-new')
 
       - if feature?(:training)
-        = link_to('Trouve le bon contact', trainings_path, method: :post, class: 'btn btn-new')
+        = link_to(t('views.landing.callout'), trainings_path, method: :post, class: 'btn btn-new')
 
       - if feature?(:housing)
-        = link_to('Trouve le bon contact', housings_path, method: :post, class: 'btn btn-new')
-
-      - if feature?(:traveling)
-        = link_to('Trouve le bon contact', travelings_path, method: :post, class: 'btn btn-new')
+        = link_to(t('views.landing.callout'), housings_path, method: :post, class: 'btn btn-new')
 
       - if feature?(:healthcaring)
-        = link_to('Trouve le bon contact', healthcarings_path, method: :post, class: 'btn btn-new')
+        = link_to(t('views.landing.callout'), healthcarings_path, method: :post, class: 'btn btn-new')

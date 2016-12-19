@@ -44,10 +44,6 @@ class Feature < ApplicationRecord
           default: false,
           description: 'Housing scenarios.'
 
-  feature :traveling,
-          default: false,
-          description: 'Traveling scenarios.'
-
   feature :healthcaring,
           default: false,
           description: 'Healthcaring scenarios.'

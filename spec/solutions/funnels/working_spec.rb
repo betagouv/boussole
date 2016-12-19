@@ -85,13 +85,13 @@ solution('Improve my CV') do
       click_link('Être contacté·e')
 
       # She wants to be recontacted, but forgets to type in her email or phone number
-      click_button('Envoyer !')
+      click_button('Être contacté·e')
 
       # She's notified she has to type in her email or phone in order to be contacted
       expect(page).to have_content(/doit être rempli·e/)
 
       fill_in('contact[email_or_phone]', with: 'chlotilde@contactez.moi')
-      click_button('Envoyer !')
+      click_button('Être contacté·e')
 
       # She's notified she'll be contacted
       expect(page).to have_content(/dans un délai de #{service.response_time_upper_bound} jours/)
