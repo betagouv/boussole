@@ -7,7 +7,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   include Flip::ControllerFilters
-  include Blacklisting
   include BugTracking
   include EventTracking
   include Logging

@@ -12,7 +12,7 @@ RSpec.describe VisitorsController, type: :controller do
       get(:index)
     end
 
-    context 'with uptime calls' do
+    context 'with UptimeRobot calls' do
       let(:user_agent) { 'UptimeRobot' }
 
       it { expect(response).to have_http_status(:ok) }
@@ -20,7 +20,23 @@ RSpec.describe VisitorsController, type: :controller do
       it { expect(event_tracker).not_to have_received(:call) }
     end
 
-    context 'without uptime calls' do
+    context 'with another bot calls' do
+      let(:user_agent) { 'ELB-HealthChecker/1.0' }
+
+      it { expect(response).to have_http_status(:ok) }
+      it { expect(response).to render_template(:index) }
+      it { expect(event_tracker).not_to have_received(:call) }
+    end
+
+    context 'with calls without UA' do
+      let(:user_agent) { nil }
+
+      it { expect(response).to have_http_status(:ok) }
+      it { expect(response).to render_template(:index) }
+      it { expect(event_tracker).not_to have_received(:call) }
+    end
+
+    context 'without bot calls' do
       let(:user_agent) { 'DowntimeRobot' }
 
       it { expect(response).to have_http_status(:ok) }

@@ -27,6 +27,7 @@ gem 'wicked'
 gem 'nilify_blanks'
 
 # Analytics
+gem 'browser'
 gem 'meta_events'
 gem 'mixpanel-ruby'
 

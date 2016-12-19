@@ -7,8 +7,8 @@ class HousingsController < ApplicationController
   require_feature :housing
 
   # Tracking
-  after_action :track_starts_form, only: :create, unless: :blacklisted?
-  after_action :track_finishes_form, only: :show, unless: :blacklisted?
+  after_action :track_starts_form, only: :create, if: :trackable?
+  after_action :track_finishes_form, only: :show, if: :trackable?
 
   # GET /projects/1
   def show

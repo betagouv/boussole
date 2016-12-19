@@ -8,9 +8,13 @@
 #
 module EventTracking
   extend ActiveSupport::Concern
+  include Blacklisting
 
   private
 
+  #
+  # @return [EventTracker] Memoized/instance of #{EventTracker}.
+  #
   def tracker
     @tracker ||=
       ::EventTracker.new(
@@ -30,5 +34,12 @@ module EventTracking
   #
   def features
     @features ||= ::Flip::FeatureSet.instance.definitions.map(&:key)
+  end
+
+  #
+  # Checks if an event is trackable or not.
+  #
+  def trackable?
+    !(blacklisted? || browser.bot?)
   end
 end

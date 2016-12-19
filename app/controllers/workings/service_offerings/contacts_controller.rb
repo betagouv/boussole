@@ -18,7 +18,7 @@ module Workings
         # TODO: Service + listener
         if @contact.save
           Mailer.contact_email(@contact, @service_offering, @working).deliver_now
-          track_activates_service unless blacklisted?
+          track_activates_service if trackable?
           redirect_to(
             working_service_offering_url(@working, @service_offering),
             notice: t('actioncontroller.notice.contact', response_time: @service_offering.response_time_upper_bound)

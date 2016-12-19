@@ -8,7 +8,7 @@ module Workings
     require_feature :working
 
     # Tracking
-    after_action :track_discovers_service, only: :show, unless: :blacklisted?
+    after_action :track_discovers_service, only: :show, if: :trackable?
 
     # GET /workings/1/service_offerings/1
     def show
