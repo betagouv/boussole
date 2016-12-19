@@ -2,8 +2,9 @@
 
 .l-container-narrow
   .l-content
-    %section.form
-      %legend Domaine et formation
+    %section.wizard-form
+      %h1.wizard-form-header Domaine et formation
+      %hr
 
       = simple_form_for(@project, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
         = f.error_notification

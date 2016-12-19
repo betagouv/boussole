@@ -23,24 +23,20 @@
 }
 
 .result-header {
-  font-size: .65em;
+  font-size: $font-size-h4 / 2;
   height: 10em;
+
+  h1 {
+    font-size: $font-size-h2;
+  }
 
   p {
     text-transform: uppercase;
   }
 }
 
-.result-content {
-  font-size: .8em;
-  font-style: italic;
-  height: 10em;
-  padding-left: .5em;
-  padding-right: .5em;
-}
-
 .result-footer {
-  font-size: .8em;
+  font-size: $font-size-h6;
 
   a {
     color: $btn-default-color;

@@ -1,9 +1,14 @@
 @charset "UTF-8";
 
+.profile-list-header {
+  @extend .text-center;
+  font-size: $font-size-h2;
+}
+
 .profile-list-new {
   @extend .pull-right;
 }
 
 .profile-list-content {
-  font-size: .85em;
+  font-size: $font-size-h6;
 }

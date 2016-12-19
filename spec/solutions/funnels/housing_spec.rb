@@ -23,7 +23,7 @@ solution('Find a flatsharing solution') do
 
     scenario do
       visit('/')
-      click_link('Commencer !')
+      click_link('Trouve le bon contact')
 
       # Duration
       select('1 an', from: 'Je cherche un logement pour…')
@@ -56,16 +56,16 @@ solution('Find a flatsharing solution') do
       expect(page).to have_content('Trouver un coloc')
 
       # Zoe wants to discover what's the service about
-      click_link('Découvrir')
+      click_link('Être contacté·e')
 
       # She wants to be recontacted, but forgets to type in her email or phone number
-      click_button('Envoyer !')
+      click_button('Être contacté·e')
 
       # She's notified she has to type in her email or phone in order to be contacted
       expect(page).to have_content(/doit être rempli·e/)
 
       fill_in('contact[email_or_phone]', with: 'zoe@contactez.moi')
-      click_button('Envoyer !')
+      click_button('Être contacté·e')
 
       # She's notified she'll be contacted
       expect(page).to have_content(/dans un délai de #{service.response_time_upper_bound} jours/)

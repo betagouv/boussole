@@ -3,8 +3,7 @@
 .l-container-narrow
   .l-content
     %section.profile-form
-      %h1= t('.heading')
-
+      %h1.profile-form-header= t('.heading')
       %hr
 
       = simple_form_for([:agents, @public_service], wrapper: :vertical_form) do |f|

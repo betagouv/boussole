@@ -28,9 +28,27 @@ module ControllerHelpers
     @public_service ||= PublicServiceDecorator.(@service_offering.public_service)
   end
 
+  def build_working
+    @working ||= working_scope.build
+    @working.attributes = working_params
+  end
+
+  def build_housing
+    @housing ||= housing_scope.build
+    @housing.attributes = housing_params
+  end
+
   def build_contact
     @contact ||= contact_scope.build
     @contact.attributes = contact_params
+  end
+
+  def working_params
+    params[:working] ? super : {}
+  end
+
+  def housing_params
+    params[:housing] ? super : {}
   end
 
   def contact_params
