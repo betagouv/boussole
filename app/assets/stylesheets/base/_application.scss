@@ -44,6 +44,10 @@ table {
   }
 }
 
+h1 {
+  font-weight: $headings-font-weight * 2;
+}
+
 /* font awesome @font-face */
 @font-face {
   font-family: font-"FontAwesome";

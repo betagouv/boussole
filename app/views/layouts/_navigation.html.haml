@@ -3,7 +3,7 @@
 %nav.navigation{ role: 'navigation' }
   .l-container-wide
     .navigation-header
-      - if request.fullpath =~ %r{/agents}
+      - unless request.fullpath == root_path
         .navigation-toggle
           %button{ type: 'button', data: { target: '.navigation-body', toggle: 'collapse' } }
             %span.sr-only Basculer la barre de navigation

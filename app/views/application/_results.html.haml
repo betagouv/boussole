@@ -5,7 +5,7 @@
     %section.results
       %h1.results-header
         = t 'views.results.header',
-            status: project.status.downcase,
+            status: project.status.mb_chars.downcase,
             project: t("activerecord.models.#{project.class.name.downcase}", count: 1).downcase
 
       - if @service_offerings.any?

@@ -2,8 +2,9 @@
 
 .l-container-narrow
   .l-content
-    %section.form
-      %legend Ta situation
+    %section.wizard-form
+      %h1.wizard-form-header Ta situation
+      %hr
 
       = simple_form_for(@working, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
         = f.error_notification

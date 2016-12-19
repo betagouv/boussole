@@ -2,8 +2,9 @@
 
 .l-container-narrow
   .l-content
-    %section.form
-      %legend Ton profil
+    %section.wizard-form
+      %h1.wizard-form-header Ton profil
+      %hr
 
       = simple_form_for(@housing, url: wizard_path, method: :put, wrapper: :vertical_form) do |f|
         = f.error_notification

@@ -23,12 +23,11 @@
 }
 
 .result-header {
-  font-size: .65em;
+  font-size: $font-size-h4 / 2;
   height: 10em;
 
   h1 {
-    font-size: 1.75em;
-    font-weight: 500;
+    font-size: $font-size-h2;
   }
 
   p {
@@ -37,7 +36,7 @@
 }
 
 .result-footer {
-  font-size: .8em;
+  font-size: $font-size-h6;
 
   a {
     color: $btn-default-color;
