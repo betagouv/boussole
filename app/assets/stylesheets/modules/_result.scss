@@ -26,17 +26,14 @@
   font-size: .65em;
   height: 10em;
 
+  h1 {
+    font-size: 1.75em;
+    font-weight: 500;
+  }
+
   p {
     text-transform: uppercase;
   }
-}
-
-.result-content {
-  font-size: .8em;
-  font-style: italic;
-  height: 10em;
-  padding-left: .5em;
-  padding-right: .5em;
 }
 
 .result-footer {
