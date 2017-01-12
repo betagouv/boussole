@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/nadarei/nkss-rails.git
+  remote: https://github.com/nadarei/nkss-rails
   revision: 8f5e27e98115daad591ac871a50a7c5ffa966d3e
   specs:
     nkss-rails (0.0.2)

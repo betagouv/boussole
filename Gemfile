@@ -32,7 +32,7 @@ gem 'meta_events'
 gem 'mixpanel-ruby'
 
 # Style guide
-gem 'nkss-rails', github: 'nadarei/nkss-rails'
+gem 'nkss-rails', git: 'https://github.com/nadarei/nkss-rails'
 
 group :production do
   gem 'heroku_rails_deflate'
