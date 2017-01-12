@@ -1,59 +1,25 @@
 -# coding: utf-8
 
 .l-container-wide
-  %aside.l-sidebar
-    %section.contact
-      %header.contact-header
-        %h2= t('views.result.contact.header')
-
-      %p.contact-description
-        = t('views.result.contact.description')
-
-      = simple_form_for([project, @service_offering, @contact], wrapper: :vertical_form) do |f|
-        = f.error_notification
-
-        .form-inputs
-          = f.input :email_or_phone
-
-        .form-actions
-          = f.submit(t('views.result.contact.send'), class: 'btn btn-new')
-
   .l-content.l-with-sidebar
-    %article.profile
-      %header.profile-title
+    %article
+      %header
         %h1= @service_offering.title
 
       %hr
 
-      %section.profile-details
+      = render partial: 'blocks/contact',
+               locals: { project: project, service_offering: @service_offering, contact: @contact }
+
+      %section
         %p
           = @service_offering.description
 
-          .profile-definition
+        %p
+          %b= t('activerecord.attributes.service_offering.updated_at')
+          le
+          %time{ datetime: l(@service_offering.updated_at.to_date, format: :html5) }
+            = l(@service_offering.updated_at.to_date)
 
-            %dt= t('activerecord.attributes.service_offering.response_time_upper_bound')
-            %dd= distance_of_time_in_words(@service_offering.response_time_upper_bound.days)
-
-          .profile-definition
-            %dt= t('activerecord.attributes.service_offering.updated_at')
-            %dd
-              %time{ datetime: l(@service_offering.updated_at.to_date, format: :html5) }
-                = l(@service_offering.updated_at.to_date)
-
-      %section.profile-details
-        %header.profile-details-header
-          %h2.divider= t('views.result.profile_details.header')
-
-        %dl
-          .profile-definition
-            %dt= t('activerecord.attributes.public_service.title')
-            %dd= @public_service.title
-
-          .profile-definition
-            %dt= t('activerecord.attributes.public_service.description')
-            %dd= @public_service.description
-
-          - if @public_service.url
-            .profile-definition
-              %dt= t('activerecord.attributes.public_service.url')
-              %dd= link_to(@public_service.url, @public_service.url, target: '_blank')
+  %aside.l-sidebar
+    = render(partial: 'blocks/public_service', locals: { public_service: @public_service })

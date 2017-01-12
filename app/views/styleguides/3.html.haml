@@ -1,3 +1,21 @@
+-# encoding: utf-8
+
 = kss_block '3.1' do
-  = render partial: 'blocks/public_service',
-           locals: { public_service: PublicService.new(title: 'Pôle Emploi', description: 'asdfsadf', url: 'aadsf.fr') }
+  - public_service                             = PublicService.new
+  - public_service.title                       = 'Pôle Emploi'
+  - public_service.url                         = 'pole-emploi.fr'
+  - public_service.description                 = 'Trouver un boulot grâce à La Bonne Boîte !'
+
+  = render(partial: 'blocks/public_service', locals: { public_service: public_service })
+
+= kss_block '3.2' do
+  - project                                    = Working.new
+  - project.id                                 = 1
+  - service_offering                           = ServiceOffering.new
+  - service_offering.id                        = 1
+  - service_offering.response_time_upper_bound = 1
+  - contact                                    = Contact.new
+
+  = render partial: 'blocks/contact',
+         locals: { project: project, service_offering: service_offering, contact: contact }
+

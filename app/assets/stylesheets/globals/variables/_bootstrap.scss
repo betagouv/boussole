@@ -17,6 +17,13 @@ $brand-info:                            $blue-jeans;
 $brand-warning:                         $maximum-yellow-red;
 $brand-danger:                          $jelly-bean;
 
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:                               $white !default;
+
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.

@@ -38,13 +38,11 @@ main {
 
   &.l-with-sidebar {
     @extend .col-md-8;
-    @extend .col-md-pull-4;
   }
 }
 
 .l-sidebar {
   @extend .col-md-4;
-  @extend .col-md-push-8;
 }
 
 footer {
