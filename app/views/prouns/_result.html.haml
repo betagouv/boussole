@@ -1,0 +1,18 @@
+-# coding: utf-8
+
+.result
+  = link_to(send("#{project.class.name.underscore}_service_offering_path", project, service_offering)) do
+    %article.result-card
+      %header.result-header
+        %h1
+          = service_offering.title
+
+        %p
+          = t("activerecord.attributes.#{project.class.name.underscore}.updated_at") + ' :'
+          %time{ datetime: l(service_offering.updated_at.to_date, format: :html5) }
+            = l(service_offering.updated_at.to_date)
+
+      %footer.result-footer
+        = link_to t('views.results.result_list.result_card.footer'),
+                  send("#{project.class.name.underscore}_service_offering_path", project, service_offering),
+                  class: 'btn btn-new'
