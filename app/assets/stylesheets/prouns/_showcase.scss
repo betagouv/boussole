@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+// A showcase block, usefull for catchy stuff
+// Styleguide 3.2.
+
+.showcase {
+  background-color: $gray-lighter;
+  display: inline-block;
+  margin-bottom: 1em;
+  padding: 2em;
+  position: relative;
+  width: 100%;
+
+  input {
+    width: 100%;
+  }
+}

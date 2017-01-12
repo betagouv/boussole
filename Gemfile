@@ -31,6 +31,9 @@ gem 'browser'
 gem 'meta_events'
 gem 'mixpanel-ruby'
 
+# Style guide
+gem 'nkss-rails', git: 'https://github.com/nadarei/nkss-rails'
+
 group :production do
   gem 'heroku_rails_deflate'
   gem 'lograge'
@@ -70,7 +73,7 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'web-console'
 
-  # Lnters
+  # Linters
   gem 'haml-lint', require: false
   gem 'inch', require: false
   gem 'rubocop', require: false

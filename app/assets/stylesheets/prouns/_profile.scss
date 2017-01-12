@@ -1,12 +1,7 @@
 @charset "UTF-8";
 
-.profile-title {
-  @extend .text-center;
+.profile-header {
   font-size: $font-size-h4;
-}
-
-.profile-details-header {
-  @extend .text-center;
 }
 
 .profile-definition {

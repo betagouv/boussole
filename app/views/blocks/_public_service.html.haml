@@ -1,0 +1,13 @@
+-# coding: utf-8
+
+%section.card
+  %h1.card-header
+    = public_service.title
+
+  .card-body
+    - if public_service.url
+      %p.card-body-element
+        = link_to(public_service.url, public_service.url, target: '_blank')
+
+    %p.card-body-element
+      = public_service.description

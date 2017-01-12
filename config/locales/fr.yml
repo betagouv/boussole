@@ -102,7 +102,7 @@ fr:
       title: Boussole de droits
       description: Trouve le bon contact pour t'aider dans tes projets de formation, de logement, d'emploi et de santé
 
-  prouns:
+  blocks:
     navigation_links:
       public_services: Acteurs
       service_offerings: Offres de service

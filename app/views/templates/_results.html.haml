@@ -13,7 +13,7 @@
           %h1.result-list-header.divider
             = t('views.results.result_list.header')
 
-          = render partial: 'prouns/result',
+          = render partial: 'blocks/result',
                    collection: @service_offerings,
                    as: :service_offering,
                    locals: { project: project }

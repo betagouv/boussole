@@ -1,0 +1,10 @@
+-# coding: utf-8
+
+%section.showcase
+  %p
+    Intéressé·e ? Laisse tes coordonnés pour être recontacté·e d'ici
+    %b= distance_of_time_in_words(service_offering.response_time_upper_bound.days)
+
+  = simple_form_for([project, service_offering, contact], wrapper: :vertical_form) do |f|
+    = f.input :email_or_phone
+    = f.submit(t('views.result.contact.send'), class: 'btn btn-new')
