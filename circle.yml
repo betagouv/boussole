@@ -5,7 +5,7 @@ test:
 
   post:
     - bundle exec rake haml_lint
-    - bundle exec yaml-lint config/data config/rules
+    - bundle exec yaml-lint config/data config/criterias
     - bundle exec rake inch
 
 deployment:
