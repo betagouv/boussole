@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   end
 
   mount(Flip::Engine => '/flip')
+  mount(Nkss::Engine => '/styleguide')
 
   get '/:flyer', to: 'visitors#index', constraints: { flyer: /reims1[A|B|C|D|E|F|G|H|J|K|L|N]/ }
 

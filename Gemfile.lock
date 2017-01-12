@@ -1,3 +1,14 @@
+GIT
+  remote: git://github.com/nadarei/nkss-rails.git
+  revision: 8f5e27e98115daad591ac871a50a7c5ffa966d3e
+  specs:
+    nkss-rails (0.0.2)
+      bluecloth
+      ffaker
+      haml
+      kss
+      rails (>= 3.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -51,6 +62,7 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bluecloth (2.2.0)
     browser (2.3.0)
     builder (3.2.2)
     byebug (9.0.5)
@@ -211,6 +223,7 @@ GEM
     json (1.8.3)
     jwt (1.5.4)
     kramdown (1.12.0)
+    kss (0.5.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.4.1)
@@ -498,6 +511,7 @@ DEPENDENCIES
   meta_events
   mixpanel-ruby
   nilify_blanks
+  nkss-rails!
   pg
   poltergeist
   pry-byebug

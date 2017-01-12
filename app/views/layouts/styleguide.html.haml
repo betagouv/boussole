@@ -1,0 +1,21 @@
+-# coding: utf-8
+
+!!! 5
+%html
+  %head
+    %meta{ charset: 'utf-8' }
+    %meta{ 'http-equiv' => 'X-UA-Compatible', content: 'IE=edge' }
+    %title= t('layouts.application.title')
+    %meta{ name: 'description', content: t('layouts.application.description') }
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' }
+    %meta{ name: 'sentry-dsn', content: ENV['SENTRY_PUBLIC_DSN'] }
+    %base{ href: root_path }
+    %title Guide de style
+    = stylesheet_link_tag :application, media: :all
+    /[if lt IE 9]
+      %script{ src: 'http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js' }
+    = yield :head if content_for?(:head)
+
+  %body
+    = yield :body if content_for?(:body)
+    = javascript_include_tag :application, integrity: true

@@ -18,6 +18,7 @@ Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
 Rails.application.config.assets.precompile << %r{font-awesome/fonts/[\w-]+\.(?:eot|svg|ttf|woff2|woff?)$}
 Rails.application.config.assets.precompile << %r{open-sans/fonts/[\w-]+/[\w-]+\.(?:eot|svg|ttf|woff?)$}
 Rails.application.config.assets.precompile << %w(boussole.png)
+Rails.application.config.assets.precompile << %w(styleguide.css)
 
 # Minimum Sass number precision required by bootstrap-sass
 Sass::Script::Value::Number.precision = [8, ::Sass::Script::Value::Number.precision].max
