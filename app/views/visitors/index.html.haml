@@ -33,3 +33,36 @@
 
       - if feature?(:healthcaring)
         = link_to(t('views.landing.callout'), healthcarings_path, method: :post, class: 'btn btn-new')
+
+    %section
+      %h1.divider
+        Comment ça marche ?
+
+      .result
+        .card
+          .card-badge 1
+          .card-image= image_tag('person_pin.svg')
+          .card-body.text-center
+            En
+            %b 5 min
+            trouve le bon contact
+
+      .result
+        .card
+          .card-badge 2
+          .card-image= image_tag('notifications_active.svg')
+          .card-body.text-center
+            En
+            %b 7 jours
+            tu seras contacté·e
+
+      .result
+        .card
+          .card-badge 3
+          .card-image= image_tag('sentiment_very_satisfied.svg')
+          .card-body.text-center
+            %b
+              %a{ href: 'https://www.facebook.com/boussole.beta', style: 'color: #e0691a;' }
+                Dis-nous
+            comment c’est passé
+
