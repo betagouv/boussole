@@ -745,4 +745,118 @@ espace-metiers
         value: 
           - "Salarié.e"
           - "Sans activité"
+ 
+  preparer-mon-entretien-avec-un-conseiller-pole-emploi
+    -
+      -
+        attribute: "status" 
+        operator: "==" 
+        value: 
+          - "Sans activité"
+      -
+        attribute: "pole_emploi"
+        operator: "=="
+        value: true
 
+  m-aider-a-creer-mon-compte-pole-emploi
+    -
+      -
+        attribute: "status" 
+        operator: "==" 
+        value: 
+          - "Sans activité"
+      -
+        attribute: "pole_emploi"
+        operator: "=="
+        value: false
+        
+  decouvrir-les-formations-a-distance
+    -
+      -
+        attribute: "awareness"
+        operator: "==" 
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "experience"
+        operator: "==" 
+        value: true
+        
+  preparer-mes-evolutions-de-carrieres
+    -
+      -
+        attribute:"status"
+        operator: "==" 
+        value: 
+          - "Salarié.e"
+
+  comprendre-la-validation-d-acquis-d-experience
+    -
+      -
+        attribute: "awareness"
+        operator: "==" 
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "experience"
+        operator: "==" 
+        value: true
+        
+    -
+      -
+        attribute: "awareness"
+        operator: "==" 
+        value: "Je sais ce que je veux faire"
+      -
+        attribute:"status"
+        operator: "==" 
+        value: 
+          - "Salarié.e"
+          
+  trouver-un-stage
+    -
+      -
+        attribute: "awareness" 
+        operator: "==" 
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "status" 
+        operator: "in?" 
+        value: 
+          - "Sans activité"     
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "En formation"
+          - "Autre"
+          
+  etre-guide-dans-mon-projet-de-creation-d-entreprise
+    -
+      -
+        attribute: "awareness"
+        operator: "==" 
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "experience"
+        operator: "==" 
+        value: true  
+        
+  faire-un-point-sur-ta-situation-professionnelle-1004d742-94c9-4521-8e82-b7579a51c9ef:
+    -
+      -
+        attribute: "awareness" 
+        operator: "==" 
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "status" 
+        operator: "==" 
+        value: "Sans activité"
+      -
+        attribute: "mission_locale" 
+        operator: "==" 
+        value: false
+      -
+        attribute: "pole_emploi" 
+        operator: "==" 
+        value: false
+
+        
+  
+ 
