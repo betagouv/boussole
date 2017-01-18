@@ -1,1 +1,22 @@
-/* Stuff you're not sure where to put and to be get rid of soon */
+/* Stuff you're testing */
+
+/* Feature: How does it work? */
+.card-badge {
+  @extend .text-center;
+  background-color: $brand-info;
+  border-radius: 1em;
+  display: block;
+  height: 2em;
+  line-height: 2;
+  margin: -2em 0 0 -2em;
+  width: 2em;
+}
+
+.card-image {
+  margin-bottom: 1em;
+
+  img {
+    height: 50%;
+    width: 50%;
+  }
+}

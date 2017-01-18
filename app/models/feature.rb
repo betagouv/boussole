@@ -50,5 +50,9 @@ class Feature < ApplicationRecord
 
   feature :talk_to_a_human,
           default: proc { rand(2).zero? },
-          description: 'People will rather want to talk to a human.'
+          description: 'People would rather want to talk to a human.'
+
+  feature :how_does_it_work,
+          default: false,
+          description: 'People would rather want to know how stuff works.'
 end
