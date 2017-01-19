@@ -35,6 +35,8 @@
         = link_to(t('views.landing.callout'), healthcarings_path, method: :post, class: 'btn btn-new')
 
     - if feature?(:how_does_it_work)
+      %br
+
       %section
         %h1.divider
           Comment ça marche ?
@@ -65,5 +67,5 @@
               %b
                 %a{ href: 'https://www.facebook.com/boussole.beta', style: 'color: #e0691a;' }
                   Dis-nous
-              comment s’est passé
+              comment ça s’est passé
 
