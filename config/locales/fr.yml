@@ -79,7 +79,7 @@ fr:
         url: Site web
         response_time_upper_bound: Délai garanti de réponse
         social_rights: Thématiques
-        updated_at: Dernière actualisation
+        updated_at: Mis à jour le
       measure:
         title: Nom
         description: Description
