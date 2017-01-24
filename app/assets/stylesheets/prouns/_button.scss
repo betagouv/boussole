@@ -3,28 +3,38 @@
 // Buttons!
 // Styleguide 3.1.
 
-.btn {
+%btn {
   @extend .btn;
   @include shadow();
   font-size: $font-size-h5;
 }
 
 .btn-new {
+  @extend %btn;
   @extend .btn-primary;
 }
 
+.btn-new-alt {
+  @extend %btn;
+  @extend .btn-success;
+}
+
 .btn-show {
+  @extend %btn;
   @extend .btn-info;
 }
 
 .btn-edit {
+  @extend %btn;
   @extend .btn-warning;
 }
 
 .btn-destroy {
+  @extend %btn;
   @extend .btn-danger;
 }
 
 .btn-cancel {
+  @extend %btn;
   @extend .btn-default;
 }

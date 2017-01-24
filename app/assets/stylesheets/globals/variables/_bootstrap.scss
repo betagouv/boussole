@@ -5,26 +5,28 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:                           hsl(40,  0,   0%);   // #000000
-$gray-dark:                             hsl(40,  0,   5%);   // #0D0D0D
-$gray-darkish:                          hsl(40,  0,   15%);  // #404040
-$gray:                                  hsl(35, 21%, 83%);   // #DCD4C9
-$gray-lightish:                         hsl(40,  0,   85%);  // #BFBFBF
-$gray-light:                            hsl(40,  0,   95%);  // #F2F2F2
-$gray-lighter:                          hsl(40,  0,   100%); // #FFFFFF
+$gray-darkest:                          hsl(210, 16%, 0) !default;     // #000000
+$gray-darker:                           hsl(210, 16%, 2.5%) !default;  // #050607
+$gray-dark:                             hsl(210, 16%, 12.5%) !default; // #1B2025
+$gray-darkish:                          hsl(210, 16%, 28%) !default;   // #3C4753
+$gray:                                  hsl(210, 16%, 50%) !default;   // #6B8094
+$gray-lightish:                         hsl(210, 16%, 72%) !default;   // #ACB8C3
+$gray-light:                            hsl(210, 16%, 87.5%) !default; // #DADFE4
+$gray-lighter:                          hsl(210, 16%, 97.5%) !default; // #F8F9FA
+$gray-lightest:                         hsl(210, 16%, 100) !default;   // #FFFFFF
 
-$brand-primary:                         hsl(20,  80%, 45%);  // #E54C00
-$brand-success:                         hsl(90,  60%, 45%);  // #73B82E
-$brand-info:                            hsl(200, 60%, 45%);  // #2E8AB8
-$brand-warning:                         hsl(35,  60%, 45%);  // #B87E2E
-$brand-danger:                          hsl(360, 60%, 45%);  // #B82E2E
+$brand-primary:                         hsl(20, 80%, 45%) !default;  // #E54C00
+$brand-success:                         hsl(135, 19%, 60%) !default;  // #73B82E
+$brand-info:                            hsl(200, 60%, 45%) !default; // #2E8AB8
+$brand-warning:                         hsl(35, 60%, 45%) !default;  // #B87E2E
+$brand-danger:                          hsl(0, 60%, 45%) !default;   // #B82E2E
 
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:                               $gray-lighter !default;
+$body-bg:                               $gray-lightest !default;
 //** Global text color on `<body>`.
 $text-color:                            $gray-darker !default;
 
@@ -93,9 +95,9 @@ $table-condensed-cell-padding:          5px !default;
 //** Default background color used for all tables.
 $table-bg:                              transparent !default;
 //** Background color used for `.table-striped`.
-$table-bg-accent:                       lighten($gray-light, 2%) !default;
+$table-bg-accent:                       $gray-lighter !default;
 //** Background color used for `.table-hover`.
-$table-bg-hover:                        darken($gray-light, 4%) !default;
+$table-bg-hover:                        darken($gray-lighter, 2%) !default;
 $table-bg-active:                       $table-bg-hover !default;
 
 //** Border color for table and cell borders.
@@ -107,7 +109,7 @@ $table-border-color:                    transparent !default;
 
 $btn-font-weight:                       normal !default;
 
-$btn-default-color:                     $gray-lighter !default;
+$btn-default-color:                     $gray-lightest !default;
 $btn-default-bg:                        $gray-darkish !default;
 $btn-default-border:                    $white-alpha-0 !default;
 
@@ -131,31 +133,31 @@ $btn-danger-color:                      $btn-default-color !default;
 $btn-danger-bg:                         $brand-danger !default;
 $btn-danger-border:                     $btn-default-border !default;
 
-$btn-link-disabled-color:               darken($gray-light, 6.5%) !default;
+$btn-link-disabled-color:               $gray-light !default;
 
 //== Forms
 //
 //##
 
 //** Text color for `<input>`s
-$input-color:                           $gray-darkish !default;
+$input-color:                           $gray !default;
 
 //== Navbar
 //
 //##
 
 // Basics of a navbar
-$navbar-default-color:                  $white !default;
-$navbar-default-bg:                     $gray-dark !default;
+$navbar-default-color:                  $btn-default-color !default;
+$navbar-default-bg:                     $gray-darkish !default;
 $navbar-default-border:                 $white-alpha-0 !default;
 
 // Navbar links
 $navbar-default-link-color:             $navbar-default-color !default;
 $navbar-default-link-hover-color:       $navbar-default-color !default;
-$navbar-default-link-hover-bg:          $brand-primary !default;
-$navbar-default-link-active-color:      $brand-primary !default;
-$navbar-default-link-active-bg:         $navbar-default-bg !default;
-$navbar-default-link-disabled-color:    $gray !default;
+$navbar-default-link-hover-bg:          darken($navbar-default-bg, 13%) !default;
+$navbar-default-link-active-color:      $navbar-default-color !default;
+$navbar-default-link-active-bg:         darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-disabled-color:    $gray-light !default;
 $navbar-default-link-disabled-bg:       $navbar-default-border !default;
 
 // Navbar brand label

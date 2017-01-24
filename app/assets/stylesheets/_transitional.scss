@@ -20,11 +20,3 @@
     width: 25%;
   }
 }
-
-.callout {
-  .btn {
-    &:hover {
-      @include shadow();
-    }
-  }
-}

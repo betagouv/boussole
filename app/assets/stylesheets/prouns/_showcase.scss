@@ -5,8 +5,8 @@
 
 .showcase {
   @include shadow();
-  border: transparentize($gray-dark, .85) 1px solid;
-  background-color: $gray;
+  background-color: $gray-lighter;
+  // border: $transparent-alpha-19 1px solid;
   display: inline-block;
   margin-bottom: 1em;
   padding: 2em;

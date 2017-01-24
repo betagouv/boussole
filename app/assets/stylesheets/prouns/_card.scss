@@ -4,8 +4,8 @@
 // Styleguide 3.2.
 
 .card {
-  @include shadow();
-  background-color: $gray-lighter;
+  // @include shadow();
+  // background-color: $gray-lightest;
   display: inline-block;
   padding: 1em 1em 2em;
   position: relative;
