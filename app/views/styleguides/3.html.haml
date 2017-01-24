@@ -1,6 +1,26 @@
 -# encoding: utf-8
 
 = kss_block '3.1' do
+  %button.btn{ style: 'width: 15%;' }
+    Plain-old button
+
+  %button.btn.btn-new{ style: 'width: 15%;' }
+    Action button
+
+  %button.btn.btn-show{ style: 'width: 15%;' }
+    Show button
+
+  %button.btn.btn-edit{ style: 'width: 15%;' }
+    Edit button
+
+  %button.btn.btn-destroy{ style: 'width: 15%;' }
+    Destroy button
+
+  %button.btn.btn-cancel{ style: 'width: 15%;' }
+    Cancel button
+
+
+= kss_block '3.2' do
   - public_service                             = PublicService.new
   - public_service.title                       = 'Pôle Emploi'
   - public_service.url                         = 'pole-emploi.fr'
@@ -8,7 +28,7 @@
 
   = render(partial: 'blocks/public_service', locals: { public_service: public_service })
 
-= kss_block '3.2' do
+= kss_block '3.3' do
   - project                                    = Working.new
   - project.id                                 = 1
   - service_offering                           = ServiceOffering.new

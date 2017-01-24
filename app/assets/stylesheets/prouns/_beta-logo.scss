@@ -21,14 +21,15 @@
 .beta-logo {
   @extend .hidden-xs;
   @extend .hidden-sm;
+  @include shadow();
   background-color: $brand-primary;
   font-weight: bold;
-  padding: 5px;
+  padding: .5em;
   position: absolute;
-  right: -53px;
+  right: -3em;
   text-align: center;
   text-transform: uppercase;
-  top: 26px;
+  top: 1em;
   transform: rotate(45deg);
   width: 200px;
   z-index: 10;

@@ -49,4 +49,11 @@ h1 {
   font-weight: $headings-font-weight * 2;
 }
 
+hr {
+  background: image-url("divider.png") 50% 0 no-repeat;
+  border: 0;
+  height: 1em;
+  margin: 1em 0;
+}
+
 @include font-awesome-font-face();

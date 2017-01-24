@@ -35,6 +35,9 @@ main {
 
 .l-content {
   @extend .col-md-12;
+  @include shadow();
+  background-color: $gray-lighter;
+  padding: 2em;
 
   &.l-with-sidebar {
     @extend .col-md-8;

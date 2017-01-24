@@ -5,24 +5,35 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:                           $raisin-black;
-$gray-dark:                             $jet;
-$gray:                                  $davy-s-gray;
-$gray-light:                            $stormcloud;
-$gray-lighter:                          $isabelline;
+$gray-darker:                           hsl(40,  0,   0%);   // #000000
+$gray-dark:                             hsl(40,  0,   5%);   // #0D0D0D
+$gray-darkish:                          hsl(40,  0,   15%);  // #404040
+$gray:                                  hsl(35, 21%, 83%);   // #DCD4C9
+$gray-lightish:                         hsl(40,  0,   85%);  // #BFBFBF
+$gray-light:                            hsl(40,  0,   95%);  // #F2F2F2
+$gray-lighter:                          hsl(40,  0,   100%); // #FFFFFF
 
-$brand-primary:                         $chocolate-web;
-$brand-success:                         $bud-green;
-$brand-info:                            $blue-jeans;
-$brand-warning:                         $maximum-yellow-red;
-$brand-danger:                          $jelly-bean;
+$brand-primary:                         hsl(20,  80%, 45%);  // #E54C00
+$brand-success:                         hsl(90,  60%, 45%);  // #73B82E
+$brand-info:                            hsl(200, 60%, 45%);  // #2E8AB8
+$brand-warning:                         hsl(35,  60%, 45%);  // #B87E2E
+$brand-danger:                          hsl(360, 60%, 45%);  // #B82E2E
 
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:                               $white !default;
+$body-bg:                               $gray-lighter !default;
+//** Global text color on `<body>`.
+$text-color:                            $gray-darker !default;
+
+//** Global textual link color.
+$link-color:                            $brand-primary !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:                      darken($link-color, 15%) !default;
+//** Link hover decoration.
+$link-hover-decoration:                 underline !default;
 
 //== Typography
 //
@@ -33,16 +44,16 @@ $font-family-serif:                     Georgia, "Times New Roman", Times, serif
 $font-family-monospace:                 Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:                      $font-family-sans-serif !default;
 
-$font-size-base:                        $font-size-base-md;
+$font-size-base:                        $font-size-base-md !default;
 $font-size-large:                       ceil(($font-size-base * 1.25)) !default; // ~23px
 $font-size-small:                       ceil(($font-size-base * .85)) !default; // ~16px
 
-$font-size-h1:                          2.25em;
-$font-size-h2:                          1.75em;
-$font-size-h3:                          1.5em;
-$font-size-h4:                          1.25em;
-$font-size-h5:                          1em;
-$font-size-h6:                          .85em;
+$font-size-h1:                          2.25em !default;
+$font-size-h2:                          1.75em !default;
+$font-size-h3:                          1.5em !default;
+$font-size-h4:                          1.25em !default;
+$font-size-h5:                          1em !default;
+$font-size-h6:                          .85em !default;
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:                  inherit !default;
@@ -82,9 +93,9 @@ $table-condensed-cell-padding:          5px !default;
 //** Default background color used for all tables.
 $table-bg:                              transparent !default;
 //** Background color used for `.table-striped`.
-$table-bg-accent:                       lighten($gray-lighter, 6.5%) !default;
+$table-bg-accent:                       lighten($gray-light, 2%) !default;
 //** Background color used for `.table-hover`.
-$table-bg-hover:                        $gray-lighter !default;
+$table-bg-hover:                        darken($gray-light, 4%) !default;
 $table-bg-active:                       $table-bg-hover !default;
 
 //** Border color for table and cell borders.
@@ -96,8 +107,8 @@ $table-border-color:                    transparent !default;
 
 $btn-font-weight:                       normal !default;
 
-$btn-default-color:                     $white !default;
-$btn-default-bg:                        $stormcloud !default;
+$btn-default-color:                     $gray-lighter !default;
+$btn-default-bg:                        $gray-darkish !default;
 $btn-default-border:                    $white-alpha-0 !default;
 
 $btn-primary-color:                     $btn-default-color !default;
@@ -120,57 +131,59 @@ $btn-danger-color:                      $btn-default-color !default;
 $btn-danger-bg:                         $brand-danger !default;
 $btn-danger-border:                     $btn-default-border !default;
 
-$btn-link-disabled-color:               $gray-light !default;
+$btn-link-disabled-color:               darken($gray-light, 6.5%) !default;
+
+//== Forms
+//
+//##
+
+//** Text color for `<input>`s
+$input-color:                           $gray-darkish !default;
 
 //== Navbar
 //
 //##
 
 // Basics of a navbar
-$navbar-default-color:                  $isabelline !default;
-$navbar-default-bg:                     $stormcloud !default;
+$navbar-default-color:                  $white !default;
+$navbar-default-bg:                     $gray-dark !default;
 $navbar-default-border:                 $white-alpha-0 !default;
 
 // Navbar links
 $navbar-default-link-color:             $navbar-default-color !default;
-$navbar-default-link-hover-color:       $navbar-default-link-color !default;
-$navbar-default-link-hover-bg:          darken($navbar-default-bg, 3%) !default;
-$navbar-default-link-active-color:      $navbar-default-link-color !default;
-$navbar-default-link-active-bg:         darken($navbar-default-bg, 6.5%) !default;
-$navbar-default-link-disabled-color:    $pastel-gray !default;
+$navbar-default-link-hover-color:       $navbar-default-color !default;
+$navbar-default-link-hover-bg:          $brand-primary !default;
+$navbar-default-link-active-color:      $brand-primary !default;
+$navbar-default-link-active-bg:         $navbar-default-bg !default;
+$navbar-default-link-disabled-color:    $gray !default;
 $navbar-default-link-disabled-bg:       $navbar-default-border !default;
 
 // Navbar brand label
 $navbar-default-brand-color:            $navbar-default-link-color !default;
 $navbar-default-brand-hover-color:      $navbar-default-link-color !default;
-$navbar-default-brand-hover-bg:         $navbar-default-border !default;
+$navbar-default-brand-hover-bg:         $brand-primary !default;
 
 // Navbar toggle
 $navbar-default-toggle-hover-bg:        $navbar-default-link-hover-bg !default;
 $navbar-default-toggle-icon-bar-bg:     $navbar-default-color !default;
 $navbar-default-toggle-border-color:    $navbar-default-border !default;
 
-//=== Inverted navbar
-// Reset inverted navbar basics
-$navbar-inverse-color:                  $navbar-default-color !default;
-$navbar-inverse-bg:                     $brand-primary !default;
-$navbar-inverse-border:                 $navbar-default-border !default;
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
 
-// Inverted navbar links
-$navbar-inverse-link-color:             $navbar-default-color !default;
-$navbar-inverse-link-hover-color:       $navbar-inverse-link-color !default;
-$navbar-inverse-link-hover-bg:          darken($navbar-inverse-bg, 5%) !default;
-$navbar-inverse-link-active-color:      $navbar-inverse-link-color !default;
-$navbar-inverse-link-active-bg:         darken($navbar-inverse-bg, 5%) !default;
-$navbar-inverse-link-disabled-color:    $arsenic !default;
-$navbar-inverse-link-disabled-bg:       $navbar-default-border !default;
+$state-success-text:                    $brand-success !default;
+$state-success-bg:                      #dff0d8 !default;
+$state-success-border:                  $state-success-text !default;
 
-// Inverted navbar brand label
-$navbar-inverse-brand-color:            $navbar-inverse-link-color !default;
-$navbar-inverse-brand-hover-color:      $navbar-inverse-link-color !default;
-$navbar-inverse-brand-hover-bg:         $navbar-default-border !default;
+$state-info-text:                       $brand-info !default;
+$state-info-bg:                         #d9edf7 !default;
+$state-info-border:                     $state-info-text !default;
 
-// Inverted navbar toggle
-$navbar-default-toggle-hover-bg:        $navbar-inverse-link-hover-bg !default;
-$navbar-default-toggle-icon-bar-bg:     $navbar-default-color !default;
-$navbar-default-toggle-border-color:    $navbar-default-border !default;
+$state-warning-text:                    $brand-warning !default;
+$state-warning-bg:                      #fcf8e3 !default;
+$state-warning-border:                  $state-warning-text !default;
+
+$state-danger-text:                     $brand-danger !default;
+$state-danger-bg:                       #f2dede !default;
+$state-danger-border:                   $state-danger-text !default;

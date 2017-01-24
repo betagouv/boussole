@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
 // A showcase block, usefull for catchy stuff
-// Styleguide 3.2.
+// Styleguide 3.3.
 
 .showcase {
-  background-color: $gray-lighter;
+  @include shadow();
+  border: transparentize($gray-dark, .85) 1px solid;
+  background-color: $gray;
   display: inline-block;
   margin-bottom: 1em;
   padding: 2em;

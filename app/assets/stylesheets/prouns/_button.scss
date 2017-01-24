@@ -1,7 +1,11 @@
 @charset "UTF-8";
 
+// Buttons!
+// Styleguide 3.1.
+
 .btn {
   @extend .btn;
+  @include shadow();
   font-size: $font-size-h5;
 }
 
