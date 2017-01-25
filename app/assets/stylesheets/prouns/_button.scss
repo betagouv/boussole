@@ -1,40 +1,63 @@
 @charset "UTF-8";
 
-// Buttons!
-// Styleguide 3.1.
+/*
+  Buttons!
+  Styleguide 3.1.
+ */
 
-%btn {
-  @extend .btn;
-  @include shadow();
-  font-size: $font-size-h5;
+%is-disabled {
+  @extend .disabled;
+  background-color: $black-alpha-12;
+  color: $black-alpha-26;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $black-alpha-12;
+  }
+
+  &:focus {
+    color: $black-alpha-12;
+  }
 }
 
-.btn-new {
-  @extend %btn;
+%button {
+  @extend .btn;
+  font-size: $font-size-h5;
+
+  &.is-disabled,
+  &:disabled,
+  &[disabled] {
+    @extend %is-disabled;
+  }
+}
+
+.button-default {
+  @extend %button;
+  @extend .btn-default;
+}
+
+.button-primary {
+  @extend %button;
   @extend .btn-primary;
 }
 
-.btn-new-alt {
-  @extend %btn;
+.button-success {
+  @extend %button;
   @extend .btn-success;
 }
 
-.btn-show {
-  @extend %btn;
+.button-info {
+  @extend %button;
   @extend .btn-info;
 }
 
-.btn-edit {
-  @extend %btn;
+.button-warning {
+  @extend %button;
   @extend .btn-warning;
 }
 
-.btn-destroy {
-  @extend %btn;
+.button-danger {
+  @extend %button;
   @extend .btn-danger;
-}
-
-.btn-cancel {
-  @extend %btn;
-  @extend .btn-default;
 }

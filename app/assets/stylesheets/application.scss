@@ -1,8 +1,9 @@
-/* Site's styles, inspired by SMACSS */
 @charset "UTF-8";
 
+/* Site's styles, inspired by SMACSS */
+
 @import "globals/all",
-        "base",
+        "base/all",
         "layouts",
         "prouns/all",
         "states",

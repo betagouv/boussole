@@ -51,5 +51,5 @@
             %dd= @service_offering.updated_at
 
       .profile-actions
-        = link_to(t('.edit'), edit_agents_service_offering_path(@service_offering), class: 'btn btn-edit')
-        = link_to(t('.back'), agents_service_offerings_path, class: 'btn btn-cancel')
+        = link_to(t('.edit'), edit_agents_service_offering_path(@service_offering), class: 'button-warning')
+        = link_to(t('.back'), agents_service_offerings_path, class: 'button-default')

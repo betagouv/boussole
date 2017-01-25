@@ -15,6 +15,6 @@
         = f.input(:url)
         = f.association(:social_rights)
 
-        = f.button(:submit, t('.create'), class: 'btn btn-edit')
-        = link_to(t('.back'), agents_measures_path, class: 'btn btn-cancel')
+        = f.button(:submit, t('.create'), class: 'button-success')
+        = link_to(t('.back'), agents_measures_path, class: 'button-default')
 

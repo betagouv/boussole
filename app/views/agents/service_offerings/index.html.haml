@@ -7,7 +7,7 @@
       %hr
 
       .profile-list-new
-        = link_to(t('.new'), new_agents_service_offering_path, class: 'btn btn-new btn-lg')
+        = link_to(t('.new'), new_agents_service_offering_path, class: 'button-primary')
 
       .profile-list-content
         %table
@@ -26,9 +26,9 @@
                 %td= service_offering.title
                 %td= service_offering.public_service_title
                 %td= service_offering.social_right_names
-                %td= link_to(t('.show'), agents_service_offering_path(service_offering), class: 'btn btn-show')
-                %td= link_to(t('.edit'), edit_agents_service_offering_path(service_offering), class: 'btn btn-edit')
+                %td= link_to(t('.show'), agents_service_offering_path(service_offering), class: 'button-info')
+                %td= link_to(t('.edit'), edit_agents_service_offering_path(service_offering), class: 'button-warning')
                 %td
-                  = link_to t('.destroy'), agents_service_offering_path(service_offering), class: 'btn btn-destroy',
+                  = link_to t('.destroy'), agents_service_offering_path(service_offering), class: 'button-danger',
                                                                                            method: :delete,
                                                                                            data: { confirm: t('.confirm') }

@@ -18,6 +18,6 @@
         = f.input(:response_time_upper_bound)
         = f.association(:social_rights)
 
-        = f.button(:submit, t('.create'), class: 'btn btn-new')
-        = link_to(t('.back'), agents_public_services_path, class: 'btn btn-cancel')
+        = f.button(:submit, t('.create'), class: 'button-success')
+        = link_to(t('.back'), agents_public_services_path, class: 'button-default')
 

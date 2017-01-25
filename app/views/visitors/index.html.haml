@@ -23,16 +23,16 @@
 
     %section.callout
       - if feature?(:working)
-        = link_to(t('views.landing.callout'), workings_path, method: :post, class: 'btn btn-new')
+        = link_to(t('views.landing.callout'), workings_path, method: :post, class: 'button-primary')
 
       - if feature?(:training)
-        = link_to(t('views.landing.callout'), trainings_path, method: :post, class: 'btn btn-new')
+        = link_to(t('views.landing.callout'), trainings_path, method: :post, class: 'button-primary')
 
       - if feature?(:housing)
-        = link_to(t('views.landing.callout'), housings_path, method: :post, class: 'btn btn-new')
+        = link_to(t('views.landing.callout'), housings_path, method: :post, class: 'button-primary')
 
       - if feature?(:healthcaring)
-        = link_to(t('views.landing.callout'), healthcarings_path, method: :post, class: 'btn btn-new')
+        = link_to(t('views.landing.callout'), healthcarings_path, method: :post, class: 'button-primary')
 
     - if feature?(:how_does_it_work)
       %br

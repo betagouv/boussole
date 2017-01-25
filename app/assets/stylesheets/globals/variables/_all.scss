@@ -1,4 +1,7 @@
 @charset "UTF-8";
 
-@import "globals/variables/application",
+/* Site global variables go here */
+
+@import "globals/variables/colour",
+        "globals/variables/typography",
         "globals/variables/bootstrap";

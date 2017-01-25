@@ -1,11 +1,12 @@
 @charset "UTF-8";
 
-// A card
-// Styleguide 3.2.
+/*
+  A card
+  Styleguide 3.2.
+ */
 
 .card {
-  // @include shadow();
-  // background-color: $gray-lightest;
+  background-color: $body-bg;
   display: inline-block;
   padding: 1em 1em 2em;
   position: relative;

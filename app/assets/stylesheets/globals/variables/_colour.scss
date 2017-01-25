@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/* Colour variables go here */
+
+/* Default (grays) */
+$default-pianissimo: hsl(0, 0%, 93%) !default;     // #EEEEEE
+$default-piano:      hsl(0, 0%, 88%) !default;     // #E0E0E0
+$default-base:       hsl(0, 0%, 62%) !default;     // #9E9E9E
+$default-forte:      hsl(0, 0%, 38%) !default;     // #616161
+$default-fortissimo: hsl(0, 0%, 26%) !default;     // #424242
+
+/* Primary */
+$primary-pianissimo: hsl(190, 97%, 50%) !default;  // #05D4FB
+$primary-piano:      hsl(190, 100%, 49%) !default; // #00D4FC
+$primary-base:       hsl(190, 100%, 34%) !default; // #0090AD
+$primary-forte:      hsl(189, 100%, 26%) !default; // #007186
+$primary-fortissimo: hsl(189, 100%, 20%) !default; // #005868
+
+/* Success */
+$success-piano:      hsl(133, 100%, 50%) !default; // #00FD38
+$success-base:       hsl(133, 100%, 40%) !default; // #00CB2D
+$success-forte:      hsl(133, 100%, 32%) !default; // #00A524
+
+/* Info */
+$info-piano:         hsl(226, 100%, 50%) !default; // #003BFD
+$info-base:          hsl(226, 100%, 36%) !default; // #002BBA
+$info-forte:         hsl(226, 100%, 29%) !default; // #002293
+
+/* Warning */
+$warning-piano:      hsl(41, 100%, 50%) !default;  // #FFB000
+$warning-base:       hsl(41, 100%, 43%) !default;  // #DA9600
+$warning-forte:      hsl(41, 100%, 33%) !default;  // #A97400
+
+/* Danger */
+$danger-piano:       hsl(6, 100%, 50%) !default;   // #FF1800
+$danger-base:        hsl(6, 100%, 43%) !default;   // #DA1500
+$danger-forte:       hsl(6, 100%, 33%) !default;   // #A91000
+
+/* Black & white */
+$black:              hsl(0, 0, 0) !default;        // #000000
+$black-alpha-87:     rgba($black, .87) !default;   // #000000DE
+$black-alpha-54:     rgba($black, .54) !default;   // #0000008A
+$black-alpha-38:     rgba($black, .38) !default;   // #00000061
+$black-alpha-26:     rgba($black, .26) !default;   // #00000042
+$black-alpha-12:     rgba($black, .12) !default;   // #0000001F
+
+$white:              hsl(0, 100%, 100%) !default;  // #FFFFFF
+$white-alpha-70:     rgba($white, .70) !default;   // #FFFFFFB2
+$white-alpha-50:     rgba($white, .50) !default;   // #FFFFFF80
+$white-alpha-30:     rgba($white, .30) !default;   // #FFFFFF4D
+$white-alpha-12:     rgba($white, .12) !default;   // #FFFFFF1F

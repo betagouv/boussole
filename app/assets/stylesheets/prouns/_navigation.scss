@@ -1,6 +1,11 @@
 @charset "UTF-8";
 
-.navigation {
+/*
+  What's a site without ye olde navigation?
+  Styleguide 3.3.
+ */
+
+[role="navigation"] {
   @extend .navbar;
   @extend .navbar-default;
 }
@@ -17,4 +22,19 @@
 .navigation-body {
   @extend .collapse;
   @extend .navbar-collapse;
+}
+
+.navigation-links {
+  ul {
+    @extend .nav;
+    @extend .navbar-nav;
+  }
+}
+
+.navigation-toggle {
+  button {
+    @extend .navbar-brand;
+    @extend .navbar-toggle;
+    margin: 0;
+  }
 }

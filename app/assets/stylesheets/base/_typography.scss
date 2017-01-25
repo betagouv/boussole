@@ -1,13 +1,10 @@
-/* Base site styles go here */
 @charset "UTF-8";
 
+/* Typography related base styles go here */
+
+/* Responsive font-size */
 html {
   font-size: $font-size-base-xs;
-  overflow-x: hidden;
-
-  @media (max-width: $screen-sm-min) {
-    overflow-x: scroll;
-  }
 
   @media (min-width: $screen-sm-min) {
     font-size: $font-size-base-sm;
@@ -19,28 +16,6 @@ html {
 
   @media (min-width: $screen-lg-min) {
     font-size: $font-size-base-lg;
-  }
-}
-
-body {
-  @extend .container-fluid;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-img {
-  @extend .img-responsive;
-  margin: 0 auto;
-}
-
-table {
-  @extend .table;
-  @extend .table-hover;
-  @extend .table-striped;
-  @extend .table-responsive;
-
-  * {
-    border: 0;
   }
 }
 

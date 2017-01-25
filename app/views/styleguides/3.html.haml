@@ -1,41 +1,13 @@
 -# encoding: utf-8
 
 = kss_block '3.1' do
-  %button.btn.btn-new{ style: 'width: 15%;' }
-    Action button
-
-  %button.btn.btn-new-alt{ style: 'width: 15%;' }
-    Alt button
-
-  %button.btn.btn-show{ style: 'width: 15%;' }
-    Show button
-
-  %button.btn.btn-edit{ style: 'width: 15%;' }
-    Edit button
-
-  %button.btn.btn-destroy{ style: 'width: 15%;' }
-    Destroy button
-
-  %button.btn.btn-cancel{ style: 'width: 15%;' }
-    Cancel button
-
+  = render(partial: 'styleguides/prouns/button')
 
 = kss_block '3.2' do
-  - public_service                             = PublicService.new
-  - public_service.title                       = 'Pôle Emploi'
-  - public_service.url                         = 'pole-emploi.fr'
-  - public_service.description                 = 'Trouver un boulot grâce à La Bonne Boîte !'
-
-  = render(partial: 'blocks/public_service', locals: { public_service: public_service })
+  = render(partial: 'styleguides/prouns/card')
 
 = kss_block '3.3' do
-  - project                                    = Working.new
-  - project.id                                 = 1
-  - service_offering                           = ServiceOffering.new
-  - service_offering.id                        = 1
-  - service_offering.response_time_upper_bound = 1
-  - contact                                    = Contact.new
+  = render(partial: 'styleguides/prouns/navigation')
 
-  = render partial: 'blocks/contact',
-         locals: { project: project, service_offering: service_offering, contact: contact }
-
+= kss_block '3.4' do
+  = render(partial: 'styleguides/prouns/showcase')

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/*
+  Table related base styles go here
+  Styleguide 1.1.
+ */
+
+table {
+  @extend .table;
+  @extend .table-hover;
+  @extend .table-responsive;
+
+
+  tbody > tr {
+    th,
+    td {
+      border-top: $black-alpha-12 solid .1em;
+    }
+  }
+
+  thead > tr > th {
+    border-bottom: 0;
+  }
+}

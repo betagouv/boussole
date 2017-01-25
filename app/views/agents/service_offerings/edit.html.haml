@@ -19,7 +19,7 @@
         = f.input(:response_time_upper_bound)
         = f.association(:social_rights)
 
-        = f.button(:submit, t('.update'), class: 'btn btn-edit')
-        = link_to(t('.show'), agents_service_offering_path(@service_offering), class: 'btn btn-show')
-        = link_to(t('.back'), agents_service_offerings_path, class: 'btn btn-cancel')
+        = f.button(:submit, t('.update'), class: 'button-warning')
+        = link_to(t('.show'), agents_service_offering_path(@service_offering), class: 'button-info')
+        = link_to(t('.back'), agents_service_offerings_path, class: 'button-default')
 

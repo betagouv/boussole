@@ -45,5 +45,5 @@
             %dd= @public_service.updated_at
 
       .profile-actions
-        = link_to(t('.edit'), edit_agents_public_service_path(@public_service), class: 'btn btn-edit')
-        = link_to(t('.back'), agents_public_services_path, class: 'btn btn-cancel')
+        = link_to(t('.edit'), edit_agents_public_service_path(@public_service), class: 'button-warning')
+        = link_to(t('.back'), agents_public_services_path, class: 'button-default')

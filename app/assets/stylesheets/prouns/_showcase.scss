@@ -1,12 +1,13 @@
 @charset "UTF-8";
 
-// A showcase block, usefull for catchy stuff
-// Styleguide 3.3.
+/*
+  A showcase proun, like a big telly init?
+  Styleguide 3.4.
+ */
 
 .showcase {
   @include shadow();
   background-color: $gray-lighter;
-  // border: $transparent-alpha-19 1px solid;
   display: inline-block;
   margin-bottom: 1em;
   padding: 2em;
