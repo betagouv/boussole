@@ -7,14 +7,16 @@
 
 .showcase {
   @include shadow();
-  background-color: $gray-lighter;
+  background-color: $primary-fortissimo;
+  color: $white;
   display: inline-block;
   margin-bottom: 1em;
   padding: 2em;
   position: relative;
   width: 100%;
 
-  input {
+  [role="button"] {
+    @include shadow();
     width: 100%;
   }
 }
