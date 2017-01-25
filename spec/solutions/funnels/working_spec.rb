@@ -76,7 +76,7 @@ solution('Improve my CV') do
       within('.working_apec') { choose('Non') }
 
       # Submit!
-      click_button('Continuer')
+      click_button('Résultats')
 
       # There're services offered to Chlotilde
       expect(page).to have_content('Améliorer mon CV')

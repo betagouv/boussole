@@ -50,7 +50,7 @@ solution('Find a flatsharing solution') do
       select('18', from: 'Quel est mon âge ?')
 
       # Submit!
-      click_button('Continuer')
+      click_button('Résultats')
 
       # There're services offered to Zoe
       expect(page).to have_content('Trouver un coloc')
