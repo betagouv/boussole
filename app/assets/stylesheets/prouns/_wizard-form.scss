@@ -2,11 +2,20 @@
 
 .wizard-form-actions {
   @extend .text-center;
-  margin-top: 1em;
+  @include clearfix();
+  margin-top: 2em;
 
   [role="link"],
   [role="button"] {
     width: 47.5%;
+  }
+
+  [role="link"] {
+    @extend .pull-left;
+  }
+
+  [role="button"] {
+    @extend .pull-right;
   }
 }
 

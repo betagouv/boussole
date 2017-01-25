@@ -46,4 +46,4 @@
         = f.input :intention, label: 'Je veux continuer mes études'
         = f.input :handicap, label: 'Je suis en situation de handicap'
 
-        = f.button :submit, 'Continuer', class: 'button-primary'
+        = render(partial: 'blocks/button_groups/wizard_nth_step')

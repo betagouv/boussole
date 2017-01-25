@@ -14,4 +14,4 @@
         = f.input :cap_emploi, as: :radio_buttons
         = f.input :apec, as: :radio_buttons
 
-        = f.button :submit, 'Continuer', class: 'button-primary'
+        = render(partial: 'blocks/button_groups/wizard_last_step')

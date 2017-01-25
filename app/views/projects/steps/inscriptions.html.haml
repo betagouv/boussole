@@ -15,6 +15,4 @@
           = f.input :cap, label: 'Cap emploi'
         = f.input :apec, label: "Association pour l'emploi des cadres"
 
-
-
-        = f.button :submit, 'Continuer', class: 'button-primary'
+        = render(partial: 'blocks/button_groups/wizard_last_step')

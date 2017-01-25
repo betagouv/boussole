@@ -1,0 +1,10 @@
+-# coding: utf-8
+
+.wizard-form-actions
+  = link_to(previous_wizard_path, class: 'button-primary', role: 'link') do
+    %i.fa.fa-arrow-circle-left{ aria: { hidden: true } }
+    Corriger
+
+  = button_tag(type: 'submit', name: 'commit', class: 'button-primary', role: 'button') do
+    Continuer
+    %i.fa.fa-arrow-circle-right{ aria: { hidden: true } }
