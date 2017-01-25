@@ -33,13 +33,10 @@ main {
   @extend .col-xs-10;
   @extend .col-xs-offset-1;
   @include shadow();
-  background-color: $gray-lighter;
 }
 
 .l-content {
   @extend .col-md-12;
-  // @include shadow();
-  // background-color: $gray-lightest;
   padding: 2em;
 
   &.l-with-sidebar {

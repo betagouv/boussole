@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+.wizard-form-actions {
+  @extend .text-center;
+  margin-top: 1em;
+
+  [role="link"],
+  [role="button"] {
+    width: 47.5%;
+  }
+}
+
 .wizard-form-header {
   font-size: $font-size-h4;
 }

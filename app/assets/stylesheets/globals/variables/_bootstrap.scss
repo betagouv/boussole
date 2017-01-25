@@ -131,7 +131,7 @@ $btn-link-disabled-color:               $black-alpha-38 !default;
 //##
 
 //** Text color for `<input>`s
-$input-color:                           $gray-light !default;
+$input-color:                           $black-alpha-38 !default;
 
 //== Navbar
 //
@@ -140,7 +140,7 @@ $input-color:                           $gray-light !default;
 // Basics of a navbar
 $navbar-default-color:                  $btn-primary-color !default;
 $navbar-default-bg:                     $primary-forte !default;
-$navbar-default-border:                 $white-alpha-12 !default;
+$navbar-default-border:                 $black-alpha-12 !default;
 
 // Navbar links
 $navbar-default-link-color:             $navbar-default-color !default;
