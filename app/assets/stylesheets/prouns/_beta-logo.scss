@@ -1,18 +1,9 @@
 @charset "UTF-8";
 
 @mixin uniform-anchor {
-  &:hover {
-    @content;
-  }
-
-  &:link {
-    @content;
-  }
-
-  &:active {
-    @content;
-  }
-
+  &:hover,
+  &:link,
+  &:active,
   &:visited {
     @content;
   }
@@ -33,6 +24,10 @@
   transform: rotate(45deg);
   width: 200px;
   z-index: 10;
+
+  &:hover {
+    @include shadow2();
+  }
 
   a {
     @include uniform-anchor {

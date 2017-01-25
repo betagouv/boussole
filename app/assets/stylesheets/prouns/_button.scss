@@ -8,12 +8,14 @@
 %is-disabled {
   @extend .disabled;
   background-color: $black-alpha-12;
+  box-shadow: none;
   color: $black-alpha-26;
 
   &:hover,
   &:active,
   &:focus {
     background-color: $black-alpha-12;
+    box-shadow: none;
   }
 
   &:focus {
@@ -23,7 +25,12 @@
 
 %button {
   @extend .btn;
+  @include shadow();
   font-size: $font-size-h5;
+
+  &:hover {
+    @include shadow2();
+  }
 
   &.is-disabled,
   &:disabled,

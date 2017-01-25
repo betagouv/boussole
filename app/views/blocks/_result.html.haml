@@ -1,7 +1,7 @@
 -# coding: utf-8
 
 .result
-  = link_to(send("#{project.class.name.underscore}_service_offering_path", project, service_offering)) do
+  = link_to(send("#{project.class.name.underscore}_service_offering_path", project, service_offering), role: 'link') do
     %article.result-card
       %header.result-header
         %h1
@@ -15,4 +15,5 @@
       %footer.result-footer
         = link_to t('views.results.result_list.result_card.footer'),
                   send("#{project.class.name.underscore}_service_offering_path", project, service_offering),
-                  class: 'button-primary'
+                  class: 'button-success',
+                  role: 'link'

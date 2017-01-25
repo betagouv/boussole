@@ -8,7 +8,7 @@
 .showcase {
   @include shadow();
   background-color: $primary-fortissimo;
-  color: $white;
+  color: $btn-primary-color;
   display: inline-block;
   margin-bottom: 1em;
   padding: 2em;
@@ -16,7 +16,6 @@
   width: 100%;
 
   [role="button"] {
-    @include shadow();
     width: 100%;
   }
 }

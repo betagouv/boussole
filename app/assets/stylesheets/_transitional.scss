@@ -22,3 +22,13 @@
     width: 25%;
   }
 }
+
+.l-content.l-with-sidebar {
+  @include shadow();
+}
+
+/* Testing papers */
+article {
+  padding-left: 2em;
+  padding-right: 2em;
+}

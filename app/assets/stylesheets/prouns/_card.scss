@@ -6,6 +6,7 @@
  */
 
 .card {
+  @include shadow();
   background-color: $body-bg;
   display: inline-block;
   padding: 1em 1em 2em;
