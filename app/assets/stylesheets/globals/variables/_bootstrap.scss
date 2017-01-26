@@ -6,11 +6,11 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:                           $default-fortissimo !default;
-$gray-dark:                             $default-forte !default;
+$gray-darker:                           $default-darker !default;
+$gray-dark:                             $default-dark !default;
 $gray:                                  $default-base !default;
-$gray-light:                            $default-piano !default;
-$gray-lighter:                          $default-pianissimo !default;
+$gray-light:                            $default-light !default;
+$gray-lighter:                          $default-lighter !default;
 
 $brand-primary:                         $primary-base !default;
 $brand-success:                         $success-base !default;
@@ -139,7 +139,7 @@ $input-color:                           $black-alpha-38 !default;
 
 // Basics of a navbar
 $navbar-default-color:                  $btn-primary-color !default;
-$navbar-default-bg:                     $primary-forte !default;
+$navbar-default-bg:                     $primary-dark !default;
 $navbar-default-border:                 $black-alpha-12 !default;
 
 // Navbar links

@@ -3,38 +3,38 @@
 /* Colour variables go here */
 
 /* Default (grays) */
-$default-pianissimo: hsl(0, 0%, 93%) !default;     // #EEEEEE
-$default-piano:      hsl(0, 0%, 88%) !default;     // #E0E0E0
+$default-lighter:    hsl(0, 0%, 93%) !default;     // #EEEEEE
+$default-light:      hsl(0, 0%, 88%) !default;     // #E0E0E0
 $default-base:       hsl(0, 0%, 62%) !default;     // #9E9E9E
-$default-forte:      hsl(0, 0%, 38%) !default;     // #616161
-$default-fortissimo: hsl(0, 0%, 26%) !default;     // #424242
+$default-dark:       hsl(0, 0%, 38%) !default;     // #616161
+$default-darker:     hsl(0, 0%, 26%) !default;     // #424242
 
 /* Primary */
-$primary-pianissimo: hsl(190, 97%, 50%) !default;  // #05D4FB
-$primary-piano:      hsl(190, 100%, 49%) !default; // #00D4FC
+$primary-lighter:    hsl(190, 51%, 67%) !default;  // #80C8D6
+$primary-light:      hsl(190, 51%, 54%) !default;  // #4DB1C6
 $primary-base:       hsl(190, 100%, 34%) !default; // #0090AD
-$primary-forte:      hsl(189, 100%, 26%) !default; // #007186
-$primary-fortissimo: hsl(189, 100%, 20%) !default; // #005868
+$primary-dark:       hsl(193, 100%, 29%) !default; // #007393
+$primary-darker:     hsl(196, 100%, 26%) !default; // #006183
 
 /* Success */
-$success-piano:      hsl(133, 100%, 50%) !default; // #00FD38
-$success-base:       hsl(133, 100%, 40%) !default; // #00CB2D
-$success-forte:      hsl(133, 100%, 32%) !default; // #00A524
+$success-light:      hsl(133, 48%, 66%) !default;  // #80D292
+$success-base:       hsl(133, 65%, 43%) !default;  // #26B345
+$success-dark:       hsl(131, 100%, 29%) !default; // #00931B
 
 /* Info */
-$info-piano:         hsl(226, 100%, 50%) !default; // #003BFD
-$info-base:          hsl(226, 100%, 36%) !default; // #002BBA
-$info-forte:         hsl(226, 100%, 29%) !default; // #002293
+$info-light:         hsl(226, 58%, 68%) !default;  // #8095DD
+$info-base:          hsl(226, 68%, 46%) !default;  // #264BC4
+$info-dark:          hsl(229, 100%, 34%) !default; // #0020AB
 
 /* Warning */
-$warning-piano:      hsl(41, 100%, 50%) !default;  // #FFB000
-$warning-base:       hsl(41, 100%, 43%) !default;  // #DA9600
-$warning-forte:      hsl(41, 100%, 33%) !default;  // #A97400
+$warning-light:      hsl(42, 100%, 75%) !default;  // #FFD880
+$warning-base:       hsl(41, 100%, 57%) !default;  // #FFBC26
+$warning-dark:       hsl(38, 100%, 50%) !default;  // #FFA000
 
 /* Danger */
-$danger-piano:       hsl(6, 100%, 50%) !default;   // #FF1800
-$danger-base:        hsl(6, 100%, 43%) !default;   // #DA1500
-$danger-forte:       hsl(6, 100%, 33%) !default;   // #A91000
+$danger-light:       hsl(6, 100%, 75%) !default;   // #FF8C80
+$danger-base:        hsl(6, 100%, 57%) !default;   // #FF3B26
+$danger-dark:        hsl(4, 100%, 50%) !default;   // #FF1100
 
 /* Black & white */
 $black:              hsl(0, 0, 0) !default;        // #000000
