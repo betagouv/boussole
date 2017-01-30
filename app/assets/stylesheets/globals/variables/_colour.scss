@@ -2,50 +2,55 @@
 
 /* Colour variables go here */
 
-/* Default (grays) */
-$default-lighter:    hsl(0, 0%, 93%) !default;     // #EEEEEE
-$default-light:      hsl(0, 0%, 88%) !default;     // #E0E0E0
-$default-base:       hsl(0, 0%, 62%) !default;     // #9E9E9E
-$default-dark:       hsl(0, 0%, 38%) !default;     // #616161
-$default-darker:     hsl(0, 0%, 26%) !default;     // #424242
+/* Shades of gray */
+$shade-of-gray-lighter: hsl(0, 0%, 93%) !default;     // #EEEEEE
+$shade-of-gray-light:   hsl(0, 0%, 88%) !default;     // #E0E0E0
+$shade-of-gray-base:    hsl(0, 0%, 62%) !default;     // #9E9E9E
+$shade-of-gray-dark:    hsl(0, 0%, 38%) !default;     // #616161
+$shade-of-gray-darker:  hsl(0, 0%, 26%) !default;     // #424242
+
+/* Default */
+$default-lighter:       hsl(190, 51%, 67%) !default;  // #80C8D6
+$default-light:         hsl(190, 51%, 54%) !default;  // #4DB1C6
+$default-base:          hsl(190, 100%, 34%) !default; // #0090AD
+$default-dark:          hsl(193, 100%, 29%) !default; // #007393
+$default-darker:        hsl(196, 100%, 26%) !default; // #006183
 
 /* Primary */
-$primary-lighter:    hsl(190, 51%, 67%) !default;  // #80C8D6
-$primary-light:      hsl(190, 51%, 54%) !default;  // #4DB1C6
-$primary-base:       hsl(190, 100%, 34%) !default; // #0090AD
-$primary-dark:       hsl(193, 100%, 29%) !default; // #007393
-$primary-darker:     hsl(196, 100%, 26%) !default; // #006183
+$primary-light:          hsl(29, 100%, 75%) !default;  // #FFBE80
+$primary-base:           hsl(29, 100%, 57%) !default;  // #FF9026
+$primary-dark:           hsl(25, 100%, 50%) !default;  // #FF6900
 
 /* Success */
-$success-light:      hsl(133, 48%, 66%) !default;  // #80D292
-$success-base:       hsl(133, 65%, 43%) !default;  // #26B345
-$success-dark:       hsl(131, 100%, 29%) !default; // #00931B
+$success-light:         hsl(133, 48%, 66%) !default;  // #80D292
+$success-base:          hsl(133, 65%, 43%) !default;  // #26B345
+$success-dark:          hsl(131, 100%, 29%) !default; // #00931B
 
 /* Info */
-$info-light:         hsl(226, 58%, 68%) !default;  // #8095DD
-$info-base:          hsl(226, 68%, 46%) !default;  // #264BC4
-$info-dark:          hsl(229, 100%, 34%) !default; // #0020AB
+$info-light:            hsl(226, 58%, 68%) !default;  // #8095DD
+$info-base:             hsl(226, 68%, 46%) !default;  // #264BC4
+$info-dark:             hsl(229, 100%, 34%) !default; // #0020AB
 
 /* Warning */
-$warning-light:      hsl(42, 100%, 75%) !default;  // #FFD880
-$warning-base:       hsl(41, 100%, 57%) !default;  // #FFBC26
-$warning-dark:       hsl(38, 100%, 50%) !default;  // #FFA000
+$warning-light:         hsl(42, 100%, 75%) !default;  // #FFD880
+$warning-base:          hsl(41, 100%, 57%) !default;  // #FFBC26
+$warning-dark:          hsl(38, 100%, 50%) !default;  // #FFA000
 
 /* Danger */
-$danger-light:       hsl(6, 100%, 75%) !default;   // #FF8C80
-$danger-base:        hsl(6, 100%, 57%) !default;   // #FF3B26
-$danger-dark:        hsl(4, 100%, 50%) !default;   // #FF1100
+$danger-light:          hsl(6, 100%, 75%) !default;   // #FF8C80
+$danger-base:           hsl(6, 100%, 57%) !default;   // #FF3B26
+$danger-dark:           hsl(4, 100%, 50%) !default;   // #FF1100
 
 /* Black & white */
-$black:              hsl(0, 0, 0) !default;        // #000000
-$black-alpha-87:     rgba($black, .87) !default;   // #000000DE
-$black-alpha-54:     rgba($black, .54) !default;   // #0000008A
-$black-alpha-38:     rgba($black, .38) !default;   // #00000061
-$black-alpha-26:     rgba($black, .26) !default;   // #00000042
-$black-alpha-12:     rgba($black, .12) !default;   // #0000001F
+$black:                 hsl(0, 0, 0) !default;        // #000000
+$black-alpha-87:        rgba($black, .87) !default;   // #000000DE
+$black-alpha-54:        rgba($black, .54) !default;   // #0000008A
+$black-alpha-38:        rgba($black, .38) !default;   // #00000061
+$black-alpha-26:        rgba($black, .26) !default;   // #00000042
+$black-alpha-12:        rgba($black, .12) !default;   // #0000001F
 
-$white:              hsl(0, 100%, 100%) !default;  // #FFFFFF
-$white-alpha-70:     rgba($white, .70) !default;   // #FFFFFFB2
-$white-alpha-50:     rgba($white, .50) !default;   // #FFFFFF80
-$white-alpha-30:     rgba($white, .30) !default;   // #FFFFFF4D
-$white-alpha-12:     rgba($white, .12) !default;   // #FFFFFF1F
+$white:                 hsl(0, 100%, 100%) !default;  // #FFFFFF
+$white-alpha-70:        rgba($white, .70) !default;   // #FFFFFFB2
+$white-alpha-50:        rgba($white, .50) !default;   // #FFFFFF80
+$white-alpha-30:        rgba($white, .30) !default;   // #FFFFFF4D
+$white-alpha-12:        rgba($white, .12) !default;   // #FFFFFF1F

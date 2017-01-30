@@ -13,7 +13,7 @@
   @extend .hidden-xs;
   @extend .hidden-sm;
   @include shadow();
-  background-color: $primary-light;
+  background-color: $brand-default-light;
   font-weight: bold;
   padding: .5em;
   position: absolute;

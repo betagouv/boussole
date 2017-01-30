@@ -5,32 +5,38 @@
   Styleguide 3.1.
  */
 
-%is-disabled {
-  @extend .disabled;
-  background-color: $black-alpha-12;
-  box-shadow: none;
-  color: $black-alpha-26;
+%is-enabled {
+  @include shadow();
 
   &:hover,
   &:active,
   &:focus {
-    background-color: $black-alpha-12;
+    @include shadow2();
+  }
+}
+
+%is-disabled {
+  @extend .disabled;
+  background-color: $btn-disabled-bg;
+  box-shadow: none;
+  color: $btn-disabled-color;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $btn-disabled-bg;
     box-shadow: none;
   }
 
   &:focus {
-    color: $black-alpha-12;
+    color: $btn-disabled-bg;
   }
 }
 
 %button {
   @extend .btn;
-  @include shadow();
+  @extend %is-enabled;
   font-size: $font-size-h5;
-
-  &:hover {
-    @include shadow2();
-  }
 
   &.is-disabled,
   &:disabled,

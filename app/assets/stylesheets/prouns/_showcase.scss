@@ -7,7 +7,7 @@
 
 .showcase {
   @include shadow();
-  background-color: $primary-darker;
+  background-color: $brand-default-darker;
   color: $btn-primary-color;
   display: inline-block;
   margin-bottom: 1em;

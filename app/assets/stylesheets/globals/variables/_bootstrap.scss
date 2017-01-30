@@ -6,17 +6,37 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:                           $default-darker !default;
-$gray-dark:                             $default-dark !default;
-$gray:                                  $default-base !default;
-$gray-light:                            $default-light !default;
-$gray-lighter:                          $default-lighter !default;
+$gray-darker:                           $shade-of-gray-darker !default;
+$gray-dark:                             $shade-of-gray-dark !default;
+$gray:                                  $shade-of-gray-base !default;
+$gray-light:                            $shade-of-gray-light !default;
+$gray-lighter:                          $shade-of-gray-lighter !default;
 
+$brand-default-darker:                  $default-darker !default;
+$brand-default-dark:                    $default-dark !default;
+$brand-default:                         $default-base !default;
+$brand-default-light:                   $default-light !default;
+$brand-default-lighter:                 $default-lighter !default;
+
+$brand-primary-dark:                    $primary-dark !default;
 $brand-primary:                         $primary-base !default;
+$brand-primary-light:                   $primary-light !default;
+
+$brand-success-dark:                    $success-dark !default;
 $brand-success:                         $success-base !default;
+$brand-success-light:                   $success-light !default;
+
+$brand-info-dark:                       $info-dark !default;
 $brand-info:                            $info-base !default;
+$brand-info-light:                      $info-light !default;
+
+$brand-warning-dark:                    $warning-dark !default;
 $brand-warning:                         $warning-base !default;
+$brand-warning-light:                   $warning-light !default;
+
+$brand-danger-dark:                     $danger-dark !default;
 $brand-danger:                          $danger-base !default;
+$brand-danger-light:                    $danger-light !default;
 
 //== Scaffolding
 //
@@ -28,9 +48,9 @@ $body-bg:                               $white !default;
 $text-color:                            $black-alpha-87 !default;
 
 //** Global textual link color.
-$link-color:                            $brand-primary !default;
+$link-color:                            $brand-default !default;
 //** Link hover color set via `darken()` function.
-$link-hover-color:                      darken($link-color, 15%) !default;
+$link-hover-color:                      $brand-default-dark !default;
 //** Link hover decoration.
 $link-hover-decoration:                 underline !default;
 
@@ -100,11 +120,11 @@ $table-bg-hover:                        $gray-lighter !default;
 
 $btn-font-weight:                       normal !default;
 
-$btn-default-color:                     $black-alpha-87 !default;
-$btn-default-bg:                        $gray-light !default;
-$btn-default-border:                    $white-alpha-12 !default;
+$btn-default-color:                     $white !default;
+$btn-default-bg:                        $brand-default !default;
+$btn-default-border:                    $black-alpha-12 !default;
 
-$btn-primary-color:                     $white !default;
+$btn-primary-color:                     $btn-default-color !default;
 $btn-primary-bg:                        $brand-primary !default;
 $btn-primary-border:                    $btn-default-border !default;
 
@@ -124,6 +144,10 @@ $btn-danger-color:                      $btn-primary-color !default;
 $btn-danger-bg:                         $brand-danger !default;
 $btn-danger-border:                     $btn-default-border !default;
 
+$btn-disabled-color:                    $black-alpha-26 !default;
+$btn-disabled-bg:                       $btn-default-border !default;
+$btn-disabled-border:                   $btn-default-border !default;
+
 $btn-link-disabled-color:               $black-alpha-38 !default;
 
 //== Forms
@@ -139,8 +163,8 @@ $input-color:                           $black-alpha-38 !default;
 
 // Basics of a navbar
 $navbar-default-color:                  $btn-primary-color !default;
-$navbar-default-bg:                     $primary-dark !default;
-$navbar-default-border:                 $black-alpha-12 !default;
+$navbar-default-bg:                     $brand-default-dark !default;
+$navbar-default-border:                 $btn-default-border !default;
 
 // Navbar links
 $navbar-default-link-color:             $navbar-default-color !default;
