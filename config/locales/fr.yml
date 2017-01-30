@@ -99,7 +99,7 @@ fr:
 
   layouts:
     application:
-      title: Boussole de droits
+      title: Boussole
       description: Trouve le bon contact pour t'aider dans tes projets de formation, de logement, d'emploi et de santé
 
   blocks:

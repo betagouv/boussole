@@ -8,26 +8,45 @@
 [role="navigation"] {
   @extend .navbar;
   @extend .navbar-default;
+  border: 0;
+  font-size: $font-size-h5;
+  height: calc(#{$font-size-h1} - 1px);
+  line-height: $font-size-h1;
+  min-height: calc(#{$font-size-h1} - 1px);
 }
 
 .navigation-header {
   @extend .navbar-header;
+  min-height: $font-size-h1;
 
   a {
     @extend .navbar-brand;
-    font-size: $font-size-h5;
+    background-image: image-url("marianne.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: $font-size-h1;
+    height: 100%;
+    padding: 0 .3em 0 2em;
   }
 }
 
 .navigation-body {
   @extend .collapse;
   @extend .navbar-collapse;
+  min-height: $font-size-h1;
 }
 
 .navigation-links {
+  min-height: $font-size-h1;
+
   ul {
     @extend .nav;
     @extend .navbar-nav;
+
+    li > a {
+      line-height: $font-size-h1;
+      padding: 0 .25em;
+    }
   }
 }
 
@@ -35,6 +54,10 @@
   button {
     @extend .navbar-brand;
     @extend .navbar-toggle;
+    font-size: $font-size-h1;
+    height: $font-size-h5;
+    line-height: $font-size-h1;
     margin: 0;
+    padding: 0 .25em;
   }
 }

@@ -178,12 +178,12 @@ $navbar-default-link-disabled-bg:       $white-alpha-12 !default;
 // Navbar brand label
 $navbar-default-brand-color:            $navbar-default-link-color !default;
 $navbar-default-brand-hover-color:      $navbar-default-link-color !default;
-$navbar-default-brand-hover-bg:         $navbar-default-link-hover-bg !default;
+$navbar-default-brand-hover-bg:         $navbar-default-bg !default;
 
 // Navbar toggle
 $navbar-default-toggle-hover-bg:        $navbar-default-link-hover-bg !default;
 $navbar-default-toggle-icon-bar-bg:     $navbar-default-color !default;
-$navbar-default-toggle-border-color:    $navbar-default-border !default;
+$navbar-default-toggle-border-color:    transparent !default;
 
 //== Form states and alerts
 //

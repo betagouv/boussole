@@ -2,9 +2,9 @@
 
 .wizard-form-actions
   = link_to(previous_wizard_path, class: 'button-default', role: 'link') do
-    %i.fa.fa-arrow-circle-left{ aria: { hidden: true } }
+    %i.icon-back{ aria: { hidden: true } }
     Corriger
 
-  = button_tag(type: 'submit', name: 'commit', class: 'button-primary', role: 'button') do
+  = button_tag(type: 'submit', name: 'commit', class: 'button-default', role: 'button') do
     Continuer
-    %i.fa.fa-arrow-circle-right{ aria: { hidden: true } }
+    %i.icon-next{ aria: { hidden: true } }
