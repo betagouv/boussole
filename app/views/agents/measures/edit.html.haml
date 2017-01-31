@@ -15,7 +15,7 @@
         = f.input(:url)
         = f.association(:social_rights)
 
-        = f.button(:submit, t('.update'), class: 'button-warning')
-        = link_to(t('.show'), agents_measure_path(@measure), class: 'button-info')
-        = link_to(t('.back'), agents_measures_path, class: 'button-default')
+        = f.button(:submit, t('.update'), class: 'button-warning', role: 'button')
+        = link_to(t('.show'), agents_measure_path(@measure), class: 'button-info', role: 'link')
+        = link_to(t('.back'), agents_measures_path, class: 'button-default', role: 'link')
 

@@ -46,32 +46,35 @@
   }
 }
 
-.button-default {
-  @extend %button;
-  @extend .btn-default;
-}
+[role="button"],
+[role="link"] {
+  &.button-default {
+    @extend %button;
+    @extend .btn-default;
+  }
 
-.button-primary {
-  @extend %button;
-  @extend .btn-primary;
-}
+  &.button-primary {
+    @extend %button;
+    @extend .btn-primary;
+  }
 
-.button-success {
-  @extend %button;
-  @extend .btn-success;
-}
+  &.button-success {
+    @extend %button;
+    @extend .btn-success;
+  }
 
-.button-info {
-  @extend %button;
-  @extend .btn-info;
-}
+  &.button-info {
+    @extend %button;
+    @extend .btn-info;
+  }
 
-.button-warning {
-  @extend %button;
-  @extend .btn-warning;
-}
+  &.button-warning {
+    @extend %button;
+    @extend .btn-warning;
+  }
 
-.button-danger {
-  @extend %button;
-  @extend .btn-danger;
+  &.button-danger {
+    @extend %button;
+    @extend .btn-danger;
+  }
 }
