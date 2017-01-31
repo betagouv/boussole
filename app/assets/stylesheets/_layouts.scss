@@ -2,13 +2,22 @@
 
 /* Site layout styles go here */
 
-header {
+[role="header"] {
   font-size: 1rem;
 }
 
-main {
+[role="main"] {
   @extend .row;
   font-size: 1rem;
+
+  section {
+    margin-bottom: 2em;
+  }
+
+  article {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
 }
 
 .l-messages {
@@ -48,7 +57,7 @@ main {
   @extend .col-md-4;
 }
 
-footer {
+[role="footer"] {
   font-size: .75rem;
   min-height: 2rem;
 }

@@ -2,10 +2,10 @@
 
 .result {
   @extend .col-md-4;
-  margin-top: 1.5em;
+  margin-top: 1em;
 
   [role="link"] {
-    color: $text-color;
+    color: $text-color-dark-primary;
     text-decoration: none;
   }
 }

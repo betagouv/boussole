@@ -12,13 +12,13 @@
 .beta-logo {
   @extend .hidden-xs;
   @extend .hidden-sm;
+  @extend .text-center;
   @include shadow();
   background-color: $brand-default-light;
   font-weight: bold;
   padding: .5em;
   position: absolute;
   right: -3em;
-  text-align: center;
   text-transform: uppercase;
   top: 1em;
   transform: rotate(45deg);
@@ -29,7 +29,7 @@
     @include shadow2();
   }
 
-  a {
+  [role="link"] {
     @include uniform-anchor {
       color: $btn-primary-color;
       text-decoration: none;

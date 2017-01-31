@@ -47,6 +47,20 @@ $body-bg:                               $white !default;
 //** Global text color on `<body>`.
 $text-color:                            $black-alpha-87 !default;
 
+$text-color-dark-primary:               $text-color !default;
+$text-color-dark-secondary:             $black-alpha-54 !default;
+$text-color-dark-disabled:              $black-alpha-38 !default;
+$text-color-dark-hint:                  $black-alpha-38 !default;
+$text-color-dark-icon:                  $black-alpha-38 !default;
+$text-color-dark-divider:               $black-alpha-12 !default;
+
+$text-color-light-primary:              $white !default;
+$text-color-light-secondary:            $white-alpha-70 !default;
+$text-color-light-disabled:             $white-alpha-50 !default;
+$text-color-light-hint:                 $white-alpha-50 !default;
+$text-color-light-icon:                 $white-alpha-50 !default;
+$text-color-light-divider:              $black-alpha-12 !default;
+
 //** Global textual link color.
 $link-color:                            $brand-default !default;
 //** Link hover color set via `darken()` function.
@@ -155,7 +169,7 @@ $btn-link-disabled-color:               $black-alpha-38 !default;
 //##
 
 //** Text color for `<input>`s
-$input-color:                           $black-alpha-38 !default;
+$input-color:                           $text-color-dark-hint !default;
 
 //== Navbar
 //

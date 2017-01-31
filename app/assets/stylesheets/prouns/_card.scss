@@ -9,12 +9,41 @@
   @include shadow();
   background-color: $body-bg;
   display: inline-block;
+  min-height: 12.5em;
   padding: 1em 1em 2em;
   position: relative;
   width: 100%;
+
+  [role="link"] {
+    font-size: $font-size-h3 / 2;
+    font-weight: $headings-font-weight * 2;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.card-badge {
+  @extend .text-center;
+  background-color: $brand-default-lighter;
+  border-color: $btn-default-border;
+  border-radius: 1.25em;
+  border-style: solid;
+  border-width: .1em;
+  color: $text-color-dark-secondary;
+  height: 2.5em;
+  left: 1em;
+  line-height: 2.5;
+  position: absolute;
+  top: 1em;
+  width: 2.5em;
 }
 
 .card-header {
+  @extend .text-center;
   font-size: $font-size-h4;
   padding: 0 1em;
 }

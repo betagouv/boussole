@@ -4,7 +4,7 @@
 
 .l-container-wide
   .l-content
-    %section.text-center
+    %section
       %h1
         - if feature?(:training)
           = t('views.landing.uvp_html', scenario: 'trouver une formation')
@@ -31,38 +31,33 @@
       - if feature?(:healthcaring)
         = link_to(t('views.landing.cta'), healthcarings_path, method: :post, class: 'button-primary', role: 'link')
 
-    - if feature?(:how_does_it_work)
-      %br
+    %section
+      %h1.divider
+        Comment ça marche ?
 
-      %section
-        %h1.divider
-          Comment ça marche ?
-
-        .result
+      .box-row
+        .box
           .card
-            / .card-badge 1
+            .card-badge 1
             .card-image= image_tag('person_pin.svg')
-            .card-body.text-center
+            %h2.card-header
               En
-              %b 5 min
+              = link_to('5 min', root_path, class: 'link-primary', role: 'link')
               trouve le bon contact
 
-        .result
+        .box
           .card
-            / .card-badge 2
+            .card-badge 2
             .card-image= image_tag('notifications_active.svg')
-            .card-body.text-center
+            %h2.card-header
               En
-              %b 7 jours
+              = link_to('7 jours', root_path, class: 'link-primary', role: 'link')
               tu seras contacté·e
 
-        .result
+        .box
           .card
-            / .card-badge 3
+            .card-badge 3
             .card-image= image_tag('sentiment_very_satisfied.svg')
-            .card-body.text-center
-              %b
-                %a{ href: 'https://www.facebook.com/boussole.beta', style: 'color: #e0691a;' }
-                  Dis-nous
+            %h2.card-header
+              = link_to('Dis-nous', 'https://www.facebook.com/boussole.beta', role: 'link')
               comment ça s’est passé
-

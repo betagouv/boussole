@@ -1,19 +1,6 @@
 @charset "UTF-8";
 
 /* Stuff you're testing */
-
-/* Feature: How does it work? */
-.card-badge {
-  @extend .text-center;
-  background-color: $brand-info;
-  border-radius: 1em;
-  display: block;
-  height: 2em;
-  line-height: 2;
-  margin: -2em 0 0 -2em;
-  width: 2em;
-}
-
 .card-image {
   margin-bottom: 1em;
 
@@ -25,10 +12,4 @@
 
 .l-content.l-with-sidebar {
   @include shadow();
-}
-
-/* Testing papers */
-article {
-  padding-left: 2em;
-  padding-right: 2em;
 }

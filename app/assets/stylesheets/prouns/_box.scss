@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.box-row {
+  @extend .row;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.box {
+  @extend .col-md-4;
+  margin-bottom: 2em;
+}

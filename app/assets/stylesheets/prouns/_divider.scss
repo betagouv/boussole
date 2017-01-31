@@ -16,6 +16,7 @@
 .divider {
   font-size: $font-size-h5;
   font-weight: $headings-font-weight * 2;
+  margin-bottom: 2em;
   text-transform: uppercase;
 
   @media (min-width: $screen-sm-min) {
@@ -23,10 +24,7 @@
     white-space: nowrap;
   }
 
-  &::before {
-    @extend %divider;
-  }
-
+  &::before,
   &::after {
     @extend %divider;
   }
