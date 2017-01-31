@@ -19,7 +19,7 @@
 /* font awesome @font-face mixin */
 @mixin font-awesome-font-face() {
   @font-face {
-    font-family: font-"FontAwesome";
+    font-family: "FontAwesome";
     src: font-url('#{$fa-font-path}/fontawesome-webfont.eot?v=#{$fa-version}');
     src: font-url('#{$fa-font-path}/fontawesome-webfont.eot?#iefix&v=#{$fa-version}') format("embedded-opentype"),
          font-url('#{$fa-font-path}/fontawesome-webfont.woff2?v=#{$fa-version}') format("woff2"),
