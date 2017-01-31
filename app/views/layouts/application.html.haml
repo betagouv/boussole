@@ -11,14 +11,15 @@
     %meta{ name: 'sentry-dsn', content: ENV['SENTRY_PUBLIC_DSN'] }
     %base{ href: root_path }
     = yield(:twitter_card)
+    = render(partial: 'blocks/favicon')
     = stylesheet_link_tag :application, media: :all
     = csrf_meta_tags
   %body
     %header{ role: 'banner' }
-      = render 'layouts/header'
+      = render(partial: 'layouts/header')
     %main{ role: 'main' }
-      = render 'blocks/messages'
+      = render(partial: 'blocks/messages')
       = yield
     %footer{ role: 'contentinfo' }
-      = render 'layouts/footer'
+      = render(partial: 'layouts/footer')
     = javascript_include_tag :application, integrity: true
