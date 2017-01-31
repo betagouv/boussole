@@ -37,6 +37,7 @@
   @extend .btn;
   @extend %is-enabled;
   font-size: $font-size-h5;
+  padding: .5em;
 
   &.is-disabled,
   &:disabled,
