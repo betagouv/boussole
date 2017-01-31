@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
-.callout {
+.cta {
   @extend .text-center;
   margin-top: 3em;
 
-  a {
+  [role="link"] {
     font-size: $font-size-h3;
+    padding: .5em 0;
+    width: calc(30em - 400px);
   }
 }

@@ -8,11 +8,10 @@
 [role="navigation"] {
   @extend .navbar;
   @extend .navbar-default;
-  border: 0;
+  @include shadow();
   font-size: $font-size-h5;
-  height: calc(#{$font-size-h1} - 1px);
   line-height: $font-size-h1;
-  min-height: calc(#{$font-size-h1} - 1px);
+  min-height: $font-size-h1;
 }
 
 .navigation-header {

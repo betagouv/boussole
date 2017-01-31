@@ -5,34 +5,31 @@
 .l-container-wide
   .l-content
     %section.text-center
-      %h1= t('layouts.application.title')
-
-      %h2
+      %h1
         - if feature?(:training)
-          = t('views.landing.description', scenario: 'trouver une formation')
-          trouver une formation
+          = t('views.landing.uvp_html', scenario: 'trouver une formation')
 
         - if feature?(:housing)
-          = t('views.landing.description', scenario: 'trouver un logement')
+          = t('views.landing.uvp_html', scenario: 'trouver un logement')
 
         - if feature?(:working)
-          = t('views.landing.description', scenario: 'trouver un emploi')
+          = t('views.landing.uvp_html', scenario: 'trouver un emploi')
 
         - if feature?(:healthcaring)
-          = t('views.landing.description', scenario: 'prendre soin de ta santé')
+          = t('views.landing.uvp_html', scenario: 'prendre soin de ta santé')
 
-    %section.callout
+    %section.cta
       - if feature?(:working)
-        = link_to(t('views.landing.callout'), workings_path, method: :post, class: 'button-primary')
+        = link_to(t('views.landing.cta'), workings_path, method: :post, class: 'button-primary', role: 'link')
 
       - if feature?(:training)
-        = link_to(t('views.landing.callout'), trainings_path, method: :post, class: 'button-primary')
+        = link_to(t('views.landing.cta'), trainings_path, method: :post, class: 'button-primary', role: 'link')
 
       - if feature?(:housing)
-        = link_to(t('views.landing.callout'), housings_path, method: :post, class: 'button-primary')
+        = link_to(t('views.landing.cta'), housings_path, method: :post, class: 'button-primary', role: 'link')
 
       - if feature?(:healthcaring)
-        = link_to(t('views.landing.callout'), healthcarings_path, method: :post, class: 'button-primary')
+        = link_to(t('views.landing.cta'), healthcarings_path, method: :post, class: 'button-primary', role: 'link')
 
     - if feature?(:how_does_it_work)
       %br

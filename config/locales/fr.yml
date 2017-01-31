@@ -116,24 +116,27 @@ fr:
 
   views:
     landing:
-      description: "Des professionnel·le·s pour t'aider à %{scenario}"
-      callout: Trouve le bon contact
+      uvp: "Rencontre un·e professionnel·le pour t'aider à %{scenario}"
+      uvp_html: "Rencontre un·e professionnel·le<br>pour t'aider à %{scenario}"
+      cta: Prends un RDV
 
     results:
       header: 'Je suis %{status} et je cherche un %{project}'
       result_list:
         header: Des professionnel·le·s peuvent t'aider à
         result_card:
-          footer: Découvre comment !
+          footer: Découvres-en plus !
       no_result:
         description: La machine n'as pas pu trouver des résultats et nous travaillons dans ce moment pour l'améliorer.
         contact: Mais nous sommes à ta disposition pour t'aider à trouver le bon contact !
 
     result:
       contact:
-        header: Être contacté·e
-        description: Souhaites-tu que cette ou ce professionnel·le te contacte suite à ta recherche ?
-        send: Être contacté·e
+        description: Intéressé·e ? Laisse tes coordonnés pour être recontacté·e d'ici %{response_time}
+        description_html: |
+          Intéressé·e ? Laisse tes coordonnés pour être recontacté·e d'ici
+          <strong>%{response_time}</strong>
+
       profile_details:
         header: Coordonnées de l'acteur
 
