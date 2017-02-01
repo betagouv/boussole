@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+/* Media related base styles go here */
+
+img {
+  @extend .img-responsive;
+  margin: 0 auto;
+}

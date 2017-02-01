@@ -99,10 +99,14 @@ fr:
 
   layouts:
     application:
-      title: Boussole de droits
+      title: Boussole
       description: Trouve le bon contact pour t'aider dans tes projets de formation, de logement, d'emploi et de santé
 
   blocks:
+    button_groups:
+      back: Précédent
+      next: Continuer
+      submit: Finir !
     navigation_links:
       public_services: Acteurs
       service_offerings: Offres de service
@@ -112,24 +116,29 @@ fr:
 
   views:
     landing:
-      description: "Des professionnel·le·s pour t'aider à %{scenario}"
-      callout: Trouve le bon contact
+      uvp_html: "Rencontre un·e professionnel·le<br>pour t'aider à %{scenario}"
+      cta: Prends un RDV
+      how_it_works: Comment ça marche ?
+      step_1_html: En <a class='%{class}' href='%{href}' role='link'>5 min</a> trouve le bon contact
+      step_2_html: En moins de <a class='%{class}' href='%{href}' role='link'>7 jours</a> tu seras contacté·e
+      step_3_html: <a class='%{class}' href='%{href}' role='link'>Dis-nous</a> comment ça s’est passé
 
     results:
       header: 'Je suis %{status} et je cherche un %{project}'
       result_list:
         header: Des professionnel·le·s peuvent t'aider à
         result_card:
-          footer: Être contacté·e
+          footer: Découvres-en plus !
       no_result:
         description: La machine n'as pas pu trouver des résultats et nous travaillons dans ce moment pour l'améliorer.
         contact: Mais nous sommes à ta disposition pour t'aider à trouver le bon contact !
 
     result:
       contact:
-        header: Être contacté·e
-        description: Souhaites-tu que cette ou ce professionnel·le te contacte suite à ta recherche ?
-        send: Être contacté·e
+        description_html: |
+          Intéressé·e ? Laisse tes coordonnés pour être recontacté·e d'ici
+          <strong>%{response_time}</strong>
+
       profile_details:
         header: Coordonnées de l'acteur
 

@@ -1,5 +1,24 @@
 @charset "UTF-8";
 
+.wizard-form-actions {
+  @extend .text-center;
+  @include clearfix();
+  margin-top: 2em;
+
+  [role="link"],
+  [role="button"] {
+    width: 47.5%;
+  }
+
+  [role="link"] {
+    @extend .pull-left;
+  }
+
+  [role="button"] {
+    @extend .pull-right;
+  }
+}
+
 .wizard-form-header {
   font-size: $font-size-h4;
 }

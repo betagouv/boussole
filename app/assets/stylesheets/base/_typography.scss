@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+/* Typography related base styles go here */
+
+/* Responsive font-size */
+html {
+  font-size: $font-size-base-xs;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: $font-size-base-sm;
+  }
+
+  @media (min-width: $screen-md-min) {
+    font-size: $font-size-base-md;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    font-size: $font-size-base-lg;
+  }
+}
+
+h1 {
+  @extend .text-center;
+}
+
+hr {
+  background: image-url("divider.png") 50% 0 no-repeat;
+  border: 0;
+  height: 1em;
+  margin: 1em 0;
+}
+
+@include font-awesome-font-face();

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/* Icons */
+
+%icon {
+  @extend .fa;
+  color: $text-color-light-icon;
+}
+
+.icon-home {
+  @extend %icon;
+  @extend .fa-compass;
+}
+
+.icon-back {
+  @extend %icon;
+  @extend .fa-arrow-circle-left;
+}
+
+.icon-next {
+  @extend %icon;
+  @extend .fa-arrow-circle-right;
+}

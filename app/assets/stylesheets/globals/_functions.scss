@@ -1,7 +1,8 @@
-/* Global functions go here */
 @charset "UTF-8";
 
-// Converts pixels to ems
+/* Global functions go here */
+
+/* Converts pixels to ems */
 @function em($pixels, $font-size) {
   @return ($pixels / $font-size) * 1em;
 }

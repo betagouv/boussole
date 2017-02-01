@@ -1,21 +1,42 @@
-/* Theme variables go here. Hey, hi Bootstrap! */
 @charset "UTF-8";
+
+/* Theme variables go here. Hey, hi Bootstrap! */
 
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:                           $raisin-black;
-$gray-dark:                             $jet;
-$gray:                                  $davy-s-gray;
-$gray-light:                            $stormcloud;
-$gray-lighter:                          $isabelline;
+$gray-darker:                           $shade-of-gray-darker !default;
+$gray-dark:                             $shade-of-gray-dark !default;
+$gray:                                  $shade-of-gray-base !default;
+$gray-light:                            $shade-of-gray-light !default;
+$gray-lighter:                          $shade-of-gray-lighter !default;
 
-$brand-primary:                         $chocolate-web;
-$brand-success:                         $bud-green;
-$brand-info:                            $blue-jeans;
-$brand-warning:                         $maximum-yellow-red;
-$brand-danger:                          $jelly-bean;
+$brand-default-darker:                  $default-darker !default;
+$brand-default-dark:                    $default-dark !default;
+$brand-default:                         $default-base !default;
+$brand-default-light:                   $default-light !default;
+$brand-default-lighter:                 $default-lighter !default;
+
+$brand-primary-dark:                    $primary-dark !default;
+$brand-primary:                         $primary-base !default;
+$brand-primary-light:                   $primary-light !default;
+
+$brand-success-dark:                    $success-dark !default;
+$brand-success:                         $success-base !default;
+$brand-success-light:                   $success-light !default;
+
+$brand-info-dark:                       $info-dark !default;
+$brand-info:                            $info-base !default;
+$brand-info-light:                      $info-light !default;
+
+$brand-warning-dark:                    $warning-dark !default;
+$brand-warning:                         $warning-base !default;
+$brand-warning-light:                   $warning-light !default;
+
+$brand-danger-dark:                     $danger-dark !default;
+$brand-danger:                          $danger-base !default;
+$brand-danger-light:                    $danger-light !default;
 
 //== Scaffolding
 //
@@ -23,6 +44,29 @@ $brand-danger:                          $jelly-bean;
 
 //** Background color for `<body>`.
 $body-bg:                               $white !default;
+//** Global text color on `<body>`.
+$text-color:                            $black-alpha-87 !default;
+
+$text-color-dark-primary:               $text-color !default;
+$text-color-dark-secondary:             $black-alpha-54 !default;
+$text-color-dark-disabled:              $black-alpha-38 !default;
+$text-color-dark-hint:                  $black-alpha-38 !default;
+$text-color-dark-icon:                  $black-alpha-38 !default;
+$text-color-dark-divider:               $black-alpha-12 !default;
+
+$text-color-light-primary:              $white !default;
+$text-color-light-secondary:            $white-alpha-70 !default;
+$text-color-light-disabled:             $white-alpha-50 !default;
+$text-color-light-hint:                 $white-alpha-50 !default;
+$text-color-light-icon:                 $white-alpha-50 !default;
+$text-color-light-divider:              $black-alpha-12 !default;
+
+//** Global textual link color.
+$link-color:                            $brand-default !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:                      $brand-default-dark !default;
+//** Link hover decoration.
+$link-hover-decoration:                 underline !default;
 
 //== Typography
 //
@@ -33,16 +77,16 @@ $font-family-serif:                     Georgia, "Times New Roman", Times, serif
 $font-family-monospace:                 Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:                      $font-family-sans-serif !default;
 
-$font-size-base:                        $font-size-base-md;
+$font-size-base:                        $font-size-base-md !default;
 $font-size-large:                       ceil(($font-size-base * 1.25)) !default; // ~23px
 $font-size-small:                       ceil(($font-size-base * .85)) !default; // ~16px
 
-$font-size-h1:                          2.25em;
-$font-size-h2:                          1.75em;
-$font-size-h3:                          1.5em;
-$font-size-h4:                          1.25em;
-$font-size-h5:                          1em;
-$font-size-h6:                          .85em;
+$font-size-h1:                          2.25em !default;
+$font-size-h2:                          1.75em !default;
+$font-size-h3:                          1.5em !default;
+$font-size-h4:                          1.25em !default;
+$font-size-h5:                          1em !default;
+$font-size-h6:                          .85em !default;
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:                  inherit !default;
@@ -80,15 +124,9 @@ $table-cell-padding:                    8px !default;
 $table-condensed-cell-padding:          5px !default;
 
 //** Default background color used for all tables.
-$table-bg:                              transparent !default;
-//** Background color used for `.table-striped`.
-$table-bg-accent:                       lighten($gray-lighter, 6.5%) !default;
+$table-bg:                              $body-bg !default;
 //** Background color used for `.table-hover`.
 $table-bg-hover:                        $gray-lighter !default;
-$table-bg-active:                       $table-bg-hover !default;
-
-//** Border color for table and cell borders.
-$table-border-color:                    transparent !default;
 
 //== Buttons
 //
@@ -97,80 +135,86 @@ $table-border-color:                    transparent !default;
 $btn-font-weight:                       normal !default;
 
 $btn-default-color:                     $white !default;
-$btn-default-bg:                        $stormcloud !default;
-$btn-default-border:                    $white-alpha-0 !default;
+$btn-default-bg:                        $brand-default !default;
+$btn-default-border:                    $black-alpha-12 !default;
 
 $btn-primary-color:                     $btn-default-color !default;
 $btn-primary-bg:                        $brand-primary !default;
 $btn-primary-border:                    $btn-default-border !default;
 
-$btn-success-color:                     $btn-default-color !default;
+$btn-success-color:                     $btn-primary-color !default;
 $btn-success-bg:                        $brand-success !default;
 $btn-success-border:                    $btn-default-border !default;
 
-$btn-info-color:                        $btn-default-color !default;
+$btn-info-color:                        $btn-primary-color !default;
 $btn-info-bg:                           $brand-info !default;
 $btn-info-border:                       $btn-default-border !default;
 
-$btn-warning-color:                     $btn-default-color !default;
+$btn-warning-color:                     $btn-primary-color !default;
 $btn-warning-bg:                        $brand-warning !default;
 $btn-warning-border:                    $btn-default-border !default;
 
-$btn-danger-color:                      $btn-default-color !default;
+$btn-danger-color:                      $btn-primary-color !default;
 $btn-danger-bg:                         $brand-danger !default;
 $btn-danger-border:                     $btn-default-border !default;
 
-$btn-link-disabled-color:               $gray-light !default;
+$btn-disabled-color:                    $black-alpha-26 !default;
+$btn-disabled-bg:                       $btn-default-border !default;
+$btn-disabled-border:                   $btn-default-border !default;
+
+$btn-link-disabled-color:               $black-alpha-38 !default;
+
+//== Forms
+//
+//##
+
+//** Text color for `<input>`s
+$input-color:                           $text-color-dark-hint !default;
 
 //== Navbar
 //
 //##
 
 // Basics of a navbar
-$navbar-default-color:                  $isabelline !default;
-$navbar-default-bg:                     $stormcloud !default;
-$navbar-default-border:                 $white-alpha-0 !default;
+$navbar-default-color:                  $btn-primary-color !default;
+$navbar-default-bg:                     $brand-default-dark !default;
+$navbar-default-border:                 $btn-default-border !default;
 
 // Navbar links
 $navbar-default-link-color:             $navbar-default-color !default;
-$navbar-default-link-hover-color:       $navbar-default-link-color !default;
-$navbar-default-link-hover-bg:          darken($navbar-default-bg, 3%) !default;
-$navbar-default-link-active-color:      $navbar-default-link-color !default;
-$navbar-default-link-active-bg:         darken($navbar-default-bg, 6.5%) !default;
-$navbar-default-link-disabled-color:    $pastel-gray !default;
-$navbar-default-link-disabled-bg:       $navbar-default-border !default;
+$navbar-default-link-hover-color:       $navbar-default-color !default;
+$navbar-default-link-hover-bg:          darken($navbar-default-bg, 6.5) !default;
+$navbar-default-link-active-color:      $navbar-default-color !default;
+$navbar-default-link-active-bg:         darken($navbar-default-bg, 2.5) !default;
+$navbar-default-link-disabled-color:    $white-alpha-30 !default;
+$navbar-default-link-disabled-bg:       $white-alpha-12 !default;
 
 // Navbar brand label
 $navbar-default-brand-color:            $navbar-default-link-color !default;
 $navbar-default-brand-hover-color:      $navbar-default-link-color !default;
-$navbar-default-brand-hover-bg:         $navbar-default-border !default;
+$navbar-default-brand-hover-bg:         $navbar-default-bg !default;
 
 // Navbar toggle
 $navbar-default-toggle-hover-bg:        $navbar-default-link-hover-bg !default;
 $navbar-default-toggle-icon-bar-bg:     $navbar-default-color !default;
-$navbar-default-toggle-border-color:    $navbar-default-border !default;
+$navbar-default-toggle-border-color:    transparent !default;
 
-//=== Inverted navbar
-// Reset inverted navbar basics
-$navbar-inverse-color:                  $navbar-default-color !default;
-$navbar-inverse-bg:                     $brand-primary !default;
-$navbar-inverse-border:                 $navbar-default-border !default;
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
 
-// Inverted navbar links
-$navbar-inverse-link-color:             $navbar-default-color !default;
-$navbar-inverse-link-hover-color:       $navbar-inverse-link-color !default;
-$navbar-inverse-link-hover-bg:          darken($navbar-inverse-bg, 5%) !default;
-$navbar-inverse-link-active-color:      $navbar-inverse-link-color !default;
-$navbar-inverse-link-active-bg:         darken($navbar-inverse-bg, 5%) !default;
-$navbar-inverse-link-disabled-color:    $arsenic !default;
-$navbar-inverse-link-disabled-bg:       $navbar-default-border !default;
+$state-success-text:                    $brand-success !default;
+$state-success-bg:                      #dff0d8 !default;
+$state-success-border:                  $state-success-text !default;
 
-// Inverted navbar brand label
-$navbar-inverse-brand-color:            $navbar-inverse-link-color !default;
-$navbar-inverse-brand-hover-color:      $navbar-inverse-link-color !default;
-$navbar-inverse-brand-hover-bg:         $navbar-default-border !default;
+$state-info-text:                       $brand-info !default;
+$state-info-bg:                         #d9edf7 !default;
+$state-info-border:                     $state-info-text !default;
 
-// Inverted navbar toggle
-$navbar-default-toggle-hover-bg:        $navbar-inverse-link-hover-bg !default;
-$navbar-default-toggle-icon-bar-bg:     $navbar-default-color !default;
-$navbar-default-toggle-border-color:    $navbar-default-border !default;
+$state-warning-text:                    $brand-warning !default;
+$state-warning-bg:                      #fcf8e3 !default;
+$state-warning-border:                  $state-warning-text !default;
+
+$state-danger-text:                     $brand-danger !default;
+$state-danger-bg:                       #f2dede !default;
+$state-danger-border:                   $state-danger-text !default;

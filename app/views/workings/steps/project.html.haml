@@ -2,7 +2,7 @@
 
 .l-container-narrow
   .l-content
-    %section.wizard-form
+    %article.wizard-form
       %h1.wizard-form-header Ton projet
       %hr
 
@@ -35,4 +35,4 @@
                   value_method: :to_s,
                   as: :select
 
-        = f.button :submit, 'Continuer', class: 'btn btn-new'
+        = render(partial: 'blocks/button_groups/wizard_nth_step')

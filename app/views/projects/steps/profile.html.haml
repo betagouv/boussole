@@ -2,7 +2,7 @@
 
 .l-container-narrow
   .l-content
-    %section.wizard-form
+    %article.wizard-form
       %h1.wizard-form-header Mon profil
       %hr
 
@@ -46,4 +46,4 @@
         = f.input :intention, label: 'Je veux continuer mes études'
         = f.input :handicap, label: 'Je suis en situation de handicap'
 
-        = f.button :submit, 'Continuer', class: 'btn btn-new'
+        = render(partial: 'blocks/button_groups/wizard_nth_step')

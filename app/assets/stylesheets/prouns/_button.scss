@@ -1,26 +1,80 @@
 @charset "UTF-8";
 
-.btn {
+/*
+  Buttons!
+  Styleguide 3.1.
+ */
+
+%is-enabled {
+  @include shadow();
+
+  &:hover,
+  &:active,
+  &:focus {
+    @include shadow2();
+  }
+}
+
+%is-disabled {
+  @extend .disabled;
+  background-color: $btn-disabled-bg;
+  box-shadow: none;
+  color: $btn-disabled-color;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $btn-disabled-bg;
+    box-shadow: none;
+  }
+
+  &:focus {
+    color: $btn-disabled-bg;
+  }
+}
+
+%button {
   @extend .btn;
+  @extend %is-enabled;
   font-size: $font-size-h5;
+  padding: .5em;
+
+  &.is-disabled,
+  &:disabled,
+  &[disabled] {
+    @extend %is-disabled;
+  }
 }
 
-.btn-new {
-  @extend .btn-primary;
-}
+[role="button"],
+[role="link"] {
+  &.button-default {
+    @extend %button;
+    @extend .btn-default;
+  }
 
-.btn-show {
-  @extend .btn-info;
-}
+  &.button-primary {
+    @extend %button;
+    @extend .btn-primary;
+  }
 
-.btn-edit {
-  @extend .btn-warning;
-}
+  &.button-success {
+    @extend %button;
+    @extend .btn-success;
+  }
 
-.btn-destroy {
-  @extend .btn-danger;
-}
+  &.button-info {
+    @extend %button;
+    @extend .btn-info;
+  }
 
-.btn-cancel {
-  @extend .btn-default;
+  &.button-warning {
+    @extend %button;
+    @extend .btn-warning;
+  }
+
+  &.button-danger {
+    @extend %button;
+    @extend .btn-danger;
+  }
 }

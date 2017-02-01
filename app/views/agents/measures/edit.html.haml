@@ -2,7 +2,7 @@
 
 .l-container-narrow
   .l-content
-    %section.profile-form
+    %article.profile-form
       %h1.profile-form-header= t('.heading')
       %hr
 
@@ -15,7 +15,7 @@
         = f.input(:url)
         = f.association(:social_rights)
 
-        = f.button(:submit, t('.update'), class: 'btn btn-edit')
-        = link_to(t('.show'), agents_measure_path(@measure), class: 'btn btn-show')
-        = link_to(t('.back'), agents_measures_path, class: 'btn btn-cancel')
+        = f.button(:submit, t('.update'), class: 'button-warning', role: 'button')
+        = link_to(t('.show'), agents_measure_path(@measure), class: 'button-info', role: 'link')
+        = link_to(t('.back'), agents_measures_path, class: 'button-default', role: 'link')
 

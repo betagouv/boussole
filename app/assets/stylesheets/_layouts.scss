@@ -1,13 +1,20 @@
-/* Site layout styles go here */
 @charset "UTF-8";
 
-header {
+/* Site layout styles go here */
+
+[role="header"] {
   font-size: 1rem;
 }
 
-main {
+[role="main"] {
   @extend .row;
   font-size: 1rem;
+
+  section,
+  article {
+    margin-bottom: 1em;
+    padding: 1em;
+  }
 }
 
 .l-messages {
@@ -33,19 +40,30 @@ main {
   @extend .col-xs-offset-1;
 }
 
+.l-container-wide,
+.l-containe-narrow {
+  padding: 0;
+}
+
 .l-content {
   @extend .col-md-12;
 
-  &.l-with-sidebar {
+  &.l-with-aside {
     @extend .col-md-8;
   }
 }
 
-.l-sidebar {
+[role="aside"] {
   @extend .col-md-4;
 }
 
-footer {
+.l-content,
+[role="aside"] {
+  padding: 0 1em .5em;
+}
+
+
+[role="footer"] {
   font-size: .75rem;
   min-height: 2rem;
 }

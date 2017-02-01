@@ -1,30 +1,9 @@
+@charset "UTF-8";
+
 /* Stuff you're testing */
-
-/* Feature: How does it work? */
-.card-badge {
-  @extend .text-center;
-  background-color: $brand-info;
-  border-radius: 1em;
-  display: block;
-  height: 2em;
-  line-height: 2;
-  margin: -2em 0 0 -2em;
-  width: 2em;
-}
-
 .card-image {
-  margin-bottom: 1em;
-
   img {
     height: 25%;
     width: 25%;
-  }
-}
-
-.callout {
-  .btn {
-    &:hover {
-      @include shadow();
-    }
   }
 }

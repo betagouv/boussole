@@ -1,0 +1,10 @@
+-# coding: utf-8
+
+.wizard-form-actions
+  = link_to(previous_wizard_path, class: 'button-default', role: 'link') do
+    %i.icon-back{ aria: { hidden: true } }
+    = t('blocks.button_groups.back')
+
+  = button_tag(type: 'submit', name: 'commit', class: 'button-primary', role: 'button') do
+    = t('blocks.button_groups.submit')
+    %i.icon-next{ aria: { hidden: true } }

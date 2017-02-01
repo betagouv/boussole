@@ -18,7 +18,7 @@ solution 'Talk to a human' do
 
     scenario do
       visit('/')
-      click_link('Trouve le bon contact')
+      click_link('Prends un RDV')
 
       expect(page).to have_link('Contacte nous :)', href: /#{ENV['CONTACT_EMAIL']}/)
     end

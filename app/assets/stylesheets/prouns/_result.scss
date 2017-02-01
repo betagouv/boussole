@@ -2,23 +2,20 @@
 
 .result {
   @extend .col-md-4;
-  margin-top: 1.5em;
+  margin-top: 1em;
 
-  a {
-    color: $text-color;
+  [role="link"] {
+    color: $text-color-dark-primary;
     text-decoration: none;
   }
 }
 
 .result-card {
-  background-color: transparentize($isabelline, .75);
-  border: transparentize($brand-primary, .75) solid .1em;
-  padding-left: 1em;
-  padding-right: 1em;
+  @include shadow();
+  padding: .5em 1em;
 
   &:hover {
-    border: transparentize($brand-primary, 1) solid .1em;
-    box-shadow: 0 0 .2em .1em $brand-primary;
+    @include shadow2();
   }
 }
 
@@ -38,9 +35,8 @@
 .result-footer {
   font-size: $font-size-h6;
 
-  a {
-    color: $btn-default-color;
-    margin-bottom: 1.5em;
+  [role="link"] {
+    color: $btn-primary-color;
     width: 100%;
   }
 }

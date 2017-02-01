@@ -1,17 +1,19 @@
 @charset "UTF-8";
 
-// A showcase block, usefull for catchy stuff
-// Styleguide 3.2.
+/*
+  A showcase proun, like a big telly init?
+  Styleguide 3.4.
+ */
 
 .showcase {
-  background-color: $gray-lighter;
+  @include shadow();
+  background-color: $brand-default-darker;
+  color: $btn-primary-color;
   display: inline-block;
-  margin-bottom: 1em;
-  padding: 2em;
   position: relative;
   width: 100%;
 
-  input {
+  [role="button"] {
     width: 100%;
   }
 }

@@ -2,7 +2,7 @@
 
 .l-container-narrow
   .l-content
-    %section.wizard-form
+    %article.wizard-form
       %h1.wizard-form-header Ta recherche
       %hr
 
@@ -27,4 +27,4 @@
             = f.input_field :resources, class: 'form-control'
             %span.input-group-addon €
 
-        = f.button :submit, 'Continuer', class: 'btn btn-new'
+        = render(partial: 'blocks/button_groups/wizard_first_step')

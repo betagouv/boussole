@@ -10,7 +10,9 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-      = link_to 'boussole.beta.gouv.fr', root_path
+      = link_to(root_path) do
+        %i.icon-home{ aria: { hidden: true } }
+          %span.sr-only Aller à la page d'accueil
 
     .navigation-body
       = render 'blocks/navigation_links'

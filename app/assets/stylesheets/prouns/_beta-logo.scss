@@ -1,18 +1,9 @@
 @charset "UTF-8";
 
 @mixin uniform-anchor {
-  &:hover {
-    @content;
-  }
-
-  &:link {
-    @content;
-  }
-
-  &:active {
-    @content;
-  }
-
+  &:hover,
+  &:link,
+  &:active,
   &:visited {
     @content;
   }
@@ -21,21 +12,26 @@
 .beta-logo {
   @extend .hidden-xs;
   @extend .hidden-sm;
-  background-color: $brand-primary;
+  @extend .text-center;
+  @include shadow();
+  background-color: $brand-default-light;
   font-weight: bold;
-  padding: 5px;
+  padding: .5em;
   position: absolute;
-  right: -53px;
-  text-align: center;
+  right: -3em;
   text-transform: uppercase;
-  top: 26px;
+  top: 1em;
   transform: rotate(45deg);
   width: 200px;
   z-index: 10;
 
-  a {
+  &:hover {
+    @include shadow2();
+  }
+
+  [role="link"] {
     @include uniform-anchor {
-      color: $btn-default-color;
+      color: $btn-primary-color;
       text-decoration: none;
     }
   }

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/* Links, qoui de neuf ? */
+
+[role="link"] {
+  &.link-primary {
+    color: $brand-primary;
+
+    &:hover {
+      color: $brand-primary-dark;
+    }
+  }
+}

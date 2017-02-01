@@ -1,0 +1,21 @@
+-# encoding: utf-8
+
+%nav{ role: 'navigation' }
+  .l-container-wide
+    .navigation-header
+      = link_to('#') do
+        %i.icon-home{ aria: { hidden: true } }
+          %span.sr-only Communism
+
+
+    .navigation-body
+      %section.navigation-links
+        %ul
+          %li.is-active
+            %a{ href: '#' } Marx
+
+          %li
+            %a{ href: '#' } Lenin
+
+          %li.disabled
+            %a{ href: '#' } Fidel

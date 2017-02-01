@@ -2,7 +2,7 @@
 
 .l-container-narrow
   .l-content
-    %section.wizard-form
+    %article.wizard-form
       %h1.wizard-form-header Ta situation
       %hr
 
@@ -40,4 +40,4 @@
                   include_blank: false,
                   input_html: { rel: 'autocomplete' }
 
-        = f.button :submit, 'Continuer', class: 'btn btn-new'
+        = render(partial: 'blocks/button_groups/wizard_nth_step')

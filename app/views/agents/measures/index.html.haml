@@ -7,7 +7,7 @@
       %hr
 
       .profile-list-new
-        = link_to(t('.new'), new_agents_measure_path, class: 'btn btn-new btn-lg')
+        = link_to(t('.new'), new_agents_measure_path, class: 'button-default', role: 'link')
 
       .profile-list-content
         %table
@@ -26,9 +26,10 @@
                 %td= measure.title
                 %td= measure.public_service_title
                 %td= measure.social_right_names
-                %td= link_to(t('.show'), agents_measure_path(measure), class: 'btn btn-show')
-                %td= link_to(t('.edit'), edit_agents_measure_path(measure), class: 'btn btn-edit')
+                %td= link_to(t('.show'), agents_measure_path(measure), class: 'button-info', role: 'link')
+                %td= link_to(t('.edit'), edit_agents_measure_path(measure), class: 'button-warning', role: 'link')
                 %td
-                  = link_to t('.destroy'), agents_measure_path(measure), class: 'btn btn-destroy',
+                  = link_to t('.destroy'), agents_measure_path(measure), class: 'button-danger',
                                                                                            method: :delete,
+                                                                                           role: 'link',
                                                                                            data: { confirm: t('.confirm') }

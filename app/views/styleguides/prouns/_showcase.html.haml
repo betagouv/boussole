@@ -1,0 +1,13 @@
+-# encoding: utf-8
+
+:ruby
+  project                                    = Working.new
+  project.id                                 = 1
+  service_offering                           = ServiceOffering.new
+  service_offering.id                        = 1
+  service_offering.response_time_upper_bound = 1
+  contact                                    = Contact.new
+
+%main{ role: 'main' }
+  = render partial: 'blocks/contact',
+           locals: { project: project, service_offering: service_offering, contact: contact }

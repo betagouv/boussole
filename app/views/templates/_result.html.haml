@@ -1,7 +1,7 @@
 -# coding: utf-8
 
 .l-container-wide
-  .l-content.l-with-sidebar
+  .l-content.l-with-aside
     %article
       %header
         %h1= @service_offering.title
@@ -21,5 +21,5 @@
           %time{ datetime: l(@service_offering.updated_at.to_date, format: :html5) }
             = l(@service_offering.updated_at.to_date)
 
-  %aside.l-sidebar
+  %aside{ role: 'aside' }
     = render(partial: 'blocks/public_service', locals: { public_service: @public_service })

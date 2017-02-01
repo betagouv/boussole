@@ -1,5 +1,6 @@
-/* Global mixins go here */
 @charset "UTF-8";
+
+/* Global mixins go here */
 
 /* Open Sans @font-face mixin */
 @mixin open-sans-font-face($font, $svgid, $weight: normal, $style: normal) {
@@ -18,7 +19,7 @@
 /* font awesome @font-face mixin */
 @mixin font-awesome-font-face() {
   @font-face {
-    font-family: font-"FontAwesome";
+    font-family: "FontAwesome";
     src: font-url('#{$fa-font-path}/fontawesome-webfont.eot?v=#{$fa-version}');
     src: font-url('#{$fa-font-path}/fontawesome-webfont.eot?#iefix&v=#{$fa-version}') format("embedded-opentype"),
          font-url('#{$fa-font-path}/fontawesome-webfont.woff2?v=#{$fa-version}') format("woff2"),
@@ -29,8 +30,14 @@
     font-style: normal;
   }
 }
+
 /* Shadows */
 @mixin shadow() {
-  box-shadow: 0 1px 2px 0 $transparent-alpha-20,
-              0 1px 3px 0 $transparent-alpha-19;
+  box-shadow: 0 1px 2px 0 $black-alpha-38,
+              0 1px 3px 0 $black-alpha-12;
+}
+
+@mixin shadow2() {
+  box-shadow: 0 5px 10px 0 $black-alpha-38,
+              0 5px 15px 0 $black-alpha-12;
 }
