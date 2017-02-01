@@ -10,13 +10,10 @@
   @extend .row;
   font-size: 1rem;
 
-  section {
-    margin-bottom: 2em;
-  }
-
+  section,
   article {
-    padding-left: 2em;
-    padding-right: 2em;
+    margin-bottom: 1em;
+    padding: 1em;
   }
 }
 
@@ -41,21 +38,30 @@
   @extend .col-sm-offset-2;
   @extend .col-xs-10;
   @extend .col-xs-offset-1;
-  @include shadow();
+}
+
+.l-container-wide,
+.l-containe-narrow {
+  padding: 0;
 }
 
 .l-content {
   @extend .col-md-12;
-  padding: 2em;
 
-  &.l-with-sidebar {
+  &.l-with-aside {
     @extend .col-md-8;
   }
 }
 
-.l-sidebar {
+[role="aside"] {
   @extend .col-md-4;
 }
+
+.l-content,
+[role="aside"] {
+  padding: 0 1em .5em;
+}
+
 
 [role="footer"] {
   font-size: .75rem;

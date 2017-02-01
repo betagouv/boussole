@@ -6,4 +6,5 @@
   public_service.url         = 'pole-emploi.fr'
   public_service.description = 'Trouver un boulot grâce à La Bonne Boîte !'
 
-= render(partial: 'blocks/public_service', locals: { public_service: public_service })
+%main{ role: 'main' }
+  = render(partial: 'blocks/public_service', locals: { public_service: public_service })

@@ -8,5 +8,6 @@
   service_offering.response_time_upper_bound = 1
   contact                                    = Contact.new
 
-= render partial: 'blocks/contact',
-         locals: { project: project, service_offering: service_offering, contact: contact }
+%main{ role: 'main' }
+  = render partial: 'blocks/contact',
+           locals: { project: project, service_offering: service_offering, contact: contact }

@@ -42,6 +42,10 @@
   width: 2.5em;
 }
 
+.card-image {
+  margin-bottom: 1em;
+}
+
 .card-header {
   @extend .text-center;
   font-size: $font-size-h4;

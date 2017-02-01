@@ -2,14 +2,8 @@
 
 /* Stuff you're testing */
 .card-image {
-  margin-bottom: 1em;
-
   img {
     height: 25%;
     width: 25%;
   }
-}
-
-.l-content.l-with-sidebar {
-  @include shadow();
 }

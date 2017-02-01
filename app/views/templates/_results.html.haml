@@ -1,28 +1,27 @@
 -# coding: utf-8
 
 .l-container-wide
-  .l-content
-    %section.results
-      %h1.results-header
-        = t 'views.results.header',
-            status: project.status.mb_chars.downcase,
-            project: t("activerecord.models.#{project.class.name.downcase}", count: 1).downcase
+  %section.l-content.results
+    %h1.results-header
+      = t 'views.results.header',
+          status: project.status.mb_chars.downcase,
+          project: t("activerecord.models.#{project.class.name.downcase}", count: 1).downcase
 
-      - if @service_offerings.any?
-        %section.result-list
-          %h1.result-list-header.divider
-            = t('views.results.result_list.header')
+    - if @service_offerings.any?
+      %section.result-list
+        %h1.result-list-header.divider
+          = t('views.results.result_list.header')
 
-          = render partial: 'blocks/result',
-                   collection: @service_offerings,
-                   as: :service_offering,
-                   locals: { project: project }
+        = render partial: 'blocks/result',
+                 collection: @service_offerings,
+                 as: :service_offering,
+                 locals: { project: project }
 
-      - else
-        %section.no-result
-          %p.no-result-description
-            = t('views.results.no_result.description')
-          %p.no-result-contact
-            = mail_to(ENV['CONTACT_EMAIL'], t('views.results.no_result.contact'))
+    - else
+      %section.no-result
+        %p.no-result-description
+          = t('views.results.no_result.description')
+        %p.no-result-contact
+          = mail_to(ENV['CONTACT_EMAIL'], t('views.results.no_result.contact'))
 
-          .no-result-image
+        .no-result-image
