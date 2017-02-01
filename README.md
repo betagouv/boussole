@@ -31,3 +31,7 @@ git push origin --tags
 ```
 bundle exec rake changelog
 ```
+
+### Consulter la guide de styles
+
+Visitez ```/styleguides```
