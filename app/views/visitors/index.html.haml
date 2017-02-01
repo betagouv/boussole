@@ -33,31 +33,29 @@
 
     %section
       %h1.divider
-        Comment ça marche ?
+        = t('views.landing.how_it_works')
 
       .box-row
         .box
           .card
             .card-badge 1
-            .card-image= image_tag('person_pin.svg')
+            .card-image
+              = image_tag('person_pin.svg')
             %h2.card-header
-              En
-              = link_to('5 min', root_path, class: 'link-primary', role: 'link')
-              trouve le bon contact
+              = t('views.landing.step_1_html', class: 'link-primary', href: root_path)
 
         .box
           .card
             .card-badge 2
-            .card-image= image_tag('notifications_active.svg')
+            .card-image
+              = image_tag('notifications_active.svg')
             %h2.card-header
-              En
-              = link_to('7 jours', root_path, class: 'link-primary', role: 'link')
-              tu seras contacté·e
+              = t('views.landing.step_2_html', class: 'link-primary', href: root_path)
 
         .box
           .card
             .card-badge 3
-            .card-image= image_tag('sentiment_very_satisfied.svg')
+            .card-image
+              = image_tag('sentiment_very_satisfied.svg')
             %h2.card-header
-              = link_to('Dis-nous', 'https://www.facebook.com/boussole.beta', role: 'link')
-              comment ça s’est passé
+              = t('views.landing.step_3_html', class: '', href: 'https://www.facebook.com/boussole.beta')

@@ -116,9 +116,12 @@ fr:
 
   views:
     landing:
-      uvp: "Rencontre un·e professionnel·le pour t'aider à %{scenario}"
       uvp_html: "Rencontre un·e professionnel·le<br>pour t'aider à %{scenario}"
       cta: Prends un RDV
+      how_it_works: Comment ça marche ?
+      step_1_html: En <a class='%{class}' href='%{href}' role='link'>5 min</a> trouve le bon contact
+      step_2_html: En moins de <a class='%{class}' href='%{href}' role='link'>7 jours</a> tu seras contacté·e
+      step_3_html: <a class='%{class}' href='%{href}' role='link'>Dis-nous</a> comment ça s’est passé
 
     results:
       header: 'Je suis %{status} et je cherche un %{project}'
@@ -132,7 +135,6 @@ fr:
 
     result:
       contact:
-        description: Intéressé·e ? Laisse tes coordonnés pour être recontacté·e d'ici %{response_time}
         description_html: |
           Intéressé·e ? Laisse tes coordonnés pour être recontacté·e d'ici
           <strong>%{response_time}</strong>
