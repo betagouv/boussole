@@ -63,7 +63,7 @@ fr:
         email: Email
         phone: Téléphone
         url: Site web
-        response_time_upper_bound: Délai garanti de réponse
+        response_time_upper_bound: Délai garanti de réponse (jours)
         social_rights: Thématiques
         service_offerings: Offres de service
         measures: Dispositifs
@@ -77,7 +77,7 @@ fr:
         email: Email
         phone: Téléphone
         url: Site web
-        response_time_upper_bound: Délai garanti de réponse
+        response_time_upper_bound: Délai garanti de réponse (jours)
         social_rights: Thématiques
         updated_at: Mis à jour le
       measure:
