@@ -2,7 +2,7 @@ Récapitulatif de votre mise en relation :
 
 - Contact : <%= @contact.email_or_phone %>
 - Service : <%= @service.title %>
-- <%= @service.class.human_attribute_name(:response_time_upper_bound) %> : <%= distance_of_time_in_words(@service.response_time_upper_bound.days) %>
+- <%= @service.class.human_attribute_name(:response_time_upper_bound) %> : <%= @service.response_time_upper_bound %>
 
 Récapitulatif du parcours :
 

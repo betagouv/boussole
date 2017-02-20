@@ -104,7 +104,7 @@ solution('Improve my CV') do
       expect(current_email.subject).to eq('Boussole : Un·e jeune veut être recontacté·e !')
       expect(current_email.body).to have_content('Contact : chlotilde@contactez.moi')
       expect(current_email.body).to have_content('Service : Améliorer mon CV')
-      expect(current_email.body).to have_content("Délai garanti de réponse : #{service.response_time_upper_bound} jours")
+      expect(current_email.body).to have_content("Délai garanti de réponse (jours) : #{service.response_time_upper_bound}")
       expect(current_email.body).to have_content('Sais-je ce que je veux faire ? : Je sais ce que je veux faire')
       expect(current_email.body).to have_content("Secteur d'activité : Agriculture")
       expect(current_email.body).to have_content("J'ai déjà une expérience dans ce secteur : Non")

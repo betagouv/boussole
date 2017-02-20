@@ -78,7 +78,7 @@ solution('Find a flatsharing solution') do
       expect(current_email.subject).to eq('Boussole : Un·e jeune veut être recontacté·e !')
       expect(current_email.body).to have_content('Contact : zoe@contactez.moi')
       expect(current_email.body).to have_content('Service : Trouver un coloc')
-      expect(current_email.body).to have_content("Délai garanti de réponse : #{service.response_time_upper_bound} jours")
+      expect(current_email.body).to have_content("Délai garanti de réponse (jours) : #{service.response_time_upper_bound}")
       expect(current_email.body).to have_content('Je cherche un logement pour… : 1 an')
       expect(current_email.body).to have_content('Où souhaite-je me loger ? : Reims')
       expect(current_email.body).to have_content('Quel est mon budget mensuel pour me loger (€) ? : 300')
