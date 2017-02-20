@@ -1,5 +1,31 @@
 # Change Log
 
+## [v1.4.0](https://github.com/sgmap/boussole/tree/v1.4.0) (2017-02-20)
+[Full Changelog](https://github.com/sgmap/boussole/compare/v1.3.0...v1.4.0)
+
+**Implemented enhancements:**
+
+- Add favicons [\#81](https://github.com/sgmap/boussole/pull/81) ([maukoquiroga](https://github.com/maukoquiroga))
+- Change updated at translation [\#79](https://github.com/sgmap/boussole/pull/79) ([maukoquiroga](https://github.com/maukoquiroga))
+- Le remaniement de la page de résultat va améliorer l'activation [\#76](https://github.com/sgmap/boussole/pull/76) ([maukoquiroga](https://github.com/maukoquiroga))
+- Get rid of useless boilerplate [\#75](https://github.com/sgmap/boussole/pull/75) ([maukoquiroga](https://github.com/maukoquiroga))
+- Talk to a human [\#67](https://github.com/sgmap/boussole/pull/67) ([maukoquiroga](https://github.com/maukoquiroga))
+- Delete Garantie Jeune [\#66](https://github.com/sgmap/boussole/pull/66) ([HelaG](https://github.com/HelaG))
+- Include MGEL feedback [\#65](https://github.com/sgmap/boussole/pull/65) ([HelaG](https://github.com/HelaG))
+
+**Fixed bugs:**
+
+- Problème d'affichage \(les feuilles de style ne sont pas prises en compte\) [\#68](https://github.com/sgmap/boussole/pull/68) ([maukoquiroga](https://github.com/maukoquiroga))
+
+**Merged pull requests:**
+
+- Expliquer comment ça marche dans la landing page [\#80](https://github.com/sgmap/boussole/pull/80) ([maukoquiroga](https://github.com/maukoquiroga))
+- Expliquer comment ça marche dans la landing page 1/2 [\#78](https://github.com/sgmap/boussole/pull/78) ([maukoquiroga](https://github.com/maukoquiroga))
+- Expliquer comment ça marche dans la landing page 1/2 [\#77](https://github.com/sgmap/boussole/pull/77) ([maukoquiroga](https://github.com/maukoquiroga))
+- Filter bot calls [\#70](https://github.com/sgmap/boussole/pull/70) ([maukoquiroga](https://github.com/maukoquiroga))
+- Permettre aux jeunes d'avoir une réponse dans tous les cas [\#69](https://github.com/sgmap/boussole/pull/69) ([maukoquiroga](https://github.com/maukoquiroga))
+- Les jeunes vont mieux comprendre le service si les buttons annoncent le résultat [\#40](https://github.com/sgmap/boussole/pull/40) ([maukoquiroga](https://github.com/maukoquiroga))
+
 ## [v1.3.0](https://github.com/sgmap/boussole/tree/v1.3.0) (2016-12-01)
 [Full Changelog](https://github.com/sgmap/boussole/compare/v1.2.0...v1.3.0)
 
