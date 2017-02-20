@@ -45,5 +45,4 @@
             %dd= @public_service.updated_at
 
       .profile-actions
-        = link_to(t('.edit'), edit_agents_public_service_path(@public_service), class: 'button-warning', role: 'link')
-        = link_to(t('.back'), agents_public_services_path, class: 'button-default', role: 'link')
+        = render(partial: 'blocks/button_groups/agents_show', locals: { model: @public_service })

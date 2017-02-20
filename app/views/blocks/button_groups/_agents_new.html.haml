@@ -1,0 +1,11 @@
+-# coding: utf-8
+
+= f.button :submit,
+           t('blocks.button_groups.create'),
+           class: 'button-success',
+           role: 'button'
+
+= link_to t('blocks.button_groups.back'),
+          send("agents_#{model.class.name.underscore.pluralize}_path"),
+          class: 'button-default',
+          role: 'link'

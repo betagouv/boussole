@@ -1,0 +1,21 @@
+-# coding: utf-8
+
+%td
+  = link_to t('blocks.button_groups.show'),
+            send("agents_#{model.class.name.underscore}_path", model),
+            class: 'button-info',
+            role: 'link'
+
+%td
+  = link_to t('blocks.button_groups.edit'),
+            send("edit_agents_#{model.class.name.underscore}_path", model),
+            class: 'button-warning',
+            role: 'link'
+
+%td
+  = link_to t('blocks.button_groups.destroy'),
+            send("agents_#{model.class.name.underscore}_path", model),
+            class: 'button-danger',
+            method: :delete,
+            role: 'link',
+            data: { confirm: t('blocks.button_groups.confirm') }
