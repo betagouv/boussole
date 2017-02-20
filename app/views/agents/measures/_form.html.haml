@@ -1,0 +1,13 @@
+-# coding: utf-8
+
+= simple_form_for([:agents, measure], wrapper: :vertical_form) do |f|
+  = f.error_notification
+
+  = f.association(:public_service)
+  = f.input(:title)
+  = f.input(:description)
+  = f.input(:url)
+  = f.association(:social_rights)
+
+  .profile-actions
+    = render(partial: "blocks/button_groups/agents_#{action}", locals: { f: f, model: measure })

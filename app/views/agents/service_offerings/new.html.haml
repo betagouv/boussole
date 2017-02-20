@@ -6,19 +6,4 @@
       %h1.profile-form-header= t('.heading')
       %hr
 
-      = simple_form_for([:agents, @service_offering], wrapper: :vertical_form) do |f|
-        = f.error_notification
-
-        = f.association(:public_service)
-        = f.input(:title)
-        = f.input(:description)
-        = f.input(:postal_address)
-        = f.input(:email)
-        = f.input(:phone)
-        = f.input(:url)
-        = f.input(:response_time_upper_bound)
-        = f.association(:social_rights)
-
-        = f.button(:submit, t('.create'), class: 'button-success', role: 'button')
-        = link_to(t('.back'), agents_service_offerings_path, class: 'button-default', role: 'link')
-
+      = render(partial: 'form', locals: { service_offering: @service_offering, action: 'new' })

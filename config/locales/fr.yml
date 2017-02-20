@@ -107,6 +107,14 @@ fr:
       back: Précédent
       next: Continuer
       submit: Finir !
+      show: Afficher
+      create: Créer
+      edit: Modifier
+      update: Modifier
+      destroy: Supprimer
+      confirm: En êtes-vous sûr ?
+
+
     navigation_links:
       public_services: Acteurs
       service_offerings: Offres de service
@@ -147,61 +155,25 @@ fr:
       index:
         heading: Liste d'acteurs à Reims
         new: Ajouter un nouvel acteur
-        show: Afficher
-        edit: Modifier
-        destroy: Supprimer
-        confirm: En êtes-vous sûr ?
-      show:
-        edit: Modifier
-        back: Revenir
       new:
         heading: Nouvel acteur
-        create: Créer
-        back: Annuler
       edit:
         heading: Mettre à jour l'acteur
-        update: Modifier
-        show: Afficher
-        back: Annuler
 
     service_offerings:
       index:
         heading: Liste des offres de service à Reims
         new: Ajouter une nouvelle offre de service
-        show: Afficher
-        edit: Modifier
-        destroy: Supprimer
-        confirm: En êtes-vous sûr ?
-      show:
-        edit: Modifier
-        back: Revenir
       new:
         heading: Nouvelle offre de service
-        create: Créer
-        back: Annuler
       edit:
         heading: Mettre à jour l'offre de service
-        update: Modifier
-        show: Afficher
-        back: Annuler
 
     measures:
       index:
         heading: Liste des dispositifs à Reims
         new: Ajouter un nouveau dispositif
-        show: Afficher
-        edit: Modifier
-        destroy: Supprimer
-        confirm: En êtes-vous sûr ?
-      show:
-        edit: Modifier
-        back: Revenir
       new:
         heading: Nouveau dispositif
-        create: Créer
-        back: Annuler
       edit:
         heading: Mettre à jour le dispositif
-        update: Modifier
-        show: Afficher
-        back: Annuler

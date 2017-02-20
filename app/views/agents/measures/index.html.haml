@@ -26,10 +26,4 @@
                 %td= measure.title
                 %td= measure.public_service_title
                 %td= measure.social_right_names
-                %td= link_to(t('.show'), agents_measure_path(measure), class: 'button-info', role: 'link')
-                %td= link_to(t('.edit'), edit_agents_measure_path(measure), class: 'button-warning', role: 'link')
-                %td
-                  = link_to t('.destroy'), agents_measure_path(measure), class: 'button-danger',
-                                                                                           method: :delete,
-                                                                                           role: 'link',
-                                                                                           data: { confirm: t('.confirm') }
+                = render(partial: 'blocks/button_groups/agents_index', locals: { model: measure })

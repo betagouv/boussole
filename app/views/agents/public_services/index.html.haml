@@ -24,12 +24,4 @@
               %tr
                 %td= public_service.title
                 %td= public_service.social_right_names
-                %td= link_to(t('.show'), agents_public_service_path(public_service), class: 'button-info', role: 'link')
-                %td
-                  = link_to t('.edit'), edit_agents_public_service_path(public_service), class: 'button-warning',
-                                                                                         role: 'link'
-                %td
-                  = link_to t('.destroy'), agents_public_service_path(public_service), class: 'button-danger',
-                                                                                       method: :delete,
-                                                                                       role: 'link',
-                                                                                       data: { confirm: t('.confirm') }
+                = render(partial: 'blocks/button_groups/agents_index', locals: { model: public_service })

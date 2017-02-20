@@ -1,0 +1,17 @@
+-# coding: utf-8
+
+= simple_form_for([:agents, service_offering], wrapper: :vertical_form) do |f|
+  = f.error_notification
+
+  = f.association(:public_service)
+  = f.input(:title)
+  = f.input(:description)
+  = f.input(:postal_address)
+  = f.input(:email)
+  = f.input(:phone)
+  = f.input(:url)
+  = f.input(:response_time_upper_bound)
+  = f.association(:social_rights)
+
+  .profile-actions
+    = render(partial: "blocks/button_groups/agents_#{action}", locals: { f: f, model: service_offering })

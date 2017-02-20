@@ -29,5 +29,4 @@
             %dd= @measure.updated_at
 
       .profile-actions
-        = link_to(t('.edit'), edit_agents_measure_path(@measure), class: 'button-warning', role: 'link')
-        = link_to(t('.back'), agents_measures_path, class: 'button button-default', role: 'link')
+        = render(partial: 'blocks/button_groups/agents_show', locals: { model: @measure })

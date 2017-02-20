@@ -26,12 +26,4 @@
                 %td= service_offering.title
                 %td= service_offering.public_service_title
                 %td= service_offering.social_right_names
-                %td= link_to(t('.show'), agents_service_offering_path(service_offering), class: 'button-info', role: 'link')
-                %td
-                  = link_to t('.edit'), edit_agents_service_offering_path(service_offering), class: 'button-warning',
-                                                                                             role: 'link'
-                %td
-                  = link_to t('.destroy'), agents_service_offering_path(service_offering), class: 'button-danger',
-                                                                                           method: :delete,
-                                                                                           role: 'link',
-                                                                                           data: { confirm: t('.confirm') }
+                = render(partial: 'blocks/button_groups/agents_index', locals: { model: service_offering })

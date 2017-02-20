@@ -1,0 +1,11 @@
+-# coding: utf-8
+
+= link_to t('blocks.button_groups.edit'),
+          send("edit_agents_#{model.class.name.underscore}_path", model),
+          class: 'button-warning',
+          role: 'link'
+
+= link_to t('blocks.button_groups.back'),
+          send("agents_#{model.class.name.underscore.pluralize}_path"),
+          class: 'button-default',
+          role: 'link'
