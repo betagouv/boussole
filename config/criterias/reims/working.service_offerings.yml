@@ -61,70 +61,36 @@ apec-association-pour-l-emploi-des-cadres-3e48ecd0-4638-47a5-84e6-482bcd43de6a: 
       # conditions for each scenario
       -
         attribute: "status" # discriminant @see app/models/service_offering.rb
-        operator: "in?" 
+        operator: "in?"
         value:
           - "Sans activité"
           - "Étudiant·e"
       -
         attribute: "age" # discriminant @see app/models/service_offering.rb
-        operator: ">=" 
+        operator: ">="
         value: 22
       -
         attribute: "last_class" # discriminant @see app/models/service_offering.rb
         operator: "==" # options are ==, >=, >, <, <=, in?
         value: "Études supérieures"
       -
-        attribute: "pole_emploi" 
-        operator: "==" 
+        attribute: "pole_emploi"
+        operator: "=="
         value: false
       -
-        attribute: "cap_emploi" 
-        operator: "==" 
+        attribute: "cap_emploi"
+        operator: "=="
         value: false
       -
         attribute: "handicap"
-        operator: "==" 
+        operator: "=="
         value: false
 
   ameliorer-mon-projet-professionnel-en-atelier:
     -
       -
-        attribute: "awareness" 
-        operator: "==" 
-        value: "Je sais ce que je veux faire"
-      -
-        attribute: "experience" 
-        operator: "==" 
-        value: true
-      -
-        attribute: "status"
-        operator: "in?" 
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-      -
-        attribute: "last_class" 
-        operator: "=="
-        value: "Études supérieures"
-      -
-        attribute: "pole_emploi" 
-        operator: "==" 
-        value: false
-      -
-        attribute: "cap_emploi" 
-        operator: "=="
-        value: false
-      -
-        attribute: "handicap"
-        operator: "=="
-        value: false
-
-
-  simuler-un-entretien-de-recrutement-en-ligne:
-   -
-      -
         attribute: "awareness"
-        operator: "==" 
+        operator: "=="
         value: "Je sais ce que je veux faire"
       -
         attribute: "experience"
@@ -138,7 +104,41 @@ apec-association-pour-l-emploi-des-cadres-3e48ecd0-4638-47a5-84e6-482bcd43de6a: 
           - "Étudiant·e"
       -
         attribute: "last_class"
-        operator: "==" 
+        operator: "=="
+        value: "Études supérieures"
+      -
+        attribute: "pole_emploi"
+        operator: "=="
+        value: false
+      -
+        attribute: "cap_emploi"
+        operator: "=="
+        value: false
+      -
+        attribute: "handicap"
+        operator: "=="
+        value: false
+
+
+  simuler-un-entretien-de-recrutement-en-ligne:
+   -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "experience"
+        operator: "=="
+        value: true
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+      -
+        attribute: "last_class"
+        operator: "=="
         value: "Études supérieures"
       -
         attribute: "pole_emploi"
@@ -156,18 +156,18 @@ apec-association-pour-l-emploi-des-cadres-3e48ecd0-4638-47a5-84e6-482bcd43de6a: 
   t-organiser-dans-ta-recherche-d-emploi:
     -
       -
-        attribute: "awareness" 
-        operator: "==" 
+        attribute: "awareness"
+        operator: "=="
         value: "Je sais ce que je veux faire"
       -
-        attribute: "status" 
+        attribute: "status"
         operator: "in?"
         value:
           - "Sans activité"
           - "Étudiant·e"
       -
-        attribute: "last_class" 
-        operator: "==" 
+        attribute: "last_class"
+        operator: "=="
         value: "Études supérieures"
       -
         attribute: "pole_emploi"
@@ -175,96 +175,65 @@ apec-association-pour-l-emploi-des-cadres-3e48ecd0-4638-47a5-84e6-482bcd43de6a: 
         value: false
       -
         attribute: "cap_emploi"
-        operator: "==" 
+        operator: "=="
         value: false
       -
-        attribute: "handicap" 
+        attribute: "handicap"
         operator: "=="
         value: false
 
   travailler-mon-projet-profesionnel-avec-un-conseiller:
     -
       -
-        attribute: "awareness" 
-        operator: "==" 
+        attribute: "awareness"
+        operator: "=="
         value: "Je ne sais pas ce que je veux faire"
       -
-        attribute: "status" 
-        operator: "in?" 
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-      -
-        attribute: "last_class" 
-        operator: "==" 
-        value: "Études supérieures"
-      -
-        attribute: "pole_emploi" 
-        operator: "==" 
-        value: false
-      -
-        attribute: "cap_emploi" 
-        operator: "=="
-        value: false
-      -
-        attribute: "handicap"
-        operator: "==" 
-        value: false
-
-potentiel-ca-champagne-ardenne:
-  candidater-au-statut-etudiant-entrepreneur:
-    -
-      -
-        attribute: "awareness" 
-        operator: "==" 
-        value: "Je sais ce que je veux faire"
-      -
-        attribute: "status" 
+        attribute: "status"
         operator: "in?"
         value:
           - "Sans activité"
           - "Étudiant·e"
       -
         attribute: "last_class"
-        operator: "==" 
+        operator: "=="
+        value: "Études supérieures"
+      -
+        attribute: "pole_emploi"
+        operator: "=="
+        value: false
+      -
+        attribute: "cap_emploi"
+        operator: "=="
+        value: false
+      -
+        attribute: "handicap"
+        operator: "=="
+        value: false
+
+potentiel-ca-champagne-ardenne:
+  candidater-au-statut-etudiant-entrepreneur:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+      -
+        attribute: "last_class"
+        operator: "=="
         value: "Études supérieures"
 
 crij-centre-regional-d-information-jeunesse:
   decouvrir-les-metiers-de-l-animation:
     -
       -
-        attribute: "awareness" 
-        operator: "==" 
-        value: "Je ne sais pas ce que je veux faire"
-      -
-        attribute: "sta=tus" 
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Autre"
-      -
-        attribute: "age" 
-        operator: "<=" 
-        value: 20
-      -
-        attribute: "pole_emploi"
-        operator: "==" 
-        value: false
-      -
-        attribute: "cap_emploi" 
-        operator: "==" 
-        value: false
-      -
-        attribute: "mission_locale" 
-        operator: "=="
-        value: false
-
-  definir-ton-projet-professionel:
-    -
-      -
-        attribute: "awareness" 
+        attribute: "awareness"
         operator: "=="
         value: "Je ne sais pas ce que je veux faire"
       -
@@ -276,15 +245,46 @@ crij-centre-regional-d-information-jeunesse:
           - "Lycéen·ne"
           - "Autre"
       -
-        attribute: "age" 
+        attribute: "age"
+        operator: "<="
+        value: 20
+      -
+        attribute: "pole_emploi"
+        operator: "=="
+        value: false
+      -
+        attribute: "cap_emploi"
+        operator: "=="
+        value: false
+      -
+        attribute: "mission_locale"
+        operator: "=="
+        value: false
+
+  definir-ton-projet-professionel:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Autre"
+      -
+        attribute: "age"
         operator: "<="
         value: 30
       -
         attribute: "pole_emploi"
-        operator: "== " 
+        operator: "=="
         value: false
       -
-        attribute: "cap_emploi" 
+        attribute: "cap_emploi"
         operator: "=="
         value: false
       -
@@ -303,8 +303,8 @@ crij-centre-regional-d-information-jeunesse:
         operator: "=="
         value: false
       -
-        attribute: "status" 
-        operator: "in?" 
+        attribute: "status"
+        operator: "in?"
         value:
           - "Sans activité"
           - "Étudiant·e"
@@ -314,7 +314,7 @@ crij-centre-regional-d-information-jeunesse:
           - "Autre"
       -
         attribute: "age"
-        operator: "<=" 
+        operator: "<="
         value: 30
       -
         attribute: "pole_emploi"
@@ -332,8 +332,8 @@ crij-centre-regional-d-information-jeunesse:
   trouver-une-mission-de-service-civique:
     -
       -
-        attribute: "awareness" 
-        operator: "==" 
+        attribute: "awareness"
+        operator: "=="
         value: "Je ne sais pas ce que je veux faire"
       -
         attribute: "status"
@@ -366,12 +366,12 @@ cap-emploi-51:
   discuter-de-mon-projet-professionnel-avec-un-conseiller:
     -
       -
-        attribute: "awareness" 
-        operator: "==" 
+        attribute: "awareness"
+        operator: "=="
         value: "Je sais ce que je veux faire"
       -
-        attribute: "age" 
-        operator: "<=" 
+        attribute: "age"
+        operator: "<="
         value: 30
       -
         attribute: "handicap"
@@ -386,7 +386,7 @@ mission-locale-de-reims:
         operator: "=="
         value: "Je sais ce que je veux faire"
       -
-        attribute: "experience" 
+        attribute: "experience"
         operator: "=="
         value: false
       -
@@ -401,11 +401,11 @@ mission-locale-de-reims:
           - "Apprenti·e"
           - "Autre"
       -
-        attribute: "age" 
+        attribute: "age"
         operator: "<="
         value: 25
       -
-        attribute: "age" 
+        attribute: "age"
         operator: ">="
         value: 18
       -
@@ -421,11 +421,11 @@ mission-locale-de-reims:
     -
       -
         attribute: "awareness"
-        operator: "==" 
+        operator: "=="
         value: "Je sais ce que je veux faire"
       -
         attribute: "status"
-        operator: "in?" 
+        operator: "in?"
         value:
           - "Sans activité"
           - "Étudiant·e"
@@ -435,18 +435,18 @@ mission-locale-de-reims:
           - "Apprenti·e"
           - "Autre"
       -
-        attribute: "age" 
-        operator: "<=" 
+        attribute: "age"
+        operator: "<="
         value: 25
       -
-        attribute: "duration" 
-        operator: "in?" 
+        attribute: "duration"
+        operator: "in?"
         value:
           - "Quelques mois"
           - "1 an"
       -
-        attribute: "last_class" 
-        operator: "in?" 
+        attribute: "last_class"
+        operator: "in?"
         value:
           - "Collège"
           - "Lycée"
@@ -457,10 +457,10 @@ mission-locale-de-reims:
     -
       -
         attribute: "awareness"
-        operator: "==" 
+        operator: "=="
         value: "Je ne sais pas ce que je veux faire"
       -
-        attribute: "status" 
+        attribute: "status"
         operator: "in?"
         value:
           - "Sans activité"
@@ -471,12 +471,12 @@ mission-locale-de-reims:
           - "Apprenti·e"
           - "Autre"
       -
-        attribute: "age" 
+        attribute: "age"
         operator: "<="
         value: 25
       -
-        attribute: "last_class" 
-        operator: "in?" 
+        attribute: "last_class"
+        operator: "in?"
         value:
           - "Collège"
           - "Lycée"
@@ -487,11 +487,11 @@ mission-locale-de-reims:
     -
       -
         attribute: "awareness"
-        operator: "==" 
+        operator: "=="
         value: "Je ne sais pas ce que je veux faire"
       -
         attribute: "status"
-        operator: "in?" 
+        operator: "in?"
         value:
           - "Sans activité"
           - "Salarié·e"
@@ -500,7 +500,7 @@ mission-locale-de-reims:
           - "Autre"
       -
         attribute: "age"
-        operator: "<=" 
+        operator: "<="
         value: 25
       -
         attribute: "last_class"
@@ -511,29 +511,29 @@ mission-locale-de-reims:
           - "Aprentissage"
           - "Autre"
       -
-        attribute: "duration" 
-        operator: "==" 
+        attribute: "duration"
+        operator: "=="
         value: "+ d'1 an"
 
   trouver-un-emploi-sans-diplome:
     -
       -
-        attribute: "status" 
-        operator: "in?" 
+        attribute: "status"
+        operator: "in?"
         value:
           - "Sans activité"
           - "Étudiant·e"
           - "Autre"
       -
-        attribute: "last_class" 
+        attribute: "last_class"
         operator: "in?"
         value:
           - "Collège"
           - "Lycée"
           - "Autre"
       -
-        attribute: "duration" 
-        operator: "in?" 
+        attribute: "duration"
+        operator: "in?"
         value:
           - "Quelques mois"
           - "1 an"
@@ -541,12 +541,12 @@ mission-locale-de-reims:
   preparer-ton-entretien-d-embauche:
     -
       -
-        attribute: "awareness" 
+        attribute: "awareness"
         operator: "=="
         value: "Je sais ce que je veux faire"
       -
         attribute: "status"
-        operator: "in?" 
+        operator: "in?"
         value:
           - "Sans activité"
           - "Salarié·e"
@@ -554,12 +554,12 @@ mission-locale-de-reims:
           - "Apprenti·e"
           - "Autre"
       -
-        attribute: "age" 
-        operator: "<=" 
+        attribute: "age"
+        operator: "<="
         value: 25
       -
-        attribute: "last_class" 
-        operator: "in?" 
+        attribute: "last_class"
+        operator: "in?"
         value:
           - "Collège"
           - "Lycée"
@@ -570,30 +570,30 @@ pole-emploi:
   faire-un-point-sur-ta-situation-professionnelle:
     -
       -
-        attribute: "awareness" 
-        operator: "==" 
+        attribute: "awareness"
+        operator: "=="
         value: "Je ne sais pas ce que je veux faire"
       -
-        attribute: "status" 
-        operator: "==" 
+        attribute: "status"
+        operator: "=="
         value: "Sans activité"
       -
-        attribute: "mission_locale" 
-        operator: "==" 
+        attribute: "mission_locale"
+        operator: "=="
         value: false
 
   rechercher-un-stage-en-entreprise:
     -
       -
-        attribute: "awareness" 
-        operator: "==" 
+        attribute: "awareness"
+        operator: "=="
         value: "Je ne sais pas ce que je veux faire"
       -
         attribute: "status"
-        operator: "==" 
+        operator: "=="
         value: "Sans activité"
       -
-        attribute: "mission_locale" 
+        attribute: "mission_locale"
         operator: "=="
         value: false
 
@@ -605,19 +605,19 @@ pole-emploi:
         value: "Je sais ce que je veux faire"
       -
         attribute: "experience"
-        operator: "==" 
+        operator: "=="
         value: true
       -
-        attribute: "status" 
-        operator: "==" 
+        attribute: "status"
+        operator: "=="
         value: "Sans activité"
       -
-        attribute: "mission_locale" 
-        operator: "==" 
+        attribute: "mission_locale"
+        operator: "=="
         value: false
       -
-        attribute: "duration" 
-        operator: "in?" 
+        attribute: "duration"
+        operator: "in?"
         value:
           - "+ d'1 an"
           - "1 an"
@@ -626,24 +626,24 @@ afpa:
   comprendre-comment-marche-la-formation-professionnelle:
     -
       -
-        attribute: "awareness" 
-        operator: "==" 
+        attribute: "awareness"
+        operator: "=="
         value: "Je ne sais pas ce que je veux faire"
       -
-        attribute: "status" 
-        operator: "in?" 
+        attribute: "status"
+        operator: "in?"
         value:
           - "Sans activité"
           - "Étudiant·e"
           - "Lycéen·ne"
           - "Autre"
       -
-        attribute: "duration" 
-        operator: "==" 
+        attribute: "duration"
+        operator: "=="
         value: "+ d'1 an"
       -
-        attribute: "last_class" 
-        operator: "in?" 
+        attribute: "last_class"
+        operator: "in?"
         value:
           - "Collège"
           - "Lycée"
@@ -654,46 +654,46 @@ centre-d-information-et-de-recrutement-des-armees-cirfa-de-reims:
   t-engager-dans-l-armee-et-te-professionnaliser:
     -
       -
-        attribute: "awareness" 
-        operator: "==" 
+        attribute: "awareness"
+        operator: "=="
         value: "Je ne sais pas ce que je veux faire"
       -
-        attribute: "status" 
-        operator: "==" 
+        attribute: "status"
+        operator: "=="
         value: "Sans activité"
       -
-        attribute: "duration" 
+        attribute: "duration"
         operator: "=="
         value: "+ d'1 an"
       -
-        attribute: "last_class" 
-        operator: "in?" 
+        attribute: "last_class"
+        operator: "in?"
         value:
           - "Collège"
           - "Lycée"
       -
         attribute: "age"
-        operator: "<=" 
+        operator: "<="
         value: 30
 
-espace-metiers
-  m-aider-a-changer-de-metier
+espace-metiers:
+  m-aider-a-changer-de-metier:
     -
       -
-        attribute: "status" 
-        operator: "==" 
+        attribute: "status"
+        operator: "=="
         value: "Salarié·e"
-  
-  trouver-une-formation-adaptee-a-mon-projet
+
+  trouver-une-formation-adaptee-a-mon-projet:
     -
       -
-        attribute: "awareness" 
-        operator: "==" 
+        attribute: "awareness"
+        operator: "=="
         value: "Je sais ce que je veux faire"
       -
-        attribute: "status" 
-        operator: "in?" 
-        value: 
+        attribute: "status"
+        operator: "in?"
+        value:
           - "Sans activité"
           - "Étudiant·e"
           - "Lycéen·ne"
@@ -701,162 +701,158 @@ espace-metiers
           - "Apprenti·e"
           - "Autre"
 
-  decouvrir-les-metiers-adaptes-a-ma-formation
+  decouvrir-les-metiers-adaptes-a-ma-formation:
     -
       -
-        attribute: "awareness" 
-        operator: "==" 
+        attribute: "awareness"
+        operator: "=="
         value: "Je sais ce que je veux faire"
       -
-        attribute: "experience" 
-        operator: "==" 
+        attribute: "experience"
+        operator: "=="
         value: true
       -
-        attribute: "status" 
-        operator: "in?" 
-        value: 
+        attribute: "status"
+        operator: "in?"
+        value:
           - "Étudiant·e"
           - "Apprenti·e"
           - "En formation"
           - "Autre"
 
-  decouvrir-les-aides-au-permis-de-conduire
+  decouvrir-les-aides-au-permis-de-conduire:
     -
       -
-        attribute: "duration" 
-        operator: "in?" 
+        attribute: "duration"
+        operator: "in?"
         value:
           - "1 an"
           - "+ d'1 an"
 
-  m-aider-a-creer-mon-compte-personnel-de-formation
+  m-aider-a-creer-mon-compte-personnel-de-formation:
     -
       -
-        attribute: "awareness" 
-        operator: "==" 
+        attribute: "awareness"
+        operator: "=="
         value: "Je ne sais pas ce que je veux faire"
       -
-        attribute: "experience" 
-        operator: "==" 
+        attribute: "experience"
+        operator: "=="
         value: false
       -
-        attribute: "status" 
-        operator: "in?" 
-        value: 
+        attribute: "status"
+        operator: "in?"
+        value:
           - "Salarié.e"
           - "Sans activité"
- 
-  preparer-mon-entretien-avec-un-conseiller-pole-emploi
+
+  preparer-mon-entretien-avec-un-conseiller-pole-emploi:
     -
       -
-        attribute: "status" 
-        operator: "==" 
-        value: 
-          - "Sans activité"
+        attribute: "status"
+        operator: "=="
+        value: "Sans activité"
       -
         attribute: "pole_emploi"
         operator: "=="
         value: true
 
-  m-aider-a-creer-mon-compte-pole-emploi
+  m-aider-a-creer-mon-compte-pole-emploi:
     -
       -
-        attribute: "status" 
-        operator: "==" 
-        value: 
-          - "Sans activité"
+        attribute: "status"
+        operator: "=="
+        value: "Sans activité"
       -
         attribute: "pole_emploi"
         operator: "=="
         value: false
-        
-  decouvrir-les-formations-a-distance
-    -
-      -
-        attribute: "awareness"
-        operator: "==" 
-        value: "Je sais ce que je veux faire"
-      -
-        attribute: "experience"
-        operator: "==" 
-        value: true
-        
-  preparer-mes-evolutions-de-carrieres
-    -
-      -
-        attribute:"status"
-        operator: "==" 
-        value: 
-          - "Salarié.e"
 
-  comprendre-la-validation-d-acquis-d-experience
+  decouvrir-les-formations-a-distance:
     -
       -
         attribute: "awareness"
-        operator: "==" 
+        operator: "=="
         value: "Je sais ce que je veux faire"
       -
         attribute: "experience"
-        operator: "==" 
+        operator: "=="
         value: true
-        
+
+  preparer-mes-evolutions-de-carrieres:
+    -
+      -
+        attribute: "status"
+        operator: "=="
+        value: "Salarié.e"
+
+  comprendre-la-validation-d-acquis-d-experience:
     -
       -
         attribute: "awareness"
-        operator: "==" 
+        operator: "=="
         value: "Je sais ce que je veux faire"
       -
-        attribute:"status"
-        operator: "==" 
-        value: 
-          - "Salarié.e"
-          
-  trouver-un-stage
+        attribute: "experience"
+        operator: "=="
+        value: true
+
     -
       -
-        attribute: "awareness" 
-        operator: "==" 
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "status"
+        operator: "=="
+        value: "Salarié.e"
+
+  trouver-un-stage:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
         value: "Je ne sais pas ce que je veux faire"
       -
-        attribute: "status" 
-        operator: "in?" 
-        value: 
-          - "Sans activité"     
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
           - "Étudiant·e"
           - "Lycéen·ne"
           - "En formation"
           - "Autre"
-          
-  etre-guide-dans-mon-projet-de-creation-d-entreprise
+
+  etre-guide-dans-mon-projet-de-creation-d-entreprise:
     -
       -
         attribute: "awareness"
-        operator: "==" 
+        operator: "=="
         value: "Je sais ce que je veux faire"
       -
         attribute: "experience"
-        operator: "==" 
-        value: true  
-        
+        operator: "=="
+        value: true
+
   faire-un-point-sur-ta-situation-professionnelle-1004d742-94c9-4521-8e82-b7579a51c9ef:
     -
       -
-        attribute: "awareness" 
-        operator: "==" 
+        attribute: "awareness"
+        operator: "=="
         value: "Je ne sais pas ce que je veux faire"
       -
-        attribute: "status" 
-        operator: "==" 
+        attribute: "status"
+        operator: "=="
         value: "Sans activité"
       -
-        attribute: "mission_locale" 
-        operator: "==" 
+        attribute: "mission_locale"
+        operator: "=="
         value: false
       -
-        attribute: "pole_emploi" 
-        operator: "==" 
+        attribute: "pole_emploi"
+        operator: "=="
         value: false
 
-        
-  
- 
+
+
+
