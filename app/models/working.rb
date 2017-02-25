@@ -37,6 +37,8 @@
 class Working < ApplicationRecord
   include Wizardable
 
+  nilify_blanks only: :sector
+
   STEPS = %i(awareness project situation inscriptions).freeze
 
   with_options if: -> { required_for_step?(:awareness) } do |step|
@@ -47,8 +49,9 @@ class Working < ApplicationRecord
 
   with_options if: -> { required_for_step?(:project) } do |step|
     step.validates :sector,
-                   presence: true,
-                   inclusion: { in: SECTORS }
+                   inclusion: { in: SECTORS },
+                   allow_nil: true,
+                   allow_blank: true
 
     step.validates :duration,
                    presence: true,
