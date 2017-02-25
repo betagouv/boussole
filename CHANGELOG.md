@@ -1,5 +1,19 @@
 # Change Log
 
+## [v1.4.1](https://github.com/sgmap/boussole/tree/v1.4.1) (2017-02-25)
+[Full Changelog](https://github.com/sgmap/boussole/compare/v1.4.0...v1.4.1)
+
+**Implemented enhancements:**
+
+- Change updated\_at translation [\#87](https://github.com/sgmap/boussole/pull/87) ([maukoquiroga](https://github.com/maukoquiroga))
+- Render sector optional [\#86](https://github.com/sgmap/boussole/pull/86) ([maukoquiroga](https://github.com/maukoquiroga))
+- Simplify agent forms [\#84](https://github.com/sgmap/boussole/pull/84) ([maukoquiroga](https://github.com/maukoquiroga))
+- Ajouter l'offre de service de Pain d'Avoine [\#83](https://github.com/sgmap/boussole/pull/83) ([HelaG](https://github.com/HelaG))
+
+**Merged pull requests:**
+
+- Response time in days [\#85](https://github.com/sgmap/boussole/pull/85) ([maukoquiroga](https://github.com/maukoquiroga))
+
 ## [v1.4.0](https://github.com/sgmap/boussole/tree/v1.4.0) (2017-02-20)
 [Full Changelog](https://github.com/sgmap/boussole/compare/v1.3.0...v1.4.0)
 
