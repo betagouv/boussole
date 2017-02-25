@@ -13,7 +13,7 @@ RSpec.describe Working, type: :model do
     context 'project' do
       subject { build(:working, :project) }
 
-      it { is_expected.to validate_presence_of(:sector) }
+      it { is_expected.not_to validate_presence_of(:sector) }
       it { is_expected.to validate_inclusion_of(:sector).in_array(SECTORS) }
 
       it { is_expected.to validate_presence_of(:duration) }
