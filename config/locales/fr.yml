@@ -32,7 +32,7 @@ fr:
         next_status: Serai-je étudiant·e à la rentrée ?
         residence_city: 'Lieu de résidence actuel ?'
         age: Quel est mon âge ?
-        updated_at: Dernière actualisation
+        updated_at: Mis à jour le
       working:
         awareness: Sais-je ce que je veux faire ?
         sector: Secteur d'activité
@@ -48,13 +48,13 @@ fr:
         mission_locale: Mission locale ?
         cap_emploi: Cap emploi ?
         apec: Association pour l'emploi des cadres (APEC) ?
-        updated_at: Dernière actualisation
+        updated_at: Mis à jour le
       social_right:
         name: Nom
         public_services: Acteurs
         service_offerings: Offres de service
         measures: Dispositifs
-        updated_at: Dernière actualisation
+        updated_at: Mis à jour le
       public_service:
         slug: Code
         title: Nom
@@ -67,7 +67,7 @@ fr:
         social_rights: Thématiques
         service_offerings: Offres de service
         measures: Dispositifs
-        updated_at: Dernière actualisation
+        updated_at: Mis à jour le
       service_offering:
         slug: Code
         title: Nom
@@ -86,7 +86,7 @@ fr:
         url: Site web
         public_service: Acteur
         social_rights: Thématiques
-        updated_at: Dernière actualisation
+        updated_at: Mise à jour le
       contact:
         email_or_phone: Email ou téléphone
 
