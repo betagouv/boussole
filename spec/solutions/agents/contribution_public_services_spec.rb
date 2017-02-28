@@ -35,6 +35,7 @@ situation %(
         fill_in('Site web', with: 'https://decrochage.jeunes.gouv.fr')
         fill_in('Délai garanti de réponse', with: 22)
         select('Emploi', from: 'Thématiques')
+        select('Aougny', from: 'Compétence territoriale')
 
         click_button('Créer')
       end

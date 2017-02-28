@@ -44,7 +44,7 @@ solution('Find a flatsharing solution') do
       check('Serai-je étudiant·e à la rentrée ?', match: :first)
 
       # Current location
-      select('Ay', from: 'Lieu de résidence actuel ?')
+      select('Aougny', from: 'Lieu de résidence actuel ?')
 
       # Age
       select('18', from: 'Quel est mon âge ?')
@@ -84,7 +84,7 @@ solution('Find a flatsharing solution') do
       expect(current_email.body).to have_content('Quel est mon budget mensuel pour me loger (€) ? : 300')
       expect(current_email.body).to have_content("Quelle est ma situation aujourd'hui ? : Lycéen·ne")
       expect(current_email.body).to have_content('Serai-je étudiant·e à la rentrée ? : Oui')
-      expect(current_email.body).to have_content('Lieu de résidence actuel ? : Ay')
+      expect(current_email.body).to have_content('Lieu de résidence actuel ? : Aougny')
       expect(current_email.body).to have_content('Quel est mon âge ? : 18')
     end
   end

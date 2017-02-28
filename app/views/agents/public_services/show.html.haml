@@ -41,12 +41,16 @@
             %dd= @public_service.social_right_names
 
           .profile-definition
+            %dt= PublicService.human_attribute_name(:territorial_competences)
+            - @public_service.territorial_competences.to_a.select(&:present?).each do |city|
+              %dd= city
+
+          .profile-definition
             %dt= PublicService.human_attribute_name(:updated_at)
             %dd= @public_service.updated_at
 
           .profile-definition
             %dt= PublicService.human_attribute_name(:service_offerings)
-
             - @public_service.service_offerings.each do |service_offering|
               %dd
                 = link_to service_offering.title,

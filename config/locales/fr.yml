@@ -65,6 +65,7 @@ fr:
         url: Site web
         response_time_upper_bound: Délai garanti de réponse (jours)
         social_rights: Thématiques
+        territorial_competences: Compétence territoriale
         service_offerings: Offres de service
         measures: Dispositifs
         updated_at: Mis à jour le
