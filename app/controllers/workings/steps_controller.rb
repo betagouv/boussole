@@ -7,8 +7,6 @@ module Workings
 
     steps *Working::STEPS
 
-    require_feature :working
-
     def show
       load_working
       render_wizard

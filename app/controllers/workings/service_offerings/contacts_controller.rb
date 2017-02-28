@@ -6,8 +6,6 @@ module Workings
     class ContactsController < ApplicationController
       include ControllerHelpers
 
-      require_feature :working
-
       # POST /workings/1/service_offerings/1/contacts
       def create
         load_working

@@ -6,8 +6,6 @@ module Housings
     class ContactsController < ApplicationController
       include ControllerHelpers
 
-      require_feature :housing
-
       # Tracking
       after_action :track_activates_service, only: :create, if: :trackable?
 

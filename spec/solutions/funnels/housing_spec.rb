@@ -16,14 +16,12 @@ solution('Find a flatsharing solution') do
     given!(:service)       { create(:service_offering, title: 'Trouver un coloc', public_service: public_service) }
 
     background do
-      allow(Flip).to receive(:on?)
-      allow(Flip).to receive(:on?).with(:housing) { true }
       allow(Rails.root).to receive(:join) { 'spec/fixtures/criterias/housing.service_offerings.yml' }
     end
 
     scenario do
       visit('/')
-      click_link('Prends un RDV')
+      click_link('Logement')
 
       # Duration
       select('1 an', from: 'Je cherche un logement pour…')
@@ -59,13 +57,13 @@ solution('Find a flatsharing solution') do
       click_link('Découvres-en plus', match: :first)
 
       # She wants to be recontacted, but forgets to type in her email or phone number
-      click_button('Prends un RDV')
+      click_button('Obtiens un RDV')
 
       # She's notified she has to type in her email or phone in order to be contacted
       expect(page).to have_content(/doit être rempli·e/)
 
       fill_in('contact[email_or_phone]', with: 'zoe@contactez.moi')
-      click_button('Prends un RDV')
+      click_button('Obtiens un RDV')
 
       # She's notified she'll be contacted
       expect(page).to have_content(/dans un délai de #{service.response_time_upper_bound} jours/)

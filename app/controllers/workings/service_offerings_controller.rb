@@ -5,8 +5,6 @@ module Workings
   class ServiceOfferingsController < ApplicationController
     include ControllerHelpers
 
-    require_feature :working
-
     # Tracking
     after_action :track_discovers_service, only: :show, if: :trackable?
 

@@ -12,13 +12,12 @@ solution 'Talk to a human' do
   ) do
     background do
       allow(Flip).to receive(:on?)
-      allow(Flip).to receive(:on?).with(:working) { true }
       allow(Flip).to receive(:on?).with(:talk_to_a_human) { true }
     end
 
     scenario do
       visit('/')
-      click_link('Prends un RDV')
+      click_link('Emploi')
 
       expect(page).to have_link('Contacte nous :)', href: /#{ENV['CONTACT_EMAIL']}/)
     end

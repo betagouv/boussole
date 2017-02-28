@@ -15,14 +15,12 @@ solution('Improve my CV') do
     given!(:service)       { create(:service_offering, title: 'Améliorer mon CV', public_service: public_service) }
 
     background do
-      allow(Flip).to receive(:on?)
-      allow(Flip).to receive(:on?).with(:working) { true }
       allow(Rails.root).to receive(:join) { 'spec/fixtures/criterias/working.service_offerings.yml' }
     end
 
     scenario('she knows what she wants to do') do
       visit('/')
-      click_link('Prends un RDV')
+      click_link('Emploi')
 
       # Knowledge
       choose('Je sais ce que je veux faire')
@@ -85,13 +83,13 @@ solution('Improve my CV') do
       click_link('Découvres-en plus', match: :first)
 
       # She wants to be recontacted, but forgets to type in her email or phone number
-      click_button('Prends un RDV')
+      click_button('Obtiens un RDV')
 
       # She's notified she has to type in her email or phone in order to be contacted
       expect(page).to have_content(/doit être rempli·e/)
 
       fill_in('contact[email_or_phone]', with: 'chlotilde@contactez.moi')
-      click_button('Prends un RDV')
+      click_button('Obtiens un RDV')
 
       # She's notified she'll be contacted
       expect(page).to have_content(/dans un délai de #{service.response_time_upper_bound} jours/)

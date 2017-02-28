@@ -5,8 +5,6 @@ module Housings
   class ServiceOfferingsController < ApplicationController
     include ControllerHelpers
 
-    require_feature :housing
-
     # Tracking
     after_action :track_discovers_service, only: :show, if: :trackable?
 

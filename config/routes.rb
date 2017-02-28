@@ -17,11 +17,6 @@ Rails.application.routes.draw do
     end
   end
 
-  # TODO: Rename to trainings
-  resources(:projects, only: %i(show create)) do
-    concerns(:actionable, module: :projects)
-  end
-
   resources(:housings, only: %i(show create)) do
     concerns(:actionable, module: :housings)
   end
@@ -32,8 +27,6 @@ Rails.application.routes.draw do
 
   mount(Flip::Engine => '/flip')
   mount(Nkss::Engine => '/styleguide')
-
-  get '/:flyer', to: 'visitors#index', constraints: { flyer: /reims1[A|B|C|D|E|F|G|H|J|K|L|N]/ }
 
   root to: 'visitors#index'
 end

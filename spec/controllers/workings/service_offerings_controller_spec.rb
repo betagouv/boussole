@@ -6,10 +6,7 @@ RSpec.describe Workings::ServiceOfferingsController, type: :controller do
   let(:service_offering) { create(:service_offering, public_service: create(:public_service)) }
   let(:event_tracker)    { instance_spy(EventTracker) }
 
-  before do
-    allow(Flip).to receive(:on?) { true }
-    allow(subject).to receive(:tracker) { event_tracker }
-  end
+  before { allow(subject).to receive(:tracker) { event_tracker } }
 
   it 'GET #show' do
     get(:show, id: service_offering.to_param, working_id: working.to_param)

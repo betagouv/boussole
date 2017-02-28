@@ -32,22 +32,6 @@ class Feature < ApplicationRecord
   strategy Flip::DeclarationStrategy
   default false
 
-  feature :working,
-          default: false,
-          description: 'Working scenarios.'
-
-  feature :training,
-          default: false,
-          description: 'Training scenarios.'
-
-  feature :housing,
-          default: false,
-          description: 'Housing scenarios.'
-
-  feature :healthcaring,
-          default: false,
-          description: 'Healthcaring scenarios.'
-
   feature :talk_to_a_human,
           default: proc { rand(2).zero? },
           description: 'People would rather want to talk to a human.'
