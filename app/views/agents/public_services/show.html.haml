@@ -44,5 +44,14 @@
             %dt= PublicService.human_attribute_name(:updated_at)
             %dd= @public_service.updated_at
 
+          .profile-definition
+            %dt= PublicService.human_attribute_name(:service_offerings)
+
+            - @public_service.service_offerings.each do |service_offering|
+              %dd
+                = link_to service_offering.title,
+                          agents_service_offering_path(service_offering),
+                          role: 'link'
+
       .profile-actions
         = render(partial: 'blocks/button_groups/agents_show', locals: { model: @public_service })
