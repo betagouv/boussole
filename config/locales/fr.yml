@@ -125,8 +125,10 @@ fr:
 
   views:
     landing:
-      uvp_html: "Rencontre un·e professionnel·le<br>pour t'aider à %{scenario}"
-      cta: Prends un RDV
+      uvp_html: "Obtiens un RDV avec un·e professionnel·le<br>pour trouver un <strong>emploi</strong> ou un <strong>logement</strong>"
+      cta: Obtiens un RDV
+      working: Emploi
+      housing: Logement
       how_it_works: Comment ça marche ?
       step_1_html: En <a class='%{class}' href='%{href}' role='link'>5 min</a> trouve le bon contact
       step_2_html: En moins de <a class='%{class}' href='%{href}' role='link'>7 jours</a> tu seras contacté·e

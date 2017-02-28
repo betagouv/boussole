@@ -5,31 +5,16 @@
 .l-container-wide
   .l-content
     %section
-      %h1
-        - if feature?(:training)
-          = t('views.landing.uvp_html', scenario: 'trouver une formation')
-
-        - if feature?(:housing)
-          = t('views.landing.uvp_html', scenario: 'trouver un logement')
-
-        - if feature?(:working)
-          = t('views.landing.uvp_html', scenario: 'trouver un emploi')
-
-        - if feature?(:healthcaring)
-          = t('views.landing.uvp_html', scenario: 'prendre soin de ta santé')
+      %h1= t('views.landing.uvp_html')
 
     %section.cta
-      - if feature?(:working)
-        = link_to(t('views.landing.cta'), workings_path, method: :post, class: 'button-primary', role: 'link')
+      = link_to(workings_path, method: :post, class: 'button-primary', role: 'link') do
+        %i.icon-working{ aria: { hidden: true } }
+        = t('views.landing.working')
 
-      - if feature?(:training)
-        = link_to(t('views.landing.cta'), trainings_path, method: :post, class: 'button-primary', role: 'link')
-
-      - if feature?(:housing)
-        = link_to(t('views.landing.cta'), housings_path, method: :post, class: 'button-primary', role: 'link')
-
-      - if feature?(:healthcaring)
-        = link_to(t('views.landing.cta'), healthcarings_path, method: :post, class: 'button-primary', role: 'link')
+      = link_to(housings_path, method: :post, class: 'button-primary', role: 'link') do
+        %i.icon-housing{ aria: { hidden: true } }
+        = t('views.landing.housing')
 
     %section
       %h1.divider

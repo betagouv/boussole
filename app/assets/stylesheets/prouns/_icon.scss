@@ -21,3 +21,13 @@
   @extend %icon;
   @extend .fa-arrow-circle-right;
 }
+
+.icon-working {
+  @extend %icon;
+  @extend .fa-cogs;
+}
+
+.icon-housing {
+  @extend %icon;
+  @extend .fa-home;
+}

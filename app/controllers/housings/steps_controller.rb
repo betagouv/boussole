@@ -7,8 +7,6 @@ module Housings
 
     steps *Housing::STEPS
 
-    require_feature :housing
-
     def show
       load_housing
       render_wizard

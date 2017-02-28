@@ -4,19 +4,17 @@
 class HousingsController < ApplicationController
   include ControllerHelpers
 
-  require_feature :housing
-
   # Tracking
   after_action :track_starts_form, only: :create, if: :trackable?
   after_action :track_finishes_form, only: :show, if: :trackable?
 
-  # GET /projects/1
+  # GET /housings/1
   def show
     load_housing
     @service_offerings = Housing::ServiceOfferings.present(params).scope
   end
 
-  # POST /projects
+  # POST /housings
   def create
     build_housing
     @housing.save(validate: false)

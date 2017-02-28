@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170228140853) do
+ActiveRecord::Schema.define(version: 20170228151501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,27 +56,6 @@ ActiveRecord::Schema.define(version: 20170228140853) do
   end
 
   add_index "measures", ["public_service_id"], name: "index_measures_on_public_service_id", using: :btree
-
-  create_table "projects", force: :cascade do |t|
-    t.string   "knowledge"
-    t.integer  "age"
-    t.string   "status"
-    t.string   "last_class"
-    t.string   "city"
-    t.boolean  "handicap"
-    t.boolean  "experience"
-    t.boolean  "pe"
-    t.boolean  "ml"
-    t.boolean  "cap"
-    t.boolean  "apec"
-    t.string   "area"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "domain"
-    t.string   "formation"
-    t.string   "degree"
-    t.boolean  "intention"
-  end
 
   create_table "public_services", force: :cascade do |t|
     t.string   "title"
