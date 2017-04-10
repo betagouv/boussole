@@ -7,6 +7,25 @@
 
 # Boussole
 
+### Contribuer
+
+```
+git clone https://github.com/sgmap/boussole.git
+cd boussole
+gem install --no-ri --no-rdoc bundler
+bundle install
+cp config/database.yml.example config/database.yml
+```
+
+Modifiez ```config/database.yml``` si besoin est.
+
+```
+bundle exec rake db:setup
+bundle exec guard
+```
+
+Visitez ```localhost:5000```
+
 ### Génération du modèle entité-association (ERD)
 
 ```
@@ -34,4 +53,4 @@ bundle exec rake changelog
 
 ### Consulter la guide de styles
 
-Visitez ```/styleguides```
+Visitez ```localhost:5000/styleguides```
