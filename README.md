@@ -30,6 +30,20 @@ Modifiez ```config/database.yml``` si besoin est.
 
 ```
 bundle exec rake db:setup
+brew install nvm
+```
+
+Copier sur votre ```.bashrc``` ou ```.zshrc``` :
+
+```bash
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
+```
+
+```
+nvm install v6.0.0
+npm install bower -g
+bower install
 bundle exec guard
 ```
 
