@@ -4,8 +4,8 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
 
-gem 'rails', '~> 4.2'
 gem 'pg'
+gem 'rails', '~> 4.2'
 
 gem 'active_type'
 gem 'coffee-rails'
@@ -19,6 +19,7 @@ gem 'rails-i18n'
 gem 'sass-rails'
 gem 'sentry-raven'
 gem 'simple_form'
+gem 'trailblazer', '1.1.2'
 gem 'trailblazer-rails'
 gem 'uglifier'
 gem 'wicked'
@@ -57,14 +58,14 @@ group :development do
   gem 'annotate'
   gem 'better_errors'
   gem 'foreman'
-  gem 'i18n-tasks', require: false
-  gem 'letter_opener_web'
   gem 'github_changelog_generator', require: false
-  gem 'guard-bundler', require: false
   gem 'guard-bower', require: false
+  gem 'guard-bundler', require: false
   gem 'guard-foreman', require: false
   gem 'guard-livereload', require: false
   gem 'guard-rspec', require: false
+  gem 'i18n-tasks', require: false
+  gem 'letter_opener_web'
   gem 'quiet_assets'
   gem 'rails-erd'
   gem 'rb-fchange', require: false
@@ -76,8 +77,8 @@ group :development do
   # Linters
   gem 'haml-lint', require: false
   gem 'inch', require: false
-  gem 'rubocop', require: false
-  gem 'rubocop-rspec', require: false
+  gem 'rubocop', '0.45', require: false
+  gem 'rubocop-rspec', '1.5', require: false
   gem 'scss_lint', require: false
   gem 'yaml-lint', require: false
 end
@@ -85,7 +86,7 @@ end
 group :test do
   gem 'capybara'
   gem 'capybara-email'
-  gem 'codeclimate-test-reporter'
+  gem 'codeclimate-test-reporter', '< 1.0'
   gem 'database_cleaner'
   gem 'poltergeist'
   gem 'rspec_junit_formatter'
