@@ -7,13 +7,22 @@
 
 # Boussole
 
-### Contribuer
+### Installer l'app
 
 ```
 git clone https://github.com/sgmap/boussole.git
 cd boussole
 gem install --no-ri --no-rdoc bundler
 bundle install
+```
+
+```
+cp .env.example .env
+```
+
+Modifiez ```.env``` si besoin est.
+
+```
 cp config/database.yml.example config/database.yml
 ```
 
