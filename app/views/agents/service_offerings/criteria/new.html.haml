@@ -1,0 +1,9 @@
+-# coding: utf-8
+
+.l-container-narrow
+  .l-content
+    %article.profile-form
+      %h1.profile-form-header= t('.heading')
+      %hr
+
+      = render(partial: 'form', locals: { service_offering: @service_offering, criterium: @criterium })

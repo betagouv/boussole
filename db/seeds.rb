@@ -7,6 +7,10 @@ seeds['social_rights'].each do |name|
   SocialRight.find_or_create_by!(name: name)
 end
 
+seeds['social_rights'].each do |name|
+  SocialRight.find_or_create_by!(name: name)
+end
+
 seeds['public_services'].each_pair do |name, hash|
   instance_variable_set(
     "@#{name}",

@@ -16,6 +16,17 @@ ActiveRecord::Schema.define(version: 20170411181215) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "criteria", force: :cascade do |t|
+    t.string   "name"
+    t.string   "operator"
+    t.string   "value"
+    t.integer  "service_offering_id", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "criteria", ["service_offering_id"], name: "index_criteria_on_service_offering_id", using: :btree
+
   create_table "exercise_scopes", force: :cascade do |t|
     t.integer  "social_right_id",  null: false
     t.integer  "exercisable_id",   null: false
@@ -122,6 +133,7 @@ ActiveRecord::Schema.define(version: 20170411181215) do
     t.datetime "updated_at",                     null: false
   end
 
+  add_foreign_key "criteria", "service_offerings"
   add_foreign_key "exercise_scopes", "social_rights"
   add_foreign_key "measures", "public_services"
   add_foreign_key "service_offerings", "public_services"

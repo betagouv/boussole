@@ -6,7 +6,11 @@ Rails.application.routes.draw do
     root(to: 'dashboard#index')
 
     resources(:public_services)
-    resources(:service_offerings)
+
+    resources(:service_offerings) do
+      resources(:criteria, module: :service_offerings)
+    end
+
     resources(:measures)
   end
 
@@ -29,4 +33,5 @@ Rails.application.routes.draw do
   mount(Nkss::Engine => '/styleguide')
 
   root to: 'visitors#index'
+
 end

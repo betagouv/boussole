@@ -52,3 +52,9 @@
 
       .profile-actions
         = render(partial: 'blocks/button_groups/agents_show', locals: { model: @service_offering })
+
+        = link_to t('criteria.new_criterium'),
+                  new_agents_service_offering_criterium_path(@service_offering),
+                  class: 'button-success',
+                  role: 'link'
+

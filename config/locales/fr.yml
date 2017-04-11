@@ -168,6 +168,9 @@ fr:
         heading: Nouvelle offre de service
       edit:
         heading: Mettre à jour l'offre de service
+      criteria:
+        new:
+          heading: Nouveau public cible
 
     measures:
       index:
@@ -178,7 +181,9 @@ fr:
       edit:
         heading: Mettre à jour le dispositif
 
+  criteria:
+    new_criterium: Ajouter un public cible
+
   rhizomes:
     reims: Reims
     essonne: Cœur d'Essonne
-

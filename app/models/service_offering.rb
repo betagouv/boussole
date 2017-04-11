@@ -23,6 +23,9 @@ class ServiceOffering < ApplicationRecord
   belongs_to :social_right,
              inverse_of: :service_offerings
 
+  has_many :criteria,
+           inverse_of: :service_offering
+
   validates :title,
             :public_service,
             :social_right,
@@ -44,6 +47,9 @@ class ServiceOffering < ApplicationRecord
 
   validates :slug,
             uniqueness: { scope: :public_service_id }
+
+  validates :social_right,
+            presence: true
 
   delegate :title,
            to: :public_service,
