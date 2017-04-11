@@ -537,6 +537,10 @@ mission-locale-de-reims:
         value:
           - "Quelques mois"
           - "1 an"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 25
 
   preparer-ton-entretien-d-embauche:
     -
@@ -778,6 +782,16 @@ espace-metiers:
         attribute: "experience"
         operator: "=="
         value: true
+      -
+        attribute: "status"
+        operator: "in?"
+        value: 
+          - "Salarié.e"
+          - "Sans activité"
+          - "Lycéen·ne"
+          - "En formation"
+          - "Autre"
+          - "Apprenti·e"
 
   preparer-mes-evolutions-de-carrieres:
     -
