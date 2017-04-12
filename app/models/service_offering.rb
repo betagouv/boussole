@@ -93,7 +93,8 @@ class ServiceOffering < ApplicationRecord
 
   delegate :name,
            to: :social_right,
-           prefix: true
+           prefix: true,
+           allow_nil: true
 
   scope(
     :actionable,
