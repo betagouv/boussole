@@ -1,19 +1,26 @@
 module Agents
   module ServiceOfferings
     class CriteriaController < ApplicationController
-      #before_action :set_service_offering
+      before_action :set_service_offering
+
+      # GET /agents/service_offerings/:service_offering_id/criteria
+      def index
+        @criteria = Criterium.all
+      end
+
 
       # GET /agents/service_offerings/:service_offering_id/criteria/new
       def new
-        @service_offering = ServiceOffering.friendly.find(params[:service_offering_id])
         @criterium = Criterium.new
       end
 
       # POST /agents/service_offerings/:service_offering_id/criteria
       def create
         @criterium = Criterium.new(criterium_params)
-        @criterium.service_offering = ServiceOffering.find(params[:service_offering_id])
+        @criterium.service_offering = @service_offering
         @criterium.save
+
+        redirect_to
       end
 
       private
@@ -24,9 +31,6 @@ module Agents
           .require(:criterium)
             .permit(
               :id,
-              :name,
-              :operator,
-              :value,
               :service_offering_id
               )
       end
@@ -58,7 +62,7 @@ module Agents
       end
 
       def set_service_offering
-        @service_offering = service_offering_scope.find(params[:id])
+        @service_offering = service_offering_scope.find(params[:service_offering_id])
       end
 
     end

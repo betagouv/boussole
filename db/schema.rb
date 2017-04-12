@@ -11,21 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170411181215) do
+ActiveRecord::Schema.define(version: 20170412152918) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "criteria", force: :cascade do |t|
-    t.string   "name"
-    t.string   "operator"
-    t.string   "value"
     t.integer  "service_offering_id", null: false
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
   end
 
   add_index "criteria", ["service_offering_id"], name: "index_criteria_on_service_offering_id", using: :btree
+
+  create_table "criteria_statuses", id: false, force: :cascade do |t|
+    t.integer "criterium_id", null: false
+    t.integer "status_id",    null: false
+  end
+
+  add_index "criteria_statuses", ["criterium_id"], name: "index_criteria_statuses_on_criterium_id", using: :btree
+  add_index "criteria_statuses", ["status_id"], name: "index_criteria_statuses_on_status_id", using: :btree
 
   create_table "exercise_scopes", force: :cascade do |t|
     t.integer  "social_right_id",  null: false
@@ -113,6 +118,12 @@ ActiveRecord::Schema.define(version: 20170411181215) do
   end
 
   add_index "social_rights", ["slug"], name: "index_social_rights_on_slug", unique: true, using: :btree
+
+  create_table "statuses", force: :cascade do |t|
+    t.string   "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "workings", force: :cascade do |t|
     t.string   "awareness"

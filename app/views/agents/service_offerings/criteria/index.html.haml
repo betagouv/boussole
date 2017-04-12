@@ -1,0 +1,28 @@
+-# coding: utf-8
+
+.l-container-wide
+  .l-content
+    %section.profile-list
+      %h1.profile-list-header= t('.heading')
+      %hr
+
+      .profile-list-content
+        %table
+          %thead
+            %tr
+              %th= Criterium.human_attribute_name(:name)
+              %th= Criterium.human_attribute_name(:operator)
+              %th
+              %th
+              %th
+
+          %tbody
+            - @criteria.each do |criterium|
+              %tr
+                = simple_form_for([:agents, @service_offering, criterium], wrapper: :vertical_form) do |f|
+                  %td= 'Statut'
+                  %td= f.input(:status, collection: ['Sans activité', 'Étudiant·e', 'Lycéen·ne', 'Salarié·e', 'En formation', 'Apprenti·e', 'Autre'], prompt: "Statut", selected: 3)
+                  %td= link_to t('criteria.index_criterium'),
+                    agents_service_offering_criteria_path(@service_offering),
+                    class: 'button-success',
+                    role: 'link'

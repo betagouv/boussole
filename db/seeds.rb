@@ -37,3 +37,19 @@ seeds['measures'].each_pair do |_, hash|
       hash.reject { |key, _| key =~ /ext|public_service/ }
     )
 end
+
+Criterium.create(service_offering_id: 1)
+
+Status.create(value: 'Sans activité')
+
+Status.create(value: 'Étudiant·e')
+
+Status.create(value: 'Lycéen·ne')
+
+Status.create(value: 'Salarié·e')
+
+Status.create(value: 'En formation')
+
+Status.create(value: 'Apprenti·e')
+
+Status.create(value: 'Autre')

@@ -90,6 +90,10 @@ fr:
         updated_at: Mise à jour le
       contact:
         email_or_phone: Email ou téléphone
+      criterium:
+        name: Critère
+        operator: Définition
+        value: Valeur
 
   actioncontroller:
     notice:
@@ -170,7 +174,9 @@ fr:
         heading: Mettre à jour l'offre de service
       criteria:
         new:
-          heading: Nouveau public cible
+          heading: Public cible
+        index:
+          heading: Public cible
 
     measures:
       index:
@@ -182,7 +188,8 @@ fr:
         heading: Mettre à jour le dispositif
 
   criteria:
-    new_criterium: Ajouter un public cible
+    new_criterium: Public cible
+    index_criterium: Public cible
 
   rhizomes:
     reims: Reims
