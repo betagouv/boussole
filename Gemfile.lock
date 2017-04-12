@@ -446,10 +446,10 @@ GEM
       reform (>= 2.0.0, < 3.0.0)
       uber (>= 0.0.15, < 0.1.0)
     trailblazer-loader (0.1.0)
-    trailblazer-rails (0.4.0)
+    trailblazer-rails (0.3.2)
       reform-rails (>= 0.1.4)
       trailblazer (>= 1.0.4)
-      trailblazer-loader (>= 0.1.0)
+      trailblazer-loader (>= 0.0.7)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
     uber (0.0.15)
@@ -538,7 +538,7 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   trailblazer (= 1.1.2)
-  trailblazer-rails
+  trailblazer-rails (< 0.4)
   uglifier
   web-console
   wicked

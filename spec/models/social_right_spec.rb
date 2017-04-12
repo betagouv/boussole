@@ -4,8 +4,10 @@
 RSpec.describe SocialRight, type: :model do
   subject                { create(:social_right) }
   let(:public_service)   { create(:public_service) }
-  let(:service_offering) { create(:service_offering, public_service: public_service) }
+  let(:service_offering) { create(:service_offering) }
   let(:measure)          { create(:measure) }
+
+  it { is_expected.to have_many(:service_offerings) }
 
   it { is_expected.to validate_presence_of(:name) }
   it { is_expected.to validate_uniqueness_of(:name) }

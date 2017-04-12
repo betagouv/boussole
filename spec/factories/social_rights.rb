@@ -3,6 +3,6 @@
 
 FactoryGirl.define do
   factory(:social_right) do
-    name FFaker::LoremFR.word
+    name { FFaker::LoremFR.word }
   end
 end

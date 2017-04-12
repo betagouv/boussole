@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170228151501) do
+ActiveRecord::Schema.define(version: 20170411181215) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,11 +86,13 @@ ActiveRecord::Schema.define(version: 20170228151501) do
     t.string   "url"
     t.string   "slug"
     t.integer  "response_time_upper_bound"
+    t.integer  "social_right_id"
   end
 
   add_index "service_offerings", ["public_service_id", "slug"], name: "index_service_offerings_on_public_service_id_and_slug", unique: true, using: :btree
   add_index "service_offerings", ["public_service_id"], name: "index_service_offerings_on_public_service_id", using: :btree
   add_index "service_offerings", ["response_time_upper_bound"], name: "index_service_offerings_on_response_time_upper_bound", using: :btree
+  add_index "service_offerings", ["social_right_id"], name: "index_service_offerings_on_social_right_id", using: :btree
 
   create_table "social_rights", force: :cascade do |t|
     t.string   "name",       null: false
@@ -123,4 +125,5 @@ ActiveRecord::Schema.define(version: 20170228151501) do
   add_foreign_key "exercise_scopes", "social_rights"
   add_foreign_key "measures", "public_services"
   add_foreign_key "service_offerings", "public_services"
+  add_foreign_key "service_offerings", "social_rights"
 end
