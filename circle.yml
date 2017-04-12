@@ -4,6 +4,7 @@ test:
     - bower prune
 
   post:
+    - bundle exec rake i18n_health
     - bundle exec rake haml_lint
     - bundle exec yaml-lint config/data config/criterias
     - bundle exec rake inch

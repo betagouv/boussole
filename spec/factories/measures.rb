@@ -3,7 +3,7 @@
 
 FactoryGirl.define do
   factory(:measure) do
-    title FFaker::LoremFR.word
-    url FFaker::Internet.http_url
+    title { FFaker::LoremFR.word }
+    url   { FFaker::Internet.http_url }
   end
 end

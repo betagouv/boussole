@@ -1,3 +1,9 @@
+social_rights:
+  - Emploi
+  - Logement
+  - Formation
+  - Santé
+
 public_services:
   siao:
     title: SIAO (Services Intégrés de l’Accueil et de l’Orientation)  # titre, nom de l'acteur
@@ -121,10 +127,3 @@ measures:
     description: La garantie Visale est un engagement gratuit pour le locataire et le bailleur. Le dispositif vise à couvrir les impayés de loyers (charges comprises) du locataire, quelle qu'en soit la cause au cours des trois premières années du bail et dans la limite du départ du locataire
     url: https://www.visale.fr/#/
     public_service: action_logement
-
-social_rights:
-  - Santé
-  - Emploi
-  - Formation
-  - Logement
-
