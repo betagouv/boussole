@@ -88,12 +88,6 @@ RSpec.describe ServiceOffering, type: :model do
     subject(:service_offering) { create(:service_offering, public_service: public_service, social_right: social_right) }
     let(:social_right)         { build(:social_right) }
 
-    it 'has_many #social_rights' do
-      expect {
-        service_offering.social_rights << social_right
-      }.to change { service_offering.social_rights.count }.by(1)
-    end
-
     it 'delegates #title to #public_service' do
       expect(service_offering.public_service_title).to eq(public_service.title)
     end

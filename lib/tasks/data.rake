@@ -21,7 +21,7 @@ namespace :data do
       record.update_attribute(:response_time_upper_bound, 7) if record.response_time_upper_bound.to_i.zero?
     end
 
-    # Migrate service offering's social rights
+    # Migrate service offering's social rights 1/2
     ServiceOffering.find_each do |record|
       if record.respond_to?(:social_rights)
         record.social_right =
@@ -32,5 +32,10 @@ namespace :data do
         record.save
       end
     end
+
+    # Migrate service offering's social rights 2/2
+    ExerciseScope
+      .where(exercisable_type: 'ServiceOffering')
+      .find_each(&:delete)
   end
 end
