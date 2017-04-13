@@ -17,7 +17,8 @@ class Housing < ApplicationRecord
                    presence: true,
                    inclusion: { in: HOUSING_DURATIONS }
 
-    step.validates :housing_city, presence: true
+    step.validates :housing_city,
+                   presence: true
   end
 
   with_options if: -> { required_for_step?(:profile) } do |step|

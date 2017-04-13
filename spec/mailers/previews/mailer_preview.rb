@@ -6,7 +6,7 @@ class MailerPreview < ActionMailer::Preview
 
   def contact_email
     contact          = create(:contact)
-    service_offering = ServiceOfferingDecorator.(create(:service_offering, public_service: create(:public_service)))
+    service_offering = ServiceOfferingDecorator.(create(:service_offering))
     working          = WorkingDecorator.(create(:working))
 
     Mailer.contact_email(contact, service_offering, working)

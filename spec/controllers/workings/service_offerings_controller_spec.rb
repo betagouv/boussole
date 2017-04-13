@@ -3,7 +3,7 @@
 
 RSpec.describe Workings::ServiceOfferingsController, type: :controller do
   let(:working)          { create(:working) }
-  let(:service_offering) { create(:service_offering, public_service: create(:public_service)) }
+  let(:service_offering) { create(:service_offering) }
   let(:event_tracker)    { instance_spy(EventTracker) }
 
   before { allow(subject).to receive(:tracker) { event_tracker } }
