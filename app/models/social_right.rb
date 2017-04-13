@@ -34,8 +34,8 @@ class SocialRight < ApplicationRecord
 
   has_many :exercise_scopes, inverse_of: :social_right, dependent: :destroy
   has_many :public_services,   through: :exercise_scopes, source: :exercisable, source_type: 'PublicService'
-  has_many :service_offerings, through: :exercise_scopes, source: :exercisable, source_type: 'ServiceOffering'
   has_many :measures,          through: :exercise_scopes, source: :exercisable, source_type: 'Measure'
+  has_many :service_offerings
 
   validates :name, presence: true, uniqueness: true
 end

@@ -46,7 +46,6 @@
 #++
 class ServiceOffering < ApplicationRecord
   extend FriendlyId
-  include Nameable
 
   friendly_id :title, use: :slugged
 
@@ -57,13 +56,6 @@ class ServiceOffering < ApplicationRecord
 
   belongs_to :social_right,
              inverse_of: :service_offerings
-
-  has_many :exercise_scopes,
-           as: :exercisable,
-           dependent: :destroy
-
-  has_many :social_rights,
-           through: :exercise_scopes
 
   validates :title,
             :public_service,
