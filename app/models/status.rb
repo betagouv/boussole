@@ -14,7 +14,9 @@
 # #
 
 class Status < ActiveRecord::Base
-  has_many :criteria
+  has_many :criteria_statuses
+
+  has_many :criteria, through: :criteria_statuses
 
   validates :value,
   presence: true

@@ -15,7 +15,9 @@
 class Criterium < ActiveRecord::Base
   belongs_to :service_offering
 
-  has_many :statuses
+  has_many :criteria_statuses
+
+  has_many :statuses, through: :criteria_statuses
 
   validates :service_offering_id,
             presence: true
