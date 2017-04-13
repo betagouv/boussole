@@ -33,7 +33,7 @@ situation %(
   end
 
   solution('Create a measure') do
-    scenario 'with valid inofrmation' do
+    scenario 'with valid information' do
       click_link('Ajouter un nouveau dispositif')
 
       within('.profile-form') do
