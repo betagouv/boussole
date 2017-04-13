@@ -23,7 +23,7 @@ situation %(
   end
 
   solution('Create a public service') do
-    scenario 'with valid inofrmation' do
+    scenario 'with valid information' do
       click_link('Ajouter un nouvel acteur')
 
       within('.profile-form') do

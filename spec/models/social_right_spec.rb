@@ -18,12 +18,6 @@ RSpec.describe SocialRight, type: :model do
     }.to change { subject.public_services.count }.by(1)
   end
 
-  it 'has_many :service_offerings' do
-    expect {
-      subject.service_offerings << service_offering
-    }.to change { subject.service_offerings.count }.by(1)
-  end
-
   it 'has_many :measures' do
     expect {
       subject.measures << measure

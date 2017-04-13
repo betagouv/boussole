@@ -36,7 +36,7 @@ situation %(
   end
 
   solution('Create a service offering') do
-    scenario 'with valid inofrmation' do
+    scenario 'with valid information' do
       click_link('Ajouter une nouvelle offre de service')
 
       within('.profile-form') do

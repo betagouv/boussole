@@ -55,7 +55,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'annotate'
   gem 'better_errors'
   gem 'foreman'
   gem 'github_changelog_generator', require: false
