@@ -12,7 +12,8 @@ class PublicService < ApplicationRecord
   extend FriendlyId
   include Nameable
 
-  friendly_id :title, use: :slugged
+  friendly_id :title,
+              use: :slugged
 
   nilify_blanks only: :email
 

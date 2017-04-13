@@ -8,5 +8,7 @@
 #
 class Contact < ActiveType::Object
   attribute :email_or_phone, :string
-  validates :email_or_phone, presence: true
+
+  validates :email_or_phone,
+            presence: true
 end

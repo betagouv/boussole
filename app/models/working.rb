@@ -48,6 +48,7 @@ class Working < ApplicationRecord
                    presence: true,
                    inclusion: { in: CITIES }
 
-    step.validates :age, presence: true
+    step.validates :age,
+                   presence: true
   end
 end

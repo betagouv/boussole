@@ -9,5 +9,8 @@
 #
 class ExerciseScope < ApplicationRecord
   belongs_to :social_right
-  belongs_to :exercisable, polymorphic: true, inverse_of: :exercise_scopes
+
+  belongs_to :exercisable,
+             polymorphic: true,
+             inverse_of: :exercise_scopes
 end

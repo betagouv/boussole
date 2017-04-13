@@ -25,6 +25,7 @@ class Housing < ApplicationRecord
                    presence: true,
                    inclusion: { in: STATUSES }
 
-    step.validates :age, presence: true
+    step.validates :age,
+                   presence: true
   end
 end

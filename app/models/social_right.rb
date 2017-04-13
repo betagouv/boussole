@@ -10,12 +10,25 @@
 class SocialRight < ApplicationRecord
   extend FriendlyId
 
-  friendly_id :name, use: :slugged
+  friendly_id :name,
+              use: :slugged
 
-  has_many :exercise_scopes, inverse_of: :social_right, dependent: :destroy
-  has_many :public_services,   through: :exercise_scopes, source: :exercisable, source_type: 'PublicService'
-  has_many :measures,          through: :exercise_scopes, source: :exercisable, source_type: 'Measure'
+  has_many :exercise_scopes,
+           inverse_of: :social_right,
+           dependent: :destroy
+
+  has_many :public_services,
+           through: :exercise_scopes,
+           source: :exercisable,
+           source_type: 'PublicService'
+
+  has_many :measures,
+           through: :exercise_scopes,
+           source: :exercisable, source_type: 'Measure'
+
   has_many :service_offerings
 
-  validates :name, presence: true, uniqueness: true
+  validates :name,
+            presence: true,
+            uniqueness: true
 end
