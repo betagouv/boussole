@@ -7,27 +7,6 @@
 #
 # @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
 #
-
-#
-# == Schema Information
-# Schema version: 20160914121308
-#
-# Table name: housings
-#
-# *id*::             <tt>integer, not null, primary key</tt>
-# *created_at*::     <tt>datetime, not null</tt>
-# *updated_at*::     <tt>datetime, not null</tt>
-# *duration*::       <tt>string</tt>
-# *current_status*:: <tt>string</tt>
-# *resources*::      <tt>integer, default(0)</tt>
-# *age*::            <tt>integer</tt>
-# *housing_city*::   <tt>string</tt>
-# *residence_city*:: <tt>string</tt>
-# *next_status*::    <tt>boolean, default(FALSE)</tt>
-#--
-# == Schema Information End
-#++
-#
 class Housing < ApplicationRecord
   include Wizardable
 

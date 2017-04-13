@@ -7,26 +7,6 @@
 #
 # @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
 #
-
-#
-# == Schema Information
-# Schema version: 20160914121308
-#
-# Table name: social_rights
-#
-# *id*::         <tt>integer, not null, primary key</tt>
-# *name*::       <tt>string, not null</tt>
-# *slug*::       <tt>string, not null</tt>
-# *created_at*:: <tt>datetime, not null</tt>
-# *updated_at*:: <tt>datetime, not null</tt>
-#
-# Indexes
-#
-#  index_social_rights_on_slug  (slug) UNIQUE
-#--
-# == Schema Information End
-#++
-#
 class SocialRight < ApplicationRecord
   extend FriendlyId
 

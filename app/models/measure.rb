@@ -10,32 +10,6 @@
 #
 # TODO: Rename to {DigitalService}
 #
-
-#
-# == Schema Information
-# Schema version: 20160914121308
-#
-# Table name: measures
-#
-# *id*::                <tt>integer, not null, primary key</tt>
-# *title*::             <tt>string</tt>
-# *description*::       <tt>text</tt>
-# *url*::               <tt>string</tt>
-# *public_service_id*:: <tt>integer</tt>
-# *created_at*::        <tt>datetime, not null</tt>
-# *updated_at*::        <tt>datetime, not null</tt>
-#
-# Indexes
-#
-#  index_measures_on_public_service_id  (public_service_id)
-#
-# Foreign Keys
-#
-#  fk_rails_22911d55d8  (public_service_id => public_services.id)
-#--
-# == Schema Information End
-#++
-#
 class Measure < ApplicationRecord
   include Nameable
 

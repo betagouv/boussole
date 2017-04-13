@@ -8,22 +8,6 @@
 #
 # @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
 #
-
-#
-# == Schema Information
-# Schema version: 20160914121308
-#
-# Table name: features
-#
-# *id*::         <tt>integer, not null, primary key</tt>
-# *key*::        <tt>string, not null</tt>
-# *enabled*::    <tt>boolean, default(FALSE), not null</tt>
-# *created_at*:: <tt>datetime, not null</tt>
-# *updated_at*:: <tt>datetime, not null</tt>
-#--
-# == Schema Information End
-#++
-#
 class Feature < ApplicationRecord
   extend Flip::Declarable
 
