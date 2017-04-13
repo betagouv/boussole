@@ -13,7 +13,12 @@ situation %(
   given!(:social_right) { create(:social_right, name: 'Logement') }
 
   # There's one public service
-  given!(:public_service) { create(:public_service, title: 'Services Intégrés de l’Accueil et de l’Orientation') }
+  given!(:public_service) do
+    create(
+      :public_service,
+      title: 'Services Intégrés de l’Accueil et de l’Orientation'
+    )
+  end
 
   # There's one service offering
   given!(:service_offering) do
@@ -21,7 +26,7 @@ situation %(
       :service_offering,
       title: "Trouver une solution de logement d'urgence",
       public_service: public_service,
-      social_rights: [social_right]
+      social_right: social_right
     )
   end
 
@@ -43,7 +48,7 @@ situation %(
         fill_in('Téléphone', with: '01 23 45 67 89')
         fill_in('Site web', with: 'https://logement.jeunes.gouv.fr')
         fill_in('Délai garanti de réponse', with: 22)
-        select('Logement', from: 'Thématiques')
+        select('Logement', from: 'Thématique')
 
         click_button('Créer')
       end

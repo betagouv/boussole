@@ -6,10 +6,36 @@ namespace :data do
   task migrate: :environment do
     # Nulify emails
     [PublicService, ServiceOffering].each do |klass|
-      klass.find_each { |record| record.update_attribute(:email, nil) if record.email && record.email.empty? }
+      klass.find_each do |record|
+        record.update_attribute(:email, nil) if record.email && record.email.empty?
+      end
     end
 
     # Generate slugs
-    [PublicService, ServiceOffering, SocialRight].each { |klass| klass.find_each(&:save) }
+    [PublicService, ServiceOffering, SocialRight].each do |klass|
+      klass.find_each(&:save)
+    end
+
+    # Service offering's response time
+    ServiceOffering.find_each do |record|
+      record.update_attribute(:response_time_upper_bound, 7) if record.response_time_upper_bound.to_i.zero?
+    end
+
+    # Migrate service offering's social rights 1/2
+    ServiceOffering.find_each do |record|
+      if record.respond_to?(:social_rights)
+        record.social_right =
+          record.social_rights.find_by(name: 'Emploi') ||
+          record.social_rights.find_by(name: 'Logement') ||
+          record.social_rights.first
+
+        record.save
+      end
+    end
+
+    # Migrate service offering's social rights 2/2
+    ExerciseScope
+      .where(exercisable_type: 'ServiceOffering')
+      .find_each(&:delete)
   end
 end

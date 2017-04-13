@@ -4,14 +4,15 @@
 RSpec.describe ServiceOffering, type: :model do
   subject(:service_offering) { build(:service_offering, public_service: public_service) }
   let(:public_service)       { build(:public_service) }
-  let(:social_right)         { build(:social_right) }
 
   it { is_expected.to belong_to(:public_service) }
+  it { is_expected.to belong_to(:social_right) }
 
   it { is_expected.to validate_presence_of(:title) }
   it { is_expected.to validate_uniqueness_of(:slug).scoped_to(:public_service_id) }
   it { is_expected.to validate_numericality_of(:response_time_upper_bound).only_integer.allow_nil }
   it { is_expected.to validate_presence_of(:public_service) }
+  it { is_expected.to validate_presence_of(:social_right) }
 
   describe '.actionable' do
     subject(:actionable) { described_class.actionable }
@@ -84,16 +85,15 @@ RSpec.describe ServiceOffering, type: :model do
   end
 
   context 'associations' do
-    subject(:service_offering) { create(:service_offering, public_service: public_service) }
-
-    it 'has_many #social_rights' do
-      expect {
-        service_offering.social_rights << social_right
-      }.to change { service_offering.social_rights.count }.by(1)
-    end
+    subject(:service_offering) { create(:service_offering, public_service: public_service, social_right: social_right) }
+    let(:social_right)         { build(:social_right) }
 
     it 'delegates #title to #public_service' do
       expect(service_offering.public_service_title).to eq(public_service.title)
+    end
+
+    it 'delegates #name to #social_right' do
+      expect(service_offering.social_right_name).to eq(social_right.name)
     end
   end
 end

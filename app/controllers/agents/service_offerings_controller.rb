@@ -79,7 +79,7 @@ module Agents
           :phone,
           :url,
           :response_time_upper_bound,
-          social_right_ids: []
+          :social_right_id
         )
     end
 

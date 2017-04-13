@@ -12,7 +12,7 @@
 
 #
 # == Schema Information
-# Schema version: 20161006093649
+# Schema version: 20170411181215
 #
 # Table name: service_offerings
 #
@@ -28,23 +28,24 @@
 # *url*::                       <tt>string</tt>
 # *slug*::                      <tt>string</tt>
 # *response_time_upper_bound*:: <tt>integer</tt>
+# *social_right_id*::           <tt>integer</tt>
 #
 # Indexes
 #
 #  index_service_offerings_on_public_service_id           (public_service_id)
 #  index_service_offerings_on_public_service_id_and_slug  (public_service_id,slug) UNIQUE
 #  index_service_offerings_on_response_time_upper_bound   (response_time_upper_bound)
+#  index_service_offerings_on_social_right_id             (social_right_id)
 #
 # Foreign Keys
 #
 #  fk_rails_0e3762aded  (public_service_id => public_services.id)
+#  fk_rails_19e1f44132  (social_right_id => social_rights.id)
 #--
 # == Schema Information End
 #++
-#
 class ServiceOffering < ApplicationRecord
   extend FriendlyId
-  include Nameable
 
   friendly_id :title, use: :slugged
 
@@ -53,15 +54,12 @@ class ServiceOffering < ApplicationRecord
   belongs_to :public_service,
              inverse_of: :service_offerings
 
-  has_many :exercise_scopes,
-           as: :exercisable,
-           dependent: :destroy
-
-  has_many :social_rights,
-           through: :exercise_scopes
+  belongs_to :social_right,
+             inverse_of: :service_offerings
 
   validates :title,
             :public_service,
+            :social_right,
             presence: true
 
   validates :email,
@@ -85,18 +83,32 @@ class ServiceOffering < ApplicationRecord
            to: :public_service,
            prefix: true
 
-  scope :actionable, -> { with(:email).merge(with(:response_time_upper_bound)) }
+  delegate :name,
+           to: :social_right,
+           prefix: true,
+           allow_nil: true
 
-  scope :with, lambda { |attribute|
-    joins(:public_service)
-      .where(
-        arel_table[attribute]
-          .not_eq(nil)
-          .or(
-            reflect_on_association(:public_service)
-              .klass.arel_table[attribute]
-              .not_eq(nil)
-          )
-      )
-  }
+  scope(
+    :actionable,
+    lambda do
+      with(:email)
+        .merge(with(:response_time_upper_bound))
+    end
+  )
+
+  scope(
+    :with,
+    lambda do |attribute|
+      joins(:public_service)
+        .where(
+          arel_table[attribute]
+            .not_eq(nil)
+            .or(
+              reflect_on_association(:public_service)
+                .klass.arel_table[attribute]
+                .not_eq(nil)
+            )
+        )
+    end
+  )
 end

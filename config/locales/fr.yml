@@ -79,7 +79,7 @@ fr:
         phone: Téléphone
         url: Site web
         response_time_upper_bound: Délai garanti de réponse (jours)
-        social_rights: Thématiques
+        social_right: Thématique
         updated_at: Mis à jour le
       measure:
         title: Nom
@@ -149,9 +149,6 @@ fr:
         description_html: |
           Intéressé·e ? Laisse tes coordonnés pour être recontacté·e d'ici
           <strong>%{response_time}</strong>
-
-      profile_details:
-        header: Coordonnées de l'acteur
 
   agents:
     public_services:

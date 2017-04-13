@@ -3,8 +3,8 @@
 
 FactoryGirl.define do
   factory(:public_service) do
-    title FFaker::LoremFR.word
-    email FFaker::Internet.email
+    title                     { FFaker::LoremFR.word }
+    email                     { FFaker::Internet.email }
     response_time_upper_bound 7
   end
 end

@@ -20,7 +20,7 @@ gem 'sass-rails'
 gem 'sentry-raven'
 gem 'simple_form'
 gem 'trailblazer', '1.1.2'
-gem 'trailblazer-rails'
+gem 'trailblazer-rails', '< 0.4'
 gem 'uglifier'
 gem 'wicked'
 
