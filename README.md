@@ -30,6 +30,7 @@ Modifiez ```config/database.yml``` si besoin est.
 
 ```
 bundle exec rake db:setup
+brew install phantomjs
 brew install nvm
 ```
 
