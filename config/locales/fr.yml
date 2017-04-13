@@ -168,14 +168,16 @@ fr:
       index:
         heading: 'Liste des offres de service à %{rhizome}'
         new: Ajouter une nouvelle offre de service
+      show:
+        target_public: Public cible
       new:
         heading: Nouvelle offre de service
       edit:
         heading: Mettre à jour l'offre de service
-      criteria:
-        new:
+      target_publics:
+        show:
           heading: Public cible
-        index:
+        update:
           heading: Public cible
 
     measures:
@@ -186,10 +188,6 @@ fr:
         heading: Nouveau dispositif
       edit:
         heading: Mettre à jour le dispositif
-
-  criteria:
-    new_criterium: Public cible
-    index_criterium: Public cible
 
   rhizomes:
     reims: Reims

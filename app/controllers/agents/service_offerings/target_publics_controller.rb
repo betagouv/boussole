@@ -1,34 +1,32 @@
 module Agents
   module ServiceOfferings
-    class CriteriaController < ApplicationController
+    class TargetPublicsController < ApplicationController
       before_action :set_service_offering
 
-      # GET /agents/service_offerings/:service_offering_id/criteria
-      def index
-        @criteria = Criterium.all
+      # GET /agents/service_offerings/:service_offering_id/target_public
+      def show
+        @target_public = @service_offering.target_public
       end
 
-
-      # GET /agents/service_offerings/:service_offering_id/criteria/new
-      def new
-        @criterium = Criterium.new
-      end
-
-      # POST /agents/service_offerings/:service_offering_id/criteria
+      # POST /agents/service_offerings/:service_offering_id/target_public
       def create
-        @criterium = Criterium.new(criterium_params)
-        @criterium.service_offering = @service_offering
-        @criterium.save
+        @target_public = TargetPublic.new(target_public_params)
+        @target_public.service_offering = @service_offering
+        @target_public.save
 
         redirect_to
+      end
+
+      # PATCH /agents/service_offerings/:service_offering_id/target_public
+      def update
       end
 
       private
 
       # Only allow a trusted parameter "white list" through.
-      def criterium_params
+      def target_public_params
         params
-          .require(:criterium)
+          .require(:target_public)
             .permit(
               :id,
               :service_offering_id
@@ -57,8 +55,8 @@ module Agents
       end
 
       # Use callbacks to share common setup or constraints between actions.
-      def set_criterium
-        @criterium = Criterium.find(params[:id])
+      def set_target_public
+        @target_public = TargetPublic.find(params[:id])
       end
 
       def set_service_offering

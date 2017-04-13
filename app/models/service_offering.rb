@@ -23,8 +23,8 @@ class ServiceOffering < ApplicationRecord
   belongs_to :social_right,
              inverse_of: :service_offerings
 
-  has_many :criteria,
-           inverse_of: :service_offering
+  has_one :target_public,
+          inverse_of: :service_offering
 
   validates :title,
             :public_service,
@@ -83,4 +83,7 @@ class ServiceOffering < ApplicationRecord
         )
     end
   )
+
+  # TODO: Move to service object
+  after_create :create_target_public
 end

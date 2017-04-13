@@ -38,8 +38,6 @@ seeds['measures'].each_pair do |_, hash|
     )
 end
 
-Criterium.create(service_offering_id: 1)
-
 Status.create(value: 'Sans activité')
 
 Status.create(value: 'Étudiant·e')

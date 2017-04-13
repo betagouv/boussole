@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources(:public_services)
 
     resources(:service_offerings) do
-      resources(:criteria, module: :service_offerings)
+      resource(:target_public, module: :service_offerings)
     end
 
     resources(:measures)

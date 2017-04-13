@@ -16,7 +16,7 @@
 class Status < ActiveRecord::Base
   has_many :criteria_statuses
 
-  has_many :criteria, through: :criteria_statuses
+  has_many :criteria, through: :statuses_target_publics
 
   validates :value,
   presence: true

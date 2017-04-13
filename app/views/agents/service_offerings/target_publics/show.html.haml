@@ -1,0 +1,22 @@
+-# coding: utf-8
+
+.l-container-wide
+  .l-content
+    %section.profile-list
+      %h1.profile-list-header= t('.heading')
+      %hr
+
+      .profile-list-content
+        %table
+          %thead
+            %tr
+              %th= 'Critère'
+              %th= 'Définition'
+
+          %tbody
+
+            %tr
+              = simple_form_for([:agents, @service_offering, @target_public], wrapper: :vertical_form) do |f|
+                %td= 'Statut'
+                %td= f.association(:statuses, label: false, label_method: "#{:value}", as: :check_boxes)
+                %td= f.button :submit

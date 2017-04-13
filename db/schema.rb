@@ -11,26 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170412152918) do
+ActiveRecord::Schema.define(version: 20170413142259) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "criteria", force: :cascade do |t|
-    t.integer  "service_offering_id", null: false
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-  end
-
-  add_index "criteria", ["service_offering_id"], name: "index_criteria_on_service_offering_id", using: :btree
-
-  create_table "criteria_statuses", id: false, force: :cascade do |t|
-    t.integer "criterium_id", null: false
-    t.integer "status_id",    null: false
-  end
-
-  add_index "criteria_statuses", ["criterium_id"], name: "index_criteria_statuses_on_criterium_id", using: :btree
-  add_index "criteria_statuses", ["status_id"], name: "index_criteria_statuses_on_status_id", using: :btree
 
   create_table "exercise_scopes", force: :cascade do |t|
     t.integer  "social_right_id",  null: false
@@ -125,6 +109,20 @@ ActiveRecord::Schema.define(version: 20170412152918) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "statuses_target_publics", id: false, force: :cascade do |t|
+    t.integer "target_public_id", null: false
+    t.integer "status_id",        null: false
+  end
+
+  add_index "statuses_target_publics", ["status_id"], name: "index_statuses_target_publics_on_status_id", using: :btree
+  add_index "statuses_target_publics", ["target_public_id"], name: "index_statuses_target_publics_on_target_public_id", using: :btree
+
+  create_table "target_publics", force: :cascade do |t|
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.integer  "service_offering_id"
+  end
+
   create_table "workings", force: :cascade do |t|
     t.string   "awareness"
     t.string   "sector"
@@ -144,7 +142,6 @@ ActiveRecord::Schema.define(version: 20170412152918) do
     t.datetime "updated_at",                     null: false
   end
 
-  add_foreign_key "criteria", "service_offerings"
   add_foreign_key "exercise_scopes", "social_rights"
   add_foreign_key "measures", "public_services"
   add_foreign_key "service_offerings", "public_services"
