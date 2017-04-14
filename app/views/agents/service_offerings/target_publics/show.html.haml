@@ -18,5 +18,5 @@
             %tr
               = simple_form_for([:agents, @service_offering, @target_public], wrapper: :vertical_form) do |f|
                 %td= 'Statut'
-                %td= f.association(:statuses, label: false, label_method: "#{:value}", as: :check_boxes)
+                %td= f.association(:statuses, label: false, label_method: :value, as: :check_boxes)
                 %td= f.button :submit

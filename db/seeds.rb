@@ -38,16 +38,4 @@ seeds['measures'].each_pair do |_, hash|
     )
 end
 
-Status.create(value: 'Sans activité')
-
-Status.create(value: 'Étudiant·e')
-
-Status.create(value: 'Lycéen·ne')
-
-Status.create(value: 'Salarié·e')
-
-Status.create(value: 'En formation')
-
-Status.create(value: 'Apprenti·e')
-
-Status.create(value: 'Autre')
+STATUSES.each { |status| Status.find_or_create_by(value: status) }

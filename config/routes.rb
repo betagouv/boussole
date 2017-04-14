@@ -33,5 +33,4 @@ Rails.application.routes.draw do
   mount(Nkss::Engine => '/styleguide')
 
   root to: 'visitors#index'
-
 end

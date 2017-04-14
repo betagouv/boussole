@@ -4,12 +4,10 @@
 RSpec.describe Housing::ServiceOfferings, type: :operation do
   subject(:operation)    { described_class.present(id: housing.to_param) }
   let(:public_service)   { create(:public_service, title: 'Lokaviz') }
-  let(:social_right)     { create(:social_right) }
 
   let(:service_offering) do
     create(
       :service_offering,
-      social_right: social_right,
       title: 'Trouver un coloc',
       public_service: public_service
     )

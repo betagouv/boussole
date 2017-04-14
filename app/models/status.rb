@@ -1,23 +1,13 @@
-# #
-# == Schema Information
-# Schema version: 20170412152918
-#
-# Table name: statuses
-#
-# *id*::         <tt>integer, not null, primary key</tt>
-# *value*::      <tt>string</tt>
-# *created_at*:: <tt>datetime, not null</tt>
-# *updated_at*:: <tt>datetime, not null</tt>
-#--
-# == Schema Information End
-#++
-# #
+# encoding: utf-8
+# frozen_string_literal: true
 
 class Status < ActiveRecord::Base
-  has_many :criteria_statuses
+  has_many :target_public_statuses,
+           inverse_of: :status
 
-  has_many :criteria, through: :statuses_target_publics
+  has_many :target_publics,
+           through: :target_public_statuses
 
   validates :value,
-  presence: true
+            presence: true
 end

@@ -1,24 +1,19 @@
+# encoding: utf-8
+# frozen_string_literal: true
+
 module Agents
   module ServiceOfferings
     class TargetPublicsController < ApplicationController
       before_action :set_service_offering
+      before_action :set_target_public
 
       # GET /agents/service_offerings/:service_offering_id/target_public
       def show
-        @target_public = @service_offering.target_public
-      end
-
-      # POST /agents/service_offerings/:service_offering_id/target_public
-      def create
-        @target_public = TargetPublic.new(target_public_params)
-        @target_public.service_offering = @service_offering
-        @target_public.save
-
-        redirect_to
       end
 
       # PATCH /agents/service_offerings/:service_offering_id/target_public
       def update
+        # ... update
       end
 
       private
@@ -27,10 +22,10 @@ module Agents
       def target_public_params
         params
           .require(:target_public)
-            .permit(
-              :id,
-              :service_offering_id
-              )
+          .permit(
+            :id,
+            :service_offering_id
+          )
       end
 
       def service_offering_params
@@ -46,7 +41,7 @@ module Agents
             :phone,
             :url,
             :response_time_upper_bound,
-            social_right_ids: []
+            :social_right_id
           )
       end
 
@@ -54,15 +49,13 @@ module Agents
         ServiceOffering.friendly
       end
 
-      # Use callbacks to share common setup or constraints between actions.
-      def set_target_public
-        @target_public = TargetPublic.find(params[:id])
-      end
-
       def set_service_offering
         @service_offering = service_offering_scope.find(params[:service_offering_id])
       end
 
+      def set_target_public
+        @target_public = @service_offering.target_public
+      end
     end
   end
 end

@@ -90,10 +90,6 @@ fr:
         updated_at: Mise à jour le
       contact:
         email_or_phone: Email ou téléphone
-      criterium:
-        name: Critère
-        operator: Définition
-        value: Valeur
 
   actioncontroller:
     notice:

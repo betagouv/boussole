@@ -5,8 +5,6 @@ RSpec.describe Workings::ServiceOfferings::ContactsController, type: :controller
   let(:working)          { create(:working) }
   let(:service_offering) { create(:service_offering) }
   let(:event_tracker)    { instance_spy(EventTracker) }
-  let(:social_right)     { create(:social_right) }
-  let(:public_service)   { create(:public_service) }
 
   before { allow(subject).to receive(:tracker) { event_tracker } }
 
