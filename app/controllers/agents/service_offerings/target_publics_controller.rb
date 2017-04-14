@@ -13,7 +13,14 @@ module Agents
 
       # PATCH /agents/service_offerings/:service_offering_id/target_public
       def update
-        # ... update
+        if @target_public.update(target_public_params)
+          redirect_to(
+            agents_service_offering_target_public_url(@service_offering),
+            notice: 'Youpii ça marche !!!'
+          )
+        else
+          render(:show)
+        end
       end
 
       private
@@ -23,25 +30,7 @@ module Agents
         params
           .require(:target_public)
           .permit(
-            :id,
-            :service_offering_id
-          )
-      end
-
-      def service_offering_params
-        params
-          .require(:service_offering)
-          .permit(
-            :id,
-            :title,
-            :public_service_id,
-            :description,
-            :postal_address,
-            :email,
-            :phone,
-            :url,
-            :response_time_upper_bound,
-            :social_right_id
+            status_ids: []
           )
       end
 

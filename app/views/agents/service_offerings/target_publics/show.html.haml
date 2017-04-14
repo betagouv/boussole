@@ -3,7 +3,8 @@
 .l-container-wide
   .l-content
     %section.profile-list
-      %h1.profile-list-header= @service_offering.title
+      %h1.profile-list-header
+        = link_to(@service_offering.title, agents_service_offering_path(@service_offering))
       %hr
 
       .profile-list-content
@@ -12,9 +13,9 @@
             %tr
               %th Critère
               %th Public cible
+              %th
 
           %tbody
-
             %tr
               = simple_form_for([:agents, @service_offering, @target_public], wrapper: :vertical_form) do |f|
                 %td= 'Statut'

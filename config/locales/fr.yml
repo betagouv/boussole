@@ -22,6 +22,9 @@ fr:
       measure:
         one: Dispositif
         other: Dispositifs
+      target_public:
+        one: Public cible
+        other: Publics cibles
 
     attributes:
       housing:
