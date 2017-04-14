@@ -173,11 +173,6 @@ fr:
         heading: Nouvelle offre de service
       edit:
         heading: Mettre à jour l'offre de service
-      target_publics:
-        show:
-          heading: Public cible
-        update:
-          heading: Public cible
 
     measures:
       index:

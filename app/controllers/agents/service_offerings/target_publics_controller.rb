@@ -30,7 +30,8 @@ module Agents
         params
           .require(:target_public)
           .permit(
-            status_ids: []
+            status_ids: [],
+            engagement_ids: []
           )
       end
 

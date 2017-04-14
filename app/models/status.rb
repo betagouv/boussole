@@ -3,11 +3,13 @@
 
 class Status < ActiveRecord::Base
   has_many :target_public_statuses,
-           inverse_of: :status
+           inverse_of: :status,
+           dependent: :destroy
 
   has_many :target_publics,
            through: :target_public_statuses
 
-  validates :value,
-            presence: true
+  validates :name,
+            presence: true,
+            uniqueness: true
 end

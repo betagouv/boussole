@@ -7,10 +7,6 @@ seeds['social_rights'].each do |name|
   SocialRight.find_or_create_by!(name: name)
 end
 
-seeds['social_rights'].each do |name|
-  SocialRight.find_or_create_by!(name: name)
-end
-
 seeds['public_services'].each_pair do |name, hash|
   instance_variable_set(
     "@#{name}",
@@ -38,4 +34,5 @@ seeds['measures'].each_pair do |_, hash|
     )
 end
 
-STATUSES.each { |status| Status.find_or_create_by(value: status) }
+STATUSES.each { |status| Status.find_or_create_by!(name: status) }
+ENGAGEMENTS.each { |status| Engagement.find_or_create_by!(name: status) }

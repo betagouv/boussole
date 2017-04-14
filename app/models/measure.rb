@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 #
-# Class DigitalService provides the representation of an online, dematerialised transaction between an
+# Class DigitalService provides the representation of an online, dematerialised transaction between a
 # <tt>usager</tt> and a {PublicService}'s professional, offered to the <tt>usager</tt> by the {PublicService},
 # or between the <tt>usager</tt> and the {DigitalService} itself, mediationless.
 #
@@ -20,6 +20,7 @@ class Measure < ApplicationRecord
            dependent: :destroy
 
   has_many :social_rights,
+           -> { distinct },
            through: :exercise_scopes
 
   validates :title,

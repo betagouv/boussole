@@ -12,10 +12,20 @@ class TargetPublic < ActiveRecord::Base
              inverse_of: :target_public
 
   has_many :target_public_statuses,
-           inverse_of: :target_public
+           inverse_of: :target_public,
+           dependent: :destroy
 
   has_many :statuses,
+           -> { distinct },
            through: :target_public_statuses
+
+  has_many :target_public_engagements,
+           inverse_of: :target_public,
+           dependent: :destroy
+
+  has_many :engagements,
+           -> { distinct },
+           through: :target_public_engagements
 
   validates :service_offering,
             presence: true

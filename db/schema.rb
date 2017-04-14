@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170413142117) do
+ActiveRecord::Schema.define(version: 20170414111053) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "engagements", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "engagements", ["name"], name: "index_engagements_on_name", unique: true, using: :btree
 
   create_table "exercise_scopes", force: :cascade do |t|
     t.integer  "social_right_id",  null: false
@@ -104,10 +112,22 @@ ActiveRecord::Schema.define(version: 20170413142117) do
   add_index "social_rights", ["slug"], name: "index_social_rights_on_slug", unique: true, using: :btree
 
   create_table "statuses", force: :cascade do |t|
-    t.string   "value"
+    t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "statuses", ["name"], name: "index_statuses_on_name", unique: true, using: :btree
+
+  create_table "target_public_engagements", force: :cascade do |t|
+    t.integer  "target_public_id", null: false
+    t.integer  "engagement_id",    null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "target_public_engagements", ["engagement_id"], name: "index_target_public_engagements_on_engagement_id", using: :btree
+  add_index "target_public_engagements", ["target_public_id"], name: "index_target_public_engagements_on_target_public_id", using: :btree
 
   create_table "target_public_statuses", force: :cascade do |t|
     t.integer  "target_public_id", null: false
@@ -150,6 +170,8 @@ ActiveRecord::Schema.define(version: 20170413142117) do
   add_foreign_key "measures", "public_services"
   add_foreign_key "service_offerings", "public_services"
   add_foreign_key "service_offerings", "social_rights"
+  add_foreign_key "target_public_engagements", "engagements"
+  add_foreign_key "target_public_engagements", "target_publics"
   add_foreign_key "target_public_statuses", "statuses"
   add_foreign_key "target_public_statuses", "target_publics"
   add_foreign_key "target_publics", "service_offerings"

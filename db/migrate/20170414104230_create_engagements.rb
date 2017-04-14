@@ -1,6 +1,6 @@
-class CreateStatuses < ActiveRecord::Migration
+class CreateEngagements < ActiveRecord::Migration
   def change
-    create_table :statuses do |t|
+    create_table :engagements do |t|
       t.string :name, index: { unique: true }, null: false
 
       t.timestamps null: false
