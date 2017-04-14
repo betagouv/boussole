@@ -1,8 +1,10 @@
 class CreateJoinTableTargetPublicsStatuses < ActiveRecord::Migration
   def change
-    create_join_table :target_publics, :statuses do |t|
-      t.index :target_public_id
-      t.index :status_id
+    create_table :target_public_statuses do |t|
+      t.references :target_public, index: true, foreign_key: true, null: false
+      t.references :status, index: true, foreign_key: true, null: false
+
+      t.timestamps null: false
     end
   end
 end
