@@ -11,10 +11,6 @@ class TargetPublic < ActiveRecord::Base
   belongs_to :service_offering,
              inverse_of: :target_public
 
-  has_many :target_public_statuses,
-           inverse_of: :target_public,
-           dependent: :destroy
-
   has_many :statuses,
            -> { distinct },
            through: :target_public_statuses
@@ -34,6 +30,14 @@ class TargetPublic < ActiveRecord::Base
   has_many :last_classes,
            -> { distinct },
            through: :target_public_last_classes
+
+  has_many :target_public_experiences,
+           inverse_of: :target_public,
+           dependent: :destroy
+
+  has_many :experiences,
+           -> { distinct },
+           through: :target_public_experiences
 
   validates :service_offering,
             presence: true

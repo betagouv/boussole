@@ -3,5 +3,6 @@
 
 class Status < ActiveRecord::Base
   include ReadOnly
+  include Criterium
   include DiscreteCriterium
 end

@@ -2,16 +2,16 @@
 # frozen_string_literal: true
 
 #
-# Module DiscreteCriterium provides a mixin for discrete criteria.
+# Module DiscreteCriterium provides a mixin for boolean criteria.
 #
 # @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
 #
-module DiscreteCriterium
+module BooleanCriterium
   extend ActiveSupport::Concern
 
   included do
-    validates :name,
-              presence: true,
+    validates :value,
+              inclusion: { in: [true, false] },
               uniqueness: true
   end
 end

@@ -31,3 +31,8 @@
                 %td= "Niveau d'études"
                 %td= f.association(:last_classes, label: false, as: :check_boxes)
                 %td= f.button :submit, 'Mettre à jour', class: 'btn btn-warning'
+
+              %tr
+                %td= "Expérience dans le secteur"
+                %td= f.association(:experiences, label: false, as: :check_boxes)
+                %td= f.button :submit, 'Mettre à jour', class: 'btn btn-warning'

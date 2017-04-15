@@ -11,5 +11,6 @@
 #
 class Engagement < ActiveRecord::Base
   include ReadOnly
+  include Criterium
   include DiscreteCriterium
 end

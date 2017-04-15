@@ -11,5 +11,6 @@
 #
 class LastClass < ActiveRecord::Base
   include ReadOnly
+  include Criterium
   include DiscreteCriterium
 end

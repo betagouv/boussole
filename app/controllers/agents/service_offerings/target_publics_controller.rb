@@ -33,6 +33,7 @@ module Agents
             status_ids: [],
             engagement_ids: [],
             last_class_ids: [],
+            experience_ids: []
           )
       end
 

@@ -9,8 +9,10 @@
 module ReadOnly
   extend ActiveSupport::Concern
 
-  included do
+  included do |klass|
     before_destroy { raise ActiveRecord::ReadOnlyRecord }
-    attr_readonly :name
+
+    attr_readonly(:name) if klass.column_names.include?('name')
+    attr_readonly(:value) if klass.column_names.include?('value')
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415170944) do
+ActiveRecord::Schema.define(version: 20170415172931) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,14 @@ ActiveRecord::Schema.define(version: 20170415170944) do
 
   add_index "exercise_scopes", ["exercisable_type", "exercisable_id"], name: "index_exercise_scopes_on_exercisable_type_and_exercisable_id", using: :btree
   add_index "exercise_scopes", ["social_right_id"], name: "index_exercise_scopes_on_social_right_id", using: :btree
+
+  create_table "experiences", force: :cascade do |t|
+    t.boolean  "value",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "experiences", ["value"], name: "index_experiences_on_value", unique: true, using: :btree
 
   create_table "features", force: :cascade do |t|
     t.string   "key",                        null: false
@@ -137,6 +145,16 @@ ActiveRecord::Schema.define(version: 20170415170944) do
   add_index "target_public_engagements", ["engagement_id"], name: "index_target_public_engagements_on_engagement_id", using: :btree
   add_index "target_public_engagements", ["target_public_id"], name: "index_target_public_engagements_on_target_public_id", using: :btree
 
+  create_table "target_public_experiences", force: :cascade do |t|
+    t.integer  "target_public_id", null: false
+    t.integer  "experience_id",    null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "target_public_experiences", ["experience_id"], name: "index_target_public_experiences_on_experience_id", using: :btree
+  add_index "target_public_experiences", ["target_public_id"], name: "index_target_public_experiences_on_target_public_id", using: :btree
+
   create_table "target_public_last_classes", force: :cascade do |t|
     t.integer  "target_public_id", null: false
     t.integer  "last_class_id",    null: false
@@ -190,6 +208,8 @@ ActiveRecord::Schema.define(version: 20170415170944) do
   add_foreign_key "service_offerings", "social_rights"
   add_foreign_key "target_public_engagements", "engagements"
   add_foreign_key "target_public_engagements", "target_publics"
+  add_foreign_key "target_public_experiences", "experiences"
+  add_foreign_key "target_public_experiences", "target_publics"
   add_foreign_key "target_public_last_classes", "last_classes"
   add_foreign_key "target_public_last_classes", "target_publics"
   add_foreign_key "target_public_statuses", "statuses"
