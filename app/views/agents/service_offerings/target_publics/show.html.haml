@@ -33,6 +33,11 @@
                 %td= f.button :submit, 'Mettre à jour', class: 'btn btn-warning'
 
               %tr
-                %td= "Expérience dans le secteur"
+                %td= 'Expérience dans le secteur'
                 %td= f.association(:experiences, label: false, as: :check_boxes)
+                %td= f.button :submit, 'Mettre à jour', class: 'btn btn-warning'
+
+              %tr
+                %td= 'Inscrit·e à Pôle Emploi'
+                %td= f.association(:pole_emplois, label: false, as: :check_boxes)
                 %td= f.button :submit, 'Mettre à jour', class: 'btn btn-warning'

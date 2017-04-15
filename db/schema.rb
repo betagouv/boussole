@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415172931) do
+ActiveRecord::Schema.define(version: 20170415174547) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,14 @@ ActiveRecord::Schema.define(version: 20170415172931) do
   end
 
   add_index "measures", ["public_service_id"], name: "index_measures_on_public_service_id", using: :btree
+
+  create_table "pole_emplois", force: :cascade do |t|
+    t.boolean  "value",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "pole_emplois", ["value"], name: "index_pole_emplois_on_value", unique: true, using: :btree
 
   create_table "public_services", force: :cascade do |t|
     t.string   "title"
@@ -165,6 +173,16 @@ ActiveRecord::Schema.define(version: 20170415172931) do
   add_index "target_public_last_classes", ["last_class_id"], name: "index_target_public_last_classes_on_last_class_id", using: :btree
   add_index "target_public_last_classes", ["target_public_id"], name: "index_target_public_last_classes_on_target_public_id", using: :btree
 
+  create_table "target_public_pole_emplois", force: :cascade do |t|
+    t.integer  "target_public_id", null: false
+    t.integer  "pole_emploi_id",   null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "target_public_pole_emplois", ["pole_emploi_id"], name: "index_target_public_pole_emplois_on_pole_emploi_id", using: :btree
+  add_index "target_public_pole_emplois", ["target_public_id"], name: "index_target_public_pole_emplois_on_target_public_id", using: :btree
+
   create_table "target_public_statuses", force: :cascade do |t|
     t.integer  "target_public_id", null: false
     t.integer  "status_id",        null: false
@@ -212,6 +230,8 @@ ActiveRecord::Schema.define(version: 20170415172931) do
   add_foreign_key "target_public_experiences", "target_publics"
   add_foreign_key "target_public_last_classes", "last_classes"
   add_foreign_key "target_public_last_classes", "target_publics"
+  add_foreign_key "target_public_pole_emplois", "pole_emplois"
+  add_foreign_key "target_public_pole_emplois", "target_publics"
   add_foreign_key "target_public_statuses", "statuses"
   add_foreign_key "target_public_statuses", "target_publics"
   add_foreign_key "target_publics", "service_offerings"

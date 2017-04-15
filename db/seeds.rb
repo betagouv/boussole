@@ -37,4 +37,5 @@ end
 STATUSES    .each { |status| Status    .find_or_create_by!(name: status) }
 ENGAGEMENTS .each { |status| Engagement.find_or_create_by!(name: status) }
 LAST_CLASSES.each { |status| LastClass .find_or_create_by!(name: status) }
-EXPERIENCES.each  { |status| Experienceq.find_or_create_by!(value: status) }
+EXPERIENCES .each { |status| Experience.find_or_create_by!(value: status) }
+POLE_EMPLOIS.each { |status| PoleEmploi.find_or_create_by!(value: status) }

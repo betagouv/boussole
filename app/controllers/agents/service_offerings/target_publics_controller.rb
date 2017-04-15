@@ -33,7 +33,8 @@ module Agents
             status_ids: [],
             engagement_ids: [],
             last_class_ids: [],
-            experience_ids: []
+            experience_ids: [],
+            pole_emploi_ids: []
           )
       end
 

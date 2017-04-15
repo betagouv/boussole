@@ -39,6 +39,14 @@ class TargetPublic < ActiveRecord::Base
            -> { distinct },
            through: :target_public_experiences
 
+  has_many :target_public_pole_emplois,
+           inverse_of: :target_public,
+           dependent: :destroy
+
+  has_many :pole_emplois,
+           -> { distinct },
+           through: :target_public_pole_emplois
+
   validates :service_offering,
             presence: true
 end
