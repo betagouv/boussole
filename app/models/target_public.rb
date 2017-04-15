@@ -11,9 +11,13 @@ class TargetPublic < ActiveRecord::Base
   belongs_to :service_offering,
              inverse_of: :target_public
 
-  has_many :statuses,
+  has_many :target_public_housing_statuses,
+           inverse_of: :target_public,
+           dependent: :destroy
+
+  has_many :housing_statuses,
            -> { distinct },
-           through: :target_public_statuses
+           through: :target_public_housing_statuses
 
   has_many :target_public_engagements,
            inverse_of: :target_public,
@@ -46,6 +50,14 @@ class TargetPublic < ActiveRecord::Base
   has_many :pole_emplois,
            -> { distinct },
            through: :target_public_pole_emplois
+
+  has_many :target_public_housing_durations,
+           inverse_of: :target_public,
+           dependent: :destroy
+
+  has_many :durations,
+           -> { distinct },
+           through: :target_public_housing_durations
 
   validates :service_offering,
             presence: true

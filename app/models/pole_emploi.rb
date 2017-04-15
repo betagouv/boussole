@@ -3,7 +3,7 @@
 
 #
 # Class Pole Emploi corresponds to the criterium {PoleEmploi}, i.e. whether a
-# usager is registered to Pole Emploi or not (yes or no).
+# <tt>usager</tt>is registered to Pole Emploi or not (yes or no).
 #
 # It is a criterium used to define the {TargetPublic} set of criteria.
 #

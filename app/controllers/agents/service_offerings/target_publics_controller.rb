@@ -25,16 +25,16 @@ module Agents
 
       private
 
-      # Only allow a trusted parameter "white list" through.
       def target_public_params
         params
           .require(:target_public)
           .permit(
-            status_ids: [],
             engagement_ids: [],
             last_class_ids: [],
             experience_ids: [],
-            pole_emploi_ids: []
+            pole_emploi_ids: [],
+            housing_duration_ids: [],
+            housing_status_ids: []
           )
       end
 

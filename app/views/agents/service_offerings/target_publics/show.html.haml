@@ -5,39 +5,62 @@
     %section.profile-list
       %h1.profile-list-header
         = link_to(@service_offering.title, agents_service_offering_path(@service_offering))
+
       %hr
 
-      .profile-list-content
+      .profile-form
         %table
           %thead
             %tr
+              -# TODO: translate
               %th Critère
               %th Public cible
+              %th
               %th
 
           %tbody
             = simple_form_for([:agents, @service_offering, @target_public], wrapper: :vertical_form) do |f|
               %tr
-                %td= 'Statut'
-                %td= f.association(:statuses, label: false, as: :check_boxes)
-                %td= f.button :submit, 'Mettre à jour', class: 'btn btn-warning'
-
-              %tr
+                -# TODO: translate
                 %td= 'Disponibilité'
                 %td= f.association(:engagements, label: false, as: :check_boxes)
-                %td= f.button :submit, 'Mettre à jour', class: 'btn btn-warning'
+                %td
+                  = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
 
               %tr
-                %td= "Niveau d'études"
+                -# TODO: translate
+                %td Niveau d'études
                 %td= f.association(:last_classes, label: false, as: :check_boxes)
-                %td= f.button :submit, 'Mettre à jour', class: 'btn btn-warning'
+                %td
+                  = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
 
               %tr
-                %td= 'Expérience dans le secteur'
+                -# TODO: translate
+                %td Expérience dans le secteur
                 %td= f.association(:experiences, label: false, as: :check_boxes)
-                %td= f.button :submit, 'Mettre à jour', class: 'btn btn-warning'
+                %td
+                  = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
 
               %tr
-                %td= 'Inscrit·e à Pôle Emploi'
+                -# TODO: translate
+                %td Inscrit·e à Pôle Emploi
+                %td
                 %td= f.association(:pole_emplois, label: false, as: :check_boxes)
-                %td= f.button :submit, 'Mettre à jour', class: 'btn btn-warning'
+                %td
+                  = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+              %tr
+                -# TODO: translate
+                %td Statut
+                %td= f.association(:housing_statuses, label: false, as: :check_boxes)
+                %td
+                %td.profile-form-actions
+                  = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+              %tr
+                -# TODO: translate
+                %td Durée souhaitée pour le logement
+                %td= f.association(:housing_durations, label: false, as: :check_boxes)
+                %td
+                %td.profile-form-actions
+                  = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'

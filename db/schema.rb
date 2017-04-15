@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415174547) do
+ActiveRecord::Schema.define(version: 20170415175418) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,22 @@ ActiveRecord::Schema.define(version: 20170415174547) do
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
   end
+
+  create_table "housing_durations", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "housing_durations", ["name"], name: "index_housing_durations_on_name", unique: true, using: :btree
+
+  create_table "housing_statuses", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "housing_statuses", ["name"], name: "index_housing_statuses_on_name", unique: true, using: :btree
 
   create_table "housings", force: :cascade do |t|
     t.datetime "created_at",                     null: false
@@ -135,14 +151,6 @@ ActiveRecord::Schema.define(version: 20170415174547) do
 
   add_index "social_rights", ["slug"], name: "index_social_rights_on_slug", unique: true, using: :btree
 
-  create_table "statuses", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "statuses", ["name"], name: "index_statuses_on_name", unique: true, using: :btree
-
   create_table "target_public_engagements", force: :cascade do |t|
     t.integer  "target_public_id", null: false
     t.integer  "engagement_id",    null: false
@@ -163,6 +171,26 @@ ActiveRecord::Schema.define(version: 20170415174547) do
   add_index "target_public_experiences", ["experience_id"], name: "index_target_public_experiences_on_experience_id", using: :btree
   add_index "target_public_experiences", ["target_public_id"], name: "index_target_public_experiences_on_target_public_id", using: :btree
 
+  create_table "target_public_housing_durations", force: :cascade do |t|
+    t.integer  "target_public_id",    null: false
+    t.integer  "housing_duration_id", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "target_public_housing_durations", ["housing_duration_id"], name: "index_target_public_housing_durations_on_housing_duration_id", using: :btree
+  add_index "target_public_housing_durations", ["target_public_id"], name: "index_target_public_housing_durations_on_target_public_id", using: :btree
+
+  create_table "target_public_housing_statuses", force: :cascade do |t|
+    t.integer  "target_public_id",  null: false
+    t.integer  "housing_status_id", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "target_public_housing_statuses", ["housing_status_id"], name: "index_target_public_housing_statuses_on_housing_status_id", using: :btree
+  add_index "target_public_housing_statuses", ["target_public_id"], name: "index_target_public_housing_statuses_on_target_public_id", using: :btree
+
   create_table "target_public_last_classes", force: :cascade do |t|
     t.integer  "target_public_id", null: false
     t.integer  "last_class_id",    null: false
@@ -182,16 +210,6 @@ ActiveRecord::Schema.define(version: 20170415174547) do
 
   add_index "target_public_pole_emplois", ["pole_emploi_id"], name: "index_target_public_pole_emplois_on_pole_emploi_id", using: :btree
   add_index "target_public_pole_emplois", ["target_public_id"], name: "index_target_public_pole_emplois_on_target_public_id", using: :btree
-
-  create_table "target_public_statuses", force: :cascade do |t|
-    t.integer  "target_public_id", null: false
-    t.integer  "status_id",        null: false
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-  end
-
-  add_index "target_public_statuses", ["status_id"], name: "index_target_public_statuses_on_status_id", using: :btree
-  add_index "target_public_statuses", ["target_public_id"], name: "index_target_public_statuses_on_target_public_id", using: :btree
 
   create_table "target_publics", force: :cascade do |t|
     t.integer  "service_offering_id", null: false
@@ -228,11 +246,13 @@ ActiveRecord::Schema.define(version: 20170415174547) do
   add_foreign_key "target_public_engagements", "target_publics"
   add_foreign_key "target_public_experiences", "experiences"
   add_foreign_key "target_public_experiences", "target_publics"
+  add_foreign_key "target_public_housing_durations", "housing_durations"
+  add_foreign_key "target_public_housing_durations", "target_publics"
+  add_foreign_key "target_public_housing_statuses", "housing_statuses"
+  add_foreign_key "target_public_housing_statuses", "target_publics"
   add_foreign_key "target_public_last_classes", "last_classes"
   add_foreign_key "target_public_last_classes", "target_publics"
   add_foreign_key "target_public_pole_emplois", "pole_emplois"
   add_foreign_key "target_public_pole_emplois", "target_publics"
-  add_foreign_key "target_public_statuses", "statuses"
-  add_foreign_key "target_public_statuses", "target_publics"
   add_foreign_key "target_publics", "service_offerings"
 end
