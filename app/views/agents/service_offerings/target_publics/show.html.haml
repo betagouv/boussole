@@ -22,7 +22,7 @@
             = simple_form_for([:agents, @service_offering, @target_public], wrapper: :vertical_form) do |f|
               %tr
                 -# TODO: translate
-                %td= Disponibilité
+                %td Disponibilité
                 %td= f.association(:engagements, label: false, as: :check_boxes)
                 %td
                 %td.profile-form-actions
@@ -39,7 +39,7 @@
               %tr
                 -# TODO: translate
                 %td Expérience dans le secteur
-                %td= f.association(:experiences, label: false, as: :check_boxes)
+                %td= f.association(:experiences, label: false, label_method: ->(el) { t(el.value.to_s) }, as: :check_boxes)
                 %td
                 %td.profile-form-actions
                   = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
@@ -47,14 +47,7 @@
               %tr
                 -# TODO: translate
                 %td Inscrit·e à Pôle Emploi
-                %td= f.association(:pole_emplois, label: false, as: :check_boxes)
-                %td
-                %td.profile-form-actions
-                  = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
-
-              %tr
-                %td Inscrit·e à Cap emploi ?
-                %td= f.association(:cap_emplois, label: false, as: :check_boxes)
+                %td= f.association(:pole_emplois, label: false, label_method: ->(el) { t(el.value.to_s) }, as: :check_boxes)
                 %td
                 %td.profile-form-actions
                   = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
@@ -62,7 +55,22 @@
               %tr
                 -# TODO: translate
                 %td Inscrit·e à une mission locale ?
-                %td= f.association(:mission_locales, label: false, as: :check_boxes)
+                %td= f.association(:mission_locales, label: false, label_method: ->(el) { t(el.value.to_s) }, as: :check_boxes)
+                %td
+                %td.profile-form-actions
+                  = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+              %tr
+                %td Inscrit·e à Cap emploi ?
+                %td= f.association(:cap_emplois, label: false, label_method: ->(el) { t(el.value.to_s) }, as: :check_boxes)
+                %td
+                %td.profile-form-actions
+                  = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+              %tr
+                -# TODO: translate
+                %td Inscrit·e à l'Apec ?
+                %td= f.association(:apecs, label: false, label_method: ->(el) { t(el.value.to_s) }, as: :check_boxes)
                 %td
                 %td.profile-form-actions
                   = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
@@ -82,3 +90,4 @@
                 %td
                 %td.profile-form-actions
                   = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+

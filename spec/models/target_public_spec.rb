@@ -22,6 +22,9 @@ RSpec.describe TargetPublic, type: :model do
   it { is_expected.to have_many(:target_public_cap_emplois) }
   it { is_expected.to have_many(:cap_emplois).through(:target_public_cap_emplois) }
 
+  it { is_expected.to have_many(:target_public_apecs) }
+  it { is_expected.to have_many(:apecs).through(:target_public_apecs) }
+
   it { is_expected.to have_many(:target_public_housing_statuses) }
   it { is_expected.to have_many(:housing_statuses).through(:target_public_housing_statuses) }
 

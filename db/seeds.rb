@@ -40,5 +40,6 @@ EXPERIENCES      .each { |status| Experience.find_or_create_by!(value: status) }
 POLE_EMPLOIS     .each { |status| PoleEmploi.find_or_create_by!(value: status) }
 MISSION_LOCALES  .each { |status| MissionLocale.find_or_create_by!(value: status) }
 CAP_EMPLOIS      .each { |status| CapEmploi.find_or_create_by!(value: status) }
+APECS            .each { |status| Apec.find_or_create_by!(value: status) }
 STATUSES         .each { |status| HousingStatus.find_or_create_by!(name: status) }
 HOUSING_DURATIONS.each { |status| HousingDuration.find_or_create_by!(name: status) }

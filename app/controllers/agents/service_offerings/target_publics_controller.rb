@@ -16,6 +16,7 @@ module Agents
         if @target_public.update(target_public_params)
           redirect_to(
             agents_service_offering_target_public_url(@service_offering),
+            # TODO: translate
             notice: 'Youpii ça marche !!!'
           )
         else
@@ -35,6 +36,7 @@ module Agents
             pole_emploi_ids: [],
             mission_locale_ids: [],
             cap_emploi_ids: [],
+            apec_ids: [],
             housing_status_ids: [],
             housing_duration_ids: []
           )

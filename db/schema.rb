@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415181702) do
+ActiveRecord::Schema.define(version: 20170415182351) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "apecs", force: :cascade do |t|
+    t.boolean  "value",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "apecs", ["value"], name: "index_apecs_on_value", unique: true, using: :btree
 
   create_table "cap_emplois", force: :cascade do |t|
     t.boolean  "value",      null: false
@@ -167,6 +175,16 @@ ActiveRecord::Schema.define(version: 20170415181702) do
 
   add_index "social_rights", ["slug"], name: "index_social_rights_on_slug", unique: true, using: :btree
 
+  create_table "target_public_apecs", force: :cascade do |t|
+    t.integer  "target_public_id", null: false
+    t.integer  "apec_id",          null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "target_public_apecs", ["apec_id"], name: "index_target_public_apecs_on_apec_id", using: :btree
+  add_index "target_public_apecs", ["target_public_id"], name: "index_target_public_apecs_on_target_public_id", using: :btree
+
   create_table "target_public_cap_emplois", force: :cascade do |t|
     t.integer  "target_public_id", null: false
     t.integer  "cap_emploi_id",    null: false
@@ -278,6 +296,8 @@ ActiveRecord::Schema.define(version: 20170415181702) do
   add_foreign_key "measures", "public_services"
   add_foreign_key "service_offerings", "public_services"
   add_foreign_key "service_offerings", "social_rights"
+  add_foreign_key "target_public_apecs", "apecs"
+  add_foreign_key "target_public_apecs", "target_publics"
   add_foreign_key "target_public_cap_emplois", "cap_emplois"
   add_foreign_key "target_public_cap_emplois", "target_publics"
   add_foreign_key "target_public_engagements", "engagements"
