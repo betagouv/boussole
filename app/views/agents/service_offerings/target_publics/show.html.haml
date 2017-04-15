@@ -62,10 +62,10 @@
               %tr
                 -# TODO: translate
                 %td Inscrit·e à une mission locale ?
-                %td= f.association(:mission_locales, label: false, label_method: "#{:value}", as: :check_boxes)
+                %td= f.association(:mission_locales, label: false, as: :check_boxes)
                 %td
                 %td.profile-form-actions
-                  = f.button :submit, 'Mettre à jour', :class => 'btn btn-warning'
+                  = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
 
               %tr
                 -# TODO: translate
