@@ -2,14 +2,14 @@
 # frozen_string_literal: true
 
 #
-# Class Engagement corresponds to the criterium {Engagement}, i.e. the time a
-# <tt>usager</tt> is willing to devote to a job.
+# Class LastClass corresponds to the criterium Last Class, i.e. the educational
+# level of a usager.
 #
 # It is a criterium used to define the {Target Public}.
 #
 # @author Alexia Rey <alexia.rey@data.gouv.fr>
 #
-class Engagement < ActiveRecord::Base
+class LastClass < ActiveRecord::Base
   include ReadOnly
   include DiscreteCriterium
 end

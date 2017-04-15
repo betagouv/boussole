@@ -2,5 +2,7 @@
 # frozen_string_literal: true
 
 FactoryGirl.define do
-  factory(:target_public_engagement)
+  factory(:last_class) do
+    name { FFaker::LoremFR.word }
+  end
 end

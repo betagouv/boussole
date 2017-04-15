@@ -34,5 +34,6 @@ seeds['measures'].each_pair do |_, hash|
     )
 end
 
-STATUSES.each { |status| Status.find_or_create_by!(name: status) }
-ENGAGEMENTS.each { |status| Engagement.find_or_create_by!(name: status) }
+STATUSES    .each { |status| Status.find_or_create_by!(name: status) }
+ENGAGEMENTS .each { |status| Engagement.find_or_create_by!(name: status) }
+LAST_CLASSES.each { |status| Engagement.find_or_create_by!(name: status) }

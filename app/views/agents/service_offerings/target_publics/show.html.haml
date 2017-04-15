@@ -19,10 +19,15 @@
             = simple_form_for([:agents, @service_offering, @target_public], wrapper: :vertical_form) do |f|
               %tr
                 %td= 'Statut'
-                %td= f.association(:statuses, label: false, label_method: :value, as: :check_boxes)
-                %td= f.button :submit
+                %td= f.association(:statuses, label: false, as: :check_boxes)
+                %td= f.button :submit, 'Mettre à jour', class: 'btn btn-warning'
 
               %tr
                 %td= 'Disponibilité'
-                %td= f.association(:engagements, label: false, label_method: :value, as: :check_boxes)
+                %td= f.association(:engagements, label: false, as: :check_boxes)
+                %td= f.button :submit, 'Mettre à jour', class: 'btn btn-warning'
+
+              %tr
+                %td= "Niveau d'études"
+                %td= f.association(:last_classes, label: false, as: :check_boxes)
                 %td= f.button :submit, 'Mettre à jour', class: 'btn btn-warning'

@@ -2,5 +2,5 @@
 # frozen_string_literal: true
 
 FactoryGirl.define do
-  factory(:target_public_engagement)
+  factory(:target_public_last_class)
 end

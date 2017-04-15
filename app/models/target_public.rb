@@ -27,6 +27,14 @@ class TargetPublic < ActiveRecord::Base
            -> { distinct },
            through: :target_public_engagements
 
+  has_many :target_public_last_classes,
+           inverse_of: :target_public,
+           dependent: :destroy
+
+  has_many :last_classes,
+           -> { distinct },
+           through: :target_public_last_classes
+
   validates :service_offering,
             presence: true
 end

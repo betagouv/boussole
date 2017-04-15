@@ -49,9 +49,6 @@ class ServiceOffering < ApplicationRecord
   validates :slug,
             uniqueness: { scope: :public_service_id }
 
-  validates :social_right,
-            presence: true
-
   delegate :title,
            to: :public_service,
            prefix: true

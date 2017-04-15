@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170414111053) do
+ActiveRecord::Schema.define(version: 20170415170944) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,14 @@ ActiveRecord::Schema.define(version: 20170414111053) do
     t.string   "residence_city"
     t.boolean  "next_status",    default: false
   end
+
+  create_table "last_classes", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "last_classes", ["name"], name: "index_last_classes_on_name", unique: true, using: :btree
 
   create_table "measures", force: :cascade do |t|
     t.string   "title"
@@ -129,6 +137,16 @@ ActiveRecord::Schema.define(version: 20170414111053) do
   add_index "target_public_engagements", ["engagement_id"], name: "index_target_public_engagements_on_engagement_id", using: :btree
   add_index "target_public_engagements", ["target_public_id"], name: "index_target_public_engagements_on_target_public_id", using: :btree
 
+  create_table "target_public_last_classes", force: :cascade do |t|
+    t.integer  "target_public_id", null: false
+    t.integer  "last_class_id",    null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "target_public_last_classes", ["last_class_id"], name: "index_target_public_last_classes_on_last_class_id", using: :btree
+  add_index "target_public_last_classes", ["target_public_id"], name: "index_target_public_last_classes_on_target_public_id", using: :btree
+
   create_table "target_public_statuses", force: :cascade do |t|
     t.integer  "target_public_id", null: false
     t.integer  "status_id",        null: false
@@ -172,6 +190,8 @@ ActiveRecord::Schema.define(version: 20170414111053) do
   add_foreign_key "service_offerings", "social_rights"
   add_foreign_key "target_public_engagements", "engagements"
   add_foreign_key "target_public_engagements", "target_publics"
+  add_foreign_key "target_public_last_classes", "last_classes"
+  add_foreign_key "target_public_last_classes", "target_publics"
   add_foreign_key "target_public_statuses", "statuses"
   add_foreign_key "target_public_statuses", "target_publics"
   add_foreign_key "target_publics", "service_offerings"

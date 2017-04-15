@@ -9,7 +9,14 @@
 module DiscreteCriterium
   extend ActiveSupport::Concern
 
-  included do
+  included do |klass|
+    has_many :"target_public_#{klass.name.underscore.pluralize}",
+             inverse_of: :"#{klass.name.underscore}",
+             dependent: :destroy
+
+    has_many :target_publics,
+             through: :"target_public_#{klass.name.underscore.pluralize}"
+
     validates :name,
               presence: true,
               uniqueness: true
