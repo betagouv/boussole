@@ -11,46 +11,25 @@ class TargetPublic < ActiveRecord::Base
   belongs_to :service_offering,
              inverse_of: :target_public
 
-  has_many :target_public_engagements,
+  # Apecs
+  has_many :target_public_apecs,
            inverse_of: :target_public,
            dependent: :destroy
 
-  has_many :engagements,
+  has_many :apecs,
            -> { distinct.order(:created_at) },
-           through: :target_public_engagements
+           through: :target_public_apecs
 
-  has_many :target_public_last_classes,
+  # Awarenesses
+  has_many :target_public_awarenesses,
            inverse_of: :target_public,
            dependent: :destroy
 
-  has_many :last_classes,
+  has_many :awarenesses,
            -> { distinct.order(:created_at) },
-           through: :target_public_last_classes
+           through: :target_public_awarenesses
 
-  has_many :target_public_experiences,
-           inverse_of: :target_public,
-           dependent: :destroy
-
-  has_many :experiences,
-           -> { distinct.order(:created_at) },
-           through: :target_public_experiences
-
-  has_many :target_public_pole_emplois,
-           inverse_of: :target_public,
-           dependent: :destroy
-
-  has_many :pole_emplois,
-           -> { distinct.order(:created_at) },
-           through: :target_public_pole_emplois
-
-  has_many :target_public_mission_locales,
-           inverse_of: :target_public,
-           dependent: :destroy
-
-  has_many :mission_locales,
-           -> { distinct.order(:created_at) },
-           through: :target_public_mission_locales
-
+  # Cap Emplois
   has_many :target_public_cap_emplois,
            inverse_of: :target_public,
            dependent: :destroy
@@ -59,14 +38,34 @@ class TargetPublic < ActiveRecord::Base
            -> { distinct.order(:created_at) },
            through: :target_public_cap_emplois
 
-  has_many :target_public_housing_statuses,
+  # Engagements
+  has_many :target_public_engagements,
            inverse_of: :target_public,
            dependent: :destroy
 
-  has_many :housing_statuses,
+  has_many :engagements,
            -> { distinct.order(:created_at) },
-           through: :target_public_housing_statuses
+           through: :target_public_engagements
 
+  # Experiences
+  has_many :target_public_experiences,
+           inverse_of: :target_public,
+           dependent: :destroy
+
+  has_many :experiences,
+           -> { distinct.order(:created_at) },
+           through: :target_public_experiences
+
+  # Handicaps
+  has_many :target_public_handicaps,
+           inverse_of: :target_public,
+           dependent: :destroy
+
+  has_many :handicaps,
+           -> { distinct.order(:created_at) },
+           through: :target_public_handicaps
+
+  # Housing Durations
   has_many :target_public_housing_durations,
            inverse_of: :target_public,
            dependent: :destroy
@@ -75,13 +74,41 @@ class TargetPublic < ActiveRecord::Base
            -> { distinct.order(:created_at) },
            through: :target_public_housing_durations
 
-  has_many :target_public_apecs,
+  # Housing Statuses
+  has_many :target_public_housing_statuses,
            inverse_of: :target_public,
            dependent: :destroy
 
-  has_many :apecs,
+  has_many :housing_statuses,
            -> { distinct.order(:created_at) },
-           through: :target_public_apecs
+           through: :target_public_housing_statuses
+
+  # Last Classes
+  has_many :target_public_last_classes,
+           inverse_of: :target_public,
+           dependent: :destroy
+
+  has_many :last_classes,
+           -> { distinct.order(:created_at) },
+           through: :target_public_last_classes
+
+  # Mission Locales
+  has_many :target_public_mission_locales,
+           inverse_of: :target_public,
+           dependent: :destroy
+
+  has_many :mission_locales,
+           -> { distinct.order(:created_at) },
+           through: :target_public_mission_locales
+
+  # Pôle Emplois
+  has_many :target_public_pole_emplois,
+           inverse_of: :target_public,
+           dependent: :destroy
+
+  has_many :pole_emplois,
+           -> { distinct.order(:created_at) },
+           through: :target_public_pole_emplois
 
   validates :service_offering,
             presence: true

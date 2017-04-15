@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415182351) do
+ActiveRecord::Schema.define(version: 20170415184234) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,14 @@ ActiveRecord::Schema.define(version: 20170415182351) do
   end
 
   add_index "apecs", ["value"], name: "index_apecs_on_value", unique: true, using: :btree
+
+  create_table "awarenesses", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "awarenesses", ["name"], name: "index_awarenesses_on_name", unique: true, using: :btree
 
   create_table "cap_emplois", force: :cascade do |t|
     t.boolean  "value",      null: false
@@ -65,6 +73,14 @@ ActiveRecord::Schema.define(version: 20170415182351) do
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
   end
+
+  create_table "handicaps", force: :cascade do |t|
+    t.boolean  "value",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "handicaps", ["value"], name: "index_handicaps_on_value", unique: true, using: :btree
 
   create_table "housing_durations", force: :cascade do |t|
     t.string   "name",       null: false
@@ -185,6 +201,16 @@ ActiveRecord::Schema.define(version: 20170415182351) do
   add_index "target_public_apecs", ["apec_id"], name: "index_target_public_apecs_on_apec_id", using: :btree
   add_index "target_public_apecs", ["target_public_id"], name: "index_target_public_apecs_on_target_public_id", using: :btree
 
+  create_table "target_public_awarenesses", force: :cascade do |t|
+    t.integer  "target_public_id", null: false
+    t.integer  "awareness_id",     null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "target_public_awarenesses", ["awareness_id"], name: "index_target_public_awarenesses_on_awareness_id", using: :btree
+  add_index "target_public_awarenesses", ["target_public_id"], name: "index_target_public_awarenesses_on_target_public_id", using: :btree
+
   create_table "target_public_cap_emplois", force: :cascade do |t|
     t.integer  "target_public_id", null: false
     t.integer  "cap_emploi_id",    null: false
@@ -214,6 +240,16 @@ ActiveRecord::Schema.define(version: 20170415182351) do
 
   add_index "target_public_experiences", ["experience_id"], name: "index_target_public_experiences_on_experience_id", using: :btree
   add_index "target_public_experiences", ["target_public_id"], name: "index_target_public_experiences_on_target_public_id", using: :btree
+
+  create_table "target_public_handicaps", force: :cascade do |t|
+    t.integer  "target_public_id", null: false
+    t.integer  "handicap_id",      null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "target_public_handicaps", ["handicap_id"], name: "index_target_public_handicaps_on_handicap_id", using: :btree
+  add_index "target_public_handicaps", ["target_public_id"], name: "index_target_public_handicaps_on_target_public_id", using: :btree
 
   create_table "target_public_housing_durations", force: :cascade do |t|
     t.integer  "target_public_id",    null: false
@@ -298,12 +334,16 @@ ActiveRecord::Schema.define(version: 20170415182351) do
   add_foreign_key "service_offerings", "social_rights"
   add_foreign_key "target_public_apecs", "apecs"
   add_foreign_key "target_public_apecs", "target_publics"
+  add_foreign_key "target_public_awarenesses", "awarenesses"
+  add_foreign_key "target_public_awarenesses", "target_publics"
   add_foreign_key "target_public_cap_emplois", "cap_emplois"
   add_foreign_key "target_public_cap_emplois", "target_publics"
   add_foreign_key "target_public_engagements", "engagements"
   add_foreign_key "target_public_engagements", "target_publics"
   add_foreign_key "target_public_experiences", "experiences"
   add_foreign_key "target_public_experiences", "target_publics"
+  add_foreign_key "target_public_handicaps", "handicaps"
+  add_foreign_key "target_public_handicaps", "target_publics"
   add_foreign_key "target_public_housing_durations", "housing_durations"
   add_foreign_key "target_public_housing_durations", "target_publics"
   add_foreign_key "target_public_housing_statuses", "housing_statuses"

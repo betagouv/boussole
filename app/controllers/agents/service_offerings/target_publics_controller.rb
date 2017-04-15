@@ -30,15 +30,17 @@ module Agents
         params
           .require(:target_public)
           .permit(
-            engagement_ids: [],
-            last_class_ids: [],
-            experience_ids: [],
-            pole_emploi_ids: [],
-            mission_locale_ids: [],
-            cap_emploi_ids: [],
             apec_ids: [],
+            awareness_ids: [],
+            cap_emploi_ids: [],
+            engagement_ids: [],
+            experience_ids: [],
+            handicap_ids: [],
+            housing_duration_ids: [],
             housing_status_ids: [],
-            housing_duration_ids: []
+            last_class_ids: [],
+            mission_locale_ids: [],
+            pole_emploi_ids: []
           )
       end
 
