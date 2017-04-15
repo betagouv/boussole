@@ -33,8 +33,10 @@ module Agents
             last_class_ids: [],
             experience_ids: [],
             pole_emploi_ids: [],
-            housing_duration_ids: [],
-            housing_status_ids: []
+            mission_locale_ids: [],
+            cap_emploi_ids: [],
+            housing_status_ids: [],
+            housing_duration_ids: []
           )
       end
 

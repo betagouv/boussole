@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415175418) do
+ActiveRecord::Schema.define(version: 20170415181702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cap_emplois", force: :cascade do |t|
+    t.boolean  "value",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "cap_emplois", ["value"], name: "index_cap_emplois_on_value", unique: true, using: :btree
 
   create_table "engagements", force: :cascade do |t|
     t.string   "name",       null: false
@@ -97,6 +105,14 @@ ActiveRecord::Schema.define(version: 20170415175418) do
 
   add_index "measures", ["public_service_id"], name: "index_measures_on_public_service_id", using: :btree
 
+  create_table "mission_locales", force: :cascade do |t|
+    t.boolean  "value",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "mission_locales", ["value"], name: "index_mission_locales_on_value", unique: true, using: :btree
+
   create_table "pole_emplois", force: :cascade do |t|
     t.boolean  "value",      null: false
     t.datetime "created_at", null: false
@@ -151,6 +167,16 @@ ActiveRecord::Schema.define(version: 20170415175418) do
 
   add_index "social_rights", ["slug"], name: "index_social_rights_on_slug", unique: true, using: :btree
 
+  create_table "target_public_cap_emplois", force: :cascade do |t|
+    t.integer  "target_public_id", null: false
+    t.integer  "cap_emploi_id",    null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "target_public_cap_emplois", ["cap_emploi_id"], name: "index_target_public_cap_emplois_on_cap_emploi_id", using: :btree
+  add_index "target_public_cap_emplois", ["target_public_id"], name: "index_target_public_cap_emplois_on_target_public_id", using: :btree
+
   create_table "target_public_engagements", force: :cascade do |t|
     t.integer  "target_public_id", null: false
     t.integer  "engagement_id",    null: false
@@ -201,6 +227,16 @@ ActiveRecord::Schema.define(version: 20170415175418) do
   add_index "target_public_last_classes", ["last_class_id"], name: "index_target_public_last_classes_on_last_class_id", using: :btree
   add_index "target_public_last_classes", ["target_public_id"], name: "index_target_public_last_classes_on_target_public_id", using: :btree
 
+  create_table "target_public_mission_locales", force: :cascade do |t|
+    t.integer  "target_public_id",  null: false
+    t.integer  "mission_locale_id", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "target_public_mission_locales", ["mission_locale_id"], name: "index_target_public_mission_locales_on_mission_locale_id", using: :btree
+  add_index "target_public_mission_locales", ["target_public_id"], name: "index_target_public_mission_locales_on_target_public_id", using: :btree
+
   create_table "target_public_pole_emplois", force: :cascade do |t|
     t.integer  "target_public_id", null: false
     t.integer  "pole_emploi_id",   null: false
@@ -242,6 +278,8 @@ ActiveRecord::Schema.define(version: 20170415175418) do
   add_foreign_key "measures", "public_services"
   add_foreign_key "service_offerings", "public_services"
   add_foreign_key "service_offerings", "social_rights"
+  add_foreign_key "target_public_cap_emplois", "cap_emplois"
+  add_foreign_key "target_public_cap_emplois", "target_publics"
   add_foreign_key "target_public_engagements", "engagements"
   add_foreign_key "target_public_engagements", "target_publics"
   add_foreign_key "target_public_experiences", "experiences"
@@ -252,6 +290,8 @@ ActiveRecord::Schema.define(version: 20170415175418) do
   add_foreign_key "target_public_housing_statuses", "target_publics"
   add_foreign_key "target_public_last_classes", "last_classes"
   add_foreign_key "target_public_last_classes", "target_publics"
+  add_foreign_key "target_public_mission_locales", "mission_locales"
+  add_foreign_key "target_public_mission_locales", "target_publics"
   add_foreign_key "target_public_pole_emplois", "pole_emplois"
   add_foreign_key "target_public_pole_emplois", "target_publics"
   add_foreign_key "target_publics", "service_offerings"

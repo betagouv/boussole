@@ -11,14 +11,6 @@ class TargetPublic < ActiveRecord::Base
   belongs_to :service_offering,
              inverse_of: :target_public
 
-  has_many :target_public_housing_statuses,
-           inverse_of: :target_public,
-           dependent: :destroy
-
-  has_many :housing_statuses,
-           -> { distinct },
-           through: :target_public_housing_statuses
-
   has_many :target_public_engagements,
            inverse_of: :target_public,
            dependent: :destroy
@@ -51,11 +43,35 @@ class TargetPublic < ActiveRecord::Base
            -> { distinct },
            through: :target_public_pole_emplois
 
+  has_many :target_public_mission_locales,
+           inverse_of: :target_public,
+           dependent: :destroy
+
+  has_many :mission_locales,
+           -> { distinct },
+           through: :target_public_mission_locales
+
+  has_many :target_public_cap_emplois,
+           inverse_of: :target_public,
+           dependent: :destroy
+
+  has_many :cap_emplois,
+           -> { distinct },
+           through: :target_public_cap_emplois
+
+  has_many :target_public_housing_statuses,
+           inverse_of: :target_public,
+           dependent: :destroy
+
+  has_many :housing_statuses,
+           -> { distinct },
+           through: :target_public_housing_statuses
+
   has_many :target_public_housing_durations,
            inverse_of: :target_public,
            dependent: :destroy
 
-  has_many :durations,
+  has_many :housing_durations,
            -> { distinct },
            through: :target_public_housing_durations
 
