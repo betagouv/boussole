@@ -110,6 +110,15 @@ class TargetPublic < ActiveRecord::Base
            -> { distinct.order(:created_at) },
            through: :target_public_pole_emplois
 
+  # Working Durations
+  has_many :target_public_working_durations,
+           inverse_of: :target_public,
+           dependent: :destroy
+
+  has_many :working_durations,
+           -> { distinct.order(:created_at) },
+           through: :target_public_working_durations
+
   validates :service_offering,
             presence: true
 end

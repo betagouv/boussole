@@ -40,7 +40,8 @@ module Agents
             housing_status_ids: [],
             last_class_ids: [],
             mission_locale_ids: [],
-            pole_emploi_ids: []
+            pole_emploi_ids: [],
+            working_duration_ids: []
           )
       end
 

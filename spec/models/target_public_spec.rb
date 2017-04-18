@@ -36,4 +36,7 @@ RSpec.describe TargetPublic, type: :model do
 
   it { is_expected.to have_many(:target_public_pole_emplois) }
   it { is_expected.to have_many(:pole_emplois).through(:target_public_pole_emplois) }
+
+  it { is_expected.to have_many(:target_public_working_durations) }
+  it { is_expected.to have_many(:working_durations).through(:target_public_working_durations) }
 end
