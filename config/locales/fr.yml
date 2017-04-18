@@ -94,6 +94,13 @@ fr:
       contact:
         email_or_phone: Email ou téléphone
 
+    messages:
+      target_public:
+        everybody: Cette offre de service s'adresse à tout·e·s les usagers.
+        targeted: "Cette offre de service s'adresse aux usagers suivants :"
+        working_statuses: 'dont le statut est : %{target_public}'
+
+
   actioncontroller:
     notice:
       create: '%{model} créé·e avec succès'
@@ -173,6 +180,10 @@ fr:
         heading: Nouvelle offre de service
       edit:
         heading: Mettre à jour l'offre de service
+      target_publics:
+        show:
+          criterium: Critère
+          target_public: Public cible
 
     measures:
       index:

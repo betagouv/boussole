@@ -8,20 +8,35 @@
 
       %hr
 
+      -# TODO: create a partial for this
+      .profile-details
+        %dl
+          .profile-definition
+            %dt
+              - if policy(@target_public).everybody?
+                = @target_public.message(:everybody)
+              - else
+                = @target_public.message(:targeted)
+
+            - if policy(@target_public).working_statuses?
+              %dd= @target_public.message(:working_statuses)
+
+      %hr
+
       -# TODO: create partials for this
       .profile-form
         %table
           %thead
             %tr
-              -# TODO: translate
-              %th Critère
-              %th Public cible
+              %th= t('.criterium')
+              %th= t('.target_public')
               %th
               %th
 
           %tbody
             = simple_form_for([:agents, @service_offering, @target_public], wrapper: :vertical_form) do |f|
               %tr
+                -# TODO: translate
                 %td Statut
                 %td
                   = f.association(:working_statuses, label: false, as: :check_boxes)
@@ -46,6 +61,14 @@
                 %td.profile-form-actions
                   = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
 
+              %tr
+                %td Âge
+                = f.simple_fields_for :working_age do |p|
+                  -# TODO: avoid inline styling
+                  %td= p.input :minimum, input_html: { style: 'width: 100px' }
+                  %td= p.input :maximum, input_html: { style: 'width: 100px' }
+                  %td.profile-form-actions
+                    = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
 
 
               %tr
@@ -85,6 +108,7 @@
                   = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
 
               %tr
+                -# TODO: translate
                 %td Inscrit·e à Cap emploi ?
                 %td
                   = f.association(:cap_emplois, label: false, label_method: ->(o) { t(o.value.to_s) }, as: :check_boxes)
@@ -118,7 +142,6 @@
                 %td
                 %td.profile-form-actions
                   = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
-
 
               %tr
                 -# TODO: translate

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170418122336) do
+ActiveRecord::Schema.define(version: 20170418124809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -329,6 +329,16 @@ ActiveRecord::Schema.define(version: 20170418122336) do
 
   add_index "target_publics", ["service_offering_id"], name: "index_target_publics_on_service_offering_id", using: :btree
 
+  create_table "working_ages", force: :cascade do |t|
+    t.integer  "minimum"
+    t.integer  "maximum"
+    t.integer  "target_public_id", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "working_ages", ["target_public_id"], name: "index_working_ages_on_target_public_id", using: :btree
+
   create_table "working_durations", force: :cascade do |t|
     t.string   "name",       null: false
     t.datetime "created_at", null: false
@@ -395,4 +405,5 @@ ActiveRecord::Schema.define(version: 20170418122336) do
   add_foreign_key "target_public_working_statuses", "target_publics"
   add_foreign_key "target_public_working_statuses", "working_statuses"
   add_foreign_key "target_publics", "service_offerings"
+  add_foreign_key "working_ages", "target_publics"
 end

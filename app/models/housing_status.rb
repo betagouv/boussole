@@ -12,6 +12,6 @@
 #
 class HousingStatus < ActiveRecord::Base
   include ReadOnly
-  include Criterium
+  include HasManyCriterium
   include DiscreteCriterium
 end

@@ -42,4 +42,7 @@ RSpec.describe TargetPublic, type: :model do
 
   it { is_expected.to have_many(:target_public_working_statuses) }
   it { is_expected.to have_many(:working_statuses).through(:target_public_working_statuses) }
+
+  it { is_expected.to have_one(:working_age) }
+  it { is_expected.to accept_nested_attributes_for(:working_age) }
 end

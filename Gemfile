@@ -24,6 +24,9 @@ gem 'trailblazer-rails', '< 0.4'
 gem 'uglifier'
 gem 'wicked'
 
+# Authorisation
+gem 'pundit'
+
 # Avoid blanks in the db
 gem 'nilify_blanks'
 

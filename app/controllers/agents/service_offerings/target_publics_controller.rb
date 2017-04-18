@@ -4,20 +4,24 @@
 module Agents
   module ServiceOfferings
     class TargetPublicsController < ApplicationController
-      before_action :set_service_offering
-      before_action :set_target_public
+      include ControllerHelpers
+      include Pundit
 
       # GET /agents/service_offerings/:service_offering_id/target_public
       def show
+        load_service_offering
+        build_target_public
       end
 
       # PATCH /agents/service_offerings/:service_offering_id/target_public
       def update
-        if @target_public.update(target_public_params)
+        load_service_offering
+        build_target_public
+
+        if @target_public.save
           redirect_to(
             agents_service_offering_target_public_url(@service_offering),
-            # TODO: translate
-            notice: 'Youpii ça marche !!!'
+            notice: t(:update, scope: 'actioncontroller.notice', model: TargetPublic.model_name.human)
           )
         else
           render(:show)
@@ -26,37 +30,38 @@ module Agents
 
       private
 
+      def build_target_public
+        @target_public ||= TargetPublicDecorator.(@service_offering.target_public)
+        @target_public.build_working_age unless @target_public.working_age.try(:persisted?)
+        @target_public.attributes = target_public_params
+      end
+
       def target_public_params
-        params
-          .require(:target_public)
-          .permit(
-            apec_ids: [],
-            awareness_ids: [],
-            cap_emploi_ids: [],
-            engagement_ids: [],
-            experience_ids: [],
-            handicap_ids: [],
-            housing_duration_ids: [],
-            housing_status_ids: [],
-            last_class_ids: [],
-            mission_locale_ids: [],
-            pole_emploi_ids: [],
-            working_duration_ids: [],
-            working_status_ids: []
-          )
+        if params[:target_public]
+          params
+            .require(:target_public)
+            .permit(
+              apec_ids: [],
+              awareness_ids: [],
+              cap_emploi_ids: [],
+              engagement_ids: [],
+              experience_ids: [],
+              handicap_ids: [],
+              housing_duration_ids: [],
+              housing_status_ids: [],
+              last_class_ids: [],
+              mission_locale_ids: [],
+              pole_emploi_ids: [],
+              working_duration_ids: [],
+              working_status_ids: [],
+              working_age_attributes: %i(id minimum maximum)
+            )
+        else
+          {}
+        end
       end
 
-      def service_offering_scope
-        ServiceOffering.friendly
-      end
-
-      def set_service_offering
-        @service_offering = service_offering_scope.find(params[:service_offering_id])
-      end
-
-      def set_target_public
-        @target_public = @service_offering.target_public
-      end
+      def pundit_user; end
     end
   end
 end

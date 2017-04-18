@@ -1,6 +1,7 @@
 # encoding: utf-8
 # frozen_string_literal: true
 
+# TODO: Refacto to use {ControllerHelpers}
 module Agents
   class ServiceOfferingsController < ApplicationController
     before_action :set_service_offering, only: %i(show edit update destroy)

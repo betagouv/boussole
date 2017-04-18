@@ -2,11 +2,11 @@
 # frozen_string_literal: true
 
 #
-# Module DiscreteCriterium provides a mixin for criteria.
+# Module HasManyCriterium provides a mixin for criteria.
 #
 # @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
 #
-module Criterium
+module HasManyCriterium
   extend ActiveSupport::Concern
 
   included do |klass|

@@ -1,6 +1,7 @@
 # encoding: utf-8
 # frozen_string_literal: true
 
+# TODO: Refacto to use {ControllerHelpers}
 module Agents
   class MeasuresController < ApplicationController
     before_action :set_measure, only: %i(show edit update destroy)
