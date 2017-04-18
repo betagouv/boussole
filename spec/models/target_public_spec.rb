@@ -45,4 +45,7 @@ RSpec.describe TargetPublic, type: :model do
 
   it { is_expected.to have_one(:working_age) }
   it { is_expected.to accept_nested_attributes_for(:working_age) }
+
+  it { is_expected.to have_one(:housing_age) }
+  it { is_expected.to accept_nested_attributes_for(:housing_age) }
 end

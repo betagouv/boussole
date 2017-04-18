@@ -128,12 +128,19 @@ class TargetPublic < ActiveRecord::Base
            -> { distinct.order(:created_at) },
            through: :target_public_working_statuses
 
-  # Working Ages
+  # Working Age
   has_one :working_age,
           inverse_of: :target_public,
           dependent: :destroy
 
   accepts_nested_attributes_for :working_age
+
+  # Housing Age
+  has_one :housing_age,
+          inverse_of: :target_public,
+          dependent: :destroy
+
+  accepts_nested_attributes_for :housing_age
 
   validates :service_offering,
             presence: true

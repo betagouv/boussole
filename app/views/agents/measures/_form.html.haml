@@ -9,5 +9,5 @@
   = f.input(:url)
   = f.association(:social_rights)
 
-  .profile-actions
+  .profile-form-actions
     = render(partial: "blocks/button_groups/agents_#{action}", locals: { f: f, model: measure })

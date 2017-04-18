@@ -1,5 +1,29 @@
 @charset "UTF-8";
 
+.profile-form {
+  [type="number"] {
+    width: 7.5em;
+  }
+}
+
 .profile-form-header {
   font-size: $font-size-h4;
+}
+
+.profile-form-actions {
+  @extend .text-center;
+
+  [role="button"],
+  [role="link"] {
+    margin-bottom: 1em;
+    margin-left: .25em;
+    margin-right: .25em;
+    min-width: 6em;
+  }
+}
+
+.profile-form-no-action {
+  color: $text-color-dark-disabled;
+  font-size: $font-size-h6;
+  font-style: italic;
 }

@@ -54,6 +54,7 @@
                   = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
 
               %tr
+                -# TODO: translate
                 %td Durée souhaitée
                 %td
                   = f.association(:working_durations, label: false, as: :check_boxes)
@@ -62,14 +63,13 @@
                   = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
 
               %tr
+                -# TODO: translate
                 %td Âge
                 = f.simple_fields_for :working_age do |p|
-                  -# TODO: avoid inline styling
-                  %td= p.input :minimum, input_html: { style: 'width: 100px' }
-                  %td= p.input :maximum, input_html: { style: 'width: 100px' }
+                  %td= p.input :minimum
+                  %td= p.input :maximum
                   %td.profile-form-actions
                     = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
-
 
               %tr
                 -# TODO: translate
@@ -160,3 +160,12 @@
                 %td
                 %td.profile-form-actions
                   = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+              %tr
+                -# TODO: translate
+                %td Âge
+                = f.simple_fields_for :housing_age do |p|
+                  %td= p.input :minimum
+                  %td= p.input :maximum
+                  %td.profile-form-actions
+                    = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'

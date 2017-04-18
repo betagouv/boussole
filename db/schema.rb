@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170418124809) do
+ActiveRecord::Schema.define(version: 20170418161530) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,6 +81,16 @@ ActiveRecord::Schema.define(version: 20170418124809) do
   end
 
   add_index "handicaps", ["value"], name: "index_handicaps_on_value", unique: true, using: :btree
+
+  create_table "housing_ages", force: :cascade do |t|
+    t.integer  "minimum"
+    t.integer  "maximum"
+    t.integer  "target_public_id", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "housing_ages", ["target_public_id"], name: "index_housing_ages_on_target_public_id", using: :btree
 
   create_table "housing_durations", force: :cascade do |t|
     t.string   "name",       null: false
@@ -375,6 +385,7 @@ ActiveRecord::Schema.define(version: 20170418124809) do
   end
 
   add_foreign_key "exercise_scopes", "social_rights"
+  add_foreign_key "housing_ages", "target_publics"
   add_foreign_key "measures", "public_services"
   add_foreign_key "service_offerings", "public_services"
   add_foreign_key "service_offerings", "social_rights"

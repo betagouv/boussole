@@ -50,7 +50,7 @@
             %dt= ServiceOffering.human_attribute_name(:updated_at)
             %dd= @service_offering.updated_at
 
-      .profile-actions
+      .profile-form-actions
         = render(partial: 'blocks/button_groups/agents_show', locals: { model: @service_offering })
 
         = link_to t('.target_public'),

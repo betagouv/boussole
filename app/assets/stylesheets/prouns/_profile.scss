@@ -9,14 +9,3 @@
     margin-bottom: 1em;
   }
 }
-
-.profile-actions {
-  @extend .text-center;
-
-  [role="button"],
-  [role="link"] {
-    margin-left: .25em;
-    margin-right: .25em;
-    min-width: 6em;
-  }
-}
