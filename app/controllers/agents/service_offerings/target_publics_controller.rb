@@ -34,6 +34,7 @@ module Agents
         @target_public ||= TargetPublicDecorator.(@service_offering.target_public)
         @target_public.build_working_age unless @target_public.working_age.try(:persisted?)
         @target_public.build_housing_age unless @target_public.housing_age.try(:persisted?)
+        @target_public.build_resource unless @target_public.resource.try(:persisted?)
         @target_public.attributes = target_public_params
       end
 
@@ -56,7 +57,8 @@ module Agents
               working_duration_ids: [],
               working_status_ids: [],
               working_age_attributes: %i(id minimum maximum),
-              housing_age_attributes: %i(id minimum maximum)
+              housing_age_attributes: %i(id minimum maximum),
+              resource_attributes: %i(id minimum maximum)
             )
         else
           {}

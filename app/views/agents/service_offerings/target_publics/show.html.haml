@@ -169,3 +169,11 @@
                   %td= p.input :maximum
                   %td.profile-form-actions
                     = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+              %tr
+                %td Ressources financières
+                = f.simple_fields_for :resource do |p|
+                  %td= p.input :minimum
+                  %td= p.input :maximum
+                  %td.profile-form-actions
+                    = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'

@@ -142,6 +142,13 @@ class TargetPublic < ActiveRecord::Base
 
   accepts_nested_attributes_for :housing_age
 
+  # Resource
+  has_one :resource,
+          inverse_of: :target_public,
+          dependent: :destroy
+
+  accepts_nested_attributes_for :resource
+
   validates :service_offering,
             presence: true
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170418161530) do
+ActiveRecord::Schema.define(version: 20170418163431) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -171,6 +171,16 @@ ActiveRecord::Schema.define(version: 20170418161530) do
 
   add_index "public_services", ["response_time_upper_bound"], name: "index_public_services_on_response_time_upper_bound", using: :btree
   add_index "public_services", ["slug"], name: "index_public_services_on_slug", unique: true, using: :btree
+
+  create_table "resources", force: :cascade do |t|
+    t.integer  "minimum"
+    t.integer  "maximum"
+    t.integer  "target_public_id", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "resources", ["target_public_id"], name: "index_resources_on_target_public_id", using: :btree
 
   create_table "service_offerings", force: :cascade do |t|
     t.string   "title"
@@ -387,6 +397,7 @@ ActiveRecord::Schema.define(version: 20170418161530) do
   add_foreign_key "exercise_scopes", "social_rights"
   add_foreign_key "housing_ages", "target_publics"
   add_foreign_key "measures", "public_services"
+  add_foreign_key "resources", "target_publics"
   add_foreign_key "service_offerings", "public_services"
   add_foreign_key "service_offerings", "social_rights"
   add_foreign_key "target_public_apecs", "apecs"
