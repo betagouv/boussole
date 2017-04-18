@@ -45,4 +45,5 @@ LAST_CLASSES     .each { |status| LastClass.find_or_create_by!(name: status) }
 MISSION_LOCALES  .each { |status| MissionLocale.find_or_create_by!(value: status) }
 POLE_EMPLOIS     .each { |status| PoleEmploi.find_or_create_by!(value: status) }
 STATUSES         .each { |status| HousingStatus.find_or_create_by!(name: status) }
+STATUSES         .each { |status| WorkingStatus.find_or_create_by!(name: status) }
 WORKING_DURATIONS.each { |status| WorkingDuration.find_or_create_by!(name: status) }

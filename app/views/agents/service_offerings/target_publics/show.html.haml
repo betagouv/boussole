@@ -22,6 +22,14 @@
           %tbody
             = simple_form_for([:agents, @service_offering, @target_public], wrapper: :vertical_form) do |f|
               %tr
+                %td Statut
+                %td
+                  = f.association(:working_statuses, label: false, as: :check_boxes)
+                %td
+                %td.profile-form-actions
+                  = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+              %tr
                 -# TODO: translate
                 %td Disponibilité
                 %td

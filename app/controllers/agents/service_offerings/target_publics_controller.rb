@@ -41,7 +41,8 @@ module Agents
             last_class_ids: [],
             mission_locale_ids: [],
             pole_emploi_ids: [],
-            working_duration_ids: []
+            working_duration_ids: [],
+            working_status_ids: []
           )
       end
 
