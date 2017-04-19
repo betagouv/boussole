@@ -8,18 +8,7 @@
 
       %hr
 
-      -# TODO: create a partial for this
-      .profile-details
-        %dl
-          .profile-definition
-            %dt
-              - if policy(@target_public).everybody?
-                = @target_public.message(:everybody)
-              - else
-                = @target_public.message(:targeted)
-
-            - if policy(@target_public).working_statuses?
-              %dd= @target_public.message(:working_statuses)
+      = render(partial: 'recap', locals: { target_public: @target_public })
 
       %hr
 
@@ -171,6 +160,7 @@
                     = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
 
               %tr
+                -# TODO: translate
                 %td Ressources financières
                 = f.simple_fields_for :resource do |p|
                   %td= p.input :minimum

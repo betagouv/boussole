@@ -10,7 +10,6 @@
 class TargetPublic < ActiveRecord::Base
   belongs_to :service_offering,
              inverse_of: :target_public
-
   # Apecs
   has_many :target_public_apecs,
            inverse_of: :target_public,
