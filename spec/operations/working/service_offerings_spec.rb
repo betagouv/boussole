@@ -22,7 +22,14 @@ RSpec.describe Working::ServiceOfferings, type: :operation do
     )
   end
 
-  before { stub_const("#{described_class}::CRITERIAS_PATH", -> { 'spec/fixtures/criterias/working.service_offerings.yml' }) }
+  before do
+    allow(described_class)
+      .to(
+        receive(:criterias_path) {
+          'spec/fixtures/criterias/working.service_offerings.yml'
+        }
+      )
+  end
 
   context 'with matches' do
     it { expect(operation.scope).to include(service_offering) }

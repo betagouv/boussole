@@ -16,7 +16,12 @@ solution('Find a flatsharing solution') do
     given!(:service)       { create(:service_offering, title: 'Trouver un coloc', public_service: public_service) }
 
     background do
-      allow(Rails.root).to receive(:join) { 'spec/fixtures/criterias/housing.service_offerings.yml' }
+      allow(Housing::ServiceOfferings)
+        .to(
+          receive(:criterias_path) {
+            'spec/fixtures/criterias/housing.service_offerings.yml'
+          }
+        )
     end
 
     scenario do
