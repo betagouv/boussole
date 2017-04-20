@@ -9,19 +9,51 @@
         - else
           = @target_public.message(:targeted)
 
-      %dd= @target_public.message(:working_statuses) if policy(@target_public).working_statuses?
-      %dd= @target_public.message(:engagements) if policy(@target_public).engagements?
-      %dd= @target_public.message(:working_durations) if policy(@target_public).working_durations?
-      %dd= @target_public.message(:working_age) if policy(@target_public).working_age?
-      %dd= @target_public.message(:last_classes) if policy(@target_public).last_classes?
-      %dd= @target_public.message(:experiences) if policy(@target_public).experiences?
-      %dd= @target_public.message(:pole_emplois) if policy(@target_public).pole_emplois?
-      %dd= @target_public.message(:mission_locales) if policy(@target_public).mission_locales?
-      %dd= @target_public.message(:cap_emplois) if policy(@target_public).cap_emplois?
-      %dd= @target_public.message(:apecs) if policy(@target_public).apecs?
-      %dd= @target_public.message(:handicaps) if policy(@target_public).handicaps?
-      %dd= @target_public.message(:awarenesses) if policy(@target_public).awarenesses?
-      %dd= @target_public.message(:housing_statuses) if policy(@target_public).housing_statuses?
-      %dd= @target_public.message(:housing_durations) if policy(@target_public).housing_durations?
-      %dd= @target_public.message(:housing_age) if policy(@target_public).housing_age?
-      %dd= @target_public.message(:resource) if policy(@target_public).resource?
+      - if policy(@target_public).show?(:working_statuses)
+        %dd= @target_public.message(:working_statuses)
+
+      - if policy(@target_public).show?(:engagements)
+        %dd= @target_public.message(:engagements)
+
+      - if policy(@target_public).show?(:working_durations)
+        %dd= @target_public.message(:working_durations)
+
+      - if policy(@target_public).show?(:working_age)
+        %dd= @target_public.message(:working_age)
+
+      - if policy(@target_public).show?(:last_classes)
+        %dd= @target_public.message(:last_classes)
+
+      - if policy(@target_public).show?(:experiences)
+        %dd= @target_public.message(:experiences)
+
+      - if policy(@target_public).show?(:pole_emplois)
+        %dd= @target_public.message(:pole_emplois)
+
+      - if policy(@target_public).show?(:mission_locales)
+        %dd= @target_public.message(:mission_locales)
+
+      - if policy(@target_public).show?(:cap_emplois)
+        %dd= @target_public.message(:cap_emplois)
+
+      - if policy(@target_public).show?(:apecs)
+        %dd= @target_public.message(:apecs)
+
+      - if policy(@target_public).show?(:handicaps)
+        %dd= @target_public.message(:handicaps)
+
+      - if policy(@target_public).show?(:awarenesses)
+        %dd= @target_public.message(:awarenesses)
+
+      - if policy(@target_public).show?(:housing_statuses)
+        %dd= @target_public.message(:housing_statuses)
+
+      - if policy(@target_public).show?(:housing_durations)
+        %dd= @target_public.message(:housing_durations)
+
+      - if policy(@target_public).show?(:housing_age)
+        %dd= @target_public.message(:housing_age)
+
+      - if policy(@target_public).show?(:resource)
+        %dd= @target_public.message(:resource)
+

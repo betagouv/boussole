@@ -85,6 +85,10 @@ class TargetPublicDecorator < ApplicationDecorator
     internationalise('resource', minimum: resource.minimum, maximum: resource.maximum)
   end
 
+  def coming_soon_message
+    internationalise('coming_soon', social_right: service_offering.social_right_name.downcase)
+  end
+
   def discrete_to_sentence(collection)
     collection
       .map(&:name)

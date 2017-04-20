@@ -1,5 +1,6 @@
 # encoding: utf-8
 # frozen_string_literal: true
+# rubocop:disable Metrics/ClassLength
 
 #
 # Class TargetPublic provides a representation of a set of criteria depending on
@@ -150,4 +151,49 @@ class TargetPublic < ActiveRecord::Base
 
   validates :service_offering,
             presence: true
+
+  WORKING_CRITERIA = %i(
+    apecs
+    awarenesses
+    cap_emplois
+    engagements
+    experiences
+    handicaps
+    last_classes
+    mission_locales
+    pole_emplois
+    working_age
+    working_durations
+    working_statuses
+  ).freeze
+
+  HOUSING_CRITERIA = %i(
+    housing_age
+    housing_durations
+    housing_statuses
+    resource
+  ).freeze
+
+  #
+  # Collection of criteria for each type of project (housing, working, etc.).
+  #
+  # @return [Array<Symbol>] <description>
+  #
+  def criteria
+    return WORKING_CRITERIA if working?
+    return HOUSING_CRITERIA if housing?
+    []
+  end
+
+  private
+
+  # TODO: You know way too much...
+  def working?
+    service_offering.social_right.slug == 'emploi'
+  end
+
+  # TODO: You know way too much...
+  def housing?
+    service_offering.social_right.slug == 'logement'
+  end
 end

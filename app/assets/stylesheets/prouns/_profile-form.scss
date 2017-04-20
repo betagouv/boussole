@@ -1,8 +1,10 @@
 @charset "UTF-8";
 
 .profile-form {
-  [type="number"] {
-    width: 7.5em;
+  table {
+    [type="number"] {
+      width: 7.5em;
+    }
   }
 }
 

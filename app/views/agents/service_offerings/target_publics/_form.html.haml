@@ -1,0 +1,172 @@
+-# coding: utf-8
+
+.profile-form
+  %table
+    %thead
+      %tr
+        %th= t('.criterium')
+        %th= t('.target_public')
+        %th
+        %th
+
+    %tbody
+      = simple_form_for([:agents, service_offering, target_public], wrapper: :vertical_form) do |f|
+        - if policy(@target_public).update?(:working_statuses)
+          %tr
+            -# TODO: translate
+            %td Statut
+            %td
+              = f.association(:working_statuses, label: false, as: :check_boxes)
+            %td
+            %td.profile-form-actions
+              = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+        - if policy(@target_public).update?(:engagements)
+          %tr
+            -# TODO: translate
+            %td Disponibilité
+            %td
+              = f.association(:engagements, label: false, as: :check_boxes)
+            %td
+            %td.profile-form-actions
+              = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+        - if policy(@target_public).update?(:working_durations)
+          %tr
+            -# TODO: translate
+            %td Durée souhaitée
+            %td
+              = f.association(:working_durations, label: false, as: :check_boxes)
+            %td
+            %td.profile-form-actions
+              = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+        - if policy(@target_public).update?(:working_age)
+          %tr
+            -# TODO: translate
+            %td Âge
+            = f.simple_fields_for :working_age do |p|
+              %td= p.input :minimum
+              %td= p.input :maximum
+              %td.profile-form-actions
+                = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+        - if policy(@target_public).update?(:last_classes)
+          %tr
+            -# TODO: translate
+            %td Niveau d'études
+            %td
+              = f.association(:last_classes, label: false, as: :check_boxes)
+            %td
+            %td.profile-form-actions
+              = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+        - if policy(@target_public).update?(:experiences)
+          %tr
+            -# TODO: translate
+            %td Expérience dans le secteur
+            %td
+              = f.association(:experiences, label: false, label_method: ->(o) { t(o.value.to_s) }, as: :check_boxes)
+            %td
+            %td.profile-form-actions
+              = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+        - if policy(@target_public).update?(:pole_emplois)
+          %tr
+            -# TODO: translate
+            %td Inscrit·e à Pôle Emploi
+            %td
+              = f.association(:pole_emplois, label: false, label_method: ->(o) { t(o.value.to_s) }, as: :check_boxes)
+            %td
+            %td.profile-form-actions
+              = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+        - if policy(@target_public).update?(:mission_locales)
+          %tr
+            -# TODO: translate
+            %td Inscrit·e à une mission locale ?
+            %td
+              = f.association(:mission_locales, label: false, label_method: ->(o) { t(o.value.to_s) }, as: :check_boxes)
+            %td
+            %td.profile-form-actions
+              = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+        - if policy(@target_public).update?(:cap_emplois)
+          %tr
+            -# TODO: translate
+            %td Inscrit·e à Cap emploi ?
+            %td
+              = f.association(:cap_emplois, label: false, label_method: ->(o) { t(o.value.to_s) }, as: :check_boxes)
+            %td
+            %td.profile-form-actions
+              = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+        - if policy(@target_public).update?(:apecs)
+          %tr
+            -# TODO: translate
+            %td Inscrit·e à l'Apec ?
+            %td
+              = f.association(:apecs, label: false, label_method: ->(o) { t(o.value.to_s) }, as: :check_boxes)
+            %td
+            %td.profile-form-actions
+              = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+        - if policy(@target_public).update?(:handicaps)
+          %tr
+            -# TODO: translate
+            %td En situation de handicap ?
+            %td
+              = f.association(:handicaps, label: false, label_method: ->(o) { t(o.value.to_s) }, as: :check_boxes)
+            %td
+            %td.profile-form-actions
+              = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+        - if policy(@target_public).update?(:awarenesses)
+          %tr
+            -# TODO: translate
+            %td Définition du projet
+            %td
+              = f.association(:awarenesses, label: false, as: :check_boxes)
+            %td
+            %td.profile-form-actions
+              = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+        - if policy(@target_public).update?(:housing_statuses)
+          %tr
+            -# TODO: translate
+            %td Statut
+            %td
+              = f.association(:housing_statuses, label: false, as: :check_boxes)
+            %td
+            %td.profile-form-actions
+              = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+        - if policy(@target_public).update?(:housing_durations)
+          %tr
+            -# TODO: translate
+            %td Durée souhaitée pour le logement
+            %td
+              = f.association(:housing_durations, label: false, as: :check_boxes)
+            %td
+            %td.profile-form-actions
+              = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+        - if policy(@target_public).update?(:housing_age)
+          %tr
+            -# TODO: translate
+            %td Âge
+            = f.simple_fields_for :housing_age do |p|
+              %td= p.input :minimum
+              %td= p.input :maximum
+              %td.profile-form-actions
+                = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'
+
+        - if policy(@target_public).update?(:resource)
+          %tr
+            -# TODO: translate
+            %td Ressources financières
+            = f.simple_fields_for :resource do |p|
+              %td= p.input :minimum
+              %td= p.input :maximum
+              %td.profile-form-actions
+                = f.button :submit, t('blocks.button_groups.update'), class: 'btn btn-warning'

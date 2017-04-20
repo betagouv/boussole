@@ -51,4 +51,41 @@ RSpec.describe TargetPublic, type: :model do
 
   it { is_expected.to have_one(:resource) }
   it { is_expected.to accept_nested_attributes_for(:resource) }
+
+  describe '#criteria' do
+    let(:service_offering) { create(:service_offering, social_right: social_right) }
+    let(:target_public)    { service_offering.target_public }
+    subject                { target_public.criteria }
+
+    context 'when for working social right' do
+      let(:social_right) { create(:social_right, :working) }
+
+      it { is_expected.to include(:working_durations) }
+      it { is_expected.to include(:working_age) }
+      it { is_expected.to include(:working_statuses) }
+      it { is_expected.to include(:engagements) }
+      it { is_expected.to include(:awarenesses) }
+      it { is_expected.to include(:last_classes) }
+      it { is_expected.to include(:experiences) }
+      it { is_expected.to include(:mission_locales) }
+      it { is_expected.to include(:pole_emplois) }
+      it { is_expected.to include(:apecs) }
+      it { is_expected.to include(:cap_emplois) }
+      it { is_expected.to include(:handicaps) }
+      it { is_expected.not_to include(:housing_durations) }
+      it { is_expected.not_to include(:housing_age) }
+    end
+
+    context 'when for housing social right' do
+      let(:social_right) { create(:social_right, :housing) }
+
+      it { is_expected.to include(:housing_durations) }
+      it { is_expected.to include(:housing_age) }
+      it { is_expected.to include(:housing_statuses) }
+      it { is_expected.to include(:resource) }
+      it { is_expected.not_to include(:awarenesses) }
+      it { is_expected.not_to include(:working_durations) }
+      it { is_expected.not_to include(:working_age) }
+    end
+  end
 end
