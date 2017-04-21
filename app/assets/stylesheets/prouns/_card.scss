@@ -13,6 +13,8 @@
   padding: 1em 1em 2em;
   position: relative;
   width: 100%;
+  border-radius: 10px;
+
 
   [role="link"] {
     font-size: $font-size-h3 / 2;
@@ -40,6 +42,7 @@
   position: absolute;
   top: 1em;
   width: 2.5em;
+  border-radius: 150px;
 }
 
 .card-image {
