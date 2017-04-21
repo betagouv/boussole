@@ -10,6 +10,9 @@ module ContinuousCriterium
   extend ActiveSupport::Concern
 
   included do
+    validates :target_public,
+              presence: true
+
     validates :minimum,
               numericality: {
                 only_integer: true,
