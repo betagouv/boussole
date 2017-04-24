@@ -16,6 +16,7 @@ solution('Find a flatsharing solution') do
     given!(:service)       { create(:service_offering, title: 'Trouver un coloc', public_service: public_service) }
 
     background do
+      allow(Rails.application.config).to receive(:rhizome) { 'essonne' }
       allow(Housing::ServiceOfferings)
         .to(
           receive(:criterias_path) {
@@ -32,7 +33,7 @@ solution('Find a flatsharing solution') do
       select('1 an', from: 'Je cherche un logement pour…')
 
       # Desired location
-      select('Reims', from: 'Où souhaite-je me loger ?')
+      select('Égly', from: 'Où souhaite-je me loger ?')
 
       # Budget
       fill_in('Quel est mon budget mensuel pour me loger (€) ?', with: 300)
@@ -47,7 +48,7 @@ solution('Find a flatsharing solution') do
       check('Serai-je étudiant·e à la rentrée ?', match: :first)
 
       # Current location
-      select('Aougny', from: 'Lieu de résidence actuel ?')
+      select('Ollainville', from: 'Lieu de résidence actuel ?')
 
       # Age
       select('18', from: 'Quel est mon âge ?')
@@ -83,11 +84,11 @@ solution('Find a flatsharing solution') do
       expect(current_email.body).to have_content('Service : Trouver un coloc')
       expect(current_email.body).to have_content("Délai garanti de réponse (jours) : #{service.response_time_upper_bound}")
       expect(current_email.body).to have_content('Je cherche un logement pour… : 1 an')
-      expect(current_email.body).to have_content('Où souhaite-je me loger ? : Reims')
+      expect(current_email.body).to have_content('Où souhaite-je me loger ? : Égly')
       expect(current_email.body).to have_content('Quel est mon budget mensuel pour me loger (€) ? : 300')
       expect(current_email.body).to have_content("Quelle est ma situation aujourd'hui ? : Lycéen·ne")
       expect(current_email.body).to have_content('Serai-je étudiant·e à la rentrée ? : Oui')
-      expect(current_email.body).to have_content('Lieu de résidence actuel ? : Aougny')
+      expect(current_email.body).to have_content('Lieu de résidence actuel ? : Ollainville')
       expect(current_email.body).to have_content('Quel est mon âge ? : 18')
     end
   end

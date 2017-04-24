@@ -11,7 +11,7 @@
   = f.input(:url)
   = f.input(:response_time_upper_bound)
   = f.association(:social_rights)
-  = f.input(:territorial_competences, collection: CITIES, input_html: { multiple: true })
+  = f.input(:territorial_competences, collection: CITIES[rhizome], input_html: { multiple: true })
 
   .profile-actions
     = render(partial: "blocks/button_groups/agents_#{action}", locals: { f: f, model: public_service })

@@ -46,7 +46,7 @@ class Working < ApplicationRecord
 
     step.validates :city,
                    presence: true,
-                   inclusion: { in: CITIES }
+                   inclusion: { in: CITIES[Rails.application.config.rhizome] }
 
     step.validates :age,
                    presence: true
