@@ -1,0 +1,898 @@
+communaute-de-commune-coeur-essonne:
+  participer-a-des-echanges-pour-ameliorer-ses-chances-d-acces-a-l-emploi-cafe-accueil-emploi:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "experience"
+        operator: "=="
+        value: false
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+  participer-a-des-rendez-vous-formation-avec-des-experts-de-l-information-sur-les-metiers-et-sur-les-formations-pour-y-acceder:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "experience"
+        operator: "=="
+        value: false
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+  etre-informe-e-des-prochains-forums-pour-l-emploi:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "experience"
+        operator: "=="
+        value: false
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+  me-preparer-pour-des-entretiens-d-embauche:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "experience"
+        operator: "=="
+        value: false
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+  participer-a-des-job-dating-des-forums-pour-l-emploi-des-cellules-de-recrutement:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "experience"
+        operator: "=="
+        value: false
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+
+  etre-recu-rapidement-par-un-correspondant-emploi-dans-une-permanence-pres-de-chez-moi:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "experience"
+        operator: "=="
+        value: false
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+cidj:
+  dynamiser-ma-recherche-d-employeur:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  faire-une-enquete-sur-differents-metiers-qui-m-interessent-et-parler-aux-professionnels-sur-des-secteurs-qui-recrutent:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "experience"
+        operator: "=="
+        value: false
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "+ d'1 an"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  partir-a-l-etranger-pour-faire-un-break-ou-pour-etre-utile-ou-pour-apprendre-une-langue:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+          - "1 an"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  adapter-mes-savoirs-et-mes-diplomes-aux-offres-d-emploi-du-marche:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "experience"
+        operator: "=="
+        value: true
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "+ d'1 an"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  rechercher-un-stage-5b92c023-6d2b-4224-ba7d-5808daa8e2ac:
+    -
+      -
+        attribute: "experience"
+        operator: "=="
+        value: true
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  comment-developper-son-reseau:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  etre-plus-visible-sur-les-reseaux-sociaux:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  etre-utile-donner-du-sens-a-ma-carriere-professionnelle:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 18
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  trouver-un-job-saisonnier-d8c64230-e6b9-41f0-9dcf-74021ea62133:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "experience"
+        operator: "=="
+        value: true
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 18
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  consulter-des-offres-d-emploi:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  participer-a-un-forum-pour-trouver-des-jobs-peu-ou-pas-qualifie:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  trouver-une-aide-financiere-pour-passer-le-bafa:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  trouver-le-metier-qui-me-plait-84fa388f-4e27-4d71-b7bf-043467bcb178:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  trouver-un-metier-qui-corresponde-a-mes-etudes-ea0e6822-f299-4880-a92f-637a044073d4:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Autre"
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  acceder-a-des-metiers-qui-recrutent-011ef54b-8965-443a-9843-31b6971e6fc1:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Autre"
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  faire-un-stage-a-l-etranger-de0a6fe4-dcfc-498e-8d12-ff4f7e54aebf:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Autre"
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+           - "Quelques mois"
+           - "1 an"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  venir-avec-ou-sans-ses-parents-discuter-des-possibilites-d-etudes-pour-l-apres-college:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 18
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+
+bij-de-bretigny:
+  # Découvrir les métiers de l'animation
+  travailler-mon-cv-et-ma-lettre-de-motivation:
+    -
+      -
+        attribute: "sector"
+        operator: "=="
+        value: "Sport - Animation"
+      -
+        attribute: "experience"
+        operator: "=="
+        value: false
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Études supérieures"
+          - "Aprentissage"
+
+  definir-ton-projet-professionel:
+    -
+      -
+        attribute: "experience"
+        operator: "=="
+        value: false
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Études supérieures"
+          - "Aprentissage"
+          - "Formation"
+
+# Mission Locale Trois Vallées
+acteur:
+  # Faire le point sur tes compétences professionnelles en 2 jours
+  offre-de-service:
+    -
+      -
+        attribute: "experience"
+        operator: "=="
+        value: true
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 25
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Études supérieures"
+          - "Aprentissage"
+          - "Formation"
+
+  trouver-un-emploi-sans-diplome:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Lycéen·ne"
+          - "Collégien·ne"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 25
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"

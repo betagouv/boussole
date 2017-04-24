@@ -4,7 +4,7 @@
 FactoryGirl.define do
   factory(:housing) do
     duration        HOUSING_DURATIONS.first
-    housing_city    CITIES.first
+    housing_city    CITIES[Rails.application.config.rhizome].first
     current_status  STATUSES.first
     age             { rand(0..123) }
 

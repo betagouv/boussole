@@ -18,7 +18,7 @@
                   as: :select
 
         = f.input :housing_city,
-                  collection: CITIES,
+                  collection: CITIES[rhizome],
                   include_blank: false,
                   input_html: { rel: 'autocomplete' }
 

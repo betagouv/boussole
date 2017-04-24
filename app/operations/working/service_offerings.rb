@@ -18,16 +18,11 @@ class Working < ApplicationRecord
     alias_method :scope, :model
 
     #
-    # @return [String] The base path to a {Working}'s {ServiceOffering} matching.
-    #
-    CRITERIAS_PATH = 'config/criterias/reims/working.service_offerings.yml'
-
-    #
     # @see {Trailblazer::Operation::Resolver::BuildOperation.build_operation}
     #
     def initialize(params, _)
       @project   = Working.find(params[:id])
-      @criterias = YAML.load(File.read(Rails.root.join(CRITERIAS_PATH)))
+      @criterias = YAML.load(File.read(Rails.root.join(self.class.send(:criterias_path))))
       super
     end
 
@@ -36,6 +31,17 @@ class Working < ApplicationRecord
     #
     def model!(_)
       call
+    end
+
+    class << self
+      private
+
+      #
+      # @return [String] The base path to a {Working}'s {ServiceOffering} matching.
+      #
+      def criterias_path
+        "config/criterias/#{Rails.application.config.rhizome}/working.service_offerings.yml"
+      end
     end
   end
 end

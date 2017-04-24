@@ -31,6 +31,9 @@ situation %(
   end
 
   background do
+    # The agent is using Boussole - Cœur d'Essonne
+    allow(Rails.application.config).to receive(:rhizome) { 'essonne' }
+
     # The agent is at the service offering's space
     visit('/agents/service_offerings')
   end
@@ -71,6 +74,7 @@ situation %(
 
   solution('List all service offerings') do
     scenario do
+      expect(page).to have_content("Liste des offres de service à Cœur d'Essonne")
       expect(page).to have_content("Trouver une solution de logement d'urgence")
       expect(page).to have_content('Services Intégrés de l’Accueil et de l’Orientation')
       expect(page).to have_content('Logement')

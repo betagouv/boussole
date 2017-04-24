@@ -1,0 +1,25 @@
+acteur:
+  offre-de-service:
+    # scenarii
+    -
+      # critères discrimiinants
+      -
+        attribute: "duration" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "resources" # discriminant @see app/models/service_offering.rb
+        operator: ">=" # options are ==, >=, >, <, <=, in?
+        value: 150
+      -
+        attribute: "current_status" # discriminant @see app/models/service_offering.rb
+        operator: "in?" # options are ==, >=, >, <, <=, in?
+        value:
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
