@@ -15,7 +15,7 @@ solution('Improve my CV') do
     given!(:service)       { create(:service_offering, title: 'Améliorer mon CV', public_service: public_service) }
 
     background do
-      allow(Rails.application.config).to receive(:rhizome) { 'reims' }
+      allow(Rails.application.config).to receive(:rhizome) { -> { 'reims' } }
       allow(Working::ServiceOfferings)
         .to(
           receive(:criteria_path) {

@@ -40,7 +40,7 @@ class Housing < ApplicationRecord
       # @return [String] The base path to a {Housing}'s {ServiceOffering} matching.
       #
       def criteria_path
-        "config/criteria/#{Rails.application.config.rhizome}/housing.service_offerings.yml"
+        "config/criteria/#{Rails.application.config.rhizome.()}/housing.service_offerings.yml"
       end
     end
   end

@@ -12,10 +12,10 @@ module Mutualising
   #
   # What instance of the app are we running?
   #
-  # @return [String] The string containing the name of the instance.
+  # @return [#call] The proc containing the name of the instance.
   #
   def rhizome
-    @rhizome ||= Rails.application.config.rhizome
+    Rails.application.config.rhizome
   end
 
   included do

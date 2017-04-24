@@ -24,6 +24,7 @@ RSpec.describe Housing::ServiceOfferings, type: :operation do
   end
 
   before do
+    allow(Rails.application.config).to receive(:rhizome) { -> { 'reims' } }
     allow(described_class)
       .to(
         receive(:criteria_path) {

@@ -16,7 +16,7 @@ solution('Find a flatsharing solution') do
     given!(:service)       { create(:service_offering, title: 'Trouver un coloc', public_service: public_service) }
 
     background do
-      allow(Rails.application.config).to receive(:rhizome) { 'essonne' }
+      allow(Rails.application.config).to receive(:rhizome) { -> { 'essonne' } }
       allow(Housing::ServiceOfferings)
         .to(
           receive(:criteria_path) {

@@ -7,7 +7,7 @@ FactoryGirl.define do
     sector               SECTORS.first
     duration             WORKING_DURATIONS.first
     engagement           ENGAGEMENTS.first
-    city                 CITIES[Rails.application.config.rhizome].first
+    city                 CITIES[Rails.application.config.rhizome.()].first
     last_class           LAST_CLASSES.first
     status               STATUSES.first
     age                  { rand(0..123) }

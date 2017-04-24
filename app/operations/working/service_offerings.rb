@@ -40,7 +40,7 @@ class Working < ApplicationRecord
       # @return [String] The base path to a {Working}'s {ServiceOffering} matching.
       #
       def criteria_path
-        "config/criteria/#{Rails.application.config.rhizome}/working.service_offerings.yml"
+        "config/criteria/#{Rails.application.config.rhizome.()}/working.service_offerings.yml"
       end
     end
   end

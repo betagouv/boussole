@@ -93,6 +93,7 @@ search:
 ignore_unused:
   - '{false,true}'
   - 'activerecord.{models,attributes}.*'
+  - 'rhizomes.*'
 # - '{devise,kaminari,will_paginate}.*'
 # - 'simple_form.{yes,no}'
 # - 'simple_form.{placeholders,hints,labels}.*'

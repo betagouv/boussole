@@ -32,7 +32,7 @@ situation %(
 
   background do
     # The agent is using Boussole - Cœur d'Essonne
-    allow(Rails.application.config).to receive(:rhizome) { 'essonne' }
+    allow(Rails.application.config).to receive(:rhizome) { -> { 'essonne' } }
 
     # The agent is at the service offering's space
     visit('/agents/service_offerings')
