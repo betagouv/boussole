@@ -5,10 +5,7 @@ RSpec.describe WorkingsController, type: :controller do
   let(:working)       { create(:working) }
   let(:event_tracker) { instance_spy(EventTracker) }
 
-  before do
-    allow(subject).to receive(:tracker) { event_tracker }
-    allow(ENV).to receive(:[]).with('RHIZOME') { 'reims' }
-  end
+  before { allow(subject).to receive(:tracker) { event_tracker } }
 
   it 'GET #show' do
     get(:show, id: working.to_param)
