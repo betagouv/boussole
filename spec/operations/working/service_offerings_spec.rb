@@ -25,8 +25,8 @@ RSpec.describe Working::ServiceOfferings, type: :operation do
   before do
     allow(described_class)
       .to(
-        receive(:criterias_path) {
-          'spec/fixtures/criterias/working.service_offerings.yml'
+        receive(:criteria_path) {
+          'spec/fixtures/criteria/working.service_offerings.yml'
         }
       )
   end

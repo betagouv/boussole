@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 #
-# Class Working provides the representation of a working project/need and its corresponding discriminant criterias.
-# Discriminant criterias are those determining the applicability of services to target audiences.
+# Class Working provides the representation of a working project/need and its corresponding discriminant criteria.
+# Discriminant criteria are those determining the applicability of services to target audiences.
 #
 # @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
 #

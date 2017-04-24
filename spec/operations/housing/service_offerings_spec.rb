@@ -26,8 +26,8 @@ RSpec.describe Housing::ServiceOfferings, type: :operation do
   before do
     allow(described_class)
       .to(
-        receive(:criterias_path) {
-          'spec/fixtures/criterias/housing.service_offerings.yml'
+        receive(:criteria_path) {
+          'spec/fixtures/criteria/housing.service_offerings.yml'
         }
       )
   end
