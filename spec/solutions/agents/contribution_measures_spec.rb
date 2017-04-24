@@ -28,8 +28,8 @@ situation %(
   end
 
   background do
-    # TODO: Move rhizome to a settings object.
-    allow(ENV).to receive(:fetch).with('RHIZOME') { 'reims' }
+    # The agent is using Boussole - Reims
+    allow(Rails.application.config).to receive(:rhizome) { 'reims' }
 
     # The agent is at the measure's space
     visit('/agents/measures')
@@ -61,7 +61,7 @@ situation %(
 
   solution('List all measures') do
     scenario do
-      expect(page).to have_content("Liste des dispositifs à #{I18n.t('rhizomes.' + ENV.fetch('RHIZOME'))}")
+      expect(page).to have_content('Liste des dispositifs à Reims')
       expect(page).to have_content('Retour à la formation initiale')
       expect(page).to have_content('Plate-forme de décrochage')
       expect(page).to have_content('Formation')

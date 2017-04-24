@@ -31,8 +31,8 @@ situation %(
   end
 
   background do
-    # TODO: Move rhizome to a settings object.
-    allow(ENV).to receive(:fetch).with('RHIZOME') { 'essonne' }
+    # The agent is using Boussole - Cœur d'Essonne
+    allow(Rails.application.config).to receive(:rhizome) { 'essonne' }
 
     # The agent is at the service offering's space
     visit('/agents/service_offerings')

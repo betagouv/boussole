@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
   include BugTracking
   include EventTracking
   include Logging
+  include Mutualising
 
   # Uptime Robot
   before_action :ok, if: -> { request.user_agent =~ /uptimerobot/i }
