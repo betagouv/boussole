@@ -2,8 +2,7 @@
 # frozen_string_literal: true
 
 RSpec.describe 'Housing matching criterias', type: :criteria do
-  # TODO: Move rhizome collection to config file
-  %w(reims essonne).each do |rhizome|
+  RHIZOMES.each do |rhizome|
     it_should_behave_like(
       'criterias',
       Housing,
