@@ -3,7 +3,7 @@
 
 RSpec.describe 'Working matching criterias', type: :criteria do
   # TODO: Move rhizome collection to config file
-  %w(reims coeuressonne).each do |rhizome|
+  %w(reims essonne).each do |rhizome|
     it_should_behave_like(
       'criterias',
       Working,

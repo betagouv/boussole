@@ -81,4 +81,4 @@ Visitez ```localhost:5000/styleguides```
 
 ### Tenancy (ou pas)
 
-Pour l'instant, la Boussole fonctionne à partir des « rhizomes » : chaque territoire dit d'expérimentation est une Boussole indépendante. Exemple en est ```reims```, ```couressonne```, etc.
+Pour l'instant, la Boussole fonctionne à partir des « rhizomes » : chaque territoire dit d'expérimentation est une Boussole indépendante. Exemple en est ```reims```, ```essonne```, etc.

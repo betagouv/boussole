@@ -19,7 +19,7 @@ situation %(
 
   background do
     # TODO: Move rhizome to a settings object.
-    allow(ENV).to receive(:fetch).with('RHIZOME') { 'coeuressonne' }
+    allow(ENV).to receive(:fetch).with('RHIZOME') { 'essonne' }
 
     # The agent is at the public service's space
     visit('/agents/public_services')
