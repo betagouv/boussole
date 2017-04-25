@@ -33,7 +33,7 @@ RSpec.describe Working, type: :model do
       it { is_expected.to validate_inclusion_of(:last_class).in_array(LAST_CLASSES) }
 
       it { is_expected.to validate_presence_of(:city) }
-      it { is_expected.to validate_inclusion_of(:city).in_array(CITIES[Rails.application.config.rhizome]) }
+      it { is_expected.to validate_inclusion_of(:city).in_array(CITIES[Rails.application.config.rhizome.()]) }
 
       it { is_expected.to validate_presence_of(:age) }
     end

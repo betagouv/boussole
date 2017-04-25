@@ -10,6 +10,7 @@ RSpec.describe Housing, type: :model do
       it { is_expected.to validate_inclusion_of(:duration).in_array(HOUSING_DURATIONS) }
 
       it { is_expected.to validate_presence_of(:housing_city) }
+      it { is_expected.to validate_inclusion_of(:housing_city).in_array(CITIES[Rails.application.config.rhizome.()]) }
     end
 
     context 'profile' do

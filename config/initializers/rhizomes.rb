@@ -4,6 +4,6 @@
 module Boussole
   # :nodoc:
   class Application < Rails::Application
-    config.rhizome = ENV['RHIZOME'] || RHIZOMES.first
+    config.rhizome = -> { ENV['RHIZOME'] || RHIZOMES.first }
   end
 end

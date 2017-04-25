@@ -20,7 +20,7 @@
         = f.input :next_status
 
         = f.input :residence_city,
-                  collection: CITIES[rhizome].dup.push('Sans domicile fixe'),
+                  collection: CITIES[rhizome.()].dup.push('Sans domicile fixe'),
                   include_blank: false,
                   input_html: { rel: 'autocomplete' }
 

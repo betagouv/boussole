@@ -29,7 +29,7 @@ situation %(
 
   background do
     # The agent is using Boussole - Reims
-    allow(Rails.application.config).to receive(:rhizome) { 'reims' }
+    allow(Rails.application.config).to receive(:rhizome) { -> { 'reims' } }
 
     # The agent is at the measure's space
     visit('/agents/measures')

@@ -18,7 +18,8 @@ class Housing < ApplicationRecord
                    inclusion: { in: HOUSING_DURATIONS }
 
     step.validates :housing_city,
-                   presence: true
+                   presence: true,
+                   inclusion: { in: proc { CITIES[Rails.application.config.rhizome.()] } }
   end
 
   with_options if: -> { required_for_step?(:profile) } do |step|
