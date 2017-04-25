@@ -1,10 +1,10 @@
 # encoding: utf-8
 # frozen_string_literal: true
 
-RSpec.shared_examples 'criterias' do |klass, criterias|
+RSpec.shared_examples :criteria do |klass, criteria|
   # TODO: Refacto to rules object
   # TODO: Use RSpec hash/custom matchers
-  criterias.each do |public_service_slug, public_service|
+  criteria.each do |public_service_slug, public_service|
     it { expect(public_service_slug).to be_a_kind_of_slug }
 
     public_service.each do |service_offering_slug, scenarios|

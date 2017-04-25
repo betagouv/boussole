@@ -18,8 +18,8 @@ solution('Improve my CV') do
       allow(Rails.application.config).to receive(:rhizome) { 'reims' }
       allow(Working::ServiceOfferings)
         .to(
-          receive(:criterias_path) {
-            'spec/fixtures/criterias/working.service_offerings.yml'
+          receive(:criteria_path) {
+            'spec/fixtures/criteria/working.service_offerings.yml'
           }
         )
     end

@@ -16,11 +16,11 @@ module Matchable
   attr_reader :project
 
   #
-  # @!attribute [r] criterias
+  # @!attribute [r] criteria
   #
-  # @return [Hash] The hash of {ServiceOffering} criterias we're matching with.
+  # @return [Hash] The hash of {ServiceOffering} criteria we're matching with.
   #
-  attr_reader :criterias
+  attr_reader :criteria
 
   #
   # Search for {ServiceOffering}s matching the current project with a set of
@@ -49,7 +49,7 @@ module Matchable
   private
 
   #
-  # Given a {Hash} of criterias, the method will build an {Array} of the satisfying {ServiceOffering} matches
+  # Given a {Hash} of criteria, the method will build an {Array} of the satisfying {ServiceOffering} matches
   # of the project.
   #
   # @example
@@ -67,7 +67,7 @@ module Matchable
   #
   def with_matches(&_)
     service_offerings, public_services =
-      criterias.each_with_object([[], []]) do |(public_service, service_offerings), matches|
+      criteria.each_with_object([[], []]) do |(public_service, service_offerings), matches|
         service_offerings.each do |service_offering, scenarios|
           scenarios.each do |conditions|
             if match_conditions?(conditions)

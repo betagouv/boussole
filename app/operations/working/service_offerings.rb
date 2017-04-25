@@ -4,7 +4,7 @@
 class Working < ApplicationRecord
   #
   # Class Working::ServiceOfferings provides a commmand for scoping {ServiceOffering}s
-  # to a {Working}'s predefined criterias.
+  # to a {Working}'s predefined criteria.
   #
   # @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
   #
@@ -21,8 +21,8 @@ class Working < ApplicationRecord
     # @see {Trailblazer::Operation::Resolver::BuildOperation.build_operation}
     #
     def initialize(params, _)
-      @project   = Working.find(params[:id])
-      @criterias = YAML.load(File.read(Rails.root.join(self.class.send(:criterias_path))))
+      @project  = Working.find(params[:id])
+      @criteria = YAML.load(File.read(Rails.root.join(self.class.send(:criteria_path))))
       super
     end
 
@@ -39,8 +39,8 @@ class Working < ApplicationRecord
       #
       # @return [String] The base path to a {Working}'s {ServiceOffering} matching.
       #
-      def criterias_path
-        "config/criterias/#{Rails.application.config.rhizome}/working.service_offerings.yml"
+      def criteria_path
+        "config/criteria/#{Rails.application.config.rhizome}/working.service_offerings.yml"
       end
     end
   end

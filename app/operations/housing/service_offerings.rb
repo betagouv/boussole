@@ -4,7 +4,7 @@
 class Housing < ApplicationRecord
   #
   # Class Housing::ServiceOfferings provides a commmand for scoping {ServiceOffering}s
-  # to a {Housing}'s predefined criterias.
+  # to a {Housing}'s predefined criteria.
   #
   # @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
   #
@@ -21,8 +21,8 @@ class Housing < ApplicationRecord
     # @see {Trailblazer::Operation::Resolver::BuildOperation.build_operation}
     #
     def initialize(params, _)
-      @project   = Housing.find(params[:id])
-      @criterias = YAML.load(File.read(Rails.root.join(self.class.send(:criterias_path))))
+      @project  = Housing.find(params[:id])
+      @criteria = YAML.load(File.read(Rails.root.join(self.class.send(:criteria_path))))
       super
     end
 
@@ -39,8 +39,8 @@ class Housing < ApplicationRecord
       #
       # @return [String] The base path to a {Housing}'s {ServiceOffering} matching.
       #
-      def criterias_path
-        "config/criterias/#{Rails.application.config.rhizome}/housing.service_offerings.yml"
+      def criteria_path
+        "config/criteria/#{Rails.application.config.rhizome}/housing.service_offerings.yml"
       end
     end
   end

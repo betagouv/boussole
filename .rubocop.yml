@@ -42,7 +42,7 @@ Rails/HttpPositionalArguments:
 RSpec/DescribeClass:
   Enabled: true
   Exclude:
-    - spec/criterias/**/*
+    - spec/criteria/**/*
     - spec/requests/**/*
     - spec/solutions/**/*
 

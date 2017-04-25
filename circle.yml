@@ -6,7 +6,7 @@ test:
   post:
     - bundle exec rake i18n_health
     - bundle exec rake haml_lint
-    - bundle exec yaml-lint config/data config/criterias
+    - bundle exec yaml-lint config/data config/criteria
     - bundle exec rake inch
 
 deployment:

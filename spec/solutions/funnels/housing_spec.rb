@@ -19,8 +19,8 @@ solution('Find a flatsharing solution') do
       allow(Rails.application.config).to receive(:rhizome) { 'essonne' }
       allow(Housing::ServiceOfferings)
         .to(
-          receive(:criterias_path) {
-            'spec/fixtures/criterias/housing.service_offerings.yml'
+          receive(:criteria_path) {
+            'spec/fixtures/criteria/housing.service_offerings.yml'
           }
         )
     end
