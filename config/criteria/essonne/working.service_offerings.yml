@@ -848,6 +848,343 @@ bij-de-bretigny:
           - "Aprentissage"
           - "Formation"
 
+  faire-mon-cv-et-ma-lettre-de-motivation:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+  preparer-mon-entretien-d-embauche:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+  rechercher-un-stage:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+  trouver-des-jobs-saisonniers:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+  consulter-des-offres-d-emploi-proposees-pres-de-chez-moi:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+  participer-a-un-forum-job-emploi-sur-mon-territoire:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+  trouver-une-aide-financiere-pour-passer-le-permis-en-proposant-une-contrepartie-citoyenne:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+  trouver-une-aide-financiere-pour-passer-le-bafa-sur-mon-territoire:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+  trouver-le-metier-qui-me-plait:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+  trouver-un-metier-qui-corresponde-a-mes-etudes:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 25
+
+  acceder-a-des-metiers-qui-recrutent:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+  faire-un-stage-a-l-etranger:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
 # Mission Locale Trois Vallées
 acteur:
   # Faire le point sur tes compétences professionnelles en 2 jours
@@ -897,172 +1234,7 @@ acteur:
           - "Collège"
           - "Lycée"
 
-maison-de-justice-et-du-droit
-  avoir-une-aide-pour-porter-plainte
-    -     
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre" 
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-      -
-        attribute: "age"
-        operator: "<="
-        value: 30
-
-  demande-d-effacement-du-casier-judiciaire
-    -
-      - 
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre" 
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-      -
-        attribute: "age"
-        operator: "<="
-        value: 30
-
-  lutte-contre-les-discriminations
-    -     
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre"
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-      -
-        attribute: "age"
-        operator: "<="
-        value: 30
-
-  informations-juridiques-sur-le-contrat-de-travail-et-ou-sur-le-licenciement 
-    -     
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre"   
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-      - 
-        attribute: "age"
-        operator: "<="
-        value: 30
-
-  informations-en-droit-des-etrangers
-    -     
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre"
-      - 
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-      -
-        attribute: "age"
-        operator: "<="
-        value: 30
-
-  trouver-un-avocat
-    -     
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre"
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-      -
-        attribute: "age"
-        operator: "<="
-        value: 30
-        
-
-acteur
-  atelier-pass4avenir
+  atelier-pass4avenir:
     -
       -
         attribute: "awareness"
@@ -1088,29 +1260,8 @@ acteur
         operator: "<="
         value: 25
 
-  ateliers-emploi
-    -   
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité" 
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-      -
-        attribute: "age"
-        operator: "<="
-        value: 25
-
-  chantiers-internationaux
-    -   
+  ateliers-emploi:
+    -
       -
         attribute: "status"
         operator: "in?"
@@ -1130,14 +1281,13 @@ acteur
         operator: "<="
         value: 25
 
-  conseil-en-evolution-professionnelle
-    -   
+  chantiers-internationaux:
+    -
       -
         attribute: "status"
         operator: "in?"
         value:
           - "Sans activité"
-          - "Salarié·e" 
       -
         attribute: "last_class"
         operator: "in?"
@@ -1152,7 +1302,29 @@ acteur
         operator: "<="
         value: 25
 
-  espace-de-resocialisation
+  conseil-en-evolution-professionnelle:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Salarié·e"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 25
+
+  espace-de-resocialisation:
     -
       -
         attribute: "awareness"
@@ -1163,7 +1335,7 @@ acteur
         operator: "in?"
         value:
           - "Sans activité"
-          - "Autre" 
+          - "Autre"
       -
         attribute: "last_class"
         operator: "in?"
@@ -1178,13 +1350,13 @@ acteur
         operator: "<="
         value: 25
 
-  espace-informatique-en-libre-acces 
-    -  
+  espace-informatique-en-libre-acces:
+    -
       -
         attribute: "status"
         operator: "in?"
         value:
-         - "Sans activité"
+          - "Sans activité"
           - "Étudiant·e"
           - "Lycéen·ne"
           - "Salarié·e"
@@ -1205,7 +1377,7 @@ acteur
         operator: "<="
         value: 25
 
-  lutter-ensemble-contre-l-illettrisme
+  lutter-ensemble-contre-l-illettrisme:
     -
       -
         attribute: "awareness"
@@ -1229,8 +1401,171 @@ acteur
         operator: "<="
         value: 25
 
-mission-locale-du-val-d-orge
-  espace-point-net
+maison-de-justice-et-du-droit:
+  avoir-une-aide-pour-porter-plainte:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+  demande-d-effacement-du-casier-judiciaire:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+  lutte-contre-les-discriminations:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+  informations-juridiques-sur-le-contrat-de-travail-et-ou-sur-le-licenciement:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+  informations-en-droit-des-etrangers:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+  trouver-un-avocat:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+mission-locale-du-val-d-orge:
+  espace-point-net:
     -
       -
         attribute: "status"
@@ -1257,13 +1592,13 @@ mission-locale-du-val-d-orge
         operator: "<="
         value: 25
 
-  garantie-jeunes
-    -   
+  garantie-jeunes:
+    -
       -
         attribute: "status"
         operator: "in?"
         value:
-          - "Sans activité"     
+          - "Sans activité"
       -
         attribute: "last_class"
         operator: "in?"
@@ -1273,12 +1608,12 @@ mission-locale-du-val-d-orge
           - "Aprentissage"
           - "Études supérieures"
           - "Autre"
-     -
+      -
         attribute: "age"
         operator: "<="
         value: 25
 
-  projet-d-orientation-professionnelle 
+  projet-d-orientation-professionnelle:
     -
       -
         attribute: "awareness"
@@ -1289,34 +1624,7 @@ mission-locale-du-val-d-orge
         operator: "in?"
         value:
           - "Sans activité"
-          - "Autre"  
-       -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
           - "Autre"
-      -
-        attribute: "age"
-        operator: "<="
-        value: 25
-
-  avoir-un-rendez-vous-gratuit-et-confidentiel-avec-un-juriste-ou-un-avocat
-    -
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre" 
       -
         attribute: "last_class"
         operator: "in?"
@@ -1331,13 +1639,19 @@ mission-locale-du-val-d-orge
         operator: "<="
         value: 25
 
-  decouvrir-et-utiliser-des-techniques-et-des-methodes-efficaces-pour-ameliorer-mes-chances-d-acceder-a-l-emploi
+  avoir-un-rendez-vous-gratuit-et-confidentiel-avec-un-juriste-ou-un-avocat:
     -
       -
         attribute: "status"
         operator: "in?"
         value:
-          - "Sans activité"        
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
       -
         attribute: "last_class"
         operator: "in?"
@@ -1352,73 +1666,13 @@ mission-locale-du-val-d-orge
         operator: "<="
         value: 25
 
-
-bij-de-bretigny
-  faire-mon-cv-et-ma-lettre-de-motivation
-    -     
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre"       
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-      -
-        attribute: "age"
-        operator: "<="
-        value: 30
-
- preparer-mon-entretien-d-embauche
-    -     
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre"        
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-      -
-        attribute: "age"
-        operator: "<="
-        value: 30
-
-  rechercher-un-stage 
+  decouvrir-et-utiliser-des-techniques-et-des-methodes-efficaces-pour-ameliorer-mes-chances-d-acceder-a-l-emploi:
     -
       -
         attribute: "status"
         operator: "in?"
         value:
           - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "Autre"       
       -
         attribute: "last_class"
         operator: "in?"
@@ -1428,12 +1682,199 @@ bij-de-bretigny
           - "Aprentissage"
           - "Études supérieures"
           - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 25
+
+pole-emploi-de-sgdb:
+  accompagnement-dans-la-recherche-d-emploi:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
       -
         attribute: "age"
         operator: ">="
         value: 16
 
-  trouver-des-jobs-saisonniers
+  travailler-et-me-former-grace-a-l-apprentissage:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "+ d'1 an"
+
+  m-organiser-pour-partir-travailler-a-l-etranger:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  calcul-et-versement-des-allocations:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  formation-et-aides-avant-l-embauche:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  acceder-a-une-formation-qualifiante:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  faire-un-stage-en-immersion-professionnelle-chez-un-employeur:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  construire-mon-projet-professionnel-activ-projet:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "experience"
+        operator: "=="
+        value: true
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "+ d'1 an"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+  mener-une-reflexion-sur-une-idee-de-creation-d-entreprise:
     -
       -
         attribute: "awareness"
@@ -1443,422 +1884,6 @@ bij-de-bretigny
         attribute: "duration"
         operator: "in?"
         value:
-          - "Quelques mois"
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre"
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-      -
-        attribute: "age"
-        operator: ">="
-        value: 16
-
-  consulter-des-offres-d-emploi-proposees-pres-de-chez-moi
-    -
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre"  
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-      -
-        attribute: "age"
-        operator: ">="
-        value: 16
-
-  participer-a-un-forum-job-emploi-sur-mon-territoire
-    -
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre"
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-     -
-        attribute: "age"
-        operator: ">="
-        value: 16
-
-  trouver-une-aide-financiere-pour-passer-le-permis-en-proposant-une-contrepartie-citoyenne 
-    -
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre"
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-      -
-        attribute: "age"
-        operator: ">="
-        value: 16
-
-  trouver-une-aide-financiere-pour-passer-le-bafa-sur-mon-territoire
-    -
-      -
-        attribute: "awareness"
-        operator: "=="
-      	value: "Je sais ce que je veux faire"
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre"
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-      -
-        attribute: "age"
-        operator: ">="
-        value: 16
-
-  trouver-le-metier-qui-me-plait
-    -
-      -
-        attribute: "awareness"
-        operator: "=="
-        value: "Je ne sais pas ce que je veux faire" 
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre"
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-      -
-        attribute: "age"
-        operator: ">="
-        value: 16  
-
-  trouver-un-metier-qui-corresponde-a-mes-etudes
-    -
-      -
-        attribute: "awareness"
-        operator: "=="
-        value: "Je ne sais pas ce que je veux faire" 
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Autre" 
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-      -
-        attribute: "age"
-        operator: "<="
-        value: 25
-
-  acceder-a-des-metiers-qui-recrutent
-    -
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre"
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-      -
-        attribute: "age"
-        operator: ">="
-        value: 16
-
-  faire-un-stage-a-l-etranger
-    -
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Autre"
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-      -
-        attribute: "age"
-        operator: ">="
-        value: 16
-
-
-pole-emploi-de-sgdb
-  accompagnement-dans-la-recherche-d-emploi
-    -
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"    
-      -
-        attribute: "age"
-        operator: ">="
-        value: 16
-
-  travailler-et-me-former-grace-a-l-apprentissage
-    -    
-      - 
-        attribute: "awareness"
-        operator: "=="
-	      value: "Je sais ce que je veux faire"
-      - 
-	      attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"        
-      -
-        attribute: "age"
-        operator: ">="
-        value: 16
-      -
-        attribute: "duration"
-        operator: "in?"
-        value:
-          - "+ d'1 an"
-
-  m-organiser-pour-partir-travailler-a-l-etranger 
-    -
-      - 
-        attribute: "awareness"
-        operator: "=="
-	      value: "Je sais ce que je veux faire"
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre"     
-      - 
-        attribute: "age"
-        operator: ">="
-        value: 16
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-
-  calcul-et-versement-des-allocations
-    -
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-      - 
-        attribute: "age"
-        operator: ">="
-        value: 16
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-
-  formation-et-aides-avant-l-embauche 
-    -
-      - 
-        attribute: "awareness"
-        operator: "=="
-	      value: "Je sais ce que je veux faire"
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"   
-      - 
-        attribute: "age"
-        operator: ">="
-        value: 16
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-
-  acceder-a-une-formation-qualifiante
-    -
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"     
-      - 
-        attribute: "age"
-        operator: ">="
-        value: 16
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-
-  faire-un-stage-en-immersion-professionnelle-chez-un-employeur
-    -
-      -
-       attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"     
-      - 
-        attribute: "age"
-        operator: ">="
-        value: 16
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-
-  construire-mon-projet-professionnel-activ-projet
-    -
-      -
-        attribute: "awareness"
-        operator: "=="
-	      value: "Je sais ce que je veux faire"
-      -
-        attribute: "experience"
-        operator: "=="
-        value: true
-      - 
-        attribute: "duration"
-        operator: "in?"
-        value:
           - "+ d'1 an"
       -
         attribute: "status"
@@ -1879,22 +1904,13 @@ pole-emploi-de-sgdb
           - "Études supérieures"
           - "Autre"
 
-  mener-une-reflexion-sur-une-idee-de-creation-d-entreprise
+  offre-de-service-digitale:
     -
       -
-        attribute: "awareness"
-        operator: "=="
-	      value: "Je sais ce que je veux faire"
-      - 
-        attribute: "duration"
-        operator: "in?"
-        value:
-          - "+ d'1 an"
-      -
         attribute: "status"
         operator: "in?"
         value:
-          - "Sans activité"        
+          - "Sans activité"
       -
         attribute: "age"
         operator: ">="
@@ -1909,34 +1925,13 @@ pole-emploi-de-sgdb
           - "Études supérieures"
           - "Autre"
 
-  offre-de-service-digitale
-    -            
+  acceder-a-une-boutique-de-services-en-ligne-emploi-store:
+    -
       -
         attribute: "status"
         operator: "in?"
         value:
-          - "Sans activité"        
-      -
-        attribute: "age"
-        operator: ">="
-        value: 16
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-
-  acceder-a-une-boutique-de-services-en-ligne-emploi-store
-    -             
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"       
+          - "Sans activité"
       -
         attribute: "age"
         operator: ">="
