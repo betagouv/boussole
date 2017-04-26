@@ -7,6 +7,8 @@ module Agents
       include ControllerHelpers
       include Pundit
 
+      require_feature :define_target_public
+
       # GET /agents/service_offerings/:service_offering_id/target_public
       def show
         load_service_offering

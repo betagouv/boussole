@@ -4,12 +4,14 @@
   .l-content
     %article.profile
       .profile-form-actions
-        - if policy(@target_public).define_first_time?
-          -# TODO: Move styling to a button proun
-          = link_to t('.target_public.cta'),
-                    agents_service_offering_target_public_path(@service_offering),
-                    class: 'button-primary btn-block full-width',
-                    role: 'link'
+        - if feature?(:define_target_public)
+
+          - if policy(@target_public).define_first_time?
+            -# TODO: Move styling to a button proun
+            = link_to t('.target_public.cta'),
+                      agents_service_offering_target_public_path(@service_offering),
+                      class: 'button-primary btn-block full-width',
+                      role: 'link'
 
       %h1.profile-header= @service_offering.title
       %hr
@@ -61,12 +63,14 @@
       .profile-form-actions
         = render(partial: 'blocks/button_groups/agents_show', locals: { model: @service_offering })
 
-        - if policy(@target_public).define?
-          = link_to t('.target_public.show'),
-                    agents_service_offering_target_public_path(@service_offering),
-                    class: 'button-info',
-                    role: 'link'
+        - if feature?(:define_target_public)
 
-        - else
-          .profile-form-no-action
-            %hr= @target_public.message(:coming_soon)
+          - if policy(@target_public).define?
+            = link_to t('.target_public.show'),
+                      agents_service_offering_target_public_path(@service_offering),
+                      class: 'button-info',
+                      role: 'link'
+
+          - else
+            .profile-form-no-action
+              %hr= @target_public.message(:coming_soon)

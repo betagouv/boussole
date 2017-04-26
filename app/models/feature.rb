@@ -19,4 +19,8 @@ class Feature < ApplicationRecord
   feature :talk_to_a_human,
           default: proc { rand(2).zero? },
           description: 'People would rather want to talk to a human.'
+
+  feature :define_target_public,
+          default: false,
+          description: 'Allow actors to define the public targeted by their services'
 end

@@ -48,6 +48,10 @@ situation %(
   end
 
   background do
+    # Target public definition feature is switched on !
+    allow(Flip).to receive(:on?)
+    allow(Flip).to receive(:on?).with(:define_target_public) { true }
+
     # There are criteria
     create(:working_status, name: 'Sans activité')
     create(:engagement, name: 'Temps plein')
