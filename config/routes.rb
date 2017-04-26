@@ -6,7 +6,11 @@ Rails.application.routes.draw do
     root(to: 'dashboard#index')
 
     resources(:public_services)
-    resources(:service_offerings)
+
+    resources(:service_offerings) do
+      resource(:target_public, module: :service_offerings)
+    end
+
     resources(:measures)
   end
 

@@ -4,10 +4,10 @@ test:
     - bower prune
 
   post:
-    - bundle exec rake i18n_health
-    - bundle exec rake haml_lint
-    - bundle exec yaml-lint config/data config/criteria
-    - bundle exec rake inch
+    - bundle exec rake linters:i18n
+    - bundle exec rake linters:haml
+    - bundle exec rake linters:yaml
+    - bundle exec rake linters:inch
 
 deployment:
   production:

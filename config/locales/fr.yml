@@ -22,6 +22,9 @@ fr:
       measure:
         one: Dispositif
         other: Dispositifs
+      target_public:
+        one: Public cible
+        other: Publics cibles
 
     attributes:
       housing:
@@ -90,6 +93,31 @@ fr:
         updated_at: Mise à jour le
       contact:
         email_or_phone: Email ou téléphone
+
+    messages:
+      target_public:
+        everybody: Cette offre de service s'adresse à tout·e·s les usagers.
+        targeted: "Cette offre de service s'adresse aux usagers suivants :"
+        working_statuses: 'dont le statut est : %{target_public}'
+        engagements: 'dont la disponibilité est : %{target_public}'
+        working_durations: 'pour une durée de : %{target_public}'
+        working_age: "dont l'âge est compris entre %{minimum} et %{maximum} ans"
+        last_classes: "dont le niveau d'études est : %{target_public}"
+        experiences: 'qui a une expérience dans le secteur : %{target_public}'
+        pole_emplois: 'qui est inscrit·e à Pôle Emploi : %{target_public}'
+        mission_locales: 'qui est inscrit·e à une mission locale : %{target_public}'
+        cap_emplois: 'qui est inscrit·e à Cap Emploi : %{target_public}'
+        apecs: "qui est inscrit·e à l'Apec : %{target_public}"
+        handicaps: 'qui est en situation de handicap : %{target_public}'
+        housing_statuses: 'dont le statut est %{target_public}'
+        housing_durations: 'qui souhaite un logement pour %{target_public}'
+        awarenesses: 'qui %{target_public}'
+        housing_age: "dont l'âge est compris entre %{minimum} et %{maximum} ans"
+        resource: 'dont le budget est compris entre %{minimum} et %{maximum} euros'
+        coming_soon: >
+          Il n'est pas encore possible de définir un public cible pour une offre de
+          service dont la thématique est %{social_right}
+
 
   actioncontroller:
     notice:
@@ -164,10 +192,18 @@ fr:
       index:
         heading: 'Liste des offres de service à %{rhizome}'
         new: Ajouter une nouvelle offre de service
+      show:
+        target_public:
+          show: Public cible
+          cta: Définir un public cible
       new:
         heading: Nouvelle offre de service
       edit:
         heading: Mettre à jour l'offre de service
+      target_publics:
+        form:
+          criterium: Critère
+          target_public: Public cible
 
     measures:
       index:
@@ -181,4 +217,3 @@ fr:
   rhizomes:
     reims: Reims
     essonne: Cœur d'Essonne
-

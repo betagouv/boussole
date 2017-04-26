@@ -33,3 +33,5 @@ seeds['measures'].each_pair do |_, hash|
       hash.reject { |key, _| key =~ /ext|public_service/ }
     )
 end
+
+Rake::Task['data:create_criteria'].invoke

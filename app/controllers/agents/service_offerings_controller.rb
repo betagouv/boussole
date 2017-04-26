@@ -1,8 +1,11 @@
 # encoding: utf-8
 # frozen_string_literal: true
 
+# TODO: Refacto to use {ControllerHelpers}
 module Agents
   class ServiceOfferingsController < ApplicationController
+    include Pundit
+
     before_action :set_service_offering, only: %i(show edit update destroy)
 
     # GET /agents/service_offerings
@@ -12,6 +15,7 @@ module Agents
 
     # GET /agents/service_offerings/1
     def show
+      @target_public = TargetPublicDecorator.(@service_offering.target_public)
     end
 
     # GET /agents/service_offerings/new
@@ -86,5 +90,7 @@ module Agents
     def service_offering_scope
       ServiceOffering.friendly
     end
+
+    def pundit_user; end
   end
 end

@@ -19,6 +19,7 @@
 
         = f.input :next_status
 
+        -# TODO: Get rid of dup/pushing
         = f.input :residence_city,
                   collection: CITIES[rhizome.()].dup.push('Sans domicile fixe'),
                   include_blank: false,

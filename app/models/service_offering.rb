@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 #
-# Class ProximityService provides the representation of a brick n' mortar, meat space transaction between an
+# Class ProximityService provides the representation of a brick n' mortar, meat space transaction between a
 # <tt>usager</tt> and a {PublicService}'s professional, offered to the <tt>usager</tt> by the {PublicService}.
 #
 # @author Mauko Quiroga <mauko.quiroga@data.gouv.fr>
@@ -22,6 +22,10 @@ class ServiceOffering < ApplicationRecord
 
   belongs_to :social_right,
              inverse_of: :service_offerings
+
+  has_one :target_public,
+          inverse_of: :service_offering,
+          dependent: :destroy
 
   validates :title,
             :public_service,
@@ -77,4 +81,7 @@ class ServiceOffering < ApplicationRecord
         )
     end
   )
+
+  # TODO: Move to service object
+  after_create :create_target_public
 end

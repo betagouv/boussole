@@ -69,6 +69,7 @@ Style/Documentation:
     - app/controllers/**/*
     - app/helpers/application_helper.rb
     - app/mailers/application_mailer.rb
+    - app/policies/**/*
     - config/application.rb
     - db/**/*
     - spec/**/*_preview.rb

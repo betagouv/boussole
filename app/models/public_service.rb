@@ -22,6 +22,7 @@ class PublicService < ApplicationRecord
            dependent: :destroy
 
   has_many :social_rights,
+           -> { distinct },
            through: :exercise_scopes
 
   has_many :service_offerings,

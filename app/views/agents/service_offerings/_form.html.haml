@@ -13,5 +13,5 @@
   = f.input(:response_time_upper_bound)
   = f.association(:social_right)
 
-  .profile-actions
+  .profile-form-actions
     = render(partial: "blocks/button_groups/agents_#{action}", locals: { f: f, model: service_offering })

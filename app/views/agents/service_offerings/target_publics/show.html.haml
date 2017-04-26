@@ -1,0 +1,15 @@
+-# coding: utf-8
+
+.l-container-wide
+  .l-content
+    %section.profile-list
+      %h1.profile-list-header
+        = link_to(@service_offering.title, agents_service_offering_path(@service_offering))
+
+      %hr
+
+      = render(partial: 'recap', locals: { target_public: @target_public })
+
+      %hr
+
+      = render(partial: 'form', locals: { service_offering: @service_offering, target_public: @target_public })

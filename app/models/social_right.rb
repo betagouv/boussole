@@ -26,7 +26,8 @@ class SocialRight < ApplicationRecord
            through: :exercise_scopes,
            source: :exercisable, source_type: 'Measure'
 
-  has_many :service_offerings
+  has_many :service_offerings,
+           inverse_of: :social_right
 
   validates :name,
             presence: true,
