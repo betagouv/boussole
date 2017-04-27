@@ -4,6 +4,10 @@
 namespace :data do
   desc 'Find or create records needed for matching'
   task create_criteria: :environment do
+    ServiceOffering.find_each do |service_offering|
+      service_offering.target_public || service_offering.create_target_public!
+    end
+
     APECS            .each { |status| Apec.find_or_create_by!(value: status) }
     AWARENESSES      .each { |status| Awareness.find_or_create_by!(name: status) }
     CAP_EMPLOIS      .each { |status| CapEmploi.find_or_create_by!(value: status) }
