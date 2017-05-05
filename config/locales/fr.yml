@@ -192,6 +192,8 @@ fr:
       index:
         heading: 'Liste des offres de service à %{rhizome}'
         new: Ajouter une nouvelle offre de service
+        target_public:
+          show: Public cible
       show:
         target_public:
           show: Public cible

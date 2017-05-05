@@ -26,4 +26,23 @@
                 %td= service_offering.title
                 %td= service_offering.public_service_title
                 %td= service_offering.social_right_name
+
                 = render(partial: 'blocks/button_groups/agents_index', locals: { model: service_offering })
+
+                %td
+                  - if feature?(:define_target_public)
+
+                  - target_public = TargetPublicDecorator.(service_offering.target_public)
+
+                    - if policy(target_public).define?
+                      = link_to t('.target_public.show'),
+                                agents_service_offering_target_public_path(service_offering),
+                                class: 'button-info',
+                                role: 'link'
+
+                    - else
+                      .profile-form-no-action
+
+
+
+
