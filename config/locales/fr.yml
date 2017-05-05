@@ -203,6 +203,8 @@ fr:
       edit:
         heading: Mettre à jour l'offre de service
       target_publics:
+        show:
+          index: Retour à la liste des offres de service
         form:
           criterium: Critère
           target_public: Public cible

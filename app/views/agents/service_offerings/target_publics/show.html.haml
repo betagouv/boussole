@@ -13,3 +13,9 @@
       %hr
 
       = render(partial: 'form', locals: { service_offering: @service_offering, target_public: @target_public })
+
+    .profile-form-actions
+      = link_to t('.index'),
+                agents_service_offerings_path(@service_offerings),
+                class: 'button-default',
+                role: 'link'
