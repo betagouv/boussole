@@ -1,5 +1,40 @@
 # Change Log
 
+## [v1.5.0](https://github.com/sgmap/boussole/tree/v1.5.0) (2017-05-12)
+[Full Changelog](https://github.com/sgmap/boussole/compare/v1.4.1...v1.5.0)
+
+**Implemented enhancements:**
+
+- Lazy load rhizome [\#108](https://github.com/sgmap/boussole/pull/108) ([maukoquiroga](https://github.com/maukoquiroga))
+- Rename criterias \(sic\) to criteria [\#107](https://github.com/sgmap/boussole/pull/107) ([maukoquiroga](https://github.com/maukoquiroga))
+- Update Reims' cities [\#103](https://github.com/sgmap/boussole/pull/103) ([maukoquiroga](https://github.com/maukoquiroga))
+- Remove polymorphic social\_right/service\_offering relation [\#100](https://github.com/sgmap/boussole/pull/100) ([maukoquiroga](https://github.com/maukoquiroga))
+- Add one social right per service offering [\#99](https://github.com/sgmap/boussole/pull/99) ([maukoquiroga](https://github.com/maukoquiroga))
+- Add options to status & class [\#96](https://github.com/sgmap/boussole/pull/96) ([maukoquiroga](https://github.com/maukoquiroga))
+- Choose working or housing [\#90](https://github.com/sgmap/boussole/pull/90) ([maukoquiroga](https://github.com/maukoquiroga))
+
+**Fixed bugs:**
+
+- Be sure TargetPublic exists [\#110](https://github.com/sgmap/boussole/pull/110) ([maukoquiroga](https://github.com/maukoquiroga))
+- Fix CircleCI config [\#106](https://github.com/sgmap/boussole/pull/106) ([maukoquiroga](https://github.com/maukoquiroga))
+
+**Merged pull requests:**
+
+- Add last OS Coeur d'Essone [\#109](https://github.com/sgmap/boussole/pull/109) ([HelaG](https://github.com/HelaG))
+- Add editor config [\#104](https://github.com/sgmap/boussole/pull/104) ([maukoquiroga](https://github.com/maukoquiroga))
+- Code cleanup [\#102](https://github.com/sgmap/boussole/pull/102) ([maukoquiroga](https://github.com/maukoquiroga))
+- Update ruby version [\#101](https://github.com/sgmap/boussole/pull/101) ([maukoquiroga](https://github.com/maukoquiroga))
+- Allow actors to define the public targeted by their services [\#98](https://github.com/sgmap/boussole/pull/98) ([AlexiaR](https://github.com/AlexiaR))
+- Add PhantomJS to README [\#97](https://github.com/sgmap/boussole/pull/97) ([maukoquiroga](https://github.com/maukoquiroga))
+- Update Formation à distance + [\#95](https://github.com/sgmap/boussole/pull/95) ([HelaG](https://github.com/HelaG))
+- Dependency update 10/4/17 [\#94](https://github.com/sgmap/boussole/pull/94) ([maukoquiroga](https://github.com/maukoquiroga))
+- Document how to install bower [\#93](https://github.com/sgmap/boussole/pull/93) ([maukoquiroga](https://github.com/maukoquiroga))
+- Document environment configuration  [\#92](https://github.com/sgmap/boussole/pull/92) ([maukoquiroga](https://github.com/maukoquiroga))
+- Document database configuration [\#91](https://github.com/sgmap/boussole/pull/91) ([maukoquiroga](https://github.com/maukoquiroga))
+- Add territorial competence to public services [\#89](https://github.com/sgmap/boussole/pull/89) ([maukoquiroga](https://github.com/maukoquiroga))
+- List actors' service offerings' [\#88](https://github.com/sgmap/boussole/pull/88) ([maukoquiroga](https://github.com/maukoquiroga))
+- Permettre aux jeunes de Coeur d'Essonne de choisir une commune de Coeur d'Essonne [\#61](https://github.com/sgmap/boussole/pull/61) ([maukoquiroga](https://github.com/maukoquiroga))
+
 ## [v1.4.1](https://github.com/sgmap/boussole/tree/v1.4.1) (2017-02-25)
 [Full Changelog](https://github.com/sgmap/boussole/compare/v1.4.0...v1.4.1)
 
@@ -7,12 +42,9 @@
 
 - Change updated\_at translation [\#87](https://github.com/sgmap/boussole/pull/87) ([maukoquiroga](https://github.com/maukoquiroga))
 - Render sector optional [\#86](https://github.com/sgmap/boussole/pull/86) ([maukoquiroga](https://github.com/maukoquiroga))
+- Response time in days [\#85](https://github.com/sgmap/boussole/pull/85) ([maukoquiroga](https://github.com/maukoquiroga))
 - Simplify agent forms [\#84](https://github.com/sgmap/boussole/pull/84) ([maukoquiroga](https://github.com/maukoquiroga))
 - Ajouter l'offre de service de Pain d'Avoine [\#83](https://github.com/sgmap/boussole/pull/83) ([HelaG](https://github.com/HelaG))
-
-**Merged pull requests:**
-
-- Response time in days [\#85](https://github.com/sgmap/boussole/pull/85) ([maukoquiroga](https://github.com/maukoquiroga))
 
 ## [v1.4.0](https://github.com/sgmap/boussole/tree/v1.4.0) (2017-02-20)
 [Full Changelog](https://github.com/sgmap/boussole/compare/v1.3.0...v1.4.0)
@@ -34,7 +66,7 @@
 **Merged pull requests:**
 
 - Expliquer comment ça marche dans la landing page [\#80](https://github.com/sgmap/boussole/pull/80) ([maukoquiroga](https://github.com/maukoquiroga))
-- Expliquer comment ça marche dans la landing page 1/2 [\#78](https://github.com/sgmap/boussole/pull/78) ([maukoquiroga](https://github.com/maukoquiroga))
+- Expliquer comment ça marche dans la landing page 2/2 [\#78](https://github.com/sgmap/boussole/pull/78) ([maukoquiroga](https://github.com/maukoquiroga))
 - Expliquer comment ça marche dans la landing page 1/2 [\#77](https://github.com/sgmap/boussole/pull/77) ([maukoquiroga](https://github.com/maukoquiroga))
 - Filter bot calls [\#70](https://github.com/sgmap/boussole/pull/70) ([maukoquiroga](https://github.com/maukoquiroga))
 - Permettre aux jeunes d'avoir une réponse dans tous les cas [\#69](https://github.com/sgmap/boussole/pull/69) ([maukoquiroga](https://github.com/maukoquiroga))
