@@ -109,34 +109,32 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>== Schema Information
-Schema version: 20160914121308</p>
+    <p>Class DigitalService provides the representation of an online, dematerialised transaction between a
+<tt>usager</tt> and a <span class='object_link'><a href="PublicService.html" title="PublicService (class)">PublicService</a></span>’s professional, offered to the <tt>usager</tt> by the <span class='object_link'><a href="PublicService.html" title="PublicService (class)">PublicService</a></span>,
+or between the <tt>usager</tt> and the DigitalService itself, mediationless.</p>
 
-<p>Table name: measures</p>
-
-<p><em>id</em>::                <tt>integer, not null, primary key</tt>
-<em>title</em>::             <tt>string</tt>
-<em>description</em>::       <tt>text</tt>
-<em>url</em>::               <tt>string</tt>
-<em>public_service_id</em>:: <tt>integer</tt>
-<em>created_at</em>::        <tt>datetime, not null</tt>
-<em>updated_at</em>::        <tt>datetime, not null</tt></p>
-
-<p>Indexes</p>
-
-<p>index_measures_on_public_service_id  (public_service_id)</p>
-
-<p>Foreign Keys</p>
-
-<h2 id="fkrails22911d55d8--publicserviceid--publicservicesid">fk_rails_22911d55d8  (public_service_id =&gt; public_services.id)</h2>
-<p>== Schema Information End
-++</p>
+<p>TODO: Rename to DigitalService</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>Mauko Quiroga <a href="mailto:mauko.quiroga@data.gouv.fr">mauko.quiroga@data.gouv.fr</a></p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
 
@@ -367,12 +365,12 @@ Schema version: 20160914121308</p>
       <pre class="lines">
 
 
-51
-52
-53</pre>
+26
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/measure.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'app/models/measure.rb', line 26</span>
 
 <span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:title</span><span class='comma'>,</span>
 <span class='symbol'>:url</span><span class='comma'>,</span>
@@ -399,12 +397,12 @@ Schema version: 20160914121308</p>
       <pre class="lines">
 
 
-51
-52
-53</pre>
+26
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/measure.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'app/models/measure.rb', line 26</span>
 
 <span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:title</span><span class='comma'>,</span>
 <span class='symbol'>:url</span><span class='comma'>,</span>
@@ -466,12 +464,12 @@ Schema version: 20160914121308</p>
       <pre class="lines">
 
 
-44
-45
-46</pre>
+18
+19
+20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/measure.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'app/models/measure.rb', line 18</span>
 
 <span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:exercise_scopes</span><span class='comma'>,</span>
 <span class='label'>as:</span> <span class='symbol'>:exercisable</span><span class='comma'>,</span>
@@ -530,13 +528,13 @@ Schema version: 20160914121308</p>
       <pre class="lines">
 
 
-55
-56
-57
-58</pre>
+30
+31
+32
+33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/measure.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'app/models/measure.rb', line 30</span>
 
 <span class='id identifier rubyid_delegate'>delegate</span> <span class='symbol'>:title</span><span class='comma'>,</span>
 <span class='label'>to:</span> <span class='symbol'>:public_service</span><span class='comma'>,</span>
@@ -592,10 +590,10 @@ Schema version: 20160914121308</p>
       <pre class="lines">
 
 
-42</pre>
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/measure.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'app/models/measure.rb', line 16</span>
 
 <span class='id identifier rubyid_belongs_to'>belongs_to</span> <span class='symbol'>:public_service</span></pre>
     </td>
@@ -648,13 +646,15 @@ Schema version: 20160914121308</p>
       <pre class="lines">
 
 
-48
-49</pre>
+22
+23
+24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/measure.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'app/models/measure.rb', line 22</span>
 
 <span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:social_rights</span><span class='comma'>,</span>
+<span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_distinct'>distinct</span> <span class='rbrace'>}</span><span class='comma'>,</span>
 <span class='label'>through:</span> <span class='symbol'>:exercise_scopes</span></pre>
     </td>
   </tr>
@@ -666,9 +666,9 @@ Schema version: 20160914121308</p>
 </div>
 
     <div id="footer">
-  Generated on Mon Feb 20 11:59:33 2017 by
+  Generated on Fri May 12 20:50:02 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.3.1).
+  0.8.7.6 (ruby-2.4.1).
 </div>
 
   </body>

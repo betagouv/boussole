@@ -113,36 +113,30 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>== Schema Information
-Schema version: 20161006093650</p>
-
-<p>Table name: public_services</p>
-
-<p><em>id</em>::                        <tt>integer, not null, primary key</tt>
-<em>title</em>::                     <tt>string</tt>
-<em>description</em>::               <tt>text</tt>
-<em>postal_address</em>::            <tt>string</tt>
-<em>email</em>::                     <tt>string</tt>
-<em>phone</em>::                     <tt>string</tt>
-<em>url</em>::                       <tt>string</tt>
-<em>created_at</em>::                <tt>datetime, not null</tt>
-<em>updated_at</em>::                <tt>datetime, not null</tt>
-<em>slug</em>::                      <tt>string</tt>
-<em>response_time_upper_bound</em>:: <tt>integer</tt></p>
-
-<p>Indexes</p>
-
-<p>index_public_services_on_response_time_upper_bound  (response_time_upper_bound)
- index_public_services_on_slug                       (slug) UNIQUE
-–
-== Schema Information End
-++</p>
+    <p>Class PublicService provides a representation of an institution that provides one or more
+services to young people. Scope includes cooperatives, associations, territorial collectivities,
+unions, etc.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>Mauko Quiroga <a href="mailto:mauko.quiroga@data.gouv.fr">mauko.quiroga@data.gouv.fr</a></p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
 
@@ -384,14 +378,14 @@ Schema version: 20161006093650</p>
       <pre class="lines">
 
 
-65
-66
-67
-68
-69</pre>
+40
+41
+42
+43
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 40</span>
 
 <span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:response_time_upper_bound</span><span class='comma'>,</span>
 <span class='label'>numericality:</span> <span class='lbrace'>{</span>
@@ -420,11 +414,11 @@ Schema version: 20161006093650</p>
       <pre class="lines">
 
 
-62
-63</pre>
+37
+38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 37</span>
 
 <span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:slug</span><span class='comma'>,</span>
 <span class='label'>uniqueness:</span> <span class='kw'>true</span></pre>
@@ -450,11 +444,11 @@ Schema version: 20161006093650</p>
       <pre class="lines">
 
 
-59
-60</pre>
+34
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 34</span>
 
 <span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:title</span><span class='comma'>,</span>
 <span class='label'>presence:</span> <span class='kw'>true</span></pre>
@@ -515,12 +509,12 @@ Schema version: 20161006093650</p>
       <pre class="lines">
 
 
-46
-47
-48</pre>
+20
+21
+22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 20</span>
 
 <span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:exercise_scopes</span><span class='comma'>,</span>
 <span class='label'>as:</span> <span class='symbol'>:exercisable</span><span class='comma'>,</span>
@@ -575,11 +569,11 @@ Schema version: 20161006093650</p>
       <pre class="lines">
 
 
-56
-57</pre>
+31
+32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 31</span>
 
 <span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:measures</span><span class='comma'>,</span>
 <span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
@@ -633,11 +627,11 @@ Schema version: 20161006093650</p>
       <pre class="lines">
 
 
-53
-54</pre>
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 28</span>
 
 <span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:service_offerings</span><span class='comma'>,</span>
 <span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
@@ -691,13 +685,15 @@ Schema version: 20161006093650</p>
       <pre class="lines">
 
 
-50
-51</pre>
+24
+25
+26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'app/models/public_service.rb', line 24</span>
 
 <span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:social_rights</span><span class='comma'>,</span>
+<span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_distinct'>distinct</span> <span class='rbrace'>}</span><span class='comma'>,</span>
 <span class='label'>through:</span> <span class='symbol'>:exercise_scopes</span></pre>
     </td>
   </tr>
@@ -709,9 +705,9 @@ Schema version: 20161006093650</p>
 </div>
 
     <div id="footer">
-  Generated on Mon Feb 20 11:59:33 2017 by
+  Generated on Fri May 12 20:50:02 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.3.1).
+  0.8.7.6 (ruby-2.4.1).
 </div>
 
   </body>

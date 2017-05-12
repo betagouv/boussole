@@ -1,0 +1,2964 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: TargetPublic
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!TargetPublic.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (T)</a> &raquo;
+    
+    
+    <span class="title">TargetPublic</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: TargetPublic
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">ActiveRecord::Base</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActiveRecord::Base</li>
+          
+            <li class="next">TargetPublic</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/models/target_public.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Class TargetPublic provides a representation of a set of criteria depending on
+the social right of the Service_Offering.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>Alexia Rey <a href="mailto:alexia.rey@data.gouv.fr">alexia.rey@data.gouv.fr</a></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="WORKING_CRITERIA-constant" class="">WORKING_CRITERIA =
+          
+        </dt>
+        <dd><pre class="code">apecs
+  awarenesses
+  cap_emplois
+  engagements
+  experiences
+  handicaps
+  last_classes
+  mission_locales
+  pole_emplois
+  working_age
+  working_durations
+  working_statuses
+).freeze</pre></dd>
+      
+        <dt id="HOUSING_CRITERIA-constant" class="">HOUSING_CRITERIA =
+          
+        </dt>
+        <dd><pre class="code">housing_age
+  housing_durations
+  housing_statuses
+  resource
+).freeze</pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Belongs to
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#service_offering-instance_method" title="#service_offering (instance method)">- (ServiceOffering) <strong>service_offering</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Has many
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#apecs-instance_method" title="#apecs (instance method)">- (ActiveRecord::Relation&lt;Apec&gt;) <strong>apecs</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#awarenesses-instance_method" title="#awarenesses (instance method)">- (ActiveRecord::Relation&lt;Awareness&gt;) <strong>awarenesses</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cap_emplois-instance_method" title="#cap_emplois (instance method)">- (ActiveRecord::Relation&lt;CapEmploi&gt;) <strong>cap_emplois</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#engagements-instance_method" title="#engagements (instance method)">- (ActiveRecord::Relation&lt;Engagement&gt;) <strong>engagements</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#experiences-instance_method" title="#experiences (instance method)">- (ActiveRecord::Relation&lt;Experience&gt;) <strong>experiences</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#handicaps-instance_method" title="#handicaps (instance method)">- (ActiveRecord::Relation&lt;Handicap&gt;) <strong>handicaps</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#housing_durations-instance_method" title="#housing_durations (instance method)">- (ActiveRecord::Relation&lt;HousingDuration&gt;) <strong>housing_durations</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#housing_statuses-instance_method" title="#housing_statuses (instance method)">- (ActiveRecord::Relation&lt;HousingStatus&gt;) <strong>housing_statuses</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#last_classes-instance_method" title="#last_classes (instance method)">- (ActiveRecord::Relation&lt;LastClass&gt;) <strong>last_classes</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#mission_locales-instance_method" title="#mission_locales (instance method)">- (ActiveRecord::Relation&lt;MissionLocale&gt;) <strong>mission_locales</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pole_emplois-instance_method" title="#pole_emplois (instance method)">- (ActiveRecord::Relation&lt;PoleEmploi&gt;) <strong>pole_emplois</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#target_public_apecs-instance_method" title="#target_public_apecs (instance method)">- (ActiveRecord::Relation&lt;TargetPublicApec&gt;) <strong>target_public_apecs</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Apecs.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#target_public_awarenesses-instance_method" title="#target_public_awarenesses (instance method)">- (ActiveRecord::Relation&lt;TargetPublicAwareness&gt;) <strong>target_public_awarenesses</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Awarenesses.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#target_public_cap_emplois-instance_method" title="#target_public_cap_emplois (instance method)">- (ActiveRecord::Relation&lt;TargetPublicCapEmploi&gt;) <strong>target_public_cap_emplois</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Cap Emplois.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#target_public_engagements-instance_method" title="#target_public_engagements (instance method)">- (ActiveRecord::Relation&lt;TargetPublicEngagement&gt;) <strong>target_public_engagements</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Engagements.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#target_public_experiences-instance_method" title="#target_public_experiences (instance method)">- (ActiveRecord::Relation&lt;TargetPublicExperience&gt;) <strong>target_public_experiences</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Experiences.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#target_public_handicaps-instance_method" title="#target_public_handicaps (instance method)">- (ActiveRecord::Relation&lt;TargetPublicHandicap&gt;) <strong>target_public_handicaps</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Handicaps.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#target_public_housing_durations-instance_method" title="#target_public_housing_durations (instance method)">- (ActiveRecord::Relation&lt;TargetPublicHousingDuration&gt;) <strong>target_public_housing_durations</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Housing Durations.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#target_public_housing_statuses-instance_method" title="#target_public_housing_statuses (instance method)">- (ActiveRecord::Relation&lt;TargetPublicHousingStatus&gt;) <strong>target_public_housing_statuses</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Housing Statuses.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#target_public_last_classes-instance_method" title="#target_public_last_classes (instance method)">- (ActiveRecord::Relation&lt;TargetPublicLastClass&gt;) <strong>target_public_last_classes</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Last Classes.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#target_public_mission_locales-instance_method" title="#target_public_mission_locales (instance method)">- (ActiveRecord::Relation&lt;TargetPublicMissionLocale&gt;) <strong>target_public_mission_locales</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Mission Locales.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#target_public_pole_emplois-instance_method" title="#target_public_pole_emplois (instance method)">- (ActiveRecord::Relation&lt;TargetPublicPoleEmploi&gt;) <strong>target_public_pole_emplois</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Pôle Emplois.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#target_public_working_durations-instance_method" title="#target_public_working_durations (instance method)">- (ActiveRecord::Relation&lt;TargetPublicWorkingDuration&gt;) <strong>target_public_working_durations</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Working Durations.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#target_public_working_statuses-instance_method" title="#target_public_working_statuses (instance method)">- (ActiveRecord::Relation&lt;TargetPublicWorkingStatus&gt;) <strong>target_public_working_statuses</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Working Statuses.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#working_durations-instance_method" title="#working_durations (instance method)">- (ActiveRecord::Relation&lt;WorkingDuration&gt;) <strong>working_durations</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#working_statuses-instance_method" title="#working_statuses (instance method)">- (ActiveRecord::Relation&lt;WorkingStatus&gt;) <strong>working_statuses</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Has one
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#housing_age-instance_method" title="#housing_age (instance method)">- (HousingAge) <strong>housing_age</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Housing Age.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resource-instance_method" title="#resource (instance method)">- (Resource) <strong>resource</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Resource.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#working_age-instance_method" title="#working_age (instance method)">- (WorkingAge) <strong>working_age</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Working Age.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#criteria-instance_method" title="#criteria (instance method)">- (Array&lt;Symbol&gt;) <strong>criteria</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Collection of criteria for each type of project (housing, working, etc.).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#housing%3F-instance_method" title="#housing? (instance method)">- (Boolean) <strong>housing?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>TODO: You know way too much…</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#working%3F-instance_method" title="#working? (instance method)">- (Boolean) <strong>working?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>TODO: You know way too much…</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="apecs-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="Apec.html" title="Apec (class)">Apec</a></span>&gt;</tt>) <strong>apecs</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="Apec.html" title="Apec (class)">Apec</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 19</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:apecs</span><span class='comma'>,</span>
+<span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_distinct'>distinct</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='symbol'>:created_at</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='label'>through:</span> <span class='symbol'>:target_public_apecs</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="awarenesses-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="Awareness.html" title="Awareness (class)">Awareness</a></span>&gt;</tt>) <strong>awarenesses</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="Awareness.html" title="Awareness (class)">Awareness</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 28</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:awarenesses</span><span class='comma'>,</span>
+<span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_distinct'>distinct</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='symbol'>:created_at</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='label'>through:</span> <span class='symbol'>:target_public_awarenesses</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="cap_emplois-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="CapEmploi.html" title="CapEmploi (class)">CapEmploi</a></span>&gt;</tt>) <strong>cap_emplois</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="CapEmploi.html" title="CapEmploi (class)">CapEmploi</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 37</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:cap_emplois</span><span class='comma'>,</span>
+<span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_distinct'>distinct</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='symbol'>:created_at</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='label'>through:</span> <span class='symbol'>:target_public_cap_emplois</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="criteria-instance_method">
+  
+    - (<tt>Array&lt;Symbol&gt;</tt>) <strong>criteria</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Collection of criteria for each type of project (housing, working, etc.).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Symbol&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><description>
+</description>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+182
+183
+184
+185
+186</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 182</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_criteria'>criteria</span>
+  <span class='kw'>return</span> <span class='const'>WORKING_CRITERIA</span> <span class='kw'>if</span> <span class='id identifier rubyid_working?'>working?</span>
+  <span class='kw'>return</span> <span class='const'>HOUSING_CRITERIA</span> <span class='kw'>if</span> <span class='id identifier rubyid_housing?'>housing?</span>
+  <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="engagements-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="Engagement.html" title="Engagement (class)">Engagement</a></span>&gt;</tt>) <strong>engagements</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="Engagement.html" title="Engagement (class)">Engagement</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 46</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:engagements</span><span class='comma'>,</span>
+<span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_distinct'>distinct</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='symbol'>:created_at</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='label'>through:</span> <span class='symbol'>:target_public_engagements</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="experiences-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="Experience.html" title="Experience (class)">Experience</a></span>&gt;</tt>) <strong>experiences</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="Experience.html" title="Experience (class)">Experience</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 55</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:experiences</span><span class='comma'>,</span>
+<span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_distinct'>distinct</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='symbol'>:created_at</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='label'>through:</span> <span class='symbol'>:target_public_experiences</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="handicaps-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="Handicap.html" title="Handicap (class)">Handicap</a></span>&gt;</tt>) <strong>handicaps</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="Handicap.html" title="Handicap (class)">Handicap</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 64</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:handicaps</span><span class='comma'>,</span>
+<span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_distinct'>distinct</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='symbol'>:created_at</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='label'>through:</span> <span class='symbol'>:target_public_handicaps</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="housing?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>housing?</strong>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>TODO: You know way too much…</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+196
+197
+198</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 196</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_housing?'>housing?</span>
+  <span class='id identifier rubyid_service_offering'>service_offering</span><span class='period'>.</span><span class='id identifier rubyid_social_right'>social_right</span><span class='period'>.</span><span class='id identifier rubyid_slug'>slug</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>logement</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="housing_age-instance_method">
+  
+    - (<tt><span class='object_link'><a href="HousingAge.html" title="HousingAge (class)">HousingAge</a></span></tt>) <strong>housing_age</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Housing Age</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="HousingAge.html" title="HousingAge (class)">HousingAge</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 139</span>
+
+<span class='id identifier rubyid_has_one'>has_one</span> <span class='symbol'>:housing_age</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:target_public</span><span class='comma'>,</span>
+<span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="housing_durations-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="HousingDuration.html" title="HousingDuration (class)">HousingDuration</a></span>&gt;</tt>) <strong>housing_durations</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="HousingDuration.html" title="HousingDuration (class)">HousingDuration</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 73</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:housing_durations</span><span class='comma'>,</span>
+<span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_distinct'>distinct</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='symbol'>:created_at</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='label'>through:</span> <span class='symbol'>:target_public_housing_durations</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="housing_statuses-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="HousingStatus.html" title="HousingStatus (class)">HousingStatus</a></span>&gt;</tt>) <strong>housing_statuses</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="HousingStatus.html" title="HousingStatus (class)">HousingStatus</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82
+83
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 82</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:housing_statuses</span><span class='comma'>,</span>
+<span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_distinct'>distinct</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='symbol'>:created_at</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='label'>through:</span> <span class='symbol'>:target_public_housing_statuses</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="last_classes-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="LastClass.html" title="LastClass (class)">LastClass</a></span>&gt;</tt>) <strong>last_classes</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="LastClass.html" title="LastClass (class)">LastClass</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 91</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:last_classes</span><span class='comma'>,</span>
+<span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_distinct'>distinct</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='symbol'>:created_at</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='label'>through:</span> <span class='symbol'>:target_public_last_classes</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="mission_locales-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="MissionLocale.html" title="MissionLocale (class)">MissionLocale</a></span>&gt;</tt>) <strong>mission_locales</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="MissionLocale.html" title="MissionLocale (class)">MissionLocale</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+100
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 100</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:mission_locales</span><span class='comma'>,</span>
+<span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_distinct'>distinct</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='symbol'>:created_at</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='label'>through:</span> <span class='symbol'>:target_public_mission_locales</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pole_emplois-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="PoleEmploi.html" title="PoleEmploi (class)">PoleEmploi</a></span>&gt;</tt>) <strong>pole_emplois</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="PoleEmploi.html" title="PoleEmploi (class)">PoleEmploi</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 109</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:pole_emplois</span><span class='comma'>,</span>
+<span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_distinct'>distinct</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='symbol'>:created_at</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='label'>through:</span> <span class='symbol'>:target_public_pole_emplois</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resource-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Resource.html" title="Resource (class)">Resource</a></span></tt>) <strong>resource</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Resource</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Resource.html" title="Resource (class)">Resource</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+146
+147
+148</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 146</span>
+
+<span class='id identifier rubyid_has_one'>has_one</span> <span class='symbol'>:resource</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:target_public</span><span class='comma'>,</span>
+<span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="service_offering-instance_method">
+  
+    - (<tt><span class='object_link'><a href="ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span></tt>) <strong>service_offering</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><p class="tag_title">Validations:</p>
+<ul class="validations">
+  
+    
+      <li>
+        
+            <a href="http://edgeguides.rubyonrails.org/active_record_validations.html#presence" target="_parent" title="Presence">Presence</a>
+        
+        
+      </li>
+    
+  
+</ul>
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 12</span>
+
+<span class='id identifier rubyid_belongs_to'>belongs_to</span> <span class='symbol'>:service_offering</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:target_public</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="target_public_apecs-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicApec.html" title="TargetPublicApec (class)">TargetPublicApec</a></span>&gt;</tt>) <strong>target_public_apecs</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Apecs</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicApec.html" title="TargetPublicApec (class)">TargetPublicApec</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 15</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:target_public_apecs</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:target_public</span><span class='comma'>,</span>
+<span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="target_public_awarenesses-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicAwareness.html" title="TargetPublicAwareness (class)">TargetPublicAwareness</a></span>&gt;</tt>) <strong>target_public_awarenesses</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Awarenesses</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicAwareness.html" title="TargetPublicAwareness (class)">TargetPublicAwareness</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 24</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:target_public_awarenesses</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:target_public</span><span class='comma'>,</span>
+<span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="target_public_cap_emplois-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicCapEmploi.html" title="TargetPublicCapEmploi (class)">TargetPublicCapEmploi</a></span>&gt;</tt>) <strong>target_public_cap_emplois</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Cap Emplois</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicCapEmploi.html" title="TargetPublicCapEmploi (class)">TargetPublicCapEmploi</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 33</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:target_public_cap_emplois</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:target_public</span><span class='comma'>,</span>
+<span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="target_public_engagements-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicEngagement.html" title="TargetPublicEngagement (class)">TargetPublicEngagement</a></span>&gt;</tt>) <strong>target_public_engagements</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Engagements</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicEngagement.html" title="TargetPublicEngagement (class)">TargetPublicEngagement</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 42</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:target_public_engagements</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:target_public</span><span class='comma'>,</span>
+<span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="target_public_experiences-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicExperience.html" title="TargetPublicExperience (class)">TargetPublicExperience</a></span>&gt;</tt>) <strong>target_public_experiences</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Experiences</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicExperience.html" title="TargetPublicExperience (class)">TargetPublicExperience</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52
+53</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 51</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:target_public_experiences</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:target_public</span><span class='comma'>,</span>
+<span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="target_public_handicaps-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicHandicap.html" title="TargetPublicHandicap (class)">TargetPublicHandicap</a></span>&gt;</tt>) <strong>target_public_handicaps</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Handicaps</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicHandicap.html" title="TargetPublicHandicap (class)">TargetPublicHandicap</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 60</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:target_public_handicaps</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:target_public</span><span class='comma'>,</span>
+<span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="target_public_housing_durations-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicHousingDuration.html" title="TargetPublicHousingDuration (class)">TargetPublicHousingDuration</a></span>&gt;</tt>) <strong>target_public_housing_durations</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Housing Durations</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicHousingDuration.html" title="TargetPublicHousingDuration (class)">TargetPublicHousingDuration</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 69</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:target_public_housing_durations</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:target_public</span><span class='comma'>,</span>
+<span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="target_public_housing_statuses-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicHousingStatus.html" title="TargetPublicHousingStatus (class)">TargetPublicHousingStatus</a></span>&gt;</tt>) <strong>target_public_housing_statuses</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Housing Statuses</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicHousingStatus.html" title="TargetPublicHousingStatus (class)">TargetPublicHousingStatus</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 78</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:target_public_housing_statuses</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:target_public</span><span class='comma'>,</span>
+<span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="target_public_last_classes-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicLastClass.html" title="TargetPublicLastClass (class)">TargetPublicLastClass</a></span>&gt;</tt>) <strong>target_public_last_classes</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Last Classes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicLastClass.html" title="TargetPublicLastClass (class)">TargetPublicLastClass</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 87</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:target_public_last_classes</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:target_public</span><span class='comma'>,</span>
+<span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="target_public_mission_locales-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicMissionLocale.html" title="TargetPublicMissionLocale (class)">TargetPublicMissionLocale</a></span>&gt;</tt>) <strong>target_public_mission_locales</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Mission Locales</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicMissionLocale.html" title="TargetPublicMissionLocale (class)">TargetPublicMissionLocale</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97
+98</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 96</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:target_public_mission_locales</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:target_public</span><span class='comma'>,</span>
+<span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="target_public_pole_emplois-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicPoleEmploi.html" title="TargetPublicPoleEmploi (class)">TargetPublicPoleEmploi</a></span>&gt;</tt>) <strong>target_public_pole_emplois</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Pôle Emplois</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicPoleEmploi.html" title="TargetPublicPoleEmploi (class)">TargetPublicPoleEmploi</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 105</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:target_public_pole_emplois</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:target_public</span><span class='comma'>,</span>
+<span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="target_public_working_durations-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicWorkingDuration.html" title="TargetPublicWorkingDuration (class)">TargetPublicWorkingDuration</a></span>&gt;</tt>) <strong>target_public_working_durations</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Working Durations</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicWorkingDuration.html" title="TargetPublicWorkingDuration (class)">TargetPublicWorkingDuration</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+114
+115
+116</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 114</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:target_public_working_durations</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:target_public</span><span class='comma'>,</span>
+<span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="target_public_working_statuses-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicWorkingStatus.html" title="TargetPublicWorkingStatus (class)">TargetPublicWorkingStatus</a></span>&gt;</tt>) <strong>target_public_working_statuses</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Working Statuses</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="TargetPublicWorkingStatus.html" title="TargetPublicWorkingStatus (class)">TargetPublicWorkingStatus</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+123
+124
+125</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 123</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:target_public_working_statuses</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:target_public</span><span class='comma'>,</span>
+<span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="working?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>working?</strong>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>TODO: You know way too much…</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+191
+192
+193</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 191</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_working?'>working?</span>
+  <span class='id identifier rubyid_service_offering'>service_offering</span><span class='period'>.</span><span class='id identifier rubyid_social_right'>social_right</span><span class='period'>.</span><span class='id identifier rubyid_slug'>slug</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>emploi</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="working_age-instance_method">
+  
+    - (<tt><span class='object_link'><a href="WorkingAge.html" title="WorkingAge (class)">WorkingAge</a></span></tt>) <strong>working_age</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Working Age</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="WorkingAge.html" title="WorkingAge (class)">WorkingAge</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 132</span>
+
+<span class='id identifier rubyid_has_one'>has_one</span> <span class='symbol'>:working_age</span><span class='comma'>,</span>
+<span class='label'>inverse_of:</span> <span class='symbol'>:target_public</span><span class='comma'>,</span>
+<span class='label'>dependent:</span> <span class='symbol'>:destroy</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="working_durations-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="WorkingDuration.html" title="WorkingDuration (class)">WorkingDuration</a></span>&gt;</tt>) <strong>working_durations</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="WorkingDuration.html" title="WorkingDuration (class)">WorkingDuration</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+118
+119
+120</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 118</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:working_durations</span><span class='comma'>,</span>
+<span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_distinct'>distinct</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='symbol'>:created_at</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='label'>through:</span> <span class='symbol'>:target_public_working_durations</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="working_statuses-instance_method">
+  
+    - (<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="WorkingStatus.html" title="WorkingStatus (class)">WorkingStatus</a></span>&gt;</tt>) <strong>working_statuses</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveRecord::Relation&lt;<span class='object_link'><a href="WorkingStatus.html" title="WorkingStatus (class)">WorkingStatus</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html" target="_parent" title="ActiveRecord::Associations">ActiveRecord::Associations</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+127
+128
+129</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/target_public.rb', line 127</span>
+
+<span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:working_statuses</span><span class='comma'>,</span>
+<span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='id identifier rubyid_distinct'>distinct</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='symbol'>:created_at</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='label'>through:</span> <span class='symbol'>:target_public_working_statuses</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Fri May 12 20:50:02 2017 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.4.1).
+</div>
+
+  </body>
+</html>

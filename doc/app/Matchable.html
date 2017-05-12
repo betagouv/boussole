@@ -127,7 +127,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#criterias-instance_method" title="#criterias (instance method)">- (Hash) <strong>criterias</strong> </a>
+      <a href="#criteria-instance_method" title="#criteria (instance method)">- (Hash) <strong>criteria</strong> </a>
     
 
     
@@ -146,7 +146,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The hash of <span class='object_link'><a href="ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> criterias we’re matching with.</p>
+    <span class="summary_desc"><div class='inline'><p>The hash of <span class='object_link'><a href="ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> criteria we’re matching with.</p>
 </div></span>
   
 </li>
@@ -325,7 +325,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Given a Hash of criterias, the method will build an Array of the satisfying <span class='object_link'><a href="ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> matches of the project.</p>
+    <span class="summary_desc"><div class='inline'><p>Given a Hash of criteria, the method will build an Array of the satisfying <span class='object_link'><a href="ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> matches of the project.</p>
 </div></span>
   
 </li>
@@ -365,9 +365,9 @@
       
       <span id=""></span>
       <div class="method_details first">
-  <h3 class="signature first" id="criterias-instance_method">
+  <h3 class="signature first" id="criteria-instance_method">
   
-    - (<tt>Hash</tt>) <strong>criterias</strong>  <span class="extras">(readonly)</span>
+    - (<tt>Hash</tt>) <strong>criteria</strong>  <span class="extras">(readonly)</span>
   
 
   
@@ -375,7 +375,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns The hash of <span class='object_link'><a href="ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> criterias we’re matching with.</p>
+    <p>Returns The hash of <span class='object_link'><a href="ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> criteria we’re matching with.</p>
 
 
   </div>
@@ -393,7 +393,7 @@
       
       
         &mdash;
-        <div class='inline'><p>The hash of <span class='object_link'><a href="ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> criterias we’re matching with.</p>
+        <div class='inline'><p>The hash of <span class='object_link'><a href="ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> criteria we’re matching with.</p>
 </div>
       
     </li>
@@ -413,8 +413,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'app/operations/concerns/matchable.rb', line 23</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_criterias'>criterias</span>
-  <span class='ivar'>@criterias</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_criteria'>criteria</span>
+  <span class='ivar'>@criteria</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -912,7 +912,7 @@ to a ActiveRecord::Base.where clause.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Given a Hash of criterias, the method will build an Array of the satisfying <span class='object_link'><a href="ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> matches
+    <p>Given a Hash of criteria, the method will build an Array of the satisfying <span class='object_link'><a href="ServiceOffering.html" title="ServiceOffering (class)">ServiceOffering</a></span> matches
 of the project.</p>
 
 
@@ -997,7 +997,7 @@ of the project.</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_with_matches'>with_matches</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid__'>_</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_service_offerings'>service_offerings</span><span class='comma'>,</span> <span class='id identifier rubyid_public_services'>public_services</span> <span class='op'>=</span>
-    <span class='id identifier rubyid_criterias'>criterias</span><span class='period'>.</span><span class='id identifier rubyid_each_with_object'>each_with_object</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_public_service'>public_service</span><span class='comma'>,</span> <span class='id identifier rubyid_service_offerings'>service_offerings</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_matches'>matches</span><span class='op'>|</span>
+    <span class='id identifier rubyid_criteria'>criteria</span><span class='period'>.</span><span class='id identifier rubyid_each_with_object'>each_with_object</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_public_service'>public_service</span><span class='comma'>,</span> <span class='id identifier rubyid_service_offerings'>service_offerings</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_matches'>matches</span><span class='op'>|</span>
       <span class='id identifier rubyid_service_offerings'>service_offerings</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_service_offering'>service_offering</span><span class='comma'>,</span> <span class='id identifier rubyid_scenarios'>scenarios</span><span class='op'>|</span>
         <span class='id identifier rubyid_scenarios'>scenarios</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_conditions'>conditions</span><span class='op'>|</span>
           <span class='kw'>if</span> <span class='id identifier rubyid_match_conditions?'>match_conditions?</span><span class='lparen'>(</span><span class='id identifier rubyid_conditions'>conditions</span><span class='rparen'>)</span>
@@ -1156,9 +1156,9 @@ the method will build an Arel predicate to be passed on to a ActiveRecord::Base.
 </div>
 
     <div id="footer">
-  Generated on Mon Feb 20 11:59:33 2017 by
+  Generated on Fri May 12 20:50:01 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.3.1).
+  0.8.7.6 (ruby-2.4.1).
 </div>
 
   </body>
