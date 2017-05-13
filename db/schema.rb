@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170418163431) do
+ActiveRecord::Schema.define(version: 20170418163816) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,17 @@ ActiveRecord::Schema.define(version: 20170418163431) do
   end
 
   add_index "engagements", ["name"], name: "index_engagements_on_name", unique: true, using: :btree
+
+  create_table "engagements_target_publics", id: false, force: :cascade do |t|
+    t.integer  "target_public_id", null: false
+    t.integer  "engagement_id",    null: false
+    t.integer  "engagements_id",   null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "engagements_target_publics", ["engagements_id"], name: "index_engagements_target_publics_on_engagements_id", using: :btree
+  add_index "engagements_target_publics", ["target_public_id"], name: "index_engagements_target_publics_on_target_public_id", using: :btree
 
   create_table "exercise_scopes", force: :cascade do |t|
     t.integer  "social_right_id",  null: false

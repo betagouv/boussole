@@ -192,6 +192,8 @@ fr:
       index:
         heading: 'Liste des offres de service à %{rhizome}'
         new: Ajouter une nouvelle offre de service
+        target_public:
+          show: Public cible
       show:
         target_public:
           show: Public cible
@@ -201,6 +203,8 @@ fr:
       edit:
         heading: Mettre à jour l'offre de service
       target_publics:
+        show:
+          index: Retour à la liste des offres de service
         form:
           criterium: Critère
           target_public: Public cible
