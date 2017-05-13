@@ -38,6 +38,7 @@
   @extend %is-enabled;
   font-size: $font-size-h5;
   padding: .5em;
+  border-radius: 5px;
 
   &.is-disabled,
   &:disabled,
