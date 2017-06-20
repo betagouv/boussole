@@ -27,3 +27,10 @@ apec:
         attribute: "handicap"
         operator: "=="
         value: false
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Anthenay"
+          - "Aougny"
+          - "Arcis-le-Ponsart"
