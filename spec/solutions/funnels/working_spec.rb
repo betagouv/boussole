@@ -62,7 +62,7 @@ solution('Improve my CV') do
       select('Études supérieures', from: 'Dernières études suivies')
 
       # City
-      select('Reims', from: 'Ville de résidence')
+      select('Aougny', from: 'Ville de résidence')
 
       # Submit!
       click_button('Continuer')
