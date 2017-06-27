@@ -6,7 +6,7 @@ RSpec.describe 'Working matching criteria', type: :criteria do
     it_should_behave_like(
       :criteria,
       Working,
-      YAML.load(File.read(Rails.root.join("config/criteria/#{rhizome}/working.service_offerings.yml")))
+      YAML.safe_load(File.read(Rails.root.join("config/criteria/#{rhizome}/working.service_offerings.yml")))
     )
   end
 end

@@ -22,7 +22,7 @@ class Housing < ApplicationRecord
     #
     def initialize(params, _)
       @project  = Housing.find(params[:id])
-      @criteria = YAML.load(File.read(Rails.root.join(self.class.send(:criteria_path))))
+      @criteria = YAML.safe_load(File.read(Rails.root.join(self.class.send(:criteria_path))))
       super
     end
 
