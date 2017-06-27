@@ -291,3 +291,1149 @@ communaute-de-commune-coeur-essonne:
           - "Villemoisson-sur-Orge"
           - "Villiers-sur-Orge"
 
+cidj:
+  dynamiser-ma-recherche-d-employeur:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+  faire-une-enquete-sur-differents-metiers-qui-m-interessent-et-parler-aux-professionnels-sur-des-secteurs-qui-recrutent:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+
+      -
+        attribute: "experience"
+        operator: "=="
+        value: false
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "+ d'1 an"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+  partir-a-l-etranger-pour-faire-un-break-ou-pour-etre-utile-ou-pour-apprendre-une-langue:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+          - "1 an"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+  adapter-mes-savoirs-et-mes-diplomes-aux-offres-d-emploi-du-marche:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "experience"
+        operator: "=="
+        value: true
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "+ d'1 an"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+  rechercher-un-stage-5b92c023-6d2b-4224-ba7d-5808daa8e2ac:
+    -
+      -
+        attribute: "experience"
+        operator: "=="
+        value: true
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+  comment-developper-son-reseau:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  etre-plus-visible-sur-les-reseaux-sociaux:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+  etre-utile-donner-du-sens-a-ma-carriere-professionnelle:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 18
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  trouver-des-jobs-saisonniers-d8c64230-e6b9-41f0-9dcf-74021ea62133:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "experience"
+        operator: "=="
+        value: true
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 18
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+  consulter-des-offres-d-emploi:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  participer-a-un-forum-pour-trouver-des-jobs-peu-ou-pas-qualifie:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+  gagner-la-carte-jeune-europeenne:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  trouver-une-aide-financiere-pour-passer-le-bafa:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+  trouver-le-metier-qui-me-plait-84fa388f-4e27-4d71-b7bf-043467bcb178:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "1 an"
+          - "+ d'1 an"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  trouver-un-metier-qui-corresponde-a-mes-etudes-ea0e6822-f299-4880-a92f-637a044073d4:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Autre"
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "1 an"
+          - "+ d'1 an"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+  acceder-a-des-metiers-qui-recrutent-011ef54b-8965-443a-9843-31b6971e6fc1:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Autre"
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "1 an"
+          - "+ d'1 an"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+  faire-un-stage-a-l-etranger-de0a6fe4-dcfc-498e-8d12-ff4f7e54aebf:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Autre"
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+
+           - "Quelques mois"
+           - "1 an"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+  venir-avec-ou-sans-ses-parents-discuter-des-possibilites-d-etudes-pour-l-apres-bac:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Lycéen·ne"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 20
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+
+          - "Lycée"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+  venir-avec-ou-sans-ses-parents-discuter-des-possibilites-d-etudes-pour-l-apres-college:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+           - "Sans activité"
+           - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 18
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
