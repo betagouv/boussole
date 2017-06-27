@@ -1437,3 +1437,319 @@ cidj:
           - "Sainte-Genviève-des-Bois"
           - "Villemoisson-sur-Orge"
           - "Villiers-sur-Orge"
+
+maison-de-justice-et-du-droit:
+  avoir-une-aide-pour-porter-plainte:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  demande-d-effacement-du-casier-judiciaire:
+
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  lutte-contre-les-discriminations:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+
+  informations-juridiques-sur-le-contrat-de-travail-et-ou-sur-le-licenciement:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  informations-en-droit-des-etrangers:
+
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+  trouver-un-avocat:
+
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
