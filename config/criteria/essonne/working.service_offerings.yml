@@ -2340,3 +2340,218 @@ acteur:
           - "Saint-Yon"
           - "Vaugrigneuse"
 
+mission-locale-du-val-d-orge:
+  espace-point-net:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 25
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Sainte-Geneviève-des-Bois"
+          - "Saint-Michel-sur-Orge"
+          - "Morsang-sur-Orge"
+          - "Fleury-Mérogis"
+          - "Le Plessis-Pâté"
+          - "Longpont-sur-Orge"
+          - "Villiers-sur-Orge"
+          - "Villemoisson-sur-Orge"
+          - "Epinay-sur-Orge"
+
+
+  garantie-jeunes:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 25
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Sainte-Geneviève-des-Bois"
+          - "Saint-Michel-sur-Orge"
+          - "Morsang-sur-Orge"
+          - "Fleury-Mérogis"
+          - "Le Plessis-Pâté"
+          - "Longpont-sur-Orge"
+          - "Villiers-sur-Orge"
+          - "Villemoisson-sur-Orge"
+          - "Epinay-sur-Orge"
+
+
+  projet-d-orientation-professionnelle:
+
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 25
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Sainte-Geneviève-des-Bois"
+          - "Saint-Michel-sur-Orge"
+          - "Morsang-sur-Orge"
+          - "Fleury-Mérogis"
+          - "Le Plessis-Pâté"
+          - "Longpont-sur-Orge"
+          - "Villiers-sur-Orge"
+          - "Villemoisson-sur-Orge"
+          - "Epinay-sur-Orge"
+
+
+  avoir-un-rendez-vous-gratuit-et-confidentiel-avec-un-juriste-ou-un-avocat:
+
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 25
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Sainte-Geneviève-des-Bois"
+          - "Saint-Michel-sur-Orge"
+          - "Morsang-sur-Orge"
+          - "Fleury-Mérogis"
+          - "Le Plessis-Pâté"
+          - "Longpont-sur-Orge"
+          - "Villiers-sur-Orge"
+          - "Villemoisson-sur-Orge"
+          - "Epinay-sur-Orge"
+
+
+
+  decouvrir-et-utiliser-des-techniques-et-des-methodes-efficaces-pour-ameliorer-mes-chances-d-acceder-a-l-emploi:
+
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 25
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Sainte-Geneviève-des-Bois"
+          - "Saint-Michel-sur-Orge"
+          - "Morsang-sur-Orge"
+          - "Fleury-Mérogis"
+          - "Le Plessis-Pâté"
+          - "Longpont-sur-Orge"
+          - "Villiers-sur-Orge"
+          - "Villemoisson-sur-Orge"
+          - "Epinay-sur-Orge"
+
+
