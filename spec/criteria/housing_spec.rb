@@ -6,7 +6,7 @@ RSpec.describe 'Housing matching criteria', type: :criteria do
     it_should_behave_like(
       :criteria,
       Housing,
-      YAML.load(File.read(Rails.root.join("config/criteria/#{rhizome}/housing.service_offerings.yml")))
+      YAML.safe_load(File.read(Rails.root.join("config/criteria/#{rhizome}/housing.service_offerings.yml")))
     )
   end
 end
