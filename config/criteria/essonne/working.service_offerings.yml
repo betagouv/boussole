@@ -73,76 +73,76 @@ communaute-de-commune-coeur-essonne:
           - "Villiers-sur-Orge"
 
   participer-a-des-job-dating-des-forums-pour-l-emploi-des-cellules-de-recrutement:
-   -
     -
-      attribute: "awareness"
-      operator: "=="
-      value: "Je ne sais pas ce que je veux faire"
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
 
-    -
-      attribute: "experience"
-      operator: "=="
-      value: false
+      -
+        attribute: "experience"
+        operator: "=="
+        value: false
 
-    -
-      attribute: "duration"
-      operator: "in?"
-      value:
-        - "Quelques mois"
-        - "1 an"
-        - "+ d'1 an"
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
 
-    -
-      attribute: "status"
-      operator: "in?"
-      value:
-        - "Sans activité"
-        - "Étudiant·e"
-        - "Lycéen·ne"
-        - "Salarié·e"
-        - "En formation"
-        - "Apprenti·e"
-        - "Autre"
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
 
-    -
-      attribute: "last_class"
-      operator: "in?"
-      value:
-        - "Collège"
-        - "Lycée"
-        - "Aprentissage"
-        - "Études supérieures"
-        - "Autre"
-    -
-      attribute: "age"
-      operator: "<="
-      value: 30
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
 
-    -
-      attribute: "city"
-      operator: "in?"
-      value:
-        - "Arpajon"
-        - "Avrainville"
-        - "Brétigny-sur-Orge"
-        - "Breuillet"
-        - "Bruyères-le-Châtel"
-        - "Cheptainville"
-        - "Egly"
-        - "Fleury-Mérogis"
-        - "Guibeville"
-        - "La Norville"
-        - "Le Plessis-Pâté"
-        - "Leuville-sur-Orge"
-        - "Longpont-sur-Orge"
-        - "Marolles-en-Hurepoix"
-        - "Morsang-sur-Orge"
-        - "Ollainville"
-        - "Saint-Germain-lès-Arpajon"
-        - "Saint-Michel-sur-Orge"
-        - "Sainte-Genviève-des-Bois"
-        - "Villemoisson-sur-Orge"
-        - "Villiers-sur-Orge"
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Brétigny-sur-Orge"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Fleury-Mérogis"
+          - "Guibeville"
+          - "La Norville"
+          - "Le Plessis-Pâté"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - "Marolles-en-Hurepoix"
+          - "Morsang-sur-Orge"
+          - "Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+          - "Saint-Michel-sur-Orge"
+          - "Sainte-Genviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
 
   participer-a-des-rendez-vous-formation-avec-des-experts-de-l-information-sur-les-metiers-et-sur-les-formations-pour-y-acceder:
     -
@@ -1290,9 +1290,8 @@ cidj:
         attribute: "duration"
         operator: "in?"
         value:
-
-           - "Quelques mois"
-           - "1 an"
+          - "Quelques mois"
+          - "1 an"
 
       -
         attribute: "age"
@@ -1398,8 +1397,8 @@ cidj:
         attribute: "status"
         operator: "in?"
         value:
-           - "Sans activité"
-           - "Autre"
+          - "Sans activité"
+          - "Autre"
 
       -
         attribute: "age"
@@ -2268,8 +2267,8 @@ acteur:
         attribute: "status"
         operator: "in?"
         value:
-         - "Sans activité"
-         - "Autre"
+          - "Sans activité"
+          - "Autre"
 
       -
         attribute: "last_class"
@@ -2553,5 +2552,3403 @@ mission-locale-du-val-d-orge:
           - "Villiers-sur-Orge"
           - "Villemoisson-sur-Orge"
           - "Epinay-sur-Orge"
+
+bij-de-bretigny:
+  faire-mon-cv-et-ma-lettre-de-motivation:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le-Plessis-Pâté"
+          - "Arpajon"
+          - "Sainte-Geneviève-des-Bois"
+
+
+  preparer-mon-entretien-d-embauche:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le-Plessis-Pâté"
+          - "Arpajon"
+          - "Sainte-Geneviève-des-Bois"
+
+
+  rechercher-un-stage:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le-Plessis-Pâté"
+          - "Arpajon"
+          - "Sainte-Geneviève-des-Bois"
+
+
+  trouver-des-jobs-saisonniers:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le-Plessis-Pâté"
+          - "Arpajon"
+          - "Sainte-Geneviève-des-Bois"
+
+
+
+  consulter-des-offres-d-emploi-proposees-pres-de-chez-moi:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le-Plessis-Pâté"
+          - "Arpajon"
+          - "Sainte-Geneviève-des-Bois"
+
+
+  participer-a-un-forum-job-emploi-sur-mon-territoire:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le-Plessis-Pâté"
+          - "Arpajon"
+          - "Sainte-Geneviève-des-Bois"
+
+
+  trouver-une-aide-financiere-pour-passer-le-permis-en-proposant-une-contrepartie-citoyenne:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le-Plessis-Pâté"
+          - "Arpajon"
+          - "Sainte-Geneviève-des-Bois"
+
+  trouver-une-aide-financiere-pour-passer-le-bafa-sur-mon-territoire:
+
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le-Plessis-Pâté"
+          - "Arpajon"
+          - "Sainte-Geneviève-des-Bois"
+
+  trouver-le-metier-qui-me-plait:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le-Plessis-Pâté"
+          - "Arpajon"
+          - "Sainte-Geneviève-des-Bois"
+
+
+  trouver-un-metier-qui-corresponde-a-mes-etudes:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 25
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le-Plessis-Pâté"
+          - "Arpajon"
+          - "Sainte-Geneviève-des-Bois"
+
+
+  acceder-a-des-metiers-qui-recrutent:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le-Plessis-Pâté"
+          - "Arpajon"
+          - "Sainte-Geneviève-des-Bois"
+
+
+  faire-un-stage-a-l-etranger:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le-Plessis-Pâté"
+          - "Arpajon"
+          - "Sainte-Geneviève-des-Bois"
+
+point-information-jeunesse-pij-morsang-sur-orge:
+  faire-mon-cv-et-ma-lettre-de-motivation-afdbba1b-51f5-4f15-883a-e254b6bf5e94:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Viry-Châtillon"
+          - "Epinay-sur-Orge"
+          - "Grigny"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+  preparer-mon-entretien-d-embauche-632dd2d5-b08e-49dc-8c59-2743a8ecf036:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Viry-Châtillon"
+          - "Epinay-sur-Orge"
+          - "Grigny"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+
+  rechercher-un-stage-d074b5fe-4135-4e7e-933e-13966712a2ce:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Viry-Châtillon"
+          - "Epinay-sur-Orge"
+          - "Grigny"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+
+  trouver-des-jobs-saisonniers-ae80acf1-9a12-445f-a742-5cf237c84f8e:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Viry-Châtillon"
+          - "Epinay-sur-Orge"
+          - "Grigny"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+
+
+  consulter-des-offres-d-emploi-proposees-pres-de-chez-moi-b7ff9043-548b-4cea-b38e-109ed1c91ce2:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Viry-Châtillon"
+          - "Epinay-sur-Orge"
+          - "Grigny"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+
+  participer-a-un-forum-job-emploi-sur-mon-territoire-2eecb3a9-682f-4a2e-8ec9-cb2f793f7a52:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Viry-Châtillon"
+          - "Epinay-sur-Orge"
+          - "Grigny"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+
+  trouver-une-aide-financiere-pour-passer-le-permis-en-proposant-une-contrepartie-citoyenne-2a79f30d-f04c-48e3-b377-74b462c76be1:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Viry-Châtillon"
+          - "Epinay-sur-Orge"
+          - "Grigny"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+  trouver-une-aide-financiere-pour-passer-le-bafa-sur-mon-territoire-c12bc371-376e-453f-9aea-473a25291dfe:
+
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Viry-Châtillon"
+          - "Epinay-sur-Orge"
+          - "Grigny"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+  trouver-le-metier-qui-me-plait-dc9175b3-15e4-4d3a-b920-8acf305d285d:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Viry-Châtillon"
+          - "Epinay-sur-Orge"
+          - "Grigny"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+
+  trouver-un-metier-qui-corresponde-a-mes-etudes-428a0c69-93e6-42f7-abf0-93f357b4d81a:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 25
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Viry-Châtillon"
+          - "Epinay-sur-Orge"
+          - "Grigny"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+
+  acceder-a-des-metiers-qui-recrutent-530f7aaf-d0c7-4f5c-8c43-178e1f7b0697:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Viry-Châtillon"
+          - "Epinay-sur-Orge"
+          - "Grigny"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+
+  faire-un-stage-a-l-etranger-7ec21f6c-9401-43be-8adc-40775e6f7f3e:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Viry-Châtillon"
+          - "Epinay-sur-Orge"
+          - "Grigny"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+point-information-jeunesse-pij-saint-michel-sur-orge:
+  faire-mon-cv-et-ma-lettre-de-motivation-c999826e-1c6c-4b69-85a2-aa2da59906da:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Saint-Michel-sur-Orge"
+          - "Epinay-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+  preparer-mon-entretien-d-embauche-01dbee20-04e3-439c-bdf0-21d18a8462b9:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 30
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Saint-Michel-sur-Orge"
+          - "Epinay-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+  rechercher-un-stage-09052657-b922-4130-ba7f-76c1db759a63:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Saint-Michel-sur-Orge"
+          - "Epinay-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+
+  trouver-des-jobs-saisonniers-12192100-aab0-4fbc-83ac-977017397244:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Saint-Michel-sur-Orge"
+          - "Epinay-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+
+
+  consulter-des-offres-d-emploi-proposees-pres-de-chez-moi-260a5b30-a695-491f-87ce-718481114812:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Saint-Michel-sur-Orge"
+          - "Epinay-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+
+  participer-a-un-forum-job-emploi-sur-mon-territoire-a4c69947-5315-4803-939c-94a5bdbd106f:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Saint-Michel-sur-Orge"
+          - "Epinay-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+  trouver-une-aide-financiere-pour-passer-le-permis-en-proposant-une-contrepartie-citoyenne-0fc3d0a9-afb9-4443-9fce-5204ecfaae63:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Saint-Michel-sur-Orge"
+          - "Epinay-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+  trouver-une-aide-financiere-pour-passer-le-bafa-sur-mon-territoire-714fdad2-0d47-4776-9880-4b15a5550c4b:
+
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Saint-Michel-sur-Orge"
+          - "Epinay-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+  trouver-le-metier-qui-me-plait-3f7d7483-fde8-4799-8d48-e412171875af:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Saint-Michel-sur-Orge"
+          - "Epinay-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+
+  trouver-un-metier-qui-corresponde-a-mes-etudes-7fe5bc99-ddaa-4aec-aed7-82972e09660a:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je ne sais pas ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: "<="
+        value: 25
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Saint-Michel-sur-Orge"
+          - "Epinay-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+
+  acceder-a-des-metiers-qui-recrutent-8d498bea-b582-4d28-953f-cee720c53967:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Saint-Michel-sur-Orge"
+          - "Epinay-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+  faire-un-stage-a-l-etranger-67f8f7ab-60d3-4067-82cf-0c51427ed070:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Saint-Michel-sur-Orge"
+          - "Epinay-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+pole-emploi-arpajon:
+  etre-accompagne-dans-ma-recherche-d-emploi-de-facon-collective-ou-et-individuelle-ac076517-63a4-4699-8835-58ff5c5b05d6:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Guibeville"
+          - "La Norville"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - " Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+
+
+  travailler-et-me-former-grace-a-l-apprentissage-7b26edc6-04d9-4020-a1eb-9d17f41d8693:
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+
+          - "+ d'1 an"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Guibeville"
+          - "La Norville"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - " Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+
+
+  m-organiser-pour-partir-travailler-a-l-etranger-1babf6c3-bf82-4dce-aeb2-6cfa15a37228:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+
+      - attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Guibeville"
+          - "La Norville"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - " Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+
+  beneficier-de-l-indemnisation-chomage-et-pour-quel-montant-4da2466b-07ac-46ff-a1f5-25cfb611b560:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Guibeville"
+          - "La Norville"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - " Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+
+
+  beneficier-d-aides-a-la-mobilite-avant-l-embauche-894ff715-abf2-4d46-8da8-22da29498964:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Guibeville"
+          - "La Norville"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - " Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+
+
+  acceder-a-une-formation-qualifiante-9cc6518c-2810-45bb-b3d2-e272f412955a:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Guibeville"
+          - "La Norville"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - " Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+
+  faire-un-stage-en-immersion-professionnelle-chez-un-employeur-da1b3212-0601-489c-b384-921b53c30379:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Guibeville"
+          - "La Norville"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - " Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+
+
+  construire-mon-projet-professionnel-activ-projet-f3a1184b-8de3-47c2-abc3-242235c1bafd:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "experience"
+        operator: "=="
+        value: true
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "+ d'1 an"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Guibeville"
+          - "La Norville"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - " Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+
+
+  m-inscrire-comme-demandeur-d-emploi-02d3dd4d-fac2-4c67-b0af-f5ce664d77ea:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "pole_emploi"
+        operator: "=="
+        value: false
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Guibeville"
+          - "La Norville"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - " Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+
+
+  mener-une-reflexion-sur-une-idee-de-creation-d-entreprise-66d4cf3e-4c12-47de-8fbc-72075b4ad422:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "+ d'1 an"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Guibeville"
+          - "La Norville"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - " Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+
+
+  acceder-aux-services-en-ligne-de-pole-emploi-820199ac-f4b3-4560-b5f6-7a0f156ac4fb:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Guibeville"
+          - "La Norville"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - " Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+
+  acceder-a-une-boutique-de-services-en-ligne-emploi-store:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Arpajon"
+          - "Avrainville"
+          - "Breuillet"
+          - "Bruyères-le-Châtel"
+          - "Cheptainville"
+          - "Egly"
+          - "Guibeville"
+          - "La Norville"
+          - "Leuville-sur-Orge"
+          - "Longpont-sur-Orge"
+          - " Ollainville"
+          - "Saint-Germain-lès-Arpajon"
+
+pole-emploi-bretigny:
+  etre-accompagne-dans-ma-recherche-d-emploi-de-facon-collective-ou-et-individuelle:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le Plessis-Pâté"
+          - "Marolles-en-Hurepoix"
+          - "Saint-Michel-sur-Orge"
+
+
+  travailler-et-me-former-grace-a-l-apprentissage-ce886d45-cfc5-423e-b851-b3e996b91b85:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+
+          - "+ d'1 an"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le Plessis-Pâté"
+          - "Marolles-en-Hurepoix"
+          - "Saint-Michel-sur-Orge"
+
+
+  m-organiser-pour-partir-travailler-a-l-etranger-38f7a3ce-ab5a-4451-b9bf-7a4f63cf0709:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+
+      - attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le Plessis-Pâté"
+          - "Marolles-en-Hurepoix"
+          - "Saint-Michel-sur-Orge"
+
+
+  beneficier-de-l-indemnisation-chomage-et-pour-quel-montant:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le Plessis-Pâté"
+          - "Marolles-en-Hurepoix"
+          - "Saint-Michel-sur-Orge"
+
+
+  beneficier-d-aides-a-la-mobilite-avant-l-embauche:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le Plessis-Pâté"
+          - "Marolles-en-Hurepoix"
+          - "Saint-Michel-sur-Orge"
+
+
+  acceder-a-une-formation-qualifiante-f3b6a0f5-8f1b-4370-83ff-27d614a90d12:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le Plessis-Pâté"
+          - "Marolles-en-Hurepoix"
+          - "Saint-Michel-sur-Orge"
+
+  faire-un-stage-en-immersion-professionnelle-chez-un-employeur-dc9c1287-bcad-43c2-bd46-b21ac5b60b71:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le Plessis-Pâté"
+          - "Marolles-en-Hurepoix"
+          - "Saint-Michel-sur-Orge"
+
+
+  construire-mon-projet-professionnel-activ-projet-e6a232cd-4218-49ef-842f-eab81b486f50:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "experience"
+        operator: "=="
+        value: true
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "+ d'1 an"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le Plessis-Pâté"
+          - "Marolles-en-Hurepoix"
+          - "Saint-Michel-sur-Orge"
+
+  m-inscrire-comme-demandeur-d-emploi:
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "pole_emploi"
+        operator: "=="
+        value: false
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le Plessis-Pâté"
+          - "Marolles-en-Hurepoix"
+          - "Saint-Michel-sur-Orge"
+
+  mener-une-reflexion-sur-une-idee-de-creation-d-entreprise-ce2f2d31-0f71-47e0-bccf-0db2479a664e:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "+ d'1 an"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le Plessis-Pâté"
+          - "Marolles-en-Hurepoix"
+          - "Saint-Michel-sur-Orge"
+
+
+  acceder-aux-services-en-ligne-de-pole-emploi:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le Plessis-Pâté"
+          - "Marolles-en-Hurepoix"
+          - "Saint-Michel-sur-Orge"
+
+
+  acceder-a-une-boutique-de-services-en-ligne-emploi-store:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Brétigny-sur-Orge"
+          - "Le Plessis-Pâté"
+          - "Marolles-en-Hurepoix"
+          - "Saint-Michel-sur-Orge"
+
+
+pole-emploi-evry:
+  etre-accompagne-dans-ma-recherche-d-emploi-de-facon-collective-ou-et-individuelle-c9bbf95d-ee7f-4633-a915-5f790e6e4a1a:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Evry"
+          - "Fleury-Mérogis"
+
+
+  travailler-et-me-former-grace-a-l-apprentissage-4926ed8d-02ab-4c9e-977f-6b53b296e4a8:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+
+          - "+ d'1 an"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Evry"
+          - "Fleury-Mérogis"
+
+
+  m-organiser-pour-partir-travailler-a-l-etranger-28f5d484-a8cb-4b5a-bc12-b0254345abbe:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+
+      - attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Evry"
+          - "Fleury-Mérogis"
+
+
+  beneficier-de-l-indemnisation-chomage-et-pour-quel-montant-9a805d4b-83c1-42c5-910f-3b29b3e099b5:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Evry"
+          - "Fleury-Mérogis"
+
+
+  beneficier-d-aides-a-la-mobilite-avant-l-embauche-2c5cb30b-8277-4b23-8b63-d2fb57732102:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Evry"
+          - "Fleury-Mérogis"
+
+
+  acceder-a-une-formation-qualifiante-33f249fb-c806-44a8-9190-65b9c922a3cf:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Evry"
+          - "Fleury-Mérogis"
+
+
+  faire-un-stage-en-immersion-professionnelle-chez-un-employeur-97e949e4-9520-4d0a-805a-1ba1ea31d422:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Evry"
+          - "Fleury-Mérogis"
+
+
+  construire-mon-projet-professionnel-activ-projet-82c3dbb0-b852-489f-aef4-dc997d698e0d:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "experience"
+        operator: "=="
+        value: true
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "+ d'1 an"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Evry"
+          - "Fleury-Mérogis"
+
+  m-inscrire-comme-demandeur-d-emploi-a8684498-512a-46cc-a711-f8ddf7b31fc0:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "pole_emploi"
+        operator: "=="
+        value: false
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Evry"
+          - "Fleury-Mérogis"
+
+  mener-une-reflexion-sur-une-idee-de-creation-d-entreprise-31118979-4ff4-45b1-bd48-149e21fb1b3d:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "+ d'1 an"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Evry"
+          - "Fleury-Mérogis"
+
+
+  acceder-aux-services-en-ligne-de-pole-emploi-53d0bad4-5ca3-4ea9-8547-3c56badda783:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Evry"
+          - "Fleury-Mérogis"
+
+
+  acceder-a-une-boutique-de-services-en-ligne-emploi-store:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Evry"
+          - "Fleury-Mérogis"
+
+pole-emploi-de-sgdb:
+  accompagnement-dans-la-recherche-d-emploi:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  travailler-et-me-former-grace-a-l-apprentissage:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+
+          - "+ d'1 an"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  m-organiser-pour-partir-travailler-a-l-etranger:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+
+      - attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  calcul-et-versement-des-allocations:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  formation-et-aides-avant-l-embauche:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  acceder-a-une-formation-qualifiante:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  faire-un-stage-en-immersion-professionnelle-chez-un-employeur:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  construire-mon-projet-professionnel-activ-projet:
+
+    -
+
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+      -
+        attribute: "experience"
+        operator: "=="
+        value: true
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "+ d'1 an"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  mener-une-reflexion-sur-une-idee-de-creation-d-entreprise:
+
+    -
+      -
+        attribute: "awareness"
+        operator: "=="
+        value: "Je sais ce que je veux faire"
+
+
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "+ d'1 an"
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  offre-de-service-digitale:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
+
+
+  acceder-a-une-boutique-de-services-en-ligne-emploi-store:
+
+    -
+
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Morsang-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Villemoisson-sur-Orge"
+          - "Villiers-sur-Orge"
 
 
