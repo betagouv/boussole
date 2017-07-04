@@ -3061,11 +3061,9 @@ bij-de-bretigny:
           - "Arpajon"
           - "Sainte-Geneviève-des-Bois"
 
-point-information-jeunesse-pij-morsang-sur-orge:
-  faire-mon-cv-et-ma-lettre-de-motivation-afdbba1b-51f5-4f15-883a-e254b6bf5e94:
-
+point-information-jeunesse-pij-saint-michel-sur-orge:
+  faire-mon-cv-et-ma-lettre-de-motivation-c999826e-1c6c-4b69-85a2-aa2da59906da:
     -
-
       -
         attribute: "status"
         operator: "in?"
@@ -3097,18 +3095,14 @@ point-information-jeunesse-pij-morsang-sur-orge:
         attribute: "city"
         operator: "in?"
         value:
-          - "Morsang-sur-Orge"
-          - "Viry-Châtillon"
+          - "Saint-Michel-sur-Orge"
           - "Epinay-sur-Orge"
-          - "Grigny"
           - "Sainte-Geneviève-des-Bois"
           - "Fleury-Mérogis"
 
 
-  preparer-mon-entretien-d-embauche-632dd2d5-b08e-49dc-8c59-2743a8ecf036:
-
+  preparer-mon-entretien-d-embauche-01dbee20-04e3-439c-bdf0-21d18a8462b9:
     -
-
       -
         attribute: "status"
         operator: "in?"
@@ -3140,19 +3134,14 @@ point-information-jeunesse-pij-morsang-sur-orge:
         attribute: "city"
         operator: "in?"
         value:
-          - "Morsang-sur-Orge"
-          - "Viry-Châtillon"
+          - "Saint-Michel-sur-Orge"
           - "Epinay-sur-Orge"
-          - "Grigny"
           - "Sainte-Geneviève-des-Bois"
           - "Fleury-Mérogis"
 
 
-
-  rechercher-un-stage-d074b5fe-4135-4e7e-933e-13966712a2ce:
-
+  rechercher-un-stage-09052657-b922-4130-ba7f-76c1db759a63:
     -
-
       -
         attribute: "status"
         operator: "in?"
@@ -3182,19 +3171,15 @@ point-information-jeunesse-pij-morsang-sur-orge:
         attribute: "city"
         operator: "in?"
         value:
-          - "Morsang-sur-Orge"
-          - "Viry-Châtillon"
+          - "Saint-Michel-sur-Orge"
           - "Epinay-sur-Orge"
-          - "Grigny"
           - "Sainte-Geneviève-des-Bois"
           - "Fleury-Mérogis"
 
 
 
-  trouver-des-jobs-saisonniers-ae80acf1-9a12-445f-a742-5cf237c84f8e:
-
+  trouver-des-jobs-saisonniers-12192100-aab0-4fbc-83ac-977017397244:
     -
-
       -
         attribute: "awareness"
         operator: "=="
@@ -3237,17 +3222,94 @@ point-information-jeunesse-pij-morsang-sur-orge:
         attribute: "city"
         operator: "in?"
         value:
-          - "Morsang-sur-Orge"
-          - "Viry-Châtillon"
+          - "Saint-Michel-sur-Orge"
           - "Epinay-sur-Orge"
-          - "Grigny"
           - "Sainte-Geneviève-des-Bois"
           - "Fleury-Mérogis"
 
 
 
 
-  consulter-des-offres-d-emploi-proposees-pres-de-chez-moi-b7ff9043-548b-4cea-b38e-109ed1c91ce2:
+  consulter-des-offres-d-emploi-proposees-pres-de-chez-moi-260a5b30-a695-491f-87ce-718481114812:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Saint-Michel-sur-Orge"
+          - "Epinay-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+
+  participer-a-un-forum-job-emploi-sur-mon-territoire-a4c69947-5315-4803-939c-94a5bdbd106f:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "Autre"
+
+      -
+        attribute: "age"
+        operator: ">="
+        value: 16
+
+      -
+        attribute: "city"
+        operator: "in?"
+        value:
+          - "Saint-Michel-sur-Orge"
+          - "Epinay-sur-Orge"
+          - "Sainte-Geneviève-des-Bois"
+          - "Fleury-Mérogis"
+
+
+  trouver-une-aide-financiere-pour-passer-le-permis-en-proposant-une-contrepartie-citoyenne-0fc3d0a9-afb9-4443-9fce-5204ecfaae63:
 
     -
 
@@ -3282,104 +3344,13 @@ point-information-jeunesse-pij-morsang-sur-orge:
         attribute: "city"
         operator: "in?"
         value:
-          - "Morsang-sur-Orge"
-          - "Viry-Châtillon"
+          - "Saint-Michel-sur-Orge"
           - "Epinay-sur-Orge"
-          - "Grigny"
           - "Sainte-Geneviève-des-Bois"
           - "Fleury-Mérogis"
 
 
-
-  participer-a-un-forum-job-emploi-sur-mon-territoire-2eecb3a9-682f-4a2e-8ec9-cb2f793f7a52:
-
-    -
-
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre"
-
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-
-      -
-        attribute: "age"
-        operator: ">="
-        value: 16
-
-      -
-        attribute: "city"
-        operator: "in?"
-        value:
-          - "Morsang-sur-Orge"
-          - "Viry-Châtillon"
-          - "Epinay-sur-Orge"
-          - "Grigny"
-          - "Sainte-Geneviève-des-Bois"
-          - "Fleury-Mérogis"
-
-
-
-  trouver-une-aide-financiere-pour-passer-le-permis-en-proposant-une-contrepartie-citoyenne-2a79f30d-f04c-48e3-b377-74b462c76be1:
-
-    -
-
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-          - "Lycéen·ne"
-          - "Salarié·e"
-          - "En formation"
-          - "Apprenti·e"
-          - "Autre"
-
-      -
-        attribute: "last_class"
-        operator: "in?"
-        value:
-          - "Collège"
-          - "Lycée"
-          - "Aprentissage"
-          - "Études supérieures"
-          - "Autre"
-
-      -
-        attribute: "age"
-        operator: ">="
-        value: 16
-
-      -
-        attribute: "city"
-        operator: "in?"
-        value:
-          - "Morsang-sur-Orge"
-          - "Viry-Châtillon"
-          - "Epinay-sur-Orge"
-          - "Grigny"
-          - "Sainte-Geneviève-des-Bois"
-          - "Fleury-Mérogis"
-
-
-  trouver-une-aide-financiere-pour-passer-le-bafa-sur-mon-territoire-c12bc371-376e-453f-9aea-473a25291dfe:
-
+  trouver-une-aide-financiere-pour-passer-le-bafa-sur-mon-territoire-714fdad2-0d47-4776-9880-4b15a5550c4b:
     -
       -
         attribute: "awareness"
@@ -3417,18 +3388,14 @@ point-information-jeunesse-pij-morsang-sur-orge:
         attribute: "city"
         operator: "in?"
         value:
-          - "Morsang-sur-Orge"
-          - "Viry-Châtillon"
+          - "Saint-Michel-sur-Orge"
           - "Epinay-sur-Orge"
-          - "Grigny"
           - "Sainte-Geneviève-des-Bois"
           - "Fleury-Mérogis"
 
 
-  trouver-le-metier-qui-me-plait-dc9175b3-15e4-4d3a-b920-8acf305d285d:
-
+  trouver-le-metier-qui-me-plait-3f7d7483-fde8-4799-8d48-e412171875af:
     -
-
       -
         attribute: "awareness"
         operator: "=="
@@ -3465,19 +3432,15 @@ point-information-jeunesse-pij-morsang-sur-orge:
         attribute: "city"
         operator: "in?"
         value:
-          - "Morsang-sur-Orge"
-          - "Viry-Châtillon"
+          - "Saint-Michel-sur-Orge"
           - "Epinay-sur-Orge"
-          - "Grigny"
           - "Sainte-Geneviève-des-Bois"
           - "Fleury-Mérogis"
 
 
 
-  trouver-un-metier-qui-corresponde-a-mes-etudes-428a0c69-93e6-42f7-abf0-93f357b4d81a:
-
+  trouver-un-metier-qui-corresponde-a-mes-etudes-7fe5bc99-ddaa-4aec-aed7-82972e09660a:
     -
-
       -
         attribute: "awareness"
         operator: "=="
@@ -3511,19 +3474,15 @@ point-information-jeunesse-pij-morsang-sur-orge:
         attribute: "city"
         operator: "in?"
         value:
-          - "Morsang-sur-Orge"
-          - "Viry-Châtillon"
+          - "Saint-Michel-sur-Orge"
           - "Epinay-sur-Orge"
-          - "Grigny"
           - "Sainte-Geneviève-des-Bois"
           - "Fleury-Mérogis"
 
 
 
-  acceder-a-des-metiers-qui-recrutent-530f7aaf-d0c7-4f5c-8c43-178e1f7b0697:
-
+  acceder-a-des-metiers-qui-recrutent-8d498bea-b582-4d28-953f-cee720c53967:
     -
-
       -
         attribute: "status"
         operator: "in?"
@@ -3555,19 +3514,14 @@ point-information-jeunesse-pij-morsang-sur-orge:
         attribute: "city"
         operator: "in?"
         value:
-          - "Morsang-sur-Orge"
-          - "Viry-Châtillon"
+          - "Saint-Michel-sur-Orge"
           - "Epinay-sur-Orge"
-          - "Grigny"
           - "Sainte-Geneviève-des-Bois"
           - "Fleury-Mérogis"
 
 
-
-  faire-un-stage-a-l-etranger-7ec21f6c-9401-43be-8adc-40775e6f7f3e:
-
+  faire-un-stage-a-l-etranger-67f8f7ab-60d3-4067-82cf-0c51427ed070:
     -
-
       -
         attribute: "status"
         operator: "in?"
@@ -3596,18 +3550,14 @@ point-information-jeunesse-pij-morsang-sur-orge:
         attribute: "city"
         operator: "in?"
         value:
-          - "Morsang-sur-Orge"
-          - "Viry-Châtillon"
+          - "Saint-Michel-sur-Orge"
           - "Epinay-sur-Orge"
-          - "Grigny"
           - "Sainte-Geneviève-des-Bois"
           - "Fleury-Mérogis"
 
 point-information-jeunesse-pij-saint-michel-sur-orge:
   faire-mon-cv-et-ma-lettre-de-motivation-c999826e-1c6c-4b69-85a2-aa2da59906da:
-
     -
-
       -
         attribute: "status"
         operator: "in?"
