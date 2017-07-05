@@ -22,3 +22,10 @@ lokaviz:
           - "Salarié·e"
           - "En formation"
           - "Apprenti·e"
+
+      -
+        attribute: "housing_city"
+        operator: "in?"
+        value:
+          - "Égly"
+          - "Reims"
