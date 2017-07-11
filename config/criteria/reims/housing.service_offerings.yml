@@ -283,3 +283,46 @@ escale-habitat-jeunes:
           - "En formation"
           - "Apprenti·e"
           - "Autre"
+
+
+agorae-reims:
+  t-aider-dans-la-constitution-de-dossier-de-demande-de-logement-social:
+    -
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "current_status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+
+  t-aider-dans-la-construction-de-ton-dossier-allocation-pour-le-logement:
+    -
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "current_status"
+        operator: "in?"
+        value:
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
