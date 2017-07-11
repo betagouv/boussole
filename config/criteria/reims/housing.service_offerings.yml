@@ -25,19 +25,19 @@ crij-centre-regional-d-information-jeunesse: # code  acteur A
           - "Apprenti·e"
 
 bureau-d-accueil-au-logement-social-comal-soliha:
-  faire-une-demande-d-aide-au-financement-de-ton-logement-avec-le-conseil-departemental: # Les aides au financement du logement seraient plus pertinentes pour un utilisateur qui rechercheun emploi, une formation... qu'un logement
+  faire-une-demande-d-aide-au-financement-de-ton-logement-avec-le-conseil-departemental:
     -
       -
         attribute: "duration"
-        operator: "==" # when we use de in? operator, value must be formated as below
+        operator: "=="
         value: "+ d'1 an"
       -
-        attribute: "resources" # discriminant @see app/models/service_offering.rb
-        operator: ">=" # options are ==, >=, >, <, <=, in?
+        attribute: "resources"
+        operator: ">="
         value: 500
       -
-        attribute: "current_status" # discriminant @see app/models/service_offering.rb
-        operator: "in?" # options are ==, >=, >, <, <=, in?
+        attribute: "current_status"
+        operator: "in?"
         value:
           - "Salarié·e"
           - "En formation"
@@ -47,37 +47,38 @@ bureau-d-accueil-au-logement-social-comal-soliha:
     -
       -
         attribute: "duration"
-        operator: "==" # when we use de in? operator, value must be formated as below
+        operator: "=="
         value: "+ d'1 an"
       -
-        attribute: "resources" # discriminant @see app/models/service_offering.rb
-        operator: ">=" # options are ==, >=, >, <, <=, in?
+        attribute: "resources"
+        operator: ">="
         value: 500
       -
-        attribute: "current_status" # discriminant @see app/models/service_offering.rb
-        operator: "in?" # options are ==, >=, >, <, <=, in?
+        attribute: "current_status"
+        operator: "in?"
         value:
           - "Salarié·e"
           - "En formation"
           - "Apprenti·e"
+
 
 foyer-de-jeunes-travailleurs-fjt-leon-paindavoine:
   favoriser-la-rencontre-et-le-partage-avec-d-autres-jeunes:
     -
       -
         attribute: "duration"
-        operator: "in?" # options are ==, >=, >, <, <=, in?
+        operator: "in?"
         value:
           - "Quelques mois"
           - "1 an"
           - "+ d'1 an"
       -
-        attribute: "resources" # discriminant @see app/models/service_offering.rb
-        operator: ">=" # options are ==, >=, >, <, <=, in?
+        attribute: "resources"
+        operator: ">="
         value: 300
       -
-        attribute: "current_status" # discriminant @see app/models/service_offering.rb
-        operator: "in?" # options are ==, >=, >, <, <=, in?
+        attribute: "current_status"
+        operator: "in?"
         value:
           - "Étudiant·e"
           - "Salarié·e"
@@ -89,7 +90,7 @@ caisse-d-allocations-familiales-caf:
     -
       -
         attribute: "duration"
-        operator: "in?" # options are ==, >=, >, <, <=, in?
+        operator: "in?"
         value:
           - "Quelques mois"
           - "1 an"
@@ -100,18 +101,18 @@ espace-metiers:
     -
       -
         attribute: "duration"
-        operator: "in?" # options are ==, >=, >, <, <=, in?
+        operator: "in?"
         value:
           - "Quelques mois"
           - "1 an"
           - "+ d'1 an"
       -
-        attribute: "resources" # discriminant @see app/models/service_offering.rb
-        operator: ">=" # options are ==, >=, >, <, <=, in?
+        attribute: "resources"
+        operator: ">="
         value: 300
       -
-        attribute: "current_status" # discriminant @see app/models/service_offering.rb
-        operator: "in?" # options are ==, >=, >, <, <=, in?
+        attribute: "current_status"
+        operator: "in?"
         value:
           - "Étudiant·e"
           - "Salarié·e"
@@ -123,19 +124,38 @@ crous-reims-centre-regional-des-oeuvres-universitaires-et-scolaires-acal:
     -
       -
         attribute: "duration"
-        operator: "in?" # options are ==, >=, >, <, <=, in?
+        operator: "in?"
         value:
           - "Quelques mois"
           - "1 an"
           - "+ d'1 an"
       -
-        attribute: "resources" # discriminant @see app/models/service_offering.rb
-        operator: "<=" # options are ==, >=, >, <, <=, in?
+        attribute: "resources"
+        operator: "<="
         value: 1000
       -
-        attribute: "current_status" # discriminant @see app/models/service_offering.rb
-        operator: "==" # options are ==, >=, >, <, <=, in?
+        attribute: "current_status"
+        operator: "=="
         value: "Étudiant·e"
+
+  t-informer-sur-le-logement-en-residence-universitaire-9bcb5319-b3de-46c0-be0b-56330a900381:
+    -
+      -
+        attribute: "duration"
+        operator: "in?"
+        value:
+          - "Quelques mois"
+          - "1 an"
+          - "+ d'1 an"
+      -
+        attribute: "resources"
+        operator: "<="
+        value: 800
+      -
+        attribute: "current_status"
+        operator: "=="
+        value: "Étudiant·e"
+
 
   t-informer-sur-le-logement-en-residence-universitaire-9bcb5319-b3de-46c0-be0b-56330a900381:
     -
@@ -185,18 +205,18 @@ residence-quai-207:
     -
       -
         attribute: "duration"
-        operator: "in?" # options are ==, >=, >, <, <=, in?
+        operator: "in?"
         value:
           - "Quelques mois"
           - "1 an"
           - "+ d'1 an"
       -
-        attribute: "resources" # discriminant @see app/models/service_offering.rb
-        operator: "<=" # options are ==, >=, >, <, <=, in?
+        attribute: "resources"
+        operator: "<="
         value: 700
       -
-        attribute: "current_status" # discriminant @see app/models/service_offering.rb
-        operator: "==" # options are ==, >=, >, <, <=, in?
+        attribute: "current_status"
+        operator: "=="
         value: "Étudiant·e"
 
 residence-laudine:
@@ -204,18 +224,18 @@ residence-laudine:
     -
       -
         attribute: "duration"
-        operator: "in?" # options are ==, >=, >, <, <=, in?
+        operator: "in?"
         value:
           - "Quelques mois"
           - "1 an"
           - "+ d'1 an"
       -
-        attribute: "resources" # discriminant @see app/models/service_offering.rb
-        operator: "<=" # options are ==, >=, >, <, <=, in?
+        attribute: "resources"
+        operator: "<="
         value: 700
       -
-        attribute: "current_status" # discriminant @see app/models/service_offering.rb
-        operator: "==" # options are ==, >=, >, <, <=, in?
+        attribute: "current_status"
+        operator: "=="
         value: "Étudiant·e"
 
 services-integres-de-l-accueil-et-de-l-orientation:
@@ -223,7 +243,7 @@ services-integres-de-l-accueil-et-de-l-orientation:
     -
       -
         attribute: "duration"
-        operator: "==" # options are ==, >=, >, <, <=, in?
+        operator: "=="
         value: "Cette nuit"
 
 centre-international-de-sejour-cis:
@@ -231,13 +251,13 @@ centre-international-de-sejour-cis:
     -
       -
         attribute: "duration"
-        operator: "in?" # options are ==, >=, >, <, <=, in?
+        operator: "in?"
         value:
           - "Cette nuit"
           - "Quelques mois"
       -
-        attribute: "resources" # discriminant @see app/models/service_offering.rb
-        operator: "<=" # options are ==, >=, >, <, <=, in?
+        attribute: "resources"
+        operator: "<="
         value: 400
 
 escale-habitat-jeunes:
