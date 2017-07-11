@@ -967,3 +967,73 @@ centre-d-information-et-de-recrutement-des-armees-cirfa-de-reims:
           - "Études supérieures"
           - "En formation"
           - "Autre"
+
+centre-d-information-et-de-recrutement-de-la-gendarmerie:
+  t-engager-en-gendarmerie:
+
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "handicap"
+        operator: "=="
+        value: false
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "En formation"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 17
+
+  t-engager-dans-l-administratif-en-gendarmerie:
+
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "engagement"
+        operator: "=="
+        value: "Temps plein"
+      -
+        attribute: "handicap"
+        operator: "=="
+        value: false
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "En formation"
+          - "Autre"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 17
