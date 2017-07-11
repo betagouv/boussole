@@ -1,5 +1,6 @@
-apec-association-pour-l-emploi-des-cadres-3e48ecd0-4638-47a5-84e6-482bcd43de6a:
-  ameliorer-mon-cv:
+
+apec-association-pour-l-emploi-des-cadres:
+  travailler-mon-projet-professionnel-avec-un-conseiller:
     -
       -
         attribute: "status"
@@ -7,14 +8,16 @@ apec-association-pour-l-emploi-des-cadres-3e48ecd0-4638-47a5-84e6-482bcd43de6a:
         value:
           - "Sans activité"
           - "Étudiant·e"
+          - "En formation"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "=="
+        value: "Études supérieures"
       -
         attribute: "age"
         operator: ">="
-        value: 22
-      -
-        attribute: "last_class"
-        operator: "=="
-        value: "Études supérieures"
+        value: 21
       -
         attribute: "pole_emploi"
         operator: "=="
@@ -24,30 +27,32 @@ apec-association-pour-l-emploi-des-cadres-3e48ecd0-4638-47a5-84e6-482bcd43de6a:
         operator: "=="
         value: false
       -
-        attribute: "handicap"
+        attribute: "mission_locale"
+        operator: "=="
+        value: false
+      -
+        attribute: "apec"
         operator: "=="
         value: false
 
-  ameliorer-mon-projet-professionnel-en-atelier:
+  organiser-ta-recherche-d-emploi:
     -
-      -
-        attribute: "awareness"
-        operator: "=="
-        value: "Je sais ce que je veux faire"
-      -
-        attribute: "experience"
-        operator: "=="
-        value: true
       -
         attribute: "status"
         operator: "in?"
         value:
           - "Sans activité"
           - "Étudiant·e"
+          - "En formation"
+          - "Autre"
       -
         attribute: "last_class"
         operator: "=="
         value: "Études supérieures"
+      -
+        attribute: "age"
+        operator: ">="
+        value: 21
       -
         attribute: "pole_emploi"
         operator: "=="
@@ -57,44 +62,15 @@ apec-association-pour-l-emploi-des-cadres-3e48ecd0-4638-47a5-84e6-482bcd43de6a:
         operator: "=="
         value: false
       -
-        attribute: "handicap"
+        attribute: "mission_locale"
+        operator: "=="
+        value: false
+      -
+        attribute: "apec"
         operator: "=="
         value: false
 
-  simuler-un-entretien-de-recrutement-en-ligne:
-    -
-      -
-        attribute: "awareness"
-        operator: "=="
-        value: "Je sais ce que je veux faire"
-      -
-        attribute: "experience"
-        operator: "=="
-        value: true
-      -
-        attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
-      -
-        attribute: "last_class"
-        operator: "=="
-        value: "Études supérieures"
-      -
-        attribute: "pole_emploi"
-        operator: "=="
-        value: false
-      -
-        attribute: "cap_emploi"
-        operator: "=="
-        value: false
-      -
-        attribute: "handicap"
-        operator: "=="
-        value: false
-
-  t-organiser-dans-ta-recherche-d-emploi:
+  anticipes-et-prepares-ton-evolution-professionnelle:
     -
       -
         attribute: "awareness"
@@ -102,14 +78,13 @@ apec-association-pour-l-emploi-des-cadres-3e48ecd0-4638-47a5-84e6-482bcd43de6a:
         value: "Je sais ce que je veux faire"
       -
         attribute: "status"
-        operator: "in?"
-        value:
-          - "Sans activité"
-          - "Étudiant·e"
+        operator: "=="
+        value: "Salarié·e"
+
       -
         attribute: "last_class"
         operator: "=="
-        value: "Études supérieures"
+        value: Études supérieures"
       -
         attribute: "pole_emploi"
         operator: "=="
@@ -119,22 +94,24 @@ apec-association-pour-l-emploi-des-cadres-3e48ecd0-4638-47a5-84e6-482bcd43de6a:
         operator: "=="
         value: false
       -
-        attribute: "handicap"
+        attribute: "mission_locale"
+        operator: "=="
+        value: false
+      -
+        attribute: "apec"
         operator: "=="
         value: false
 
-  travailler-mon-projet-profesionnel-avec-un-conseiller:
+  decouvres-ton-marche-d-emploi:
     -
-      -
-        attribute: "awareness"
-        operator: "=="
-        value: "Je ne sais pas ce que je veux faire"
       -
         attribute: "status"
         operator: "in?"
         value:
           - "Sans activité"
           - "Étudiant·e"
+          - "En formation"
+          - "Autre"
       -
         attribute: "last_class"
         operator: "=="
@@ -148,7 +125,11 @@ apec-association-pour-l-emploi-des-cadres-3e48ecd0-4638-47a5-84e6-482bcd43de6a:
         operator: "=="
         value: false
       -
-        attribute: "handicap"
+        attribute: "mission_locale"
+        operator: "=="
+        value: false
+      -
+        attribute: "apec"
         operator: "=="
         value: false
 
