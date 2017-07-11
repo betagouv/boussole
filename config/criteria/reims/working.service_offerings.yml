@@ -1034,3 +1034,41 @@ centre-d-information-et-de-recrutement-de-la-gendarmerie:
         attribute: "age"
         operator: ">="
         value: 17
+
+centre-d-information-et-de-recrutement-des-forces-armees-de-reims-armee-de-l-air:
+  trouves-ton-metier-dans-l-armee-de-l-air:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Collégien.ne"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "duration"
+        operator: "=="
+        value: "+ d'1 an"
+      -
+        attribute: "engagement"
+        operator: "=="
+        value: "Temps plein"
+      -
+        attribute: "handicap"
+        operator: "=="
+        value: false
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Collège"
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "En formation"
+          - "Autre"
