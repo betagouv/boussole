@@ -850,3 +850,82 @@ centre-d-information-et-de-recrutement-des-forces-armees-de-la-marine:
           - "Études supérieures"
           - "En formation"
           - "Autre"
+
+agorae-reims:
+  simuler-un-entretien-d-embauche:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "En formation"
+          - "Autre"
+      -
+        attribute: "pole_emploi"
+        operator: "=="
+        value: false
+      -
+        attribute: "cap_emploi"
+        operator: "=="
+        value: false
+      -
+        attribute: "mission_locale"
+        operator: "=="
+        value: false
+      -
+        attribute: "apec"
+        operator: "=="
+        value: false
+
+  conseil-sur-la-redaction-de-ton-cv:
+    -
+      -
+        attribute: "status"
+        operator: "in?"
+        value:
+          - "Sans activité"
+          - "Étudiant·e"
+          - "Lycéen·ne"
+          - "Salarié·e"
+          - "En formation"
+          - "Apprenti·e"
+          - "Autre"
+      -
+        attribute: "last_class"
+        operator: "in?"
+        value:
+          - "Lycée"
+          - "Aprentissage"
+          - "Études supérieures"
+          - "En formation"
+          - "Autre"
+      -
+        attribute: "pole_emploi"
+        operator: "=="
+        value: false
+      -
+        attribute: "cap_emploi"
+        operator: "=="
+        value: false
+      -
+        attribute: "mission_locale"
+        operator: "=="
+        value: false
+      -
+        attribute: "apec"
+        operator: "=="
+        value: false
