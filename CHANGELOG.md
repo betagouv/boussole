@@ -1,5 +1,34 @@
 # Change Log
 
+## [v1.5.1](https://github.com/sgmap/boussole/tree/v1.5.1) (2017-07-11)
+[Full Changelog](https://github.com/sgmap/boussole/compare/v1.5.0...v1.5.1)
+
+**Implemented enhancements:**
+
+- Améliorer le texte qui explique les étapes dans landing page [\#82](https://github.com/sgmap/boussole/issues/82)
+- Usability \(WCAG 2 AA, RGAA et al.\) [\#21](https://github.com/sgmap/boussole/issues/21)
+
+**Closed issues:**
+
+- De-contextualiser le CSS, le rendre moins atomique et plus modulaire [\#74](https://github.com/sgmap/boussole/issues/74)
+- Rendre le markup plus sémantique  [\#73](https://github.com/sgmap/boussole/issues/73)
+- Créer une guide de style [\#72](https://github.com/sgmap/boussole/issues/72)
+- De-traduire les éléments domaine \(EN -\> FR\) [\#71](https://github.com/sgmap/boussole/issues/71)
+- Mise à jour Rails 5 [\#39](https://github.com/sgmap/boussole/issues/39)
+- Document Gemfile/Bower dependencies [\#27](https://github.com/sgmap/boussole/issues/27)
+
+**Merged pull requests:**
+
+- Update Reims working APEC [\#120](https://github.com/sgmap/boussole/pull/120) ([maukoquiroga](https://github.com/maukoquiroga))
+- Add Reims housing CIRFA Air [\#119](https://github.com/sgmap/boussole/pull/119) ([maukoquiroga](https://github.com/maukoquiroga))
+- Update Reims' criteria [\#118](https://github.com/sgmap/boussole/pull/118) ([maukoquiroga](https://github.com/maukoquiroga))
+- Fix Reims criteria [\#117](https://github.com/sgmap/boussole/pull/117) ([maukoquiroga](https://github.com/maukoquiroga))
+- Update criteria reims [\#116](https://github.com/sgmap/boussole/pull/116) ([maukoquiroga](https://github.com/maukoquiroga))
+- Fix criteria essonne [\#115](https://github.com/sgmap/boussole/pull/115) ([maukoquiroga](https://github.com/maukoquiroga))
+- Update criteria reims [\#114](https://github.com/sgmap/boussole/pull/114) ([maukoquiroga](https://github.com/maukoquiroga))
+- Update Essonne criteria [\#113](https://github.com/sgmap/boussole/pull/113) ([maukoquiroga](https://github.com/maukoquiroga))
+- Allow users to have resulted scoped by city [\#112](https://github.com/sgmap/boussole/pull/112) ([maukoquiroga](https://github.com/maukoquiroga))
+
 ## [v1.5.0](https://github.com/sgmap/boussole/tree/v1.5.0) (2017-05-12)
 [Full Changelog](https://github.com/sgmap/boussole/compare/v1.4.1...v1.5.0)
 
